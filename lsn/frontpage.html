@@ -38,13 +38,26 @@
 		transform: translate(-50%, -50%);
 	}
 	button {
+		background-color: inherit;
+		border: 3px solid #993300;
+		color: #1aff1a;
+		border-radius: 30px 30px 30px 30px;
 		font-size:60px; 
-		margin: 0;
+		padding: 20px 32px;
 		position: absolute;
-		top: 40%;
-		left: 20%;
-		-ms-transform: translate(-50%, -50%);
+		top: 30%;
+		left: 10%;
+		cursor: pointer;
 		transform: translate(-50%, -50%);	
+	}
+	
+	button:hover {
+		filter: brightness(80%);
+	}
+		
+	button:active {
+		background-color: #3e8e41;
+		box-shadow: 0 3px 0 #00823F;
 	}
 </style>
 
