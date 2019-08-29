@@ -13,7 +13,7 @@
 		</h1>
 		
 		<form action="frontpage.php" method="post">
-			<button type="submit" name="cvButton" value="cvPage"> Mit CV </button>
+			<button id="cvButton" type="submit" name="cvButton" value="cvPage"> Mit CV </button>
 		</form>
 		<div class="projectTxt">
 			Jeg har startet forskellige projekter, som der er link til her: <br>
@@ -27,6 +27,9 @@
 			<center>
 				<p>Indtast kode for at få adgang til projektet TV-oversigt</p>
 				<input class="input" type="text" placeholder="Adgangskode">
+				<form action="frontpage.php" method="post">
+					<button id="tvButton" type="submit" name="tvButton" value="tvPage"> Videre </button>
+				</form>
 			</center>
 		</div>
 	</div>
@@ -35,7 +38,10 @@
 			<span class="closeModal">&times;</span>
 			<center>
 				<p>Indtast kode for at få adgang til projektet bil priser</p>
-				<input class="input" type="text" placeholder="Adgangskode">
+				<input class="input" type="text" placeholder="Adgangskode">	
+				<form action="frontpage.php" method="post">
+					<button id="carButton" type="submit" name="carButton" value="carPage"> Videre </button>
+				</form>
 			</center>
 		</div>
 	</div>

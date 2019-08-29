@@ -4,7 +4,7 @@
 	  margin: auto;
 	  padding: 20px;
 	  border: 1px solid #888;
-	  width: 40%;
+	  width: 30%;
 	  border-radius: 20px 20px 20px 20px;
 	}
 	.closeModal {
@@ -63,7 +63,20 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	button {
+	#carButton, #tvButton {
+		margin-top: 10px;
+		color: #fff !important;
+		text-transform: uppercase;
+		text-decoration: none;
+		background: #60a3bc;
+		padding: 20px;
+		border-radius: 50px;
+		display: inline-block;
+		border: none;
+		width: 150px;
+		transition: all 0.4s ease 0s;
+	}
+	#cvButton {
 		background-color: inherit;
 		border: 3px solid #993300;
 		color: #1aff1a;
@@ -77,11 +90,11 @@
 		transform: translate(-50%, -50%);	
 	}
 	
-	button:hover {
+	#cvButton:hover {
 		filter: brightness(80%);
 	}
 		
-	button:active {
+	#cvButton:active {
 		box-shadow: 0 3px 0 #00823F;
 	}
 	.projectLink {
