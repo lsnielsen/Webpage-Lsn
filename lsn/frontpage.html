@@ -21,17 +21,32 @@
 			<a class="projectLink car"> Bil priser </a> 
 		</div>
 	</body>
-	<div id="myModal" class="modal">
+	<div class="tvModal modal">
 		<div class="modal-content">
 			<span class="closeModal">&times;</span>
-			<p>Some text in the Modal..</p>
+			<center>
+				<p>Indtast kode for at få adgang til projektet TV-oversigt</p>
+				<input class="input" type="text" placeholder="Adgangskode">
+			</center>
+		</div>
+	</div>
+	<div class="carModal modal">
+		<div class="modal-content">
+			<span class="closeModal">&times;</span>
+			<center>
+				<p>Indtast kode for at få adgang til projektet bil priser</p>
+				<input class="input" type="text" placeholder="Adgangskode">
+			</center>
 		</div>
 	</div>
 </html>
 
 <script>
-	$(".projectLink").click(function(){
-		$('.modal').css('display', 'block');
+	$(".tv").click(function(){
+		$('.tvModal').css('display', 'block');
+	});
+	$(".car").click(function(){
+		$('.carModal').css('display', 'block');
 	});
 	$(".closeModal").click(function() {
 		$('.modal').css('display', 'none');

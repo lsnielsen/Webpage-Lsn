@@ -4,7 +4,8 @@
 	  margin: auto;
 	  padding: 20px;
 	  border: 1px solid #888;
-	  width: 80%;
+	  width: 40%;
+	  border-radius: 20px 20px 20px 20px;
 	}
 	.closeModal {
 	  color: #aaaaaa;
@@ -12,7 +13,17 @@
 	  font-size: 28px;
 	  font-weight: bold;
 	}
-
+	.input {
+		position:relative;
+		font-size: 1.5em;		
+		background: linear-gradient(21deg, #10abff, #1beabd);
+		padding: 3px;
+		display: inline-block;
+		border-radius: 10px 10px 10px 10px;
+	}
+	.passwordField {
+		border-radius: 9999em;
+	}
 	.closeModal:hover,
 	.closeModal:focus {
 	  color: #000;
