@@ -26,8 +26,9 @@
 			<span class="closeModal">&times;</span>
 			<center>
 				<p>Indtast kode for at få adgang til projektet TV-oversigt</p>
+				<div class="wrongPassword"> Forkert adgangskode </div>
 				<input class="tvPassword" type="text" placeholder="Adgangskode">
-				<form action="frontpage.php" method="post">
+				<form id="tvForm" action="frontpage.php" method="post">
 					<button id="tvButton" type="submit" name="tvButton" value="tvPage"> Videre </button>
 				</form>
 			</center>
@@ -38,8 +39,9 @@
 			<span class="closeModal">&times;</span>
 			<center>
 				<p>Indtast kode for at få adgang til projektet bil priser</p>
-				<input class="carPassword" type="text" placeholder="Adgangskode">	
-				<form action="frontpage.php" method="post">
+				<div class="wrongPassword"> Forkert adgangskode </div>
+				<input class="carPassword" type="text" placeholder="Adgangskode">
+				<form id="carForm" action="frontpage.php" method="post">
 					<button id="carButton" type="submit" name="carButton" value="carPage"> Videre </button>
 				</form>
 			</center>
@@ -53,8 +55,13 @@
 		$("#tvButton").click(function() {
 			var password = $('.tvPassword').val();
 			if (password != 'fSGVJFTj7szkApBu') {
-				alert("Wrong password");
-			} 
+				$(".wrongPassword").css("display", "block");
+				$('#tvForm').submit(function(e) {
+					e.preventDefault();
+				});
+			} else {
+				$('#tvForm').unbind('submit').submit();
+			}			
 		})
 	});
 	$(".car").click(function(){
@@ -62,8 +69,13 @@
 		$("#carButton").click(function() {
 			var password = $('.carPassword').val();
 			if (password != 'fSGVJFTj7szkApBu') {
-				alert("Wrong password");
-			} 
+				$(".wrongPassword").css("display", "block");
+				$('#carForm').submit(function(e) {
+					e.preventDefault();
+				});
+			} else {
+				$('#carForm').unbind('submit').submit();
+			}	
 		})
 	});
 	$(".closeModal").click(function() {

@@ -1,4 +1,8 @@
 
+	.wrongPassword {
+		display: none;
+		color: red;
+	}
 	.modal-content {
 	  background-color: #fefefe;
 	  margin: auto;
