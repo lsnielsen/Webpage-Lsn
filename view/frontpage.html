@@ -16,7 +16,8 @@
 			<button id="cvButton" type="submit" name="cvButton" value="cvPage"> Mit CV </button>
 		</form>
 		<div class="projectTxt">
-			Jeg har startet forskellige projekter, som der er link til her: <br>
+			Jeg har startet forskellige projekter, som der er link til her <br>
+			Vil dog holde dem hemmlige, så du skal have et password, for at kunne se dem <br>
 			<a class="projectLink tv"> TV-oversigt </a> <br>
 			<a class="projectLink car"> Bil priser </a> 
 		</div>
@@ -80,6 +81,7 @@
 	});
 	$(".closeModal").click(function() {
 		$('.modal').css('display', 'none');
+		$(".wrongPassword").css("display", "none");
 	});
 </script>
 
