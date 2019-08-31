@@ -11,11 +11,16 @@
 	  width: 30%;
 	  border-radius: 20px 20px 20px 20px;
 	}
+	.modal-title {
+		margin-top: 10px; 
+		font-size: 20px;
+	}
 	.closeModal {
-	  color: #aaaaaa;
-	  float: right;
-	  font-size: 28px;
-	  font-weight: bold;
+		margin-top: -10px;
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
 	}
 	.input {
 		position:relative;
