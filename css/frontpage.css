@@ -4,12 +4,16 @@
 		color: red;
 	}
 	.modal-content {
-	  background-color: #fefefe;
-	  margin: auto;
-	  padding: 20px;
-	  border: 1px solid #888;
-	  width: 30%;
-	  border-radius: 20px 20px 20px 20px;
+		background-image: radial-gradient(#b3f0ff 50%, transparent 30%),
+		radial-gradient(#9966ff 10%, transparent 10%);
+		background-color: #ff9900;
+		background-position: 0 -10, 50px 50px;
+		background-size: 100px 100px;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 30%;
+		border-radius: 20px 20px 20px 20px;
 	}
 	.modal-title {
 		margin-top: 10px; 
@@ -17,7 +21,7 @@
 	}
 	.closeModal {
 		margin-top: -10px;
-		color: #aaaaaa;
+		color: #404040;
 		float: right;
 		font-size: 28px;
 		font-weight: bold;
@@ -30,8 +34,16 @@
 		display: inline-block;
 		border-radius: 10px 10px 10px 10px;
 	}
-	.passwordField {
-		border-radius: 9999em;
+	.carPassword, .tvPassword {
+		position: relative;
+		display: block;
+		width: 50%;
+		background: #fff;
+		border-radius: 31px;
+		font-family: Ubuntu-Bold;
+		font-size: 18px;
+		color: #ff80ff;
+		line-height: 1.2;
 	}
 	.closeModal:hover,
 	.closeModal:focus {
