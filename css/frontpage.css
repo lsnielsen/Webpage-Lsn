@@ -107,7 +107,6 @@
 		cursor: pointer;
 		transform: translate(-50%, -50%);	
 	}
-	
 	#cvButton:hover {
 		filter: brightness(80%);
 	}
@@ -115,8 +114,31 @@
 	#cvButton:active {
 		box-shadow: 0 3px 0 #00823F;
 	}
+	#carLink {
+		color: hotpink;
+	}
+	#carLink:hover {
+		color: #ff0000;
+	}
+	#tvLink:hover {
+		color: #00ffff;
+	}
+	#tvLink {
+		color: #1a75ff;
+	}
+	
 	.projectLink {
-		color: #0000ff;
 		text-decoration: underline;
 		cursor: pointer;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
