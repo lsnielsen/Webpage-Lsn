@@ -1,0 +1,21 @@
+
+
+
+#frame { 
+	width: 80%; 
+	height: 520px; 
+	border: 1px solid black; 
+	zoom: 1.20; 
+	-moz-transform: scale(0.75); 
+	-moz-transform-origin: 0 0; 
+	}
+	
+	#explanation {
+		margin-left: 1550px;
+		margin-top: -630px;
+	}
+
+	#header {
+		
+		
+	}
