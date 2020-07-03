@@ -3,7 +3,7 @@
 
 #frame { 
 	width: 80%; 
-	height: 520px; 
+	height: 600px; 
 	border: 1px solid black; 
 	zoom: 1.20; 
 	-moz-transform: scale(0.75); 
@@ -11,11 +11,11 @@
 	}
 	
 	#explanation {
+		font-family: "Lucida Console", Courier, monospace;
 		margin-left: 1550px;
-		margin-top: -630px;
+		margin-top: -700px;
 	}
 
-	#header {
-		
-		
+	#body {
+		margin-top: 10px;
 	}
