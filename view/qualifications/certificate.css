@@ -1,6 +1,10 @@
 
-#masterPage {
+#certificatePage {
 	background-color: #e6ffe6;
+}
+
+#header {
+  font-weight: bold;
 }
 
 #frame { 
