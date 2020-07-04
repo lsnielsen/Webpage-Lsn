@@ -1,0 +1,52 @@
+
+#certificatePage {
+	background-color: #e6ffe6;
+}
+
+#header {
+  font-weight: bold;
+}
+
+#frame { 
+	width: 80%; 
+	height: 650px; 
+	border: 1px solid black; 
+	zoom: 1.20; 
+	-moz-transform: scale(0.75); 
+	-moz-transform-origin: 0 0; 
+}
+
+#explanation {
+	font-family: "Lucida Console", Courier, monospace;
+	margin-left: 1550px;
+	margin-top: -700px;
+}
+
+#body {
+	margin-top: 10px;
+}
+#button {
+	margin-top: 15px;
+	margin-left: 20px;
+	display: inline-block;
+	padding: 20px 25px;
+	font-size: 24px;
+	font-family: Courier New;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+
+#button:hover {background-color: #3e8e41}
+
+#button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
