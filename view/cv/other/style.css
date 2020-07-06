@@ -44,5 +44,9 @@
 		border-radius: 15px;
 		box-shadow: 0 9px #999;
 	}
+	#imageTxt {
+		margin-left: 120px;
+		font-style: italic;
+	}
 	
 </style>
