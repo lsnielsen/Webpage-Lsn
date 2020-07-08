@@ -48,5 +48,9 @@
 		margin-left: 120px;
 		font-style: italic;
 	}
+	.header {
+		text-align: center; 
+		padding: 10px;
+	}
 	
 </style>
