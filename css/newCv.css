@@ -54,19 +54,19 @@
 		font-size: 30px;
 		font-weight: 800;
 	}
-	#firstBodyTableInfoRowId {
+	.education {
 		background-color: #ffff66;
 	}
-	#secondBodyTableInfoRowId {
+	.sparetime{
 		background-color: #ff00ff;;
 	}
-	#thirdBodyTableInfoRowId {
+	.qualifications{
 		background-color: #9999ff;
 	}
-	#fourthBodyTableInfoRowId {
+	.language {
 		background-color: #ff9900;
 	}
-	#fithBodyTableInfoRowId {
+	.duringTime {
 		background-color: #993399;
 	}
 	#sixthBodyTableInfoRowId {
