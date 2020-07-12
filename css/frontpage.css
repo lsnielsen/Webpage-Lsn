@@ -113,6 +113,26 @@
 		
 	#cvButton:active {
 		box-shadow: 0 3px 0 #00823F;
+	}	
+	#newCvButton {
+		background-color: inherit;
+		border: 3px solid #993300;
+		color: #1aff1a;
+		border-radius: 30px 30px 30px 30px;
+		font-size:60px; 
+		padding: 20px 32px;
+		position: absolute;
+		top: 30%;
+		left: 40%;
+		cursor: pointer;
+		transform: translate(-50%, -50%);	
+	}
+	#newCvButton:hover {
+		filter: brightness(80%);
+	}
+		
+	#newCvButton:active {
+		box-shadow: 0 3px 0 #00823F;
 	}
 	#carLink {
 		color: hotpink;
