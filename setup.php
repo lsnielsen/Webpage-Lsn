@@ -12,7 +12,7 @@ if ($cvButton == "cvPage") {
 } elseif ($tvButton == "tvPage") {
 	echo file_get_contents("view/tv.html");
 } elseif ($newCvButton == "newCvPage") {
-	echo file_get_contents("view/cv.html");
+	echo file_get_contents("view/newCvPage.html");
 } else {
 	echo file_get_contents("view/frontpage.html");
 }
