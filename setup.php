@@ -1,7 +1,7 @@
 <?php
 
-$cvButton = isset($_POST['cvButton']) ? $_POST['cvButton'] : "";
 $carButton = isset($_POST['carButton']) ? $_POST['carButton'] : "";
+$cvButton = isset($_POST['cvButton']) ? $_POST['cvButton'] : "";
 $tvButton = isset($_POST['tvButton']) ? $_POST['tvButton'] : "";
 
 if ($cvButton == "cvPage") {
