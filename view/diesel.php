@@ -1,7 +1,10 @@
 <?php
+	$dbservername = "127.0.0.1";
+	$dbusername = "root";
+	$dbpassword = "";
+	$dbname = "lsn-database";
 	
-	//$conn = new mysqli($servername, $username, $password, $dbname);
-	$conn = new mysqli('localhost', 'root');
+	$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 		echo "error";
@@ -9,19 +12,21 @@
 	else{
 		echo "conn successful";
 	}
-	$sqlInsert = "INSERT INTO diesel (Kilometer, Liter, Kroner)
-		VALUES (25, 23, 43);";	
+	//$sqlInsert = "INSERT INTO diesel (Kilometer, Liter, Kroner)
+		//VALUES (25, 23, 43);";	
 	$sqlGet = "SELECT * FROM 'diesel'";
 	
 	$result = $conn->query($sqlGet);
+	echo "<br> And the result is: $result";
+	echo $result;
 
-	if (!$result->num_rows > 0) {
-	  // output data of each row
-	  while($row = $result->fetch_assoc()) {
-		echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-	  }
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+		}
 	} else {
-	  echo "0 results";
+		echo "0 results";
 	}
 
 
