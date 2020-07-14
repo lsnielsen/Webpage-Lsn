@@ -9,7 +9,11 @@
 <html>
 	<body>
 
-		<h1>Mit regnskab over mit diesel forbrug</h1>
+		<center>
+			<h1 style="font-size:40px; margin-top:15px;">
+				Mit regnskab over mit diesel forbrug
+			</h1>
+		</center>
 
 		<div>
 			<?php echo $name ?>
