@@ -1,8 +1,36 @@
 <?php
+	
+	//$conn = new mysqli($servername, $username, $password, $dbname);
+	$conn = new mysqli('localhost', 'root');
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+		echo "error";
+	} 
+	else{
+		echo "conn successful";
+	}
+	$sqlInsert = "INSERT INTO diesel (Kilometer, Liter, Kroner)
+		VALUES (25, 23, 43);";	
+	$sqlGet = "SELECT * FROM 'diesel'";
+	
+	$result = $conn->query($sqlGet);
 
-	$name = "Bent Knudsen";
-	$varOne = isset($_POST['fname']) ? $_POST['fname'] : "";
-	$varTwo = isset($_POST['lname']) ? $_POST['lname'] : "";
+	if (!$result->num_rows > 0) {
+	  // output data of each row
+	  while($row = $result->fetch_assoc()) {
+		echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+	  }
+	} else {
+	  echo "0 results";
+	}
+
+
+	$conn-> close();
+	
+	//$name = "Bent Knudsen";
+	//$varOne = isset($_POST['fname']) ? $_POST['fname'] : "";
+	//$varTwo = isset($_POST['lname']) ? $_POST['lname'] : "";
+
 
 ?>
 
@@ -11,15 +39,10 @@
 
 		<center>
 			<h1 style="font-size:40px; margin-top:15px;">
-				Mit regnskab over mit diesel forbrug
+				Regnskab over mit diesel forbrug
 			</h1>
 		</center>
 
-		<div>
-			<?php echo $name ?>
-			<?php echo $varOne ?>
-			<?php echo $varTwo ?>			
-		</div>
 
 		<form action="setup.php" method="post">
 			<label for="fname">First name:</label>
