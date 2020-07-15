@@ -1,11 +1,13 @@
 <?php
 
 $carButton = isset($_POST['carButton']) ? $_POST['carButton'] : "";
-$cvButton = isset($_POST['cvButton']) ? $_POST['cvButton'] : "";
 $tvButton = isset($_POST['tvButton']) ? $_POST['tvButton'] : "";
+$cvButton = isset($_POST['cvButton']) ? $_POST['cvButton'] : "";
 
 if ($cvButton == "cvPage") {
-	echo file_get_contents("view/cv.html");	
+	echo file_get_contents("view/cv/cv.html");	
+} elseif ($cvButton == "educationCv") {
+	echo file_get_contents("view/cv/html/educationCv.html");	
 } elseif ($carButton == "carPage") {
 	echo file_get_contents("view/car.html");
 } elseif ($tvButton == "tvPage") {
