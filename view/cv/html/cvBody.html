@@ -1,24 +1,58 @@
 <table id="bodyTable" cellspacing="30px"> 
 	<tr id="bodyTableHeaders">
-		<th style="color: #ffff66;">Uddannelse</th>
-		<th style="color: #ff00ff;">Fritidsinteresser</th>
-		<th style="color: #9999ff;">Kvalifikationer</th>
-		<th style="color: #ff9900;">Sprog</th>
-		<th style="color: #993399;"><nobr>Gennem tiden</nobr></th>
+		<th>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="educationCv" class="educationButton" style="color: #ffff66;">
+					Uddannelse
+				</button>
+			</form>
+		</th>
+		<th>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="sparetimeCv" class="educationButton" style="color: #ff00ff;">
+					Fritidsinteresser
+				</button>
+			</form>
+		</th>
+		<th>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="qualificationCv" class="educationButton" style="color: #9999ff;">
+					Kvalifikationer
+				</button>
+			</form>
+		</th>
+		<th>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="languageCv" class="educationButton" style="color: #ff9900;">
+					Sprog
+				</button>
+			</form>
+		</th>
+		<th>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="otherCv" class="educationButton" style="color: #993399;">
+					<nobr>Gennem tiden</nobr>
+				</button>
+			</form>
+		</th>
 	</tr>
 	
 	<tr class="bodyTableInfo colOne" align="middle"> </tr>
-	
 	<tr class="bodyTableInfo colTwo" align="middle"> </tr>
-	
 	<tr class="bodyTableInfo colThree" align="middle"> </tr>
-	
 	<tr class="bodyTableInfo colFour" align="middle"> </tr>
-
 	<tr class="bodyTableInfo colFive" align="middle">	</tr>
-	
 	<tr class="bodyTableInfo colSix" align="middle">  </tr>
 </table>
+
+<style>
+	.educationButton {
+		border: none;
+		background-color: inherit;
+		font-size: 50px;
+		cursor: pointer;
+	}
+</style>
 
 <script type="text/javascript">
 	
