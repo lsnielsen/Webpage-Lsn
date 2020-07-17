@@ -7,7 +7,9 @@ $cvButton = isset($_POST['cvButton']) ? $_POST['cvButton'] : "";
 if ($cvButton == "cvPage") {
 	echo file_get_contents("view/cv/cv.html");	
 } elseif ($cvButton == "educationCv") {
-	echo file_get_contents("view/cv/html/education/educationCv.html");	
+	echo file_get_contents("view/cv/html/education/educationCv.html");		
+} elseif ($cvButton == "sparetimeCv") {
+	echo file_get_contents("view/cv/html/sparetime/sparetimeCv.html");	
 } elseif ($carButton == "carPage") {
 	echo file_get_contents("view/car.html");
 } elseif ($tvButton == "tvPage") {
