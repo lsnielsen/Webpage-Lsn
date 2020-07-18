@@ -1,0 +1,49 @@
+
+<html style="background-color:grey;">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<head>
+		<title>
+			Cv
+		</title>
+		<link rel="stylesheet" href="/Webpage-Lsn/view/cv/css/cv.css" type="text/css">
+	</head>
+		<center>
+			<h1 style="font-size:40px; margin-top:15px;">
+				Curriculum Vitae
+			</h1>
+			<div style="margin-top: -25px; font-style:italic;">
+				Af Lars S&#248;ndertoft Nielsen
+			</div>	
+		</center>
+
+	<body>
+	
+		<div id="includeCvHeader"> </div>
+		
+		<div id="includeCvEducationBody"> </div>
+		
+	</body>
+	
+	<form action="setup.php" method="post">
+		<button type="submit" name="cvButton" id="backToStartButton" value="frontpage"> Tilbage til startside </button>
+	</form>
+</html>
+
+<script type="text/javascript">
+	
+	$(function() {
+		$("#includeCvHeader").load("/Webpage-Lsn/view/cv/html/cvHeader.html");
+		$("#includeCvEducationBody").load("/Webpage-Lsn/view/cv/html/qualifications/qualificationsBody.html");
+	});
+
+
+</script>
+
+
+
+
+
+
+
+
+
