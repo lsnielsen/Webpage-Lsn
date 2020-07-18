@@ -2,14 +2,14 @@
 	<tr id="bodyTableHeaders">
 		<th>
 			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="educationCv" class="educationButton" style="color: #ffff66;">
+				<button type="submit" name="cvButton" value="educationCv" class="cvHeadline" style="color: #ffff66;">
 					Uddannelse
 				</button>
 			</form>
 		</th>
 		<th>
 			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="sparetimeCv" class="cvHeadline" style="color: #ff00ff;">
+				<button type="submit" name="cvButton" value="sparetimeCv" class="cvHeadline sparetime" style="color: #ff00ff;">
 					Fritidsinteresser
 				</button>
 			</form>
@@ -28,13 +28,16 @@
 				</button>
 			</form>
 		</th>
-		<th>
-			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="otherCv" class="cvHeadline" style="color: #993399;">
-					<nobr>Gennem tiden</nobr>
-				</button>
-			</form>
-		</th>
+		<div class="container">
+			<div class="infobox">LSKJFDSFKLJd...</div>
+			<th>
+				<form action="setup.php" method="post">
+					<button type="submit" name="cvButton" value="otherCv" class="cvHeadline other" style="color: #993399;">
+						<nobr>Gennem tiden</nobr>
+					</button>
+				</form>
+			</th>
+		</div>
 	</tr>
 	
 	<tr class="bodyTableInfo colOne" align="middle"> </tr>
@@ -57,6 +60,13 @@
 </style>
 
 <script type="text/javascript">
+	
+	$('.other').mouseenter(function(e) {
+		$('.infobox').show(200);
+	});
+	$('.other').mouseleave(function(e){
+		$('.infobox').hide(200);
+	});
 	
 	$(function() {
 		$(".colOne").load("/Webpage-Lsn/view/cv/html/coloums/cvColOne.html");
