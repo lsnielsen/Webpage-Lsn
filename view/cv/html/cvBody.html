@@ -1,36 +1,58 @@
 <table id="bodyTable" cellspacing="30px"> 
 	<tr id="bodyTableHeaders">
-		<th>
-			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="educationCv" class="cvHeadline" style="color: #ffff66;">
-					Uddannelse
-				</button>
-			</form>
-		</th>
-		<th>
-			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="sparetimeCv" class="cvHeadline sparetime" style="color: #ff00ff;">
-					Fritidsinteresser
-				</button>
-			</form>
-		</th>
-		<th>
-			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="qualificationCv" class="cvHeadline" style="color: #9999ff;">
-					Kvalifikationer
-				</button>
-			</form>
-		</th>
-		<th>
-			<form action="setup.php" method="post">
-				<button type="submit" name="cvButton" value="languageCv" class="cvHeadline" style="color: #ff9900;">
-					Sprog
-				</button>
-			</form>
-		</th>
 		<div class="container">
-			<div class="infobox">LSKJFDSFKLJd...</div>
 			<th>
+				<div class="infobox educationBox">
+					Her finder du en bedre beskrivelse af min uddannelse
+				</div>
+				<form action="setup.php" method="post">
+					<button type="submit" name="cvButton" value="educationCv" class="cvHeadline education" style="color: #ffff66;">
+						Uddannelse
+					</button>
+				</form>
+			</th>
+		</div>
+		<div class="container">
+			<th>
+				<div class="infobox sparetimeBox">
+					Her finder du en bedre beskrivelse af hvad jeg laver og har lavet i min fritid
+				</div>
+				<form action="setup.php" method="post">
+					<button type="submit" name="cvButton" value="sparetimeCv" class="cvHeadline sparetime" style="color: #ff00ff;">
+						Fritidsinteresser
+					</button>
+				</form>
+			</th>
+		</div>
+		<div class="container">
+			<th>
+				<div class="infobox qualificationsBox">
+					Her finder du en bedre beskrivelse af min kvalifikationer
+				</div>
+				<form action="setup.php" method="post">
+					<button type="submit" name="cvButton" value="qualificationCv" class="cvHeadline qualifications" style="color: #9999ff;">
+						Kvalifikationer
+					</button>
+				</form>
+			</th>
+		</div>
+		<div class="container">
+			<th>
+				<div class="infobox languageBox">
+					Her er en lille uddybelse
+				</div>
+				<form action="setup.php" method="post">
+					<button type="submit" name="cvButton" value="languageCv" class="cvHeadline language" style="color: #ff9900;">
+						Sprog
+					</button>
+				</form>
+			</th>
+		</div>
+		<div class="container">
+			<th>
+				<div class="infobox otherBox">
+					Klik her, for at se en mere detaljeret beskrivelse af hvad jeg har lavet gennem tiden
+				</div>
 				<form action="setup.php" method="post">
 					<button type="submit" name="cvButton" value="otherCv" class="cvHeadline other" style="color: #993399;">
 						<nobr>Gennem tiden</nobr>
@@ -49,6 +71,12 @@
 </table>
 
 <style>
+	.infobox {
+		display: none;
+		font-size: 14px;
+		position: absolute;
+		margin-bottom: 140px;
+	}
 	.cvHeadline {
 		border: none;
 		background-color: inherit;
@@ -62,10 +90,38 @@
 <script type="text/javascript">
 	
 	$('.other').mouseenter(function(e) {
-		$('.infobox').show(200);
+		$('.otherBox').show(200);
 	});
 	$('.other').mouseleave(function(e){
-		$('.infobox').hide(200);
+		$('.otherBox').hide(200);
+	});
+	
+	$('.language').mouseenter(function(e) {
+		$('.languageBox').show(200);
+	});
+	$('.language').mouseleave(function(e){
+		$('.languageBox').hide(200);
+	});
+	
+	$('.qualifications').mouseenter(function(e) {
+		$('.qualificationsBox').show(200);
+	});
+	$('.qualifications').mouseleave(function(e){
+		$('.qualificationsBox').hide(200);
+	});
+	
+	$('.sparetime').mouseenter(function(e) {
+		$('.sparetimeBox').show(200);
+	});
+	$('.sparetime').mouseleave(function(e){
+		$('.sparetimeBox').hide(200);
+	});
+	
+	$('.education').mouseenter(function(e) {
+		$('.educationBox').show(200);
+	});
+	$('.education').mouseleave(function(e){
+		$('.educationBox').hide(200);
 	});
 	
 	$(function() {
