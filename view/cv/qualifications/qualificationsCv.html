@@ -20,10 +20,20 @@
 	
 		<div id="includeCvHeader"> </div>
 		
-		<div id="includeCvEducationBody"> </div>
-		
+		<center>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="cvPage" class="educationButton" style="color: #9999ff;">
+					Kvalifikationer
+				</button>
+			</form>
+		</center>
+			
+		<div class="bodyTableInfo colOne" align="middle"> </div>	
+			
+
+				
 	</body>
-	
+			
 	<form action="setup.php" method="post" style="margin-top: 20px;">
 		<button type="submit" name="cvButton" id="backToStartButton" value="cvPage"> Tilbage til cv </button>
 	</form>
@@ -33,11 +43,22 @@
 	
 	$(function() {
 		$("#includeCvHeader").load("/Webpage-Lsn/view/cv/cvHeader.html");
-		$("#includeCvEducationBody").load("/Webpage-Lsn/view/cv/qualifications/qualificationsBody.html");
+		$(".colOne").load("/Webpage-Lsn/view/cv/qualifications/coloum.html");
 	});
 
 
 </script>
+
+<style>
+	.educationButton {
+		border: none;
+		background-color: inherit;
+		font-size: 50px;
+		cursor: pointer;
+		font-weight: bold;
+		font-family: "Times New Roman", Times, serif;
+	}
+</style>
 
 
 
