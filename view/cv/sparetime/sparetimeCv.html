@@ -19,8 +19,16 @@
 	<body>
 	
 		<div id="includeCvHeader"> </div>
+			
+		<center>
+			<form action="setup.php" method="post">
+				<button type="submit" name="cvButton" value="cvPage" class="educationButton" style="color: #ff00ff;">
+					Fritidsinteresser
+				</button>
+			</form>
+		</center>
 		
-		<div id="includeCvEducationBody"> </div>
+		<div class="bodyTableInfo colOne" align="middle"> </div>	
 		
 	</body>
 	
@@ -35,11 +43,22 @@
 	
 	$(function() {
 		$("#includeCvHeader").load("/Webpage-Lsn/view/cv/cvHeader.html");
-		$("#includeCvEducationBody").load("/Webpage-Lsn/view/cv/sparetime/sparetimeBody.html");
+		$(".colOne").load("/Webpage-Lsn/view/cv/sparetime/coloum.html");
 	});
 
 
 </script>
+
+<style>
+	.educationButton {
+		border: none;
+		background-color: inherit;
+		font-size: 50px;
+		cursor: pointer;
+		font-weight: bold;
+		font-family: "Times New Roman", Times, serif;
+	}
+</style>
 
 
 
