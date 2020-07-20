@@ -15,7 +15,7 @@ if ($cvButton == "cvPage") {
 } elseif ($cvButton == "languageCv") {
 	echo file_get_contents("view/cv/language/languageCv.html");		
 } elseif ($cvButton == "otherCv") {
-	echo file_get_contents("view/cv/html/other/otherCv.html");	
+	echo file_get_contents("view/cv/other/otherCv.html");	
 } elseif ($carButton == "carPage") {
 	echo file_get_contents("view/car.html");
 } elseif ($tvButton == "tvPage") {
