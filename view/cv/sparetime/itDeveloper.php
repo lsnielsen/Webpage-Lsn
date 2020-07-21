@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+<?php 
+echo '<!DOCTYPE html>
 <html id="flexyderPage">
 	<head>
 		<title>
@@ -42,4 +44,5 @@
 		</div>
 	</div>
   </body>
-</html>
+</html>';
+?>
