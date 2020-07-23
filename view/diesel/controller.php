@@ -47,6 +47,11 @@
 </head>  
 <body>  
     <h1>Xampp Tutorial</h1>  
+	<div>
+		Using the 
+		<a href="https://www.c-sharpcorner.com/article/install-and-configure-xampp-server-with-data-insert-into-database2/">
+			Link
+		</a>
     <hr>  
     <form action="setup.php" method="post">  
             <fieldset>  
