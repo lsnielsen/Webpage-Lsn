@@ -35,7 +35,7 @@
 <html>  
     <head>  
         <title>  
-            Xampp Tutorial  
+            Forsøg på at skrive til databasen
         </title>  
       <style>  
           h1{  
