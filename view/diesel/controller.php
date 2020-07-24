@@ -52,7 +52,7 @@
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
 				</legend>  
-				<div style="margin-top: 20px;">
+				<div style="margin-top: 30px;">
 				
 					<label style="margin-left: 40px; font-weight: bold;">
 							Dato <br>
@@ -74,6 +74,11 @@
 							Kroner <br>
 						</label>
 						<input class="dieselInput" type="text" placeholder="ex: 223.3 kroner" name="kr">
+						<br> <br> <br>
+						
+						<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
+							Indsæt tal
+						</button>
 
 				</div>
 				
@@ -111,9 +116,6 @@
 						?>
 					</table>
 				</div>
-				<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
-					Indsæt tal
-				</button>
 			</fieldset>  
 		</form>     		
 
