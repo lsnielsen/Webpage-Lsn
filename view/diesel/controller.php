@@ -6,16 +6,16 @@
 	{  
 		echo 'not connect to the server';  
 	}  
-	if(!mysqli_select_db($con,'tutorial'))  
+	if(!mysqli_select_db($con,'lsnDb'))  
 	{  
 		echo 'database not selected';  
 	}  
 
 	if (isset($_POST['Name']) && isset($_POST['Email'])) {
 	  
-		$Name = $_POST['Name'];  
-		$Email = $_POST['Email'];   
-		$sql = "INSERT INTO person (Id, Name,Email) VALUES (3,'Name','Email')";  
+		$name = $_POST['Name'];  
+		$email = $_POST['Email'];   
+		$sql = "INSERT INTO person (Id, Name,Email) VALUES (43,'$name','$email')";  
 		  
 		if(!mysqli_query($con,$sql))  
 		{  
