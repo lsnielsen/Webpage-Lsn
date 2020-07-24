@@ -95,8 +95,8 @@
 							<th class="dieselHeader">Liter</th>
 						</tr>
 						<?php
-							$data = "SELECT * FROM diesel";
-							$result = mysqli_query($con,$data);
+							$tableData = "SELECT * FROM diesel";
+							$result = mysqli_query($con,$tableData);
 							while($row = $result->fetch_array()){
 								echo "<tr>";
 									echo "<th>"; 
