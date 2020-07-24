@@ -30,6 +30,7 @@
             Forsøg på at skrive til databasen
         </title>  
 	</head>  
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
 	<body>  
 		<h1>
 			Diesel page
@@ -83,10 +84,6 @@
 			Indsæt tal
 		</button>
 
-
-
-		
-
 		<div id="chartContainer" style="height: 370px; width: 100%;"></div>
 		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 		
@@ -98,103 +95,10 @@
 	</form>
 </html> 
 
-<style>
-	.dieselInput {
-		padding: 12px 20px;
-		margin: 8px 0;
-		box-sizing: border-box;		
-	}
+<script src="/Webpage-Lsn/view/diesel/graph.js"></script>
 
-	.dieselNumbers {
-		margin-left: 780px;
-		margin-bottom: 150px;
-		margin-top: -200px;
-	}
 
-	.dieselTable {
-		width: 60%;
-	}
-			
-	.dieselButton{
-		background-color: #4CAF50;
-		border: none;
-		color: white;
-		padding: 15px 32px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 4px 2px;
-		cursor: pointer;
-	}
-	h1{  
-	  color: rebeccapurple;  
-	  font-family: fantasy;  
-	  font-style: italic;  
-	  text-align: center;
-	}  
-			
-	table {
-	  font-family: arial, sans-serif;
-	  border-collapse: collapse;
-	  width: 100%;
-	}
 
-	td, th {
-	  border: 1px solid #dddddd;
-	  text-align: left;
-	  padding: 8px;
-	}
 
-	tr:nth-child(even) {
-	  background-color: #dddddd;
-	}
-	
-	#backToStartButton {
-		padding: 20;
-		margin-bottom: 30px;
-		border-radius: 20px;
-		width: 100%;
-		background-color: #ff944d;
-		font-size: 20px;
-		border: solid #8cff1a;
-		border-width: 1px 1px 1px 1px;
-		font-family: Georgia, serif;
-	}
-</style>
 
-<script>
-	window.onload = function () {
 
-		var chart = new CanvasJS.Chart("chartContainer", {
-			animationEnabled: true,
-			theme: "light2",
-			title:{
-				text: "Simple Line Chart"
-			},
-			axisY:{
-				includeZero: false
-			},
-			data: [{        
-				type: "line",
-				indexLabelFontSize: 16,
-				dataPoints: [
-					{ y: 450 },
-					{ y: 414},
-					{ y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
-					{ y: 460 },
-					{ y: 450 },
-					{ y: 500 },
-					{ y: 480 },
-					{ y: 480 },
-					{ y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-					{ y: 500 },
-					{ y: 480 },
-					{ y: 510 }
-				]
-			}]
-		});
-		chart.render();
-
-	}
-</script>
