@@ -9,10 +9,12 @@
 		echo 'database not selected';  
 	}  
 
-	if (isset($_POST['Name']) && isset($_POST['Email'])) {
-		$name = $_POST['Name'];  
-		$email = $_POST['Email'];   
-		$sql = "INSERT INTO person (Id, Name,Email) VALUES (43,'$name','$email')";  
+	if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr'])) {
+		$date = $_POST['date'];
+		$km = $_POST['km'];
+		$liter = $_POST['liter'];
+		$kr = $_POST['kr'];
+		$sql = "INSERT INTO diesel (id, date, kilometer, liter, kroner) VALUES (98,'$date','$km', '$liter', '$kr')";  
 		  
 		if(!mysqli_query($con,$sql)) {  
 			echo 'Not inserted';  
@@ -45,23 +47,23 @@
 					<label style="margin-left: 40px; font-weight: bold;">
 							Dato <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 20/06-1990" name="date">  	
+						<input class="dieselInput" type="text" placeholder="ex: 2020-07-24" name="date">  	
 						<br> <br>
 						<label style="margin-left: 40px; font-weight: bold;">
 							Antal kilometer <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 659,4 kilometer" name="km">  				 
+						<input class="dieselInput" type="text" placeholder="ex: 659.4 kilometer" name="km">  				 
 				</div>
 				<div style="margin-left: 220px; margin-top: -172px; margin-bottom: 200px;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Liter <br>
 						</label>  
-						<input class="dieselInput" type="text" placeholder="ex: 23,3 liter" name="liter"> 				 
+						<input class="dieselInput" type="text" placeholder="ex: 23.3 liter" name="liter"> 				 
 						<br> <br>
 						<label style="margin-left: 40px; font-weight: bold;">
 							Kroner <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 223,3 kroner" name="kr">
+						<input class="dieselInput" type="text" placeholder="ex: 223.3 kroner" name="kr">
 
 				</div>
 				
