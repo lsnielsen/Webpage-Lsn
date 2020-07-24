@@ -50,7 +50,7 @@
 		  ['2004',  1000, 400, 23],
 		  ['2005',  1170, 460, 43],
 		  ['2006',  660, 1120, 32],
-		  ['2007',  1030, 540, 32]
+		  ['2007',  1030, 540, 89]
 		]);
 
 		var options = {
@@ -58,6 +58,12 @@
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
+		data.addRow([
+			'2008',
+			562,
+			456,
+			654
+		]);
 
 		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
