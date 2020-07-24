@@ -8,7 +8,7 @@
 	.dieselNumbers {
 		margin-left: 780px;
 		margin-bottom: 150px;
-		margin-top: -200px;
+		margin-top: -390px;
 	}
 
 	.dieselTable {
@@ -53,6 +53,7 @@
 	#backToStartButton {
 		padding: 20;
 		margin-bottom: 30px;
+		margin-top: 20px;
 		border-radius: 20px;
 		width: 100%;
 		background-color: #ff944d;

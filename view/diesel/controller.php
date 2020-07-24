@@ -41,21 +41,28 @@
 					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
 				</legend>  
 				<div style="margin-top: 20px;">
+				
 					<label style="margin-left: 40px; font-weight: bold;">
-						Antal kilometer <br>
-					<label>
-					<input class="dieselInput" type="text" placeholder="ex: 659,4 kilometer" name="km">  				 
-					<br> <br>
-					<label style="margin-left: 40px; font-weight: bold;">
-						Liter <br>
-					</label>  
-					<input class="dieselInput" type="text" placeholder="ex: 23,3 liter" name="liter"> 				 
-					<br> <br>
-					<label style="margin-left: 40px; font-weight: bold;">
-						Kroner <br>
-					</label>
-					<input class="dieselInput" type="text" placeholder="ex: 223,3 kroner" name="kr">
-					<br>
+							Dato <br>
+						</label>
+						<input class="dieselInput" type="text" placeholder="ex: 20/06-1990" name="date">  	
+						<br> <br>
+						<label style="margin-left: 40px; font-weight: bold;">
+							Antal kilometer <br>
+						</label>
+						<input class="dieselInput" type="text" placeholder="ex: 659,4 kilometer" name="km">  				 
+				</div>
+				<div style="margin-left: 220px; margin-top: -172px; margin-bottom: 200px;">
+						<label style="margin-left: 40px; font-weight: bold;">
+							Liter <br>
+						</label>  
+						<input class="dieselInput" type="text" placeholder="ex: 23,3 liter" name="liter"> 				 
+						<br> <br>
+						<label style="margin-left: 40px; font-weight: bold;">
+							Kroner <br>
+						</label>
+						<input class="dieselInput" type="text" placeholder="ex: 223,3 kroner" name="kr">
+
 				</div>
 				
 				<div class="dieselNumbers">
@@ -78,11 +85,11 @@
 						</tr>
 					</table>
 				</div>
+				<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
+					Indsæt tal
+				</button>
 			</fieldset>  
 		</form>     		
-		<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
-			Indsæt tal
-		</button>
 
 		<div id="chartContainer" style="height: 370px; width: 100%;"></div>
 		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
