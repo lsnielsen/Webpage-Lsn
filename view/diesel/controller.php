@@ -118,10 +118,10 @@
 				</div>
 			</fieldset>  
 		</form>     		
-
-		<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 		
+		<?php
+			include "graph.php";
+		?>
     </body>  
 	
 	
@@ -130,7 +130,6 @@
 	</form>
 </html> 
 
-<script src="/Webpage-Lsn/view/diesel/graph.js"></script>
 
 
 
