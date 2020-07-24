@@ -42,7 +42,6 @@
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
-   <link rel="stylesheet" href="/Webpage-Lsn/view/diesel/style.php" media="screen">
 	<body>  
 		<h1>
 			Diesel page
