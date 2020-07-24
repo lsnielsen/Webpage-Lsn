@@ -8,13 +8,22 @@
 	if(!mysqli_select_db($con,'lsnDb')) {  
 		echo 'database not selected';  
 	}  
+	
+	$fetchId = "SELECT * FROM diesel";
+	$result = mysqli_query($con,$fetchId);
+	$uniqueId = 0;
+	while($row = $result->fetch_array()){
+		$uniqueId = $row['id'];
+	}
+
 
 	if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr'])) {
 		$date = $_POST['date'];
 		$km = $_POST['km'];
 		$liter = $_POST['liter'];
 		$kr = $_POST['kr'];
-		$sql = "INSERT INTO diesel (id, date, kilometer, liter, kroner) VALUES (98,'$date','$km', '$liter', '$kr')";  
+		$id = $uniqueId + 1;
+		$sql = "INSERT INTO diesel (id, date, kilometer, liter, kroner) VALUES ('$id', '$date','$km', '$liter', '$kr')";  
 		  
 		if(!mysqli_query($con,$sql)) {  
 			echo 'Not inserted';  
@@ -33,6 +42,7 @@
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
+   <link rel="stylesheet" href="/Webpage-Lsn/view/diesel/style.php" media="screen">
 	<body>  
 		<h1>
 			Diesel page
@@ -74,17 +84,31 @@
 
 					<table class="dieselTable">
 						<tr>
-							<th>Dato</th>
-							<th>Kilometer</th>
-							<th>Kroner</th>
-							<th>Liter</th>
+							<th class="dieselHeader">Dato</th>
+							<th class="dieselHeader">Kilometer</th>
+							<th class="dieselHeader">Kroner</th>
+							<th class="dieselHeader">Liter</th>
 						</tr>
-						<tr>
-							<td>10/07-2005</td>
-							<td>105</td>
-							<td>36</td>
-							<td>5</td>
-						</tr>
+						<?php
+							$data = "SELECT * FROM diesel";
+							$result = mysqli_query($con,$data);
+							while($row = $result->fetch_array()){
+								echo "<tr>";
+									echo "<th>"; 
+									echo $row['date'];
+									echo "</th>";
+									echo "<th>"; 
+									echo $row['kilometer'];
+									echo "</th>";
+									echo "<th>"; 
+									echo $row['kroner'];
+									echo "</th>";
+									echo "<th>"; 
+									echo $row['liter'];
+									echo "</th>";
+								echo "</tr>";
+							}
+						?>
 					</table>
 				</div>
 				<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
