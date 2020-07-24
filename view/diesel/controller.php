@@ -16,7 +16,6 @@
 		$uniqueId = $row['id'];
 	}
 
-
 	if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr'])) {
 		$date = $_POST['date'];
 		$km = $_POST['km'];
@@ -29,8 +28,9 @@
 			echo 'Not inserted';  
 		}  
 		else {  
-			echo 'Data Inserted';  
+			echo 'Vent 5 sekunder og dine nye data vil blive vist i tabellen';  
 		}  
+		header("refresh:5; url=http://localhost/Webpage-Lsn/view/diesel/controller.php"); 
 	}
 		
 ?>
@@ -47,7 +47,7 @@
 		<h1>
 			Diesel page
 		</h1>   
-		<form action="setup.php" method="post">  
+		<form action="/../Webpage-Lsn/setup.php" method="post">  
 			<fieldset>  
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
@@ -125,7 +125,7 @@
     </body>  
 	
 	
-	<form action="setup.php" method="post">
+	<form action="/../Webpage-Lsn/setup.php" method="post">
 		<button type="submit" name="cvButton" id="backToStartButton" value="frontpage"> Tilbage til startside </button>
 	</form>
 </html> 
