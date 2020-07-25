@@ -1,5 +1,39 @@
 <?php
 
+	function makeQueryToArray($query, $pageType) 
+	{
+		while ($rowArray = $query->fetch_array()) {
+			$graphArray[] = $rowArray;
+		}
+		for ($i = 0; $i<sizeof($graphArray); $i++) {
+			$dateArray[] = $graphArray[$i][1];
+		}	
+		usort($dateArray, "compareByTimeStamp");
+		
+		for ($i = 0; $i<sizeof($dateArray); $i++) {
+			for ($j = 0; $j<sizeof($graphArray); $j++) {
+				if ($dateArray[$i] == $graphArray[$j][1]) {
+					$sortedArray[] = $graphArray[$j];
+					continue;
+				}
+			}
+		}
+
+		for ($i = 0; $i<sizeof($sortedArray); $i++) {
+			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
+		}
+		return $sortedArray;
+	}
+	 
+	function compareByTimeStamp($time1, $time2) 
+	{ 
+		if (strtotime($time1) < strtotime($time2)) { 
+			return -1; 
+		} else if (strtotime($time1) > strtotime($time2)) { 
+			return 1; 
+		} else
+			return 0; 
+	} 
 
 	function changeDateFormat($date, $page)
 	{
@@ -27,42 +61,5 @@
 		}
 	}
 
-
-
-	 
-	function compareByTimeStamp($time1, $time2) 
-	{ 
-		if (strtotime($time1) < strtotime($time2)) { 
-			return -1; 
-		} else if (strtotime($time1) > strtotime($time2)) { 
-			return 1; 
-		} else
-			return 0; 
-	} 
-
-	function makeQueryToArray($query) 
-	{
-		while ($rowArray = $query->fetch_array()) {
-			$graphArray[] = $rowArray;
-		}
-		for ($i = 0; $i<sizeof($graphArray); $i++) {
-			$dateArray[] = $graphArray[$i][1];
-		}	
-		usort($dateArray, "compareByTimeStamp");
-		
-		for ($i = 0; $i<sizeof($dateArray); $i++) {
-			for ($j = 0; $j<sizeof($graphArray); $j++) {
-				if ($dateArray[$i] == $graphArray[$j][1]) {
-					$sortedArray[] = $graphArray[$j];
-					continue;
-				}
-			}
-		}
-
-		for ($i = 0; $i<sizeof($sortedArray); $i++) {
-			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], "graph");	
-		}
-		return $sortedArray;
-	}
 
 ?>
