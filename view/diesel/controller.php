@@ -97,9 +97,8 @@
 						<?php
 							$tableData = "SELECT * FROM diesel";
 							$result = mysqli_query($con,$tableData);
-							$i = 0;
 							while($row = $result->fetch_array()){
-								echo "<tr id=$i>";
+								echo "<tr id=$row[id]>";
 									echo "<td>"; 
 									echo $row['date'];
 									echo "</td>";
@@ -122,7 +121,6 @@
 											</td>";
 									
 								echo "</tr>";
-								$i++;
 							}
 						?>
 					</table>
@@ -146,6 +144,7 @@
 	$(".deleteRow").click(function() {
 		var row = $(this).closest('tr');
 		var id = row.attr('id');
+		console.log(id);
 		$("#" + id).remove();
 	});
 </script>
