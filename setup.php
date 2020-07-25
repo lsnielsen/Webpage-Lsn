@@ -15,7 +15,6 @@ if ($cvButton == "cvPage") {
 	include("view/diesel/controller.php");
 } elseif (is_numeric($dieselButton)) {
 	
-	
 	$con = mysqli_connect('127.0.0.1','root','');  
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -23,17 +22,13 @@ if ($cvButton == "cvPage") {
 	if(!mysqli_select_db($con,'lsnDb')) {  
 		echo 'database not selected';  
 	}  
-	
     $id = $dieselButton;
 	$query = "DELETE FROM diesel WHERE diesel.id = $id";
 	mysqli_query($con, $query);
 	
 	include("view/diesel/controller.php");
 
-
-
 } else {
-	echo "Dette er dieselbutton: " . $dieselButton;
 	echo file_get_contents("view/frontpage.html");
 }
 

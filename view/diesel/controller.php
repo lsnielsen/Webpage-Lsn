@@ -56,23 +56,23 @@
 					<label style="margin-left: 40px; font-weight: bold;">
 							Dato <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 2020-07-24" name="date">  	
+						<input class="dieselInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  	
 						<br> <br>
 						<label style="margin-left: 40px; font-weight: bold;">
 							Antal kilometer <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 659.4 kilometer" name="km">  				 
+						<input class="dieselInput" type="text" placeholder="ex: 659.4 " name="km">  				 
 				</div>
 				<div style="margin-left: 220px; margin-top: -172px; margin-bottom: 200px;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Liter <br>
 						</label>  
-						<input class="dieselInput" type="text" placeholder="ex: 23.3 liter" name="liter"> 				 
+						<input class="dieselInput" type="text" placeholder="ex: 23.3 " name="liter"> 				 
 						<br> <br>
 						<label style="margin-left: 40px; font-weight: bold;">
 							Kroner <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 223.3 kroner" name="kr">
+						<input class="dieselInput" type="text" placeholder="ex: 223.3 " name="kr">
 						<br> <br> <br>
 						
 						<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
