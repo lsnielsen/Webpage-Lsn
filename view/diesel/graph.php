@@ -6,7 +6,11 @@
 	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
+	$resultII = mysqli_query($con,$graphData);
 	$i = 0;
+	while ($rowArray = $resultII->fetch_array()) {
+		$array[] = $rowArray;
+	}
 	while($row = $result->fetch_array()){
 		echo "<div display:none class=db"; 
 		echo json_encode($i); 
@@ -35,14 +39,19 @@
 		$i++;
 	}
 ?>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
+<script>
+
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 
 	var i = <?php echo $i ?>;
 	var j = 0;
+	
+
+	var temp = jQuery.parseJSON('<?php echo json_encode($array) ?>');
+	console.log(temp);
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
@@ -58,12 +67,14 @@
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
-		data.addRow([
-			'2008',
-			562,
-			456,
-			654
-		]);
+		<?php 
+			echo "data.addRow([";
+			echo " '2008',";
+			echo "562,";
+			echo "456,";
+			echo "654";
+			echo "]);";
+		?>
 
 		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
