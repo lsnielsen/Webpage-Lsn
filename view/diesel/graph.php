@@ -7,13 +7,7 @@
 	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	while ($rowArray = $result->fetch_array()) {
-		$graphArray[] = $rowArray;
-	}
-	for ($i = 0; $i<sizeof($graphArray); $i++) {
-		$graphArray[$i][1] = changeDateFormat($graphArray[$i][1], "graph");	
-	}
-	
+	$graphArray = makeQueryToArray($result);	
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
