@@ -98,29 +98,27 @@
 							$tableData = "SELECT * FROM diesel";
 							$result = mysqli_query($con,$tableData);
 							while($row = $result->fetch_array()){
-								echo "<tr id=$row[id]>";
-									echo "<td>"; 
-									echo $row['date'];
-									echo "</td>";
-									echo "<td>"; 
-									echo $row['kilometer'];
-									echo "</td>";
-									echo "<td>"; 
-									echo $row['kroner'];
-									echo "</td>";
-									echo "<td>"; 
-									echo $row['liter'];
-									echo "</td>";
-									
-									echo "	<td> 
+								echo "	<tr id=$row[id]>
+											<td>
+												$row[date]
+											</td>
+											<td>
+												$row[kilometer]
+											</td>
+											<td>
+												$row[kroner]
+											</td>
+											<td>
+												$row[liter]
+											</td>									
+											<td> 
 												<center> 
 													<div class=deleteRow value=dieselPage name=dieselButton> 
 														&#10006; 
 													</div> 
 												</center> 
-											</td>";
-									
-								echo "</tr>";
+											</td>
+										</tr>";
 							}
 						?>
 					</table>
