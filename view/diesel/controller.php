@@ -92,25 +92,37 @@
 							<th class="dieselHeader">Kilometer</th>
 							<th class="dieselHeader">Kroner</th>
 							<th class="dieselHeader">Liter</th>
+							<th class="dieselHeader">Slet række</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
 							$result = mysqli_query($con,$tableData);
+							$i = 0;
 							while($row = $result->fetch_array()){
-								echo "<tr>";
-									echo "<th>"; 
+								echo "<tr id=$i>";
+									echo "<td>"; 
 									echo $row['date'];
-									echo "</th>";
-									echo "<th>"; 
+									echo "</td>";
+									echo "<td>"; 
 									echo $row['kilometer'];
-									echo "</th>";
-									echo "<th>"; 
+									echo "</td>";
+									echo "<td>"; 
 									echo $row['kroner'];
-									echo "</th>";
-									echo "<th>"; 
+									echo "</td>";
+									echo "<td>"; 
 									echo $row['liter'];
-									echo "</th>";
+									echo "</td>";
+									
+									echo "	<td> 
+												<center> 
+													<div class=deleteRow value=dieselPage name=dieselButton> 
+														&#10006; 
+													</div> 
+												</center> 
+											</td>";
+									
 								echo "</tr>";
+								$i++;
 							}
 						?>
 					</table>
@@ -129,6 +141,14 @@
 	</form>
 </html> 
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+	$(".deleteRow").click(function() {
+		var row = $(this).closest('tr');
+		var id = row.attr('id');
+		$("#" + id).remove();
+	});
+</script>
 
 
 
