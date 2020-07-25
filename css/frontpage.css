@@ -114,26 +114,6 @@
 	#cvButton:active {
 		box-shadow: 0 3px 0 #00823F;
 	}	
-	#newCvButton {
-		background-color: inherit;
-		border: 3px solid #993300;
-		color: #1aff1a;
-		border-radius: 30px 30px 30px 30px;
-		font-size:60px; 
-		padding: 20px 32px;
-		position: absolute;
-		top: 30%;
-		left: 40%;
-		cursor: pointer;
-		transform: translate(-50%, -50%);	
-	}
-	#newCvButton:hover {
-		filter: brightness(80%);
-	}
-		
-	#newCvButton:active {
-		box-shadow: 0 3px 0 #00823F;
-	}
 	#carLink {
 		color: hotpink;
 	}
@@ -152,7 +132,45 @@
 		cursor: pointer;
 	}
 	
-	
+	#dieselButton {
+		display: inline-block;
+		border-radius: 4px;
+		background-color: #f4511e;
+		border: none;
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 28px;
+		padding: 20px;
+		width: 200px;
+		transition: all 0.5s;
+		cursor: pointer;
+		margin: 5px;
+	}
+
+	#dieselButton span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+	}
+
+	#dieselButton span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+	}
+
+	#dieselButton:hover span {
+		padding-right: 25px;
+	}
+
+	#dieselButton:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
 	
 	
 	
