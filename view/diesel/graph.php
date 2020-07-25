@@ -22,8 +22,13 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-		  ['Dato', 'kilometer', 'kroner', 'liter'],
-		  ['2018-07-25', 0, 0, 0]
+			['Dato', 'kilometer', 'kroner', 'liter'],
+			[
+				graphArray[0][1], 
+				parseInt(graphArray[0][2]), 
+				parseInt(graphArray[0][3]), 
+				parseInt(graphArray[0][4])
+			]
 		]);
 
 		var options = {
@@ -32,7 +37,7 @@
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;
-		for (var i = 0; i < arrayLength; i++) {
+		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
 				parseInt(graphArray[i][2]),
