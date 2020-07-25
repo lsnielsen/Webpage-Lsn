@@ -28,9 +28,9 @@
 			echo 'Not inserted';  
 		}  
 		else {  
-			echo 'Vent 5 sekunder og dine nye data vil blive vist i tabellen';  
+			echo 'Vent 3 sekunder og dine nye data vil blive vist i tabellen';  
 		}  
-		header("refresh:5; url=http://localhost/Webpage-Lsn/view/diesel/controller.php"); 
+		header("refresh:3; url=http://localhost/Webpage-Lsn/view/diesel/controller.php"); 
 	}
 		
 ?>
@@ -98,6 +98,7 @@
 							$tableData = "SELECT * FROM diesel";
 							$result = mysqli_query($con,$tableData);
 							while($row = $result->fetch_array()){
+								$row['date'] = changeDateFormat($row['date'], "table");
 								echo "	<tr id=$row[id]>
 											<td>
 												$row[date]
@@ -149,6 +150,63 @@
 		$("#deleteSpecificRow").submit();
 	});
 </script>
+
+<?php
+
+
+function changeDateFormat($date, $page) {
+	
+	$charOne = $date[0];
+	$charTwo = $date[1];
+	$charThree = $date[2];
+	$charFour = $date[3];
+	$charFive = $date[4];
+	$charSix = $date[5];
+	$charSeven = $date[6];
+	$charEight = $date[7];
+	$charNine = $date[8];
+	$charTen = $date[9];
+	
+	if ($page == "table") {
+		return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charOne . $charTwo . $charThree . $charFour;
+	} elseif ($page == "graph") {
+		if ($charSix == 0) {
+			return $charNine . $charTen . "/" . $charSeven . " - " . $charThree . $charFour;
+		} else {
+			return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
