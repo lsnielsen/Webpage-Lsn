@@ -1,7 +1,7 @@
 <?php
 
 	$con = mysqli_connect('127.0.0.1','root','');  
-	  
+	
 	if(!$con) {  
 		echo 'not connect to the server';  
 	}  
@@ -125,6 +125,9 @@
 				</div>
 			</fieldset>  
 		</form>     		
+		<form id="deleteSpecificRow" action="/../Webpage-Lsn/setup.php" method="post">
+			<input type="hidden" id="hiddenField" name="dieselButton"/>
+		</form>
 		
 		<?php
 			include "graph.php";
@@ -133,7 +136,7 @@
 	
 	
 	<form action="/../Webpage-Lsn/setup.php" method="post">
-		<button type="submit" name="cvButton" id="backToStartButton" value="frontpage"> Tilbage til startside </button>
+		<button type="submit" name="dieselButton" id="backToStartButton" value="frontpage"> Tilbage til startside </button>
 	</form>
 </html> 
 
@@ -142,8 +145,8 @@
 	$(".deleteRow").click(function() {
 		var row = $(this).closest('tr');
 		var id = row.attr('id');
-		console.log(id);
-		$("#" + id).remove();
+		$("#hiddenField").val(id);
+		$("#deleteSpecificRow").submit();
 	});
 </script>
 
