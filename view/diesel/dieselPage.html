@@ -1,0 +1,156 @@
+<html>  
+    <head>  
+        <title>  
+            Forsøg på at skrive til databasen
+        </title>  
+	</head>  
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/popup.css" type="text/css">
+	<body>  
+		<h1>
+			Diesel page
+		</h1>   
+		<form action="/../Webpage-Lsn/view/diesel/controller.php" method="post">  
+			<fieldset>  
+				<legend style="font-weight: bold; font-size: 23;"> 
+					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
+				</legend>  
+				<div style="margin-top: 30px;">
+				
+					<label style="margin-left: 40px; font-weight: bold;">
+							Dato <br>
+						</label>
+						<input class="dieselInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  	
+						<br> <br>
+						<label style="margin-left: 40px; font-weight: bold;">
+							Antal kilometer <br>
+						</label>
+						<input class="dieselInput" type="text" placeholder="ex: 659.4 " name="km">  				 
+				</div>
+				<div style="margin-left: 220px; margin-top: -172px; margin-bottom: 200px;">
+						<label style="margin-left: 40px; font-weight: bold;">
+							Liter <br>
+						</label>  
+						<input class="dieselInput" type="text" placeholder="ex: 23.3 " name="liter"> 				 
+						<br> <br>
+						<label style="margin-left: 40px; font-weight: bold;">
+							Kroner <br>
+						</label>
+						<input class="dieselInput" type="text" placeholder="ex: 223.3 " name="kr">
+						<br> <br> <br>
+						
+						<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
+							Indsæt tal
+						</button>
+
+				</div>
+				
+				<div class="dieselNumbers">
+					<h2 style="margin-left: 150px;">
+						Tabel over indtastede diesel tal
+					</h2>
+
+					<table class="dieselTable">
+						<tr>
+							<th class="dieselHeader">Dato</th>
+							<th class="dieselHeader">Kilometer</th>
+							<th class="dieselHeader">Kroner</th>
+							<th class="dieselHeader">Liter</th>
+							<th class="dieselHeader">Slet række</th>
+						</tr>
+						<?php
+							$tableData = "SELECT * FROM diesel";
+							$result = mysqli_query($con,$tableData);
+							$graphArray = makeQueryToArray($result, "table");
+							
+							for($i=0; $i<sizeOf($graphArray); $i++) {
+								echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
+											echo "<td class=dieselTableCell>";
+											echo $graphArray[$i][1];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['kilometer'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['kroner'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['liter'];
+											echo "</td>									
+											<td> 
+												<center> 
+													<div class=deleteRow value=dieselPage name=dieselButton> 
+														&#10006; 
+													</div> 
+												</center> 
+											</td>
+										</tr>";
+							}
+						?>
+					</table>
+				</div>
+			</fieldset>  
+		</form>     	
+
+		<div class="deleteDieselRow">
+			<span class="helper"></span>
+			<div>
+				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
+				<p>Er du sikker på, at du vil slette denne række?</p>
+				<div>
+					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
+					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
+				</div>
+			</div>
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/view/diesel/controller.php" method="post">
+				<input type="hidden" id="hiddenField" name="dieselButton"/>
+			</form>
+		</div>
+		
+		
+		<?php include "graph.php"; ?>
+    </body>  
+	
+	
+	<form action="/../Webpage-Lsn/setup.php" method="post">
+		<button type="submit" name="dieselButton" id="backToStartButton" value="frontpage"> Tilbage til startside </button>
+	</form>
+</html> 
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+	$(".deleteRow").click(function() {
+		var row = $(this).closest('tr');
+		var id = row.attr('id');
+		$("#hiddenField").val(id);
+		$('.deleteDieselRow').show();
+		$('.deleteDieselRowYes').click(function(){
+			$("#deleteSpecificRow").submit();
+		});
+	});
+    $('.deleteDieselRowPopupCloseButton').click(function(){
+        $('.deleteDieselRow').hide();
+    });
+    $('.deleteDieselRowNo').click(function(){
+        $('.deleteDieselRow').hide();
+    });
+    
+	$('.wrongDieselInputButton').click(function(){
+        $('.wrongDieselInput').hide();
+    });
+    $('.wrongDieselInputPopupCloseButton').click(function(){
+        $('.wrongDieselInput').hide();
+    });
+	
+	if($(".notDisplayingWrongInput").length){
+		$(".notDisplayingWrongInput").css("display", "block");
+	}
+</script>
+
+<style>
+	.deleteRow {
+		cursor: pointer;
+	}
+
+</style>
+

@@ -68,5 +68,8 @@
 	}
 	.dieselHeader {
 		font-weight: bold;
+		text-align: center;
 	}
-	
+	.dieselTableCell {
+		text-align: center;
+	}
