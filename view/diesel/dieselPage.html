@@ -90,16 +90,16 @@
 					</table>
 				</div>
 			</fieldset>  
-		</form>     		
+		</form>     	
 
 		<div class="deleteDieselRow">
 			<span class="helper"></span>
 			<div>
-				<div class="popupCloseButton">&times;</div>
+				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
 				<p>Er du sikker på, at du vil slette denne række?</p>
 				<div>
-					<div class="deleteDieselRowYes deleteDieselRowButton">Ja</div>
-					<div class="deleteDieselRowNo deleteDieselRowButton">Nej</div>
+					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
+					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
 				</div>
 			</div>
 			<form id="deleteSpecificRow" action="/../Webpage-Lsn/view/diesel/controller.php" method="post">
@@ -127,11 +127,17 @@
 			$("#deleteSpecificRow").submit();
 		});
 	});
-	
-    $('.popupCloseButton').click(function(){
+    $('.deleteDieselRowPopupCloseButton').click(function(){
         $('.deleteDieselRow').hide();
     });
     $('.deleteDieselRowNo').click(function(){
+        $('.deleteDieselRow').hide();
+    });
+    
+	$('.wrongDieselInputButton').click(function(){
+        $('.wrongDieselInput').hide();
+    });
+    $('.wrongDieselInputPopupCloseButton').click(function(){
         $('.deleteDieselRow').hide();
     });
 	
