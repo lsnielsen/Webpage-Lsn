@@ -14,18 +14,23 @@
             Advanced
         </title>  
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/popup.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/advanced.css" type="text/css">
 	<body>  
 		<h1>
 			Avanceret statistik for diesel forbrug
 		</h1>  
-		<table class="dieselTable">
+		<table class="advancedTable">
 						<tr>
 							<th class="dieselHeader">Dato</th>
-							<th class="dieselHeader">Kilometer</th>
-							<th class="dieselHeader">Kroner</th>
+							<th class="dieselHeader">Km</th>
 							<th class="dieselHeader">Liter</th>
+							<th class="dieselHeader">Kroner</th>
+							<th class="dieselHeader">Km/l</th>
+							<th class="dieselHeader">Km/kr</th>
+							<th class="dieselHeader">Kr/l</th>
+							<th class="dieselHeader">Kr/km</th>
+							<th class="dieselHeader">L/km</th>
+							<th class="dieselHeader">L/kr</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -41,14 +46,38 @@
 											echo $graphArray[$i]['kilometer'];
 											echo "</td>
 											<td class=dieselTableCell>";
+											echo $graphArray[$i]['liter'];
+											echo "</td>
+											<td class=dieselTableCell advancedDieselCell>";
 											echo $graphArray[$i]['kroner'];
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['liter'];
+											echo $graphArray[$i]['km/l'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['km/kr'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['kr/l'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['kr/km'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['l/km'];
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo $graphArray[$i]['l/kr'];
 										echo "</tr>";
 							}
 						?>
 		</table>
+		<?php include "kmPerLiter.php"; ?>
+		<?php include "krPerLiter.php"; ?>
+		<?php include "kmPerKroner.php"; ?>
+		<?php include "literPerKm.php"; ?>
+		<?php include "literPerKroner.php"; ?>
+		<?php include "krPerKm.php"; ?>
 		<form>
 			<button class="dieselButton" 
 					action="/../Webpage-Lsn/view/diesel/controller.php" 
