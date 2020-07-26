@@ -92,6 +92,8 @@
 			</fieldset>  
 		</form>     	
 
+		<div class="wrongDieselInput"> </div>
+
 		<div class="deleteDieselRow">
 			<span class="helper"></span>
 			<div>
@@ -106,6 +108,11 @@
 				<input type="hidden" id="hiddenField" name="dieselButton"/>
 			</form>
 		</div>
+		
+		
+		
+		
+		
 		
 		<?php include "graph.php"; ?>
     </body>  
@@ -141,6 +148,12 @@
         $('.deleteDieselRow').hide();
     });
 	
+	if($(".notDisplayingWrongInput").length){
+	//	$(".notDisplayingWrongInput").append(".wrongDieselInput");
+		$(".notDisplayingWrongInput").css("display", "block");
+		$(".notDisplayingWrongInput").css("margin-left", "100px");
+		$(".notDisplayingWrongInput").css("margin-right", "100px");
+	}
 </script>
 
 <style>

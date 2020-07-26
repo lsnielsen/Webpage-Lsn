@@ -46,7 +46,7 @@
 	
 	function setHtmlBox() {			
 		?>
-			<div class="wrongDieselInput">
+			<div class="notDisplayingWrongInput" style="display: none;">
 				<span class="helper"></span>
 				<div>
 					<div class="wrongDieselInputPopupCloseButton popupCloseButton">&times;</div>
@@ -56,7 +56,18 @@
 						<div class="wrongDieselInputButton dieselPopupButton">Fortryd</div>
 					</div>
 				</div>
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/view/diesel/controller.php" method="post">
+				<input type="hidden" id="hiddenField" name="dieselButton"/>
+			</form>
 			</div>
+			<script>
+				$('.wrongDieselInputButton').click(function(){
+					$('.wrongDieselInput').hide();
+				});
+				$('.wrongDieselInputPopupCloseButton').click(function(){
+					$('.deleteDieselRow').hide();
+				});
+			</script>
 		<?php
 	}
 		
