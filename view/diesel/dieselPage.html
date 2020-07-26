@@ -5,11 +5,12 @@
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/popup.css" type="text/css">
 	<body>  
 		<h1>
 			Diesel page
 		</h1>   
-		<form action="/../Webpage-Lsn/setup.php" method="post">  
+		<form action="/../Webpage-Lsn/view/diesel/controller.php" method="post">  
 			<fieldset>  
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
@@ -90,13 +91,23 @@
 				</div>
 			</fieldset>  
 		</form>     		
-		<form id="deleteSpecificRow" action="/../Webpage-Lsn/setup.php" method="post">
-			<input type="hidden" id="hiddenField" name="dieselButton"/>
-		</form>
+
+		<div class="deleteDieselRow">
+			<span class="helper"></span>
+			<div>
+				<div class="popupCloseButton">&times;</div>
+				<p>Er du sikker på, at du vil slette denne række?</p>
+				<div>
+					<div class="deleteDieselRowYes deleteDieselRowButton">Ja</div>
+					<div class="deleteDieselRowNo deleteDieselRowButton">Nej</div>
+				</div>
+			</div>
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/view/diesel/controller.php" method="post">
+				<input type="hidden" id="hiddenField" name="dieselButton"/>
+			</form>
+		</div>
 		
-		<?php
-			include "graph.php";
-		?>
+		<?php include "graph.php"; ?>
     </body>  
 	
 	
@@ -111,6 +122,25 @@
 		var row = $(this).closest('tr');
 		var id = row.attr('id');
 		$("#hiddenField").val(id);
-		$("#deleteSpecificRow").submit();
+		$('.deleteDieselRow').show();
+		$('.deleteDieselRowYes').click(function(){
+			$("#deleteSpecificRow").submit();
+		});
 	});
+	
+    $('.popupCloseButton').click(function(){
+        $('.deleteDieselRow').hide();
+    });
+    $('.deleteDieselRowNo').click(function(){
+        $('.deleteDieselRow').hide();
+    });
+	
 </script>
+
+<style>
+	.deleteRow {
+		cursor: pointer;
+	}
+
+</style>
+

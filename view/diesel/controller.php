@@ -17,7 +17,9 @@
 		$query = "DELETE FROM diesel WHERE diesel.id = $id";
 		mysqli_query($con, $query);
 		
-		include("view/diesel/setup.php");
+		include("setup.php");
+	} elseif (isset($dieselButton)) {
+		include("setup.php");
 	}
 	
 		
