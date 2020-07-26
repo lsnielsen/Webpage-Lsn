@@ -31,10 +31,6 @@
 			if(!mysqli_query($con,$sql)) {  
 				echo 'Not inserted';  
 			}  
-			else {  
-				echo 'Vent 3 sekunder og dine nye data vil blive vist i tabellen';  
-			}  
-			header("refresh:3; url=http://localhost/Webpage-Lsn/view/diesel/controller.php"); 
 		} else {
 			setHtmlBox();
 		}
@@ -46,7 +42,7 @@
 	
 	function setHtmlBox() {			
 		?>
-			<div class="notDisplayingWrongInput" style="display: none;">
+			<div class="notDisplayingWrongInput wrongDieselInput" style="display: none;">
 				<span class="helper"></span>
 				<div>
 					<div class="wrongDieselInputPopupCloseButton popupCloseButton">&times;</div>
@@ -56,18 +52,7 @@
 						<div class="wrongDieselInputButton dieselPopupButton">Fortryd</div>
 					</div>
 				</div>
-			<form id="deleteSpecificRow" action="/../Webpage-Lsn/view/diesel/controller.php" method="post">
-				<input type="hidden" id="hiddenField" name="dieselButton"/>
-			</form>
 			</div>
-			<script>
-				$('.wrongDieselInputButton').click(function(){
-					$('.wrongDieselInput').hide();
-				});
-				$('.wrongDieselInputPopupCloseButton').click(function(){
-					$('.deleteDieselRow').hide();
-				});
-			</script>
 		<?php
 	}
 		
