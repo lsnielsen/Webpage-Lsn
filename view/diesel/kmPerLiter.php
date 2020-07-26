@@ -1,16 +1,13 @@
 
 <center>
-	<div id="curve_chart" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="kmPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
-	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "graph");	
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 
 	google.charts.load('current', {'packages':['corechart']});
@@ -28,7 +25,7 @@
 		]);
 
 		var options = {
-		  title: 'Diesel regnskab',
+		  title: 'Kilometer per liter',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -40,7 +37,7 @@
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+		var chart = new google.visualization.LineChart(document.getElementById('kmPerLiter'));
 
 		chart.draw(data, options);
 	}

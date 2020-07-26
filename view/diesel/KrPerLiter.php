@@ -1,6 +1,6 @@
 
 <center>
-	<div id="curve_chart" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="krPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
@@ -9,8 +9,7 @@
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "graph");	
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <script>
 
 	google.charts.load('current', {'packages':['corechart']});
@@ -24,10 +23,11 @@
 			[
 				graphArray[0][1], 
 				parseInt(graphArray[0]['kr/l'])
+			]
 		]);
 
 		var options = {
-		  title: 'Diesel regnskab',
+		  title: 'Kroner per liter',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -39,7 +39,7 @@
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+		var chart = new google.visualization.LineChart(document.getElementById('krPerLiter'));
 
 		chart.draw(data, options);
 	}

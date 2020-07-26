@@ -15,6 +15,8 @@
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/advanced.css" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body>  
 		<h1>
 			Avanceret statistik for diesel forbrug
@@ -73,11 +75,12 @@
 						?>
 		</table>
 		<?php include "kmPerLiter.php"; ?>
-		<?php include "krPerLiter.php"; ?>
+		<?php include "krPerKm.php"; ?>
+		<?php include "krPerLiter.php"; ?> 		
 		<?php include "kmPerKroner.php"; ?>
 		<?php include "literPerKm.php"; ?>
 		<?php include "literPerKroner.php"; ?>
-		<?php include "krPerKm.php"; ?>
+		
 		<form>
 			<button class="dieselButton" 
 					action="/../Webpage-Lsn/view/diesel/controller.php" 
