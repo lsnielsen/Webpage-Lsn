@@ -48,6 +48,28 @@
 										echo "</tr>";
 							}
 						?>
-					</table>
+		</table>
+		<form>
+			<button class="dieselButton" 
+					action="/../Webpage-Lsn/view/diesel/controller.php" 
+					value="dieselPage"
+					name="dieselButton"						
+					style="margin-left: auto;">
+				Tilbage
+			</button>
+		</form>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
