@@ -1,5 +1,6 @@
 <?php
-
+	//handleAdvancedArray is the function to be called outside.
+	//It calls all the other functions in this file
 	function handleAdvancedArray($query, $pageType) 
 	{
 		$sortedArray = sortSqlArray($query);
@@ -8,8 +9,49 @@
 			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
 		}
 		$finalArray = getFinalData($sortedArray);
+		$finalArray = makeAverageData($finalArray);
 		
 		return $finalArray;
+	}
+	
+	function makeAverageData($array)
+	{
+		$counter = 0;
+		$kmSum = 0;
+		$literSum = 0;
+		$krSum = 0;
+		$kmPerLiterSum = 0;
+		$kmPerKrSum = 0;
+		$krPerLiterSum = 0;
+		$krPerKmSum = 0;
+		$literPerKmSum = 0;
+		$literPerKrSum= 0;
+		for ($i = 0; $i<sizeof($array); $i++) {
+			$kmSum += $array[$i]['kilometer'];
+			$literSum += $array[$i]['liter'];
+			$krSum += $array[$i]['kroner'];
+			
+			$kmPerLiterSum += $array[$i]['km/l'];
+			$kmPerKrSum += $array[$i]['km/kr'];
+			
+			$krPerLiterSum += $array[$i]['kr/l'];
+			$krPerKmSum += $array[$i]['kr/km'];
+			
+			$literPerKmSum += $array[$i]['l/km'];
+			$literPerKrSum += $array[$i]['l/kr'];
+			$counter += 1;
+		}		
+		$array[0]['averageKm'] = round($kmSum / $counter, 2);
+		$array[0]['averageLiter'] = round($literSum / $counter, 2);
+		$array[0]['averageKr'] = round($krSum / $counter, 2);
+		$array[0]['averageKmPerLiter'] = round($kmPerLiterSum / $counter, 2);
+		$array[0]['averageKmPerKr'] = round($kmPerKrSum / $counter, 2);
+		$array[0]['averageKrPerLiter'] = round($krPerLiterSum / $counter, 2);
+		$array[0]['averageKrPerKm'] = round($krPerKmSum / $counter, 2);
+		$array[0]['averageLiterPerKm'] = round($literPerKmSum / $counter, 2);
+		$array[0]['averageLiterPerKr'] = round($literPerKrSum / $counter, 2);
+
+		return $array;
 	}
 	
 	function getFinalData($array)

@@ -41,6 +41,9 @@
 	.dieselTableCell{
 		text-align: center;
 	}
+	#averageRow {
+		font-weight: bold;
+	}
 	
 	
 	

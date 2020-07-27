@@ -72,6 +72,35 @@
 											echo $graphArray[$i]['l/kr'];
 										echo "</tr>";
 							}
+							echo "	<tr id=averageRow>";
+										echo "<td class=dieselTableCell> Gennemsnit </td>";
+										echo "<td class=dieselTableCell>";
+										echo $graphArray[0]['averageKm'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageLiter'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageKr'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageKmPerLiter'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageKmPerKr'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageKrPerLiter'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageKrPerKm'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageLiterPerKm'];
+										echo "</td>
+										<td class=dieselTableCell>";
+										echo $graphArray[0]['averageLiterPerKr'];
+									echo "</tr>";
 						?>
 		</table>
 		<form>
