@@ -74,6 +74,7 @@
 							}
 						?>
 		</table>
+		<form>
 			<button class="dieselButton" 
 					action="/../Webpage-Lsn/view/diesel/controller.php" 
 					value="dieselPage"
@@ -81,6 +82,7 @@
 					style="margin-left: auto;">
 				Tilbage
 			</button>
+		</form>
 		<?php include "kmPerLiter.php"; ?>
 		<?php include "krPerKm.php"; ?>
 		<?php include "krPerLiter.php"; ?> 		
