@@ -45,31 +45,31 @@
 											echo $graphArray[$i][1];
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['kilometer'], 2, ',', '.');
+											echo number_format($graphArray[$i]['kilometer'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['liter'], 2, ',', '.');
+											echo number_format($graphArray[$i]['liter'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell advancedDieselCell>";
-											echo number_format($graphArray[0]['kroner'], 2, ',', '.');
+											echo number_format($graphArray[$i]['kroner'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['km/l'], 2, ',', '.');
+											echo number_format($graphArray[$i]['km/l'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['km/kr'], 2, ',', '.');
+											echo number_format($graphArray[$i]['km/kr'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['kr/l'], 2, ',', '.');
+											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['kr/km'], 2, ',', '.');
+											echo number_format($graphArray[$i]['kr/km'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['l/km'], 2, ',', '.');
+											echo number_format($graphArray[$i]['l/km'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[0]['l/kr'], 2, ',', '.');
+											echo number_format($graphArray[$i]['l/kr'], 2, ',', '.');
 										echo "</td></tr>";
 							}
 							echo "</table><table class=\"advancedTable\" style=\"margin-top: 10px;\">
