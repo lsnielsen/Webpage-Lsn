@@ -19,10 +19,11 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / krone'],
+			['Dato', 'Liter / krone', 'Gennemsnit'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['l/kr'])
+				parseFloat(graphArray[0]['l/kr']),
+				parseFloat(graphArray[0]['averageLiterPerKr'])
 			]
 		]);
 
@@ -35,7 +36,8 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['l/kr'])
+				parseFloat(graphArray[i]['l/kr']),
+				parseFloat(graphArray[0]['averageLiterPerKr'])
 			]);
 		}
 
