@@ -19,23 +19,22 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / Kilometer'],
+			['Dato', 'Liter / kilometer'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['l/km'])
+				parseFloat(graphArray[0]['l/km'])
 			]
 		]);
 
 		var options = {
 		  title: 'Liter per kilometer',
-		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['l/km'])
+				parseFloat(graphArray[i]['l/km'])
 			]);
 		}
 

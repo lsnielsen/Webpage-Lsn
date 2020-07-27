@@ -19,23 +19,22 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / Liter'],
+			['Dato', 'Kroner / liter'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['kr/l'])
+				parseFloat(graphArray[0]['kr/l'])
 			]
 		]);
 
 		var options = {
 		  title: 'Kroner per liter',
-		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['kr/l'])
+				parseFloat(graphArray[i]['kr/l'])
 			]);
 		}
 

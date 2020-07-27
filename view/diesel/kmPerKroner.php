@@ -19,23 +19,22 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / Kroner'],
+			['Dato', 'Kilometer / krone'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['km/kr'])
+				parseFloat(graphArray[0]['km/kr'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kilometer per kroner',
-		  curveType: 'function',
+		  title: 'Kilometer per krone',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['km/kr'])
+				parseFloat(graphArray[i]['km/kr'])
 			]);
 		}
 

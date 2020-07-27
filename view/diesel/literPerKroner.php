@@ -19,23 +19,22 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / Kroner'],
+			['Dato', 'Liter / krone'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['l/kr'])
+				parseFloat(graphArray[0]['l/kr'])
 			]
 		]);
 
 		var options = {
-		  title: 'Liter per kroner',
-		  curveType: 'function',
+		  title: 'Liter per krone',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['l/kr'])
+				parseFloat(graphArray[i]['l/kr'])
 			]);
 		}
 

@@ -23,24 +23,23 @@
 			['Dato', 'kilometer', 'kroner', 'liter'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0][2]), 
-				parseInt(graphArray[0][3]), 
-				parseInt(graphArray[0][4])
+				parseFloat(graphArray[0][2]), 
+				parseFloat(graphArray[0][3]), 
+				parseFloat(graphArray[0][4])
 			]
 		]);
 
 		var options = {
 		  title: 'Diesel regnskab',
-		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i][2]),
-				parseInt(graphArray[i][3]),
-				parseInt(graphArray[i][4])
+				parseFloat(graphArray[i][2]),
+				parseFloat(graphArray[i][3]),
+				parseFloat(graphArray[i][4])
 			]);
 		}
 
