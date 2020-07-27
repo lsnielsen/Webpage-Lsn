@@ -25,7 +25,7 @@
 					foreach ($string as $key => $value) {
 						if ($value == ".") {
 							echo $value . "<br>";
-							$temp = $array[$i][$j][$key];
+							$temp = $array[$i][$j][$key]; // Try and set a complete different array
 							$value = ",";
 							echo $temp . "<br>";
 							$array[$i][$j][$key] = ",";
