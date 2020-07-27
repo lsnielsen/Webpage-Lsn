@@ -24,10 +24,10 @@
 					$string = str_split($innerArray[$j]);
 					foreach ($string as $key => $value) {
 						if ($value == ".") {
-							echo $value . "<br>";
+							echo $value;
 							$temp = $array[$i][$j][$key]; // Try and set a complete different array
 							$value = ",";
-							echo $temp . "<br>";
+							echo $temp;
 							$array[$i][$j][$key] = ",";
 						}
 					}
