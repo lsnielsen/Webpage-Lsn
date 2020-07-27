@@ -51,15 +51,15 @@
 		$array[0]['literPerKmSum'] = $literSum / $kmSum;
 		$array[0]['literPerKrSum'] = $literSum / $krSum;
 	
-		$array[0]['averageKm'] = round($kmSum / $counter, 2);
-		$array[0]['averageLiter'] = round($literSum / $counter, 2);
-		$array[0]['averageKr'] = round($krSum / $counter, 2);
-		$array[0]['averageKmPerLiter'] = round($kmPerLiterSum / $counter, 2);
-		$array[0]['averageKmPerKr'] = round($kmPerKrSum / $counter, 2);
-		$array[0]['averageKrPerLiter'] = round($krPerLiterSum / $counter, 2);
-		$array[0]['averageKrPerKm'] = round($krPerKmSum / $counter, 2);
-		$array[0]['averageLiterPerKm'] = round($literPerKmSum / $counter, 2);
-		$array[0]['averageLiterPerKr'] = round($literPerKrSum / $counter, 2);
+		$array[0]['averageKm'] = $kmSum / $counter;
+		$array[0]['averageLiter'] = $literSum / $counter;
+		$array[0]['averageKr'] = $krSum / $counter;
+		$array[0]['averageKmPerLiter'] = $kmPerLiterSum / $counter;
+		$array[0]['averageKmPerKr'] = $kmPerKrSum / $counter;
+		$array[0]['averageKrPerLiter'] = $krPerLiterSum / $counter;
+		$array[0]['averageKrPerKm'] = $krPerKmSum / $counter;
+		$array[0]['averageLiterPerKm'] = $literPerKmSum / $counter;
+		$array[0]['averageLiterPerKr'] = $literPerKrSum / $counter;
 
 		return $array;
 	}
@@ -72,12 +72,12 @@
 			$liter = $array[$i]['liter'];
 			$kr = $array[$i]['kroner'];
 
-			$array[$i]['km/l'] = round($km / $liter, 2);
-			$array[$i]['km/kr'] = round($km / $kr, 2);
-			$array[$i]['l/km'] = round($liter / $km, 2);
-			$array[$i]['l/kr'] = round($liter / $kr, 2);
-			$array[$i]['kr/km'] = round($kr / $km, 2);
-			$array[$i]['kr/l'] = round($kr / $liter, 2);
+			$array[$i]['km/l'] = $km / $liter;
+			$array[$i]['km/kr'] = $km / $kr;
+			$array[$i]['l/km'] = $liter / $km;
+			$array[$i]['l/kr'] = $liter / $kr;
+			$array[$i]['kr/km'] = $kr / $km;
+			$array[$i]['kr/l'] = $kr / $liter;
 		}
 		return $array;
 	}

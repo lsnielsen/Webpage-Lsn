@@ -45,31 +45,31 @@
 											echo $graphArray[$i][1];
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['kilometer'];
+											echo round($graphArray[$i]['kilometer'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['liter'];
+											echo round($graphArray[$i]['liter'], 2);
 											echo "</td>
 											<td class=dieselTableCell advancedDieselCell>";
-											echo $graphArray[$i]['kroner'];
+											echo round($graphArray[$i]['kroner'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['km/l'];
+											echo round($graphArray[$i]['km/l'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['km/kr'];
+											echo round($graphArray[$i]['km/kr'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['kr/l'];
+											echo round($graphArray[$i]['kr/l'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['kr/km'];
+											echo round($graphArray[$i]['kr/km'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['l/km'];
+											echo round($graphArray[$i]['l/km'], 2);
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['l/kr'];
+											echo round($graphArray[$i]['l/kr'], 2);
 										echo "</td></tr>";
 							}
 							echo "</table><table class=\"advancedTable\" style=\"margin-top: 10px;\">
