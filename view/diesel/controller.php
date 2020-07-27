@@ -5,7 +5,6 @@
 	if ($dieselButton == "dieselPage") {
 		include("setup.php");
 	} elseif (is_numeric($dieselButton)) {
-		
 		$con = mysqli_connect('127.0.0.1','root','');  
 		if(!$con) {  
 			echo 'not connect to the server';  
@@ -18,6 +17,8 @@
 		mysqli_query($con, $query);
 		
 		include("setup.php");
+	} elseif ($dieselButton == "advancedDieselPage") {
+		include("advanced.php");
 	} elseif (isset($dieselButton)) {
 		include("setup.php");
 	}
