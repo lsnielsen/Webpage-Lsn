@@ -74,6 +74,13 @@
 							}
 						?>
 		</table>
+			<button class="dieselButton" 
+					action="/../Webpage-Lsn/view/diesel/controller.php" 
+					value="dieselPage"
+					name="dieselButton"						
+					style="margin-left: auto;">
+				Tilbage
+			</button>
 		<?php include "kmPerLiter.php"; ?>
 		<?php include "krPerKm.php"; ?>
 		<?php include "krPerLiter.php"; ?> 		
