@@ -45,31 +45,31 @@
 											echo $graphArray[$i][1];
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['kilometer'], 2);
+											echo number_format($graphArray[0]['kilometer'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['liter'], 2);
+											echo number_format($graphArray[0]['liter'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell advancedDieselCell>";
-											echo round($graphArray[$i]['kroner'], 2);
+											echo number_format($graphArray[0]['kroner'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['km/l'], 2);
+											echo number_format($graphArray[0]['km/l'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['km/kr'], 2);
+											echo number_format($graphArray[0]['km/kr'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['kr/l'], 2);
+											echo number_format($graphArray[0]['kr/l'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['kr/km'], 2);
+											echo number_format($graphArray[0]['kr/km'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['l/km'], 2);
+											echo number_format($graphArray[0]['l/km'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo round($graphArray[$i]['l/kr'], 2);
+											echo number_format($graphArray[0]['l/kr'], 2, ',', '.');
 										echo "</td></tr>";
 							}
 							echo "</table><table class=\"advancedTable\" style=\"margin-top: 10px;\">
@@ -87,60 +87,60 @@
 									</tr>	<tr class=bottomRows>";
 										echo "<td class=dieselTableCell> Gennemsnit </td>";
 										echo "<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageKm'], 2);
+										echo number_format($graphArray[0]['averageKm'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageLiter'], 2);
+										echo number_format($graphArray[0]['averageLiter'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageKr'], 2);
+										echo number_format($graphArray[0]['averageKr'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageKmPerLiter'], 2);
+										echo number_format($graphArray[0]['averageKmPerLiter'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageKmPerKr'], 2);
+										echo number_format($graphArray[0]['averageKmPerKr'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageKrPerLiter'], 2);
+										echo number_format($graphArray[0]['averageKrPerLiter'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageKrPerKm'], 2);
+										echo number_format($graphArray[0]['averageKrPerKm'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageLiterPerKm'], 2);
+										echo number_format($graphArray[0]['averageLiterPerKm'],2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['averageLiterPerKr'], 2);
+										echo number_format($graphArray[0]['averageLiterPerKr'], 2, ',', '.');
 										echo "</td></tr>";
 							echo "	<tr class=bottomRows>";
 										echo "<td class=dieselTableCell> Samlet </td>";
 										echo "<td class=dieselTableCell>";
-										echo round($graphArray[0]['kmSum'], 2);
+										echo number_format($graphArray[0]['kmSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['literSum'], 2);
+										echo number_format($graphArray[0]['literSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['krSum'], 2);
+										echo number_format($graphArray[0]['krSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['kmPerLiterSum'], 2);
+										echo number_format($graphArray[0]['kmPerLiterSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['kmPerKrSum'], 2);
+										echo number_format($graphArray[0]['kmPerKrSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['krPerLiterSum'], 2);
+										echo number_format($graphArray[0]['krPerLiterSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['krPerKmSum'], 2);
+										echo number_format($graphArray[0]['krPerKmSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['literPerKmSum'], 2);
+										echo number_format($graphArray[0]['literPerKmSum'], 2, ',', '.');
 										echo "</td>
 										<td class=dieselTableCell>";
-										echo round($graphArray[0]['literPerKrSum'], 2);
+										echo number_format($graphArray[0]['literPerKrSum'], 2, ',', '.');
 										echo "</td></tr></table>";
 						?>
 		</table>

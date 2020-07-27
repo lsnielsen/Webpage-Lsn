@@ -9,32 +9,9 @@
 			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
 		}
 		$finalDataArray = getFinalData($sortedArray);
-		$finalAverageArray = makeAverageData($finalDataArray);
-		$finalArray = setCorrectKomma($finalAverageArray);
+		$finalArray = makeAverageData($finalDataArray);
 		
 		return $finalArray;
-	}
-	
-	function setCorrectKomma($array)
-	{
-		for ($i = 0; $i<sizeof($array); $i++) {
-			$innerArray = $array[$i];
-			for ($j = 0; $j<sizeof($innerArray); $j++) {
-				if (isset($innerArray[$j])) {
-					$string = str_split($innerArray[$j]);
-					foreach ($string as $key => $value) {
-						if ($value == ".") {
-							echo $value;
-							$temp = $array[$i][$j][$key]; // Try and set a complete different array
-							$value = ",";
-							echo $temp;
-							$array[$i][$j][$key] = ",";
-						}
-					}
-				}
-			}
-		}
-		return $array;
 	}
 	
 	function makeAverageData($array)
