@@ -70,7 +70,7 @@
 											echo "</td>
 											<td class=dieselTableCell>";
 											echo $graphArray[$i]['l/kr'];
-										echo "</tr>";
+										echo "</td></tr>";
 							}
 							echo "	<tr id=averageRow>";
 										echo "<td class=dieselTableCell> Gennemsnit </td>";
@@ -100,7 +100,7 @@
 										echo "</td>
 										<td class=dieselTableCell>";
 										echo $graphArray[0]['averageLiterPerKr'];
-									echo "</tr>";
+										echo "</td></tr>";
 						?>
 		</table>
 		<form>
