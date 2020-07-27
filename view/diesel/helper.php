@@ -41,6 +41,16 @@
 			$literPerKrSum += $array[$i]['l/kr'];
 			$counter += 1;
 		}		
+		$array[0]['kmSum'] = $kmSum;
+		$array[0]['literSum'] = $literSum;
+		$array[0]['krSum'] = $krSum;
+		$array[0]['kmPerLiterSum'] = $kmSum / $literSum;
+		$array[0]['kmPerKrSum'] = $kmSum / $krSum;
+		$array[0]['krPerLiterSum'] = $krSum / $literSum;
+		$array[0]['krPerKmSum'] = $krSum / $kmSum;
+		$array[0]['literPerKmSum'] = $literSum / $kmSum;
+		$array[0]['literPerKrSum'] = $literSum / $krSum;
+	
 		$array[0]['averageKm'] = round($kmSum / $counter, 2);
 		$array[0]['averageLiter'] = round($literSum / $counter, 2);
 		$array[0]['averageKr'] = round($krSum / $counter, 2);

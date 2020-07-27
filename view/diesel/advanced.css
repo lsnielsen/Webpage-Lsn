@@ -41,7 +41,7 @@
 	.dieselTableCell{
 		text-align: center;
 	}
-	#averageRow {
+	.bottomRows {
 		font-weight: bold;
 		font-size: 17px;
 	}

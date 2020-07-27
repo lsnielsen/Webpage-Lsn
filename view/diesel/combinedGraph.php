@@ -29,7 +29,7 @@
 		]);
 
 		var options = {
-		  title: 'Liter per kilometer, liter per krone og kroner per kilometer',
+		  title: 'L/km, l/kr og kr/km',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
