@@ -28,6 +28,7 @@
 
 		var options = {
 		  title: 'Liter per kilometer',
+		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;

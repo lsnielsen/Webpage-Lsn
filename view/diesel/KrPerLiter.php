@@ -28,6 +28,7 @@
 
 		var options = {
 		  title: 'Kroner per liter',
+		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;

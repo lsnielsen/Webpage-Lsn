@@ -31,6 +31,7 @@
 
 		var options = {
 		  title: 'Diesel regnskab',
+		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;

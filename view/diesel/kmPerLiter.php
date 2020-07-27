@@ -26,6 +26,7 @@
 
 		var options = {
 		  title: 'Kilometer per liter',
+		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;

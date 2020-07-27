@@ -28,6 +28,7 @@
 
 		var options = {
 		  title: 'Kilometer per krone',
+		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
 		var arrayLength = graphArray.length;

@@ -22,7 +22,7 @@
 			['Dato', 'Kroner / Kilometer'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['kr/km'])
+				parseFloat(graphArray[0]['kr/km'])
 			]
 		]);
 
@@ -35,7 +35,7 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['kr/km'])
+				parseFloat(graphArray[i]['kr/km'])
 			]);
 		}
 
