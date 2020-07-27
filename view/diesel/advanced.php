@@ -84,11 +84,12 @@
 			</button>
 		</form>
 		<?php include "kmPerLiter.php"; ?>
-		<?php include "krPerKm.php"; ?>
 		<?php include "krPerLiter.php"; ?> 		
 		<?php include "kmPerKroner.php"; ?>
-		<?php include "literPerKm.php"; ?>
-		<?php include "literPerKroner.php"; ?>
+		<?php //include "krPerKm.php"; ?>
+		<?php //include "literPerKm.php"; ?>
+		<?php //include "literPerKroner.php"; ?>
+		<?php include "combinedGraph.php"; ?>
 		
 		<form>
 			<button class="dieselButton" 
