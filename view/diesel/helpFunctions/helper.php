@@ -126,7 +126,12 @@
 		$charTen = $date[9];
 		
 		if ($page == "table") {
-			return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charOne . $charTwo . $charThree . $charFour;
+			$month = setMonth($charSix, $charSeven);
+			if ($charNine == 0) {
+				return $charTen . ". " . $month . "  " . $charOne . $charTwo . $charThree . $charFour;	
+			} else {
+				return $charNine . $charTen . ". " . $month . "  " . $charOne . $charTwo . $charThree . $charFour;
+			}
 		} elseif ($page == "graph") {
 			if ($charSix == 0 && $charNine =! 0) {
 				return $charNine . $charTen . "/" . $charSeven . " - " . $charThree . $charFour;
@@ -137,5 +142,37 @@
 			}
 		}
 	}
+	
+	function setMonth($charOne, $charTwo)
+	{	
+		if ($charOne == 0) {
+			if ($charTwo == 1) {
+				return "januar";
+			} elseif ($charTwo == 2) {
+				return "februar";
+			} elseif ($charTwo == 3) {
+				return "marts";
+			} elseif ($charTwo == 4) {
+				return "april";
+			} elseif ($charTwo == 5) {
+				return "maj";
+			} elseif ($charTwo == 6) {
+				return "juni";
+			} elseif ($charTwo == 7) {
+				return "juli";
+			} elseif ($charTwo == 8) {
+				return "august";
+			} elseif ($charTwo == 9) {
+				return "september";
+			}
+		} elseif ($charTwo == 0) {
+			return "oktober";
+		} elseif ($charTwo == 1) {
+			return "november";
+		} elseif ($charTwo == 2) {
+			return "december";
+		}
+	}
+	
 	
 ?>
