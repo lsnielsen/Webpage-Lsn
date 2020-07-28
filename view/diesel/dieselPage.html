@@ -117,7 +117,7 @@
 			<span class="helper"></span>
 			<div>
 				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
-				<p>Er du sikker på, at du vil slette denne række?</p>
+				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
 				<div class="rowToDelete"> </div>
 				<div>
 					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
@@ -145,11 +145,29 @@
 		var row = $(this).closest('tr');
 		var txt = row.text();
 		var id = row.attr('id');
+		var dato;
+		var km;
+		var liter;
+		var kroner;
+		var counter = 1;
+		row.find('td').each(function() {
+			var stuff = $(this).text();
+			if (counter == 1) {
+				dato = "Dato: " + stuff;
+				counter++;
+			} else if (counter == 2) {
+				km = ", km: " + stuff;
+				counter++;
+			} else if (counter == 3) {
+				kroner = ", kroner: " + stuff;
+				counter++;
+			} else if (counter == 4) {
+				liter = ", liter: " + stuff;
+				counter = 0;
+			}
+		});   
 		
-		for (i=2018; i<2021; i++) {
-			txt = txt.replace(i, i + ",  Input:   ");
-		}	
-		txt = "Dato: " + txt;
+		txt = dato + km + kroner + liter;
 
 		$(".rowToDelete").text(txt);
 		$("#hiddenField").val(id);
