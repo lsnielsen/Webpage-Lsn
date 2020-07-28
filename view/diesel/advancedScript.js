@@ -21,20 +21,20 @@
 	function sortTable(table, sortColumn)
 	{
 		var text = $(event.target).text();
-		// get the data from the table cells
-		const tableBody = table.querySelector('tbody')
-		const tableData = table2data(tableBody);
-		// sort the extracted data
-		tableData.sort((a, b)=>{
-			return makeActualSort(a,b, sortColumn);
-			//if(a[sortColumn] > b[sortColumn]){
-			//	return 1;
-			//}
-			//return -1;
-		})
-		// put the sorted data back into the table
-		changeSortVar();
-		data2table(tableBody, tableData);
+		if (text == "Dato") {
+			location.reload();
+		} else {
+			// get the data from the table cells
+			const tableBody = table.querySelector('tbody')
+			const tableData = table2data(tableBody);
+			// sort the extracted data
+			tableData.sort((a, b)=>{
+				return makeActualSort(a,b, sortColumn);
+			})
+			// put the sorted data back into the table
+			changeSortVar();
+			data2table(tableBody, tableData);
+		}
 	}
 	
 	// this function gets data from the rows and cells 
