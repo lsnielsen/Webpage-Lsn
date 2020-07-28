@@ -21,7 +21,7 @@
 		<h1>
 			Avanceret statistik for diesel forbrug
 		</h1>  
-		<table class="advancedTable firstTable">
+		<table class="advancedTable statisticTable">
 						<tr>
 							<th class="dieselHeader">Dato</th>
 							<th class="dieselHeader">Km</th>

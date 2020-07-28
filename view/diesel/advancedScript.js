@@ -1,5 +1,5 @@
 <script>
-	const table = document.querySelector('.firstTable'); //get the table to be sorted
+	const table = document.querySelector('.statisticTable'); //get the table to be sorted
 	
 	var km = 0;
 	var liter = 0;
