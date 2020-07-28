@@ -1,15 +1,15 @@
 <table class="advancedTable" style="margin-top: 10px;">
 		<tr>
-			<th class="dieselHeader"> </th>
-			<th class="dieselHeader">Km</th>
-			<th class="dieselHeader">Liter</th>
-			<th class="dieselHeader">Kroner</th>
-			<th class="dieselHeader">Km/l</th>
-			<th class="dieselHeader">Km/kr</th>
-			<th class="dieselHeader">Kr/l</th>
-			<th class="dieselHeader">Kr/km</th>
-			<th class="dieselHeader">L/km</th>
-			<th class="dieselHeader">L/kr</th>
+			<th class="dieselHeader" style="cursor: default"> </th>
+			<th class="dieselHeader" style="cursor: default">Km</th>
+			<th class="dieselHeader" style="cursor: default">Liter</th>
+			<th class="dieselHeader" style="cursor: default">Kroner</th>
+			<th class="dieselHeader" style="cursor: default">Km/l</th>
+			<th class="dieselHeader" style="cursor: default">Km/kr</th>
+			<th class="dieselHeader" style="cursor: default">Kr/l</th>
+			<th class="dieselHeader" style="cursor: default">Kr/km</th>
+			<th class="dieselHeader" style="cursor: default">L/km</th>
+			<th class="dieselHeader" style="cursor: default">L/kr</th>
 		</tr>	<tr class="bottomRows">
 		<?php
 			echo "<td class=dieselTableCell> Gennemsnit </td>";
