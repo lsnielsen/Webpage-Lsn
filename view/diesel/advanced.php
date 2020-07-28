@@ -154,13 +154,13 @@
 				Tilbage
 			</button>
 		</form>
-		<?php include "kmPerLiter.php"; ?>
-		<?php include "krPerLiter.php"; ?> 		
-		<?php include "kmPerKroner.php"; ?>
-		<?php //include "krPerKm.php"; ?>
-		<?php //include "literPerKm.php"; ?>
-		<?php //include "literPerKroner.php"; ?>
-		<?php include "combinedGraph.php"; ?>
+		<?php include "graphs/kmPerLiter.php"; ?>
+		<?php include "graphs/krPerLiter.php"; ?> 		
+		<?php include "graphs/kmPerKroner.php"; ?>
+		<?php //include "graphs/krPerKm.php"; ?>
+		<?php //include "graphs/literPerKm.php"; ?>
+		<?php //include "graphs/literPerKroner.php"; ?>
+		<?php include "graphs/combinedGraph.php"; ?>
 		
 		<form>
 			<button class="dieselButton" 
