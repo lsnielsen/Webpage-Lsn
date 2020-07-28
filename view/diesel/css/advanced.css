@@ -37,6 +37,7 @@
 	.dieselHeader {
 		font-weight: bold;
 		text-align: center;
+		cursor: pointer;
 	}
 	.dieselTableCell{
 		text-align: center;
