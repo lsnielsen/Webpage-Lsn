@@ -133,44 +133,31 @@
 	}
 	
 	#dieselButton {
-		display: inline-block;
-		border-radius: 4px;
-		background-color: #f4511e;
-		border: none;
-		color: #FFFFFF;
-		text-align: center;
-		font-size: 28px;
-		padding: 20px;
-		width: 200px;
-		transition: all 0.5s;
-		cursor: pointer;
-		margin: 5px;
+		margin-left: 20px;
+		box-shadow: 0px 1px 0px 0px #fff6af;
+		background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+		background-color:#ffec64;
+		border-radius:6px;
+		border:1px solid #ffaa22;
+		display:inline-block;
+		cursor:pointer;
+		color:#333333;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #ffee66;
+	}
+	#dieselButton:hover {
+		background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+		background-color:#ffab23;
+	}
+	#dieselButton:active {
+		position:relative;
+		top:1px;
 	}
 
-	#dieselButton span {
-		cursor: pointer;
-		display: inline-block;
-		position: relative;
-		transition: 0.5s;
-	}
-
-	#dieselButton span:after {
-		content: '\00bb';
-		position: absolute;
-		opacity: 0;
-		top: 0;
-		right: -20px;
-		transition: 0.5s;
-	}
-
-	#dieselButton:hover span {
-		padding-right: 25px;
-	}
-
-	#dieselButton:hover span:after {
-		opacity: 1;
-		right: 0;
-	}
 	
 	
 	
