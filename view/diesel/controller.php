@@ -19,6 +19,8 @@
 		include("helpFunctions/setup.php");
 	} elseif ($dieselButton == "advancedDieselPage") {
 		include("advanced.php");
+	} elseif ($dieselButton == "carDieselPage") {
+		include("car.html");
 	} elseif (isset($dieselButton)) {
 		include("helpFunctions/setup.php");
 	}
