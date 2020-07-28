@@ -71,20 +71,21 @@
 											<td class=dieselTableCell>";
 											echo number_format($graphArray[$i]['l/kr'], 2, ',', '.');
 										echo "</td></tr>";
-							}
-							echo "</table><table class=\"advancedTable\" style=\"margin-top: 10px;\">
+							} ?>
+							</table><table class="advancedTable" style="margin-top: 10px;">
 									<tr>
-										<th class=dieselHeader> </th>
-										<th class=dieselHeader>Km</th>
-										<th class=dieselHeader>Liter</th>
-										<th class=dieselHeader>Kroner</th>
-										<th class=dieselHeader>Km/l</th>
-										<th class=dieselHeader>Km/kr</th>
-										<th class=dieselHeader>Kr/l</th>
-										<th class=dieselHeader>Kr/km</th>
-										<th class=dieselHeader>L/km</th>
-										<th class=dieselHeader>L/kr</th>
-									</tr>	<tr class=bottomRows>";
+										<th class="dieselHeader"> </th>
+										<th class="dieselHeader">Km</th>
+										<th class="dieselHeader">Liter</th>
+										<th class="dieselHeader">Kroner</th>
+										<th class="dieselHeader">Km/l</th>
+										<th class="dieselHeader">Km/kr</th>
+										<th class="dieselHeader">Kr/l</th>
+										<th class="dieselHeader">Kr/km</th>
+										<th class="dieselHeader">L/km</th>
+										<th class="dieselHeader">L/kr</th>
+									</tr>	<tr class="bottomRows">
+									<?php
 										echo "<td class=dieselTableCell> Gennemsnit </td>";
 										echo "<td class=dieselTableCell>";
 										echo number_format($graphArray[0]['averageKm'], 2, ',', '.');
