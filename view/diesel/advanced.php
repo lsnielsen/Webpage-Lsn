@@ -21,7 +21,7 @@
 		<h1>
 			Avanceret statistik for diesel forbrug
 		</h1>  
-		<table class="advancedTable">
+		<table class="advancedTable firstTable">
 						<tr>
 							<th class="dieselHeader">Dato</th>
 							<th class="dieselHeader">Km</th>
@@ -71,80 +71,10 @@
 											<td class=dieselTableCell>";
 											echo number_format($graphArray[$i]['l/kr'], 2, ',', '.');
 										echo "</td></tr>";
-							} ?>
-							</table><table class="advancedTable" style="margin-top: 10px;">
-									<tr>
-										<th class="dieselHeader"> </th>
-										<th class="dieselHeader">Km</th>
-										<th class="dieselHeader">Liter</th>
-										<th class="dieselHeader">Kroner</th>
-										<th class="dieselHeader">Km/l</th>
-										<th class="dieselHeader">Km/kr</th>
-										<th class="dieselHeader">Kr/l</th>
-										<th class="dieselHeader">Kr/km</th>
-										<th class="dieselHeader">L/km</th>
-										<th class="dieselHeader">L/kr</th>
-									</tr>	<tr class="bottomRows">
-									<?php
-										echo "<td class=dieselTableCell> Gennemsnit </td>";
-										echo "<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageKm'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageLiter'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageKr'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageKmPerLiter'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageKmPerKr'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageKrPerLiter'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageKrPerKm'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageLiterPerKm'],2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['averageLiterPerKr'], 2, ',', '.');
-										echo "</td></tr>";
-							echo "	<tr class=bottomRows>";
-										echo "<td class=dieselTableCell> Samlet </td>";
-										echo "<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['kmSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['literSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['krSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['kmPerLiterSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['kmPerKrSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['krPerLiterSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['krPerKmSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['literPerKmSum'], 2, ',', '.');
-										echo "</td>
-										<td class=dieselTableCell>";
-										echo number_format($graphArray[0]['literPerKrSum'], 2, ',', '.');
-										echo "</td></tr></table>";
-						?>
+							} ?>		
 		</table>
+		<?php include "bottumTable.php"; ?>
+		
 		<form>
 			<button class="dieselButton" 
 					action="/../Webpage-Lsn/view/diesel/controller.php" 
@@ -174,6 +104,60 @@
 	</body>
 </html>
 
+<script>
+	const table = document.querySelector('.firstTable'); //get the table to be sorted
+
+	table.querySelectorAll('th') // get all the table header elements
+	  .forEach((element, columnNo)=>{ // add a click handler for each 
+		element.addEventListener('click', event => {
+			sortTable(table, columnNo); //call a function which sorts the table by a given column number
+		})
+	  })
+	  
+	  function sortTable(table, sortColumn){
+	  // get the data from the table cells
+	  const tableBody = table.querySelector('tbody')
+	  const tableData = table2data(tableBody);
+	  // sort the extracted data
+	  tableData.sort((a, b)=>{
+		if(a[sortColumn] > b[sortColumn]){
+		  return 1;
+		}
+		return -1;
+	  })
+	  // put the sorted data back into the table
+	  data2table(tableBody, tableData);
+	}
+	  // this function gets data from the rows and cells 
+	// within an html tbody element
+	function table2data(tableBody){
+	  const tableData = []; // create the array that'll hold the data rows
+	  tableBody.querySelectorAll('tr')
+		.forEach(row=>{  // for each table row...
+		  const rowData = [];  // make an array for that row
+		  row.querySelectorAll('td')  // for each cell in that row
+			.forEach(cell=>{
+			  rowData.push(cell.innerText);  // add it to the row data
+			})
+		  tableData.push(rowData);  // add the full row to the table data 
+		});
+		console.log(tableData);
+		return tableData;
+	}
+
+	// this function puts data into an html tbody element
+	function data2table(tableBody, tableData){
+	  tableBody.querySelectorAll('tr') // for each table row...
+		.forEach((row, i)=>{  
+		  const rowData = tableData[i-1]; // get the array for the row data
+		  row.querySelectorAll('td')  // for each table cell ...
+			.forEach((cell, j)=>{
+				cell.innerText = rowData[j]; // put the appropriate array element into the cell
+			})
+		  tableData.push(rowData);
+		});
+	}
+</script>
 
 
 
