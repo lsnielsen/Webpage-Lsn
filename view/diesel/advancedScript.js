@@ -107,12 +107,6 @@
 			krkm = 0; 
 		}
 		
-		if(text == "Kr/l" && krl == 0) {
-			krl = 1;
-		} else if(text == "Kr/l" && krl == 1){ 
-			krl = 0; 
-		}
-		
 		if(text == "L/kr" && lkr == 0) {
 			lkr = 1;
 		} else if(text == "L/kr" && lkr == 1){ 
@@ -124,11 +118,29 @@
 		} else if(text == "L/km" && lkr == 1){ 
 			lkr = 0; 
 		}
+		
+		if(text == "Kr/l" && krl == 0) {
+			krl = 1;
+		} else if(text == "Kr/l" && krl == 1){ 
+			krl = 0; 
+		}
 	}
 
 	function makeActualSort(a,b, sortColumn) 
 	{
 		var text = $(event.target).text();
+		
+		if(text == "Kr/l" && krl == 0) {
+			if(a[sortColumn] > b[sortColumn]){
+				return 1;
+			}
+			return -1;
+		} else if(text == "Kr/l" && krl == 1) {
+			if(a[sortColumn] <= b[sortColumn]){
+				return 1;
+			}
+			return -1;			
+		}
 
 		if(text == "Km" && km == 0) {
 			if(a[sortColumn] > b[sortColumn]){
@@ -196,18 +208,6 @@
 			}
 			return -1;
 		} else if(text == "Kr/km" && krkm == 1) {
-			if(a[sortColumn] <= b[sortColumn]){
-				return 1;
-			}
-			return -1;			
-		}
-		
-		if(text == "Kr/l" && krl == 0) {
-			if(a[sortColumn] > b[sortColumn]){
-				return 1;
-			}
-			return -1;
-		} else if(text == "Kr/l" && krl == 1) {
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
