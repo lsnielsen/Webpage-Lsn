@@ -20,7 +20,8 @@
 	})
 
 	function sortTable(table, sortColumn)
-	{
+	{	
+		console.log("lskdfj");
 		var text = $(event.target).text();
 		if (text == "Datasfdo") {
 			location.reload();
@@ -138,7 +139,6 @@
 		var text = $(event.target).text();
 		
 		if(text == "Dato" && date == 0) {
-			
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
