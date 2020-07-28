@@ -118,6 +118,7 @@
 			<div>
 				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
 				<p>Er du sikker på, at du vil slette denne række?</p>
+				<div class="rowToDelete"> </div>
 				<div>
 					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
 					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
@@ -142,7 +143,15 @@
 <script>
 	$(".deleteRow").click(function() {
 		var row = $(this).closest('tr');
+		var txt = row.text();
 		var id = row.attr('id');
+		
+		for (i=2018; i<2021; i++) {
+			txt = txt.replace(i, i + ",  Input:   ");
+		}	
+		txt = "Dato: " + txt;
+
+		$(".rowToDelete").text(txt);
 		$("#hiddenField").val(id);
 		$('.deleteDieselRow').show();
 		$('.deleteDieselRowYes').click(function(){
