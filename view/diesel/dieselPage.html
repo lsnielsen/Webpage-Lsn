@@ -4,44 +4,50 @@
 			Diesel
         </title>  
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/diesel.css" type="text/css">
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/popup.css" type="text/css">
-	<body>  
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/diesel.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/popup.css" type="text/css">
+	<body>
 		<h1>
 			Diesel page
 		</h1>   
 		<form action="/../Webpage-Lsn/view/diesel/controller.php" method="post">  
-			<fieldset>  
+			<fieldset style="background-color: #b3ecff">
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
 				</legend>  
 				<div style="margin-top: 30px;">
-				
-					<label style="margin-left: 40px; font-weight: bold;">
+					<div style="display: inline-block;">
+						<label style="margin-left: 40px; font-weight: bold;">
 							Dato <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  	
-						<br> <br>
+						<input class="dieselInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  
+					</div>
+					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Antal kilometer <br>
 						</label>
 						<input class="dieselInput" type="text" placeholder="ex: 659.4 " name="km">  				 
+					</div>
 				</div>
-				<div style="margin-left: 220px; margin-top: -172px; margin-bottom: 200px;">
+				<div style="margin-top: 20px; margin-bottom: 200px;">
+					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Liter <br>
 						</label>  
-						<input class="dieselInput" type="text" placeholder="ex: 23.3 " name="liter"> 				 
-						<br> <br>
+						<input class="dieselInput" type="text" placeholder="ex: 23.3 " name="liter"> 					 
+					</div>
+					
+					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Kroner <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 223.3 " name="kr">
-						<br> <br> <br>
-						
-						<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton">  
-							Indsæt tal
-						</button>
+						<input class="dieselInput" type="text" placeholder="ex: 223.3 " name="kr">				 
+					</div>
+					<br> <br> <br>
+					
+					<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton" style="margin-left: 10px;">  
+						Indsæt tal
+					</button>
 
 				</div>
 				
@@ -96,6 +102,13 @@
 						style="margin-left: auto;">
 					Klik her, for at se en mere avanceret statistik
 				</button>
+				<button class="dieselButton" 
+						action="/../Webpage-Lsn/view/diesel/controller.php" 
+						value="carDieselPage"
+						name="dieselButton"						
+						style="margin-left: -370px; margin-top: -100px; position: absolute;">
+					Klik her, for at se hvilken bil det handler om
+				</button>				
 			</fieldset>  
 		</form>     	
 		
@@ -104,7 +117,8 @@
 			<span class="helper"></span>
 			<div>
 				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
-				<p>Er du sikker på, at du vil slette denne række?</p>
+				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
+				<div class="rowToDelete"> </div>
 				<div>
 					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
 					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
@@ -116,7 +130,7 @@
 		</div>
 		
 		
-		<?php include "graph.php"; ?>
+		<?php include "graphs/graph.php"; ?>
     </body>  
 	
 	
@@ -129,7 +143,33 @@
 <script>
 	$(".deleteRow").click(function() {
 		var row = $(this).closest('tr');
+		var txt = row.text();
 		var id = row.attr('id');
+		var dato;
+		var km;
+		var liter;
+		var kroner;
+		var counter = 1;
+		row.find('td').each(function() {
+			var stuff = $(this).text();
+			if (counter == 1) {
+				dato = "Dato: " + stuff;
+				counter++;
+			} else if (counter == 2) {
+				km = ", km: " + stuff;
+				counter++;
+			} else if (counter == 3) {
+				kroner = ", kroner: " + stuff;
+				counter++;
+			} else if (counter == 4) {
+				liter = ", liter: " + stuff;
+				counter = 0;
+			}
+		});   
+		
+		txt = dato + km + kroner + liter;
+
+		$(".rowToDelete").text(txt);
 		$("#hiddenField").val(id);
 		$('.deleteDieselRow').show();
 		$('.deleteDieselRowYes').click(function(){

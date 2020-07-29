@@ -1,6 +1,6 @@
 
 <center>
-	<div id="kmPerKroner" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="krPerKm" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
@@ -19,15 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / Kroner'],
+			['Dato', 'Kroner / Kilometer', 'Gennemsnit'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['km/kr'])
+				parseFloat(graphArray[0]['kr/km']),
+				parseFloat(graphArray[0]['averageKrPerKm'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kilometer per kroner',
+		  title: 'Kroner per kilometer',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -35,11 +36,12 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['km/kr'])
+				parseFloat(graphArray[i]['kr/km']),
+				parseFloat(graphArray[0]['averageKrPerKm'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('kmPerKroner'));
+		var chart = new google.visualization.LineChart(document.getElementById('krPerKm'));
 
 		chart.draw(data, options);
 	}

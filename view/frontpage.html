@@ -16,85 +16,22 @@
 			<button id="cvButton" type="submit" name="cvButton" value="cvPage"> Mit CV </button>
 		</form>
 		<div class="projectTxt">
-			Jeg har startet forskellige projekter, som der er link til her <br>
-		<form action="/Webpage-Lsn/view/diesel/controller.php" method="post">
-			<button id="dieselButton" type="submit" name="dieselButton" value="dieselPage"> Diesel regnskab </button>
-		</form>
-			<a class="projectLink car" id="carLink"> Bil priser </a> 
+			Jeg har startet forskellige projekter, som der er link til her: <br> <br>
+			<form action="/Webpage-Lsn/view/diesel/controller.php" method="post">
+				<button id="dieselButton" type="submit" name="dieselButton" value="dieselPage"> Diesel regnskab </button>
+			</form>
+			<form action="/Webpage-Lsn/view/politic/controller.php" method="post">
+				<button id="politicButton" type="submit" name="politicButton" value="politicPage"> Politik </button>
+			</form>
+			<form action="/Webpage-Lsn/view/stock/controller.php" method="post">
+				<button id="stockButton" type="submit" name="stockButton" value="stockPage"> Aktier </button>
+			</form>
 		</div>
 	</body>
-	<div class="tvModal modal">
-		<div class="modal-content">
-			<h4 class="modal-title">
-				TV projektet
-				<span class="closeModal">&times;</span>
-				<hr>
-			</h4>
-			<center>
-				<p>Indtast kode for at få adgang til projektet </p>
-				<div class="wrongPassword"> Forkert adgangskode </div>
-				<input class="tvPassword" type="text" placeholder="Adgangskode">
-				<form id="tvForm" action="setup.php" method="post">
-					<button id="tvButton" type="submit" name="tvButton" value="tvPage"> Videre </button>
-				</form>
-			</center>
-		</div>
-	</div>
-	<div class="carModal modal">
-		<div class="modal-content">
-			<h4 class="modal-title">
-				Bil projektet
-				<span class="closeModal">&times;</span>
-				<hr>
-			</h4>
-			<center>
-				<p>Indtast kode for at få adgang til projektet</p>
-				<div class="wrongPassword"> Forkert adgangskode </div>
-				<input class="carPassword" type="text" placeholder="Adgangskode">
-				<form id="carForm" action="setup.php" method="post">
-					<button id="carButton" type="submit" name="carButton" value="carPage"> Videre </button>
-				</form>
-			</center>
-		</div>
-	</div>
+
 </html>
 
-<script>
-	$(".tv").click(function(){
-		$('.tvModal').css('display', 'block');
-		$("#tvButton").click(function() {
-			var password = $('.tvPassword').val();
-			if (password != '123') {
-				$(".wrongPassword").css("display", "block");
-				$('#tvForm').submit(function(e) {
-					e.preventDefault();
-				});
-			} else {
-				$('#tvForm').unbind('submit').submit();
-			}			
-		})
-	});
-	$(".car").click(function(){
-		$('.carModal').css('display', 'block');
-		$("#carButton").click(function() {
-			var password = $('.carPassword').val();
-			if (password != '123') {
-				$(".wrongPassword").css("display", "block");
-				$('#carForm').submit(function(e) {
-					e.preventDefault();
-				});
-			} else {
-				$('#carForm').unbind('submit').submit();
-			}	
-		})
-	});
-	$(".closeModal").click(function() {
-		$('.modal').css('display', 'none');
-		$(".carPassword").val("");
-		$(".tvPassword").val("");
-		$(".wrongPassword").css("display", "none");
-	});
-</script>
+
 
 
 

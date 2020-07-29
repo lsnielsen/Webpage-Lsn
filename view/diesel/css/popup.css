@@ -19,7 +19,7 @@
 		box-shadow: 10px 10px 60px #555;
 		display: inline-block;
 		height: auto;
-		max-width: 400;
+		max-width: 530;
 		min-height: 100px;
 		vertical-align: middle;
 		width: 60%;
@@ -85,5 +85,13 @@
 	}
 	.popupCloseButton:hover {
 		background-color: #ccc;
+	}
+	.rowToDelete {
+		font-size: 21;
+		font-weight: bold;
+	}
+	.messageInfo {
+		font-size: 25;
+		margin-bottom: 15px;
 	}
 	/* Popup box BEGIN */

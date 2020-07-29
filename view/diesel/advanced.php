@@ -1,5 +1,5 @@
 <?php
-	include "helper.php";
+	include "helpFunctions/helper.php";
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -14,25 +14,25 @@
             Advanced
         </title>  
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/advanced.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/advanced.css" type="text/css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<body>  
+	<body style="background-color: #d9ffb3;">  
 		<h1>
 			Avanceret statistik for diesel forbrug
 		</h1>  
-		<table class="advancedTable">
+		<table class="advancedTable statisticTable">
 						<tr>
-							<th class="dieselHeader">Dato</th>
-							<th class="dieselHeader">Km</th>
-							<th class="dieselHeader">Liter</th>
-							<th class="dieselHeader">Kroner</th>
-							<th class="dieselHeader">Km/l</th>
-							<th class="dieselHeader">Km/kr</th>
-							<th class="dieselHeader">Kr/l</th>
-							<th class="dieselHeader">Kr/km</th>
-							<th class="dieselHeader">L/km</th>
-							<th class="dieselHeader">L/kr</th>
+							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
+							<th class="dieselHeader headerSortDown kmColumn">Km</th>
+							<th class="dieselHeader headerSortDown literColumn">Liter</th>
+							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
+							<th class="dieselHeader headerSortDown krlColumn">Kr/l</th>
+							<th class="dieselHeader headerSortDown kmlColumn">Km/l</th>
+							<th class="dieselHeader headerSortDown kmkrColumn">Km/kr</th>
+							<th class="dieselHeader headerSortDown krkmColumn">Kr/km</th>
+							<th class="dieselHeader headerSortDown lkmColumn">L/km</th>
+							<th class="dieselHeader headerSortDown lkrColumn">L/kr</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -45,35 +45,36 @@
 											echo $graphArray[$i][1];
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['kilometer'];
+											echo number_format($graphArray[$i]['kilometer'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['liter'];
+											echo number_format($graphArray[$i]['liter'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell advancedDieselCell>";
-											echo $graphArray[$i]['kroner'];
+											echo number_format($graphArray[$i]['kroner'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['km/l'];
+											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['km/kr'];
+											echo number_format($graphArray[$i]['km/l'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['kr/l'];
+											echo number_format($graphArray[$i]['km/kr'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['kr/km'];
+											echo number_format($graphArray[$i]['kr/km'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['l/km'];
+											echo number_format($graphArray[$i]['l/km'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo $graphArray[$i]['l/kr'];
-										echo "</tr>";
-							}
-						?>
+											echo number_format($graphArray[$i]['l/kr'], 2, ',', '.');
+										echo "</td></tr>";
+							} ?>		
 		</table>
+		<?php include "bottumTable.php"; ?>
+		
 		<form>
 			<button class="dieselButton" 
 					action="/../Webpage-Lsn/view/diesel/controller.php" 
@@ -83,12 +84,13 @@
 				Tilbage
 			</button>
 		</form>
-		<?php include "kmPerLiter.php"; ?>
-		<?php include "krPerKm.php"; ?>
-		<?php include "krPerLiter.php"; ?> 		
-		<?php include "kmPerKroner.php"; ?>
-		<?php include "literPerKm.php"; ?>
-		<?php include "literPerKroner.php"; ?>
+		<?php include "graphs/krPerLiter.php"; ?>
+		<?php include "graphs/kmPerLiter.php"; ?>
+		<?php include "graphs/kmPerKroner.php"; ?>
+		<?php //include "graphs/krPerKm.php"; ?>
+		<?php //include "graphs/literPerKm.php"; ?>
+		<?php //include "graphs/literPerKroner.php"; ?>
+		<?php include "graphs/combinedGraph.php"; ?>
 		
 		<form>
 			<button class="dieselButton" 
@@ -102,7 +104,7 @@
 	</body>
 </html>
 
-
+<?php include "tableSort.php" ?>
 
 
 

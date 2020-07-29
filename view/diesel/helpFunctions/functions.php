@@ -1,36 +1,6 @@
 <?php
 
-	function handleAdvancedArray($query, $pageType) 
-	{
-		$sortedArray = sortSqlArray($query);
-		
-		for ($i = 0; $i<sizeof($sortedArray); $i++) {
-			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
-		}
-		$finalArray = getFinalData($sortedArray);
-		
-		return $finalArray;
-	}
-	
-	function getFinalData($array)
-	{
-		for ($i = 0; $i<sizeof($array); $i++) {
-
-			$km = $array[$i]['kilometer'];
-			$liter = $array[$i]['liter'];
-			$kr = $array[$i]['kroner'];
-
-			$array[$i]['km/l'] = round($km / $liter, 2);
-			$array[$i]['km/kr'] = round($km / $kr, 2);
-			$array[$i]['l/km'] = round($liter / $km, 2);
-			$array[$i]['l/kr'] = round($liter / $kr, 2);
-			$array[$i]['kr/km'] = round($kr / $km, 2);
-			$array[$i]['kr/l'] = round($kr / $liter, 2);
-		}
-		return $array;
-	}
-	
-	function sortSqlArray($query)
+	function makeQueryToArray($query, $pageType) 
 	{
 		while ($rowArray = $query->fetch_array()) {
 			$graphArray[] = $rowArray;
@@ -48,9 +18,13 @@
 				}
 			}
 		}
+
+		for ($i = 0; $i<sizeof($sortedArray); $i++) {
+			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
+		}
 		return $sortedArray;
 	}
-		 
+	 
 	function compareByTimeStamp($time1, $time2) 
 	{ 
 		if (strtotime($time1) < strtotime($time2)) { 
@@ -60,6 +34,7 @@
 		} else
 			return 0; 
 	} 
+
 	function changeDateFormat($date, $page)
 	{
 		$charOne = $date[0];
@@ -76,14 +51,17 @@
 		if ($page == "table") {
 			return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charOne . $charTwo . $charThree . $charFour;
 		} elseif ($page == "graph") {
-			if ($charSix == 0 && $charNine =! 0) {
-				return $charNine . $charTen . "/" . $charSeven . " - " . $charThree . $charFour;
-			} elseif ($charSix != 0 && $charNine == 0) {
-				return $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;
-			} elseif ($charSix == 0 && $charNine == 0) {
+			if ($charSix == 0 && $charNine == 0) {
+				return $charTen . "/" . $charSeven . " - " . $charThree . $charFour;
+			} elseif ($charSix !== 0 && $charNine == 0) {
+				return $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;			
+			} elseif ($charSix == 0 && $charNine !== 0) {
+				return $charNine . $charTen . "/" . $charSeven . " - " . $charThree . $charFour;			
+			} elseif ($charSix !== 0 && $charNine !== 0) {
 				return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;
 			}
 		}
 	}
-	
+
+
 ?>

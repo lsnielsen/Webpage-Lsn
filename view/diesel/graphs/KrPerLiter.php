@@ -1,6 +1,6 @@
 
 <center>
-	<div id="literPerKroner" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="krPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
@@ -19,15 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / Kroner'],
+			['Dato', 'Kroner / liter', 'Gennemsnit'],
 			[
 				graphArray[0][1], 
-				parseInt(graphArray[0]['l/kr'])
+				parseFloat(graphArray[0]['kr/l']),
+				parseFloat(graphArray[0]['averageKrPerLiter'])
 			]
 		]);
 
 		var options = {
-		  title: 'Liter per kroner',
+		  title: 'Kroner per liter',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -35,11 +36,12 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseInt(graphArray[i]['l/kr'])
+				parseFloat(graphArray[i]['kr/l']),
+				parseFloat(graphArray[0]['averageKrPerLiter'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('literPerKroner'));
+		var chart = new google.visualization.LineChart(document.getElementById('krPerLiter'));
 
 		chart.draw(data, options);
 	}

@@ -3,7 +3,7 @@
 	$dieselButton = isset($_POST['dieselButton']) ? $_POST['dieselButton'] : "";
 
 	if ($dieselButton == "dieselPage") {
-		include("setup.php");
+		include("helpFunctions/setup.php");
 	} elseif (is_numeric($dieselButton)) {
 		$con = mysqli_connect('127.0.0.1','root','');  
 		if(!$con) {  
@@ -16,11 +16,13 @@
 		$query = "DELETE FROM diesel WHERE diesel.id = $id";
 		mysqli_query($con, $query);
 		
-		include("setup.php");
+		include("helpFunctions/setup.php");
 	} elseif ($dieselButton == "advancedDieselPage") {
 		include("advanced.php");
+	} elseif ($dieselButton == "carDieselPage") {
+		include("car.html");
 	} elseif (isset($dieselButton)) {
-		include("setup.php");
+		include("helpFunctions/setup.php");
 	}
 	
 		
