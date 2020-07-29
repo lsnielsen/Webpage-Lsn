@@ -128,16 +128,58 @@
 		
 		if(text == "Dato" && date == 0) {
 			date = 1;
-			console.log("<br>");
 		} else if(text == "Dato" && date == 1){ 
-			console.log("<br>");
 			date = 0; 
 		}
 	}
 	
 	function changeDateFormat(date)
 	{
+		console.log("Date: " + date);
+		if (typeof(date) == "undefined") {
+			return "0000-00-00";
+		}
+		var length = date.length;
+		var index = length - 4;
+		var year = date.slice(index, length);
+		index = index - 1;
 		
+		var monthDate = date.slice(0, index);
+		var emptyPos = monthDate.indexOf(" ") + 1;
+
+		var month; 
+		if (date.indexOf("januar") != -1) {
+			month = "01";
+		} else if (date.indexOf("februar") != -1) {
+			month = "02";
+		} else if (date.indexOf("marts") != -1) {
+			month = "03";
+		} else if (date.indexOf("april") != -1) {
+			month = "04";
+		} else if (date.indexOf("maj") != -1) {
+			month = "05";
+		} else if (date.indexOf("juni") != -1) {
+			month = "06";
+		} else if (date.indexOf("juli") != -1) {
+			month = "07";
+		} else if (date.indexOf("august") != -1) {
+			month = "08";
+		} else if (date.indexOf("september") != -1) {
+			month = "09";
+		} else if (date.indexOf("oktober") != -1) {
+			month = "10";
+		} else if (date.indexOf("november") != -1) {
+			month = "11";
+		} else if (date.indexOf("december") != -1) {
+			month = "12";
+		}
+		
+		index = emptyPos - 2;
+		var dayDate = monthDate.slice(0, index);
+		if (dayDate.charAt(1) == "") {
+			dayDate = "0" + dayDate;
+		}
+		return year + "-" + month + "-" + dayDate;
 	}
 
 	function makeActualSort(a,b, sortColumn) 
@@ -145,12 +187,16 @@
 		var text = $(event.target).text();
 
 		if(text == "Dato" && date == 0) {
-			if(Date.parse($(a[sortColumn]).text()) > Date.parse($(b[sortColumn]).text())) {
+			dateA = changeDateFormat(a[sortColumn]);
+			dateB = changeDateFormat(b[sortColumn]);
+			if(Date.parse(dateA) > Date.parse(dateB)) {
 				return 1;
 			}
 			return -1;
 		} else if (text == "Dato" && date == 1) {
-			if(Date.parse($(a[sortColumn]).text()) < Date.parse($(b[sortColumn]).text())) {
+			dateA = changeDateFormat(a[sortColumn]);
+			dateB = changeDateFormat(b[sortColumn]);
+			if(Date.parse(dateA) < Date.parse(dateB)) {
 				return 1;
 			} else {
 				return -1;
