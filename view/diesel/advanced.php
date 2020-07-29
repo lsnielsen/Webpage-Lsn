@@ -23,16 +23,16 @@
 		</h1>  
 		<table class="advancedTable statisticTable">
 						<tr>
-							<th class="dieselHeader">Dato</th>
-							<th class="dieselHeader">Km</th>
-							<th class="dieselHeader">Liter</th>
-							<th class="dieselHeader">Kroner</th>
-							<th class="dieselHeader">Kr/l</th>
-							<th class="dieselHeader">Km/l</th>
-							<th class="dieselHeader">Km/kr</th>
-							<th class="dieselHeader">Kr/km</th>
-							<th class="dieselHeader">L/km</th>
-							<th class="dieselHeader">L/kr</th>
+							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
+							<th class="dieselHeader headerSortDown kmColumn">Km</th>
+							<th class="dieselHeader headerSortDown literColumn">Liter</th>
+							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
+							<th class="dieselHeader headerSortDown krlColumn">Kr/l</th>
+							<th class="dieselHeader headerSortDown kmlColumn">Km/l</th>
+							<th class="dieselHeader headerSortDown kmkrColumn">Km/kr</th>
+							<th class="dieselHeader headerSortDown krkmColumn">Kr/km</th>
+							<th class="dieselHeader headerSortDown lkmColumn">L/km</th>
+							<th class="dieselHeader headerSortDown lkrColumn">L/kr</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";

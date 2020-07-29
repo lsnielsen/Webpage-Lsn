@@ -1,7 +1,7 @@
 <script>
 	const table = document.querySelector('.statisticTable'); //get the table to be sorted
 	
-	var date = 0;
+	var date = 1;
 	var km = 0;
 	var liter = 0;
 	var kr = 0;
@@ -187,6 +187,8 @@
 		var text = $(event.target).text();
 
 		if(text == "Dato" && date == 0) {
+			$(".dateColumn").addClass("headerSortUp");
+			$(".dateColumn").removeClass("headerSortDown");
 			dateA = changeDateFormat(a[sortColumn]);
 			dateB = changeDateFormat(b[sortColumn]);
 			if(Date.parse(dateA) > Date.parse(dateB)) {
@@ -194,6 +196,8 @@
 			}
 			return -1;
 		} else if (text == "Dato" && date == 1) {
+			$(".dateColumn").addClass("headerSortDown");
+			$(".dateColumn").removeClass("headerSortUp");
 			dateA = changeDateFormat(a[sortColumn]);
 			dateB = changeDateFormat(b[sortColumn]);
 			if(Date.parse(dateA) < Date.parse(dateB)) {
@@ -204,11 +208,15 @@
 		}
 		
 		if(text == "Kr/l" && krl == 0) {
+			$(".krlColumn").addClass("headerSortUp");
+			$(".krlColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Kr/l" && krl == 1) {
+			$(".krlColumn").addClass("headerSortDown");
+			$(".krlColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -216,11 +224,15 @@
 		}
 
 		if(text == "Km" && km == 0) {
+			$(".kmColumn").addClass("headerSortUp");
+			$(".kmColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Km" && km == 1){
+			$(".kmColumn").addClass("headerSortDown");
+			$(".kmColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -228,11 +240,15 @@
 		}
 		
 		if(text == "Liter" && liter == 0) {
+			$(".literColumn").addClass("headerSortUp");
+			$(".literColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Liter" && liter == 1){
+			$(".literColumn").addClass("headerSortDown");
+			$(".literColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -240,11 +256,15 @@
 		}
 		
 		if(text == "Kroner" && kr == 0) {
+			$(".kronerColumn").addClass("headerSortUp");
+			$(".kronerColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Kroner" && kr == 1) {
+			$(".kronerColumn").addClass("headerSortDown");
+			$(".kronerColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -252,11 +272,15 @@
 		}
 		
 		if(text == "Km/l" && kml == 0) {
+			$(".kmlColumn").addClass("headerSortUp");
+			$(".kmlColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Km/l" && kml == 1) {
+			$(".kmlColumn").addClass("headerSortDown");
+			$(".kmlColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -264,11 +288,15 @@
 		}
 		
 		if(text == "Km/kr" && kmkr == 0) {
+			$(".kmkrColumn").addClass("headerSortUp");
+			$(".kmkrColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Km/kr" && kmkr == 1) {
+			$(".kmkrColumn").addClass("headerSortDown");
+			$(".kmkrColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -276,11 +304,15 @@
 		}
 		
 		if(text == "Kr/km" && krkm == 0) {
+			$(".krkmColumn").addClass("headerSortUp");
+			$(".krkmColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "Kr/km" && krkm == 1) {
+			$(".krkmColumn").addClass("headerSortDown");
+			$(".krkmColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -288,11 +320,15 @@
 		}
 		
 		if(text == "L/km" && lkm == 0) {
+			$(".lkmColumn").addClass("headerSortUp");
+			$(".lkmColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "L/km" && lkm == 1) {
+			$(".lkmColumn").addClass("headerSortDown");
+			$(".lkmColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
@@ -300,11 +336,15 @@
 		}
 		
 		if(text == "L/kr" && lkr == 0) {
+			$(".lkrColumn").addClass("headerSortUp");
+			$(".lkrColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
 		} else if(text == "L/kr" && lkr == 1) {
+			$(".lkrColumn").addClass("headerSortDown");
+			$(".lkrColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
