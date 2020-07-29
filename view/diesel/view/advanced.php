@@ -1,5 +1,5 @@
 <?php
-	include "helpFunctions/helper.php";
+	include "helpFunctions/advancedHelper.php";
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
