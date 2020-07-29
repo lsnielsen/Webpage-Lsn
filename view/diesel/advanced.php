@@ -104,7 +104,7 @@
 	</body>
 </html>
 
-<?php include "tableSort.php" ?>
+<?php include "helpFunctions/tableSort.php" ?>
 
 
 
