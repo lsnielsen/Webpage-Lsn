@@ -153,7 +153,7 @@
 			if(Date.parse($(a[sortColumn]).text()) < Date.parse($(b[sortColumn]).text())) {
 				return 1;
 			} else {
-				return 0;
+				return -1;
 			}
 		}
 		
