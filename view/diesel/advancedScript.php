@@ -98,7 +98,7 @@
 		
 		if(text == "Km/kr" && kmkr == 0) {
 			kmkr = 1;
-		} else if(text == "Km" && kmkr == 1){ 
+		} else if(text == "Km/kr" && kmkr == 1){ 
 			kmkr = 0; 
 		}
 		
@@ -127,26 +127,34 @@
 		}
 		
 		if(text == "Dato" && date == 0) {
-			krl = 1;
+			date = 1;
+			console.log("<br>");
 		} else if(text == "Dato" && date == 1){ 
-			krl = 0; 
+			console.log("<br>");
+			date = 0; 
 		}
+	}
+	
+	function changeDateFormat(date)
+	{
+		
 	}
 
 	function makeActualSort(a,b, sortColumn) 
 	{
 		var text = $(event.target).text();
-		
+
 		if(text == "Dato" && date == 0) {
-			if(a[sortColumn] > b[sortColumn]){
+			if(Date.parse($(a[sortColumn]).text()) > Date.parse($(b[sortColumn]).text())) {
 				return 1;
 			}
 			return -1;
-		} else if(text == "Dato" && date == 1) {
-			if(a[sortColumn] <= b[sortColumn]){
+		} else if (text == "Dato" && date == 1) {
+			if(Date.parse($(a[sortColumn]).text()) < Date.parse($(b[sortColumn]).text())) {
 				return 1;
+			} else {
+				return 0;
 			}
-			return -1;			
 		}
 		
 		if(text == "Kr/l" && krl == 0) {
@@ -209,12 +217,12 @@
 			return -1;			
 		}
 		
-		if(text == "Km/kr/" && kmkr == 0) {
+		if(text == "Km/kr" && kmkr == 0) {
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
-		} else if(text == "Km/kr/" && kmkr == 1) {
+		} else if(text == "Km/kr" && kmkr == 1) {
 			if(a[sortColumn] <= b[sortColumn]){
 				return 1;
 			}
