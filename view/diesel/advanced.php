@@ -85,7 +85,7 @@
 			</button>
 		</form>
 		<?php include "graphs/kmPerLiter.php"; ?>
-		<?php include "graphs/krPerLiter.php"; ?> 		
+		<?php include "graphs/krPerLiter.php"; ?>
 		<?php include "graphs/kmPerKroner.php"; ?>
 		<?php //include "graphs/krPerKm.php"; ?>
 		<?php //include "graphs/literPerKm.php"; ?>
