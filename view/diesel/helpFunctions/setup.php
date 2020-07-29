@@ -36,7 +36,7 @@
 		}
 	}
 	
-	include ("dieselPage.html");
+	include ("view/dieselPage.html");
 	
 	
 	
