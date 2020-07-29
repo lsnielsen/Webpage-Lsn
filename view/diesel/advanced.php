@@ -104,7 +104,7 @@
 	</body>
 </html>
 
-<?php include "advancedScript.php" ?>
+<?php include "tableSort.php" ?>
 
 
 
