@@ -133,9 +133,11 @@
 				return $charNine . $charTen . ". " . $month . "  " . $charOne . $charTwo . $charThree . $charFour;
 			}
 		} elseif ($page == "graph") {
-			if ($charSix == 0 && $charNine =! 0) {
+			if ($charSix == 0 && $charNine == 0) {
+				return $charTen . "/" . $charSeven . " - " . $charThree . $charFour;			
+			} elseif ($charSix == 0 && $charNine !== 0) {
 				return $charNine . $charTen . "/" . $charSeven . " - " . $charThree . $charFour;
-			} elseif ($charSix != 0 && $charNine == 0) {
+			} elseif ($charSix !== 0 && $charNine == 0) {
 				return $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;
 			} elseif ($charSix !== 0 && $charNine !== 0) {
 				return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;
