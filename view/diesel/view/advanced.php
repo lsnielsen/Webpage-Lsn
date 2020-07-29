@@ -1,5 +1,5 @@
 <?php
-	include "helpFunctions/advancedHelper.php";
+	include "../view/diesel/helpFunctions/advancedHelper.php";
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -77,24 +77,24 @@
 		
 		<form>
 			<button class="dieselButton" 
-					action="/../Webpage-Lsn/view/diesel/controller.php" 
+					action="/../Webpage-Lsn/controller/diesel.php" 
 					value="dieselPage"
 					name="dieselButton"						
 					style="margin-left: auto;">
 				Tilbage
 			</button>
 		</form>
-		<?php include "graphs/krPerLiter.php"; ?>
-		<?php include "graphs/kmPerLiter.php"; ?>
-		<?php include "graphs/kmPerKroner.php"; ?>
-		<?php //include "graphs/krPerKm.php"; ?>
-		<?php //include "graphs/literPerKm.php"; ?>
-		<?php //include "graphs/literPerKroner.php"; ?>
-		<?php include "graphs/combinedGraph.php"; ?>
+		<?php include "../view/diesel/graphs/krPerLiter.php"; ?>
+		<?php include "../view/diesel/graphs/kmPerLiter.php"; ?>
+		<?php include "../view/diesel/graphs/kmPerKroner.php"; ?>
+		<?php //include "../view/diesel/graphs/krPerKm.php"; ?>
+		<?php //include "../view/diesel/graphs/literPerKm.php"; ?>
+		<?php //include "../view/diesel/graphs/literPerKroner.php"; ?>
+		<?php include "../view/diesel/graphs/combinedGraph.php"; ?>
 		
 		<form>
 			<button class="dieselButton" 
-					action="/../Webpage-Lsn/view/diesel/controller.php" 
+					action="/../Webpage-Lsn/controller/diesel.php" 
 					value="dieselPage"
 					name="dieselButton"						
 					style="margin-left: auto;">
@@ -104,7 +104,7 @@
 	</body>
 </html>
 
-<?php include "helpFunctions/tableSort.php" ?>
+<?php include "../view/diesel/helpFunctions/tableSort.php" ?>
 
 
 
