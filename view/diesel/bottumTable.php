@@ -4,9 +4,9 @@
 			<th class="dieselHeader" style="cursor: default">Km</th>
 			<th class="dieselHeader" style="cursor: default">Liter</th>
 			<th class="dieselHeader" style="cursor: default">Kroner</th>
+			<th class="dieselHeader" style="cursor: default">Kr/l</th>
 			<th class="dieselHeader" style="cursor: default">Km/l</th>
 			<th class="dieselHeader" style="cursor: default">Km/kr</th>
-			<th class="dieselHeader" style="cursor: default">Kr/l</th>
 			<th class="dieselHeader" style="cursor: default">Kr/km</th>
 			<th class="dieselHeader" style="cursor: default">L/km</th>
 			<th class="dieselHeader" style="cursor: default">L/kr</th>
@@ -23,13 +23,13 @@
 			echo number_format($graphArray[0]['averageKr'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['averageKrPerLiter'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['averageKmPerLiter'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['averageKmPerKr'], 2, ',', '.');
-			echo "</td>
-			<td class=dieselTableCell>";
-			echo number_format($graphArray[0]['averageKrPerLiter'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['averageKrPerKm'], 2, ',', '.');
@@ -52,13 +52,13 @@
 			echo number_format($graphArray[0]['krSum'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krPerLiterSum'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['kmPerLiterSum'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['kmPerKrSum'], 2, ',', '.');
-			echo "</td>
-			<td class=dieselTableCell>";
-			echo number_format($graphArray[0]['krPerLiterSum'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['krPerKmSum'], 2, ',', '.');
