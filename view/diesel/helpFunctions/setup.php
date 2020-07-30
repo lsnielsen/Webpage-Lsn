@@ -44,9 +44,12 @@
 		?>
 			<div class="notDisplayingWrongInput wrongDieselInput" style="display: none;">
 				<span class="helper"></span>
-				<div>
+				<div style="max-width: 530;">
 					<div class="wrongDieselInputPopupCloseButton popupCloseButton">&times;</div>
-					<p> Dit input passer ikke med det korrekte input format </p>
+					<div style="font-size: 25; margin-bottom: 20px;"> 
+						Dit input passer ikke med det korrekte input format 
+					</div>
+					<div class="errorMessage"id="blaTester"> </div>
 					<div>
 						<div class="wrongDieselInputButton dieselPopupButton">Ok</div>
 						<div class="wrongDieselInputButton dieselPopupButton">Fortryd</div>
