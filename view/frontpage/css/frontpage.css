@@ -1,65 +1,8 @@
 
-	.wrongPassword {
-		display: none;
-		color: red;
-	}
-	.modal-content {
-		background-image: url(/Webpage-Lsn/image/bgII.jpg);
+	body {
+		background-image: url(/Webpage-Lsn/view/frontpage/image/bgI.jpg);
 		background-repeat: no-repeat;
 		background-size:100% 100%;
-		margin: auto;
-		padding: 20px;
-		border: 1px solid #888;
-		width: 30%;
-		border: 3px solid #993300;
-		border-radius: 20px 20px 20px 20px;
-	}
-	.modal-title {
-		margin-top: 10px; 
-		font-size: 20px;
-	}
-	.closeModal {
-		margin-top: -10px;
-		color: #262626;
-		float: right;
-		font-size: 28px;
-		font-weight: bold;
-	}
-	.input {
-		position:relative;
-		font-size: 1.5em;		
-		background: linear-gradient(21deg, #10abff, #1beabd);
-		padding: 3px;
-		display: inline-block;
-		border-radius: 10px 10px 10px 10px;
-	}
-	.carPassword, .tvPassword {
-		position: relative;
-		display: block;
-		width: 50%;
-		background: #fff;
-		border-radius: 31px;
-		font-family: Ubuntu-Bold;
-		font-size: 18px;
-		color: #ff80ff;
-		line-height: 1.2;
-	}
-	.closeModal:hover,
-	.closeModal:focus {
-	  color: #000;
-	  text-decoration: none;
-	  cursor: pointer;
-	}
-	.modal {
-		display: none; 
-		position: fixed; 
-		z-index: 1; 
-		padding-top: 100px; 
-		left: 0;
-		top: 0;
-		width: 100%; 
-		height: 100%;
-		overflow: auto; 
 	}
 	.projectTxt {
 		top: 40%;
@@ -68,11 +11,6 @@
 		color: #33ccff;
 		position: absolute;
 	}
-	body {
-		background-image: url(/Webpage-Lsn/image/bgI.jpg);
-		background-repeat: no-repeat;
-		background-size:100% 100%;
-	}
 	h1 {
 		font-size:60px; 
 		margin: 0;
@@ -80,19 +18,6 @@
 		top: 20%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	}
-	#carButton, #tvButton {
-		margin-top: 10px;
-		color: #fff !important;
-		text-transform: uppercase;
-		text-decoration: none;
-		background: #60a3bc;
-		padding: 20px;
-		border-radius: 50px;
-		display: inline-block;
-		border: none;
-		width: 150px;
-		transition: all 0.4s ease 0s;
 	}
 	#cvButton {
 		background-color: inherit;
@@ -127,10 +52,6 @@
 		color: #1a75ff;
 	}
 	
-	.projectLink {
-		text-decoration: underline;
-		cursor: pointer;
-	}
 	
 	#dieselButton {
 		margin-left: 20px;

@@ -90,6 +90,10 @@
 		font-size: 21;
 		font-weight: bold;
 	}
+	.errorMessage {
+		font-size: 21;
+		font-weight: bold;
+	}
 	.messageInfo {
 		font-size: 25;
 		margin-bottom: 15px;

@@ -135,7 +135,6 @@
 	
 	function changeDateFormat(date)
 	{
-		console.log("Date: " + date);
 		if (typeof(date) == "undefined") {
 			return "0000-00-00";
 		}
