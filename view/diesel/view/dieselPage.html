@@ -118,7 +118,12 @@
 			<div>
 				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
 				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
-				<div class="rowToDelete"> </div>
+				<ul class="rowToDelete">
+					<li class="dateToDelete"> </li>
+					<li class="kmToDelete"> </li>
+					<li class="krToDelete"> </li>
+					<li class="literToDelete"> </li>
+				</ul>
 				<div>
 					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
 					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
@@ -158,20 +163,23 @@
 				dato = "Dato: " + stuff;
 				counter++;
 			} else if (counter == 2) {
-				km = ", km: " + stuff;
+				km = "Km: " + stuff;
 				counter++;
 			} else if (counter == 3) {
-				kroner = ", kroner: " + stuff;
+				kroner = "Kroner: " + stuff;
 				counter++;
 			} else if (counter == 4) {
-				liter = ", liter: " + stuff;
+				liter = "Liter: " + stuff;
 				counter = 0;
 			}
 		});   
 		
 		txt = dato + km + kroner + liter;
 
-		$(".rowToDelete").text(txt);
+		$(".dateToDelete").text(dato);
+		$(".kmToDelete").text(km);
+		$(".krToDelete").text(kroner);
+		$(".literToDelete").text(liter);
 		$("#hiddenField").val(id);
 		$('.deleteDieselRow').show();
 		$('.deleteDieselRowYes').click(function(){
@@ -196,11 +204,4 @@
 		$(".notDisplayingWrongInput").css("display", "block");
 	}
 </script>
-
-<style>
-	.deleteRow {
-		cursor: pointer;
-	}
-
-</style>
 

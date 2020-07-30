@@ -89,6 +89,9 @@
 	.rowToDelete {
 		font-size: 21;
 		font-weight: bold;
+		width: 32%;
+		margin: auto;
+		list-style-type: none;
 	}
 	.errorMessage {
 		font-size: 21;

@@ -74,3 +74,6 @@
 	.dieselTableCell {
 		text-align: center;
 	}
+	.deleteRow {
+		cursor: pointer;
+	}
