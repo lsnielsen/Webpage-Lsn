@@ -30,7 +30,7 @@
 		
 	function setDieselFrontpage()
 	{
-		include "../view/diesel/helpFunctions/setupHelper.php";
+		include "../view/diesel/helpFunctions/frontPageHelper.php";
 		$con = mysqli_connect('127.0.0.1','root','');  
 		
 		if(!$con) {  
