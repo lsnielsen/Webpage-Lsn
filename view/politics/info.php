@@ -8,20 +8,24 @@ $.ajax({
     dataType: "xml",
     success: xmlParser
    });
+   $.ajax({
+    type: "GET",
+    url: "style.xsl",
+    dataType: "xsl"
+   });
 });
 
 function xmlParser(xml) {
 
 $('#load').fadeOut();
 
-$(xml).find("Book").each(function () {
-	console.log("do get here");
+$(xml).find("book").each(function () {
     $(".main").append('<div class="book"><div class="title">' + 
-		$(this).find("Title").text() +   
+		$(this).find("title").text() +   
 		'</div><div class="description">' + 
-		$(this).find("Description").text() + 
+		$(this).find("description").text() + 
 		'</div><div   class="date">Published ' + 
-		$(this).find("Date").text() + 
+		$(this).find("date").text() + 
 		'</div></div>'
 	);
     $(".book").fadeIn(1000);
@@ -36,7 +40,7 @@ $(xml).find("Book").each(function () {
 <html>
 	<div>
 		Der skulle komme noget xml her...
-	</div>
+	</div>			
 	<div class="main">
 		<div align="center" class="loader">
 			<img src="loader.gif" id="load" width="16" height="11"   align="absmiddle"/>

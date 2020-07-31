@@ -17,7 +17,7 @@
 							Artist
 						</th>
 					</tr>
-					<xsl:for-each select="recentBooks/book">
+					<xsl:for-each select="catalog/cd">
 						<tr>
 							<td>
 								<xsl:value-of select="title"/>
