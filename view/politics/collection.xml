@@ -2,115 +2,47 @@
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <catalog>
 
-
-<cd>
-<title>Greatest Hits</title>
-<artist>Dolly Parton</artist>
-<country>USA</country>
-<company>RCA</company>
-<price>9.90</price>
-<year>1982</year>
-</cd>
-<cd>
-<title>Still got the blues</title>
-<artist>Gary Moore</artist>
-<country>UK</country>
-<company>Virgin records</company>
-<price>10.20</price>
-<year>1990</year>
-</cd>
-<cd>
-<title>Eros</title>
-<artist>Eros Ramazzotti</artist>
-<country>EU</country>
-<company>BMG</company>
-<price>9.90</price>
-<year>1997</year>
-</cd>
-<cd>
-<title>One night only</title>
-<artist>Bee Gees</artist>
-<country>UK</country>
-<company>Polydor</company>
-<price>10.90</price>
-<year>1998</year>
-</cd>
-<cd>
-<title>Sylvias Mother</title>
-<artist>Dr.Hook</artist>
-<country>UK</country>
-<company>CBS</company>
-<price>8.10</price>
-<year>1973</year>
-</cd>
-<cd>
-<title>Maggie May</title>
-<artist>Rod Stewart</artist>
-<country>UK</country>
-<company>Pickwick</company>
-<price>8.50</price>
-<year>1990</year>
-</cd>
-<cd>
-<title>Romanza</title>
-<artist>Andrea Bocelli</artist>
-<country>EU</country>
-<company>Polydor</company>
-<price>10.80</price>
-<year>1996</year>
-</cd>
-<cd>
-<title>When a man loves a woman</title>
-<artist>Percy Sledge</artist>
-<country>USA</country>
-<company>Atlantic</company>
-<price>8.70</price>
-<year>1987</year>
-</cd>
-<cd>
-<title>Black angel</title>
-<artist>Savage Rose</artist>
-<country>EU</country>
-<company>Mega</company>
-<price>10.90</price>
-<year>1995</year>
-</cd>
-	<buttons>
-		<button>
-			<text>Button A</text>
-			<font>Arial</font>
-			<font_size>12</font_size>
-			<text_color>0x000000</text_color>
-			<x>45</x>
-			<y>100</y>
-			<height>35</height>
-			<width>75</width>
-			<word_wrap>NO</word_wrap>
-			<button_color>0xDDDDDD</button_color>
-			<bold>YES</bold>
-			<opacity>.3</opacity>
-			<next_node>node_a</next_node>
-			<link>http://www.my_site.com</link>
-			<assign name="user_clicked_button_a" expr="'1'"/>
-		</button>
-		<button>
-			<text>Button B</text>
-			<font>Arial</font>
-			<font_size>12</font_size>
-			<text_color>0x000000</text_color>
-			<x>95</x>
-			<y>100</y>
-			<height>35</height>
-			<width>75</width>
-			<word_wrap>NO</word_wrap>
-			<button_color>0xDDDDDD</button_color>
-			<bold>YES</bold>
-			<opacity>.3</opacity>
-			<next_node>node_b</next_node>
-			<link>http://www.my_site.com</link>
-			<assign name="user_clicked_button_b" expr="'1'"/>
-		</button>
-	</buttons>
+	<cd>
+		<title>Eros</title>
+		<artist>Eros Ramazzotti</artist>
+		<country>EU</country>
+		<company>BMG</company>
+		<price>9.90</price>
+		<year>1997</year>
+	</cd>
+	<cd>
+		<title>One night only</title>
+		<artist>Bee Gees</artist>
+		<country>UK</country>
+		<company>Polydor</company>
+		<price>10.90</price>
+		<year>1998</year>
+	</cd>
+	<cd>
+		<title>Sylvias Mother</title>
+		<artist>Dr.Hook</artist>
+		<country>UK</country>
+		<company>CBS</company>
+		<price>8.10</price>
+		<year>1973</year>
+	</cd>
+	<cd>
+		<title>Maggie May</title>
+		<artist>Rod Stewart</artist>
+		<country>UK</country>
+		<company>Pickwick</company>
+		<price>8.50</price>
+		<year>1990</year>
+	</cd>
+	<cd>
+		<title>Romanza</title>
+		<artist>Andrea Bocelli</artist>
+		<country>EU</country>
+		<company>Polydor</company>
+		<price>10.80</price>
+		<year>1996</year>
+	</cd>
+	
 </catalog>
 
 
