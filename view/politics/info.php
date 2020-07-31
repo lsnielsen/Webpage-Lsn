@@ -44,5 +44,10 @@ $(xml).find("Book").each(function () {
 	</div>
 
 	<div class="clear"></div>
+	<form action="/Webpage-Lsn/controller/politics.php" method="post">
+		<button id="backButton" type="submit"> 
+			Tilbage
+		</button>
+	</form>
  
 </html>
