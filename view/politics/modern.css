@@ -24,7 +24,7 @@ company {
 	color: black; 
 }
 
-artist { 
+.theArtist { 
 	margin: 1em; 
 	color: red; 
 	font-size: 20px; 

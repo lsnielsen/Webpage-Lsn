@@ -39,7 +39,7 @@
 							<td>
 								<xsl:value-of select="title"/>
 							</td>
-							<td>
+							<td class="theArtist">
 								<xsl:value-of select="artist"/>
 							</td>
 							<td>
