@@ -14,9 +14,7 @@
 			include "articles.xml";
 		?>
 		<br><br><br><br><br>
-		<div id="toInsertXml">
 		
-		</div>
 		
 		</xml>
 		<form action="/Webpage-Lsn/controller/politics.php" method="post">
