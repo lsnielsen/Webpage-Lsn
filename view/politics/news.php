@@ -58,11 +58,15 @@
 								</tr>";
 					}					
 				?>
-			</table>
-		<br><br><br><br><br>
-		
-		
-		</xml>
+			</table> <br><br><br>
+		<?php
+				include 'xmlNews.php';
+				$rss = new SimpleXMLElement($xmlFeed);
+
+				foreach ($rss ->xpath('//channel') as $channel) {
+					echo 	$channel->title;
+				}
+		?>
 		<form action="/Webpage-Lsn/controller/politics.php" method="post">
 			<button id="backButton" type="submit"> 
 				Tilbage
@@ -71,8 +75,6 @@
 	</body>
 
 </html>
-
-
 
 
 
