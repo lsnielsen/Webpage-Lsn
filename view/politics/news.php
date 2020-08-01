@@ -11,7 +11,10 @@
 			Inkluderer her en xml fil
 		</h1>
 		<?php
-			include "articles.xml";
+			include 'phpArticle.php';
+			$catalog = new SimpleXMLElement($xmlstr);
+
+			echo $catalog->cd[0]->artist;
 		?>
 		<br><br><br><br><br>
 		
