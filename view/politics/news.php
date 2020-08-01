@@ -1,5 +1,6 @@
 <html lang="da">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<?xml-stylesheet type="text/css" href="collectionStyle.xsl"?>
 	<head>
 		<title>
 			Nyheder
@@ -26,6 +27,16 @@
 	</body>
 
 </html>
+
+<script type="text/javascript">
+  var xml = new ActiveXObject("Microsoft.XMLDOM")
+  xml.async = false
+  xml.load("some_xml.xml")
+  var xsl = new ActiveXObject("Microsoft.XMLDOM")
+  xsl.async = false
+  xsl.load("some_xsl.xsl")
+  document.write(xml.transformNode(xsl))
+</script>
 
 <script>
 
