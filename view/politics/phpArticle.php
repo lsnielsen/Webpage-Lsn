@@ -8,7 +8,7 @@ $xmlstr = <<<XML
 	<catalog>
 
 		<cd>
-			<title>Eros</title>
+			<title>Eros The Great</title>
 			<artist>Eros Ramazzotti</artist>
 			<country>EU</country>
 			<company>BMG</company>

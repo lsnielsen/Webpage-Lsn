@@ -1,6 +1,6 @@
 <html lang="da">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<?xml-stylesheet type="text/css" href="collectionStyle.xsl"?>
+
 	<head>
 		<title>
 			Nyheder
@@ -14,7 +14,12 @@
 			include 'phpArticle.php';
 			$catalog = new SimpleXMLElement($xmlstr);
 
+			foreach ($catalog->xpath('//cd') as $cd) {
+				echo $cd->title, ' played by ', $cd->artist, '<br>';
+			}
 			echo $catalog->cd[0]->artist;
+			
+			
 		?>
 		<br><br><br><br><br>
 		
