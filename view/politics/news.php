@@ -51,7 +51,7 @@
 					}
 				}
 		?>
-				</table> 
+			</table> 
 		</center>
 		
 		<form action="/Webpage-Lsn/controller/politics.php" method="post">

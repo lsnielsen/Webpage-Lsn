@@ -1,11 +1,12 @@
 
 
 	#politicsBackButton {
-		margin-top: 200px;
+		margin-left: auto;
+		margin-bottom: auto;
 		display:inline-block;
 		padding:1.3em 2.6em;
 		border:0.1em solid #000000;
-		margin:0 0.2em 0.2em 0;
+		margin:500 0.2em 0.2em 30;
 		border-radius:0.12em;
 		box-sizing: border-box;
 		text-decoration:none;
