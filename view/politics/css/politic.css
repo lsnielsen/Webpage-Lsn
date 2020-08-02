@@ -6,3 +6,18 @@
 		background-repeat: no-repeat;
 		background-size:100% 100%;
 	}
+	
+	.linkIncluder {
+		margin-top: 100px;
+		margin-left: 50;
+	}
+	
+	.firstLink {
+		background-color: red;
+		box-shadow: 0 5px 0 darkred;
+		color: white;
+		padding: 1em 1.5em;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;	
+	}
