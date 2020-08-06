@@ -12,11 +12,11 @@
 	} elseif ($dieselButton == "carDieselPage") {
 		include("../view/diesel/view/car.html");
 	} elseif ($dieselButton == "krPerLiter") {
-		include("../view/diesel/view/krPerLiter.php");
+		include("../view/diesel/view/krPerLiter/krPerLiter.php");
 	} elseif ($dieselButton == "kmPerLiter") {
-		include("../view/diesel/view/kmPerLiter.php");
+		include("../view/diesel/view/kmPerLiter/kmPerLiter.php");
 	} elseif ($dieselButton == "kmPerKroner") {
-		include("../view/diesel/view/kmPerKr.php");
+		include("../view/diesel/view/kmPerKr/kmPerKr.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}
