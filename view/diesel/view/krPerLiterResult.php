@@ -16,7 +16,8 @@
 			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['averageKrPerLiter'], 2, ',', '.');
 			echo "</td></tr>";
-	echo "	<tr class=bottomRows>";
+			
+			echo "	<tr class=bottomRows>";
 			echo "<td class=dieselTableCell> Samlet </td>";
 			echo "<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['literSum'], 2, ',', '.');
@@ -26,5 +27,6 @@
 			echo "</td>
 			<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['krPerLiterSum'], 2, ',', '.');
-			echo "</td></tr></table>";
+			echo "</td></tr>";
 	?>
+</table>

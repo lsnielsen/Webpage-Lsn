@@ -23,5 +23,6 @@
 											echo "</td>
 											<td class=dieselTableCell>";
 											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');
-							} ?>		
+							} 
+						?>		
 		</table>
