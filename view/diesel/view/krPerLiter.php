@@ -22,28 +22,30 @@
 			Avanceret statistik for kroner per liter
 		</h1>  
 	
-		<?php include "dataTable.php"; ?>
+		<?php include "krPerLiterTable.php"; ?>
 	
 		<div class="spaceBetweenTables" style="margin-bottom: -5px;"> </div>
 	
-		<?php include "bottumTable.php"; ?>
+		<?php include "krPerLiterResult.php"; ?>
 		
 		<div class="spaceBetweenTables"> </div>
-		<center>
+		
 			<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 				<button class="dieselButton" 
 						value="advancedDieselPage"
-						name="dieselButton">
+						name="dieselButton"
+						style="margin-left: 10px;">
 					Tilbage
 				</button>
 			</form>
-		</center>
+		
 		<?php include "../view/diesel/graphs/krPerLiter.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
 					value="advancedDieselPage"
-					name="dieselButton">
+					name="dieselButton"
+					style="margin-left: 10px;">
 				Tilbage
 			</button>
 		</form>
