@@ -11,6 +11,8 @@
 		include("../view/diesel/view/advanced.php");
 	} elseif ($dieselButton == "carDieselPage") {
 		include("../view/diesel/view/car.html");
+	} elseif ($dieselButton == "krPerLiter") {
+		include("../view/diesel/view/krPerLiter.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}

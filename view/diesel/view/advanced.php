@@ -30,9 +30,8 @@
 		
 		<div class="spaceBetweenTables"> </div>
 		<center>
-			<form>
+			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
 				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="dieselPage"
 						name="dieselButton"
 						style="left: -400px;">
@@ -40,7 +39,6 @@
 				</button>
 
 				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="krPerLiter"
 						name="dieselButton"
 						style="left: -200px;">
@@ -48,14 +46,12 @@
 				</button>
 
 				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="kmPerLiter"
 						name="dieselButton">
 					Statistik for km/l
 				</button>
 				
 				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="kmPerKroner"
 						name="dieselButton"
 						style="left: 200px;">
@@ -63,7 +59,6 @@
 				</button>
 				
 				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="ownTable"
 						name="dieselButton"
 						style="left: 400px;">
