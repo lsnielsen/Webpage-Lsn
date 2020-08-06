@@ -1,4 +1,4 @@
-<table class="advancedTable" style="margin-top: 10px;">
+<table class="advancedTable bottomTable">
 		<tr>
 			<th class="dieselHeader" style="cursor: default"> </th>
 			<th class="dieselHeader" style="cursor: default">Km</th>
