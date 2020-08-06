@@ -28,7 +28,7 @@
 		]);
 
 		var options = {
-		  title: 'Kilometer per krone',
+		  title: 'Kilometer per kroner',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
