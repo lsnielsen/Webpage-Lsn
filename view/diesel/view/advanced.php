@@ -29,16 +29,48 @@
 		<?php include "bottumTable.php"; ?>
 		
 		<div class="spaceBetweenTables"> </div>
-		
-		<form>
-			<button class="dieselButton" 
-					action="/../Webpage-Lsn/controller/diesel.php" 
-					value="dieselPage"
-					name="dieselButton"						
-					style="margin-left: auto;">
-				Tilbage
-			</button>
-		</form>
+		<center>
+			<form>
+				<button class="dieselButton" 
+						action="/../Webpage-Lsn/controller/diesel.php" 
+						value="dieselPage"
+						name="dieselButton"
+						style="left: -400px;">
+					Tilbage
+				</button>
+
+				<button class="dieselButton" 
+						action="/../Webpage-Lsn/controller/diesel.php" 
+						value="krPerLiter"
+						name="dieselButton"
+						style="left: -200px;">
+					Statistik for kr/l
+				</button>
+
+				<button class="dieselButton" 
+						action="/../Webpage-Lsn/controller/diesel.php" 
+						value="kmPerLiter"
+						name="dieselButton">
+					Statistik for km/l
+				</button>
+				
+				<button class="dieselButton" 
+						action="/../Webpage-Lsn/controller/diesel.php" 
+						value="kmPerKroner"
+						name="dieselButton"
+						style="left: 200px;">
+					Statistik for km/kr
+				</button>
+				
+				<button class="dieselButton" 
+						action="/../Webpage-Lsn/controller/diesel.php" 
+						value="ownTable"
+						name="dieselButton"
+						style="left: 400px;">
+					Lav din egen tabel
+				</button>
+			</form>
+		</center>
 		<?php include "../view/diesel/graphs/krPerLiter.php"; ?>
 		<?php include "../view/diesel/graphs/kmPerLiter.php"; ?>
 		<?php include "../view/diesel/graphs/kmPerKroner.php"; ?>
@@ -51,8 +83,8 @@
 			<button class="dieselButton" 
 					action="/../Webpage-Lsn/controller/diesel.php" 
 					value="dieselPage"
-					name="dieselButton"						
-					style="margin-left: auto;">
+					name="dieselButton"
+					style="margin-left: 10px;">
 				Tilbage
 			</button>
 		</form>

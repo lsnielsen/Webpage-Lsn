@@ -35,6 +35,8 @@
 		margin: 4px 2px;
 		cursor: pointer;
 		margin-left: -150px;
+		position: relative;
+		top: 7px;
 	}
 	.dieselTableCell {
 		text-align: center;
