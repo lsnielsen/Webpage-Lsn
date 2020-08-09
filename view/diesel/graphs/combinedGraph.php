@@ -1,6 +1,6 @@
 
 <center>
-	<div id="combinedGraphs" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="combinedGraphs" style="width: 1000px; height: 400px; margin-left: -110px;"></div>	
 </center>	
 
 <?php

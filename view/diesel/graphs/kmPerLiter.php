@@ -1,6 +1,6 @@
 
 <center>
-	<div id="kmPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="kmPerLiter" style="width: 1000px; height: 400px; margin-left: -110px;"></div>	
 </center>	
 
 <?php

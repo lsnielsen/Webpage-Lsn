@@ -24,11 +24,8 @@
 	
 		<?php include "dataTable.php"; ?>
 	
-		<div class="spaceBetweenTables" style="margin-bottom: -5px;"> </div>
-	
-		<?php include "bottumTable.php"; ?>
+		<?php //include "bottumTable.php"; ?>
 		
-		<div class="spaceBetweenTables"> </div>
 		<center>
 			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
 				<button class="dieselButton" 
@@ -66,23 +63,57 @@
 				</button>
 			</form>
 		</center>
+		
 		<?php include "../view/diesel/graphs/krPerLiter.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kmPerLiter.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kmPerKroner.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
+		<?php include "../view/diesel/graphs/combinedGraph.php"; ?>
+		
 		<?php //include "../view/diesel/graphs/krPerKm.php"; ?>
 		<?php //include "../view/diesel/graphs/literPerKm.php"; ?>
 		<?php //include "../view/diesel/graphs/literPerKroner.php"; ?>
-		<?php include "../view/diesel/graphs/combinedGraph.php"; ?>
 		
-		<form>
-			<button class="dieselButton" 
-					action="/../Webpage-Lsn/controller/diesel.php" 
-					value="dieselPage"
-					name="dieselButton"
-					style="margin-left: 10px;">
-				Tilbage
-			</button>
-		</form>
+		
+		<center>
+			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
+				<button class="dieselButton" 
+						value="dieselPage"
+						name="dieselButton"
+						style="left: -400px;">
+					Tilbage
+				</button>
+
+				<button class="dieselButton" 
+						value="krPerLiter"
+						name="dieselButton"
+						style="left: -200px;">
+					Statistik for kr/l
+				</button>
+
+				<button class="dieselButton" 
+						value="kmPerLiter"
+						name="dieselButton">
+					Statistik for km/l
+				</button>
+				
+				<button class="dieselButton" 
+						value="kmPerKroner"
+						name="dieselButton"
+						style="left: 200px;">
+					Statistik for km/kr
+				</button>
+				
+				<button class="dieselButton" 
+						value="ownTable"
+						name="dieselButton"
+						style="left: 400px;">
+					Lav din egen tabel
+				</button>
+			</form>
+		</center>
 	</body>
 </html>
 
