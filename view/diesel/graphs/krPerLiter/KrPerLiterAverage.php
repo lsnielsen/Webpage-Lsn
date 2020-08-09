@@ -19,11 +19,12 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / liter', 'Gennemsnit'],
+			['Dato', 'Kroner / liter', 'Gennemsnit', 'Median'],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kr/l']),
-				parseFloat(graphArray[0]['averageKrPerLiter'])
+				parseFloat(graphArray[0]['averageKrPerLiter']),
+				parseFloat(graphArray[0]['krPerLiterMedian'])
 			]
 		]);
 
@@ -37,7 +38,8 @@
 			data.addRow([
 				graphArray[i][1],
 				parseFloat(graphArray[i]['kr/l']),
-				parseFloat(graphArray[0]['averageKrPerLiter'])
+				parseFloat(graphArray[0]['averageKrPerLiter']),
+				parseFloat(graphArray[0]['krPerLiterMedian'])
 			]);
 		}
 

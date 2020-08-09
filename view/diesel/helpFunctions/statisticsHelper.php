@@ -66,30 +66,31 @@
 		}
 			$array[0]['krPerLiterVariance'] = $krPerLiterTemp / $counter;
 			$array[0]['krPerLiterStandardDev'] = sqrt($array[0]['krPerLiterVariance']);
-			$array[0]['krPerLiterMedian'] = calculateMedian($krPerLiterArray, $counter);
+			$array[0]['krPerLiterMedian'] = calculateMedian($krPerLiterArray);
 			
 			$array[0]['krVariance'] = $krTemp / $counter;
 			$array[0]['krStDev'] = sqrt($array[0]['krVariance']);
-			$array[0]['krMedian'] = calculateMedian($krArray, $counter);
+			$array[0]['krMedian'] = calculateMedian($krArray);
 			
 			$array[0]['literVariance'] = $literTemp / $counter;
 			$array[0]['literStDev'] = sqrt($array[0]['literVariance']);
-			$array[0]['literMedian'] = calculateMedian($literArray, $counter);
+			$array[0]['literMedian'] = calculateMedian($literArray);
 			
 		return $array;
 	}
 	
 	
 	
-	function calculateMedian($array, $counter) {
-		$counter;
-		$middleval = floor(($counter-1)/2); // find the middle value, or the lowest middle value
-		if($counter % 2) { // odd number, middle is the median
+	function calculateMedian($array) {
+		sort($array);
+		$counter = count($array);
+		$middleval = floor(($counter-1)/2);
+		if($counter % 2) {
 			$median = $array[$middleval];
-		} else { // even number, calculate avg of 2 medians
+		} else { 
 			$low = $array[$middleval];
 			$high = $array[$middleval+1];
-			$median = (($low+$high)/2);
+			$median = ($low+$high)/2;
 		}
     return $median;
 }

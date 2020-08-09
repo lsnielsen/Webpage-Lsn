@@ -26,7 +26,7 @@
 			echo number_format($graphArray[0]['literStDev'], 2, ',', '.');
 			echo "</td>
 			<td class=dieselTableCell>";
-			echo number_format($graphArray[0]['krPerLiterStDev'], 2, ',', '.');
+			echo number_format($graphArray[0]['krPerLiterStandardDev'], 2, ',', '.');
 			echo "</td></tr>";
 			
 			echo "	<tr class=bottomRows>";
