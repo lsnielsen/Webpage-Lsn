@@ -6,7 +6,7 @@
 <?php
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = handleAdvancedArray($result, "graph");	
+	$graphArray = handleAdvancedArray($result, "smallGraph");	
 ?>
 <script>
 

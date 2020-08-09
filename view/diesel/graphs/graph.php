@@ -7,7 +7,7 @@
 	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = makeQueryToArray($result, "graph");	
+	$graphArray = makeQueryToArray($result, "bigGraph");	
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
