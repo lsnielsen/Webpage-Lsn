@@ -17,6 +17,42 @@
 			echo number_format($graphArray[0]['averageKmPerLiter'], 2, ',', '.');
 			echo "</td></tr>";
 			
+						echo "	<tr class=bottomRows>";
+			echo "<td class=dieselTableCell> Standard afvigelse </td>";
+			echo "<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['kilometerStDev'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['literStDev'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['kmPerLiterStDev'], 2, ',', '.');
+			echo "</td></tr>";
+			
+			echo "	<tr class=bottomRows>";
+			echo "<td class=dieselTableCell> Varians </td>";
+			echo "<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['kilometerVariance'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['literVariance'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['kmPerLiterVariance'], 2, ',', '.');
+			echo "</td></tr>";
+			
+			echo "	<tr class=bottomRows>";
+			echo "<td class=dieselTableCell> Median </td>";
+			echo "<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['kilometerMedian'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['literMedian'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['kmPerLiterMedian'], 2, ',', '.');
+			echo "</td></tr>";
+			
 			echo "	<tr class=bottomRows>";
 			echo "<td class=dieselTableCell> Samlet </td>";
 			echo "<td class=dieselTableCell>";

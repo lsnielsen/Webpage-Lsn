@@ -1,13 +1,15 @@
 
 <center>
-	<div id="kmPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="krPerLiterStDev" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
+	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
 ?>
+
 <script>
 
 	google.charts.load('current', {'packages':['corechart']});
@@ -17,17 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / liter', 'Gennemsnit', 'Median'],
+			['Dato', 'Standard afvigelse', 'Gennemsnit'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['km/l']),
-				parseFloat(graphArray[0]['averageKmPerLiter']),
-				parseFloat(graphArray[0]['kmPerLiterMedian'])
+				parseFloat(graphArray[0]['krPerLiterStDev']),
+				parseFloat(graphArray[0]['krPerLiterStandardDev'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kilometer per liter',
+		  title: 'Kroner per liter - standard afvigelse',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -35,13 +36,12 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['km/l']),
-				parseFloat(graphArray[0]['averageKmPerLiter']),
-				parseFloat(graphArray[0]['kmPerLiterMedian'])
+				parseFloat(graphArray[i]['krPerLiterStDev']),
+				parseFloat(graphArray[0]['krPerLiterStandardDev'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('kmPerLiter'));
+		var chart = new google.visualization.LineChart(document.getElementById('krPerLiterStDev'));
 
 		chart.draw(data, options);
 	}
