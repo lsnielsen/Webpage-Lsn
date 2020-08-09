@@ -19,11 +19,10 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / krone', 'Gennemsnit'],
+			['Dato', 'Kilometer / krone'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['km/kr']),
-				parseFloat(graphArray[0]['averageKmPerKr'])
+				parseFloat(graphArray[0]['km/kr'])
 			]
 		]);
 
@@ -36,8 +35,7 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['km/kr']),
-				parseFloat(graphArray[0]['averageKmPerKr'])
+				parseFloat(graphArray[i]['km/kr'])
 			]);
 		}
 

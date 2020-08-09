@@ -1,13 +1,15 @@
 
 <center>
-	<div id="kmPerLiter" style="width: 1000px; height: 400px; margin-left: -110px;"></div>	
+	<div id="kmPerKroner" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
+	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "graph");	
 ?>
+
 <script>
 
 	google.charts.load('current', {'packages':['corechart']});
@@ -17,15 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / liter'],
+			['Dato', 'Kilometer / krone', 'Gennemsnit'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['km/l'])
+				parseFloat(graphArray[0]['km/kr']),
+				parseFloat(graphArray[0]['averageKmPerKr'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kilometer per liter',
+		  title: 'Kilometer per kroner',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -33,11 +36,12 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['km/l'])
+				parseFloat(graphArray[i]['km/kr']),
+				parseFloat(graphArray[0]['averageKmPerKr'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('kmPerLiter'));
+		var chart = new google.visualization.LineChart(document.getElementById('kmPerKroner'));
 
 		chart.draw(data, options);
 	}

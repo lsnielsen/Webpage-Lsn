@@ -39,7 +39,7 @@
 				</button>
 			</form>
 		
-		<?php include "../view/diesel/graphs/kmPerKroner.php"; ?>
+		<?php include "../view/diesel/graphs/kmPerKr/kmPerKronerAverage.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
