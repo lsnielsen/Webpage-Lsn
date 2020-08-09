@@ -19,16 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Standard afvigelse', 'Gennemsnit'],
+			['Dato', 'Standard afvigelse', 'Gennemsnittet, variansen'],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['krPerLiterStDev']),
-				parseFloat(graphArray[0]['krPerLiterStandardDev'])
+				parseFloat(graphArray[0]['krPerLiterVariance'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kroner per liter - standard afvigelse',
+		  title: 'Kroner per liter - standard afvigelse og varians',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -37,7 +37,7 @@
 			data.addRow([
 				graphArray[i][1],
 				parseFloat(graphArray[i]['krPerLiterStDev']),
-				parseFloat(graphArray[0]['krPerLiterStandardDev'])
+				parseFloat(graphArray[0]['krPerLiterVariance'])
 			]);
 		}
 

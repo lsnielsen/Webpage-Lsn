@@ -19,16 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Standard afvigelse', 'Gennemsnit'],
+			['Dato', 'Standard afvigelse', 'Gennemsnittet, variansen'],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kmPerLiterStDev']),
-				parseFloat(graphArray[0]['kmPerLiterStDev'])
+				parseFloat(graphArray[0]['kmPerLiterVariance'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kilometer per liter - standard afvigelse',
+		  title: 'Kilometer per liter - standard afvigelse og varians',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -37,7 +37,7 @@
 			data.addRow([
 				graphArray[i][1],
 				parseFloat(graphArray[i]['kmPerLiterStDev']),
-				parseFloat(graphArray[0]['kmPerLiterStDev'])
+				parseFloat(graphArray[0]['kmPerLiterVariance'])
 			]);
 		}
 

@@ -76,8 +76,9 @@
 			$array[$i]['kmPerLiterStDev'] = pow($array[$i]['km/l'] - $averageKmPerLiter, 2);
 			$kmPerLiterTemp += pow($array[$i]['km/l'] - $averageKmPerLiter, 2);
 
-			$array[$i]['kmPerKrStDev'] = pow($array[$i]['km/kr'] - $averageKmPerKr, 2);
-			$kmPerKrTemp += pow($array[$i]['km/kr'] - $averageKmPerKr, 2);
+			$array[$i]['kmPerKrStDev'] = pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
+			$kmPerKrTemp += pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
+			$kmPerKrTemporary = pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
 
 			$array[$i]['krPerKmStDev'] = pow($array[$i]['kr/km'] - $averageKrPerKm, 2);
 			$krPerKmTemp += pow($array[$i]['kr/km'] - $averageKrPerKm, 2);
@@ -94,11 +95,11 @@
 		$array[0]['kilometerMedian'] = calculateMedian($kmArray);
 		
 		$array[0]['krVariance'] = $krTemp / $counter;
-		$array[0]['krStDev'] = sqrt($array[0]['krVariance']);
+		$array[0]['krStandardDev'] = sqrt($array[0]['krVariance']);
 		$array[0]['krMedian'] = calculateMedian($krArray);
 		
 		$array[0]['literVariance'] = $literTemp / $counter;
-		$array[0]['literStDev'] = sqrt($array[0]['literVariance']);
+		$array[0]['literStandardDev'] = sqrt($array[0]['literVariance']);
 		$array[0]['literMedian'] = calculateMedian($literArray);
 		
 		$array[0]['krPerLiterVariance'] = $krPerLiterTemp / $counter;
@@ -106,23 +107,23 @@
 		$array[0]['krPerLiterMedian'] = calculateMedian($krPerLiterArray);
 		
 		$array[0]['kmPerLiterVariance'] = $kmPerLiterTemp / $counter;
-		$array[0]['kmPerLiterStDev'] = sqrt($array[0]['kmPerLiterVariance']);
+		$array[0]['kmPerLiterStandardDev'] = sqrt($array[0]['kmPerLiterVariance']);
 		$array[0]['kmPerLiterMedian'] = calculateMedian($kmPerLiterArray);
 		
 		$array[0]['kmPerKrVariance'] = $kmPerKrTemp / $counter;
-		$array[0]['kmPerKrStDev'] = sqrt($array[0]['kmPerKrVariance']);
+		$array[0]['kmPerKrStandardDev'] = sqrt($array[0]['kmPerKrVariance']);
 		$array[0]['kmPerKrMedian'] = calculateMedian($kmPerKrArray);
 		
 		$array[0]['krPerKmVariance'] = $krPerKmTemp / $counter;
-		$array[0]['krPerKmStDev'] = sqrt($array[0]['krPerKmVariance']);
+		$array[0]['krPerKmStandardDev'] = sqrt($array[0]['krPerKmVariance']);
 		$array[0]['krPerKmMedian'] = calculateMedian($krPerKmArray);
 		
 		$array[0]['literPerKmVariance'] = $literPerKmTemp / $counter;
-		$array[0]['literPerKmStDev'] = sqrt($array[0]['literPerKmVariance']);
+		$array[0]['literPerKmStandardDev'] = sqrt($array[0]['literPerKmVariance']);
 		$array[0]['literPerKmMedian'] = calculateMedian($literPerKmArray);
 		
 		$array[0]['literPerKrVariance'] = $literPerKrTemp / $counter;
-		$array[0]['literPerKrStDev'] = sqrt($array[0]['literPerKrVariance']);
+		$array[0]['literPerKrStandardDev'] = sqrt($array[0]['literPerKrVariance']);
 		$array[0]['literPerKrMedian'] = calculateMedian($literPerKrArray);
 			
 		return $array;

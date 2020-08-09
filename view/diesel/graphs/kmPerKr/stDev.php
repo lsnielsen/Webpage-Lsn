@@ -1,6 +1,6 @@
 
 <center>
-	<div id="krPerLiterStDev" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="krPerKrStDev" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
@@ -19,16 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Standard afvigelse', 'Gennemsnit'],
+			['Dato', 'Standard afvigelse', 'Gennemsnittet, variansen'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['krPerLiterStDev']),
-				parseFloat(graphArray[0]['krPerLiterStandardDev'])
+				parseFloat(graphArray[0]['kmPerKrStDev']),
+				parseFloat(graphArray[0]['kmPerKrVariance'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kroner per liter - standard afvigelse',
+		  title: 'Kilometer per kroner - standard afvigelse og varians',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -36,12 +36,12 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['krPerLiterStDev']),
-				parseFloat(graphArray[0]['krPerLiterStandardDev'])
+				parseFloat(graphArray[i]['kmPerKrStDev']),
+				parseFloat(graphArray[0]['kmPerKrVariance'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('krPerLiterStDev'));
+		var chart = new google.visualization.LineChart(document.getElementById('krPerKrStDev'));
 
 		chart.draw(data, options);
 	}
