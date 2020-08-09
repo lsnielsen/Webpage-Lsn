@@ -40,6 +40,7 @@
 			</form>
 		
 		<?php include "../view/diesel/graphs/kmPerKr/kmPerKronerAverage.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kmPerKr/stDev.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
