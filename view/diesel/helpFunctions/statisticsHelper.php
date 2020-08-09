@@ -65,7 +65,7 @@
 			$literTemp += pow($array[$i]['liter'] - $averageLiter, 2);
 		}
 			$array[0]['krPerLiterVariance'] = $krPerLiterTemp / $counter;
-			$array[0]['krPerLiterStDev'] = sqrt($array[0]['krPerLiterVariance']);
+			$array[0]['krPerLiterStandardDev'] = sqrt($array[0]['krPerLiterVariance']);
 			$array[0]['krPerLiterMedian'] = calculateMedian($krPerLiterArray, $counter);
 			
 			$array[0]['krVariance'] = $krTemp / $counter;
