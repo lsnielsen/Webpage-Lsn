@@ -1,6 +1,9 @@
 <?php
+	
+	include("statisticsHelper.php");
+
 	//handleAdvancedArray is the function to be called outside.
-	//It calls all the other functions in this file
+	//It calls all the other functions in this file	
 	function handleAdvancedArray($query, $pageType) 
 	{
 		$sortedArray = sortSqlArray($query);
@@ -9,7 +12,8 @@
 			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
 		}
 		$finalDataArray = getFinalData($sortedArray);
-		$finalArray = makeAverageData($finalDataArray);
+		$finalAverageArray = makeAverageData($finalDataArray);
+		$finalArray = calculateStatisticData($finalAverageArray);
 		
 		return $finalArray;
 	}

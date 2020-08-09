@@ -18,7 +18,31 @@
 			echo "</td></tr>";
 			
 			echo "	<tr class=bottomRows>";
-			echo "<td class=dieselTableCell> Samlet </td>";
+			echo "<td class=dieselTableCell> Standard afvigelse </td>";
+			echo "<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krStDev'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['literStDev'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krPerLiterStDev'], 2, ',', '.');
+			echo "</td></tr>";
+			
+			echo "	<tr class=bottomRows>";
+			echo "<td class=dieselTableCell> Varians </td>";
+			echo "<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krVariance'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['literVariance'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krPerLiterVariance'], 2, ',', '.');
+			echo "</td></tr>";
+			
+			echo "	<tr class=bottomRows>";
+			echo "<td class=dieselTableCell> Sum </td>";
 			echo "<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['krSum'], 2, ',', '.');
 			echo "</td>
