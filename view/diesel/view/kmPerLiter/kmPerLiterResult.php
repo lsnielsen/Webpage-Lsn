@@ -54,7 +54,7 @@
 			echo "</td></tr>";
 			
 			echo "	<tr class=bottomRows>";
-			echo "<td class=dieselTableCell> Samlet </td>";
+			echo "<td class=dieselTableCell> Sum </td>";
 			echo "<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['kmSum'], 2, ',', '.');
 			echo "</td>
