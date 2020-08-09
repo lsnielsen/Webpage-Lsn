@@ -82,7 +82,7 @@
 			} else { 
 				echo "<br>"; 
 			}
-			echo "Formattet skal være på formen xxx.yy </div>";
+			echo "Formattet skal være på formen xxx,yy </div>";
 			echo "<br><br>";
 		} elseif ($inputArray['wrongLiter'] == false) {
 			echo "<div class='errorMessage'> Liter formattet er ikke korrekt. 
@@ -92,7 +92,7 @@
 			} else { 
 				echo "<br>"; 
 			}
-			echo "Formattet skal være på formen xxx.yy </div>";
+			echo "Formattet skal være på formen xxx,yy </div>";
 			echo "<br><br>";
 		} elseif ($inputArray['wrongKroner'] == false) {
 			echo "<div class='errorMessage'> Kroner formattet er ikke korrekt. 
@@ -102,7 +102,7 @@
 			} else { 
 				echo "<br>"; 
 			}
-			echo "Formattet skal være på formen xxx.yy </div>";
+			echo "Formattet skal være på formen xxx,yy </div>";
 			echo "<br><br>";
 		}
 	}
@@ -173,8 +173,10 @@
 		
 		for ($i = 0; $i < strlen($variable); $i++){
 			$char = $variable[$i];
-			if(!is_numeric($char) && $char !== ".") {
+			if(!is_numeric($char) && $char !== ",") {
 				return false;
+			} elseif ($char == ",") {
+				$variable[$i] = ".";
 			}
 		}
 		return true;
