@@ -42,6 +42,18 @@
 			echo "</td></tr>";
 			
 			echo "	<tr class=bottomRows>";
+			echo "<td class=dieselTableCell> Median </td>";
+			echo "<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krMedian'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['literMedian'], 2, ',', '.');
+			echo "</td>
+			<td class=dieselTableCell>";
+			echo number_format($graphArray[0]['krPerLiterMedian'], 2, ',', '.');
+			echo "</td></tr>";
+			
+			echo "	<tr class=bottomRows>";
 			echo "<td class=dieselTableCell> Sum </td>";
 			echo "<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['krSum'], 2, ',', '.');

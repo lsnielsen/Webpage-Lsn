@@ -11,6 +11,18 @@
 		$krPerKmSum = 0;
 		$literPerKmSum = 0;
 		$literPerKrSum= 0;
+		
+		for ($i = 0; $i<sizeof($array); $i++) {
+			$kmArray[] = $array[$i]['kilometer'];
+			$literArray[] = $array[$i]['liter'];
+			$krArray[] = $array[$i]['kroner'];
+			$kmPerLiterArray[] = $array[$i]['km/l'];
+			$kmPerKrArray[] = $array[$i]['km/kr'];
+			$krPerLiterArray[] = $array[$i]['kr/l'];
+			$krPerKmArray[] = $array[$i]['kr/km'];
+			$literPerKmArray[] = $array[$i]['l/km'];
+			$literPerKrArray[] = $array[$i]['l/kr'];
+		}
 
 		for ($i = 0; $i<sizeof($array); $i++) {
 			$kmSum += $array[$i]['kilometer'];
@@ -54,14 +66,32 @@
 		}
 			$array[0]['krPerLiterVariance'] = $krPerLiterTemp / $counter;
 			$array[0]['krPerLiterStDev'] = sqrt($array[0]['krPerLiterVariance']);
+			$array[0]['krPerLiterMedian'] = calculateMedian($krPerLiterArray, $counter);
 			
 			$array[0]['krVariance'] = $krTemp / $counter;
 			$array[0]['krStDev'] = sqrt($array[0]['krVariance']);
+			$array[0]['krMedian'] = calculateMedian($krArray, $counter);
 			
 			$array[0]['literVariance'] = $literTemp / $counter;
 			$array[0]['literStDev'] = sqrt($array[0]['literVariance']);
+			$array[0]['literMedian'] = calculateMedian($literArray, $counter);
 			
 		return $array;
 	}
+	
+	
+	
+	function calculateMedian($array, $counter) {
+		$counter;
+		$middleval = floor(($counter-1)/2); // find the middle value, or the lowest middle value
+		if($counter % 2) { // odd number, middle is the median
+			$median = $array[$middleval];
+		} else { // even number, calculate avg of 2 medians
+			$low = $array[$middleval];
+			$high = $array[$middleval+1];
+			$median = (($low+$high)/2);
+		}
+    return $median;
+}
 	
 ?>
