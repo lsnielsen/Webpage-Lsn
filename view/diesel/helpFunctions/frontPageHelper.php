@@ -65,42 +65,42 @@
 	
 	function setErrorMessageBox($inputArray, $date, $km, $kr, $liter) {	
 		if ($inputArray['wrongDate'] == false) {
-			echo "<div class='errorMessage'> Dato formattet er ikke korrekt. 
-			Du har skrevet: ";
+			echo "<div class='errorMessage'> Dato formattet er ikke korrekt. "; 
 			if (!empty($date)) {
+				echo "Du har skrevet: ";
 				echo " \"" . $date . "\" ";
 			} else { 
-				echo "<br>"; 
+				echo " Du har ikke skrevet noget. "; 
 			}
 			echo "Formattet skal være på formen yyyy-mm-dd</div>";
 			echo "<br><br>";
 		} elseif ($inputArray['wrongKm'] == false) {
-			echo "<div class='errorMessage'> Kilometer formattet er ikke korrekt. 
-			Du har skrevet: ";
+			echo "<div class='errorMessage'> Kilometer formattet er ikke korrekt. ";
 			if (!empty($km)) {
+				echo "Du har skrevet: ";
 				echo " \"" . $km . "\" ";
 			} else { 
-				echo "<br>"; 
+				echo " Du har ikke skrevet noget. "; 
 			}
 			echo "Formattet skal være på formen xxx,yy </div>";
 			echo "<br><br>";
 		} elseif ($inputArray['wrongLiter'] == false) {
-			echo "<div class='errorMessage'> Liter formattet er ikke korrekt. 
-			Du har skrevet: ";
+			echo "<div class='errorMessage'> Liter formattet er ikke korrekt. ";
 			if (!empty($liter)) {
+				echo "Du har skrevet: ";
 				echo " \"" . $liter . "\" ";
 			} else { 
-				echo "<br>"; 
+				echo " Du har ikke skrevet noget. "; 
 			}
 			echo "Formattet skal være på formen xxx,yy </div>";
 			echo "<br><br>";
 		} elseif ($inputArray['wrongKroner'] == false) {
-			echo "<div class='errorMessage'> Kroner formattet er ikke korrekt. 
-			Du har skrevet: ";
+			echo "<div class='errorMessage'> Kroner formattet er ikke korrekt. ";
 			if (!empty($kr)) {
+				echo "Du har skrevet: ";
 				echo " \"" . $kr . "\" ";
 			} else { 
-				echo "<br>"; 
+				echo " Du har ikke skrevet noget. "; 
 			}
 			echo "Formattet skal være på formen xxx,yy </div>";
 			echo "<br><br>";
