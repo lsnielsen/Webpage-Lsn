@@ -14,10 +14,10 @@
 		<center>
 		
 						<h2>
-							<div style="position: relative; right: 540px; bottom: 10px;">
+							<div style="position: relative; right: 765px; bottom: 10px;">
 								Bruger input
 							</div>
-							<div style="position: relative; right: 310px; bottom: 35px;">
+							<div style="position: relative; right: 520px; bottom: 35px;">
 								Simple beregninger
 							</div>
 							<div style="position: relative; left: 170px; bottom: 60px;">
@@ -27,7 +27,7 @@
 						<div style="position: relative; bottom: 60px;">
 							<div class="dropdown" style="position: relative; right: 120px;">
 								<button class="dropbtn"> Indtastet værdier</button>
-								<div class="dropdown-content">
+								<div class="dropdown-content" style="width: 155px;">
 									<a href="#">Kilometer</a>
 									<a href="#">Liter</a>
 									<a href="#">Kroner</a>
@@ -47,7 +47,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Kilometer </button>
+								<button class="dropbtn advancedDropdown"> Kilometer </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -56,7 +56,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Liter </button>
+								<button class="dropbtn advancedDropdown"> Liter </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -65,7 +65,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Kroner </button>
+								<button class="dropbtn advancedDropdown"> Kroner </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -74,7 +74,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Kr/l </button>
+								<button class="dropbtn advancedDropdown"> Kr/l </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -83,7 +83,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Km/l </button>
+								<button class="dropbtn advancedDropdown"> Km/l </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -92,7 +92,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Km/kr </button>
+								<button class="dropbtn advancedDropdown"> Km/kr </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -101,7 +101,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> Kr/km </button>
+								<button class="dropbtn advancedDropdown"> Kr/km </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -110,7 +110,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> L/km </button>
+								<button class="dropbtn advancedDropdown"> L/km </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
@@ -119,7 +119,7 @@
 							</div>
 							
 							<div class="dropdown" style="position: relative; left: 50px;">
-								<button class="dropbtn"> L/kr </button>
+								<button class="dropbtn advancedDropdown"> L/kr </button>
 								<div class="dropdown-content">
 									<a href="#">Median</a>
 									<a href="#">Varians</a>
