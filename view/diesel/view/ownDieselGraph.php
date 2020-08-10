@@ -11,7 +11,7 @@
 	
 		<h1> Setup din egen graf, ved at vælge fra listerne nedenfor </h1>
 		
-		<center>
+		<center style="position: relative; top: 10px;">
 		
 			<h2>
 				<div style="position: relative; right: 765px; bottom: 10px;">
@@ -129,12 +129,17 @@
 			</div>
 						
 		</center>
+		
+		<center>
+			<div class="selectedVariables"> </div>		
+		</center>
+		
 	
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
 			<button class="dieselButton" 
 					value="advancedDieselPage"
 					name="dieselButton"
-					style="left: 400px;">
+					style="margin-left: auto;">
 				Tilbage
 			</button>
 		</form>
