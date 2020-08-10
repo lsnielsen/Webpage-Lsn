@@ -19,7 +19,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Standard afvigelse', 'Gennemsnittet, variansen'],
+			['Dato', 'Standard afvigelse', 'Gennemsnit, varians'],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kmPerKrStDev']),
