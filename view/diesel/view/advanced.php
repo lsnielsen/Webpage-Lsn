@@ -56,10 +56,10 @@
 				</button>
 				
 				<button class="dieselButton" 
-						value="ownTable"
+						value="ownDieselGraph"
 						name="dieselButton"
 						style="left: 400px;">
-					Lav din egen tabel
+					Lav din egen graf
 				</button>
 			</form>
 		</center>
@@ -107,10 +107,10 @@
 				</button>
 				
 				<button class="dieselButton" 
-						value="ownTable"
+						value="ownDieselGraph"
 						name="dieselButton"
 						style="left: 400px;">
-					Lav din egen tabel
+					Lav din egen graf
 				</button>
 			</form>
 		</center>
