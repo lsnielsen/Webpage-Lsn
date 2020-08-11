@@ -1,6 +1,6 @@
 
 <script>
-	$(".h2TempHeader").click(function() {
+	$(".dropdown").click(function() {
 		console.log("hallo");
 	});
 </script>
