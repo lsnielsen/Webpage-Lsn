@@ -18,7 +18,7 @@
 	} elseif ($dieselButton == "kmPerKroner") {
 		include("../view/diesel/view/kmPerKr/kmPerKr.php");
 	} elseif ($dieselButton == "ownDieselGraph") {
-		include("../view/diesel/view/ownDieselGraph.php");
+		include("../view/diesel/view/customGraph/ownDieselGraph.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}
