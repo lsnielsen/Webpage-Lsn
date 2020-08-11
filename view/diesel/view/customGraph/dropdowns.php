@@ -116,10 +116,11 @@
 </center>
 
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-  $(".literPerkrStDev").click(function(){
-	  console.log("hallo");
+	$(".dropdown").click(function() {
+		console.log("hallo");
 //    $(".selectedVariables").text("alskfjsladfkjasfkldj");
-  });
+	});
 </script>
 		
