@@ -19,7 +19,9 @@
 			<h2>
 				Valgte værdier:
 			</h2>
-			<div class="selectedVariables"> </div>		
+			<div class="selectedVariables"> 
+				<?php include("choosenGraphs.php"); ?>			
+			</div>		
 		</center>
 		
 	

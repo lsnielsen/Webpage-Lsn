@@ -1,6 +1,6 @@
 
 <script>
 	$(".literPerKrStDev").click(function() {
-		console.log("hallo");
+		$(".testClass").show();
 	});
 </script>
