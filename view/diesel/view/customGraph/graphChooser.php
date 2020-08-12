@@ -1,6 +1,6 @@
 
 <script>
-	$(".dropdown").click(function() {
+	$(".literPerKrStDev").click(function() {
 		console.log("hallo");
 	});
 </script>
