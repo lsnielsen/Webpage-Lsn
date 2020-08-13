@@ -6,3 +6,12 @@
 		&#10060;
 	</div>
 </div>
+
+<div class="varLiterPerKronerField">
+	<div class="varliterPerKronerTxt">
+		Varians for liter per kroner
+	</div>
+	<div class="varliterPerKronerCross">
+		&#10060;
+	</div>
+</div>
