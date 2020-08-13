@@ -1,0 +1,82 @@
+.headerLiterPerKilometerField {
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	display: none;
+}
+
+.stdevLiterPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 305px;
+	height: 30px;
+}
+
+.stdevLiterPerKilometerCross {
+	position: relative;
+	left: 125px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.stdevLiterPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.varLiterPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 250px;
+	height: 30px;
+}
+
+.varLiterPerKilometerCross {
+	position: relative;
+	left: 90px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.varLiterPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+
+.medianLiterPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 250px;
+	height: 30px;
+}
+
+.medianLiterPerKilometerCross {
+	position: relative;
+	left: 90px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.medianLiterPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}

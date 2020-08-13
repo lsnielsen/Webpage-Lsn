@@ -1,10 +1,6 @@
 
 <script>
 	
-	var stdevLPerKm = false;
-	var varLPerKm = false;
-	var medianLPerKm = false;
-	
 	var stdevKrPerKm = false;
 	var varKrPerKm = false;
 	var medianKrPerKm = false;
