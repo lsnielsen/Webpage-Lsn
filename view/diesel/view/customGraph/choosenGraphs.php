@@ -4,10 +4,11 @@
 
 <style>
 	.testClass {
-		position: relative;
+		position: absolute;
 		border: solid;
 		display: none;
-		margin: 5px 1000px 0px 10px;
+		margin: 5px 0px 0px 10px;
+		width: 250px;
 	}
 
 </style>
