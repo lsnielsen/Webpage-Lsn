@@ -58,6 +58,12 @@
 			$(".medianLiterPerKronerField").css("margin-left", "0px");
 		} else if (stdevLPerKr) {
 			$(".stdevLiterPerKronerField").css("margin-left", "0px");
+		} 
+		
+		if(stdevLPerKr || varLPerKr || medianLPerKr){
+			$(".headerliterPerKronerField").show();
+		} else {
+			$(".headerliterPerKronerField").hide();
 		}
 	}
 	

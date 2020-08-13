@@ -43,6 +43,13 @@
 	width: 90%;
 }
 
+.headerLiterPerKronerField {
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	display: none;
+}
+
 .stdevLiterPerKronerField {
 	position: absolute;
 	border: solid;
@@ -50,7 +57,7 @@
 	border-radius: 25px;
 	background-color: #66ffc2;
 	display: none;
-	margin: 5px 0px 0px 10px;
+	margin: 30px 0px 0px 10px;
 	width: 305px;
 	height: 30px;
 }
@@ -75,7 +82,7 @@
 	border-radius: 25px;
 	background-color: #66ffc2;
 	display: none;
-	margin: 5px 0px 0px 10px;
+	margin: 30px 0px 0px 10px;
 	width: 250px;
 	height: 30px;
 }
@@ -101,7 +108,7 @@
 	border-radius: 25px;
 	background-color: #66ffc2;
 	display: none;
-	margin: 5px 0px 0px 10px;
+	margin: 30px 0px 0px 10px;
 	width: 250px;
 	height: 30px;
 }
