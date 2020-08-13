@@ -36,6 +36,6 @@
 	</body>
 </html>
 
-<?php include "literPerKroner.php" ?>
+<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
 <?php include "graphChooser.php" ?>
 
