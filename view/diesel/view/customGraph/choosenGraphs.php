@@ -15,3 +15,12 @@
 		&#10060;
 	</div>
 </div>
+
+<div class="medianLiterPerKronerField">
+	<div class="medianliterPerKronerTxt">
+		Median for liter per kroner
+	</div>
+	<div class="medianliterPerKronerCross">
+		&#10060;
+	</div>
+</div>

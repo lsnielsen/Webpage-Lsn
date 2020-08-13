@@ -1,16 +1,49 @@
 
 <script>
-	var stdevLPerKr = false;
-	var varLPerKr = false;
+	
+	var stdevLPerKm = false;
+	var varLPerKm = false;
+	var medianLPerKm = false;
+	
+	var stdevKrPerKm = false;
+	var varKrPerKm = false;
+	var medianKrPerKm = false;
+	
+	var stdevKmPerKr = false;
+	var varKmPerKr = false;
+	var medianKmPerKr = false;
+	
+	var stdevKmPerL = false;
+	var varKmPerL = false;
+	var medianKmPerL = false;
+	
+	var stdevKrPerL = false;
+	var varKrPerL = false;
+	var medianKrPerL = false;
+	
+	var stdevKr = false;
+	var varKr = false;
+	var medianKr = false;
+	
+	var stdevL = false;
+	var varL = false;
+	var medianL = false;
+	
+	var stdevKm = false;
+	var varKm = false;
+	var medianKm = false;
+	
 
-	$(".literPerKrStDev").click(function() {
-		$(".stdevLiterPerKronerField").show();
-		stdevLPerKr = true;
+	
+	
+	$(".literPerKrVar").click(function() {
+		$(".varLiterPerKronerField").show();
+		varLPerKr = true;
 		handleSelectedFields();
 	});
-	$(".stdevliterPerKronerCross").click(function() {
-		$(".stdevLiterPerKronerField").hide();
-		stdevLPerKr = false;
+	$(".varliterPerKronerCross").click(function() {
+		$(".varLiterPerKronerField").hide();
+		varLPerKr = false;
 		handleSelectedFields();
 	});
 	
@@ -25,13 +58,50 @@
 		handleSelectedFields();
 	});
 	
-	function handleSelectedFields()
-	{
-		if(stdevLPerKr && varLPerKr){
-			$(".varLiterPerKronerField").css("margin-left", "350px");
-		} else if (varLPerKr) {
-			$(".varLiterPerKronerField").css("margin-left", "0px");
-		}
-	}
+	$(".literPerKrVar").click(function() {
+		$(".varLiterPerKronerField").show();
+		varLPerKr = true;
+		handleSelectedFields();
+	});
+	$(".varliterPerKronerCross").click(function() {
+		$(".varLiterPerKronerField").hide();
+		varLPerKr = false;
+		handleSelectedFields();
+	});
+	
+	$(".literPerKrVar").click(function() {
+		$(".varLiterPerKronerField").show();
+		varLPerKr = true;
+		handleSelectedFields();
+	});
+	$(".varliterPerKronerCross").click(function() {
+		$(".varLiterPerKronerField").hide();
+		varLPerKr = false;
+		handleSelectedFields();
+	});
+	
+	$(".literPerKrVar").click(function() {
+		$(".varLiterPerKronerField").show();
+		varLPerKr = true;
+		handleSelectedFields();
+	});
+	$(".varliterPerKronerCross").click(function() {
+		$(".varLiterPerKronerField").hide();
+		varLPerKr = false;
+		handleSelectedFields();
+	});
+	
+	$(".literPerKrVar").click(function() {
+		$(".varLiterPerKronerField").show();
+		varLPerKr = true;
+		handleSelectedFields();
+	});
+	$(".varliterPerKronerCross").click(function() {
+		$(".varLiterPerKronerField").hide();
+		varLPerKr = false;
+		handleSelectedFields();
+	});
+	
+
 	
 </script>

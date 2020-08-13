@@ -36,5 +36,6 @@
 	</body>
 </html>
 
+<?php include "literPerKroner.php" ?>
 <?php include "graphChooser.php" ?>
 

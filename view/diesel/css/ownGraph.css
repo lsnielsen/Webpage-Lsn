@@ -94,6 +94,32 @@
 }
 
 
+.medianLiterPerKronerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 5px 0px 0px 10px;
+	width: 250px;
+	height: 30px;
+}
+
+.medianLiterPerKronerCross {
+	position: relative;
+	left: 90px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.medianLiterPerKronerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+
 
 
 
