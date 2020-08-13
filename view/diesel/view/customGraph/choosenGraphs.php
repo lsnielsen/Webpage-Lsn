@@ -1,14 +1,8 @@
-<div class="testClass">
-	Standard afvigelse for liter per kroner
+<div class="stdevLiterPerKronerField">
+	<div class="stdevliterPerKronerTxt">
+		Standard afvigelse for liter per kroner
+	</div>
+	<div class="stdevliterPerKronerCross">
+		&#10060;
+	</div>
 </div>
-
-<style>
-	.testClass {
-		position: absolute;
-		border: solid;
-		display: none;
-		margin: 5px 0px 0px 10px;
-		width: 250px;
-	}
-
-</style>

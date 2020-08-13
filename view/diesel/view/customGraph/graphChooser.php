@@ -1,6 +1,10 @@
 
 <script>
 	$(".literPerKrStDev").click(function() {
-		$(".testClass").show();
+		$(".stdevLiterPerKronerField").show();
 	});
+	$(".stdevliterPerKronerCross").click(function() {
+		$(".stdevLiterPerKronerField").hide();
+	});
+	
 </script>

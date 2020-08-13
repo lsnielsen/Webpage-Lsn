@@ -41,5 +41,47 @@
 .selectedVariables {
 	height: 100px;
 	width: 90%;
-	border: solid;
 }
+
+.stdevLiterPerKronerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 5px 0px 0px 10px;
+	width: 305px;
+	height: 30px;
+}
+
+.stdevLiterPerKronerCross {
+	position: relative;
+	left: 135px;
+	bottom: 20px;
+	cursor: pointer;
+}
+
+.stdevLiterPerKronerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
