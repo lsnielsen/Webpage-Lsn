@@ -29,6 +29,15 @@
 			&#10060;
 		</div>
 	</div>
+
+	<div class="averageLiterPerKronerField">
+		<div class="averageliterPerKronerTxt">
+			Gennemsnit for liter per kroner
+		</div>
+		<div class="averageliterPerKronerCross">
+			&#10060;
+		</div>
+	</div>
 	
 
 </div>
@@ -38,6 +47,7 @@
 	var stdevLPerKr = false;
 	var varLPerKr = false;
 	var medianLPerKr = false;
+	var averageLPerKr = false;
 	
 	$(".literPerKrStDev").click(function() {
 		$(".stdevLiterPerKronerField").show();
@@ -72,9 +82,20 @@
 		handleLiterPerKronerFields();
 	});
 	
+	$(".literPerKrAverage").click(function() {
+		$(".averageLiterPerKronerField").show();
+		medianLPerKr = true;
+		handleLiterPerKronerFields();
+	});
+	$(".averageliterPerKronerCross").click(function() {
+		$(".averageLiterPerKronerField").hide();
+		averageLPerKr = false;
+		handleLiterPerKronerFields();
+	});
+	
 	function handleLiterPerKronerFields()
 	{
-		if(stdevLPerKr && varLPerKr && medianLPerKr){
+		if(stdevLPerKr && varLPerKr && medianLPerKr && averageLPerKr){
 			$(".stdevLiterPerKronerField").css("margin-left", "0px");
 			$(".varLiterPerKronerField").css("margin-left", "350px");
 			$(".medianLiterPerKronerField").css("margin-left", "650px");
@@ -95,7 +116,7 @@
 			$(".stdevLiterPerKronerField").css("margin-left", "0px");
 		} 
 		
-		if(stdevLPerKr || varLPerKr || medianLPerKr){
+		if(stdevLPerKr || varLPerKr || medianLPerKr || averageLPerKr){
 			$(".headerliterPerKronerField").show();
 		} else {
 			$(".headerliterPerKronerField").hide();
