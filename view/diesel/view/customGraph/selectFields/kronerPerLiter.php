@@ -44,7 +44,7 @@
 	var medianKrPerL = false;
 	var averageKrPerL = false;
 	
-	$(".krPerLiterStDev").click(function() {
+	$(".kronerPerLiterStDev").click(function() {
 		$(".stdevkronerPerLiterField").show();
 		stdevKrPerL = true;
 		handlekronerPerLiterFields();
@@ -55,7 +55,7 @@
 		handlekronerPerLiterFields();
 	});
 	
-	$(".krPerLiterVar").click(function() {
+	$(".kronerPerLiterVar").click(function() {
 		$(".varkronerPerLiterField").show();
 		varKrPerL = true;
 		handlekronerPerLiterFields();
@@ -66,7 +66,7 @@
 		handlekronerPerLiterFields();
 	});
 	
-	$(".krPerLiterMedian").click(function() {
+	$(".kronerPerLiterMedian").click(function() {
 		$(".mediankronerPerLiterField").show();
 		medianKrPerL = true;
 		handlekronerPerLiterFields();
@@ -77,7 +77,7 @@
 		handlekronerPerLiterFields();
 	});
 	
-	$(".krPerLiterAverage").click(function() {
+	$(".kronerPerLiterAverage").click(function() {
 		$(".averagekronerPerLiterField").show();
 		averageKrPerL = true;
 		handlekronerPerLiterFields();

@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kilometerPerKroner.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kilometerPerLiter.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kronerPerLiter.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kilometer.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kroner.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/liter.css" type="text/css">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -27,6 +30,9 @@
 				Valgte værdier:
 			</h2>
 			<div class="selectedVariables"> 
+				<?php include "../view/diesel/view/customGraph/selectFields/liter.php" ?>
+				<?php include "../view/diesel/view/customGraph/selectFields/kroner.php" ?>
+				<?php include "../view/diesel/view/customGraph/selectFields/kilometer.php" ?>
 				<?php include "../view/diesel/view/customGraph/selectFields/kronerPerLiter.php" ?>
 				<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerLiter.php" ?>
 				<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerKroner.php" ?>
