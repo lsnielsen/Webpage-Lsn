@@ -28,11 +28,21 @@
 		</div>
 	</div>
 
+	<div class="averageLiterPerKilometerField">
+		<div class="averageLiterPerKilometerTxt">
+			Gennemsnit for liter per Kilometer
+		</div>
+		<div class="averageLiterPerKilometerCross">
+			&#10060;
+		</div>
+	</div>
+
 <script>
 
 	var stdevLPerKm = false;
 	var varLPerKm = false;
 	var medianLPerKm = false;
+	var averageLPerKm = false;
 	
 	$(".literPerKmStDev").click(function() {
 		console.log("lafjkds");
@@ -68,27 +78,66 @@
 		handleLiterPerKilometerFields();
 	});
 	
+	$(".literPerKmAverage").click(function() {
+		$(".averageLiterPerKilometerField").show();
+		averageLPerKm = true;
+		handleLiterPerKilometerFields();
+	});
+	$(".averageliterPerKilometerCross").click(function() {
+		$(".averageLiterPerKilometerField").hide();
+		averageLPerKm = false;
+		handleLiterPerKilometerFields();
+	});
+	
 	function handleLiterPerKilometerFields()
 	{
-		if(stdevLPerKm && varLPerKm && medianLPerKm){
-			$(".stdevLiterPerKilometerField").css("margin-left", "0px");
+		if(stdevLPerKm && varLPerKm && medianLPerKm && averageLPerKm){
+			$(".averageLiterPerKilometerField").css("margin-left", "10px");
+			$(".stdevLiterPerKilometerField").css("margin-left", "330px");
+			$(".varLiterPerKilometerField").css("margin-left", "660px");
+			$(".medianLiterPerKilometerField").css("margin-left", "930px");
+		} else if (stdevLPerKm && varLPerKm && medianLPerKm) {
+			$(".stdevLiterPerKilometerField").css("margin-left", "10px");
 			$(".varLiterPerKilometerField").css("margin-left", "350px");
-			$(".medianLiterPerKilometerField").css("margin-left", "650px");
+			$(".medianLiterPerKilometerField").css("margin-left", "660px");
+		} else if (stdevLPerKm && medianLPerKm && averageLPerKm) {
+			$(".stdevLiterPerKilometerField").css("margin-left", "0px");
+			$(".medianLiterPerKilometerField").css("margin-left", "350px");
+			$(".averageLiterPerKilometerField").css("margin-left", "660px");
+		} else if (medianLPerKm && varLPerKm && averageLPerKm) {
+			$(".varLiterPerKilometerField").css("margin-left", "10px");
+			$(".medianLiterPerKilometerField").css("margin-left", "350px");
+			$(".averageLiterPerKilometerField").css("margin-left", "660px");
+		} else if (stdevLPerKm && varLPerKm && averageLPerKm) {
+			$(".stdevLiterPerKilometerField").css("margin-left", "10px");
+			$(".medianLiterPerKilometerField").css("margin-left", "350px");
+			$(".averageLiterPerKilometerField").css("margin-left", "660px");
 		} else if (stdevLPerKm && varLPerKm) {
 			$(".stdevLiterPerKilometerField").css("margin-left", "0px");
-			$(".varLiterPerKilometerField").css("margin-left", "350px");
+			$(".varLiterPerKilometerField").css("margin-left", "330px");
 		} else if (stdevLPerKm && medianLPerKm) {
-			$(".stdevLiterPerKilometerField").css("margin-left", "0px");
-			$(".medianLiterPerKilometerField").css("margin-left", "350px");
+			$(".stdevLiterPerKilometerField").css("margin-left", "10px");
+			$(".medianLiterPerKilometerField").css("margin-left", "330px");
+		} else if (stdevLPerKm && averageLPerKm) {
+			$(".stdevLiterPerKilometerField").css("margin-left", "10px");
+			$(".averageLiterPerKilometerField").css("margin-left", "330px");
 		} else if (medianLPerKm && varLPerKm) {
-			$(".varLiterPerKilometerField").css("margin-left", "0px");
-			$(".medianLiterPerKilometerField").css("margin-left", "350px");
+			$(".medianLiterPerKilometerField").css("margin-left", "10px");
+			$(".varLiterPerKilometerField").css("margin-left", "330px");
+		} else if (medianLPerKm && averageLPerKm) {
+			$(".medianLiterPerKilometerField").css("margin-left", "10px");
+			$(".averageLiterPerKilometerField").css("margin-left", "330px");
+		} else if (varLPerKm && averageLPerKm) {
+			$(".averageLiterPerKilometerField").css("margin-left", "10px");
+			$(".varLiterPerKilometerField").css("margin-left", "330px");
 		} else if (varLPerKm) {
-			$(".varLiterPerKilometerField").css("margin-left", "0px");
+			$(".varLiterPerKilometerField").css("margin-left", "10px");
 		} else if (medianLPerKm) {
-			$(".medianLiterPerKilometerField").css("margin-left", "0px");
+			$(".medianLiterPerKilometerField").css("margin-left", "10px");
 		} else if (stdevLPerKm) {
-			$(".stdevLiterPerKilometerField").css("margin-left", "0px");
+			$(".stdevLiterPerKilometerField").css("margin-left", "10px");
+		} else if (averageLPerKm) {
+			$(".averageLiterPerKilometerField").css("margin-left", "10px");
 		} 
 		
 		if(stdevLPerKm || varLPerKm || medianLPerKm){
