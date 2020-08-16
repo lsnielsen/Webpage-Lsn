@@ -84,7 +84,7 @@
 	
 	$(".literPerKrAverage").click(function() {
 		$(".averageLiterPerKronerField").show();
-		medianLPerKr = true;
+		averageLPerKr = true;
 		handleLiterPerKronerFields();
 	});
 	$(".averageliterPerKronerCross").click(function() {
@@ -96,24 +96,52 @@
 	function handleLiterPerKronerFields()
 	{
 		if(stdevLPerKr && varLPerKr && medianLPerKr && averageLPerKr){
-			$(".stdevLiterPerKronerField").css("margin-left", "0px");
-			$(".varLiterPerKronerField").css("margin-left", "350px");
-			$(".medianLiterPerKronerField").css("margin-left", "650px");
+			$(".averageLiterPerKronerField").css("margin-left", "10px");
+			$(".stdevLiterPerKronerField").css("margin-left", "330px");
+			$(".varLiterPerKronerField").css("margin-left", "660px");
+			$(".medianLiterPerKronerField").css("margin-left", "930px");
+		} else if (stdevLPerKr && varLPerKr && medianLPerKr) {
+			$(".stdevLiterPerKronerField").css("margin-left", "10px");
+			$(".varLiterPerKronerField").css("margin-left", "330px");
+			$(".medianLiterPerKronerField").css("margin-left", "660px");
+		} else if (stdevLPerKr && medianLPerKr && averageLPerKr) {
+			$(".averageLiterPerKronerField").css("margin-left", "10px");
+			$(".stdevLiterPerKronerField").css("margin-left", "330px");
+			$(".medianLiterPerKronerField").css("margin-left", "660px");
+		} else if (medianLPerKr && varLPerKr && averageLPerKr) {
+			$(".averageLiterPerKronerField").css("margin-left", "10px");
+			$(".varLiterPerKronerField").css("margin-left", "330px");
+			$(".medianLiterPerKronerField").css("margin-left", "660px");
+		} else if (stdevLPerKr && varLPerKr && averageLPerKr) {
+			$(".averageLiterPerKronerField").css("margin-left", "10px");
+			$(".varLiterPerKronerField").css("margin-left", "330px");
+			$(".medianLiterPerKronerField").css("margin-left", "660px");
 		} else if (stdevLPerKr && varLPerKr) {
-			$(".stdevLiterPerKronerField").css("margin-left", "0px");
-			$(".varLiterPerKronerField").css("margin-left", "350px");
+			$(".stdevLiterPerKronerField").css("margin-left", "10px");
+			$(".varLiterPerKronerField").css("margin-left", "330px");
 		} else if (stdevLPerKr && medianLPerKr) {
-			$(".stdevLiterPerKronerField").css("margin-left", "0px");
-			$(".medianLiterPerKronerField").css("margin-left", "350px");
+			$(".stdevLiterPerKronerField").css("margin-left", "10px");
+			$(".medianLiterPerKronerField").css("margin-left", "330px");
+		} else if (stdevLPerKr && averageLPerKr) {
+			$(".varLiterPerKronerField").css("margin-left", "10px");
+			$(".averageLiterPerKronerField").css("margin-left", "330px");	
 		} else if (medianLPerKr && varLPerKr) {
-			$(".varLiterPerKronerField").css("margin-left", "0px");
-			$(".medianLiterPerKronerField").css("margin-left", "350px");
+			$(".varLiterPerKronerField").css("margin-left", "10px");
+			$(".medianLiterPerKronerField").css("margin-left", "330px");	
+		} else if (medianLPerKr && averageLPerKr) {
+			$(".averageLiterPerKronerField").css("margin-left", "10px");
+			$(".medianLiterPerKronerField").css("margin-left", "330px");	
+		} else if (varLPerKr && averageLPerKr) {
+			$(".varLiterPerKronerField").css("margin-left", "10px");
+			$(".averageLiterPerKronerField").css("margin-left", "330px");	
 		} else if (varLPerKr) {
-			$(".varLiterPerKronerField").css("margin-left", "0px");
+			$(".varLiterPerKronerField").css("margin-left", "10px");
+		} else if (averageLPerKr) {
+			$(".averageLiterPerKronerField").css("margin-left", "10px");
 		} else if (medianLPerKr) {
-			$(".medianLiterPerKronerField").css("margin-left", "0px");
+			$(".medianLiterPerKronerField").css("margin-left", "10px");
 		} else if (stdevLPerKr) {
-			$(".stdevLiterPerKronerField").css("margin-left", "0px");
+			$(".stdevLiterPerKronerField").css("margin-left", "10px");
 		} 
 		
 		if(stdevLPerKr || varLPerKr || medianLPerKr || averageLPerKr){

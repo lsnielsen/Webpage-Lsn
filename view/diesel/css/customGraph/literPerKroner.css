@@ -80,3 +80,28 @@
     margin-top: 5px;
     margin-left: -15px;
 }
+
+.averageLiterPerKronerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 290px;
+	height: 30px;
+}
+
+.averageLiterPerKronerCross {
+	position: relative;
+	left: 110px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.averageLiterPerKronerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
