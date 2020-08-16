@@ -1,9 +1,9 @@
 	<div class="headerKronerPerKilometerField">
-		Kroner per Kilometer statistik: 
+		Kroner per kilometer statistik: 
 	</div>
 	<div class="stdevKronerPerKilometerField">
 		<div class="stdevKronerPerKilometerTxt">
-			Standard afvigelse for Kroner per Kilometer
+			Standard afvigelse for kroner per kilometer
 		</div>
 		<div class="stdevKronerPerKilometerCross">
 			&#10060;
@@ -12,7 +12,7 @@
 
 	<div class="varKronerPerKilometerField">
 		<div class="varKronerPerKilometerTxt">
-			Varians for Kroner per Kilometer
+			Varians for kroner per kilometer
 		</div>
 		<div class="varKronerPerKilometerCross">
 			&#10060;
@@ -21,7 +21,7 @@
 
 	<div class="medianKronerPerKilometerField">
 		<div class="medianKronerPerKilometerTxt">
-			Median for Kroner per Kilometer
+			Median for kroner per kilometer
 		</div>
 		<div class="medianKronerPerKilometerCross">
 			&#10060;
@@ -30,7 +30,7 @@
 
 	<div class="averageKronerPerKilometerField">
 		<div class="averageKronerPerKilometerTxt">
-			Gennemsnit for Kroner per Kilometer
+			Gennemsnit for kroner per kilometer
 		</div>
 		<div class="averageKronerPerKilometerCross">
 			&#10060;
@@ -139,7 +139,7 @@
 			$(".averageKronerPerKilometerField").css("margin-left", "10px");
 		} 
 		
-		if(stdevKrPerKm || varKrPerKm || medianKrPerKm){
+		if(stdevKrPerKm || varKrPerKm || medianKrPerKm || averageKrPerKm){
 			$(".headerKronerPerKilometerField").show();
 		} else {
 			$(".headerKronerPerKilometerField").hide();

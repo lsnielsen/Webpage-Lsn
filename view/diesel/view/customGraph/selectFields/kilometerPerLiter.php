@@ -1,9 +1,9 @@
 	<div class="headerKilometerPerLiterField">
-		Liter per Kilometer statistik: 
+		Kilometer per liter statistik: 
 	</div>
 	<div class="stdevKilometerPerLiterField">
 		<div class="stdevKilometerPerLiterTxt">
-			Standard afvigelse for Liter per Kilometer
+			Standard afvigelse for kilometer per liter
 		</div>
 		<div class="stdevKilometerPerLiterCross">
 			&#10060;
@@ -12,7 +12,7 @@
 
 	<div class="varKilometerPerLiterField">
 		<div class="varKilometerPerLiterTxt">
-			Varians for Liter per Kilometer
+			Varians for kilometer per liter
 		</div>
 		<div class="varKilometerPerLiterCross">
 			&#10060;
@@ -21,7 +21,7 @@
 
 	<div class="medianKilometerPerLiterField">
 		<div class="medianKilometerPerLiterTxt">
-			Median for Liter per Kilometer
+			Median for kilometer per liter
 		</div>
 		<div class="medianKilometerPerLiterCross">
 			&#10060;
@@ -30,7 +30,7 @@
 
 	<div class="averageKilometerPerLiterField">
 		<div class="averageKilometerPerLiterTxt">
-			Gennemsnit for Liter per Kilometer
+			Gennemsnit for kilometer per liter
 		</div>
 		<div class="averageKilometerPerLiterCross">
 			&#10060;
@@ -139,7 +139,7 @@
 			$(".averageKilometerPerLiterField").css("margin-left", "10px");
 		} 
 		
-		if(stdevKmPerL || varKmPerL || medianKmPerL){
+		if(stdevKmPerL || varKmPerL || medianKmPerL || averageKmPerL){
 			$(".headerKilometerPerLiterField").show();
 		} else {
 			$(".headerKilometerPerLiterField").hide();

@@ -139,7 +139,7 @@
 			$(".averagekilometerField").css("margin-left", "10px");
 		} 
 		
-		if(stdevKm || varKm || medianKm){
+		if(stdevKm || varKm || medianKm || averageKm){
 			$(".headerkilometerField").show();
 		} else {
 			$(".headerkilometerField").hide();

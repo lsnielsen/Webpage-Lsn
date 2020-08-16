@@ -140,7 +140,7 @@
 			$(".averageLiterPerKilometerField").css("margin-left", "10px");
 		} 
 		
-		if(stdevLPerKm || varLPerKm || medianLPerKm){
+		if(stdevLPerKm || varLPerKm || medianLPerKm || averageLPerKm){
 			$(".headerliterPerKilometerField").show();
 		} else {
 			$(".headerliterPerKilometerField").hide();
