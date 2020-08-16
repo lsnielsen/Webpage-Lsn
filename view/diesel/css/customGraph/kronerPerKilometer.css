@@ -1,0 +1,107 @@
+.headerKronerPerKilometerField {
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	display: none;
+}
+
+.stdevKronerPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 315px;
+	height: 30px;
+}
+
+.stdevKronerPerKilometerCross {
+	position: relative;
+	left: 135px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.stdevKronerPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.varKronerPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 260px;
+	height: 30px;
+}
+
+.varKronerPerKilometerCross {
+	position: relative;
+	left: 100px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.varKronerPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+
+.medianKronerPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 260px;
+	height: 30px;
+}
+
+.medianKronerPerKilometerCross {
+	position: relative;
+	left: 100px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.medianKronerPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.averageKronerPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 300px;
+	height: 30px;
+}
+
+.averageKronerPerKilometerCross {
+	position: relative;
+	left: 120px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.averageKronerPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}

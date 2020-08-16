@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/ownGraph.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/literPerKroner.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/literPerKilometer.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kronerPerKilometer.css" type="text/css">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -23,6 +24,7 @@
 				Valgte værdier:
 			</h2>
 			<div class="selectedVariables"> 
+				<?php include "../view/diesel/view/customGraph/selectFields/kronerPerKilometer.php" ?>
 				<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
 				<?php include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
 			</div>		
