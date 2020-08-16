@@ -1,29 +1,29 @@
-	<div class="headerliterPerKilometerField">
+	<div class="headerLiterPerKilometerField">
 		Liter per Kilometer statistik: 
 	</div>
 	<div class="stdevLiterPerKilometerField">
-		<div class="stdevliterPerKilometerTxt">
+		<div class="stdevLiterPerKilometerTxt">
 			Standard afvigelse for liter per Kilometer
 		</div>
-		<div class="stdevliterPerKilometerCross">
+		<div class="stdevLiterPerKilometerCross">
 			&#10060;
 		</div>
 	</div>
 
 	<div class="varLiterPerKilometerField">
-		<div class="varliterPerKilometerTxt">
+		<div class="varLiterPerKilometerTxt">
 			Varians for liter per Kilometer
 		</div>
-		<div class="varliterPerKilometerCross">
+		<div class="varLiterPerKilometerCross">
 			&#10060;
 		</div>
 	</div>
 
 	<div class="medianLiterPerKilometerField">
-		<div class="medianliterPerKilometerTxt">
+		<div class="medianLiterPerKilometerTxt">
 			Median for liter per Kilometer
 		</div>
-		<div class="medianliterPerKilometerCross">
+		<div class="medianLiterPerKilometerCross">
 			&#10060;
 		</div>
 	</div>
