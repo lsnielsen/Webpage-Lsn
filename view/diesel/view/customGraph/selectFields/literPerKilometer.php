@@ -1,3 +1,5 @@
+	
+<div class="literPerKilometerValues">
 	<div class="headerLiterPerKilometerField">
 		Liter per Kilometer statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevLPerKm = false;
@@ -141,10 +143,13 @@
 		} 
 		
 		if(stdevLPerKm || varLPerKm || medianLPerKm || averageLPerKm){
+			lPerKm = true;
 			$(".headerliterPerKilometerField").show();
 		} else {
+			lPerKm = false;
 			$(".headerliterPerKilometerField").hide();
 		}
+		alignValues()
 	}
 	
 	

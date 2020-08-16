@@ -39,8 +39,10 @@
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 .selectedVariables {
-	height: 500px;
 	width: 90%;
+	border-width: thin; 
+	border-style: solid; 
+	height: 750px;
 }
 
 

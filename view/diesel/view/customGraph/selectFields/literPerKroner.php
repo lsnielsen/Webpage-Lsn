@@ -1,5 +1,5 @@
 
-<div>
+<div class="literPerKronerValues">
 	<div class="headerliterPerKronerField">
 		Liter per kroner statistik: 
 	</div>
@@ -145,10 +145,13 @@
 		} 
 		
 		if(stdevLPerKr || varLPerKr || medianLPerKr || averageLPerKr){
+			lPerKr = true;
 			$(".headerliterPerKronerField").show();
 		} else {
+			lPerKr = false;
 			$(".headerliterPerKronerField").hide();
 		}
+		alignValues()
 	}
 	
 	

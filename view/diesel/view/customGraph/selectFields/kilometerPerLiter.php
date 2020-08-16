@@ -1,3 +1,5 @@
+	
+<div class="kilometerPerLiterValues">
 	<div class="headerKilometerPerLiterField">
 		Kilometer per liter statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevKmPerL = false;
@@ -140,10 +142,13 @@
 		} 
 		
 		if(stdevKmPerL || varKmPerL || medianKmPerL || averageKmPerL){
+			kmPerL = true;
 			$(".headerKilometerPerLiterField").show();
 		} else {
+			kmPerL = false;
 			$(".headerKilometerPerLiterField").hide();
 		}
+		alignValues()
 	}
 	
 	

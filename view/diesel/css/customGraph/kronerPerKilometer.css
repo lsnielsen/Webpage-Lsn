@@ -1,3 +1,8 @@
+.kronerPerKilometerValues {
+	position: relative;
+	left: 20px;
+}
+
 .headerKronerPerKilometerField {
 	font-weight: bold;
 	font-size: 20px;

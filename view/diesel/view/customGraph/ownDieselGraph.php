@@ -26,19 +26,20 @@
 		<?php include("dropdowns.html"); ?>
 		
 		<center>
-			<h2>
-				Valgte værdier:
-			</h2>
-			<div class="selectedVariables"> 
-				<?php include "../view/diesel/view/customGraph/selectFields/liter.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/kroner.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/kilometer.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/kronerPerLiter.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerLiter.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerKroner.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/kronerPerKilometer.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
-				<?php include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
+				<h2>
+					Valgte værdier:
+				</h2>
+			<div  class="selectedVariables">
+					<?php include "../view/diesel/view/customGraph/selectFields/kilometer.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/liter.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/kroner.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/kronerPerLiter.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerLiter.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerKroner.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/kronerPerKilometer.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/valueSort.php" ?>
 			</div>		
 		</center>
 		
@@ -47,7 +48,7 @@
 			<button class="dieselButton" 
 					value="advancedDieselPage"
 					name="dieselButton"
-					style="margin-left: auto;">
+					style="margin-left: auto; margin-top: 250px;">
 				Tilbage
 			</button>
 		</form>

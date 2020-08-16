@@ -1,3 +1,5 @@
+
+<div class="kronerPerLiterValues">
 	<div class="headerkronerPerLiterField">
 		Kroner per liter statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevKrPerL = false;
@@ -140,10 +142,13 @@
 		} 
 		
 		if(stdevKrPerL || varKrPerL || medianKrPerL || averageKrPerL){
+			krPerL = true;
 			$(".headerkronerPerLiterField").show();
 		} else {
+			krPerL = false;
 			$(".headerkronerPerLiterField").hide();
 		}
+		alignValues()
 	}
 	
 	

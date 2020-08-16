@@ -1,3 +1,8 @@
+.kilometerPerLiterValues {
+	position: relative;
+	left: 20px;
+}
+
 .headerKilometerPerLiterField {
 	font-weight: bold;
 	font-size: 20px;

@@ -1,3 +1,8 @@
+.kronerValues {
+	position: relative;
+	left: 20px;
+}
+
 .headerkronerField {
 	font-weight: bold;
 	font-size: 20px;

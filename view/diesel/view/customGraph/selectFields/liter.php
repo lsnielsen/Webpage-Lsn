@@ -1,3 +1,5 @@
+	
+<div class="literValues">
 	<div class="headerLiterField">
 		Liter statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevLiter = false;
@@ -140,10 +142,13 @@
 		} 
 		
 		if(stdevLiter || varLiter || medianLiter || averageLiter){
+			liter = true;
 			$(".headerLiterField").show();
 		} else {
+			liter = false;
 			$(".headerLiterField").hide();
 		}
+		alignValues()
 	}
 	
 	

@@ -1,3 +1,8 @@
+.literPerKronerValues {
+	position: relative;
+	left: 20px;
+}
+
 .headerLiterPerKronerField {
 	font-weight: bold;
 	font-size: 20px;

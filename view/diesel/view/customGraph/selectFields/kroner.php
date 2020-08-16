@@ -1,3 +1,5 @@
+
+<div class="kronerValues">
 	<div class="headerKronerField">
 		Kroner statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevkroner = false;
@@ -140,10 +142,13 @@
 		} 
 		
 		if(stdevkroner || varkroner || mediankroner && averageKroner){
+			kroner = true;
 			$(".headerkronerField").show();
 		} else {
+			kroner = false;
 			$(".headerkronerField").hide();
 		}
+		alignValues()
 	}
 	
 	

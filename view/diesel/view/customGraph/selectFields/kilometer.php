@@ -1,3 +1,5 @@
+	
+<div class="kilometerValues">
 	<div class="headerKilometerField">
 		Kilometer statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevKm = false;
@@ -140,10 +142,13 @@
 		} 
 		
 		if(stdevKm || varKm || medianKm || averageKm){
+			kilometer = true;
 			$(".headerkilometerField").show();
 		} else {
+			kilometer = false;
 			$(".headerkilometerField").hide();
 		}
+		alignValues()
 	}
 	
 	

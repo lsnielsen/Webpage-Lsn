@@ -1,3 +1,5 @@
+	
+<div class="kilometerPerKronerValues">
 	<div class="headerKilometerPerKronerField">
 		Kilometer per kroner statistik: 
 	</div>
@@ -36,7 +38,7 @@
 			&#10060;
 		</div>
 	</div>
-
+</div>
 <script>
 
 	var stdevKmPerKr = false;
@@ -140,10 +142,13 @@
 		} 
 		
 		if(stdevKmPerKr || varKmPerKr || medianKmPerKr || averageKmPerKr){
+			kmPerKr = true;
 			$(".headerKilometerPerKronerField").show();
 		} else {
+			kmPerKr = false;
 			$(".headerKilometerPerKronerField").hide();
 		}
+		alignValues()
 	}
 	
 	

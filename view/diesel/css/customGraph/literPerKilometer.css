@@ -1,3 +1,8 @@
+.literPerKilometerValues {
+	position: relative;
+	left: 20px;
+}
+
 .headerLiterPerKilometerField {
 	font-weight: bold;
 	font-size: 20px;
