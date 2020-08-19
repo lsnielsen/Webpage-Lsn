@@ -1,41 +1,16 @@
-.kilometerValues {
+.userInputValues {
 	position: relative;
 	left: 20px;
 }
 
-.headerkilometerField {
+.userInputField {
 	font-weight: bold;
 	font-size: 20px;
 	position: absolute;
 	display: none;
 }
 
-.stdevkilometerField {
-	position: absolute;
-	border: solid;
-	border-color: #00804d;
-	border-radius: 25px;
-	background-color: #66ffc2;
-	display: none;
-	margin: 30px 0px 0px 10px;
-	width: 315px;
-	height: 30px;
-}
-
-.stdevkilometerCross {
-	position: relative;
-	left: 135px;
-	bottom: 20px;
-	cursor: pointer;
-	width: 10px;
-}
-
-.stdevkilometerTxt {
-    margin-top: 5px;
-    margin-left: -15px;
-}
-
-.varkilometerField {
+.userInputKmField {
 	position: absolute;
 	border: solid;
 	border-color: #00804d;
@@ -47,7 +22,7 @@
 	height: 30px;
 }
 
-.varkilometerCross {
+.userInputKmCross {
 	position: relative;
 	left: 100px;
 	bottom: 20px;
@@ -55,13 +30,13 @@
 	width: 10px;
 }
 
-.varkilometerTxt {
+.userInputKmTxt {
     margin-top: 5px;
     margin-left: -15px;
 }
 
 
-.mediankilometerField {
+.userInputLiterField {
 	position: absolute;
 	border: solid;
 	border-color: #00804d;
@@ -73,7 +48,7 @@
 	height: 30px;
 }
 
-.mediankilometerCross {
+.userInputLiterCross {
 	position: relative;
 	left: 100px;
 	bottom: 20px;
@@ -81,12 +56,12 @@
 	width: 10px;
 }
 
-.mediankilometerTxt {
+.userInputLiterTxt {
     margin-top: 5px;
     margin-left: -15px;
 }
 
-.averagekilometerField {
+.userInputKronerField {
 	position: absolute;
 	border: solid;
 	border-color: #00804d;
@@ -98,7 +73,7 @@
 	height: 30px;
 }
 
-.averagekilometerCross {
+.userInputKronerCross {
 	position: relative;
 	left: 120px;
 	bottom: 20px;
@@ -106,7 +81,7 @@
 	width: 10px;
 }
 
-.averagekilometerTxt {
+.userInputKronerTxt {
     margin-top: 5px;
     margin-left: -15px;
 }
