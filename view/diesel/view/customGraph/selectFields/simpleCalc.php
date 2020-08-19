@@ -142,11 +142,11 @@
 	{
 		if(krPerLiter || kmPerLiter || kmPerKr || krPerKm || literPerKm || literPerKr){
 			$(".kronerPerLiterField").css("margin-left", "10px");
-			$(".kilometerPerLiterField").css("margin-left", "330px");
-			$(".kilometerPerKronerField").css("margin-left", "660px");
-			$(".kronerPerKilometerField").css("margin-left", "930px");
-			$(".literPerKilometerField").css("margin-left", "1230px");
-			$(".literPerKronerField").css("margin-left", "1530px");
+			$(".kilometerPerLiterField").css("margin-left", "240px");
+			$(".kilometerPerKronerField").css("margin-left", "470px");
+			$(".kronerPerKilometerField").css("margin-left", "600px");
+			$(".literPerKilometerField").css("margin-left", "830px");
+			$(".literPerKronerField").css("margin-left", "960px");
 		} 
 		
 		if(krPerLiter || kmPerLiter || kmPerKr || krPerKm || literPerKm || literPerKr){
