@@ -4,8 +4,8 @@
 		Kroner statistik: 
 	</div>
 	<div class="stdevKronerField">
-		<div class="stdevkronerTxt">
-			Standard afvigelse for kroner
+		<div class="stdevKronerTxt">
+			Standard afvigelse for Kroner
 		</div>
 		<div class="stdevKronerCross">
 			&#10060;
@@ -14,7 +14,7 @@
 
 	<div class="varKronerField">
 		<div class="varKronerTxt">
-			Varians for kroner
+			Varians for Kroner
 		</div>
 		<div class="varKronerCross">
 			&#10060;
@@ -23,7 +23,7 @@
 
 	<div class="medianKronerField">
 		<div class="medianKronerTxt">
-			Median for kroner
+			Median for Kroner
 		</div>
 		<div class="medianKronerCross">
 			&#10060;
@@ -32,7 +32,7 @@
 
 	<div class="averageKronerField">
 		<div class="averageKronerTxt">
-			Gennemsnit for kroner
+			Gennemsnit for Kroner
 		</div>
 		<div class="averageKronerCross">
 			&#10060;
@@ -41,112 +41,112 @@
 </div>
 <script>
 
-	var stdevkroner = false;
-	var varkroner = false;
-	var mediankroner = false;
-	var averagekroner = false;
+	var stdevKroner = false;
+	var varKroner = false;
+	var medianKroner = false;
+	var averageKroner = false;
 	
 	$(".kronerStDev").click(function() {
 		$(".stdevKronerField").show();
-		stdevkroner = true;
-		handlekronerFields();
+		stdevKroner = true;
+		handleKronerFields();
 	});
-	$(".stdevkronerCross").click(function() {
+	$(".stdevKronerCross").click(function() {
 		$(".stdevKronerField").hide();
-		stdevkroner = false;
-		handlekronerFields();
+		stdevKroner = false;
+		handleKronerFields();
 	});
 	
 	$(".kronerVar").click(function() {
 		$(".varKronerField").show();
-		varkroner = true;
-		handlekronerFields();
+		varKroner = true;
+		handleKronerFields();
 	});
-	$(".varkronerCross").click(function() {
+	$(".varKronerCross").click(function() {
 		$(".varKronerField").hide();
-		varkroner = false;
-		handlekronerFields();
+		varKroner = false;
+		handleKronerFields();
 	});
 	
 	$(".kronerMedian").click(function() {
 		$(".medianKronerField").show();
-		mediankroner = true;
-		handlekronerFields();
+		medianKroner = true;
+		handleKronerFields();
 	});
-	$(".mediankronerCross").click(function() {
+	$(".medianKronerCross").click(function() {
 		$(".medianKronerField").hide();
-		mediankroner = false;
-		handlekronerFields();
+		medianKroner = false;
+		handleKronerFields();
 	});
 	
 	$(".kronerAverage").click(function() {
 		$(".averageKronerField").show();
-		averagekroner = true;
-		handlekronerFields();
+		averageKroner = true;
+		handleKronerFields();
 	});
-	$(".averagekronerCross").click(function() {
+	$(".averageKronerCross").click(function() {
 		$(".averageKronerField").hide();
-		averagekroner = false;
-		handlekronerFields();
+		averageKroner = false;
+		handleKronerFields();
 	});
 	
-	function handlekronerFields()
+	function handleKronerFields()
 	{
-		if(stdevkroner && varkroner && mediankroner && averagekroner){
-			$(".averagekronerField").css("margin-left", "10px");
-			$(".stdevkronerField").css("margin-left", "330px");
-			$(".varkronerField").css("margin-left", "660px");
-			$(".mediankronerField").css("margin-left", "930px");
-		} else if (stdevkroner && varkroner && mediankroner) {
-			$(".stdevkronerField").css("margin-left", "10px");
-			$(".varkronerField").css("margin-left", "350px");
-			$(".mediankronerField").css("margin-left", "660px");
-		} else if (stdevkroner && mediankroner && averagekroner) {
-			$(".stdevkronerField").css("margin-left", "0px");
-			$(".mediankronerField").css("margin-left", "350px");
-			$(".averagekronerField").css("margin-left", "660px");
-		} else if (mediankroner && varkroner && averagekroner) {
-			$(".varkronerField").css("margin-left", "10px");
-			$(".mediankronerField").css("margin-left", "350px");
-			$(".averagekronerField").css("margin-left", "660px");
-		} else if (stdevkroner && varkroner && averagekroner) {
-			$(".stdevkronerField").css("margin-left", "10px");
-			$(".mediankronerField").css("margin-left", "350px");
-			$(".averagekronerField").css("margin-left", "660px");
-		} else if (stdevkroner && varkroner) {
-			$(".stdevkronerField").css("margin-left", "0px");
-			$(".varkronerField").css("margin-left", "330px");
-		} else if (stdevkroner && mediankroner) {
-			$(".stdevkronerField").css("margin-left", "10px");
-			$(".mediankronerField").css("margin-left", "330px");
-		} else if (stdevkroner && averagekroner) {
-			$(".stdevkronerField").css("margin-left", "10px");
-			$(".averagekronerField").css("margin-left", "330px");
-		} else if (mediankroner && varkroner) {
-			$(".mediankronerField").css("margin-left", "10px");
-			$(".varkronerField").css("margin-left", "330px");
-		} else if (mediankroner && averagekroner) {
-			$(".mediankronerField").css("margin-left", "10px");
-			$(".averagekronerField").css("margin-left", "330px");
-		} else if (varkroner && averagekroner) {
-			$(".averagekronerField").css("margin-left", "10px");
-			$(".varkronerField").css("margin-left", "330px");
-		} else if (varkroner) {
-			$(".varkronerField").css("margin-left", "10px");
-		} else if (mediankroner) {
-			$(".mediankronerField").css("margin-left", "10px");
-		} else if (stdevkroner) {
-			$(".stdevkronerField").css("margin-left", "10px");
-		} else if (averagekroner) {
-			$(".averagekronerField").css("margin-left", "10px");
+		if(stdevKroner && varKroner && medianKroner && averageKroner){
+			$(".averageKronerField").css("margin-left", "10px");
+			$(".stdevKronerField").css("margin-left", "330px");
+			$(".varKronerField").css("margin-left", "660px");
+			$(".medianKronerField").css("margin-left", "930px");
+		} else if (stdevKroner && varKroner && medianKroner) {
+			$(".stdevKronerField").css("margin-left", "10px");
+			$(".varKronerField").css("margin-left", "350px");
+			$(".medianKronerField").css("margin-left", "660px");
+		} else if (stdevKroner && medianKroner && averageKroner) {
+			$(".stdevKronerField").css("margin-left", "0px");
+			$(".medianKronerField").css("margin-left", "350px");
+			$(".averageKronerField").css("margin-left", "660px");
+		} else if (medianKroner && varKroner && averageKroner) {
+			$(".varKronerField").css("margin-left", "10px");
+			$(".medianKronerField").css("margin-left", "350px");
+			$(".averageKronerField").css("margin-left", "660px");
+		} else if (stdevKroner && varKroner && averageKroner) {
+			$(".stdevKronerField").css("margin-left", "10px");
+			$(".medianKronerField").css("margin-left", "350px");
+			$(".averageKronerField").css("margin-left", "660px");
+		} else if (stdevKroner && varKroner) {
+			$(".stdevKronerField").css("margin-left", "0px");
+			$(".varKronerField").css("margin-left", "330px");
+		} else if (stdevKroner && medianKroner) {
+			$(".stdevKronerField").css("margin-left", "10px");
+			$(".medianKronerField").css("margin-left", "330px");
+		} else if (stdevKroner && averageKroner) {
+			$(".stdevKronerField").css("margin-left", "10px");
+			$(".averageKronerField").css("margin-left", "330px");
+		} else if (medianKroner && varKroner) {
+			$(".medianKronerField").css("margin-left", "10px");
+			$(".varKronerField").css("margin-left", "330px");
+		} else if (medianKroner && averageKroner) {
+			$(".medianKronerField").css("margin-left", "10px");
+			$(".averageKronerField").css("margin-left", "330px");
+		} else if (varKroner && averageKroner) {
+			$(".averageKronerField").css("margin-left", "10px");
+			$(".varKronerField").css("margin-left", "330px");
+		} else if (varKroner) {
+			$(".varKronerField").css("margin-left", "10px");
+		} else if (medianKroner) {
+			$(".medianKronerField").css("margin-left", "10px");
+		} else if (stdevKroner) {
+			$(".stdevKronerField").css("margin-left", "10px");
+		} else if (averageKroner) {
+			$(".averageKronerField").css("margin-left", "10px");
 		} 
 		
-		if(stdevkroner || varkroner || mediankroner && averageKroner){
-			kroner = true;
-			$(".headerkronerField").show();
+		if(stdevKroner || varKroner || medianKroner || averageKroner){
+			Kroner = true;
+			$(".headerKronerField").show();
 		} else {
-			kroner = false;
-			$(".headerkronerField").hide();
+			Kroner = false;
+			$(".headerKronerField").hide();
 		}
 		alignValues()
 	}
