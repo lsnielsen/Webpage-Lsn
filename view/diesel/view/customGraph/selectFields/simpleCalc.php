@@ -1,155 +1,164 @@
 	
-<div class="kilometerValues">
-	<div class="headerKilometerField">
-		Kilometer statistik: 
+<div class="inputValues">
+	<div class="headerInputField">
+		Bruger input: 
 	</div>
-	<div class="stdevKilometerField">
-		<div class="stdevkilometerTxt">
-			Standard afvigelse for kilometer
+	<div class="kronerPerLiterField">
+		<div class="kronerPerLiterTxt">
+			Kroner per liter
 		</div>
-		<div class="stdevKilometerCross">
+		<div class="kronerPerLiterCross">
 			&#10060;
 		</div>
 	</div>
+	<script>	
+		$(".krPerLiter").click(function() {
+			$(".kronerPerLiterField").show();
+			krPerLiter = true;
+			handleInputFields();
+		});
+		$(".kronerPerLiterCross").click(function() {
+			$(".kronerPerLiterField").hide();
+			krPerLiter = false;
+			handleInputFields();
+		});
+	</script>
 
-	<div class="varKilometerField">
-		<div class="varKilometerTxt">
-			Varians for kilometer
+	<div class="kilometerPerLiterField">
+		<div class="kilometerPerLiterTxt">
+			Kilometer Per liter
 		</div>
-		<div class="varKilometerCross">
+		<div class="kilometerPerLiterCross">
 			&#10060;
 		</div>
 	</div>
+	<script>
+		$(".kmPerLiter").click(function() {
+			$(".kilometerPerLiterField").show();
+			kmPerLiter = true;
+			handleInputFields();
+		});
+		$(".kmPerLiter").click(function() {
+			$(".kilometerPerLiterCross").hide();
+			kmPerLiter = false;
+			handleInputFields();
+		});
+	</script>
 
-	<div class="medianKilometerField">
-		<div class="medianKilometerTxt">
-			Median for kilometer
+	<div class="kilometerPerKronerField">
+		<div class="kilometerPerKronerTxt">
+			Kilometer per kroner
 		</div>
-		<div class="medianKilometerCross">
+		<div class="kilometerPerKronerCross">
 			&#10060;
 		</div>
 	</div>
+	<script>	
+		$(".kmPerKr").click(function() {
+			$(".kilometerPerKronerField").show();
+			kmPerKr = true;
+			handleInputFields();
+		});
+		$(".kilometerPerKronerCross").click(function() {
+			$(".kilometerPerKronerField").hide();
+			kmPerKr = false;
+			handleInputFields();
+		});
+	</script>
+	
 
-	<div class="averageKilometerField">
-		<div class="averageKilometerTxt">
-			Gennemsnit for kilometer
+	<div class="kronerPerKilometerField">
+		<div class="kronerPerKilometerTxt">
+			Kroner per kilometer
 		</div>
-		<div class="averageKilometerCross">
+		<div class="kronerPerKilometerCross">
 			&#10060;
 		</div>
 	</div>
-</div>
+	<script>	
+		$(".krPerkm").click(function() {
+			$(".kronerPerKilometerField").show();
+			krPerKm = true;
+			handleInputFields();
+		});
+		$(".kronerPerKilometerCross").click(function() {
+			$(".kronerPerKilometerField").hide();
+			krPerKm = false;
+			handleInputFields();
+		});	
+	</script>
+
+	<div class="literPerKilometerField">
+		<div class="literPerKilometerTxt">
+			Liter per kilometer
+		</div>
+		<div class="literPerKilometerCross">
+			&#10060;
+		</div>
+	</div>
+	<script>	
+		$(".literPerKm").click(function() {
+			$(".literPerKilometerField").show();
+			literPerKm = true;
+			handleInputFields();
+		});
+		$(".literPerKilometerCross").click(function() {
+			$(".literPerKilometerField").hide();
+			literPerKm = false;
+			handleInputFields();
+		});	
+	</script>
+
+	<div class="literPerKronerField">
+		<div class="literPerKronerTxt">
+			Liter per kroner
+		</div>
+		<div class="literPerKronerCross">
+			&#10060;
+		</div>
+	</div>
+	<script>	
+		$(".literPerKr").click(function() {
+			$(".literPerKronerField").show();
+			literPerKr = true;
+			handleInputFields();
+		});
+		$(".literPerKronerCross").click(function() {
+			$(".literPerKronerField").hide();
+			literPerKr = false;
+			handleInputFields();
+		});	
+	</script>
 <script>
 
-	var stdevKm = false;
-	var varKm = false;
-	var medianKm = false;
-	var averageKm = false;
+	var krPerLiter = false;
+	var kmPerLiter = false;
+	var kmPerKr = false;
+	var krPerKm = false;
+	var literPerKm = false;
+	var literPerKr = false;
 	
-	$(".kmStDev").click(function() {
-		$(".stdevKilometerField").show();
-		stdevKm = true;
-		handlekilometerFields();
-	});
-	$(".stdevkilometerCross").click(function() {
-		$(".stdevKilometerField").hide();
-		stdevKm = false;
-		handlekilometerFields();
-	});
-	
-	$(".kmVar").click(function() {
-		$(".varKilometerField").show();
-		varKm = true;
-		handlekilometerFields();
-	});
-	$(".varkilometerCross").click(function() {
-		$(".varKilometerField").hide();
-		varKm = false;
-		handlekilometerFields();
-	});
-	
-	$(".kmMedian").click(function() {
-		$(".medianKilometerField").show();
-		medianKm = true;
-		handlekilometerFields();
-	});
-	$(".mediankilometerCross").click(function() {
-		$(".medianKilometerField").hide();
-		medianKm = false;
-		handlekilometerFields();
-	});
-	
-	$(".kmAverage").click(function() {
-		$(".averageKilometerField").show();
-		averageKm = true;
-		handlekilometerFields();
-	});
-	$(".averagekilometerCross").click(function() {
-		$(".averageKilometerField").hide();
-		averageKm = false;
-		handlekilometerFields();
-	});
-	
-	function handlekilometerFields()
+	function handleInputFields()
 	{
-		if(stdevKm && varKm && medianKm && averageKm){
-			$(".averagekilometerField").css("margin-left", "10px");
-			$(".stdevkilometerField").css("margin-left", "330px");
-			$(".varkilometerField").css("margin-left", "660px");
-			$(".mediankilometerField").css("margin-left", "930px");
-		} else if (stdevKm && varKm && medianKm) {
-			$(".stdevkilometerField").css("margin-left", "10px");
-			$(".varkilometerField").css("margin-left", "350px");
-			$(".mediankilometerField").css("margin-left", "660px");
-		} else if (stdevKm && medianKm && averageKm) {
-			$(".stdevkilometerField").css("margin-left", "0px");
-			$(".mediankilometerField").css("margin-left", "350px");
-			$(".averagekilometerField").css("margin-left", "660px");
-		} else if (medianKm && varKm && averageKm) {
-			$(".varkilometerField").css("margin-left", "10px");
-			$(".mediankilometerField").css("margin-left", "350px");
-			$(".averagekilometerField").css("margin-left", "660px");
-		} else if (stdevKm && varKm && averageKm) {
-			$(".stdevkilometerField").css("margin-left", "10px");
-			$(".mediankilometerField").css("margin-left", "350px");
-			$(".averagekilometerField").css("margin-left", "660px");
-		} else if (stdevKm && varKm) {
-			$(".stdevkilometerField").css("margin-left", "0px");
-			$(".varkilometerField").css("margin-left", "330px");
-		} else if (stdevKm && medianKm) {
-			$(".stdevkilometerField").css("margin-left", "10px");
-			$(".mediankilometerField").css("margin-left", "330px");
-		} else if (stdevKm && averageKm) {
-			$(".stdevkilometerField").css("margin-left", "10px");
-			$(".averagekilometerField").css("margin-left", "330px");
-		} else if (medianKm && varKm) {
-			$(".mediankilometerField").css("margin-left", "10px");
-			$(".varkilometerField").css("margin-left", "330px");
-		} else if (medianKm && averageKm) {
-			$(".mediankilometerField").css("margin-left", "10px");
-			$(".averagekilometerField").css("margin-left", "330px");
-		} else if (varKm && averageKm) {
-			$(".averagekilometerField").css("margin-left", "10px");
-			$(".varkilometerField").css("margin-left", "330px");
-		} else if (varKm) {
-			$(".varkilometerField").css("margin-left", "10px");
-		} else if (medianKm) {
-			$(".mediankilometerField").css("margin-left", "10px");
-		} else if (stdevKm) {
-			$(".stdevkilometerField").css("margin-left", "10px");
-		} else if (averageKm) {
-			$(".averagekilometerField").css("margin-left", "10px");
+		if(krPerLiter || kmPerLiter || kmPerKr || krPerKm || literPerKm || literPerKr){
+			$(".kronerPerLiterField").css("margin-left", "10px");
+			$(".kilometerPerLiterField").css("margin-left", "330px");
+			$(".kilometerPerKronerField").css("margin-left", "660px");
+			$(".kronerPerKilometerField").css("margin-left", "930px");
+			$(".literPerKilometerField").css("margin-left", "1230px");
+			$(".literPerKronerField").css("margin-left", "1530px");
 		} 
 		
-		if(stdevKm || varKm || medianKm || averageKm){
-			kilometer = true;
-			$(".headerkilometerField").show();
+		if(krPerLiter || kmPerLiter || kmPerKr || krPerKm || literPerKm || literPerKr){
+			userInput = true;
+			$(".headerInputField").show();
 		} else {
-			kilometer = false;
-			$(".headerkilometerField").hide();
+			userInput = false;
+			$(".headerInputField").hide();
 		}
 		alignValues()
 	}
 	
 	
 </script>
+</div>

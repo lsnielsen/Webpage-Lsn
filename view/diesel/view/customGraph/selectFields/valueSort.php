@@ -12,7 +12,8 @@
 	var kmPerKr = false;
 	var kmPerL = false;
 	
-	function alignValues() {
+	function alignValues() 
+	{
 		if (userInput || simpleCalc || kilometer || liter || kroner) {
 			$(".kilometerValues").css("top", "0px");
 			$(".kronerValues").css("top", "80px");
