@@ -26,7 +26,7 @@
 						<label style="margin-left: 40px; font-weight: bold;">
 							Antal kilometer <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 659.4 " name="km">  				 
+						<input class="dieselInput" type="text" placeholder="ex: 659,4 " name="km">  				 
 					</div>
 				</div>
 				<div style="margin-top: 20px; margin-bottom: 200px;">
@@ -34,14 +34,14 @@
 						<label style="margin-left: 40px; font-weight: bold;">
 							Liter <br>
 						</label>  
-						<input class="dieselInput" type="text" placeholder="ex: 23.3 " name="liter"> 					 
+						<input class="dieselInput" type="text" placeholder="ex: 23,3 " name="liter"> 					 
 					</div>
 					
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Kroner <br>
 						</label>
-						<input class="dieselInput" type="text" placeholder="ex: 223.3 " name="kr">				 
+						<input class="dieselInput" type="text" placeholder="ex: 223,3 " name="kr">				 
 					</div>
 					<br> <br> <br>
 					
@@ -95,20 +95,7 @@
 						?>
 					</table>
 				</div>
-				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
-						value="advancedDieselPage"
-						name="dieselButton"						
-						style="margin-left: auto;">
-					Klik her, for at se en mere avanceret statistik
-				</button>
-				<button class="dieselButton" 
-						action="/../Webpage-Lsn/controller/diesel.php" 
-						value="carDieselPage"
-						name="dieselButton"						
-						style="margin-left: -370px; margin-top: -100px; position: absolute;">
-					Klik her, for at se hvilken bil det handler om
-				</button>				
+				<?php include("statisticButtons.php"); ?>
 			</fieldset>  
 		</form>     	
 		

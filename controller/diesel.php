@@ -11,6 +11,14 @@
 		include("../view/diesel/view/advanced.php");
 	} elseif ($dieselButton == "carDieselPage") {
 		include("../view/diesel/view/car.html");
+	} elseif ($dieselButton == "krPerLiter") {
+		include("../view/diesel/view/krPerLiter/krPerLiter.php");
+	} elseif ($dieselButton == "kmPerLiter") {
+		include("../view/diesel/view/kmPerLiter/kmPerLiter.php");
+	} elseif ($dieselButton == "kmPerKroner") {
+		include("../view/diesel/view/kmPerKr/kmPerKr.php");
+	} elseif ($dieselButton == "ownDieselGraph") {
+		include("../view/diesel/view/customGraph/ownDieselGraph.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}

@@ -1,12 +1,12 @@
 
 <center>
-	<div id="kmPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="kmPerLiter" style="width: 1000px; height: 400px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = handleAdvancedArray($result, "graph");	
+	$graphArray = handleAdvancedArray($result, "smallGraph");	
 ?>
 <script>
 
@@ -17,11 +17,10 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / liter', 'Gennemsnit'],
+			['Dato', 'Kilometer / liter'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['km/l']),
-				parseFloat(graphArray[0]['averageKmPerLiter'])
+				parseFloat(graphArray[0]['km/l'])
 			]
 		]);
 
@@ -34,8 +33,7 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['km/l']),
-				parseFloat(graphArray[0]['averageKmPerLiter'])
+				parseFloat(graphArray[i]['km/l'])
 			]);
 		}
 

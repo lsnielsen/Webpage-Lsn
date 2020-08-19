@@ -1,6 +1,9 @@
 <?php
+	
+	include("statisticsHelper.php");
+
 	//handleAdvancedArray is the function to be called outside.
-	//It calls all the other functions in this file
+	//It calls all the other functions in this file	
 	function handleAdvancedArray($query, $pageType) 
 	{
 		$sortedArray = sortSqlArray($query);
@@ -9,7 +12,8 @@
 			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1], $pageType);	
 		}
 		$finalDataArray = getFinalData($sortedArray);
-		$finalArray = makeAverageData($finalDataArray);
+		$finalAverageArray = makeAverageData($finalDataArray);
+		$finalArray = calculateStatisticData($finalAverageArray);
 		
 		return $finalArray;
 	}
@@ -132,7 +136,17 @@
 			} else {
 				return $charNine . $charTen . ". " . $month . "  " . $charOne . $charTwo . $charThree . $charFour;
 			}
-		} elseif ($page == "graph") {
+		} elseif ($page == "smallGraph") {
+			if ($charSix == 0 && $charNine == 0) {
+				return $charTen . "/" . $charSeven . "-" . $charThree . $charFour;			
+			} elseif ($charSix == 0 && $charNine !== 0) {
+				return $charNine . $charTen . "/" . $charSeven . "-" . $charThree . $charFour;
+			} elseif ($charSix !== 0 && $charNine == 0) {
+				return $charTen . "/" . $charSix . $charSeven . "-" . $charThree . $charFour;
+			} elseif ($charSix !== 0 && $charNine !== 0) {
+				return $charNine . $charTen . "/" . $charSix . $charSeven . "-" . $charThree . $charFour;
+			}
+		} elseif ($page == "bigGraph") {
 			if ($charSix == 0 && $charNine == 0) {
 				return $charTen . "/" . $charSeven . " - " . $charThree . $charFour;			
 			} elseif ($charSix == 0 && $charNine !== 0) {

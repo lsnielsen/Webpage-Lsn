@@ -1,13 +1,13 @@
 
 <center>
-	<div id="combinedGraphs" style="width: 1000px; height: 400px; margin-left: -110px;"></div>	
+	<div id="kmPerKroner" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
 	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = handleAdvancedArray($result, "smallGraph");	
+	$graphArray = handleAdvancedArray($result, "bigGraph");	
 ?>
 
 <script>
@@ -19,17 +19,17 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / kilometer', 'Liter / krone', 'Kroner / kilometer'],
+			['Dato', 'Kilometer / krone', 'Gennemsnit', 'Median'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['l/km']),
-				parseFloat(graphArray[0]['l/kr']),
-				parseFloat(graphArray[0]['kr/km'])
+				parseFloat(graphArray[0]['km/kr']),
+				parseFloat(graphArray[0]['averageKmPerKr']),
+				parseFloat(graphArray[0]['kmPerKrMedian'])
 			]
 		]);
 
 		var options = {
-		  title: 'L/km, l/kr og kr/km',
+		  title: 'Kilometer per kroner',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -37,13 +37,13 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['l/km']),
-				parseFloat(graphArray[i]['l/kr']),
-				parseFloat(graphArray[i]['kr/km'])
+				parseFloat(graphArray[i]['km/kr']),
+				parseFloat(graphArray[0]['averageKmPerKr']),
+				parseFloat(graphArray[0]['kmPerKrMedian'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('combinedGraphs'));
+		var chart = new google.visualization.LineChart(document.getElementById('kmPerKroner'));
 
 		chart.draw(data, options);
 	}

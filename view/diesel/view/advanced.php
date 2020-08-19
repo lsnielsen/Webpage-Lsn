@@ -21,86 +21,99 @@
 		<h1>
 			Avanceret statistik for diesel forbrug
 		</h1>  
-		<table class="advancedTable statisticTable">
-						<tr>
-							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
-							<th class="dieselHeader headerSortDown kmColumn">Km</th>
-							<th class="dieselHeader headerSortDown literColumn">Liter</th>
-							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
-							<th class="dieselHeader headerSortDown krlColumn">Kr/l</th>
-							<th class="dieselHeader headerSortDown kmlColumn">Km/l</th>
-							<th class="dieselHeader headerSortDown kmkrColumn">Km/kr</th>
-							<th class="dieselHeader headerSortDown krkmColumn">Kr/km</th>
-							<th class="dieselHeader headerSortDown lkmColumn">L/km</th>
-							<th class="dieselHeader headerSortDown lkrColumn">L/kr</th>
-						</tr>
-						<?php
-							$tableData = "SELECT * FROM diesel";
-							$result = mysqli_query($con,$tableData);
-							$graphArray = handleAdvancedArray($result, "table");
-							
-							for($i=0; $i<sizeOf($graphArray); $i++) {
-								echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
-											echo "<td class=dieselTableCell>";
-											echo $graphArray[$i][1];
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['kilometer'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['liter'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell advancedDieselCell>";
-											echo number_format($graphArray[$i]['kroner'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['km/l'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['km/kr'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['kr/km'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['l/km'], 2, ',', '.');
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['l/kr'], 2, ',', '.');
-										echo "</td></tr>";
-							} ?>		
-		</table>
-		<?php include "bottumTable.php"; ?>
+	
+		<?php include "dataTable.php"; ?>
+	
+		<?php //include "bottumTable.php"; ?>
 		
-		<form>
-			<button class="dieselButton" 
-					action="/../Webpage-Lsn/controller/diesel.php" 
-					value="dieselPage"
-					name="dieselButton"						
-					style="margin-left: auto;">
-				Tilbage
-			</button>
-		</form>
+		<center>
+			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
+				<button class="dieselButton" 
+						value="dieselPage"
+						name="dieselButton"
+						style="left: -400px;">
+					Tilbage
+				</button>
+
+				<button class="dieselButton" 
+						value="krPerLiter"
+						name="dieselButton"
+						style="left: -200px;">
+					Statistik for kr/l
+				</button>
+
+				<button class="dieselButton" 
+						value="kmPerLiter"
+						name="dieselButton">
+					Statistik for km/l
+				</button>
+				
+				<button class="dieselButton" 
+						value="kmPerKroner"
+						name="dieselButton"
+						style="left: 200px;">
+					Statistik for km/kr
+				</button>
+				
+				<button class="dieselButton" 
+						value="ownDieselGraph"
+						name="dieselButton"
+						style="left: 400px;">
+					Lav din egen graf
+				</button>
+			</form>
+		</center>
+		
 		<?php include "../view/diesel/graphs/krPerLiter.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kmPerLiter.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kmPerKroner.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
+		<?php include "../view/diesel/graphs/combinedGraph.php"; ?>
+		
 		<?php //include "../view/diesel/graphs/krPerKm.php"; ?>
 		<?php //include "../view/diesel/graphs/literPerKm.php"; ?>
 		<?php //include "../view/diesel/graphs/literPerKroner.php"; ?>
-		<?php include "../view/diesel/graphs/combinedGraph.php"; ?>
 		
-		<form>
-			<button class="dieselButton" 
-					action="/../Webpage-Lsn/controller/diesel.php" 
-					value="dieselPage"
-					name="dieselButton"						
-					style="margin-left: auto;">
-				Tilbage
-			</button>
-		</form>
+		
+		<center>
+			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
+				<button class="dieselButton" 
+						value="dieselPage"
+						name="dieselButton"
+						style="left: -400px;">
+					Tilbage
+				</button>
+
+				<button class="dieselButton" 
+						value="krPerLiter"
+						name="dieselButton"
+						style="left: -200px;">
+					Statistik for kr/l
+				</button>
+
+				<button class="dieselButton" 
+						value="kmPerLiter"
+						name="dieselButton">
+					Statistik for km/l
+				</button>
+				
+				<button class="dieselButton" 
+						value="kmPerKroner"
+						name="dieselButton"
+						style="left: 200px;">
+					Statistik for km/kr
+				</button>
+				
+				<button class="dieselButton" 
+						value="ownDieselGraph"
+						name="dieselButton"
+						style="left: 400px;">
+					Lav din egen graf
+				</button>
+			</form>
+		</center>
 	</body>
 </html>
 

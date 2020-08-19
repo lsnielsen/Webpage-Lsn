@@ -1,13 +1,13 @@
 
 <center>
-	<div id="literPerKroner" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="literPerKroner" style="width: 1000px; height: 400px; margin-left: -110px;"></div>	
 </center>	
 
 <?php
 	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = handleAdvancedArray($result, "graph");	
+	$graphArray = handleAdvancedArray($result, "smallGraph");	
 ?>
 
 <script>

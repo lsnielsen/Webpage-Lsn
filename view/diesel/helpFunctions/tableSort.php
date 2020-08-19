@@ -72,12 +72,15 @@
 	function changeSortVar()
 	{
 		var text = $(event.target).text();
-		if(text == "Km" && km == 0) {
-			km = 1;
-		} else if(text == "Km" && km == 1){ 
-			km = 0; 
-		} 
-
+		if (text == "Kilometer" || text == "Km") {
+			if(km == 0) {
+				console.log(text);
+				km = 1;
+			} else if(km == 1) {
+				km = 0; 
+			} 
+		}
+		
 		if(text == "Liter" && liter == 0) {
 			liter = 1;
 		} else if(text == "Liter" && liter == 1){ 
@@ -222,14 +225,14 @@
 			return -1;			
 		}
 
-		if(text == "Km" && km == 0) {
+		if((text == "Km" && km == 0) || (text == "Kilometer" && km == 0)) {
 			$(".kmColumn").addClass("headerSortUp");
 			$(".kmColumn").removeClass("headerSortDown");
 			if(a[sortColumn] > b[sortColumn]){
 				return 1;
 			}
 			return -1;
-		} else if(text == "Km" && km == 1){
+		} else if((text == "Km" && km == 1) || (text == "Kilometer" && km == 1) ){
 			$(".kmColumn").addClass("headerSortDown");
 			$(".kmColumn").removeClass("headerSortUp");
 			if(a[sortColumn] <= b[sortColumn]){
