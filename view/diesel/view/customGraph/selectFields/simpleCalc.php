@@ -1,7 +1,7 @@
 	
 <div class="inputValues">
 	<div class="headerInputField">
-		Bruger input: 
+		Simple beregninger: 
 	</div>
 	<div class="kronerPerLiterField">
 		<div class="kronerPerLiterTxt">
@@ -15,12 +15,12 @@
 		$(".krPerLiter").click(function() {
 			$(".kronerPerLiterField").show();
 			krPerLiter = true;
-			handleInputFields();
+			handleCalculationFields();
 		});
 		$(".kronerPerLiterCross").click(function() {
 			$(".kronerPerLiterField").hide();
 			krPerLiter = false;
-			handleInputFields();
+			handleCalculationFields();
 		});
 	</script>
 
@@ -36,12 +36,12 @@
 		$(".kmPerLiter").click(function() {
 			$(".kilometerPerLiterField").show();
 			kmPerLiter = true;
-			handleInputFields();
+			handleCalculationFields();
 		});
-		$(".kmPerLiter").click(function() {
-			$(".kilometerPerLiterCross").hide();
+		$(".kilometerPerLiterCross").click(function() {
+			$(".kilometerPerLiterField").hide();
 			kmPerLiter = false;
-			handleInputFields();
+			handleCalculationFields();
 		});
 	</script>
 
@@ -57,12 +57,12 @@
 		$(".kmPerKr").click(function() {
 			$(".kilometerPerKronerField").show();
 			kmPerKr = true;
-			handleInputFields();
+			handleCalculationFields();
 		});
 		$(".kilometerPerKronerCross").click(function() {
 			$(".kilometerPerKronerField").hide();
 			kmPerKr = false;
-			handleInputFields();
+			handleCalculationFields();
 		});
 	</script>
 	
@@ -79,12 +79,12 @@
 		$(".krPerkm").click(function() {
 			$(".kronerPerKilometerField").show();
 			krPerKm = true;
-			handleInputFields();
+			handleCalculationFields();
 		});
 		$(".kronerPerKilometerCross").click(function() {
 			$(".kronerPerKilometerField").hide();
 			krPerKm = false;
-			handleInputFields();
+			handleCalculationFields();
 		});	
 	</script>
 
@@ -100,12 +100,12 @@
 		$(".literPerKm").click(function() {
 			$(".literPerKilometerField").show();
 			literPerKm = true;
-			handleInputFields();
+			handleCalculationFields();
 		});
 		$(".literPerKilometerCross").click(function() {
 			$(".literPerKilometerField").hide();
 			literPerKm = false;
-			handleInputFields();
+			handleCalculationFields();
 		});	
 	</script>
 
@@ -121,12 +121,12 @@
 		$(".literPerKr").click(function() {
 			$(".literPerKronerField").show();
 			literPerKr = true;
-			handleInputFields();
+			handleCalculationFields();
 		});
 		$(".literPerKronerCross").click(function() {
 			$(".literPerKronerField").hide();
 			literPerKr = false;
-			handleInputFields();
+			handleCalculationFields();
 		});	
 	</script>
 <script>
@@ -138,7 +138,7 @@
 	var literPerKm = false;
 	var literPerKr = false;
 	
-	function handleInputFields()
+	function handleCalculationFields()
 	{
 		if(krPerLiter || kmPerLiter || kmPerKr || krPerKm || literPerKm || literPerKr){
 			$(".kronerPerLiterField").css("margin-left", "10px");
