@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kilometer.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kroner.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/liter.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/userInput.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/simpleCalc.css" type="text/css">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -40,6 +42,8 @@
 					<?php include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
 					<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
 					<?php include "../view/diesel/view/customGraph/selectFields/valueSort.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/simpleCalc.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/userInput.php" ?>
 			</div>		
 		</center>
 		
