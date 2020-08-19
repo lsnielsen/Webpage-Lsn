@@ -16,14 +16,16 @@
 	{
 		if (userInput || simpleCalc || kilometer || liter || kroner) {
 			$(".kilometerValues").css("top", "0px");
-			$(".kronerValues").css("top", "80px");
-			$(".literValues").css("top", "160px");
-			$(".kronerPerLiterValues").css("top", "240px");
-			$(".kilometerPerLiterValues").css("top", "320px");
-			$(".kilometerPerKronerValues").css("top", "400px");
-			$(".kronerPerKilometerValues").css("top", "480px");
-			$(".literPerKilometerValues").css("top", "560px");
-			$(".literPerKronerValues").css("top", "640px");
+			$(".inputValues").css("top", "80px");
+			$(".userInputValues").css("top", "160px");
+			$(".kronerValues").css("top", "240px");
+			$(".literValues").css("top", "320px");
+			$(".kronerPerLiterValues").css("top", "400px");
+			$(".kilometerPerLiterValues").css("top", "480px");
+			$(".kilometerPerKronerValues").css("top", "560px");
+			$(".kronerPerKilometerValues").css("top", "640px");
+			$(".literPerKilometerValues").css("top", "720px");
+			$(".literPerKronerValues").css("top", "800px");
 		} else if (krPerL || krPerKm || lPerKm || lPerKr || kmPerKr || kmPerL) {
 			$(".kronerPerLiterValues").css("top", "0px");
 			$(".kilometerPerLiterValues").css("top", "80px");
@@ -34,6 +36,8 @@
 			$(".kilometerValues").css("top", "480px");
 			$(".kronerValues").css("top", "560px");
 			$(".literValues").css("top", "640px");
+			$(".kilometerValues").css("top", "720px");
+			$(".inputValues").css("top", "800px");
 		}
 	}
 
