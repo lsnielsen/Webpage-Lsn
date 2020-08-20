@@ -44,9 +44,9 @@
 					<?php include "../view/diesel/view/customGraph/selectFields/valueSort.php" ?>
 					<?php include "../view/diesel/view/customGraph/selectFields/simpleCalc.php" ?>
 					<?php include "../view/diesel/view/customGraph/selectFields/userInput.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
 			</div>		
 		</center>
+		<?php include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
 		
 	
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
