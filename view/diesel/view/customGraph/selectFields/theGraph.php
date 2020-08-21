@@ -38,3 +38,51 @@
 
 
 ?>
+
+<script>
+window.onload = function () {
+var dataPoints = [];
+
+//Replace text file's path according to your requirement.
+$.get("../view/diesel/view/customGraph/selectFields/data.txt", function(data) {
+	var x = 0;
+	var allLines = data.split('\n');
+	if(allLines.length > 0) {
+		for(var i=0; i< allLines.length; i++) {
+			dataPoints.push({x: x , y: parseInt(allLines[i])});
+			x += .25;
+		}
+	}
+	var chart = new CanvasJS.Chart("chartContainer",{
+		title :{
+			text: "Chart using Text File Data"
+		},
+		data: [{
+			type: "line",
+			dataPoints : dataPoints,
+		}]
+	});
+	chart.render();
+});
+}
+</script>
+
+
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
