@@ -42,24 +42,24 @@
 
 		var stockChart = new CanvasJS.StockChart("chartContainer",{
 			title:{
-			  text:"Din custom graf"
+				text:"Din custom graf"
 			},
 			animationEnabled: true,
 			exportEnabled: true,
 			charts: [{
-			  axisX: {
-				crosshair: {
-				  enabled: true,
-				  snapToDataPoint: true
-				}
-			  },
-			  axisY: {
-				crosshair: {
-				  enabled: true,
-				  snapToDataPoint: true
-				}
-			  },
-			  data: data
+				axisX: {
+					crosshair: {
+					enabled: true,
+					snapToDataPoint: true
+					}
+				},
+				axisY: {
+					crosshair: {
+					enabled: true,
+					snapToDataPoint: true
+					}
+				},
+				data: data
 			}]
 		});
 
@@ -73,7 +73,10 @@
 	var dataSeries = { type: "spline" };
 	var dataPoints = [];
 	for (var i = 0; i < arrayLength; i += 1) {
-	  dataPoints.push({ x: new Date(array[i][1]), y: array[i]['km/l'] });
+		dataPoints.push({ 
+			x: new Date(array[i][1]), 
+			y: array[i]['km/l'] 
+		});
 	}
 	dataSeries.dataPoints = dataPoints;
 	data.push(dataSeries);
