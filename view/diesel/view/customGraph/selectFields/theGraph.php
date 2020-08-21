@@ -64,6 +64,25 @@
 		});
 
 		stockChart.render();    
+		
+		var yVal = 15, updateCount = 0;
+		var updateChart = function () {
+
+			yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
+			updateCount++;
+			
+			dataPoints.push({
+				y : yVal
+			});
+			
+			stockChart.options.title.text = "Update " + updateCount;
+			stockChart.render();    
+		
+		};
+
+		// update stockChart every second
+		setInterval(function(){updateChart()}, 1000);	
+		
 	}
 
 	var array = <?php echo json_encode($arr); ?>;
