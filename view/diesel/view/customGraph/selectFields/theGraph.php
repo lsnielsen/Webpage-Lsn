@@ -36,6 +36,12 @@
 
 <div id="chartContainer" style="height: 900px; width: 100%;"></div>
 <script>
+	var array = <?php echo json_encode($arr); ?>;
+	arrayLength = array.length;
+
+	var data = []; 
+	var dataSeries = { type: "spline" };
+	var dataPoints = [];
 	window.onload = function () {
 
 		var stockChart = new CanvasJS.StockChart("chartContainer",{
@@ -61,7 +67,6 @@
 			}]
 		});
 
-		stockChart.render();    
 		
 		var yVal = 15, updateCount = 0;
 		var updateChart = function () {
@@ -80,24 +85,35 @@
 		};
 
 		// update stockChart every second
-		setInterval(function(){updateChart()}, 4000);	
+		//setInterval(function(){updateChart()}, 4000);	
 		
-	}
-
-	var array = <?php echo json_encode($arr); ?>;
-	arrayLength = array.length;
-
-	var data = []; 
-	var dataSeries = { type: "spline" };
-	var dataPoints = [];
-	for (var i = 0; i < arrayLength; i += 1) {
-		dataPoints.push({ 
-			x: new Date(array[i][1]), 
-			y: array[i]['km/l'] 
+		$(".kmPerLiter").click(function() {
+			console.log("kmPerLiter");
+			for (var i = 0; i < arrayLength; i += 1) {
+				dataPoints.push({ 
+					x: new Date(array[i][1]), 
+					y: array[i]['km/l'] 
+				});
+			}
+			dataSeries.dataPoints = dataPoints;
+			data.push(dataSeries);
+			stockChart.render();    
+		});
+		
+		$(".krPerLiter").click(function() {
+			console.log("krPerLiter");
+			for (var i = 0; i < arrayLength; i += 1) {
+				dataPoints.push({ 
+					x: new Date(array[i][1]), 
+					y: array[i]['kr/l'] 
+				});
+			}
+			dataSeries.dataPoints = dataPoints;
+			data.push(dataSeries);
+			stockChart.render();    
 		});
 	}
-	dataSeries.dataPoints = dataPoints;
-	data.push(dataSeries);
+
 </script>
 
 
