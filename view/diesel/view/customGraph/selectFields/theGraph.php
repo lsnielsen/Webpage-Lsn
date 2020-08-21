@@ -37,8 +37,6 @@
 <div id="chartContainer" style="height: 900px; width: 100%;"></div>
 <script>
 	window.onload = function () {
-		var dataPoints = [];
-
 
 		var stockChart = new CanvasJS.StockChart("chartContainer",{
 			title:{
@@ -72,7 +70,8 @@
 			updateCount++;
 			
 			dataPoints.push({
-				y : yVal
+				x : new Date("01/01-2021"),
+				y : 25
 			});
 			
 			stockChart.options.title.text = "Update " + updateCount;
@@ -81,7 +80,7 @@
 		};
 
 		// update stockChart every second
-		setInterval(function(){updateChart()}, 1000);	
+		setInterval(function(){updateChart()}, 4000);	
 		
 	}
 
