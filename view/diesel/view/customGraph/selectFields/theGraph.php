@@ -39,36 +39,80 @@
 
 ?>
 
+<div id="chartContainer" style="height: 700px; width: 100%;"></div>
 <script>
-window.onload = function () {
-var dataPoints = [];
+	window.onload = function () {
+		var dataPoints = [];
 
-//Replace text file's path according to your requirement.
-$.get("../view/diesel/view/customGraph/selectFields/data.txt", function(data) {
-	var x = 0;
-	var allLines = data.split('\n');
-	if(allLines.length > 0) {
-		for(var i=0; i< allLines.length; i++) {
-			dataPoints.push({x: x , y: parseInt(allLines[i])});
-			x += .25;
-		}
+
+		var stockChart = new CanvasJS.StockChart("chartContainer",{
+			title:{
+			  text:"Din custom graf"
+			},
+			animationEnabled: true,
+			exportEnabled: true,
+			charts: [{
+			  axisX: {
+				crosshair: {
+				  enabled: true,
+				  snapToDataPoint: true
+				}
+			  },
+			  axisY: {
+				crosshair: {
+				  enabled: true,
+				  //snapToDataPoint: true
+				}
+			  },
+			  data: data
+			}],    
+			rangeSelector: {
+			  inputFields: {
+				startValue: 4000,
+				endValue: 6000,
+				valueFormatString: "###0"
+			  },
+			  
+			  buttons: [{
+				label: "1000",
+				range: 1000,
+				rangeType: "number"
+			  },{
+				label: "2000",
+				range: 2000,
+				rangeType: "number"
+			  },{
+				label: "5000",
+				range: 5000,
+				rangeType: "number"
+			  },{
+				label: "All",        
+				rangeType: "all"
+			  }]
+			}
+		});
+
+		stockChart.render();    
 	}
-	var chart = new CanvasJS.Chart("chartContainer",{
-		title :{
-			text: "Chart using Text File Data"
-		},
-		data: [{
-			type: "line",
-			dataPoints : dataPoints,
-		}]
-	});
-	chart.render();
-});
-}
+
+	var array = <?php echo json_encode($arr); ?>;
+	arrayLength = array.length;
+	console.log("length of array: " + arrayLength);
+	var limit = 10000;    //increase number of dataPoints by increasing this
+	var y = 1000;
+	var data = []; 
+	var dataSeries = { type: "spline" };
+	var dataPoints = [];
+	for (var i = 0; i < arrayLength; i += 1) {
+	  y += Math.round((Math.random() * 10 - 5));
+	//  dataPoints.push({ x: array[i][1], y: array[i]['km/l'] });
+	  dataPoints.push({ x: '06/06', y: array[i]['km/l'] });
+	}
+	dataSeries.dataPoints = dataPoints;
+	data.push(dataSeries);
 </script>
 
 
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 
 
