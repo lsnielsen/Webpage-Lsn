@@ -1,8 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <script type="text/javascript">
-  window.onload = function () {
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<script type="text/javascript">
+	var newArr = [];
+	var firstArray = [{x: 20, y: 15 }, { x: 35, y: 18}, {x: 40,y: 20}];
+	window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer", {
         title: {
           text: "Click on legend items to hide/unhide dataseries"
@@ -21,144 +26,52 @@
                 e.chart.render();
             }
         },
-        data: [{
+        data: [ {
             showInLegend: true,
+			visible: false,
             type: "line",
-            dataPoints: [{
-                x: 10,
-                y: 5
-            }, {
-                x: 20,
-                y: 9
-            }, {
-                x: 30,
-                y: 17
-            }, {
-                x: 40,
-                y: 32
-            }, {
-                x: 50,
-                y: 22
-            }, {
-                x: 60,
-                y: 14
-            }, {
-                x: 70,
-                y: 25
-            }, {
-                x: 80,
-                y: 18
-            }, {
-                x: 90,
-                y: 20
-            }
-
-            ]
-        }, {
+			name:"Den korte graf",
+            dataPoints: [{ x: 5, y: 10 }, { x: 25, y: 15 } ]
+		}, {
             showInLegend: true,
-            type: "line",
-            dataPoints: [{
-                x: 10,
-                y: 31
-            }, {
-                x: 20,
-                y: 35
-            }, {
-                x: 30,
-                y: 30
-            }, {
-                x: 40,
-                y: 35
-            }, {
-                x: 50,
-                y: 35
-            }, {
-                x: 60,
-                y: 38
-            }, {
-                x: 70,
-                y: 38
-            }, {
-                x: 80,
-                y: 34
-            }, {
-                x: 90,
-                y: 44
-            }
-
-            ]
-        }, {
+			name:"Graf vha klik",
+			type: "line",
+			dataPoints: newArr
+		}, {
             showInLegend: true,
-            type: "line",
-            dataPoints: [{
-                x: 10,
-                y: 25
-            }, {
-                x: 20,
-                y: 30
-            }, {
-                x: 30,
-                y: 20
-            }, {
-                x: 40,
-                y: 45
-            }, {
-                x: 50,
-                y: 30
-            }, {
-                x: 60,
-                y: 10
-            }, {
-                x: 70,
-                y: 15
-            }, {
-                x: 80,
-                y: 18
-            }, {
-                x: 90,
-                y: 20
-            }
-
-            ]
-        }, {
-            showInLegend: true,
-            type: "line",
-            dataPoints: [{
-                x: 5,
-                y: 10
-            }, {
-                x: 25,
-                y: 15
-            }
-			]
+			name:"Graf uden klik",
+			type: "line",
+			dataPoints: firstArray
 		}]
     });
 
     chart.render();
 	
-	$(".testOfAddGraph").click(function() {
-			console.log("kmPerLiter");
-			for (var i = 1; i < 5; i += 1) {
-				dataPoints.push({ 
-					x: 10), 
-					y: i 
-				});
-			}
-			dataSeries.dataPoints = dataPoints;
-			data.push(dataSeries);
-			chart.render();   
-	});
-  }
-  </script>
- <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+
+	}
+</script>
 <body>
-	<button class="testOfAddGraph"> click me </button>
-  <div id="chartContainer" style="height: 300px; max-width: 920px; margin: 0px auto;">
-  </div>
+	<button class="shitting"> click me! </button>
+	<div id="chartContainer" style="height: 300px; max-width: 920px; margin: 0px auto;">
+	</div>
 </body>
 </html>
 
+<script>
+ 
+	$(".shitting").click(function() {
+		console.log("button is clicked, and here is the array: " + newArr);
+		for (var i = 1; i<5; i++) {
+			console.log("filling array");
+			newArr.push({x: i*10, y: i*10}); 
+		}
+		console.log("Array is filled: ");
+		console.log(newArr);
+		chart.render();
+	});
 
+
+</script>
 
 
 
