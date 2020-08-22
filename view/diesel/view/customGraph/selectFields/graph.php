@@ -48,6 +48,7 @@
 	var liter = [];
 	var kilometer = [];
 	var kilometerMedian = [];
+	var kilometerVarians = [];
 	
 	console.log("kilometer");
 	for (var i = 0; i < arrayLength; i += 1) {
@@ -74,6 +75,15 @@
 			y: array[0]['kilometerMedian'] 
 		});
 		console.log(array[0]['kilometerMedian']);
+	}
+	
+	console.log("kilometer varians");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['kilometerVariance'] 
+		});
+		console.log(array[0]['kilometerVariance']);
 	}
 	
 	
@@ -112,6 +122,12 @@
 				name:"Kilometer per liter",
 				type: "line",
 				dataPoints: kilometerPerLiter
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer varians",
+				type: "line",
+				dataPoints: kilometerVarians
 			}]
 		});
 
