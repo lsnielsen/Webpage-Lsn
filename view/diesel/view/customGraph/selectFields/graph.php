@@ -54,6 +54,7 @@
 			x: new Date(array[i][1]), 
 			y: array[i]['km/l'] 
 		});
+		console.log(array[i]['km/l']);
 	}
 	
 	for (var i = 0; i < arrayLength; i += 1) {
@@ -69,48 +70,49 @@
 			x: new Date(array[i][1]), 
 			y: array[0]['kilometerMedian'] 
 		});
+		console.log(array[0]['kilometerMedian']);
 	}
 	
 	
 	window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer", {
-        title: {
-          text: "Custom graf"
-        },
-        legend: {
-            cursor: "pointer",
-            itemclick: function (e) {
-                if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-                    e.dataSeries.visible = false;
-                } else {
-                    e.dataSeries.visible = true;
-                }
+			title: {
+			  text: "Custom graf"
+			},
+			legend: {
+				cursor: "pointer",
+				itemclick: function (e) {
+					if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+						e.dataSeries.visible = false;
+					} else {
+						e.dataSeries.visible = true;
+					}
 
-                e.chart.render();
-            }
-        },
-        data: [ {
-            showInLegend: true,
-			visible: false,
-            type: "line",
-			name:"Kilometer",
-            dataPoints: kilometer
-		}, {
-            showInLegend: true,
-			visible: false,
-			name:"Kilometer median",
-			type: "line",
-			dataPoints: kilometerMedian
-		}, {
-            showInLegend: true,
-			visible: false,
-			name:"Kilometer per liter",
-			type: "line",
-			dataPoints: kilometerPerLiter
-		}]
-    });
+					e.chart.render();
+				}
+			},
+			data: [ {
+				showInLegend: true,
+				visible: false,
+				type: "line",
+				name:"Kilometer",
+				dataPoints: kilometer
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer median",
+				type: "line",
+				dataPoints: kilometerMedian
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer per liter",
+				type: "line",
+				dataPoints: kilometerPerLiter
+			}]
+		});
 
-    chart.render();
+		chart.render();
 	
 
 	}
