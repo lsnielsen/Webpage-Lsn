@@ -49,7 +49,8 @@
 					<?php include "../view/diesel/view/customGraph/selectFields/userInput.php" ?>
 			</div>		
 		</center>
-		<?php include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
+		<?php //include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
+		<?php include "../view/diesel/view/customGraph/selectFields/graph.php" ?>
 		
 	
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
