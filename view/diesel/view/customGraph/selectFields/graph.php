@@ -49,14 +49,7 @@
 	var kilometer = [];
 	var kilometerMedian = [];
 	
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometerPerLiter.push({ 
-			x: new Date(array[i][1]), 
-			y: array[i]['km/l'] 
-		});
-		console.log(array[i]['km/l']);
-	}
-	
+	console.log("kilometer");
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometer.push({ 
 			x: new Date(array[i][1]), 
@@ -65,6 +58,16 @@
 		console.log(array[i]['kilometer']);
 	}
 	
+	console.log("kilometer per liter:");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerLiter.push({ 
+			x: new Date(array[i][1]), 
+			y: array[i]['km/l'] 
+		});
+		console.log(array[i]['km/l']);
+	}
+	
+	console.log("kilometer median");
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometerMedian.push({ 
 			x: new Date(array[i][1]), 
