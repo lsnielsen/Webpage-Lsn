@@ -66,26 +66,6 @@
 				data: data
 			}]
 		});
-
-		
-		var yVal = 15, updateCount = 0;
-		var updateChart = function () {
-
-			yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-			updateCount++;
-			
-			dataPoints.push({
-				x : new Date("01/01-2021"),
-				y : 25
-			});
-			
-			stockChart.options.title.text = "Update " + updateCount;
-			stockChart.render();    
-		
-		};
-
-		// update stockChart every second
-		//setInterval(function(){updateChart()}, 4000);	
 		
 		$(".kmPerLiter").click(function() {
 			console.log("kmPerLiter");
