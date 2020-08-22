@@ -49,6 +49,8 @@
 	var kilometer = [];
 	var kilometerMedian = [];
 	var kilometerVarians = [];
+	var kilometerStandardDev = [];
+	var kilometerAverage = [];
 	
 	console.log("kilometer");
 	for (var i = 0; i < arrayLength; i += 1) {
@@ -58,7 +60,6 @@
 		});
 		console.log(array[i]['kilometer']);
 	}
-	
 	console.log("kilometer per liter:");
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometerPerLiter.push({ 
@@ -67,7 +68,6 @@
 		});
 		console.log(array[i]['km/l']);
 	}
-	
 	console.log("kilometer median");
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometerMedian.push({ 
@@ -76,7 +76,6 @@
 		});
 		console.log(array[0]['kilometerMedian']);
 	}
-	
 	console.log("kilometer varians");
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometerVarians.push({ 
@@ -84,6 +83,22 @@
 			y: array[0]['kilometerVariance'] 
 		});
 		console.log(array[0]['kilometerVariance']);
+	}
+	console.log("kilometer standard Dev");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerStandardDev.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['kilometerStandardDev'] 
+		});
+		console.log(array[0]['kilometerStandardDev']);
+	}
+	console.log("kilometer average");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerAverage.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageKm'] 
+		});
+		console.log(array[0]['averageKm']);
 	}
 	
 	
@@ -128,6 +143,18 @@
 				name:"Kilometer varians",
 				type: "line",
 				dataPoints: kilometerVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer standard deviation",
+				type: "line",
+				dataPoints: kilometerStandardDev
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer gennemsnit",
+				type: "line",
+				dataPoints: kilometerAverage
 			}]
 		});
 
