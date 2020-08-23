@@ -155,6 +155,42 @@
 				name:"Kilometer gennemsnit",
 				type: "line",
 				dataPoints: kilometerAverage
+			}{
+				showInLegend: true,
+				visible: false,
+				type: "line",
+				name:"Kroner",
+				dataPoints: kroner
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kroner median",
+				type: "line",
+				dataPoints: kronerMedian
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kroner per liter",
+				type: "line",
+				dataPoints: kronerPerLiterPerLiter
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kroner varians",
+				type: "line",
+				dataPoints: kronerVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kroner standard deviation",
+				type: "line",
+				dataPoints: kronerStandardDev
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kroner gennemsnit",
+				type: "line",
+				dataPoints: kronerAverage
 			}]
 		});
 
