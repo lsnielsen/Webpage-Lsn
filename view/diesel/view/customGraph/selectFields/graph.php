@@ -84,7 +84,7 @@
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kilometer per liter",
+				name:"Kilometer per kroner",
 				type: "line",
 				dataPoints: kilometerPerKroner
 			}, {
@@ -105,6 +105,24 @@
 				name:"Kilometer gennemsnit",
 				type: "line",
 				dataPoints: kilometerAverage
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer standard dev",
+				type: "line",
+				dataPoints: kilometerStDev
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer per liter standard dev",
+				type: "line",
+				dataPoints: kilometerPerLiterStDev
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer per kroner standard dev",
+				type: "line",
+				dataPoints: kilometerPerKronerStDev
 			}, {	// HERE STARTS THE KRONER GRAPHS
 				showInLegend: true,
 				visible: false,
@@ -147,6 +165,18 @@
 				name:"Kroner gennemsnit",
 				type: "line",
 				dataPoints: kronerAverage
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kroner per liter st dev",
+				type: "line",
+				dataPoints: kronerPerLiterStDev
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kroner per kilometer st dev",
+				type: "line",
+				dataPoints: kronerPerKilometerStDev
 			}, { // LAST IS THE LITER GRAPHS
 				showInLegend: true,
 				visible: false,
@@ -189,6 +219,18 @@
 				name:"Liter gennemsnit",
 				type: "line",
 				dataPoints: literAverage
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter per kroner st dev",
+				type: "line",
+				dataPoints: literPerKilometerStDev
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter per kilometer st dev",
+				type: "line",
+				dataPoints: literPerKronerStDev
 			}]
 		});
 
@@ -198,7 +240,7 @@
 	}
 </script>
 
-<div id="chartContainer" style="height: 300px; max-width: 920px; margin: 0px auto;"> </div>
+<div id="chartContainer" style="height: 800px; width: 98%; margin: 0px auto;"> </div>
 
 
 

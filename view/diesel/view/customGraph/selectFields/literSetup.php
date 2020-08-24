@@ -8,6 +8,8 @@
 	var literVarians = [];
 	var literStandardDev = [];
 	var literAverage = [];
+	var literPerKilometerStDev = [];
+	var literPerKronerStDev = [];
 	
 	console.log("liter");
 	for (var i = 0; i < arrayLength; i += 1) {
@@ -60,6 +62,22 @@
 	console.log("liter average");
 	for (var i = 0; i < arrayLength; i += 1) {
 		literAverage.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageLiter'] 
+		});
+		console.log(array[0]['averageLiter']);
+	}
+	console.log("liter per kilometer st dev");
+	for (var i = 0; i < arrayLength; i += 1) {
+		literPerKilometerStDev.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageLiter'] 
+		});
+		console.log(array[0]['averageLiter']);
+	}
+	console.log("liter kroner st dev");
+	for (var i = 0; i < arrayLength; i += 1) {
+		literPerKronerStDev.push({ 
 			x: new Date(array[i][1]), 
 			y: array[0]['averageLiter'] 
 		});
