@@ -31,78 +31,15 @@
 		$arr[$i][1] = $newDate;
 	}
 
-
+include "kilometerSetup.php";
+include "kronerSetup.php";
 ?>
 <script>
-	var array = <?php echo json_encode($arr); ?>;
-	arrayLength = array.length;
-	
-	var literPerKroner = [];
-	var literPerKroner = [];
-	var literPerKilometer = [];
-	var kilometerPerLiter = [];
-	var kilometerPerKroner = [];
-	var kronerPerKilometer = [];
-	var kronerPerLiter = [];
-	var kroner = [];
-	var liter = [];
-	var kilometer = [];
-	var kilometerMedian = [];
-	var kilometerVarians = [];
-	var kilometerStandardDev = [];
-	var kilometerAverage = [];
-	
-	console.log("kilometer");
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometer.push({ 
-			x: new Date(array[i][1]), 
-			y: array[i]['kilometer'] 
-		});
-		console.log(array[i]['kilometer']);
-	}
-	console.log("kilometer per liter:");
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometerPerLiter.push({ 
-			x: new Date(array[i][1]), 
-			y: array[i]['km/l'] 
-		});
-		console.log(array[i]['km/l']);
-	}
-	console.log("kilometer median");
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometerMedian.push({ 
-			x: new Date(array[i][1]), 
-			y: array[0]['kilometerMedian'] 
-		});
-		console.log(array[0]['kilometerMedian']);
-	}
-	console.log("kilometer varians");
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometerVarians.push({ 
-			x: new Date(array[i][1]), 
-			y: array[0]['kilometerVariance'] 
-		});
-		console.log(array[0]['kilometerVariance']);
-	}
-	console.log("kilometer standard Dev");
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometerStandardDev.push({ 
-			x: new Date(array[i][1]), 
-			y: array[0]['kilometerStandardDev'] 
-		});
-		console.log(array[0]['kilometerStandardDev']);
-	}
-	console.log("kilometer average");
-	for (var i = 0; i < arrayLength; i += 1) {
-		kilometerAverage.push({ 
-			x: new Date(array[i][1]), 
-			y: array[0]['averageKm'] 
-		});
-		console.log(array[0]['averageKm']);
-	}
+
 	
 	
 	window.onload = function () {
+		console.log("onload");
         var chart = new CanvasJS.Chart("chartContainer", {
 			title: {
 			  text: "Custom graf"
@@ -155,7 +92,7 @@
 				name:"Kilometer gennemsnit",
 				type: "line",
 				dataPoints: kilometerAverage
-			}{
+			}, {
 				showInLegend: true,
 				visible: false,
 				type: "line",
@@ -172,7 +109,7 @@
 				visible: false,
 				name:"Kroner per liter",
 				type: "line",
-				dataPoints: kronerPerLiterPerLiter
+				dataPoints: kronerPerLiter
 			}, {
 				showInLegend: true,
 				visible: false,
