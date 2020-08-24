@@ -12,6 +12,8 @@
 	var kronerAverage = [];
 	var kronerPerKilometerStDev = [];
 	var kronerPerLiterStDev = [];
+	var kronerPerKilometerAverage = [];
+	var kronerPerLiterAverage = [];
 	
 	console.log("kroner");
 	for (var i = 0; i < arrayLength; i += 1) {
@@ -76,6 +78,22 @@
 			y: array[i]['krPerLiterStDev'] 
 		});
 		console.log(array[i]['krPerLiterStDev']);
+	}
+	console.log("kroner per liter gennemsnit");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kronerPerLiterAverage.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageKrPerLiter'] 
+		});
+		console.log(array[0]['averageKrPerLiter']);
+	}
+	console.log("kroner per kilometer gennemsnit");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kronerPerKilometerAverage.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageKrPerKm'] 
+		});
+		console.log(array[0]['averageKrPerKm']);
 	}
 	
 	</script>

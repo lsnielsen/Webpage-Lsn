@@ -3,8 +3,10 @@
 	
 	var kilometer = [];
 	var kilometerPerLiter = [];
+	var kilometerPerLiterAverage = [];
 	var kilometerPerLiterStDev = [];
 	var kilometerPerKroner = [];
+	var kilometerPerKronerAverage = [];
 	var kilometerPerKronerStDev = [];
 	var kilometerMedian = [];
 	var kilometerVarians = [];
@@ -91,6 +93,22 @@
 			y: array[i]['kmPerKrStDev'] 
 		});
 		console.log(array[i]['kmPerKrStDev']);
+	}
+	console.log("kmPerKr average");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerKronerAverage.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageKmPerKr'] 
+		});
+		console.log(array[0]['averageKmPerKr']);
+	}
+	console.log("kmPerLiter average");
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerLiterAverage.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['averageKmPerLiter'] 
+		});
+		console.log(array[0]['averageKmPerLiter']);
 	}
 	
 	</script>

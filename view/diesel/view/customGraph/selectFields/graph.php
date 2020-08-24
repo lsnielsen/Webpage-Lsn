@@ -123,6 +123,18 @@
 				name:"Kilometer per kroner standard dev",
 				type: "line",
 				dataPoints: kilometerPerKronerStDev
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer per liter gennemsnit",
+				type: "line",
+				dataPoints: kilometerPerLiterAverage
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kilometer per kroner gennemsnit",
+				type: "line",
+				dataPoints: kilometerPerKronerAverage
 			}, {	// HERE STARTS THE KRONER GRAPHS
 				showInLegend: true,
 				visible: false,
@@ -171,6 +183,18 @@
 				name:"Kroner per liter st dev",
 				type: "line",
 				dataPoints: kronerPerLiterStDev
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kroner per kilometer gennemsnit",
+				type: "line",
+				dataPoints: kronerPerKilometerAverage
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Kroner per liter gennemsnit",
+				type: "line",
+				dataPoints: kronerPerLiterAverage
 			},{
 				showInLegend: true,
 				visible: false,
@@ -231,6 +255,18 @@
 				name:"Liter per kilometer st dev",
 				type: "line",
 				dataPoints: literPerKronerStDev
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter per kilometer gennemsnit",
+				type: "line",
+				dataPoints: literPerKronerAverage
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter per kilometer gennemsnit",
+				type: "line",
+				dataPoints: literPerKilometerAverage
 			}]
 		});
 
