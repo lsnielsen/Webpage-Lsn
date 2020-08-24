@@ -33,6 +33,7 @@
 
 include "kilometerSetup.php";
 include "kronerSetup.php";
+include "literSetup.php";
 ?>
 <script>
 
@@ -56,7 +57,7 @@ include "kronerSetup.php";
 					e.chart.render();
 				}
 			},
-			data: [ {
+			data: [ { // FIRST WE HAVE THE KILOMETER GRAPHS
 				showInLegend: true,
 				visible: false,
 				type: "line",
@@ -92,7 +93,7 @@ include "kronerSetup.php";
 				name:"Kilometer gennemsnit",
 				type: "line",
 				dataPoints: kilometerAverage
-			}, {
+			}, {	// HERE STARTS THE KRONER GRAPHS
 				showInLegend: true,
 				visible: false,
 				type: "line",
@@ -128,6 +129,42 @@ include "kronerSetup.php";
 				name:"Kroner gennemsnit",
 				type: "line",
 				dataPoints: kronerAverage
+			}, { // LAST IS THE LITER GRAPHS
+				showInLegend: true,
+				visible: false,
+				type: "line",
+				name:"Liter",
+				dataPoints: liter
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter median",
+				type: "line",
+				dataPoints: literMedian
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter per kroner",
+				type: "line",
+				dataPoints: literPerKroner
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter varians",
+				type: "line",
+				dataPoints: literVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter standard deviation",
+				type: "line",
+				dataPoints: literStandardDev
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter gennemsnit",
+				type: "line",
+				dataPoints: literAverage
 			}]
 		});
 
