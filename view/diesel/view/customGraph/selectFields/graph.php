@@ -30,17 +30,23 @@
 		}
 		$arr[$i][1] = $newDate;
 	}
-
-include "kilometerSetup.php";
-include "kronerSetup.php";
-include "literSetup.php";
 ?>
 <script>
 
-	
+	var array = <?php echo json_encode($arr); ?>;
+	var arrayLength = array.length;
+
+</script>
+
+<?php	
+	include "kilometerSetup.php";
+	include "kronerSetup.php";
+	include "literSetup.php";
+?>
+
+<script>
 	
 	window.onload = function () {
-		console.log("onload");
         var chart = new CanvasJS.Chart("chartContainer", {
 			title: {
 			  text: "Custom graf"

@@ -1,7 +1,5 @@
 
 <script>
-	var array = <?php echo json_encode($arr); ?>;
-	arrayLength = array.length;
 	
 	var kronerPerLiter = [];
 	var kronerPerKroner = [];
