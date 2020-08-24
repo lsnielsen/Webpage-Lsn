@@ -2,17 +2,17 @@
 <script>
 	
 	var kilometer = [];
-	var kilometerPerLiter = [];
-	var kilometerPerLiterAverage = [];
-	var kilometerPerLiterStDev = [];
-	var kilometerPerKroner = [];
-	var kilometerPerKronerAverage = [];
-	var kilometerPerKronerStDev = [];
-	var kilometerMedian = [];
-	var kilometerVarians = [];
-	var kilometerStandardDev = [];
-	var kilometerAverage = [];
 	var kilometerStDev = [];
+	var kilometerMedian = [];
+	var kilometerAverage = [];
+	var kilometerVarians = [];
+	var kilometerPerLiter = [];
+	var kilometerPerKroner = [];
+	var kilometerStandardDev = [];
+	var kilometerPerLiterStDev = [];
+	var kilometerPerKronerStDev = [];
+	var kilometerPerLiterAverage = [];
+	var kilometerPerKronerAverage = [];
 	
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometer.push({ 

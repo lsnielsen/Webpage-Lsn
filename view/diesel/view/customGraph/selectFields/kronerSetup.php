@@ -1,19 +1,17 @@
 
 <script>
 	
-	var kronerPerLiter = [];
-	var kronerPerKroner = [];
-	var kronerPerKilometer = [];
-	var kronerPerLiter = [];
 	var kroner = [];
 	var kronerMedian = [];
 	var kronerVarians = [];
-	var kronerStandardDev = [];
 	var kronerAverage = [];
-	var kronerPerKilometerStDev = [];
+	var kronerPerLiter = [];
+	var kronerStandardDev = [];
+	var kronerPerKilometer = [];
 	var kronerPerLiterStDev = [];
-	var kronerPerKilometerAverage = [];
 	var kronerPerLiterAverage = [];
+	var kronerPerKilometerStDev = [];
+	var kronerPerKilometerAverage = [];
 	
 	for (var i = 0; i < arrayLength; i += 1) {
 		kroner.push({ 

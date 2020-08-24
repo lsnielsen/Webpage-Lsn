@@ -1,17 +1,17 @@
 
 <script>
 	
-	var literPerKroner = [];
-	var literPerKilometer = [];
 	var liter = [];
 	var literMedian = [];
-	var literVarians = [];
-	var literStandardDev = [];
 	var literAverage = [];
-	var literPerKilometerStDev = [];
+	var literVarians = [];
+	var literPerKroner = [];
+	var literStandardDev = [];
+	var literPerKilometer = [];
 	var literPerKronerStDev = [];
-	var literPerKilometerAverage = [];
 	var literPerKronerAverage = [];
+	var literPerKilometerStDev = [];
+	var literPerKilometerAverage = [];
 	
 	for (var i = 0; i < arrayLength; i += 1) {
 		liter.push({ 
