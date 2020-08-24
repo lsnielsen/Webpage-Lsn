@@ -78,6 +78,12 @@ include "literSetup.php";
 			}, {
 				showInLegend: true,
 				visible: false,
+				name:"Kilometer per liter",
+				type: "line",
+				dataPoints: kilometerPerKroner
+			}, {
+				showInLegend: true,
+				visible: false,
 				name:"Kilometer varians",
 				type: "line",
 				dataPoints: kilometerVarians
@@ -114,6 +120,12 @@ include "literSetup.php";
 			}, {
 				showInLegend: true,
 				visible: false,
+				name:"Kroner per kilometer",
+				type: "line",
+				dataPoints: kronerPerKilometer
+			}, {
+				showInLegend: true,
+				visible: false,
 				name:"Kroner varians",
 				type: "line",
 				dataPoints: kronerVarians
@@ -147,6 +159,12 @@ include "literSetup.php";
 				name:"Liter per kroner",
 				type: "line",
 				dataPoints: literPerKroner
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Liter per kilometer",
+				type: "line",
+				dataPoints: literPerKilometer
 			}, {
 				showInLegend: true,
 				visible: false,
