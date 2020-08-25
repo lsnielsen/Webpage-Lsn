@@ -78,21 +78,15 @@
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Km/l",
-				type: "line",
-				dataPoints: kilometerPerLiter
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Km/kr",
-				type: "line",
-				dataPoints: kilometerPerKroner
-			}, {
-				showInLegend: true,
-				visible: false,
 				name:"Km var",
 				type: "line",
 				dataPoints: kilometerVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Km gen",
+				type: "line",
+				dataPoints: kilometerAverage
 			}, {
 				showInLegend: true,
 				visible: false,
@@ -102,15 +96,15 @@
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Km gen.",
-				type: "line",
-				dataPoints: kilometerAverage
-			}, {
-				showInLegend: true,
-				visible: false,
 				name:"Km st dev",
 				type: "line",
 				dataPoints: kilometerStDev
+			}, { //KILOMETER PER LITER GRAPHS
+				showInLegend: true,
+				visible: false,
+				name:"Km/l",
+				type: "line",
+				dataPoints: kilometerPerLiter
 			}, {
 				showInLegend: true,
 				visible: false,
@@ -120,45 +114,51 @@
 			},{
 				showInLegend: true,
 				visible: false,
-				name:"Kilometer per kroner standard dev",
-				type: "line",
-				dataPoints: kilometerPerKronerStDev
-			},{
-				showInLegend: true,
-				visible: false,
-				name:"Kilometer per liter gennemsnit",
+				name:"Km/l gen.",
 				type: "line",
 				dataPoints: kilometerPerLiterAverage
 			},{
 				showInLegend: true,
 				visible: false,
-				name:"Kilometer per kroner gennemsnit",
-				type: "line",
-				dataPoints: kilometerPerKronerAverage
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kilometer per kroner varians",
-				type: "line",
-				dataPoints: kilometerPerKronerVarians
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kilometer per liter median",
+				name:"Km/l median",
 				type: "line",
 				dataPoints: kilometerPerLiterMedian
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kilometer per kroner median",
+				name:"Km/l var",
+				type: "line",
+				dataPoints: kilometerPerLiterVarians
+			}, { // KILOMETER PER KRONER GRAPHS
+				showInLegend: true,
+				visible: false,
+				name:"Km/kr",
+				type: "line",
+				dataPoints: kilometerPerKroner
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Km/kr gen.",
+				type: "line",
+				dataPoints: kilometerPerKronerAverage
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Km/kr median",
 				type: "line",
 				dataPoints: kilometerPerKronerMedian
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kilometer per liter varians",
+				name:"Km/kr st dev",
 				type: "line",
-				dataPoints: kilometerPerLiterVarians
+				dataPoints: kilometerPerKronerStDev
+			},{
+				showInLegend: true,
+				visible: false,
+				name:"Km/kr var",
+				type: "line",
+				dataPoints: kilometerPerKronerVarians
 			}, {	// HERE STARTS THE KRONER GRAPHS
 				showInLegend: true,
 				visible: false,
@@ -168,61 +168,85 @@
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kroner median",
-				type: "line",
-				dataPoints: kronerMedian
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kroner per liter",
-				type: "line",
-				dataPoints: kronerPerLiter
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kroner per kilometer",
-				type: "line",
-				dataPoints: kronerPerKilometer
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kroner varians",
-				type: "line",
-				dataPoints: kronerVarians
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kroner standard deviation",
-				type: "line",
-				dataPoints: kronerStandardDev
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Kroner gennemsnit",
+				name:"Kr gen.",
 				type: "line",
 				dataPoints: kronerAverage
 			},{
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per liter st dev",
+				name:"Kr median",
+				type: "line",
+				dataPoints: kronerMedian
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr var",
+				type: "line",
+				dataPoints: kronerVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr st dev",
+				type: "line",
+				dataPoints: kronerStandardDev
+			}, { //KRONER PER LITER GRAPHS
+				showInLegend: true,
+				visible: false,
+				name:"Kr/l",
+				type: "line",
+				dataPoints: kronerPerLiter
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr/l var",
+				type: "line",
+				dataPoints: kronerPerLiterVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr/l median",
+				type: "line",
+				dataPoints: kronerPerLiterMedian
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr/l st dev",
 				type: "line",
 				dataPoints: kronerPerLiterStDev
 			},{
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per kilometer gennemsnit",
+				name:"Kr/l gen.",
+				type: "line",
+				dataPoints: kronerPerLiterAverage
+			},{ // KRONER PER KILOMETER GRAPHS
+				showInLegend: true,
+				visible: false,
+				name:"Kr/km",
+				type: "line",
+				dataPoints: kronerPerKilometer
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr/km median",
+				type: "line",
+				dataPoints: kronerPerKilometerMedian
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr/km var",
+				type: "line",
+				dataPoints: kronerPerKilometerVarians
+			}, {
+				showInLegend: true,
+				visible: false,
+				name:"Kr/km gen.",
 				type: "line",
 				dataPoints: kronerPerKilometerAverage
 			},{
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per liter gennemsnit",
-				type: "line",
-				dataPoints: kronerPerLiterAverage
-			},{
-				showInLegend: true,
-				visible: false,
-				name:"Kroner per kilometer st dev",
+				name:"Kr/km st dev",
 				type: "line",
 				dataPoints: kronerPerKilometerStDev
 			}, { // LAST IS THE LITER GRAPHS
@@ -234,111 +258,87 @@
 			}, {
 				showInLegend: true,
 				visible: false,
+				name:"Liter gen.",
+				type: "line",
+				dataPoints: literAverage
+			}, {
+				showInLegend: true,
+				visible: false,
 				name:"Liter median",
 				type: "line",
 				dataPoints: literMedian
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Liter per kroner",
-				type: "line",
-				dataPoints: literPerKroner
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter per kilometer",
-				type: "line",
-				dataPoints: literPerKilometer
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter varians",
-				type: "line",
-				dataPoints: literVarians
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter standard deviation",
+				name:"Liter st dev",
 				type: "line",
 				dataPoints: literStandardDev
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Liter gennemsnit",
+				name:"Liter var",
 				type: "line",
-				dataPoints: literAverage
+				dataPoints: literVarians
+			}, { // LITER PER KRONER GRAPHS
+				showInLegend: true,
+				visible: false,
+				name:"L/kr",
+				type: "line",
+				dataPoints: literPerKroner
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Liter per kroner st dev",
-				type: "line",
-				dataPoints: literPerKilometerStDev
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter per kilometer st dev",
-				type: "line",
-				dataPoints: literPerKronerStDev
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter per kroner gennemsnit",
+				name:"L/kr gen.",
 				type: "line",
 				dataPoints: literPerKronerAverage
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Liter per kilometer gennemsnit",
+				name:"L/kr st dev",
 				type: "line",
-				dataPoints: literPerKilometerAverage
+				dataPoints: literPerKronerStDev
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Liter per kilometer Median",
-				type: "line",
-				dataPoints: literPerKilometerMedian
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter per kilometer Varians",
-				type: "line",
-				dataPoints: literPerKilometerVarians
-			}, {
-				showInLegend: true,
-				visible: false,
-				name:"Liter per kroner median",
+				name:"L/kr median",
 				type: "line",
 				dataPoints: literPerKronerMedian
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Liter per kroner Varians",
+				name:"L/kr var",
 				type: "line",
 				dataPoints: literPerKronerVarians
+			}, { // LITER PER KILOMETER GRAPHS
+				showInLegend: true,
+				visible: false,
+				name:"L/km",
+				type: "line",
+				dataPoints: literPerKilometer
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per liter median",
+				name:"L/km st dev",
 				type: "line",
-				dataPoints: kronerPerLiterMedian
+				dataPoints: literPerKilometerStDev
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per liter Varians",
+				name:"L/km gen.",
 				type: "line",
-				dataPoints: kronerPerLiterVarians
+				dataPoints: literPerKilometerAverage
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per kilometer median",
+				name:"L/km median",
 				type: "line",
-				dataPoints: kronerPerKilometerMedian
+				dataPoints: literPerKilometerMedian
 			}, {
 				showInLegend: true,
 				visible: false,
-				name:"Kroner per kilometer varians",
+				name:"L/km var",
 				type: "line",
-				dataPoints: kronerPerKilometerVarians
+				dataPoints: literPerKilometerVarians
 			}]
 		});
 
