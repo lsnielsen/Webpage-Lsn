@@ -115,18 +115,22 @@
 					e.chart.render();
 				}
 			},
-			charts: [{
-				axisX: {
-					crosshair: {
+			axisX: [{
+				title: "Dato",
+				titleFontSize: 27,
+				labelFontSize: 25,
+				titleWrap: true,
+				crosshair: {
 					enabled: true,
 					snapToDataPoint: true
-					}
-				},
-				axisY: {
-					crosshair: {
+				}
+			}],
+			axisY: [{
+				labelFontSize: 25,
+				titleWrap: true,
+				crosshair: {
 					enabled: true,
 					snapToDataPoint: true
-					}
 				}
 			}],
 				data: [{ // FIRST WE HAVE THE KILOMETER GRAPHS
