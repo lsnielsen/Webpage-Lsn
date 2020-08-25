@@ -10,8 +10,12 @@
 	var kronerPerKilometer = [];
 	var kronerPerLiterStDev = [];
 	var kronerPerLiterAverage = [];
+	var kronerPerLiterMedian = [];
+	var kronerPerLiterVarians = [];
 	var kronerPerKilometerStDev = [];
 	var kronerPerKilometerAverage = [];
+	var kronerPerKilometerMedian = [];
+	var kronerPerKilometerVarians = [];
 	
 	for (var i = 0; i < arrayLength; i += 1) {
 		kroner.push({ 
@@ -80,6 +84,34 @@
 		kronerPerKilometerAverage.push({ 
 			x: new Date(array[i][1]), 
 			y: array[0]['averageKrPerKm'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kronerPerKilometerMedian.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['krPerKmMedian'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kronerPerKilometerVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['krPerKmVariance'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kronerPerLiterMedian.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['krPerLiterMedian'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kronerPerLiterVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['krPerLiterVariance'] 
 		});
 	}
 	

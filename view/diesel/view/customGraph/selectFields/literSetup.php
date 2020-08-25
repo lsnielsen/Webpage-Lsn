@@ -2,16 +2,20 @@
 <script>
 	
 	var liter = [];
-	var literMedian = [];
-	var literAverage = [];
-	var literVarians = [];
-	var literPerKroner = [];
-	var literStandardDev = [];
 	var literPerKilometer = [];
+	var literPerKroner = [];
+	var literMedian = [];
+	var literVarians = [];
+	var literStandardDev = [];
+	var literAverage = [];
 	var literPerKronerStDev = [];
 	var literPerKronerAverage = [];
+	var literPerKronerMedian = [];
+	var literPerKronerVarians = [];
 	var literPerKilometerStDev = [];
 	var literPerKilometerAverage = [];
+	var literPerKilometerMedian = [];
+	var literPerKilometerVarians = [];
 	
 	for (var i = 0; i < arrayLength; i += 1) {
 		liter.push({ 
@@ -87,6 +91,34 @@
 		literPerKilometerAverage.push({ 
 			x: new Date(array[i][1]), 
 			y: array[0]['averageLiterPerKm'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		literPerKilometerMedian.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['literPerKmMedian'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		literPerKronerMedian.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['literPerKrMedian'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		literPerKilometerVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['literPerKmVariance'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		literPerKronerVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['literPerKrVariance'] 
 		});
 	}
 	

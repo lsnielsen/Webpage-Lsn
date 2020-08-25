@@ -13,6 +13,10 @@
 	var kilometerPerKronerStDev = [];
 	var kilometerPerLiterAverage = [];
 	var kilometerPerKronerAverage = [];
+	var kilometerPerLiterMedian = [];
+	var kilometerPerKronerMedian = [];
+	var kilometerPerLiterVarians = [];
+	var kilometerPerKronerVarians = [];
 	
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometer.push({ 
@@ -95,6 +99,34 @@
 		kilometerPerLiterAverage.push({ 
 			x: new Date(array[i][1]), 
 			y: array[0]['averageKmPerLiter'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerLiterMedian.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['kmPerLiterMedian'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerLiterVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['kmPerLiterVariance'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerKronerMedian.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['kmPerKrMedian'] 
+		});
+	}
+
+	for (var i = 0; i < arrayLength; i += 1) {
+		kilometerPerKronerVarians.push({ 
+			x: new Date(array[i][1]), 
+			y: array[0]['kmPerKrVariance'] 
 		});
 	}
 	
