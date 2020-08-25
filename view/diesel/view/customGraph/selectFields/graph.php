@@ -47,54 +47,6 @@
 <script>
 	
 	window.onload = function () {
-        CanvasJS.addColorSet("graphColor",
-			[//colorSet Array
-				"#2F4F4F",
-				"#008080",
-				"#2E8B57",
-				"#3CB371",
-				"#90EE90",                
-				"#ccff66",               
-				"#88cc00",              
-				"#558000",             
-				"#223300",            
-				"#ff80df",            
-				"#ff1ac6",            
-				"#cc0099",                
-				"#fa3dc4",
-				"#f547bd",
-				"#f052b5",
-				"#eb5cad",
-				"#e666a6",
-				"#ff4d4d",
-				"#b2cc59",
-				"#add652",
-				"#a8e04a",
-				"#a3eb42",
-				"#9ef53b",        
-				"#001a66",
-				"#08f7c4",
-				"#0ff0bd",
-				"#17e8b5",
-				"#1fe0ad",
-				"#26d9a6",
-				"#2ed19e",
-				"#36c996",
-				"#3dc28f",
-				"#45ba87",
-				"#4cb280",
-				"#54ab78",
-				"#5ca370",
-				"#248f24",
-				"#6b9461",
-				"#738c59",
-				"#7a8552",
-				"#827d4a",
-				"#8a7542",
-				"#916e3b",
-				"#b37700",          
-				"#ff00bf"           
-			]);
         var chart = new CanvasJS.Chart("chartContainer", {
 			title: {
 				text: "Custom graf",
@@ -107,9 +59,9 @@
 			},
 			exportEnabled: true,
 			zoomEnabled: true,
-            colorSet: "graphColor",
 			legend: {
 				cursor: "pointer",
+				fontSize: 25,
 				itemclick: function (e) {
 					if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
 						e.dataSeries.visible = false;
@@ -144,322 +96,371 @@
 					type: "line",
 					name:"Kilometer",
 					dataPoints: kilometer,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km median",
 					type: "line",
 					dataPoints: kilometerMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square",
+					lineColor: "red",
+					markerType: "square",
+					markerColor: "green"
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km var",
 					type: "line",
 					dataPoints: kilometerVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km gen",
 					type: "line",
 					dataPoints: kilometerAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km st dev",
 					type: "line",
 					dataPoints: kilometerStandardDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km st dev",
 					type: "line",
 					dataPoints: kilometerStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, { //KILOMETER PER LITER GRAPHS
 					showInLegend: true,
 					visible: false,
 					name:"Km/l",
 					type: "line",
 					dataPoints: kilometerPerLiter,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km/l st dev",
 					type: "line",
 					dataPoints: kilometerPerLiterStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				},{
 					showInLegend: true,
 					visible: false,
 					name:"Km/l gen.",
 					type: "line",
 					dataPoints: kilometerPerLiterAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				},{
 					showInLegend: true,
 					visible: false,
 					name:"Km/l median",
 					type: "line",
 					dataPoints: kilometerPerLiterMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km/l var",
 					type: "line",
 					dataPoints: kilometerPerLiterVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, { // KILOMETER PER KRONER GRAPHS
 					showInLegend: true,
 					visible: false,
 					name:"Km/kr",
 					type: "line",
 					dataPoints: kilometerPerKroner,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km/kr gen.",
 					type: "line",
 					dataPoints: kilometerPerKronerAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km/kr median",
 					type: "line",
 					dataPoints: kilometerPerKronerMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Km/kr st dev",
 					type: "line",
 					dataPoints: kilometerPerKronerStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				},{
 					showInLegend: true,
 					visible: false,
 					name:"Km/kr var",
 					type: "line",
 					dataPoints: kilometerPerKronerVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {	// HERE STARTS THE KRONER GRAPHS
 					showInLegend: true,
 					visible: false,
 					type: "line",
 					name:"Kroner",
 					dataPoints: kroner,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "circle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr gen.",
 					type: "line",
 					dataPoints: kronerAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "circle"  
 				},{
 					showInLegend: true,
 					visible: false,
 					name:"Kr median",
 					type: "line",
 					dataPoints: kronerMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "circle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr var",
 					type: "line",
 					dataPoints: kronerVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "circle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr st dev",
 					type: "line",
 					dataPoints: kronerStandardDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "circle"  
 				}, { //KRONER PER LITER GRAPHS
 					showInLegend: true,
 					visible: false,
 					name:"Kr/l",
 					type: "line",
 					dataPoints: kronerPerLiter,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr/l var",
 					type: "line",
 					dataPoints: kronerPerLiterVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr/l median",
 					type: "line",
 					dataPoints: kronerPerLiterMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr/l st dev",
 					type: "line",
 					dataPoints: kronerPerLiterStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				},{
 					showInLegend: true,
 					visible: false,
 					name:"Kr/l gen.",
 					type: "line",
 					dataPoints: kronerPerLiterAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				},{ // KRONER PER KILOMETER GRAPHS
 					showInLegend: true,
 					visible: false,
 					name:"Kr/km",
 					type: "line",
 					dataPoints: kronerPerKilometer,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr/km median",
 					type: "line",
 					dataPoints: kronerPerKilometerMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr/km var",
 					type: "line",
 					dataPoints: kronerPerKilometerVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Kr/km gen.",
 					type: "line",
 					dataPoints: kronerPerKilometerAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				},{
 					showInLegend: true,
 					visible: false,
 					name:"Kr/km st dev",
 					type: "line",
 					dataPoints: kronerPerKilometerStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, { // LAST IS THE LITER GRAPHS
 					showInLegend: true,
 					visible: false,
 					type: "line",
 					name:"Liter",
 					dataPoints: liter,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Liter gen.",
 					type: "line",
 					dataPoints: literAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Liter median",
 					type: "line",
 					dataPoints: literMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Liter st dev",
 					type: "line",
 					dataPoints: literStandardDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"Liter var",
 					type: "line",
 					dataPoints: literVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "cross"  
 				}, { // LITER PER KRONER GRAPHS
 					showInLegend: true,
 					visible: false,
 					name:"L/kr",
 					type: "line",
 					dataPoints: literPerKroner,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/kr gen.",
 					type: "line",
 					dataPoints: literPerKronerAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/kr st dev",
 					type: "line",
 					dataPoints: literPerKronerStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/kr median",
 					type: "line",
 					dataPoints: literPerKronerMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/kr var",
 					type: "line",
 					dataPoints: literPerKronerVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "square"  
 				}, { // LITER PER KILOMETER GRAPHS
 					showInLegend: true,
 					visible: false,
 					name:"L/km",
 					type: "line",
 					dataPoints: literPerKilometer,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/km st dev",
 					type: "line",
 					dataPoints: literPerKilometerStDev,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/km gen.",
 					type: "line",
 					dataPoints: literPerKilometerAverage,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"  
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/km median",
 					type: "line",
 					dataPoints: literPerKilometerMedian,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle" 
 				}, {
 					showInLegend: true,
 					visible: false,
 					name:"L/km var",
 					type: "line",
 					dataPoints: literPerKilometerVarians,
-					cursor: "pointer"  
+					cursor: "pointer",
+					legendMarkerType: "triangle"
 				}]
 		});
 
