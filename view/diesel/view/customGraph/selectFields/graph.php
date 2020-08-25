@@ -47,12 +47,62 @@
 <script>
 	
 	window.onload = function () {
+        CanvasJS.addColorSet("graphColor",
+			[//colorSet Array
+				"#2F4F4F",
+				"#008080",
+				"#2E8B57",
+				"#3CB371",
+				"#90EE90",                
+				"#ccff66",               
+				"#88cc00",              
+				"#558000",             
+				"#223300",            
+				"#ff80df",            
+				"#ff1ac6",            
+				"#cc0099",                
+				"#fa3dc4",
+				"#f547bd",
+				"#f052b5",
+				"#eb5cad",
+				"#e666a6",
+				"#ff4d4d",
+				"#b2cc59",
+				"#add652",
+				"#a8e04a",
+				"#a3eb42",
+				"#9ef53b",        
+				"#001a66",
+				"#08f7c4",
+				"#0ff0bd",
+				"#17e8b5",
+				"#1fe0ad",
+				"#26d9a6",
+				"#2ed19e",
+				"#36c996",
+				"#3dc28f",
+				"#45ba87",
+				"#4cb280",
+				"#54ab78",
+				"#5ca370",
+				"#248f24",
+				"#6b9461",
+				"#738c59",
+				"#7a8552",
+				"#827d4a",
+				"#8a7542",
+				"#916e3b",
+				"#b37700",          
+				"#ff00bf"           
+			]);
         var chart = new CanvasJS.Chart("chartContainer", {
 			title: {
 			  text: "Custom graf"
 			},
 			animationEnabled: true,
 			exportEnabled: true,
+			zoomEnabled: true,
+            colorSet: "graphColor",
 			legend: {
 				cursor: "pointer",
 				itemclick: function (e) {
