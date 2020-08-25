@@ -97,7 +97,9 @@
 			]);
         var chart = new CanvasJS.Chart("chartContainer", {
 			title: {
-			  text: "Custom graf"
+				text: "Custom graf",
+				fontColor: "brown",
+				fontSize: 50
 			},
 			animationEnabled: true,
 			exportEnabled: true,
