@@ -26,29 +26,30 @@
 	
 	<body style="background-color: #d9ffb3;">  
 	
-		<h1> Setup din egen graf, ved at vælge fra listerne nedenfor </h1>		
-
-		<?php include("dropdowns.html"); ?>
+		<h1> Setup din egen graf, ved at vælge fra felterne nederst på siden</h1>		
+<!--T
+		<?php //include("dropdowns.html"); ?>
 		
 		<center>
 				<h2>
 					Valgte værdier:
 				</h2>
 			<div  class="selectedVariables">
-					<?php include "../view/diesel/view/customGraph/selectFields/kilometer.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/liter.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/kroner.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/kronerPerLiter.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerLiter.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/kilometerPerKroner.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/kronerPerKilometer.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/valueSort.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/simpleCalc.php" ?>
-					<?php include "../view/diesel/view/customGraph/selectFields/userInput.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/kilometer.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/liter.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/kroner.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/kronerPerLiter.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/kilometerPerLiter.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/kilometerPerKroner.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/kronerPerKilometer.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/valueSort.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/simpleCalc.php" ?>
+					<?php //include "../view/diesel/view/customGraph/selectFields/userInput.php" ?>
 			</div>		
 		</center>
+-->
 		<?php //include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
 		<?php include "../view/diesel/view/customGraph/selectFields/graph.php" ?>
 		
