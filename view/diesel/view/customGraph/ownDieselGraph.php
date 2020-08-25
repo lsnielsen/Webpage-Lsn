@@ -16,9 +16,14 @@
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kilometer.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/kroner.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/liter.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/userInput.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/customGraph/simpleCalc.css" type="text/css">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.stock.min.js"></script>
+	
 	<body style="background-color: #d9ffb3;">  
 	
 		<h1> Setup din egen graf, ved at vælge fra listerne nedenfor </h1>		
@@ -40,8 +45,12 @@
 					<?php include "../view/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
 					<?php include "../view/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
 					<?php include "../view/diesel/view/customGraph/selectFields/valueSort.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/simpleCalc.php" ?>
+					<?php include "../view/diesel/view/customGraph/selectFields/userInput.php" ?>
 			</div>		
 		</center>
+		<?php //include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
+		<?php include "../view/diesel/view/customGraph/selectFields/graph.php" ?>
 		
 	
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
