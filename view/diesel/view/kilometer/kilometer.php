@@ -39,9 +39,9 @@
 				</button>
 			</form>
 		
-		<?php include "../view/diesel/graphs/krPerLiter/krPerLiterAverage.php"; ?>
+		<?php include "../view/diesel/graphs/kilometer/kilometerAverage.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/krPerLiter/stDev.php"; ?>
+		<?php include "../view/diesel/graphs/kilometer/stDev.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
