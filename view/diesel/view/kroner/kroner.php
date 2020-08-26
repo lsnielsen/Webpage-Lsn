@@ -22,11 +22,11 @@
 			Avanceret statistik for kørte kilometer
 		</h1>  
 	
-		<?php include "kilometerTable.php"; ?>
+		<?php include "kronerTable.php"; ?>
 	
 		<div class="spaceBetweenTables" style="margin-bottom: -5px;"> </div>
 	
-		<?php include "kilometerResult.php"; ?>
+		<?php include "kronerResult.php"; ?>
 		
 		<div class="spaceBetweenTables"> </div>
 		
@@ -39,9 +39,9 @@
 				</button>
 			</form>
 		
-		<?php include "../view/diesel/graphs/kilometer/kilometerAverage.php"; ?>
+		<?php include "../view/diesel/graphs/kroner/kronerAverage.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/kilometer/stDev.php"; ?>
+		<?php include "../view/diesel/graphs/kroner/stDev.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 

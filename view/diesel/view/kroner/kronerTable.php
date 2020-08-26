@@ -1,7 +1,7 @@
 		<table class="advancedTable statisticTable">
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
-							<th class="dieselHeader headerSortDown kronerColumn">Kilometer</th>
+							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -14,7 +14,7 @@
 											echo $graphArray[$i][1];
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['kilometer'], 2, ',', '.');
+											echo number_format($graphArray[$i]['kroner'], 2, ',', '.');
 											echo "</td>";
 							} 
 						?>		
