@@ -4,6 +4,7 @@
 							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
 							<th class="dieselHeader headerSortDown literColumn">Liter</th>
 							<th class="dieselHeader headerSortDown krlColumn">Kr/l</th>
+							<th class="dieselHeader headerSortDown krlColumn">Kr/l st. afvigelse</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -22,7 +23,11 @@
 											echo number_format($graphArray[$i]['liter'], 2, ',', '.');
 											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');
+											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');		
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo number_format($graphArray[$i]['krPerLiterStDev'], 2, ',', '.');
+											echo "</td></tr>";
 							} 
 						?>		
 		</table>
