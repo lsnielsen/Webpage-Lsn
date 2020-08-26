@@ -97,7 +97,10 @@
 					name:"Kilometer",
 					dataPoints: kilometer,
 					cursor: "pointer",
-					legendMarkerType: "square"
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#4dffdb",
+					legendMarkerColor: "#4dffdb"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -105,10 +108,10 @@
 					type: "line",
 					dataPoints: kilometerMedian,
 					cursor: "pointer",
-					legendMarkerType: "square",
-					lineColor: "red",
 					markerType: "square",
-					markerColor: "green"
+					legendMarkerType: "square",
+					markerColor: "#66ff66",
+					legendMarkerColor: "#66ff66"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -116,7 +119,10 @@
 					type: "line",
 					dataPoints: kilometerVarians,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#b34700",
+					legendMarkerColor: "#b34700"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -124,7 +130,10 @@
 					type: "line",
 					dataPoints: kilometerAverage,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#336600",
+					legendMarkerColor: "#336600"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -132,7 +141,10 @@
 					type: "line",
 					dataPoints: kilometerStandardDev,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#002699",
+					legendMarkerColor: "#002699"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -140,7 +152,10 @@
 					type: "line",
 					dataPoints: kilometerStDev,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#550080",
+					legendMarkerColor: "#550080"
 				}, { //KILOMETER PER LITER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -148,7 +163,10 @@
 					type: "line",
 					dataPoints: kilometerPerLiter,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#7a7a52",
+					legendMarkerColor: "#7a7a52" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -156,7 +174,10 @@
 					type: "line",
 					dataPoints: kilometerPerLiterStDev,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#994d00",
+					legendMarkerColor: "#994d00"  
 				},{
 					showInLegend: true,
 					visible: false,
@@ -164,7 +185,10 @@
 					type: "line",
 					dataPoints: kilometerPerLiterAverage,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#99004d",
+					legendMarkerColor: "#99004d"  
 				},{
 					showInLegend: true,
 					visible: false,
@@ -172,7 +196,10 @@
 					type: "line",
 					dataPoints: kilometerPerLiterMedian,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#4700b3",
+					legendMarkerColor: "#4700b3"    
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -180,7 +207,10 @@
 					type: "line",
 					dataPoints: kilometerPerLiterVarians,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#00b300",
+					legendMarkerColor: "#00b300" 
 				}, { // KILOMETER PER KRONER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -188,7 +218,10 @@
 					type: "line",
 					dataPoints: kilometerPerKroner,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#b30000",
+					legendMarkerColor: "#b30000"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -196,7 +229,10 @@
 					type: "line",
 					dataPoints: kilometerPerKronerAverage,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#59b300",
+					legendMarkerColor: "#59b300"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -204,7 +240,10 @@
 					type: "line",
 					dataPoints: kilometerPerKronerMedian,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#3b00b3",
+					legendMarkerColor: "#3b00b3" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -212,7 +251,10 @@
 					type: "line",
 					dataPoints: kilometerPerKronerStDev,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#00b38f",
+					legendMarkerColor: "#00b38f"  
 				},{
 					showInLegend: true,
 					visible: false,
@@ -220,7 +262,10 @@
 					type: "line",
 					dataPoints: kilometerPerKronerVarians,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#b35900",
+					legendMarkerColor: "#b35900"  
 				}, {	// HERE STARTS THE KRONER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -228,7 +273,10 @@
 					name:"Kroner",
 					dataPoints: kroner,
 					cursor: "pointer",
-					legendMarkerType: "circle"  
+					markerType: "circle",
+					legendMarkerType: "circle",
+					markerColor: "#0000b3",
+					legendMarkerColor: "#0000b3"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -236,7 +284,10 @@
 					type: "line",
 					dataPoints: kronerAverage,
 					cursor: "pointer",
-					legendMarkerType: "circle"  
+					markerType: "circle",
+					legendMarkerType: "circle",
+					markerColor: "#008000",
+					legendMarkerColor: "#008000"   
 				},{
 					showInLegend: true,
 					visible: false,
@@ -244,7 +295,10 @@
 					type: "line",
 					dataPoints: kronerMedian,
 					cursor: "pointer",
-					legendMarkerType: "circle"  
+					markerType: "circle",
+					legendMarkerType: "circle",
+					markerColor: "#002933",
+					legendMarkerColor: "#002933"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -252,7 +306,10 @@
 					type: "line",
 					dataPoints: kronerVarians,
 					cursor: "pointer",
-					legendMarkerType: "circle"  
+					markerType: "circle",
+					legendMarkerType: "circle",
+					markerColor: "#002080",
+					legendMarkerColor: "#002080"   
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -260,7 +317,10 @@
 					type: "line",
 					dataPoints: kronerStandardDev,
 					cursor: "pointer",
-					legendMarkerType: "circle"  
+					markerType: "circle",
+					legendMarkerType: "circle",
+					markerColor: "#394d00",
+					legendMarkerColor: "#394d00" 
 				}, { //KRONER PER LITER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -268,7 +328,10 @@
 					type: "line",
 					dataPoints: kronerPerLiter,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#660033",
+					legendMarkerColor: "#660033"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -276,7 +339,10 @@
 					type: "line",
 					dataPoints: kronerPerLiterVarians,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#006666",
+					legendMarkerColor: "#006666" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -284,7 +350,10 @@
 					type: "line",
 					dataPoints: kronerPerLiterMedian,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#330066",
+					legendMarkerColor: "#330066" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -292,7 +361,10 @@
 					type: "line",
 					dataPoints: kronerPerLiterStDev,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#3d3d29",
+					legendMarkerColor: "#3d3d29" 
 				},{
 					showInLegend: true,
 					visible: false,
@@ -300,7 +372,10 @@
 					type: "line",
 					dataPoints: kronerPerLiterAverage,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "square",
+					legendMarkerType: "square",
+					markerColor: "#602040",
+					legendMarkerColor: "#602040" 
 				},{ // KRONER PER KILOMETER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -308,7 +383,10 @@
 					type: "line",
 					dataPoints: kronerPerKilometer,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#4dff4d",
+					legendMarkerColor: "#4dff4d"   
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -316,7 +394,10 @@
 					type: "line",
 					dataPoints: kronerPerKilometerMedian,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#ff8080",
+					legendMarkerColor: "#ff8080"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -324,7 +405,10 @@
 					type: "line",
 					dataPoints: kronerPerKilometerVarians,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#80ffe5",
+					legendMarkerColor: "#80ffe5"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -332,7 +416,10 @@
 					type: "line",
 					dataPoints: kronerPerKilometerAverage,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#79ff4d",
+					legendMarkerColor: "#79ff4d"  
 				},{
 					showInLegend: true,
 					visible: false,
@@ -340,7 +427,10 @@
 					type: "line",
 					dataPoints: kronerPerKilometerStDev,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#df80ff",
+					legendMarkerColor: "#df80ff"  
 				}, { // LAST IS THE LITER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -348,7 +438,10 @@
 					name:"Liter",
 					dataPoints: liter,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#ffb366",
+					legendMarkerColor: "#ffb366" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -356,7 +449,10 @@
 					type: "line",
 					dataPoints: literAverage,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#99ff99",
+					legendMarkerColor: "#99ff99" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -364,7 +460,10 @@
 					type: "line",
 					dataPoints: literMedian,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#e580ff",
+					legendMarkerColor: "#e580ff"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -372,7 +471,10 @@
 					type: "line",
 					dataPoints: literStandardDev,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#80ffdf",
+					legendMarkerColor: "#80ffdf"    
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -380,7 +482,10 @@
 					type: "line",
 					dataPoints: literVarians,
 					cursor: "pointer",
-					legendMarkerType: "cross"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#ff80bf",
+					legendMarkerColor: "#ff80bf" 
 				}, { // LITER PER KRONER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -388,7 +493,10 @@
 					type: "line",
 					dataPoints: literPerKroner,
 					cursor: "pointer",
-					legendMarkerType: "square"
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#99ff99",
+					legendMarkerColor: "#99ff99" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -396,7 +504,10 @@
 					type: "line",
 					dataPoints: literPerKronerAverage,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#b366ff",
+					legendMarkerColor: "#b366ff"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -404,7 +515,10 @@
 					type: "line",
 					dataPoints: literPerKronerStDev,
 					cursor: "pointer",
-					legendMarkerType: "square"
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#ff80df",
+					legendMarkerColor: "#ff80df"
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -412,7 +526,10 @@
 					type: "line",
 					dataPoints: literPerKronerMedian,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#b3ff1a",
+					legendMarkerColor: "#b3ff1a" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -420,7 +537,10 @@
 					type: "line",
 					dataPoints: literPerKronerVarians,
 					cursor: "pointer",
-					legendMarkerType: "square"  
+					markerType: "cross",
+					legendMarkerType: "cross",
+					markerColor: "#ff80df",
+					legendMarkerColor: "#ff80df"  
 				}, { // LITER PER KILOMETER GRAPHS
 					showInLegend: true,
 					visible: false,
@@ -428,7 +548,10 @@
 					type: "line",
 					dataPoints: literPerKilometer,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#80d4ff",
+					legendMarkerColor: "#80d4ff" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -436,7 +559,10 @@
 					type: "line",
 					dataPoints: literPerKilometerStDev,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#80ffdf",
+					legendMarkerColor: "#80ffdf"   
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -444,7 +570,10 @@
 					type: "line",
 					dataPoints: literPerKilometerAverage,
 					cursor: "pointer",
-					legendMarkerType: "triangle"  
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#ff80b3",
+					legendMarkerColor: "#ff80b3"  
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -452,7 +581,10 @@
 					type: "line",
 					dataPoints: literPerKilometerMedian,
 					cursor: "pointer",
-					legendMarkerType: "triangle" 
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#ddddbb",
+					legendMarkerColor: "#ddddbb" 
 				}, {
 					showInLegend: true,
 					visible: false,
@@ -460,7 +592,10 @@
 					type: "line",
 					dataPoints: literPerKilometerVarians,
 					cursor: "pointer",
-					legendMarkerType: "triangle"
+					markerType: "triangle",
+					legendMarkerType: "triangle",
+					markerColor: "#ffff66",
+					legendMarkerColor: "#ffff66" 
 				}]
 		});
 
