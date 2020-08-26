@@ -68,7 +68,7 @@
 			<button class="dieselButton" 
 					value="advancedDieselPage"
 					name="dieselButton"
-					style="margin-left: auto; margin-top: 250px;">
+					style="margin-left: auto; margin-top: 100px;">
 				Tilbage
 			</button>
 		</form>
