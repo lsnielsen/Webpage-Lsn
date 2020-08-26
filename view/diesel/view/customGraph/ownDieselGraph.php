@@ -53,6 +53,16 @@
 		<?php //include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
 		<?php include "../view/diesel/view/customGraph/selectFields/graph.php" ?>
 		
+		<div class="statisticExplanation">
+			<h1> Kort forklaring </h1>
+			<div class="explanationTxt">
+				St dev står for standard deviation, som oversat er standard afvigelse. Den værdi er et udtryk
+				for hvor meget alle værdierne fordeler sig omkring deres middelværdi. <br>
+				Gen. er en forkortelse for gennemsnittet. <br>
+				Median er den midterste værdi af alle værdierne. <br>
+				Var står for variansen. Det er en værdi der angiver der angiver variabiliteten af alle værdierne.	
+			</div>
+		</div>
 	
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
 			<button class="dieselButton" 
