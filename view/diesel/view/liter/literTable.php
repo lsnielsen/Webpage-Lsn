@@ -2,6 +2,7 @@
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
 							<th class="dieselHeader headerSortDown kronerColumn">Liter</th>
+							<th class="dieselHeader headerSortDown kronerColumn">Standard afvigelse</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -15,6 +16,9 @@
 											echo "</td>
 											<td class=dieselTableCell>";
 											echo number_format($graphArray[$i]['liter'], 2, ',', '.');
+											echo "</td>
+											<td class=dieselTableCell>";
+											echo number_format($graphArray[$i]['literStDev'], 2, ',', '.');
 											echo "</td>";
 							} 
 						?>		
