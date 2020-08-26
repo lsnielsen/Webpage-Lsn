@@ -470,7 +470,7 @@
 	}
 </script>
 
-<div id="chartContainer" style="height: 1500px; width: 98%; margin: 0px auto;"> </div>
+<div id="chartContainer" style="height: 1200px; width: 98%; margin: 0px auto;"> </div>
 
 
 
