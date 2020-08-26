@@ -60,6 +60,8 @@
 			exportEnabled: true,
 			zoomEnabled: true,
 			legend: {
+			verticalAlign: "bottom",  // "top" , "bottom", "center"
+			horizontalAlign: "center",  // "center" , "right", "left"
 				cursor: "pointer",
 				fontSize: 25,
 				itemclick: function (e) {
@@ -595,7 +597,7 @@
 					markerType: "triangle",
 					legendMarkerType: "triangle",
 					markerColor: "#ffff66",
-					legendMarkerColor: "#ffff66" 
+					legendMarkerColor: "#ffff66"
 				}]
 		});
 
