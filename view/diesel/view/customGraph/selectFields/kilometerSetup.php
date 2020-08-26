@@ -23,6 +23,7 @@
 			x: new Date(array[i][1]), 
 			y: array[i]['kilometer'] 
 		});
+		console.log(array[i]['kilometer']);
 	}
 
 	for (var i = 0; i < arrayLength; i += 1) {
@@ -30,6 +31,7 @@
 			x: new Date(array[i][1]), 
 			y: array[i]['km/l'] 
 		});
+		console.log(array[i]['km/l']);
 	}
 
 	for (var i = 0; i < arrayLength; i += 1) {

@@ -1,6 +1,6 @@
 
 <center>
-	<div id="krPerLiter" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="krPerLiter" style="width: 100%; height: 700px;"></div>	
 </center>	
 
 <?php
