@@ -1,6 +1,6 @@
 
 <center>
-	<div id="kilometer" style="width: 100%; height: 700px;"></div>	
+	<div id="liter" style="width: 100%; height: 700px;"></div>	
 </center>	
 
 <?php
@@ -19,17 +19,17 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer', 'Gennemsnit', 'Median'],
+			['Dato', 'Liter', 'Gennemsnit', 'Median'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['kilometer']),
-				parseFloat(graphArray[0]['averageKm']),
-				parseFloat(graphArray[0]['kilometerMedian'])
+				parseFloat(graphArray[0]['liter']),
+				parseFloat(graphArray[0]['averageLiter']),
+				parseFloat(graphArray[0]['literMedian'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kilometer',
+		  title: 'Liter',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -37,13 +37,13 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['kilometer']),
-				parseFloat(graphArray[0]['averageKm']),
-				parseFloat(graphArray[0]['kilometerMedian'])
+				parseFloat(graphArray[i]['liter']),
+				parseFloat(graphArray[0]['averageLiter']),
+				parseFloat(graphArray[0]['literMedian'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('kilometer'));
+		var chart = new google.visualization.LineChart(document.getElementById('liter'));
 
 		chart.draw(data, options);
 	}

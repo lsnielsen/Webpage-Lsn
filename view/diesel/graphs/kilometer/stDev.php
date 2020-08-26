@@ -1,6 +1,6 @@
 
 <center>
-	<div id="krPerLiterStDev" style="width: 2100px; height: 700px; margin-left: -110px;"></div>	
+	<div id="kilometerStDev" style="width: 100%; height: 700px;"></div>	
 </center>	
 
 <?php
@@ -41,7 +41,7 @@
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('krPerLiterStDev'));
+		var chart = new google.visualization.LineChart(document.getElementById('kilometerStDev'));
 
 		chart.draw(data, options);
 	}
