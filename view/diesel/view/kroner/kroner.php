@@ -11,7 +11,7 @@
 <html>  
     <head>  
         <title>  
-            Kilometer 
+            Kroner 
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/advanced.css" type="text/css">
@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			Avanceret statistik for kørte kilometer
+			Avanceret statistik for antal kroner
 		</h1>  
 	
 		<?php include "kronerTable.php"; ?>
