@@ -1,6 +1,4 @@
 <?php
-
-	
 	function kmFrequency($array)
 	{
 		$returnArray['0:800'] = 0;
@@ -65,6 +63,42 @@
 		$returnArray['30:35'] = $returnArray['30:35'] / $arrayLength * 100;
 		$returnArray['35:40'] = $returnArray['35:40'] / $arrayLength * 100;
 		$returnArray['40:45'] = $returnArray['40:45'] / $arrayLength * 100;
+	
+		return $returnArray;
+	}
+	
+	function kronerFrequency($array)
+	{
+		$returnArray['100:150'] = 0;
+		$returnArray['150:200'] = 0;
+		$returnArray['200:250'] = 0;
+		$returnArray['250:300'] = 0;
+		$returnArray['300:350'] = 0;
+		$returnArray['350:400'] = 0;
+		$arrayLength = sizeof($array);
+		
+		for($i=0; $i<$arrayLength; $i++) {
+			$kronerValue = $array[$i]['kroner'];
+			if ($kronerValue > 100 && $kronerValue <= 150) {
+				$returnArray['100:150'] += 1;
+			} elseif ($kronerValue > 150 && $kronerValue <= 200) {
+				$returnArray['150:200'] += 1;
+			} elseif ($kronerValue > 200 && $kronerValue <= 250) {
+				$returnArray['200:250'] += 1;
+			} elseif ($kronerValue > 250 && $kronerValue <= 300) {
+				$returnArray['250:300'] += 1;
+			} elseif ($kronerValue > 300 && $kronerValue <= 350) {
+				$returnArray['300:350'] += 1;
+			} elseif ($kronerValue > 350 && $kronerValue <= 400) {
+				$returnArray['350:400'] += 1;
+			}
+		}
+		$returnArray['100:150'] = $returnArray['100:150'] / $arrayLength * 100;
+		$returnArray['150:200'] = $returnArray['150:200'] / $arrayLength * 100;
+		$returnArray['200:250'] = $returnArray['200:250'] / $arrayLength * 100;
+		$returnArray['250:300'] = $returnArray['250:300'] / $arrayLength * 100;
+		$returnArray['300:350'] = $returnArray['300:350'] / $arrayLength * 100;
+		$returnArray['350:400'] = $returnArray['350:400'] / $arrayLength * 100;
 	
 		return $returnArray;
 	}

@@ -42,6 +42,8 @@
 		<?php include "../view/diesel/graphs/kroner/kronerAverage.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kroner/stDev.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
+		<?php include "../view/diesel/graphs/kroner/frequency.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
