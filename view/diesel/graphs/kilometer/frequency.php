@@ -20,11 +20,11 @@
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
 			[' ', ' ', { role: 'style' }],
-			['950:1000', graphArray[0]['kmFrequency']['950:1000'], 'color: #ff4d4d' ],
-			['900:950', graphArray[0]['kmFrequency']['900:950'], 'color: #e5e4e2' ], 
-			['850:900', graphArray[0]['kmFrequency']['850:900'], 'gold'],
-			['800:850', graphArray[0]['kmFrequency']['800:850'], 'silver'],            
-			['0:800', graphArray[0]['kmFrequency']['0:800'], '#b87333']
+			['950 km - 1000 km', graphArray[0]['kmFrequency']['950:1000'], 'color: #ff4d4d' ],
+			['900 km - 950 km', graphArray[0]['kmFrequency']['900:950'], 'color: #e5e4e2' ], 
+			['850 km - 900 km', graphArray[0]['kmFrequency']['850:900'], 'gold'],
+			['800 km - 850 km', graphArray[0]['kmFrequency']['800:850'], 'silver'],            
+			['0 km - 800 km', graphArray[0]['kmFrequency']['0:800'], '#b87333']
 		]);
 
 		var options = {

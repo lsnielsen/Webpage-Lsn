@@ -28,8 +28,8 @@
 		]);
 
 		var options = {
-			title: 'Frekvens diagram over kroner',
-			vAxis: {title: 'Kroner interval'},
+			title: 'Frekvens diagram over kroner per liter',
+			vAxis: {title: 'Kroner per liter interval'},
 			hAxis: {title: 'Procent'},
 			chartArea: {width: '50%'},
 			legend: 'none'
