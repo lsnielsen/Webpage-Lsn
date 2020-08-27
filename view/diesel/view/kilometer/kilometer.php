@@ -42,6 +42,8 @@
 		<?php include "../view/diesel/graphs/kilometer/kilometerAverage.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/kilometer/stDev.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
+		<?php include "../view/diesel/graphs/kilometer/frequency.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 

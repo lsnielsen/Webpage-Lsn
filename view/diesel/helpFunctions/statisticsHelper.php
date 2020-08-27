@@ -24,6 +24,7 @@
 			$literPerKrArray[] = $array[$i]['l/kr'];
 		}
 
+
 		for ($i = 0; $i<sizeof($array); $i++) {
 			$kmSum += $array[$i]['kilometer'];
 			$literSum += $array[$i]['liter'];
@@ -126,7 +127,41 @@
 		$array[0]['literPerKrStandardDev'] = sqrt($array[0]['literPerKrVariance']);
 		$array[0]['literPerKrMedian'] = calculateMedian($literPerKrArray);
 			
+		$array[0]['kmFrequency'] = kmFrequency($array);
+
 		return $array;
+	}
+	
+	function kmFrequency($array)
+	{
+		$returnArray['0:800'] = 0;
+		$returnArray['800:850'] = 0;
+		$returnArray['850:900'] = 0;
+		$returnArray['900:950'] = 0;
+		$returnArray['950:1000'] = 0;
+		$arrayLength = sizeof($array);
+		
+		for($i=0; $i<$arrayLength; $i++) {
+			$kmValue = $array[$i]['kilometer'];
+			if ($kmValue > 0 && $kmValue <= 800) {
+				$returnArray['0:800'] += 1;
+			} elseif ($kmValue > 800 && $kmValue <= 850) {
+				$returnArray['800:850'] += 1;
+			} elseif ($kmValue > 850 && $kmValue <= 900) {
+				$returnArray['850:900'] += 1;
+			} elseif ($kmValue > 900 && $kmValue <= 950) {
+				$returnArray['900:950'] += 1;
+			} elseif ($kmValue > 950 && $kmValue <= 1000) {
+				$returnArray['950:1000'] += 1;
+			}
+		}
+		$returnArray['0:800'] = $returnArray['0:800'] / $arrayLength * 100;
+		$returnArray['800:850'] = $returnArray['800:850'] / $arrayLength * 100;
+		$returnArray['850:900'] = $returnArray['850:900'] / $arrayLength * 100;
+		$returnArray['900:950'] = $returnArray['900:950'] / $arrayLength * 100;
+		$returnArray['950:1000'] = $returnArray['950:1000'] / $arrayLength * 100;
+	
+		return $returnArray;
 	}
 	
 	
