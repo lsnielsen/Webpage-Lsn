@@ -20,12 +20,12 @@
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
 			[' ', ' ', { role: 'style' }],
-			['0:20', graphArray[0]['literFrequency']['0:20'], '#b87333'],            
-			['20:25', graphArray[0]['literFrequency']['20:25'], 'silver'],            
-			['25:30', graphArray[0]['literFrequency']['25:30'], 'gold'],
-			['30:35', graphArray[0]['literFrequency']['30:35'], 'color: #e5e4e2' ], 
+			['40:45', graphArray[0]['literFrequency']['40:45'], 'color: #00e600' ],
 			['35:40', graphArray[0]['literFrequency']['35:40'], 'color: #ff4d4d' ],
-			['40:45', graphArray[0]['literFrequency']['40:45'], 'color: #00e600' ]
+			['30:35', graphArray[0]['literFrequency']['30:35'], 'color: #e5e4e2' ], 
+			['25:30', graphArray[0]['literFrequency']['25:30'], 'gold'],
+			['20:25', graphArray[0]['literFrequency']['20:25'], 'silver'],            
+			['0:20', graphArray[0]['literFrequency']['0:20'], '#b87333']
 		]);
 
 		var options = {
