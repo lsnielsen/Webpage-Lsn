@@ -39,10 +39,12 @@
 				</button>
 			</form>
 		<center>
-		<?php include "../view/diesel/graphs/liter/literAverage.php"; ?>
-		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/liter/stDev.php"; ?>
-			</center>
+			<?php include "../view/diesel/graphs/liter/literAverage.php"; ?>
+			<div class="spaceBetweenGraphs"> </div>
+			<?php include "../view/diesel/graphs/liter/stDev.php"; ?>
+			<div class="spaceBetweenGraphs"> </div>
+			<?php include "../view/diesel/graphs/liter/frequency.php"; ?>
+		</center>
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
 					value="advancedDieselPage"

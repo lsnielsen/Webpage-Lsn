@@ -128,6 +128,7 @@
 		$array[0]['literPerKrMedian'] = calculateMedian($literPerKrArray);
 			
 		$array[0]['kmFrequency'] = kmFrequency($array);
+		$array[0]['literFrequency'] = literFrequency($array);
 
 		return $array;
 	}
@@ -160,6 +161,42 @@
 		$returnArray['850:900'] = $returnArray['850:900'] / $arrayLength * 100;
 		$returnArray['900:950'] = $returnArray['900:950'] / $arrayLength * 100;
 		$returnArray['950:1000'] = $returnArray['950:1000'] / $arrayLength * 100;
+	
+		return $returnArray;
+	}
+	
+	function literFrequency($array)
+	{
+		$returnArray['0:20'] = 0;
+		$returnArray['20:25'] = 0;
+		$returnArray['25:30'] = 0;
+		$returnArray['30:35'] = 0;
+		$returnArray['35:40'] = 0;
+		$returnArray['40:45'] = 0;
+		$arrayLength = sizeof($array);
+		
+		for($i=0; $i<$arrayLength; $i++) {
+			$literValue = $array[$i]['liter'];
+			if ($literValue > 0 && $literValue <= 20) {
+				$returnArray['0:20'] += 1;
+			} elseif ($literValue > 20 && $literValue <= 25) {
+				$returnArray['20:25'] += 1;
+			} elseif ($literValue > 25 && $literValue <= 30) {
+				$returnArray['25:30'] += 1;
+			} elseif ($literValue > 30 && $literValue <= 35) {
+				$returnArray['30:35'] += 1;
+			} elseif ($literValue > 35 && $literValue <= 40) {
+				$returnArray['35:40'] += 1;
+			} elseif ($literValue > 40 && $literValue <= 45) {
+				$returnArray['40:45'] += 1;
+			}
+		}
+		$returnArray['0:20'] = $returnArray['0:20'] / $arrayLength * 100;
+		$returnArray['20:25'] = $returnArray['20:25'] / $arrayLength * 100;
+		$returnArray['25:30'] = $returnArray['25:30'] / $arrayLength * 100;
+		$returnArray['30:35'] = $returnArray['30:35'] / $arrayLength * 100;
+		$returnArray['35:40'] = $returnArray['35:40'] / $arrayLength * 100;
+		$returnArray['40:45'] = $returnArray['40:45'] / $arrayLength * 100;
 	
 		return $returnArray;
 	}

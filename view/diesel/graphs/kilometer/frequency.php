@@ -24,7 +24,7 @@
 			['800:850', graphArray[0]['kmFrequency']['800:850'], 'silver'],            
 			['850:900', graphArray[0]['kmFrequency']['850:900'], 'gold'],
 			['900:950', graphArray[0]['kmFrequency']['900:950'], 'color: #e5e4e2' ], 
-			['950:1000', graphArray[0]['kmFrequency']['950:1000'], 'color: #e5e4e2' ]
+			['950:1000', graphArray[0]['kmFrequency']['950:1000'], 'color: #ff4d4d' ]
 		]);
 
 		var options = {
