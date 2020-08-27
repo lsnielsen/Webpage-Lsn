@@ -103,6 +103,42 @@
 		return $returnArray;
 	}
 	
+	function kronerPerLiterFrequency($array)
+	{
+		$returnArray['0:8'] = 0;
+		$returnArray['8:8,5'] = 0;
+		$returnArray['8,5:9'] = 0;
+		$returnArray['9:9,5'] = 0;
+		$returnArray['9,5:10'] = 0;
+
+		$arrayLength = sizeof($array);
+		
+		for($i=0; $i<$arrayLength; $i++) {
+			$kronerPerLiterValue = $array[$i]['kr/l'];
+			if ($kronerPerLiterValue > 0 && $kronerPerLiterValue <= 8) {
+				$returnArray['0:8'] += 1;
+			} elseif ($kronerPerLiterValue > 8 && $kronerPerLiterValue <= 8.5) {
+				$returnArray['8:8,5'] += 1;
+			} elseif ($kronerPerLiterValue > 8.5 && $kronerPerLiterValue <= 9) {
+				$returnArray['8,5:9'] += 1;
+			} elseif ($kronerPerLiterValue > 9 && $kronerPerLiterValue <= 9.5) {
+				$returnArray['9:9,5'] += 1;
+			} elseif ($kronerPerLiterValue > 9.5 && $kronerPerLiterValue <= 10) {
+				$returnArray['9,5:10'] += 1;
+			}
+		}
+		
+		$returnArray['0:8'] = $returnArray['0:8'] / $arrayLength * 100;
+		$returnArray['8:8,5'] = $returnArray['8:8,5'] / $arrayLength * 100;
+		$returnArray['8,5:9'] = $returnArray['8,5:9'] / $arrayLength * 100;
+		$returnArray['9:9,5'] = $returnArray['9:9,5'] / $arrayLength * 100;
+		$returnArray['9,5:10'] = $returnArray['9,5:10'] / $arrayLength * 100;
+	
+		return $returnArray;
+	}
+	
+	
+	
 	
 	
 	

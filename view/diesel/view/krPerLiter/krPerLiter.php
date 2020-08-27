@@ -42,6 +42,8 @@
 		<?php include "../view/diesel/graphs/krPerLiter/krPerLiterAverage.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
 		<?php include "../view/diesel/graphs/krPerLiter/stDev.php"; ?>
+		<div class="spaceBetweenGraphs"> </div>
+		<?php include "../view/diesel/graphs/krPerLiter/frequency.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 

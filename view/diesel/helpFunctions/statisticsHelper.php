@@ -132,6 +132,7 @@
 		$array[0]['kmFrequency'] = kmFrequency($array);
 		$array[0]['literFrequency'] = literFrequency($array);
 		$array[0]['kronerFrequency'] = kronerFrequency($array);
+		$array[0]['kronerPerLiterFrequency'] = kronerPerLiterFrequency($array);
 
 		return $array;
 	}
