@@ -32,7 +32,6 @@
 			vAxis: {title: 'Kilometer interval'},
 			hAxis: {title: 'Procent'},
 			chartArea: {width: '50%'},
-			curveType: 'function',
 			legend: 'none'
 		};
 
