@@ -123,11 +123,38 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.informTxt {
+	position: relative; 
+	left: 500px; 
+	bottom: 35px;
+}
 
+.coloumnGraphType {
+	position: relative; 
+	left: 300px; 
+	font-size: 20px; 
+	font-weight: bold; 
+	display: none;
+}
 
+.functionGraphType {
+	position: relative; 
+	left: 300px; 
+	font-size: 20px; 
+	font-weight: bold;	
+}
 
+.switch {
+	position: relative; 
+	left: 200px; 
+	top: 30px;	
+}
 
-
+.coloumnOrFunction {
+	position: relative; 
+	left: 100px; 
+	top: 20px;	
+}
 
 
 

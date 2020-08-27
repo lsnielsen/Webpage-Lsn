@@ -50,7 +50,6 @@
 			</div>		
 		</center>
 -->
-		<?php //include "../view/diesel/view/customGraph/selectFields/theGraph.php" ?>
 		<?php include "../view/diesel/view/customGraph/selectFields/graph.php" ?>
 		
 		<div class="statisticExplanation">
@@ -62,6 +61,22 @@
 				Median er den midterste værdi af alle værdierne. <br>
 				Var står for variansen. Det er en værdi der angiver der angiver variabiliteten af alle værdierne.	
 			</div>
+			<div class="coloumnOrFunction">
+				Her kan du vælge om du vil have et søjle diagram, eller en almindelig kurve:
+			</div>
+			<label class="switch">
+				<input class="testers" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+			<div class="functionGraphType">
+				Almindelig funktion
+			</div>
+			<div class="coloumnGraphType">
+				Søjlediagram
+			</div>
+			<p class="informTxt">
+				(Det virker ikke endnu)
+			</p>
 		</div>
 	
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
@@ -75,4 +90,21 @@
 	</body>
 </html>
 
+		
+	
 
+
+<script>
+	$(".slider").click(function() {
+		result = $('.testers').is(':checked');
+		if (result == true) {
+			console.log("result: " + result + ", its true, and showing the function");
+			$(".functionGraphType").show();
+			$(".coloumnGraphType").hide();	
+		} else if (result == false) {
+			console.log("result: " + result + ", its false and showing the coloumn");
+			$(".functionGraphType").hide();
+			$(".coloumnGraphType").show();
+		}
+	});
+</script>
