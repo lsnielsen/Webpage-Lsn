@@ -179,6 +179,40 @@
 		return $arr;
 	}
 	
+	function kilometerPerKronerFrequency($array)
+	{
+		$arr['0:2'] = 0;
+		$arr['2:2,5'] = 0;
+		$arr['2,5:3'] = 0;
+		$arr['3:3,5'] = 0;
+		$arr['3,5:'] = 0;
+
+		$length = sizeof($array);
+		
+		for($i=0; $i<$length; $i++) {
+			$value = $array[$i]['km/kr'];
+			if ($value > 0 && $value <= 2) {
+				$arr['0:2'] += 1;
+			} elseif ($value > 2 && $value <= 2.5) {
+				$arr['2:2,5'] += 1;
+			} elseif ($value > 2.5 && $value <= 3) {
+				$arr['2,5:3'] += 1;
+			} elseif ($value > 3 && $value <= 3.5) {
+				$arr['3:3,5'] += 1;
+			} elseif ($value > 3.5) {
+				$arr['3,5:'] += 1;
+			} 
+		}
+		
+		$arr['0:2'] = $arr['0:2'] / $length * 100;
+		$arr['2:2,5'] = $arr['2:2,5'] / $length * 100;
+		$arr['2,5:3'] = $arr['2,5:3'] / $length * 100;
+		$arr['3:3,5'] = $arr['3:3,5'] / $length * 100;
+		$arr['3,5:'] = $arr['3,5:'] / $length * 100;
+	
+		return $arr;
+	}
+	
 	
 	
 	

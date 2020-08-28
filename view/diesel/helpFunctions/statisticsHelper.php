@@ -134,6 +134,7 @@
 		$array[0]['kronerFrequency'] = kronerFrequency($array);
 		$array[0]['kronerPerLiterFrequency'] = kronerPerLiterFrequency($array);
 		$array[0]['kilometerPerLiterFrequency'] = kilometerPerLiterFrequency($array);
+		$array[0]['kilometerPerKronerFrequency'] = kilometerPerKronerFrequency($array);
 
 		return $array;
 	}
