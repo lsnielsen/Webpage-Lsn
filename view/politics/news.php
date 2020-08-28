@@ -3,34 +3,29 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/backButton.css">
 		<title>
-			Nyheder
+			Folketinget
 		</title>
 	</head>
 	<body>
 		<h1>
-			Nyheder og politik
+			Folketingets partier på Christiansborg
 		</h1>		
 	
 		<?php
 				include 'xml.php';
 				$rss = new SimpleXMLElement($xmlFeed);
-				echo "<div class=newsHeader>";
-				echo $rss->channel->title, ', ';
-				echo $rss->channel->link, ', ';
-				echo $rss->channel->description;
-				echo "</div>";
 		?>
 		<center>
 			<table border="1" class="xmlTable">
 				<tr bgcolor="#9acd32">
 					<th>
-						Title
+						Parti
 					</th>
 					<th>
-						Link
+						Formand
 					</th>
 					<th>
-						Description
+						Antal mandater
 					</th>
 				</tr>
 		<?php
@@ -38,13 +33,13 @@
 					foreach ($channel->item as $item) {
 						echo 	"<tr>
 									<td>
-										$item->title
+										$item->parti
 									</td>
 									<td>
-										$item->link
+										$item->chairman
 									</td>
 									<td>
-										$item->description
+										$item->mandates
 									</td>
 								</tr>";
 						
