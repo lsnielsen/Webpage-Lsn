@@ -5,8 +5,6 @@ $xmlFeed = <<<XML
 
 <rss version="2.0">
 <channel>
-
-
 	<item>
 		<parti>
 			Socialdemokratiet
