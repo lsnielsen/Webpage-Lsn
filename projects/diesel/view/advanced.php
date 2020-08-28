@@ -1,5 +1,5 @@
 <?php
-	include "../view/diesel/helpFunctions/advancedHelper.php";
+	include "../projects/diesel/helpFunctions/advancedHelper.php";
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -14,7 +14,7 @@
             Advanced
         </title>  
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/advanced.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
@@ -85,17 +85,17 @@
 			</form>
 		</center>
 		
-		<?php include "../view/diesel/graphs/krPerLiter.php"; ?>
+		<?php include "../projects/diesel/graphs/krPerLiter.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/kmPerLiter.php"; ?>
+		<?php include "../projects/diesel/graphs/kmPerLiter.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/kmPerKroner.php"; ?>
+		<?php include "../projects/diesel/graphs/kmPerKroner.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/combinedGraph.php"; ?>
+		<?php include "../projects/diesel/graphs/combinedGraph.php"; ?>
 		
-		<?php //include "../view/diesel/graphs/krPerKm.php"; ?>
-		<?php //include "../view/diesel/graphs/literPerKm.php"; ?>
-		<?php //include "../view/diesel/graphs/literPerKroner.php"; ?>
+		<?php //include "../projects/diesel/graphs/krPerKm.php"; ?>
+		<?php //include "../projects/diesel/graphs/literPerKm.php"; ?>
+		<?php //include "../projects/diesel/graphs/literPerKroner.php"; ?>
 		
 		
 		<center>
@@ -159,7 +159,7 @@
 	</body>
 </html>
 
-<?php include "../view/diesel/helpFunctions/tableSort.php" ?>
+<?php include "../projects/diesel/helpFunctions/tableSort.php" ?>
 
 
 

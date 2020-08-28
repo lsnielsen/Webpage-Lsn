@@ -1,5 +1,5 @@
 <?php
-	include "../view/diesel/helpFunctions/advancedHelper.php";
+	include "../projects/diesel/helpFunctions/advancedHelper.php";
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  

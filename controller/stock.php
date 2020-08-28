@@ -2,7 +2,7 @@
 <?php
 
 
-echo file_get_contents("../view/stocks/stock.html");
+echo file_get_contents("../projects/stocks/stock.html");
 
 
 

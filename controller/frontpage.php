@@ -1,7 +1,7 @@
 <?php
 
 
-echo file_get_contents("../view/frontpage/frontpage.html");
+echo file_get_contents("../projects/frontpage/frontpage.html");
 
 
 ?>

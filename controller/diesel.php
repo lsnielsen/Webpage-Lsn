@@ -8,23 +8,23 @@
 		deleteDieselRow($dieselButton);
 		setDieselFrontpage();
 	} elseif ($dieselButton == "advancedDieselPage") {
-		include("../view/diesel/view/advanced.php");
+		include("../projects/diesel/projects/advanced.php");
 	} elseif ($dieselButton == "carDieselPage") {
-		include("../view/diesel/view/car.html");
+		include("../projects/diesel/projects/car.html");
 	} elseif ($dieselButton == "krPerLiter") {
-		include("../view/diesel/view/krPerLiter/krPerLiter.php");
+		include("../projects/diesel/projects/krPerLiter/krPerLiter.php");
 	} elseif ($dieselButton == "kmPerLiter") {
-		include("../view/diesel/view/kmPerLiter/kmPerLiter.php");
+		include("../projects/diesel/projects/kmPerLiter/kmPerLiter.php");
 	} elseif ($dieselButton == "kmPerKroner") {
-		include("../view/diesel/view/kmPerKr/kmPerKr.php");
+		include("../projects/diesel/projects/kmPerKr/kmPerKr.php");
 	} elseif ($dieselButton == "ownDieselGraph") {
-		include("../view/diesel/view/customGraph/ownDieselGraph.php");
+		include("../projects/diesel/projects/customGraph/ownDieselGraph.php");
 	} elseif ($dieselButton == "kilometerPage") {
-		include("../view/diesel/view/kilometer/kilometer.php");
+		include("../projects/diesel/projects/kilometer/kilometer.php");
 	} elseif ($dieselButton == "literPage") {
-		include("../view/diesel/view/liter/liter.php");
+		include("../projects/diesel/projects/liter/liter.php");
 	} elseif ($dieselButton == "kronerPage") {
-		include("../view/diesel/view/kroner/kroner.php");
+		include("../projects/diesel/projects/kroner/kroner.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}
@@ -44,7 +44,7 @@
 		
 	function setDieselFrontpage()
 	{
-		include "../view/diesel/helpFunctions/frontPageHelper.php";
+		include "../projects/diesel/helpFunctions/frontPageHelper.php";
 		$con = mysqli_connect('127.0.0.1','root','');  
 		
 		if(!$con) {  
@@ -83,7 +83,7 @@
 			}
 		}
 		
-		include ("../view/diesel/view/dieselPage.html");
+		include ("../projects/diesel/projects/dieselPage.html");
 	}
 		
 ?>
