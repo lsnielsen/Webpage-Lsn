@@ -35,22 +35,22 @@
 					Valgte værdier:
 				</h2>
 			<div  class="selectedVariables">
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/kilometer.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/liter.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/kroner.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/kronerPerLiter.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/kilometerPerLiter.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/kilometerPerKroner.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/kronerPerKilometer.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/literPerKilometer.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/literPerKroner.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/valueSort.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/simpleCalc.php" ?>
-					<?php //include "../projects/diesel/projects/customGraph/selectFields/userInput.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/kilometer.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/liter.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/kroner.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/kronerPerLiter.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/kilometerPerLiter.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/kilometerPerKroner.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/kronerPerKilometer.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/literPerKilometer.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/literPerKroner.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/valueSort.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/simpleCalc.php" ?>
+					<?php //include "../projects/diesel/view/customGraph/selectFields/userInput.php" ?>
 			</div>		
 		</center>
 -->
-		<?php include "../projects/diesel/projects/customGraph/selectFields/graph.php" ?>
+		<?php include "../projects/diesel/view/customGraph/selectFields/graph.php" ?>
 		
 		<div class="statisticExplanation">
 			<h1> Kort forklaring </h1>
