@@ -8,23 +8,23 @@
 		deleteDieselRow($dieselButton);
 		setDieselFrontpage();
 	} elseif ($dieselButton == "advancedDieselPage") {
-		include("../projects/diesel/projects/advanced.php");
+		include("../projects/diesel/view/advanced.php");
 	} elseif ($dieselButton == "carDieselPage") {
-		include("../projects/diesel/projects/car.html");
+		include("../projects/diesel/view/car.html");
 	} elseif ($dieselButton == "krPerLiter") {
-		include("../projects/diesel/projects/krPerLiter/krPerLiter.php");
+		include("../projects/diesel/view/krPerLiter/krPerLiter.php");
 	} elseif ($dieselButton == "kmPerLiter") {
-		include("../projects/diesel/projects/kmPerLiter/kmPerLiter.php");
+		include("../projects/diesel/view/kmPerLiter/kmPerLiter.php");
 	} elseif ($dieselButton == "kmPerKroner") {
-		include("../projects/diesel/projects/kmPerKr/kmPerKr.php");
+		include("../projects/diesel/view/kmPerKr/kmPerKr.php");
 	} elseif ($dieselButton == "ownDieselGraph") {
-		include("../projects/diesel/projects/customGraph/ownDieselGraph.php");
+		include("../projects/diesel/view/customGraph/ownDieselGraph.php");
 	} elseif ($dieselButton == "kilometerPage") {
-		include("../projects/diesel/projects/kilometer/kilometer.php");
+		include("../projects/diesel/view/kilometer/kilometer.php");
 	} elseif ($dieselButton == "literPage") {
-		include("../projects/diesel/projects/liter/liter.php");
+		include("../projects/diesel/view/liter/liter.php");
 	} elseif ($dieselButton == "kronerPage") {
-		include("../projects/diesel/projects/kroner/kroner.php");
+		include("../projects/diesel/view/kroner/kroner.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}
@@ -83,7 +83,7 @@
 			}
 		}
 		
-		include ("../projects/diesel/projects/dieselPage.html");
+		include ("../projects/diesel/view/dieselPage.html");
 	}
 		
 ?>
