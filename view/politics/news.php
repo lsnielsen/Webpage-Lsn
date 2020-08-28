@@ -16,17 +16,17 @@
 				$rss = new SimpleXMLElement($xmlFeed);
 		?>
 		
-		<center class="politicTable  m-b-110">
+		<center class="politicTable">
 			<table>
 				<thead>
-					<tr class="row100 head">
-						<th class="column100">
+					<tr class="row100">
+						<th>
 							Parti
 						</th>
-						<th class="column100">
+						<th>
 							Formand
 						</th>
-						<th class="column100">
+						<th>
 							Antal mandater
 						</th>
 					</tr>
@@ -36,13 +36,13 @@
 				foreach ($rss ->xpath('//channel') as $channel) {
 					foreach ($channel->item as $item) {
 						echo 	"<tr class=row100>
-									<td class=column100>
+									<td>
 										$item->parti
 									</td>
-									<td class=column100>
+									<td>
 										$item->chairman
 									</td>
-									<td class=column100>
+									<td>
 										$item->mandates
 									</td>
 								</tr>";
@@ -80,19 +80,23 @@
 		background: -moz-linear-gradient(-68deg, #ac32e4 , #4801ff);
 		background: linear-gradient(-68deg, #ac32e4 , #4801ff);
 	}
+	table {
+		width: 100%;
+		background-color: #fff;
+	}
 
-	.politicTable table {
+	table {
 		background-color: transparent;
 	}
 
-	.politicTable td {
+	td {
 		font-family: Montserrat-Regular;
 		font-size: 14px;
 		color: #fff;
 		line-height: 1.4;
 	}
 
-	.politicTable th {
+	th {
 		font-family: Montserrat-Medium;
 		font-size: 12px;
 		color: #fff;
@@ -101,24 +105,16 @@
 
 		background-color: rgba(255,255,255,0.32);
 	}
+	.hov-column {
+		background-color: rgba(255,255,255,0.1);
+	}
 
 	.row100:hover td {
 		background-color: rgba(255,255,255,0.1);
 	}
 
-	.politicTable .hov-column {
-		background-color: rgba(255,255,255,0.1);
-	}
-
-
 	.row100 td:hover {
 		background-color: rgba(255,255,255,0.2);
-	}
-
-
-	table {
-		width: 100%;
-		background-color: #fff;
 	}
 
 	th, td {
@@ -131,7 +127,7 @@
 		padding-left: 25px;
 	}
 
-	.row100 td {
+	td {
 		padding-top: 18px;
 		padding-bottom: 14px;
 	}
