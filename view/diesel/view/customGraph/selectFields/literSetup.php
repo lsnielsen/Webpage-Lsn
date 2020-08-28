@@ -20,7 +20,7 @@
 	for (var i = 0; i < arrayLength; i += 1) {
 		liter.push({ 
 			x: new Date(array[i][1]), 
-			y: array[i]['liter'] 
+			y: parseFloat(array[i]['liter'])
 		});
 	}
 

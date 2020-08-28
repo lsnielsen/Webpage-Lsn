@@ -11,7 +11,7 @@
 <html>  
     <head>  
         <title>  
-            Kroner/liter
+            Liter 
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/advanced.css" type="text/css">
@@ -19,14 +19,14 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			Avanceret statistik for kroner per liter
+			Avanceret statistik for antal liter
 		</h1>  
 	
-		<?php include "krPerLiterTable.php"; ?>
+		<?php include "literTable.php"; ?>
 	
 		<div class="spaceBetweenTables" style="margin-bottom: -5px;"> </div>
 	
-		<?php include "krPerLiterResult.php"; ?>
+		<?php include "literResult.php"; ?>
 		
 		<div class="spaceBetweenTables"> </div>
 		
@@ -38,13 +38,13 @@
 					Tilbage
 				</button>
 			</form>
-		
-		<?php include "../view/diesel/graphs/krPerLiter/krPerLiterAverage.php"; ?>
-		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/krPerLiter/stDev.php"; ?>
-		<div class="spaceBetweenGraphs"> </div>
-		<?php include "../view/diesel/graphs/krPerLiter/frequency.php"; ?>
-		
+		<center>
+			<?php include "../view/diesel/graphs/liter/literAverage.php"; ?>
+			<div class="spaceBetweenGraphs"> </div>
+			<?php include "../view/diesel/graphs/liter/stDev.php"; ?>
+			<div class="spaceBetweenGraphs"> </div>
+			<?php include "../view/diesel/graphs/liter/frequency.php"; ?>
+		</center>
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
 					value="advancedDieselPage"

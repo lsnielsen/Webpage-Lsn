@@ -1,6 +1,6 @@
 
 <center>
-	<div id="krPerLiter" style="width: 100%; height: 700px;"></div>	
+	<div id="kilometer" style="width: 100%; height: 700px;"></div>	
 </center>	
 
 <?php
@@ -19,17 +19,17 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / liter', 'Gennemsnit', 'Median'],
+			['Dato', 'Kilometer', 'Gennemsnit', 'Median'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['kr/l']),
-				parseFloat(graphArray[0]['averageKrPerLiter']),
-				parseFloat(graphArray[0]['krPerLiterMedian'])
+				parseFloat(graphArray[0]['kilometer']),
+				parseFloat(graphArray[0]['averageKm']),
+				parseFloat(graphArray[0]['kilometerMedian'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kroner per liter',
+		  title: 'Kilometer',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -37,13 +37,13 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['kr/l']),
-				parseFloat(graphArray[0]['averageKrPerLiter']),
-				parseFloat(graphArray[0]['krPerLiterMedian'])
+				parseFloat(graphArray[i]['kilometer']),
+				parseFloat(graphArray[0]['averageKm']),
+				parseFloat(graphArray[0]['kilometerMedian'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('krPerLiter'));
+		var chart = new google.visualization.LineChart(document.getElementById('kilometer'));
 
 		chart.draw(data, options);
 	}

@@ -20,7 +20,7 @@
 	for (var i = 0; i < arrayLength; i += 1) {
 		kroner.push({ 
 			x: new Date(array[i][1]), 
-			y: array[i]['kroner'] 
+			y: parseFloat(array[i]['kroner']) 
 		});
 	}
 

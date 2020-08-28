@@ -1,6 +1,6 @@
 
 <center>
-	<div id="krPerLiter" style="width: 100%; height: 700px;"></div>	
+	<div id="kronerStDev" style="width: 100%; height: 700px;"></div>	
 </center>	
 
 <?php
@@ -19,17 +19,16 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / liter', 'Gennemsnit', 'Median'],
+			['Dato', 'Standard afvigelse', 'Gennemsnit, varians'],
 			[
 				graphArray[0][1], 
-				parseFloat(graphArray[0]['kr/l']),
-				parseFloat(graphArray[0]['averageKrPerLiter']),
-				parseFloat(graphArray[0]['krPerLiterMedian'])
+				parseFloat(graphArray[0]['krStDev']),
+				parseFloat(graphArray[0]['krVariance'])
 			]
 		]);
 
 		var options = {
-		  title: 'Kroner per liter',
+		  title: 'Kroner - standard afvigelse og varians',
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
@@ -37,13 +36,12 @@
 		for (var i = 1; i < arrayLength; i++) {
 			data.addRow([
 				graphArray[i][1],
-				parseFloat(graphArray[i]['kr/l']),
-				parseFloat(graphArray[0]['averageKrPerLiter']),
-				parseFloat(graphArray[0]['krPerLiterMedian'])
+				parseFloat(graphArray[i]['krStDev']),
+				parseFloat(graphArray[0]['krVariance'])
 			]);
 		}
 
-		var chart = new google.visualization.LineChart(document.getElementById('krPerLiter'));
+		var chart = new google.visualization.LineChart(document.getElementById('kronerStDev'));
 
 		chart.draw(data, options);
 	}

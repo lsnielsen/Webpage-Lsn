@@ -21,7 +21,7 @@
 	for (var i = 0; i < arrayLength; i += 1) {
 		kilometer.push({ 
 			x: new Date(array[i][1]), 
-			y: array[i]['kilometer'] 
+			y: parseFloat(array[i]['kilometer']) 
 		});
 	}
 

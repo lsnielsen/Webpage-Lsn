@@ -2,9 +2,7 @@
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
 							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
-							<th class="dieselHeader headerSortDown literColumn">Liter</th>
-							<th class="dieselHeader headerSortDown krlColumn">Kr/l</th>
-							<th class="dieselHeader headerSortDown krlColumn">Kr/l st. afvigelse</th>
+							<th class="dieselHeader headerSortDown kronerColumn">Standard afvigelse</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -19,15 +17,9 @@
 											<td class=dieselTableCell>";
 											echo number_format($graphArray[$i]['kroner'], 2, ',', '.');
 											echo "</td>
-											<td class=dieselTableCell advancedDieselCell>";
-											echo number_format($graphArray[$i]['liter'], 2, ',', '.');
-											echo "</td>
 											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['kr/l'], 2, ',', '.');		
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo number_format($graphArray[$i]['krPerLiterStDev'], 2, ',', '.');
-											echo "</td></tr>";
+											echo number_format($graphArray[$i]['krStDev'], 2, ',', '.');
+											echo "</td>";
 							} 
 						?>		
 		</table>

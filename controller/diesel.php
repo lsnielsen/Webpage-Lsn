@@ -19,6 +19,12 @@
 		include("../view/diesel/view/kmPerKr/kmPerKr.php");
 	} elseif ($dieselButton == "ownDieselGraph") {
 		include("../view/diesel/view/customGraph/ownDieselGraph.php");
+	} elseif ($dieselButton == "kilometerPage") {
+		include("../view/diesel/view/kilometer/kilometer.php");
+	} elseif ($dieselButton == "literPage") {
+		include("../view/diesel/view/liter/liter.php");
+	} elseif ($dieselButton == "kronerPage") {
+		include("../view/diesel/view/kroner/kroner.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}

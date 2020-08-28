@@ -1,4 +1,6 @@
 <?php
+	include ("frequencyHelper.php");
+
 	function calculateStatisticData($array)
 	{
 		$counter = 0;
@@ -23,6 +25,7 @@
 			$literPerKmArray[] = $array[$i]['l/km'];
 			$literPerKrArray[] = $array[$i]['l/kr'];
 		}
+
 
 		for ($i = 0; $i<sizeof($array); $i++) {
 			$kmSum += $array[$i]['kilometer'];
@@ -61,33 +64,33 @@
 		$literPerKrTemp = 0;
 
 		for ($i = 0; $i<sizeof($array); $i++) {
-			$array[$i]['kilometerStDev'] = pow($array[$i]['kilometer'] - $averageKm, 2);
-			$kmTemp += pow($array[$i]['kilometer'] - $averageKm, 2);
+			$array[$i]['kilometerStDev'] = sqrt(pow(($array[$i]['kilometer'] - $averageKm), 2));
+			$kmTemp += sqrt(pow(($array[$i]['kilometer'] - $averageKm), 2));
 
-			$array[$i]['krStDev'] = pow($array[$i]['kroner'] - $averageKr, 2);
-			$krTemp += pow($array[$i]['kroner'] - $averageKr, 2);
+			$array[$i]['krStDev'] = sqrt(pow(($array[$i]['kroner'] - $averageKr), 2));
+			$krTemp += sqrt(pow(($array[$i]['kroner'] - $averageKr), 2));
 
-			$array[$i]['literStDev'] = pow($array[$i]['liter'] - $averageLiter, 2);
-			$literTemp += pow($array[$i]['liter'] - $averageLiter, 2);
+			$array[$i]['literStDev'] = sqrt(pow(($array[$i]['liter'] - $averageLiter), 2));
+			$literTemp += sqrt(pow(($array[$i]['liter'] - $averageLiter), 2));
 
-			$array[$i]['krPerLiterStDev'] = pow($array[$i]['kr/l'] - $averageKrPerLiter, 2);
-			$krPerLiterTemp += pow($array[$i]['kr/l'] - $averageKrPerLiter, 2);
+			$array[$i]['krPerLiterStDev'] = sqrt(pow(($array[$i]['kr/l'] - $averageKrPerLiter), 2));
+			$krPerLiterTemp += sqrt(pow(($array[$i]['kr/l'] - $averageKrPerLiter), 2));
 
-			$array[$i]['kmPerLiterStDev'] = pow($array[$i]['km/l'] - $averageKmPerLiter, 2);
-			$kmPerLiterTemp += pow($array[$i]['km/l'] - $averageKmPerLiter, 2);
+			$array[$i]['kmPerLiterStDev'] = sqrt(pow(($array[$i]['km/l'] - $averageKmPerLiter), 2));
+			$kmPerLiterTemp += sqrt(pow(($array[$i]['km/l'] - $averageKmPerLiter), 2));
 
-			$array[$i]['kmPerKrStDev'] = pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
-			$kmPerKrTemp += pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
-			$kmPerKrTemporary = pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
+			$array[$i]['kmPerKrStDev'] = sqrt(pow(($array[$i]['km/kr'] - $averageKmPerKr), 2));
+			$kmPerKrTemp += sqrt(pow(($array[$i]['km/kr'] - $averageKmPerKr), 2));
+			//$kmPerKrTemporary = pow(($array[$i]['km/kr'] - $averageKmPerKr), 2);
 
-			$array[$i]['krPerKmStDev'] = pow($array[$i]['kr/km'] - $averageKrPerKm, 2);
-			$krPerKmTemp += pow($array[$i]['kr/km'] - $averageKrPerKm, 2);
+			$array[$i]['krPerKmStDev'] = sqrt(pow(($array[$i]['kr/km'] - $averageKrPerKm), 2));
+			$krPerKmTemp += sqrt(pow(($array[$i]['kr/km'] - $averageKrPerKm), 2));
 
-			$array[$i]['literPerKmStDev'] = pow($array[$i]['l/km'] - $averageLiterPerKm, 2);
-			$literPerKmTemp += pow($array[$i]['l/km'] - $averageLiterPerKm, 2);
+			$array[$i]['literPerKmStDev'] = sqrt(pow(($array[$i]['l/km'] - $averageLiterPerKm), 2));
+			$literPerKmTemp += sqrt(pow(($array[$i]['l/km'] - $averageLiterPerKm), 2));
 
-			$array[$i]['literPerKrStDev'] = pow($array[$i]['l/kr'] - $averageLiterPerKr, 2);
-			$literPerKrTemp += pow($array[$i]['l/kr'] - $averageLiterPerKr, 2);
+			$array[$i]['literPerKrStDev'] = sqrt(pow(($array[$i]['l/kr'] - $averageLiterPerKr), 2));
+			$literPerKrTemp += sqrt(pow(($array[$i]['l/kr'] - $averageLiterPerKr), 2));
 		}
 		
 		$array[0]['kilometerVariance'] = $kmTemp / $counter;
@@ -126,9 +129,15 @@
 		$array[0]['literPerKrStandardDev'] = sqrt($array[0]['literPerKrVariance']);
 		$array[0]['literPerKrMedian'] = calculateMedian($literPerKrArray);
 			
+		$array[0]['kmFrequency'] = kmFrequency($array);
+		$array[0]['literFrequency'] = literFrequency($array);
+		$array[0]['kronerFrequency'] = kronerFrequency($array);
+		$array[0]['kronerPerLiterFrequency'] = kronerPerLiterFrequency($array);
+		$array[0]['kilometerPerLiterFrequency'] = kilometerPerLiterFrequency($array);
+		$array[0]['kilometerPerKronerFrequency'] = kilometerPerKronerFrequency($array);
+
 		return $array;
 	}
-	
 	
 	
 	function calculateMedian($array) {
