@@ -117,28 +117,23 @@
 
 
 	table {
-	  width: 100%;
-	  background-color: #fff;
+		width: 100%;
+		background-color: #fff;
 	}
 
 	th, td {
-	  font-weight: unset;
-	  padding-right: 10px;
-	}
-
-	.column100 {
-	  width: 130px;
-	  padding-left: 25px;
-	}
-
-	.row100.head th {
-	  padding-top: 24px;
-	  padding-bottom: 20px;
+		text-align: center; 
+		font-weight: unset;
+		padding-right: 10px;
+		padding-top: 24px;
+		padding-bottom: 20px;
+		width: 130px;
+		padding-left: 25px;
 	}
 
 	.row100 td {
-	  padding-top: 18px;
-	  padding-bottom: 14px;
+		padding-top: 18px;
+		padding-bottom: 14px;
 	}
 
 </style>
