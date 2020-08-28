@@ -15,37 +15,42 @@
 				include 'xml.php';
 				$rss = new SimpleXMLElement($xmlFeed);
 		?>
-		<center>
-			<table border="1" class="xmlTable">
-				<tr bgcolor="#9acd32">
-					<th>
-						Parti
-					</th>
-					<th>
-						Formand
-					</th>
-					<th>
-						Antal mandater
-					</th>
-				</tr>
-		<?php
+		
+		<center class="politicTable  m-b-110">
+			<table>
+				<thead>
+					<tr class="row100 head">
+						<th class="column100">
+							Parti
+						</th>
+						<th class="column100">
+							Formand
+						</th>
+						<th class="column100">
+							Antal mandater
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+			<?php
 				foreach ($rss ->xpath('//channel') as $channel) {
 					foreach ($channel->item as $item) {
-						echo 	"<tr>
-									<td>
+						echo 	"<tr class=row100>
+									<td class=column100>
 										$item->parti
 									</td>
-									<td>
+									<td class=column100>
 										$item->chairman
 									</td>
-									<td>
+									<td class=column100>
 										$item->mandates
 									</td>
 								</tr>";
 						
 					}
 				}
-		?>
+			?>
+				</tbody>
 			</table> 
 		</center>
 		
@@ -54,27 +59,88 @@
 				Tilbage
 			</button>
 		</form>
+		
+		
+		
 	</body>
 
 </html>
 
 <style>
-	.xmlTable {
-		margin-top: 20px;
-		width: 60%;
+
+
+
+
+	.politicTable {
+		border-radius: 16px;
+		overflow: hidden;
+		background: #7918f2;
+		background: -webkit-linear-gradient(-68deg, #ac32e4 , #4801ff);
+		background: -o-linear-gradient(-68deg, #ac32e4 , #4801ff);
+		background: -moz-linear-gradient(-68deg, #ac32e4 , #4801ff);
+		background: linear-gradient(-68deg, #ac32e4 , #4801ff);
 	}
 
-	.newsHeader {
-		font-family: times, Times New Roman, times-roman, georgia, serif;
-		font-size: 48px;
-		line-height: 40px;
-		letter-spacing: -1px;
-		color: #444;
-		margin: 0 0 0 0;
-		padding: 0 0 0 0;
-		font-weight: 100;
-		text-align:center;
+	.politicTable table {
+		background-color: transparent;
 	}
+
+	.politicTable td {
+		font-family: Montserrat-Regular;
+		font-size: 14px;
+		color: #fff;
+		line-height: 1.4;
+	}
+
+	.politicTable th {
+		font-family: Montserrat-Medium;
+		font-size: 12px;
+		color: #fff;
+		line-height: 1.4;
+		text-transform: uppercase;
+
+		background-color: rgba(255,255,255,0.32);
+	}
+
+	.row100:hover td {
+		background-color: rgba(255,255,255,0.1);
+	}
+
+	.politicTable .hov-column {
+		background-color: rgba(255,255,255,0.1);
+	}
+
+
+	.row100 td:hover {
+		background-color: rgba(255,255,255,0.2);
+	}
+
+
+	table {
+	  width: 100%;
+	  background-color: #fff;
+	}
+
+	th, td {
+	  font-weight: unset;
+	  padding-right: 10px;
+	}
+
+	.column100 {
+	  width: 130px;
+	  padding-left: 25px;
+	}
+
+	.row100.head th {
+	  padding-top: 24px;
+	  padding-bottom: 20px;
+	}
+
+	.row100 td {
+	  padding-top: 18px;
+	  padding-bottom: 14px;
+	}
+
 </style>
 
 
