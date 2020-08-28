@@ -5,7 +5,7 @@
 		$arr['800:850'] = 0;
 		$arr['850:900'] = 0;
 		$arr['900:950'] = 0;
-		$arr['950:1000'] = 0;
+		$arr['950:'] = 0;
 		$length = sizeof($array);
 		
 		for($i=0; $i<$length; $i++) {
@@ -18,15 +18,15 @@
 				$arr['850:900'] += 1;
 			} elseif ($kmValue > 900 && $kmValue <= 950) {
 				$arr['900:950'] += 1;
-			} elseif ($kmValue > 950 && $kmValue <= 1000) {
-				$arr['950:1000'] += 1;
+			} elseif ($kmValue > 950) {
+				$arr['950:'] += 1;
 			}
 		}
 		$arr['0:800'] = $arr['0:800'] / $length * 100;
 		$arr['800:850'] = $arr['800:850'] / $length * 100;
 		$arr['850:900'] = $arr['850:900'] / $length * 100;
 		$arr['900:950'] = $arr['900:950'] / $length * 100;
-		$arr['950:1000'] = $arr['950:1000'] / $length * 100;
+		$arr['950:'] = $arr['950:'] / $length * 100;
 	
 		return $arr;
 	}
@@ -38,7 +38,7 @@
 		$arr['25:30'] = 0;
 		$arr['30:35'] = 0;
 		$arr['35:40'] = 0;
-		$arr['40:45'] = 0;
+		$arr['40:'] = 0;
 		$length = sizeof($array);
 		
 		for($i=0; $i<$length; $i++) {
@@ -53,8 +53,8 @@
 				$arr['30:35'] += 1;
 			} elseif ($literValue > 35 && $literValue <= 40) {
 				$arr['35:40'] += 1;
-			} elseif ($literValue > 40 && $literValue <= 45) {
-				$arr['40:45'] += 1;
+			} elseif ($literValue > 40) {
+				$arr['40:'] += 1;
 			}
 		}
 		$arr['0:20'] = $arr['0:20'] / $length * 100;
@@ -62,25 +62,25 @@
 		$arr['25:30'] = $arr['25:30'] / $length * 100;
 		$arr['30:35'] = $arr['30:35'] / $length * 100;
 		$arr['35:40'] = $arr['35:40'] / $length * 100;
-		$arr['40:45'] = $arr['40:45'] / $length * 100;
+		$arr['40:'] = $arr['40:'] / $length * 100;
 	
 		return $arr;
 	}
 	
 	function kronerFrequency($array)
 	{
-		$arr['100:150'] = 0;
+		$arr['0:150'] = 0;
 		$arr['150:200'] = 0;
 		$arr['200:250'] = 0;
 		$arr['250:300'] = 0;
 		$arr['300:350'] = 0;
-		$arr['350:400'] = 0;
+		$arr['350:'] = 0;
 		$length = sizeof($array);
 		
 		for($i=0; $i<$length; $i++) {
 			$value = $array[$i]['kroner'];
-			if ($value > 100 && $value <= 150) {
-				$arr['100:150'] += 1;
+			if ($value > 0 && $value <= 150) {
+				$arr['0:150'] += 1;
 			} elseif ($value > 150 && $value <= 200) {
 				$arr['150:200'] += 1;
 			} elseif ($value > 200 && $value <= 250) {
@@ -89,16 +89,16 @@
 				$arr['250:300'] += 1;
 			} elseif ($value > 300 && $value <= 350) {
 				$arr['300:350'] += 1;
-			} elseif ($value > 350 && $value <= 400) {
-				$arr['350:400'] += 1;
+			} elseif ($value > 350) {
+				$arr['350:'] += 1;
 			}
 		}
-		$arr['100:150'] = $arr['100:150'] / $length * 100;
+		$arr['0:150'] = $arr['0:150'] / $length * 100;
 		$arr['150:200'] = $arr['150:200'] / $length * 100;
 		$arr['200:250'] = $arr['200:250'] / $length * 100;
 		$arr['250:300'] = $arr['250:300'] / $length * 100;
 		$arr['300:350'] = $arr['300:350'] / $length * 100;
-		$arr['350:400'] = $arr['350:400'] / $length * 100;
+		$arr['350:'] = $arr['350:'] / $length * 100;
 	
 		return $arr;
 	}
@@ -109,7 +109,7 @@
 		$arr['8:8,5'] = 0;
 		$arr['8,5:9'] = 0;
 		$arr['9:9,5'] = 0;
-		$arr['9,5:10'] = 0;
+		$arr['9,5:'] = 0;
 
 		$length = sizeof($array);
 		
@@ -123,8 +123,8 @@
 				$arr['8,5:9'] += 1;
 			} elseif ($value > 9 && $value <= 9.5) {
 				$arr['9:9,5'] += 1;
-			} elseif ($value > 9.5 && $value <= 10) {
-				$arr['9,5:10'] += 1;
+			} elseif ($value > 9.5) {
+				$arr['9,5:'] += 1;
 			}
 		}
 		
@@ -132,7 +132,7 @@
 		$arr['8:8,5'] = $arr['8:8,5'] / $length * 100;
 		$arr['8,5:9'] = $arr['8,5:9'] / $length * 100;
 		$arr['9:9,5'] = $arr['9:9,5'] / $length * 100;
-		$arr['9,5:10'] = $arr['9,5:10'] / $length * 100;
+		$arr['9,5:'] = $arr['9,5:'] / $length * 100;
 	
 		return $arr;
 	}
@@ -145,7 +145,7 @@
 		$arr['23:24'] = 0;
 		$arr['24:25'] = 0;
 		$arr['25:26'] = 0;
-		$arr['26:27'] = 0;
+		$arr['26:'] = 0;
 
 		$length = sizeof($array);
 		
@@ -163,8 +163,8 @@
 				$arr['24:25'] += 1;
 			} elseif ($value > 25 && $value <= 26) {
 				$arr['25:26'] += 1;
-			} elseif ($value > 26 && $value <= 27) {
-				$arr['26:27'] += 1;
+			} elseif ($value > 26) {
+				$arr['26:'] += 1;
 			}
 		}
 		
@@ -174,7 +174,7 @@
 		$arr['23:24'] = $arr['23:24'] / $length * 100;
 		$arr['24:25'] = $arr['24:25'] / $length * 100;
 		$arr['25:26'] = $arr['25:26'] / $length * 100;
-		$arr['26:27'] = $arr['26:27'] / $length * 100;
+		$arr['26:'] = $arr['26:'] / $length * 100;
 	
 		return $arr;
 	}

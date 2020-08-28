@@ -26,12 +26,12 @@
 			['23 - 24 km/l', graphArray[0]['kilometerPerLiterFrequency']['23:24'], 'silver'],            
 			['24 - 25 km/l', graphArray[0]['kilometerPerLiterFrequency']['24:25'], '#b87333'],
 			['25 - 26 km/l', graphArray[0]['kilometerPerLiterFrequency']['25:26'], '#0040ff'],
-			['26 - 27 km/l', graphArray[0]['kilometerPerLiterFrequency']['26:27'], '#0040ff']
+			['26 km/l -', graphArray[0]['kilometerPerLiterFrequency']['26:'], '#0040ff']
 		]);
 
 		var options = {
 			title: 'Frekvens diagram over kilometer per liter',
-			vAxis: {title: 'Kilometer interval'},
+			vAxis: {title: 'Kilometer per liter interval'},
 			hAxis: {title: 'Procent'},
 			chartArea: {width: '50%'},
 			legend: 'none'

@@ -20,7 +20,7 @@
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
 			[' ', ' ', { role: 'style' }],
-			['40 - 45 liter', graphArray[0]['literFrequency']['40:45'], 'color: #00e600' ],
+			['40 liter -', graphArray[0]['literFrequency']['40:'], 'color: #00e600' ],
 			['35 - 40 liter', graphArray[0]['literFrequency']['35:40'], 'color: #ff4d4d' ],
 			['30 - 35 liter', graphArray[0]['literFrequency']['30:35'], 'color: #e5e4e2' ], 
 			['25 - 30 liter', graphArray[0]['literFrequency']['25:30'], 'gold'],

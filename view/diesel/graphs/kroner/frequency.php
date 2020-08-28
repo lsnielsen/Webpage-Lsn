@@ -20,12 +20,12 @@
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
 			[' ', ' ', { role: 'style' }],
-			['350 kr - 400 kr', graphArray[0]['kronerFrequency']['350:400'], 'color: #00e600' ],
+			['350 kr -', graphArray[0]['kronerFrequency']['350:'], 'color: #00e600' ],
 			['300 kr - 350 kr', graphArray[0]['kronerFrequency']['300:350'], 'color: #ff4d4d' ],
 			['250 kr - 300 kr', graphArray[0]['kronerFrequency']['250:300'], 'color: #e5e4e2' ], 
 			['200 kr - 250 kr', graphArray[0]['kronerFrequency']['200:250'], 'gold'],
 			['150 kr - 200 kr', graphArray[0]['kronerFrequency']['150:200'], 'silver'],            
-			['100 kr - 150 kr', graphArray[0]['kronerFrequency']['100:150'], '#b87333']     
+			['0 kr - 150 kr', graphArray[0]['kronerFrequency']['0:150'], '#b87333']     
 		]);
 
 		var options = {

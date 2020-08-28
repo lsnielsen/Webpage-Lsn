@@ -20,7 +20,7 @@
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
 			[' ', ' ', { role: 'style' }],
-			['9,50 kr - 10,00 kr', graphArray[0]['kronerPerLiterFrequency']['9,5:10'], 'silver'],       
+			['9,50 kr - ', graphArray[0]['kronerPerLiterFrequency']['9,5:'], 'silver'],       
 			['9,00 kr - 9,50 kr', graphArray[0]['kronerPerLiterFrequency']['9:9,5'], 'gold'],
 			['8,50 kr - 9,00 kr', graphArray[0]['kronerPerLiterFrequency']['8,5:9'], 'color: #e5e4e2' ], 
 			['8,00 kr - 8,50 kr', graphArray[0]['kronerPerLiterFrequency']['8:8,5'], 'color: #ff4d4d' ],
