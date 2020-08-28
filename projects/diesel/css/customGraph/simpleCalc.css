@@ -1,0 +1,162 @@
+.inputValues {
+	position: relative;
+	left: 20px;
+}
+
+.headerInputField {
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	display: none;
+}
+
+.kronerPerLiterField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 200px;
+	height: 30px;
+}
+
+.kronerPerLiterCross {
+	position: relative;
+	left: 50px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 0px;
+}
+
+.kronerPerLiterTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.kilometerPerLiterField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 190px;
+	height: 30px;
+}
+
+.kilometerPerLiterCross {
+	position: relative;
+	left: 70px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.kilometerPerLiterTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+
+.kilometerPerKronerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 200px;
+	height: 30px;
+}
+
+.kilometerPerKronerCross {
+	position: relative;
+	left: 80px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.kilometerPerKronerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.kronerPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 200px;
+	height: 30px;
+}
+
+.kronerPerKilometerCross {
+	position: relative;
+	left: 90px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.kronerPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.literPerKilometerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 200px;
+	height: 30px;
+}
+
+.literPerKilometerCross {
+	position: relative;
+	left: 90px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.literPerKilometerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
+.literPerKronerField {
+	position: absolute;
+	border: solid;
+	border-color: #00804d;
+	border-radius: 25px;
+	background-color: #66ffc2;
+	display: none;
+	margin: 30px 0px 0px 10px;
+	width: 200px;
+	height: 30px;
+}
+
+.literPerKronerCross {
+	position: relative;
+	left: 90px;
+	bottom: 20px;
+	cursor: pointer;
+	width: 10px;
+}
+
+.literPerKronerTxt {
+    margin-top: 5px;
+    margin-left: -15px;
+}

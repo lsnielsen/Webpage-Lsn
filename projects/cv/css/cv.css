@@ -1,0 +1,122 @@
+
+	#basicHeaderInfo {
+		margin-top:30px; 
+	}
+	#profilePic {
+		width: 200px; 
+		height: 200px; 
+		margin-bottom: -50px;
+		margin-right: 20px;
+	}
+	.attribute {
+		font-size: 35px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		margin-left: 40px;
+	}
+	.columnTxt {
+		display: inline-block;
+		padding: 10px;
+		width:500px; 
+		margin-bottom: -10px;
+	}
+	.firstColumn {
+		background-color: #8080ff;
+		margin-right:10px; 
+		border-radius: 20px 0px 0px 20px;
+		width: 602px;
+	}
+	.secondColumn {
+		background-color: #99ff99;
+		margin-left:-18.5px;
+	}
+	.thirdColumn {
+		background-color: #ff8080;
+		margin-left:-9px;	
+		width: 300px;
+		border-radius: 0px 20px 20px 0px;
+	}
+	.attributeText {
+		font-style: oblique;
+		font-size: 30px;
+		font-weight: 200;
+		color: black;
+	}
+
+	#bodyTable {
+		width: 500px;
+		margin-left: 100px;
+	}
+	.bodyTableInfo {
+		font-size: 30px;
+		font-weight: 800;
+	}
+	.education {
+		background-color: #ffff66;
+	}
+	.sparetime{
+		background-color: #ff00ff;;
+	}
+	.qualifications{
+		background-color: #9999ff;
+	}
+	.language {
+		background-color: #ff9900;
+	}
+	.duringTime {
+		background-color: #993399;
+	}
+	.emptyTableCell {
+		 background-color: grey;
+	}
+	.tableCell {
+		border-radius: 20px 20px 20px 20px;
+	}
+	.tableHeader {
+		font-size: 30px;
+		color: black;
+		text-decoration: none; 
+		background-color: none;		
+	}
+	a:link {
+		text-decoration: none;
+		background-color: none;		
+	}
+	a:visited {
+		text-decoration: none;
+		background-color: none;
+	}
+	.bulletTxt {
+		font-size: 15px;
+		color: black;
+		text-decoration: none; 
+		background-color: none;
+	}
+	#backToStartButton {
+		padding: 20;
+		margin-bottom: 30px;
+		border-radius: 20px;
+		width: 100%;
+		background-color: #ff944d;
+		font-size: 20px;
+		border: solid #8cff1a;
+		border-width: 1px 1px 1px 1px;
+		font-family: Georgia, serif;
+	}
+	.subheader {
+		border: none;
+		background-color: inherit;
+		font-size: 50px;
+		cursor: pointer;
+		font-weight: bold;
+		font-family: "Times New Roman", Times, serif;
+	}
+
+
+
+
+
+
+
+
+
