@@ -22,6 +22,50 @@
 					picture-in-picture" allowfullscreen>
 			</iframe>
 		</div>
+		
+		<?php
+				include 'govTable.php';
+				$rss = new SimpleXMLElement($xmlFeed);
+		?>
+		
+		<center class="politicTable">
+			<table>
+				<thead>
+					<tr class="row100">
+						<th>
+							Parti
+						</th>
+						<th>
+							Formand
+						</th>
+						<th>
+							Antal mandater
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+			<?php
+				foreach ($rss ->xpath('//channel') as $channel) {
+					foreach ($channel->item as $item) {
+						echo 	"<tr class=row100>
+									<td>
+										$item->parti
+									</td>
+									<td>
+										$item->chairman
+									</td>
+									<td>
+										$item->mandates
+									</td>
+								</tr>";
+						
+					}
+				}
+			?>
+				</tbody>
+			</table> 
+		</center>
+		
 	</body>
 
 

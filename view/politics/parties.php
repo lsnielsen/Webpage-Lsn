@@ -13,7 +13,7 @@
 		</h1>		
 	
 		<?php
-				include 'xml.php';
+				include 'partiTable.php';
 				$rss = new SimpleXMLElement($xmlFeed);
 		?>
 		
