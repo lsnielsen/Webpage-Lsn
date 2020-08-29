@@ -25,6 +25,8 @@
 		include("../view/diesel/view/liter/liter.php");
 	} elseif ($dieselButton == "kronerPage") {
 		include("../view/diesel/view/kroner/kroner.php");
+	} elseif ($dieselButton == "datePage") {
+		include("../view/diesel/view/date/date.php");
 	} elseif (isset($dieselButton)) {
 		setDieselFrontpage();
 	}

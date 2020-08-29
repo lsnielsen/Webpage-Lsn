@@ -31,8 +31,15 @@
 				<button class="dieselButton" 
 						value="dieselPage"
 						name="dieselButton"
-						style="left: -600px;">
+						style="left: -800px;">
 					Tilbage
+				</button>
+				
+				<button class="dieselButton" 
+						value="datePage"
+						name="dieselButton"
+						style="left: -600px;">
+					Statistik for datoerne
 				</button>
 
 				<button class="dieselButton" 
@@ -103,8 +110,15 @@
 				<button class="dieselButton" 
 						value="dieselPage"
 						name="dieselButton"
-						style="left: -600px;">
+						style="left: -800px;">
 					Tilbage
+				</button>
+				
+				<button class="dieselButton" 
+						value="datePage"
+						name="dieselButton"
+						style="left: -600px;">
+					Statistik for datoerne
 				</button>
 
 				<button class="dieselButton" 
