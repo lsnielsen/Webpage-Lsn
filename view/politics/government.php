@@ -5,6 +5,8 @@
 		<title>
 			Regeringen
 		</title>
+		<link rel="stylesheet" type="text/css" href="css/backButton.css">
+		<link rel="stylesheet" type="text/css" href="css/parties.css">
 	</head>
 
 	<body style="background-color: blue;">
@@ -17,9 +19,10 @@
 			<div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
 				Her er Mette Frederiksens grundlovstale for 2020
 			</div>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/BXBLi-3szG8" 
+			<iframe width="600" height="330" src="https://www.youtube.com/embed/BXBLi-3szG8" 
 					frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
-					picture-in-picture" allowfullscreen>
+					picture-in-picture" allowfullscreen
+					style="margin-bottom: 20px;">
 			</iframe>
 		</div>
 		
@@ -28,7 +31,11 @@
 				$rss = new SimpleXMLElement($xmlFeed);
 		?>
 		
+		
 		<center class="politicTable">
+			<h1>
+				Tabel over regeringens ministre
+			</h1>
 			<table>
 				<thead>
 					<tr class="row100">
@@ -59,6 +66,11 @@
 			</table> 
 		</center>
 		
+		<form action="/Webpage-Lsn/controller/politics.php" method="post">
+			<button id="politicsBackButton" type="submit"> 
+				Tilbage
+			</button>
+		</form>
 	</body>
 
 
