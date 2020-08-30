@@ -215,6 +215,40 @@
 	
 	
 	
+	function dateFrequency($array)
+	{
+		$arr['2018'] = 0;
+		$arr['2019'] = 0;
+		$arr['2020'] = 0;
+		$arr['2021'] = 0;
+
+		$length = sizeof($array);
+		
+		for($i=0; $i<$length; $i++) {
+			$value = $array[$i][1];
+			$dateLength = strlen($value);
+			$year = $value[$dateLength-2] .  $value[$dateLength-1]; 
+			if ($year == "18") {
+				$arr['2018'] += 1;
+			} elseif ($year == "19") {
+				$arr['2019'] += 1;
+			} elseif ($year == "20") {
+				$arr['2020'] += 1;
+			} elseif ($year == "21") {
+				$arr['2021'] += 1;
+			}
+		}
+		
+		$arr['2018'] = $arr['2018'] / $length * 100;
+		$arr['2019'] = $arr['2019'] / $length * 100;
+		$arr['2020'] = $arr['2020'] / $length * 100;
+		$arr['2021'] = $arr['2021'] / $length * 100;
+	
+		return $arr;
+	}
+	
+	
+	
 	
 	
 	
