@@ -33,13 +33,10 @@
 				<thead>
 					<tr class="row100">
 						<th>
-							Parti
+							Navn
 						</th>
 						<th>
-							Formand
-						</th>
-						<th>
-							Antal mandater
+							Minister område
 						</th>
 					</tr>
 				</thead>
@@ -49,16 +46,12 @@
 					foreach ($channel->item as $item) {
 						echo 	"<tr class=row100>
 									<td>
-										$item->parti
+										$item->name
 									</td>
 									<td>
-										$item->chairman
-									</td>
-									<td>
-										$item->mandates
+										$item->area
 									</td>
 								</tr>";
-						
 					}
 				}
 			?>

@@ -6,115 +6,169 @@ $xmlFeed = <<<XML
 <rss version="2.0">
 <channel>
 	<item>
-		<parti>
-			Socialdemokratiet
-		</parti>
-		<chairman>
+		<name>
 			Mette Frederiksen
-		</chairman>
-		<mandates>
-			48
-		</mandates>
+		</name>
+		<area>
+			Statsminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Venstre
-		</parti>
-		<chairman>
-			Jakob Elleman
-		</chairman>
-		<mandates>
-			42
-		</mandates>
+		<name>
+			Nicolai Wammen
+		</name>
+		<area>
+			Finansminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Dansk Folkeparti
-		</parti>
-		<chairman>
-			Kristian Thulesen Dahl
-		</chairman>
-		<mandates>
-			16
-		</mandates>
+		<name>
+			Jeppe Kofod
+		</name>
+		<area>
+			Udenrigsminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Radikale Venstre
-		</parti>
-		<chairman>
-			Morten Østergaard
-		</chairman>
-		<mandates>
-			16
-		</mandates>
+		<name>
+			Nick Hækkerup
+		</name>
+		<area>
+			Justitsminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Socialistisk Folkeparti
-		</parti>
-		<chairman>
-			Pia Olsen Dyhr
-		</chairman>
-		<mandates>
-			15
-		</mandates>
+		<name>
+			Astrid Krag
+		</name>
+		<area>
+			Social- og indenrigsminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Enhedslisten
-		</parti>
-		<chairman>
-			Pernille Skipper
-		</chairman>
-		<mandates>
-			13
-		</mandates>
+		<name>
+			Morten Bødskov
+		</name>
+		<area>
+			Skatteminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Det Konservative Folkeparti
-		</parti>
-		<chairman>
-			Søren Pape Poulsen
-		</chairman>
-		<mandates>
-			13
-		</mandates>
+		<name>
+			Dan Jørgensen
+		</name>
+		<area>
+			Klima-, energi- og forsyningsminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Nye Borgerlige
-		</parti>
-		<chairman>
-			Lars Boje Mathiessen
-		</chairman>
-		<mandates>
-			4
-		</mandates>
+		<name>
+			Mogens Jensen
+		</name>
+		<area>
+			Klima-, energi- og forsyningsminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Liberal Alliance
-		</parti>
-		<chairman>
-			Alex Vanopslagh
-		</chairman>
-		<mandates>
-			3
-		</mandates>
+		<name>
+			Magnus Heunicke
+		</name>
+		<area>
+			Sundheds- og ældreminister
+		</area>
 	</item>
 	<item>
-		<parti>
-			Alternativet
-		</parti>
-		<chairman>
-			
-		</chairman>
-		<mandates>
-			1
-		</mandates>
+		<name>
+			Benny Engelbrecht
+		</name>
+		<area>
+			Transportminister
+		</area>
 	</item>
+	<item>
+		<name>
+			Rasmus Prehn
+		</name>
+		<area>
+			Minister for udviklingssamarbejde
+		</area>
+	</item>
+	<item>
+		<name>
+			Pernille Rosenkrantz-Theil
+		</name>
+		<area>
+			Børne- og undervisningsminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Trine Bramsen
+		</name>
+		<area>
+			Forsvarsminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Ane Halsboe-Jørgensen
+		</name>
+		<area>
+			Uddannelses- og forskningsminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Simon Kollerup
+		</name>
+		<area>
+			Erhversminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Mattias Tesfaye
+		</name>
+		<area>
+			Udlændinge- og integrationsminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Peter Hummelgaard
+		</name>
+		<area>
+			Beskæftigelsesminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Kaare Dybvad Bek
+		</name>
+		<area>
+			Boligminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Lea Wermelin
+		</name>
+		<area>
+			Miljøminister
+		</area>
+	</item>
+	<item>
+		<name>
+			Joy Mogensen
+		</name>
+		<area>
+			Kulturminister og kirkeminister
+		</area>
+	</item>
+	
+	
+
+
 </channel>
 </rss>
 
