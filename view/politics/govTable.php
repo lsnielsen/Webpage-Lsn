@@ -66,7 +66,7 @@ $xmlFeed = <<<XML
 			Mogens Jensen
 		</name>
 		<area>
-			Klima-, energi- og forsyningsminister
+			Minister for fødevarer, fiskeri og ligestilling og minister for nordisk samarbejde
 		</area>
 	</item>
 	<item>
