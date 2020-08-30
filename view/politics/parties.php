@@ -20,7 +20,7 @@
 		<center class="politicTable">
 			<table>
 				<thead>
-					<tr class="row100">
+					<tr class="politicRow">
 						<th>
 							Parti
 						</th>
@@ -36,7 +36,7 @@
 			<?php
 				foreach ($rss ->xpath('//channel') as $channel) {
 					foreach ($channel->item as $item) {
-						echo 	"<tr class=row100>
+						echo 	"<tr class=politicRow>
 									<td>
 										$item->parti
 									</td>
