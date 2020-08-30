@@ -1,5 +1,5 @@
 <?php
-	include "../view/diesel/helpFunctions/advancedHelper.php";
+	include "../projects/diesel/helpFunctions/advancedHelper.php";
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -14,7 +14,7 @@
             Dato
         </title>  
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/view/diesel/css/advanced.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
@@ -35,7 +35,7 @@
 				</button>
 			</form>
 		
-		<?php include "../view/diesel/graphs/date.php"; ?>
+		<?php include "../projects/diesel/graphs/date.php"; ?>
 		
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">
 			<button class="dieselButton" 
@@ -48,7 +48,7 @@
 	</body>
 </html>
 
-<?php include "../view/diesel/helpFunctions/tableSort.php" ?>
+<?php include "../projects/diesel/helpFunctions/tableSort.php" ?>
 
 
 
