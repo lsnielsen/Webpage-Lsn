@@ -5,7 +5,9 @@
 		<title>
 			LSN
 		</title>
+		<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 		<link rel="stylesheet" href="/../Webpage-Lsn/view/frontpage/css/frontpage.css" type="text/css">
+		<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 	</head>
 	<body>
 		<h1>
@@ -33,10 +35,33 @@
 				</button>
 			</form>
 		</div>
+		<div id="my-signin2"></div>
+
 	</body>
 
 </html>
 
+<script>
+	function onSuccess(googleUser) {
+		console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+	}
+	function onFailure(error) {
+		console.log("failure");
+		console.log(error);
+	}
+	function renderButton() {
+		console.log("renderButton");
+		gapi.signin2.render('my-signin2', {
+			'scope': 'profile email',
+			'width': 240,
+			'height': 50,
+			'longtitle': true,
+			'theme': 'dark',
+			'onsuccess': onSuccess,
+			'onfailure': onFailure
+	  });
+	}
+</script>
 
 
 
