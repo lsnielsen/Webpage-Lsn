@@ -4,21 +4,22 @@
         <title>  
 			Løb
         </title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/diesel.css" type="text/css">
-	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/popup.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
+	<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
 	<body>
 		<h1>
 			Løbe page
 		</h1>   
-		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">  
+		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
 			<fieldset style="background-color: #b3ecff">
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
 				</legend>  
-				<div style="margin-top: 30px;">
+				<div style="margin-top: 50px;">
 					<div style="display: inline-block;">
-						<label style="margin-left: 40px; font-weight: bold;">
+						<label style="margin-left: 40px; font-weight: bold; margin-top: -100px;">
 							Dato <br>
 						</label>
 						<input class="runningInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  
@@ -55,14 +56,13 @@
 						<tr>
 							<th class="dieselHeader">Dato</th>
 							<th class="dieselHeader">Kilometer</th>
-							<th class="dieselHeader">Kroner</th>
-							<th class="dieselHeader">Liter</th>
+							<th class="dieselHeader">Tid</th>
 							<th class="dieselHeader">Slet række</th>
 						</tr>
-						<?php include("runTable.php"); ?>
+						<?php include  '../projects/running/runTable.php'; ?>
 					</table>
 				</div>
-				<?php include("statisticButtons.php"); ?>
+				<?php //include("statisticButtons.php"); ?>
 			</fieldset>  
 		</form>     	
 		
@@ -88,7 +88,13 @@
 			</form>
 		</div>
 		
-		<?php include("frontChart.php"); ?>
+		<?php
+			echo "including";
+		?>
+		<?php
+			include("../projects/running/frontChart.php"); 
+			echo "stop including";
+		?>
 		
 		
         <div id="chartdiv" style="width:400px; height:400px;"></div>
@@ -103,63 +109,5 @@
 	</form>
 </html> 
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-	$(".deleteRow").click(function() {
-		var row = $(this).closest('tr');
-		var txt = row.text();
-		var id = row.attr('id');
-		var dato;
-		var km;
-		var liter;
-		var kroner;
-		var counter = 1;
-		row.find('td').each(function() {
-			var stuff = $(this).text();
-			if (counter == 1) {
-				dato = "Dato: " + stuff;
-				counter++;
-			} else if (counter == 2) {
-				km = "Km: " + stuff;
-				counter++;
-			} else if (counter == 3) {
-				kroner = "Kroner: " + stuff;
-				counter++;
-			} else if (counter == 4) {
-				liter = "Liter: " + stuff;
-				counter = 0;
-			}
-		});   
-		
-		txt = dato + km + kroner + liter;
 
-		$(".dateToDelete").text(dato);
-		$(".kmToDelete").text(km);
-		$(".krToDelete").text(kroner);
-		$(".literToDelete").text(liter);
-		$("#hiddenField").val(id);
-		$('.deleteDieselRow').show();
-		$('.deleteDieselRowYes').click(function(){
-			$("#deleteSpecificRow").submit();
-		});
-	});
-    $('.deleteDieselRowPopupCloseButton').click(function(){
-        $('.deleteDieselRow').hide();
-    });
-    $('.deleteDieselRowNo').click(function(){
-        $('.deleteDieselRow').hide();
-    });
-    
-	$('.wrongDieselInputButton').click(function(){
-        $('.wrongDieselInput').hide();
-    });
-    $('.wrongDieselInputPopupCloseButton').click(function(){
-        $('.wrongDieselInput').hide();
-    });
-	
-	if($(".notDisplayingWrongInput").length){
-		$(".notDisplayingWrongInput").css("display", "block");
-	}
-	
-</script>
 

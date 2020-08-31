@@ -2,7 +2,7 @@
 <?php
 
 
-echo file_get_contents("../projects/running/run.php");
+		include("../projects/running/run.php");
 
 
 
