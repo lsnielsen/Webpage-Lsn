@@ -1,17 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<?php echo "Hello"; ?>
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="../amcharts/amcharts.js" type="text/javascript"></script>
 <script src="../amcharts/gauge.js" type="text/javascript"></script>
         <script>
-			console.log("lskdfjkfj");
+			console.log("start");
 			var chart;
 			var arrow;
 			var axisKM;
 			var axisMiles;
 			
 			AmCharts.ready(function () {
-				console.log("ldfjsdflkj");
+				console.log("am chart function");
 				// create angular gauge
 				chart = new AmCharts.AmAngularGauge();
 				chart.radius = "45%";

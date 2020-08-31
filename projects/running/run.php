@@ -59,7 +59,7 @@
 							<th class="dieselHeader">Tid</th>
 							<th class="dieselHeader">Slet række</th>
 						</tr>
-						<?php include  '../projects/running/runTable.php'; ?>
+						<?php //include  '../projects/running/runTable.php'; ?>
 					</table>
 				</div>
 				<?php //include("statisticButtons.php"); ?>
@@ -87,13 +87,9 @@
 				<input type="hidden" id="hiddenField" name="dieselButton"/>
 			</form>
 		</div>
-		
-		<?php
-			echo "including";
-		?>
+
 		<?php
 			include("../projects/running/frontChart.php"); 
-			echo "stop including";
 		?>
 		
 		
