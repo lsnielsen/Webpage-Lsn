@@ -5,8 +5,6 @@
 			Løb
         </title> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        
-		
 		
         <script src="/Webpage-Lsn/projects/running/graphs/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="/Webpage-Lsn/projects/running/graphs/amcharts/gauge.js" type="text/javascript"></script>
