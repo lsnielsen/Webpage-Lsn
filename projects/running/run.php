@@ -10,12 +10,12 @@
         <link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/style.css" type="text/css">
         <script src="/Webpage-Lsn/projects/running/graphs/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="/Webpage-Lsn/projects/running/graphs/amcharts/gauge.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
-	<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
 	<body>
 		<h1>
-			Løbe page
+			Løbe side
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
 			<fieldset style="background-color: #b3ecff">
