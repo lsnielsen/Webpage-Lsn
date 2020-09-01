@@ -59,10 +59,10 @@
 							<th class="dieselHeader">Tid</th>
 							<th class="dieselHeader">Slet række</th>
 						</tr>
-						<?php //include  '../projects/running/runTable.php'; ?>
+						<?php include  '../projects/running/runTable.php'; ?>
 					</table>
 				</div>
-				<?php //include("statisticButtons.php"); ?>
+				<?php include("statisticButtons.php"); ?>
 			</fieldset>  
 		</form>     	
 		
