@@ -54,7 +54,7 @@ function setRunningFrontpage()
 				}  
 			} else {		
 				setUpperRunningHtmlBox();
-				setRunningErrorMessageBox($inputArray, $date, $km, $kr, $time);
+				setRunningErrorMessageBox($inputArray, $date, $km, $time);
 				setLowerRunningHtmlBox();
 			}
 		}

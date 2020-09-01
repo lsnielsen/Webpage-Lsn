@@ -3,7 +3,7 @@
 
 
 
-	function setRunningErrorMessageBox($inputArray, $date, $km, $kr, $liter) {	
+	function setRunningErrorMessageBox($inputArray, $date, $km, $time) {	
 		if ($inputArray['wrongDate'] == false) {
 			echo "<div class='errorMessage'> Dato formattet er ikke korrekt. "; 
 			if (!empty($date)) {
