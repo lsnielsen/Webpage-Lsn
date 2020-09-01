@@ -7,28 +7,33 @@
 							if(!mysqli_select_db($con,'lsnDb')) {  
 								echo 'database not selected';  
 							}    
-							$tableData = "SELECT * FROM diesel";
+							$tableData = "SELECT * FROM running";
 							$result = mysqli_query($con,$tableData);
-							$graphArray = makeQueryToArray($result, "table");
-							
-							for($i=0; $i<sizeOf($graphArray); $i++) {
-								echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
-											echo "<td class=runningTableCell>";
-											echo $graphArray[$i][1];
-											echo "</td>
-											<td class=runningTableCell>";
-											echo $graphArray[$i]['kilometer'];
-											echo "</td>
-											<td class=runningTableCell>";
-											echo $graphArray[$i]['kroner'];
-											echo "</td>									
-											<td> 
-												<center> 
-													<div class=deleteRow value=runningPage name=runningButton> 
-														&#10006; 
-													</div> 
-												</center> 
-											</td>
-										</tr>";
+							while ($rowArray = $result->fetch_array()) {
+								$testArray[] = $rowArray;
 							}
+							if (isset($testArray)) {
+								$graphArray = makeQueryToArray($result, "table");
+								for($i=0; $i<sizeOf($graphArray); $i++) {
+									echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
+												echo "<td class=runningTableCell>";
+												echo $graphArray[$i][1];
+												echo "</td>
+												<td class=runningTableCell>";
+												echo $graphArray[$i]['kilometer'];
+												echo "</td>
+												<td class=runningTableCell>";
+												echo $graphArray[$i]['kroner'];
+												echo "</td>									
+												<td> 
+													<center> 
+														<div class=deleteRow value=runningPage name=runningButton> 
+															&#10006; 
+														</div> 
+													</center> 
+												</td>
+											</tr>";
+								}
+							}
+							
 ?>

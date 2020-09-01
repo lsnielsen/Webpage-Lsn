@@ -32,42 +32,40 @@ function checkDatabase($con)
 }
 
 function setRunningFrontpage()
-	{
+{
 		include "../projects/running/helper/frontPageHelper.php";
 		$con = mysqli_connect('127.0.0.1','root','');  
 		
 		checkDatabase($con);
 
-		
-		/**
-		$fetchId = "SELECT * FROM diesel";
+		$fetchId = "SELECT * FROM running";
 		$result = mysqli_query($con,$fetchId);
 		$uniqueId = 0;
 		while($row = $result->fetch_array()){
 			$uniqueId = $row['id'];
 		}
 
-		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr'])) {
+		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time']) && isset($_POST['kr'])) {
 			
 			$date = $_POST['date'];
 			$km = $_POST['km'];
-			$liter = $_POST['liter'];
-			$kr = $_POST['kr'];
+			$time = $_POST['time'];
+			
 			$inputArray = checkRunningInput($date, $km, $time);
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
 				$id = $uniqueId + 1;
-				$sql = "INSERT INTO diesel (id, date, kilometer, liter, kroner) VALUES ('$id', '$date','$km', '$liter', '$kr')";  
+				$sql = "INSERT INTO running (date, kilometer, time) VALUES ('$date','$km', '$time')";  
 				  
 				if(!mysqli_query($con,$sql)) {  
 					echo 'Not inserted';  
 				}  
 			} else {		
-				setUpperHtmlBox();
-				setErrorMessageBox($inputArray, $date, $km, $kr, $liter);
-				setLowerHtmlBox();
+				//setUpperHtmlBox();
+				//setErrorMessageBox($inputArray, $date, $km, $kr, $time);
+				//setLowerHtmlBox();
 			}
-		}*/
+		}
 		
 		include("../projects/running/run.php");
 	}

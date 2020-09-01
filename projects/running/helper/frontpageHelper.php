@@ -5,7 +5,7 @@
 function checkRunningInput($date, $km, $time)
 {
 	
-	return "hej";
+	return false;
 	
 	
 	
