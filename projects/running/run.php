@@ -82,7 +82,7 @@
 					<div class="deleteRunningRowNo runPopupButton">Nej</div>
 				</div>
 			</div>
-			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/run.php" method="post">
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/running.php" method="post">
 				<input type="hidden" id="hiddenField" name="runButton"/>
 			</form>
 		</div>

@@ -24,7 +24,7 @@
 												echo "</td>									
 												<td> 
 													<center> 
-														<div class=deleteRow value=runningPage name=runningButton> 
+														<div class=deleteRow value=runPage name=runButton> 
 															&#10006; 
 														</div> 
 													</center> 
