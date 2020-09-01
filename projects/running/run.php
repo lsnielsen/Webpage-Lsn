@@ -35,8 +35,6 @@
 						</label>
 						<input class="runningInput" type="text" placeholder="ex: 659,4 " name="km">  				 
 					</div>
-				</div>
-				<div style="margin-top: 20px; margin-bottom: 200px;">
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Tid <br>
@@ -49,11 +47,13 @@
 					<button class="runButton" type="submit" value="runPage" name="runButton" style="margin-left: 10px;">  
 						Indsæt tal
 					</button>
+				</div>
+				<div style="margin-top: 20px; margin-bottom: 200px;">
 
 				</div>
 				
 				<div class="runNumbers">
-					<h2 style="margin-left: 150px;">
+					<h2 style="margin-left: 40%;">
 						Tabel over indtastede run tal
 					</h2>
 

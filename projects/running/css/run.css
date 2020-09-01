@@ -1,5 +1,5 @@
 
-	.dieselInput {
+	.runningInput {
 		padding: 12px 20px;
 		margin: 8px 0;
 		box-sizing: border-box;		
@@ -16,7 +16,7 @@
 		background-color: #80ffff;
 	}
 			
-	.dieselButton{
+	.runButton{
 		background-color: #4CAF50;
 		border: none;
 		color: white;
@@ -66,7 +66,7 @@
 	th {
 		font-weight: normal;	
 	}
-	.dieselHeader {
+	.runHeader {
 		font-weight: bold;
 		text-align: center;
 	}
