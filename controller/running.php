@@ -45,12 +45,13 @@ function setRunningFrontpage()
 			$uniqueId = $row['id'];
 		}
 
-		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time']) && isset($_POST['kr'])) {
+		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time'])) {
 			
 			$date = $_POST['date'];
 			$km = $_POST['km'];
 			$time = $_POST['time'];
 			
+			echo "Ready to insert: date: " . $date . ", km: " . $km . ", time: " . $time;
 			$inputArray = checkRunningInput($date, $km, $time);
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
@@ -61,9 +62,9 @@ function setRunningFrontpage()
 					echo 'Not inserted';  
 				}  
 			} else {		
-				//setUpperHtmlBox();
-				//setErrorMessageBox($inputArray, $date, $km, $kr, $time);
-				//setLowerHtmlBox();
+				setUpperRunningHtmlBox();
+				setRunningErrorMessageBox($inputArray, $date, $km, $kr, $time);
+				setLowerRunningHtmlBox();
 			}
 		}
 		

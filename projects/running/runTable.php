@@ -10,9 +10,11 @@
 							$tableData = "SELECT * FROM running";
 							$result = mysqli_query($con,$tableData);
 							while ($rowArray = $result->fetch_array()) {
+								echo "First get here <br>";
 								$testArray[] = $rowArray;
 							}
 							if (isset($testArray)) {
+								echo "calling makeQueryToArray <br>";
 								$graphArray = makeQueryToArray($result, "table");
 								for($i=0; $i<sizeOf($graphArray); $i++) {
 									echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";

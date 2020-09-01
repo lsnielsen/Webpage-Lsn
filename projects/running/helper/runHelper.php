@@ -3,6 +3,7 @@
 	function makeQueryToArray($query, $pageType) 
 	{
 		while ($rowArray = $query->fetch_array()) {
+			echo "do get here";
 			$graphArray[] = $rowArray;
 		}
 		for ($i = 0; $i<sizeof($graphArray); $i++) {
@@ -63,124 +64,6 @@
 		}
 	}
 	
-	function setErrorMessageBox($inputArray, $date, $km, $kr, $liter) {	
-		if ($inputArray['wrongDate'] == false) {
-			echo "<div class='errorMessage'> Dato formattet er ikke korrekt. "; 
-			if (!empty($date)) {
-				echo "Du har skrevet: ";
-				echo " \"" . $date . "\" ";
-			} else { 
-				echo " Du har ikke skrevet noget. "; 
-			}
-			echo "Formattet skal være på formen yyyy-mm-dd</div>";
-			echo "<br><br>";
-		} elseif ($inputArray['wrongKm'] == false) {
-			echo "<div class='errorMessage'> Kilometer formattet er ikke korrekt. ";
-			if (!empty($km)) {
-				echo "Du har skrevet: ";
-				echo " \"" . $km . "\" ";
-			} else { 
-				echo " Du har ikke skrevet noget. "; 
-			}
-			echo "Formattet skal være på formen xxx,yy </div>";
-			echo "<br><br>";
-		} elseif ($inputArray['wrongLiter'] == false) {
-			echo "<div class='errorMessage'> Liter formattet er ikke korrekt. ";
-			if (!empty($liter)) {
-				echo "Du har skrevet: ";
-				echo " \"" . $liter . "\" ";
-			} else { 
-				echo " Du har ikke skrevet noget. "; 
-			}
-			echo "Formattet skal være på formen xxx,yy </div>";
-			echo "<br><br>";
-		} elseif ($inputArray['wrongKroner'] == false) {
-			echo "<div class='errorMessage'> Kroner formattet er ikke korrekt. ";
-			if (!empty($kr)) {
-				echo "Du har skrevet: ";
-				echo " \"" . $kr . "\" ";
-			} else { 
-				echo " Du har ikke skrevet noget. "; 
-			}
-			echo "Formattet skal være på formen xxx,yy </div>";
-			echo "<br><br>";
-		}
-	}
-	
-	function setUpperHtmlBox()
-	{
-		?>
-			<div class="notDisplayingWrongInput wrongDieselInput" style="display: none;">
-				<span class="helper"></span>
-				<div style="max-width: 530;">
-					<div class="wrongDieselInputPopupCloseButton popupCloseButton">
-						&times;
-					</div>
-					<div style="font-size: 25; margin-bottom: 20px;"> 
-						Dit input passer ikke med det korrekte input format 
-					</div>
-		<?php 
-	}
-		
-	function setLowerHtmlBox()
-	{
-		?>
-					<div>
-						<div class="wrongDieselInputButton dieselPopupButton">Ok</div>
-						<div class="wrongDieselInputButton dieselPopupButton">Fortryd</div>
-					</div>
-				</div>
-			</div>
-		<?php
-	}
-	
-	function checkDieselInput($date, $km, $liter, $kr) {
-		
-		$returnStm = true;
-		$dateTestVar = true;
-		$literTestVar = true;
-		$kmTestVar = true;
-		$krTestVar = true;
-		
-		if (!preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)) {
-			$dateTestVar = false;
-			$returnStm = false;
-		}	
-		$kmBool = intChecker($km);
-		$literBool = intChecker($liter);
-		$krBool = intChecker($kr);
-		
-		if(!intChecker($km)) {
-			$kmTestVar = false;
-			$returnStm = false;
-		}
-		if(!intChecker($kr)) {
-			$krTestVar = false;
-			$returnStm = false;
-		}
-		if(!intChecker($liter)) {
-			$literTestVar = false;
-			$returnStm = false;
-		}
-		return ['returnStm' => $returnStm, 'wrongKm' => $kmTestVar, 'wrongDate' => $dateTestVar, 
-					'wrongKroner' => $krTestVar, 'wrongLiter' => $literTestVar];
-	}
-	
-	function intChecker($variable) {
-		if (strlen($variable) == 0) {
-			return false;
-		}
-		
-		for ($i = 0; $i < strlen($variable); $i++){
-			$char = $variable[$i];
-			if(!is_numeric($char) && $char !== ",") {
-				return false;
-			} elseif ($char == ",") {
-				$variable[$i] = ".";
-			}
-		}
-		return true;
-	}
 
 
 ?>
