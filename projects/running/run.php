@@ -5,9 +5,9 @@
 			Løb
         </title> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>amCharts examples</title>
-        <link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/style.css" type="text/css">
+        
+		
+		
         <script src="/Webpage-Lsn/projects/running/graphs/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="/Webpage-Lsn/projects/running/graphs/amcharts/gauge.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
