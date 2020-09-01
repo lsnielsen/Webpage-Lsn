@@ -10,7 +10,9 @@
 							$tableData = "SELECT * FROM running";
 							$result = mysqli_query($con,$tableData);
 			
-								$graphArray = makeQueryToArray($result);
+							$tableCheck = (mysqli_num_rows(mysqli_query($con, $tableData)) > 0) ? true : false;
+							if ($tableCheck) {
+								$graphArray = makeQueryToArray($result, $tableData, $con);
 								for($i=0; $i<sizeOf($graphArray); $i++) {
 									echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
 												echo "<td class=runningTableCell>";
@@ -31,31 +33,31 @@
 												</td>
 											</tr>";
 								}
+							}
 							
-							
-	function makeQueryToArray($query) 
+	function makeQueryToArray($query, $tableData, $con) 
 	{
-		while ($rowArray = $query->fetch_array()) {
-			$graphArray[] = $rowArray;
-		}
-		for ($i = 0; $i<sizeof($graphArray); $i++) {
-			$dateArray[] = $graphArray[$i][1];
-		}	
-		usort($dateArray, "compareByTimeStamp");
-		
-		for ($i = 0; $i<sizeof($dateArray); $i++) {
-			for ($j = 0; $j<sizeof($graphArray); $j++) {
-				if ($dateArray[$i] == $graphArray[$j][1]) {
-					$sortedArray[] = $graphArray[$j];
-					continue;
+			while ($rowArray = $query->fetch_array()) {
+				$graphArray[] = $rowArray;
+			}
+			for ($i = 0; $i<sizeof($graphArray); $i++) {
+				$dateArray[] = $graphArray[$i][1];
+			}	
+			usort($dateArray, "compareByTimeStamp");
+			
+			for ($i = 0; $i<sizeof($dateArray); $i++) {
+				for ($j = 0; $j<sizeof($graphArray); $j++) {
+					if ($dateArray[$i] == $graphArray[$j][1]) {
+						$sortedArray[] = $graphArray[$j];
+						continue;
+					}
 				}
 			}
-		}
 
-		for ($i = 0; $i<sizeof($sortedArray); $i++) {
-			$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1]);	
-		}
-		return $sortedArray;
+			for ($i = 0; $i<sizeof($sortedArray); $i++) {
+				$sortedArray[$i][1] = changeDateFormat($sortedArray[$i][1]);	
+			}
+			return $sortedArray;
 	}
 	 
 	function compareByTimeStamp($time1, $time2) 
