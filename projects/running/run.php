@@ -16,7 +16,7 @@
 			Løbe side
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
-			<fieldset style="background-color: #b3ecff">
+			<fieldset style="background-color: #ff8080">
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine løbe tal, og de vil blive vist i tabellen nedenunder
 				</legend>  
