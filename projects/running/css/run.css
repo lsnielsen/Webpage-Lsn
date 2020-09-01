@@ -8,11 +8,6 @@
 	.runNumbers {
 		margin-top: -100px;
 	}
-
-	.dieselTable {
-		width: 60%;
-		background-color: #80ffff;
-	}
 			
 	.runButton{
 		background-color: #4CAF50;
@@ -68,7 +63,7 @@
 		font-weight: bold;
 		text-align: center;
 	}
-	.dieselTableCell {
+	.runningTableCell {
 		text-align: center;
 	}
 	.deleteRow {

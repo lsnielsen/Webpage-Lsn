@@ -106,7 +106,7 @@
 
 
 <script>
-	$(".deleteRunningRow").click(function() {
+	$(".deleteRow").click(function() {
 		var row = $(this).closest('tr');
 		var txt = row.text();
 		var id = row.attr('id');
@@ -128,7 +128,7 @@
 			} 
 		});   
 		
-		txt = date + km + time + liter;
+		txt = date + km + time + time;
 
 		$(".dateToDelete").text(date);
 		$(".kmToDelete").text(km);

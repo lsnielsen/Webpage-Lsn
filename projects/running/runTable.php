@@ -13,18 +13,18 @@
 							
 							for($i=0; $i<sizeOf($graphArray); $i++) {
 								echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
-											echo "<td class=dieselTableCell>";
+											echo "<td class=runningTableCell>";
 											echo $graphArray[$i][1];
 											echo "</td>
-											<td class=dieselTableCell>";
+											<td class=runningTableCell>";
 											echo $graphArray[$i]['kilometer'];
 											echo "</td>
-											<td class=dieselTableCell>";
+											<td class=runningTableCell>";
 											echo $graphArray[$i]['kroner'];
 											echo "</td>									
 											<td> 
 												<center> 
-													<div class=deleteRow value=dieselPage name=dieselButton> 
+													<div class=deleteRow value=runningPage name=runningButton> 
 														&#10006; 
 													</div> 
 												</center> 
