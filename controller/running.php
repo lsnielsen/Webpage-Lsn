@@ -2,7 +2,7 @@
 <?php
 
 	$runButton = isset($_POST['runButton']) ? $_POST['runButton'] : "";
-	echo $runButton;
+	
 	if ($runButton == "runPage") {
 		setRunningFrontpage();
 	} elseif (is_numeric($runButton)) {
@@ -42,7 +42,7 @@ function setRunningFrontpage()
 			$date = $_POST['date'];
 			$km = $_POST['km'];
 			$time = $_POST['time'];
-			echo "<br> Inserting date: " . $date . ", km: " . $km . ", time: " . $time;
+			
 			$inputArray = checkRunningInput($date, $km, $time);
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
