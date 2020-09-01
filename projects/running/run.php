@@ -49,7 +49,7 @@
 				
 				<div class="runNumbers">
 					<h2 style="margin-left: 40%;">
-						Tabel over indtastede run tal
+						Tabel over indtastede løbe tal
 					</h2>
 
 					<table class="runTable">
