@@ -62,7 +62,7 @@
 						<?php include  '../projects/running/runTable.php'; ?>
 					</table>
 				</div>
-				<?php include("statisticButtons.php"); ?>
+				<?php //include("statisticButtons.php"); ?>
 			</fieldset>  
 		</form>     	
 		
@@ -89,7 +89,7 @@
 		</div>
 
 		<?php
-			include("../projects/running/frontChart.php"); 
+			include("graphs/graphTemp.html"); 
 		?>
 		
 		
