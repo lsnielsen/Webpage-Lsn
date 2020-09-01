@@ -91,7 +91,7 @@
 		</div>
 
 		<?php
-			include("graphs/graphTemp.html"); 
+			include("graphs/runChart.html"); 
 		?>
 		
 		<center>
