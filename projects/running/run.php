@@ -52,17 +52,17 @@
 
 				</div>
 				
-				<div class="dieselNumbers">
+				<div class="runNumbers">
 					<h2 style="margin-left: 150px;">
-						Tabel over indtastede diesel tal
+						Tabel over indtastede run tal
 					</h2>
 
-					<table class="dieselTable">
+					<table class="runTable">
 						<tr>
-							<th class="dieselHeader">Dato</th>
-							<th class="dieselHeader">Kilometer</th>
-							<th class="dieselHeader">Tid</th>
-							<th class="dieselHeader">Slet række</th>
+							<th class="runHeader">Dato</th>
+							<th class="runHeader">Kilometer</th>
+							<th class="runHeader">Tid</th>
+							<th class="runHeader">Slet række</th>
 						</tr>
 						<?php include  '../projects/running/runTable.php'; ?>
 					</table>
@@ -84,12 +84,12 @@
 					<li class="literToDelete"> </li>
 				</ul>
 				<div>
-					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
-					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
+					<div class="deleteDieselRowYes runPopupButton">Ja</div>
+					<div class="deleteDieselRowNo runPopupButton">Nej</div>
 				</div>
 			</div>
-			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/diesel.php" method="post">
-				<input type="hidden" id="hiddenField" name="dieselButton"/>
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/run.php" method="post">
+				<input type="hidden" id="hiddenField" name="runButton"/>
 			</form>
 		</div>
 
@@ -104,7 +104,7 @@
 	
 	
 	<form action="/../Webpage-Lsn/controller/frontpage.php" method="post">
-		<button type="submit" name="dieselButton" id="backToStartButton" value="frontpage"> 
+		<button type="submit" name="runButton" id="backToStartButton" value="frontpage"> 
 			Tilbage til startside 
 		</button>
 	</form>
