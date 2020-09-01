@@ -40,7 +40,7 @@
 						<label style="margin-left: 40px; font-weight: bold;">
 							Tid <br>
 						</label>  
-						<input class="runningInput" type="text" placeholder="ex: 23,3 " name="time"> 					 
+						<input class="runningInput" type="text" placeholder="ex: hh:mm:ss " name="time"> 					 
 					</div>
 				</center>
 				<div style="margin-top: 20px; margin-bottom: 200px;">
