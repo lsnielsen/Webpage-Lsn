@@ -75,14 +75,12 @@
 			$dateTestVar = false;
 			$returnStm = false;
 		}	
-		$kmBool = intChecker($km);
-		$timeBool = intChecker($time);
 		
 		if(!intChecker($km)) {
 			$kmTestVar = false;
 			$returnStm = false;
 		}
-		if(!intChecker($time)) {
+		if(!validTime($time, "i:s")) {
 			$timeTestVar = false;
 			$returnStm = false;
 		}
@@ -105,7 +103,18 @@
 		return true;
 	}
 
-
+	function validTime($time) {
+		$length = strlen($time);
+		if ($length == 8) {
+			return true;
+		} elseif ($length == 5) {
+			return true;
+		} else {
+			return false;
+		}
+//		03:13:24
+	//	15:30
+	}
 
 
 
