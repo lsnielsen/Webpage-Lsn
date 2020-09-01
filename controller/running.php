@@ -18,9 +18,8 @@ function checkDatabase($con)
 	
 	$query = "SHOW TABLES LIKE 'running'";
 	if(mysqli_num_rows(mysqli_query($con, $query))) {
-		echo "DB EXIST";
+		
 	} else {
-		echo "DB Not Exist";
 		$createRunningTable = "CREATE TABLE running(
 								id INT AUTO_INCREMENT,
 								date DATE NOT NULL,
@@ -51,7 +50,6 @@ function setRunningFrontpage()
 			$km = $_POST['km'];
 			$time = $_POST['time'];
 			
-			echo "Ready to insert: date: " . $date . ", km: " . $km . ", time: " . $time;
 			$inputArray = checkRunningInput($date, $km, $time);
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
