@@ -5,19 +5,25 @@
 			Løb
         </title> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+        <script src="/Webpage-Lsn/projects/running/graphs/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="/Webpage-Lsn/projects/running/graphs/amcharts/gauge.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
 	</head>  
-	<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
-	<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
 	<body>
 		<h1>
-			Løbe page
+			Løbe side
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
 			<fieldset style="background-color: #b3ecff">
 				<legend style="font-weight: bold; font-size: 23;"> 
-					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
+					Indtast dine løbe tal, og de vil blive vist i tabellen nedenunder
 				</legend>  
-				<div style="margin-top: 50px;">
+				<center style="margin-top: 50px;">
+					<button class="runButton" type="submit" value="runPage" name="runButton" style="margin-right: 30px;">  
+						Indsæt tal
+					</button>
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold; margin-top: -100px;">
 							Dato <br>
@@ -30,36 +36,30 @@
 						</label>
 						<input class="runningInput" type="text" placeholder="ex: 659,4 " name="km">  				 
 					</div>
-				</div>
-				<div style="margin-top: 20px; margin-bottom: 200px;">
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Tid <br>
 						</label>  
 						<input class="runningInput" type="text" placeholder="ex: 23,3 " name="liter"> 					 
 					</div>
-					
-					<br> <br> <br>
-					
-					<button class="runButton" type="submit" value="runPage" name="runButton" style="margin-left: 10px;">  
-						Indsæt tal
-					</button>
+				</center>
+				<div style="margin-top: 20px; margin-bottom: 200px;">
 
 				</div>
 				
-				<div class="dieselNumbers">
-					<h2 style="margin-left: 150px;">
-						Tabel over indtastede diesel tal
+				<div class="runNumbers">
+					<h2 style="margin-left: 40%;">
+						Tabel over indtastede run tal
 					</h2>
 
-					<table class="dieselTable">
+					<table class="runTable">
 						<tr>
-							<th class="dieselHeader">Dato</th>
-							<th class="dieselHeader">Kilometer</th>
-							<th class="dieselHeader">Tid</th>
-							<th class="dieselHeader">Slet række</th>
+							<th class="runHeader">Dato</th>
+							<th class="runHeader">Kilometer</th>
+							<th class="runHeader">Tid</th>
+							<th class="runHeader">Slet række</th>
 						</tr>
-						<?php //include  '../projects/running/runTable.php'; ?>
+						<?php include  '../projects/running/runTable.php'; ?>
 					</table>
 				</div>
 				<?php //include("statisticButtons.php"); ?>
@@ -79,27 +79,27 @@
 					<li class="literToDelete"> </li>
 				</ul>
 				<div>
-					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
-					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
+					<div class="deleteDieselRowYes runPopupButton">Ja</div>
+					<div class="deleteDieselRowNo runPopupButton">Nej</div>
 				</div>
 			</div>
-			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/diesel.php" method="post">
-				<input type="hidden" id="hiddenField" name="dieselButton"/>
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/run.php" method="post">
+				<input type="hidden" id="hiddenField" name="runButton"/>
 			</form>
 		</div>
 
 		<?php
-			include("../projects/running/frontChart.php"); 
+			include("graphs/runChart.html"); 
 		?>
 		
-		
-        <div id="chartdiv" style="width:400px; height:400px;"></div>
-
+		<center>
+			<div id="chartdiv" style="width:600px; height:500px;"></div>
+		</center>
     </body>  
 	
 	
 	<form action="/../Webpage-Lsn/controller/frontpage.php" method="post">
-		<button type="submit" name="dieselButton" id="backToStartButton" value="frontpage"> 
+		<button type="submit" name="runButton" id="backToStartButton" value="frontpage"> 
 			Tilbage til startside 
 		</button>
 	</form>
