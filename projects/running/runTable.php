@@ -21,9 +21,6 @@
 											echo "</td>
 											<td class=dieselTableCell>";
 											echo $graphArray[$i]['kroner'];
-											echo "</td>
-											<td class=dieselTableCell>";
-											echo $graphArray[$i]['liter'];
 											echo "</td>									
 											<td> 
 												<center> 
