@@ -1,4 +1,12 @@
 <?php
+							include "helper/runHelper.php";
+							$con = mysqli_connect('127.0.0.1','root','');
+							if(!$con) {  
+								echo 'not connect to the server';  
+							}  
+							if(!mysqli_select_db($con,'lsnDb')) {  
+								echo 'database not selected';  
+							}    
 							$tableData = "SELECT * FROM diesel";
 							$result = mysqli_query($con,$tableData);
 							$graphArray = makeQueryToArray($result, "table");
