@@ -67,20 +67,19 @@
 		</form>     	
 		
 
-		<div class="deleteDieselRow">
+		<div class="deleteRunningRow">
 			<span class="helper"></span>
 			<div>
-				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
+				<div class="deleteRunningRowPopupCloseButton popupCloseButton">&times;</div>
 				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
 				<ul class="rowToDelete">
 					<li class="dateToDelete"> </li>
 					<li class="kmToDelete"> </li>
-					<li class="krToDelete"> </li>
-					<li class="literToDelete"> </li>
+					<li class="timeToDelete"> </li>
 				</ul>
 				<div>
-					<div class="deleteDieselRowYes runPopupButton">Ja</div>
-					<div class="deleteDieselRowNo runPopupButton">Nej</div>
+					<div class="deleteRunningRowYes runPopupButton">Ja</div>
+					<div class="deleteRunningRowNo runPopupButton">Nej</div>
 				</div>
 			</div>
 			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/run.php" method="post">
@@ -104,6 +103,60 @@
 		</button>
 	</form>
 </html> 
+
+
+<script>
+	$(".deleteRunningRow").click(function() {
+		var row = $(this).closest('tr');
+		var txt = row.text();
+		var id = row.attr('id');
+		var date;
+		var km;
+		var time;
+		var counter = 1;
+		row.find('td').each(function() {
+			var stuff = $(this).text();
+			if (counter == 1) {
+				date = "Dato: " + stuff;
+				counter++;
+			} else if (counter == 2) {
+				km = "Km: " + stuff;
+				counter++;
+			} else if (counter == 3) {
+				time = "Tid: " + stuff;
+				counter++;
+			} 
+		});   
+		
+		txt = date + km + time + liter;
+
+		$(".dateToDelete").text(date);
+		$(".kmToDelete").text(km);
+		$(".timeToDelete").text(time);
+		$("#hiddenField").val(id);
+		$('.deleteRunningRow').show();
+		$('.deleteRunningRowYes').click(function(){
+			$("#deleteSpecificRow").submit();
+		});
+	});
+    $('.deleteRunningRowPopupCloseButton').click(function(){
+        $('.deleteRunningRow').hide();
+    });
+    $('.deleteRunningRowNo').click(function(){
+        $('.deleteRunningRow').hide();
+    });
+    
+	$('.wrongRunningInputButton').click(function(){
+        $('.wrongRunningInput').hide();
+    });
+    $('.wrongRunningInputPopupCloseButton').click(function(){
+        $('.wrongRunningInput').hide();
+    });
+	
+	if($(".notDisplayingWrongInput").length){
+		$(".notDisplayingWrongInput").css("display", "block");
+	}
+</script>
 
 
 
