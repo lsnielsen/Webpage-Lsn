@@ -20,9 +20,12 @@
 		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
 			<fieldset style="background-color: #b3ecff">
 				<legend style="font-weight: bold; font-size: 23;"> 
-					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
+					Indtast dine løbe tal, og de vil blive vist i tabellen nedenunder
 				</legend>  
-				<div style="margin-top: 50px;">
+				<center style="margin-top: 50px;">
+					<button class="runButton" type="submit" value="runPage" name="runButton" style="margin-right: 30px;">  
+						Indsæt tal
+					</button>
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold; margin-top: -100px;">
 							Dato <br>
@@ -41,13 +44,7 @@
 						</label>  
 						<input class="runningInput" type="text" placeholder="ex: 23,3 " name="liter"> 					 
 					</div>
-					
-					<br> <br> <br>
-					
-					<button class="runButton" type="submit" value="runPage" name="runButton" style="margin-left: 10px;">  
-						Indsæt tal
-					</button>
-				</div>
+				</center>
 				<div style="margin-top: 20px; margin-bottom: 200px;">
 
 				</div>
