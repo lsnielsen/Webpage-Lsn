@@ -14,24 +14,23 @@
                 axis = new AmCharts.GaugeAxis();
                 axis.startValue = 0;
 				axis.axisThickness = 1;
-                axis.valueInterval = 10;
-                axis.endValue = 220;
+                axis.valueInterval = 2;
+                axis.endValue = 30;
                 // color bands
                 var band1 = new AmCharts.GaugeBand();
                 band1.startValue = 0;
-                band1.endValue = 90;
+                band1.endValue = 10;
                 band1.color = "#00CC00";
 
                 var band2 = new AmCharts.GaugeBand();
-                band2.startValue = 90;
-                band2.endValue = 130;
+                band2.startValue = 10;
+                band2.endValue = 20;
                 band2.color = "#ffac29";
 
                 var band3 = new AmCharts.GaugeBand();
-                band3.startValue = 130;
-                band3.endValue = 220;
+                band3.startValue = 20;
+                band3.endValue = 30;
                 band3.color = "#ea3838";
-                band3.innerRadius = "95%";
 
                 axis.bands = [band1, band2, band3];
 
@@ -51,7 +50,7 @@
 
             // set random value
             function randomValue() {
-                var value = Math.round(Math.random() * 200);
+                var value = Math.round(Math.random() * 30);
                 arrow.setValue(value);
                 axis.setBottomText(value + " km/h");
             }
