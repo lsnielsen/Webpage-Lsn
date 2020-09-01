@@ -5,10 +5,8 @@
 		box-sizing: border-box;		
 	}
 
-	.dieselNumbers {
-		margin-left: 780px;
-		margin-bottom: 150px;
-		margin-top: -500px;
+	.runNumbers {
+		margin-top: -100px;
 	}
 
 	.dieselTable {

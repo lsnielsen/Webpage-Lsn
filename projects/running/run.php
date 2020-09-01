@@ -94,9 +94,9 @@
 			include("graphs/graphTemp.html"); 
 		?>
 		
-		
-        <div id="chartdiv" style="width:400px; height:400px;"></div>
-
+		<center>
+			<div id="chartdiv" style="width:600px; height:500px;"></div>
+		</center>
     </body>  
 	
 	
