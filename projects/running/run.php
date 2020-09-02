@@ -88,7 +88,7 @@
 		</div>
 
 		<?php
-			include("graphs/runChart.html"); 
+			include("graphs/runChart.php"); 
 		?>
 		
 		<center>
