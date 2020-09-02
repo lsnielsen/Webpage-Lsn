@@ -1,5 +1,5 @@
 	/* Popup box BEGIN */
-	.deleteDieselRow{
+	.deleteRunningRow{
 		background:rgba(0,0,0,.4);
 		display:none;
 		height:100%;
@@ -9,12 +9,12 @@
 		width:100%;
 		z-index:10000;
 	}
-	.deleteDieselRow .helper{
+	.deleteRunningRow .helper{
 		display:inline-block;
 		height:100%;
 		vertical-align:middle;
 	}
-	.deleteDieselRow > div {
+	.deleteRunningRow > div {
 		background-color: #fff;
 		box-shadow: 10px 10px 60px #555;
 		display: inline-block;
@@ -27,7 +27,19 @@
 		border-radius: 8px;
 		padding: 15px 5%;
 	}
-	.wrongDieselInput{
+	
+	.runningPopupButton {
+		display: inline-block;
+		font-weight: bold;
+		font-size: 23;
+		margin: 10px;
+		margin-bottom: 15px;
+		cursor: pointer;
+		border-style: ridge;
+		border-radius: 20px;
+		padding: 15px;
+	}
+	.wrongRunningInput{
 		background:rgba(0,0,0,.4);
 		display:none;
 		height:100%;
@@ -37,12 +49,12 @@
 		width:100%;
 		z-index:10000;
 	}
-	.wrongDieselInput .helper{
+	.wrongRunningInput .helper{
 		display:inline-block;
 		height:100%;
 		vertical-align:middle;
 	}
-	.wrongDieselInput > div {
+	.wrongRunningInput > div {
 		background-color: #fff;
 		box-shadow: 10px 10px 60px #555;
 		display: inline-block;
@@ -55,7 +67,7 @@
 		border-radius: 8px;
 		padding: 15px 5%;
 	}
-	.dieselPopupButton {
+	.runPopupButton {
 		display: inline-block;
 		font-weight: bold;
 		font-size: 23;
