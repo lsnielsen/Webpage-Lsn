@@ -6,8 +6,8 @@
         </title> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		
-        <script src="/Webpage-Lsn/projects/running/graphs/amcharts/amcharts.js" type="text/javascript"></script>
-        <script src="/Webpage-Lsn/projects/running/graphs/amcharts/gauge.js" type="text/javascript"></script>
+        <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="/Webpage-Lsn/diverse/amcharts/gauge.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
 		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
 	</head>  
