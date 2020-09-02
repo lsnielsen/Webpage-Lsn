@@ -1,15 +1,15 @@
 
-	.runningInput {
+	.bikingInput {
 		padding: 12px 20px;
 		margin: 8px 0;
 		box-sizing: border-box;		
 	}
 
-	.runNumbers {
+	.bikeNumbers {
 		margin-top: -100px;
 	}
 			
-	.runButton{
+	.bikeButton{
 		background-color: #4CAF50;
 		border: none;
 		color: white;
@@ -59,11 +59,11 @@
 	th {
 		font-weight: normal;	
 	}
-	.runHeader {
+	.bikeHeader {
 		font-weight: bold;
 		text-align: center;
 	}
-	.runningTableCell {
+	.bikingTableCell {
 		text-align: center;
 	}
 	.deleteRow {
