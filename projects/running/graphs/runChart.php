@@ -6,32 +6,35 @@
 	while ($rowArray = $query->fetch_array()) {
 		$graphArray[] = $rowArray;
 	}
-	echo "Start <br>";
-	echo "size of graphArray: " . sizeof($graphArray) . '<br> <br>';
+	//echo "Start <br>";
+	//echo "size of graphArray: " . sizeof($graphArray) . '<br> <br>';
 	for ($i=0; $i<sizeof($graphArray); $i++) {
-		echo "km: " . $graphArray[$i]['kilometer'] . '<br>';
-		echo "date: " . $graphArray[$i]['date'] . '<br>';
-		echo "time: " . $graphArray[$i]['time'] . '<br>';
-		echo "<br> <br>";
+	//	echo "i = " . $i . "<br>";
+	//	echo "km: " . $graphArray[$i]['kilometer'] . '<br>';
+	//	echo "date: " . $graphArray[$i]['date'] . '<br>';
+	//	echo "time: " . $graphArray[$i]['time'] . '<br>';
+	//	echo "<br> <br>";
 		
 		$hour = $graphArray[$i]['time'][0] . $graphArray[$i]['time'][1];
 		$min = $graphArray[$i]['time'][3] . $graphArray[$i]['time'][4];
 		$sec = $graphArray[$i]['time'][6] . $graphArray[$i]['time'][7];
 		
-		echo "timer: " . $hour . '<br>';
-		echo "minutter: " . $min . '<br>';
-		echo "sekunder: " . $sec . '<br>';
+	//	echo "timer: " . $hour . '<br>';
+	//	echo "minutter: " . $min . '<br>';
+	//	echo "sekunder: " . $sec . '<br>';
 		
 		$min = $min + ($sec/60);
 		$hour = $hour + ($min/60);
 		
-		echo "timer: " . $hour . '<br>';
+	//	echo "timer: " . $hour . '<br>';
 
 		$kmPerHour = $graphArray[$i]['kilometer'] / $hour;
 
-		echo "km/t: " . $kmPerHour . '<br><br><br>';
+	//	echo "km/t: " . $kmPerHour . '<br><br><br>';
+		
+		$kmPerHourArray[] = $kmPerHour;
 	}
-	echo "Done";
+	//echo "Done";
 ?>
 
         <script>
@@ -84,9 +87,11 @@
 
             // set random value
             function randomValue() {
-                var value = Math.round(Math.random() * 30);
-                arrow.setValue(value);
-                axis.setBottomText(value + " km/h");
+				var array = <?php echo json_encode($kmPerHourArray); ?>;
+				var arrayLength = array.length;
+                var value = Math.floor(Math.random() * (arrayLength-1));
+                arrow.setValue(array[value]);
+                axis.setBottomText(array[value] + " km/h");
             }
 
         </script>
