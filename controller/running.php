@@ -38,9 +38,9 @@
 			$uniqueId = $row['id'];
 		}
 		
-		$dateCheck = isset($_SESSION['date']) ? $_SESSION['date'] != $_POST['date'] : true;
-		$kmCheck = isset($_SESSION['km']) ? $_SESSION['km'] != $_POST['km'] : true;
-		$timeCheck = isset($_SESSION['time']) ? $_SESSION['time'] != $_POST['time'] : true;
+		$dateCheck = (isset($_SESSION['date']) && isset($_POST['date'])) ? $_SESSION['date'] != $_POST['date'] : true;
+		$kmCheck = (isset($_SESSION['km']) && isset($_POST['km'])) ? $_SESSION['km'] != $_POST['km'] : true;
+		$timeCheck = (isset($_SESSION['time']) && isset($_POST['time'])) ? $_SESSION['time'] != $_POST['time'] : true;
 			
 		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time']) && $dateCheck && $kmCheck && $timeCheck) {
 			

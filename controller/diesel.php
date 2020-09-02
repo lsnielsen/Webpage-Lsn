@@ -64,10 +64,10 @@
 			$uniqueId = $row['id'];
 		}
 
-		$dateCheck = isset($_SESSION['date']) ? $_SESSION['date'] != $_POST['date'] : true;
-		$kmCheck = isset($_SESSION['km']) ? $_SESSION['km'] != $_POST['km'] : true;
-		$literCheck = isset($_SESSION['liter']) ? $_SESSION['liter'] != $_POST['liter'] : true;
-		$krCheck = isset($_SESSION['kr']) ? $_SESSION['kr'] != $_POST['kr'] : true;
+		$dateCheck = (isset($_SESSION['date']) && isset($_POST['date'])) ? $_SESSION['date'] != $_POST['date'] : true;
+		$kmCheck = (isset($_SESSION['km']) && isset($_POST['km'])) ? $_SESSION['km'] != $_POST['km'] : true;
+		$literCheck = (isset($_SESSION['liter']) && isset($_POST['liter'])) ? $_SESSION['liter'] != $_POST['liter'] : true;
+		$krCheck = (isset($_SESSION['kr']) && isset($_POST['kr'])) ? $_SESSION['kr'] != $_POST['kr'] : true;
 		
 		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr']) && $dateCheck && $kmCheck && $literCheck && $krCheck) {
 			
