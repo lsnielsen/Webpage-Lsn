@@ -30,13 +30,6 @@
 		$con = mysqli_connect('127.0.0.1','root','');  
 		
 		checkDatabase($con);
-
-		$fetchId = "SELECT * FROM running";
-		$result = mysqli_query($con,$fetchId);
-		$uniqueId = 0;
-		while($row = $result->fetch_array()){
-			$uniqueId = $row['id'];
-		}
 		
 		$dateCheck = (isset($_SESSION['date']) && isset($_POST['date'])) ? $_SESSION['date'] != $_POST['date'] : true;
 		$kmCheck = (isset($_SESSION['km']) && isset($_POST['km'])) ? $_SESSION['km'] != $_POST['km'] : true;
@@ -57,7 +50,6 @@
 			$inputArray = checkRunningInput($date, $km, $time);
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
-				$id = $uniqueId + 1;
 				$sql = "INSERT INTO running (date, kilometer, time) VALUES ('$date','$km', '$time')";  
 				  
 				if(!mysqli_query($con,$sql)) {  
