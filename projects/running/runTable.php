@@ -19,7 +19,8 @@
 												echo $graphArray[$i][1];
 												echo "</td>
 												<td class=runningTableCell>";
-												echo $graphArray[$i]['kilometer'];
+												$km = rewriteKilometerToDanishFormat($graphArray[$i]['kilometer']);
+												echo $km;
 												echo "</td>
 												<td class=runningTableCell>";
 												echo $graphArray[$i]['time'];
@@ -97,6 +98,16 @@
 				return $charNine . $charTen . "/" . $charSix . $charSeven . " - " . $charThree . $charFour;
 			}
 		}
+	}
+	
+	function rewriteKilometerToDanishFormat($km)
+	{
+		for($i = 0; $i < strlen($km); $i++) {
+			if($km[$i] == ".") {
+				$km[$i] = ",";
+			}
+		}
+		return $km;
 	}
 							
 							
