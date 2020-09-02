@@ -87,6 +87,10 @@
 			</form>
 		</div>
 
+		<h1>
+			Graf over løbe hastigheden
+		</h1>
+
 		<?php
 			include("graphs/runChart.php"); 
 		?>
