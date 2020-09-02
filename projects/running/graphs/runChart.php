@@ -32,7 +32,7 @@
 
 	//	echo "km/t: " . $kmPerHour . '<br><br><br>';
 		
-		$kmPerHourArray[] = $kmPerHour;
+		$kmPerHourArray[] = round($kmPerHour,2);
 	}
 	//echo "Done";
 ?>
@@ -91,7 +91,7 @@
 				var arrayLength = array.length;
                 var value = Math.floor(Math.random() * (arrayLength-1));
                 arrow.setValue(array[value]);
-                axis.setBottomText(array[value] + " km/h");
+                axis.setBottomText(array[value] + " km/t");
             }
 
         </script>
