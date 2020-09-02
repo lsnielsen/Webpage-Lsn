@@ -1,7 +1,7 @@
 <?php
 
 
-	$graphData = "SELECT * FROM running";
+	$graphData = "SELECT * FROM biking";
 	$query = mysqli_query($con,$graphData);
 	while ($rowArray = $query->fetch_array()) {
 		$graphArray[] = $rowArray;

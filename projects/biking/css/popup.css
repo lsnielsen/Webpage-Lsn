@@ -1,5 +1,5 @@
 	/* Popup box BEGIN */
-	.deleteRunningRow{
+	.deleteBikeRow{
 		background:rgba(0,0,0,.4);
 		display:none;
 		height:100%;
@@ -9,12 +9,12 @@
 		width:100%;
 		z-index:10000;
 	}
-	.deleteRunningRow .helper{
+	.deleteBikeRow .helper{
 		display:inline-block;
 		height:100%;
 		vertical-align:middle;
 	}
-	.deleteRunningRow > div {
+	.deleteBikeRow > div {
 		background-color: #fff;
 		box-shadow: 10px 10px 60px #555;
 		display: inline-block;
@@ -28,7 +28,7 @@
 		padding: 15px 5%;
 	}
 	
-	.runningPopupButton {
+	.bikePopupButton {
 		display: inline-block;
 		font-weight: bold;
 		font-size: 23;
@@ -39,7 +39,7 @@
 		border-radius: 20px;
 		padding: 15px;
 	}
-	.wrongRunningInput{
+	.wrongBikeInput{
 		background:rgba(0,0,0,.4);
 		display:none;
 		height:100%;
@@ -49,12 +49,12 @@
 		width:100%;
 		z-index:10000;
 	}
-	.wrongRunningInput .helper{
+	.wrongBikeInput .helper{
 		display:inline-block;
 		height:100%;
 		vertical-align:middle;
 	}
-	.wrongRunningInput > div {
+	.wrongBikeInput > div {
 		background-color: #fff;
 		box-shadow: 10px 10px 60px #555;
 		display: inline-block;
@@ -67,7 +67,7 @@
 		border-radius: 8px;
 		padding: 15px 5%;
 	}
-	.runPopupButton {
+	.bikePopupButton {
 		display: inline-block;
 		font-weight: bold;
 		font-size: 23;

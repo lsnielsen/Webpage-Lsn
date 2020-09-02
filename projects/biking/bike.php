@@ -2,64 +2,64 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <head>  
         <title>  
-			Løb
+			Cykling
         </title> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/gauge.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/biking/css/bike.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/biking/css/popup.css" type="text/css">
 	</head>  
 	<body>
 		<h1>
-			Løbe side
+			Cykel side
 		</h1>   
-		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
+		<form action="/../Webpage-Lsn/controller/biking.php" method="post">  
 			<fieldset style="background-color: #ff8080">
 				<legend style="font-weight: bold; font-size: 23;"> 
-					Indtast dine løbe tal, og de vil blive vist i tabellen nedenunder
+					Indtast dine cykel tal, og de vil blive vist i tabellen nedenunder
 				</legend>  
 				<center style="margin-top: 50px;">
-					<button class="runButton" type="submit" value="runPage" name="runButton" style="margin-right: 30px;">  
+					<button class="bikeButton" type="submit" value="bikePage" name="bikeButton" style="margin-right: 30px;">  
 						Indsæt tal
 					</button>
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold; margin-top: -100px;">
 							Dato <br>
 						</label>
-						<input class="runningInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  
+						<input class="bikeInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  
 					</div>
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Antal kilometer <br>
 						</label>
-						<input class="runningInput" type="text" placeholder="ex: 659,4 " name="km">  				 
+						<input class="bikeInput" type="text" placeholder="ex: 659,4 " name="km">  				 
 					</div>
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
 							Tid <br>
 						</label>  
-						<input class="runningInput" type="text" placeholder="format: hh:mm:ss " name="time"> 					 
+						<input class="bikeInput" type="text" placeholder="format: hh:mm:ss " name="time"> 					 
 					</div>
 				</center>
 				<div style="margin-top: 20px; margin-bottom: 200px;">
 
 				</div>
 				
-				<div class="runNumbers">
+				<div class="bikeNumbers">
 					<h2 style="margin-left: 40%;">
-						Tabel over indtastede løbe tal
+						Tabel over indtastede cykel tal
 					</h2>
 
-					<table class="runTable">
+					<table class="bikeTable">
 						<tr>
-							<th class="runHeader">Dato</th>
-							<th class="runHeader">Kilometer</th>
-							<th class="runHeader">Tid</th>
-							<th class="runHeader">Slet række</th>
+							<th class="bikeHeader">Dato</th>
+							<th class="bikeHeader">Kilometer</th>
+							<th class="bikeHeader">Tid</th>
+							<th class="bikeHeader">Slet række</th>
 						</tr>
-						<?php include  '../projects/running/runTable.php'; ?>
+						<?php include  '../projects/biking/bikeTable.php'; ?>
 					</table>
 				</div>
 				<?php //include("statisticButtons.php"); ?>
@@ -67,10 +67,10 @@
 		</form>     	
 		
 
-		<div class="deleteRunningRow">
+		<div class="deleteBikeRow">
 			<span class="helper"></span>
 			<div>
-				<div class="deleteRunningRowPopupCloseButton popupCloseButton">&times;</div>
+				<div class="deleteBikeRowPopupCloseButton popupCloseButton">&times;</div>
 				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
 				<ul class="rowToDelete">
 					<li class="dateToDelete"> </li>
@@ -78,21 +78,21 @@
 					<li class="timeToDelete"> </li>
 				</ul>
 				<div>
-					<div class="deleteRunningRowYes runPopupButton">Ja</div>
-					<div class="deleteRunningRowNo runPopupButton">Nej</div>
+					<div class="deleteBikeRowYes bikePopupButton">Ja</div>
+					<div class="deleteBikeRowNo bikePopupButton">Nej</div>
 				</div>
 			</div>
-			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/running.php" method="post">
-				<input type="hidden" id="hiddenField" name="runButton"/>
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/biking.php" method="post">
+				<input type="hidden" id="hiddenField" name="bikeButton"/>
 			</form>
 		</div>
 
 		<h1>
-			Graf over løbe hastigheden
+			Graf over cykel hastigheden
 		</h1>
 
 		<?php
-			include("graphs/runChart.php"); 
+			include("graphs/bikeChart.php"); 
 		?>
 		
 		<center>
@@ -102,7 +102,7 @@
 	
 	
 	<form action="/../Webpage-Lsn/controller/frontpage.php" method="post">
-		<button type="submit" name="runButton" id="backToStartButton" value="frontpage"> 
+		<button type="submit" name="bikeButton" id="backToStartButton" value="frontpage"> 
 			Tilbage til startside 
 		</button>
 	</form>
@@ -138,23 +138,23 @@
 		$(".kmToDelete").text(km);
 		$(".timeToDelete").text(time);
 		$("#hiddenField").val(id);
-		$('.deleteRunningRow').show();
-		$('.deleteRunningRowYes').click(function(){
+		$('.deleteBikeRow').show();
+		$('.deleteBikeRowYes').click(function(){
 			$("#deleteSpecificRow").submit();
 		});
 	});
-    $('.deleteRunningRowPopupCloseButton').click(function(){
-        $('.deleteRunningRow').hide();
+    $('.deleteBikeRowPopupCloseButton').click(function(){
+        $('.deleteBikeRow').hide();
     });
-    $('.deleteRunningRowNo').click(function(){
-        $('.deleteRunningRow').hide();
+    $('.deleteBikeRowNo').click(function(){
+        $('.deleteBikeRow').hide();
     });
     
-	$('.wrongRunningInputButton').click(function(){
-        $('.wrongRunningInput').hide();
+	$('.wrongBikeInputButton').click(function(){
+        $('.wrongBikeInput').hide();
     });
-    $('.wrongRunningInputPopupCloseButton').click(function(){
-        $('.wrongRunningInput').hide();
+    $('.wrongBikeInputPopupCloseButton').click(function(){
+        $('.wrongBikeInput').hide();
     });
 	
 	if($(".notDisplayingWrongInput").length){

@@ -7,7 +7,7 @@
 							if(!mysqli_select_db($con,'lsnDb')) {  
 								echo 'database not selected';  
 							}    
-							$tableData = "SELECT * FROM running";
+							$tableData = "SELECT * FROM biking";
 							$result = mysqli_query($con,$tableData);
 			
 							$tableCheck = (mysqli_num_rows(mysqli_query($con, $tableData)) > 0) ? true : false;
@@ -15,19 +15,19 @@
 								$graphArray = makeQueryToArray($result, $tableData, $con);
 								for($i=0; $i<sizeOf($graphArray); $i++) {
 									echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
-												echo "<td class=runningTableCell>";
+												echo "<td class=bikeTableCell>";
 												echo $graphArray[$i][1];
 												echo "</td>
-												<td class=runningTableCell>";
+												<td class=bikeTableCell>";
 												$km = rewriteKilometerToDanishFormat($graphArray[$i]['kilometer']);
 												echo $km;
 												echo "</td>
-												<td class=runningTableCell>";
+												<td class=bikeTableCell>";
 												echo $graphArray[$i]['time'];
 												echo "</td>									
 												<td> 
 													<center> 
-														<div class=deleteRow value=runPage name=runButton> 
+														<div class=deleteRow value=bikePage name=bikeButton> 
 															&#10006; 
 														</div> 
 													</center> 
