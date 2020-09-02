@@ -32,7 +32,7 @@
 			} else { 
 				echo " Du har ikke skrevet noget. "; 
 			}
-			echo "Formattet skal være på formen xxx,yy </div>";
+			echo "Formattet skal være på formen hh:mm:ss eller mm:ss </div>";
 			echo "<br><br>";
 		}
 	}
@@ -80,11 +80,24 @@
 			$kmTestVar = false;
 			$returnStm = false;
 		}
-		if(!validTime($time, "i:s")) {
+		
+		if(!validTime($time)) {
 			$timeTestVar = false;
 			$returnStm = false;
 		}
 		return ['returnStm' => $returnStm, 'wrongKm' => $kmTestVar, 'wrongDate' => $dateTestVar, 'wrongTime' => $timeTestVar];
+	}
+	
+	function formatTime($time)
+	{
+		$length = strlen($time);
+		if ($length == 8 && $time[2] == ":" && $time[5] == ":") {
+			return $time;
+		} elseif ($length == 5 && $time[2] == ":") {
+			return "00:" . $time;
+		} else {
+			return "Bullshitting";
+		}
 	}
 	
 	function intChecker($variable) {
@@ -105,9 +118,9 @@
 
 	function validTime($time) {
 		$length = strlen($time);
-		if ($length == 8) {
+		if ($length == 8 && $time[2] == ":" && $time[5] == ":") {
 			return true;
-		} elseif ($length == 5) {
+		} elseif ($length == 5 && $time[2] == ":") {
 			return true;
 		} else {
 			return false;

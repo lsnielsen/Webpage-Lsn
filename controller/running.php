@@ -23,8 +23,9 @@
 		mysqli_query($con, $query);
 	}
 
-function setRunningFrontpage()
-{
+	function setRunningFrontpage()
+	{
+		session_start();
 		include "../projects/running/helper/frontPageHelper.php";
 		$con = mysqli_connect('127.0.0.1','root','');  
 		
@@ -36,13 +37,23 @@ function setRunningFrontpage()
 		while($row = $result->fetch_array()){
 			$uniqueId = $row['id'];
 		}
-
-		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time'])) {
+		
+		$dateCheck = isset($_SESSION['date']) ? $_SESSION['date'] != $_POST['date'] : true;
+		$kmCheck = isset($_SESSION['km']) ? $_SESSION['km'] != $_POST['km'] : true;
+		$timeCheck = isset($_SESSION['time']) ? $_SESSION['time'] != $_POST['time'] : true;
+			
+		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time']) && $dateCheck && $kmCheck && $timeCheck) {
+			
+			$_SESSION['date'] = $_POST['date'];
+			$_SESSION['km'] = $_POST['km'];
+			$_SESSION['time'] = $_POST['time'];
 			
 			$date = $_POST['date'];
 			$km = $_POST['km'];
 			$time = $_POST['time'];
 			
+			$time = formatTime($time);
+
 			$inputArray = checkRunningInput($date, $km, $time);
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
@@ -60,28 +71,28 @@ function setRunningFrontpage()
 		}
 		
 		include("../projects/running/run.php");
-}
+	}
 	
-function checkDatabase($con)
-{
-	if(!$con) {  
-		echo 'not connect to the server';  
-	}  
-	if(!mysqli_select_db($con,'lsnDb')) {  
-		echo 'database not selected';  
-	}  
-	
-	$query = "SHOW TABLES LIKE 'running'";
-	if(mysqli_num_rows(mysqli_query($con, $query))) {
+	function checkDatabase($con)
+	{
+		if(!$con) {  
+			echo 'not connect to the server';  
+		}  
+		if(!mysqli_select_db($con,'lsnDb')) {  
+			echo 'database not selected';  
+		}  
 		
-	} else {
-		$createRunningTable = "CREATE TABLE running(
-								id INT AUTO_INCREMENT,
-								date DATE NOT NULL,
-								kilometer float NOT NULL,
-								time time NOT NULL,
-								primary key (id));";
-		mysqli_query($con, $createRunningTable);
-	}	
-}
+		$query = "SHOW TABLES LIKE 'running'";
+		if(mysqli_num_rows(mysqli_query($con, $query))) {
+			
+		} else {
+			$createRunningTable = "CREATE TABLE running(
+									id INT AUTO_INCREMENT,
+									date DATE NOT NULL,
+									kilometer float NOT NULL,
+									time time NOT NULL,
+									primary key (id));";
+			mysqli_query($con, $createRunningTable);
+		}	
+	}
 ?>
