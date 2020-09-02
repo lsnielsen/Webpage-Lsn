@@ -34,14 +34,14 @@
 		$dateCheck = (isset($_SESSION['date']) && isset($_POST['date'])) ? $_SESSION['date'] != $_POST['date'] : true;
 		$kmCheck = (isset($_SESSION['km']) && isset($_POST['km'])) ? $_SESSION['km'] != $_POST['km'] : true;
 		$timeCheck = (isset($_SESSION['time']) && isset($_POST['time'])) ? $_SESSION['time'] != $_POST['time'] : true;
-	//	echo "before isset check <br> <br>";
+		//echo "before isset check <br> <br>";
 		
-	//	echo "dateCheck: " . $dateCheck . ", date post: " . $_POST['date'] . ", date session: " . $_SESSION['date'] . "<br>";
-	//	echo "kmCheck: " . $kmCheck . ", km post: " . $_POST['km'] . ", km session: " . $_SESSION['km'] . "<br>";
-	//	echo "timeCheck: " . $timeCheck . ", time post: " . $_POST['time'] . ", time session: " . $_SESSION['time'] . "<br> <br>";
+		//echo "dateCheck: " . $dateCheck . ", date post: " . $_POST['date'] . ", date session: " . $_SESSION['date'] . "<br>";
+		//echo "kmCheck: " . $kmCheck . ", km post: " . $_POST['km'] . ", km session: " . $_SESSION['km'] . "<br>";
+		//echo "timeCheck: " . $timeCheck . ", time post: " . $_POST['time'] . ", time session: " . $_SESSION['time'] . "<br> <br>";
 		
-		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time']) && $dateCheck && $kmCheck && $timeCheck) {
-	//	echo "after isset check <br>";
+		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['time']) && ($dateCheck || $kmCheck || $timeCheck)) {
+		//echo "after isset check <br>";
 			
 			$_SESSION['date'] = $_POST['date'];
 			$_SESSION['km'] = $_POST['km'];
@@ -53,9 +53,9 @@
 			$time = formatTime($time);
 
 			$inputArray = checkRunningInput($date, $km, $time);
-	//		echo "km: " . $km . '<br>';
+			//echo "km: " . $km . '<br>';
 			$km = rewriteKilometer($km);
-	//		echo "km: " . $km . '<br>';
+			//echo "km: " . $km . '<br>';
 			if ($inputArray['returnStm']) {
 				$wrongInput = true;
 				$sql = "INSERT INTO running (date, kilometer, time) VALUES ('$date','$km', '$time')";  
@@ -68,6 +68,13 @@
 				setRunningErrorMessageBox($inputArray, $date, $km, $time);
 				setLowerRunningHtmlBox();
 			}
+		} else {
+			unset($_SESSION['km']); 
+			unset($_SESSION['date']); 
+			unset($_SESSION['time']); 
+			unset($_POST['km']); 
+			unset($_POST['date']); 
+			unset($_POST['time']); 
 		}
 		
 		include("../projects/running/run.php");
