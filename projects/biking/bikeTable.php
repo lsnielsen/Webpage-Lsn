@@ -14,7 +14,7 @@
 							if ($tableCheck) {
 								$graphArray = makeQueryToArray($result, $tableData, $con);
 								for($i=0; $i<sizeOf($graphArray); $i++) {
-									echo "	<tr id="; echo $graphArray[$i]['id']; echo ">";
+									echo "	<tr id="; echo $i; echo ">";
 												echo "<td class=bikeTableCell>";
 												echo $graphArray[$i][1];
 												echo "</td>

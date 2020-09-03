@@ -16,7 +16,7 @@
 			Cykel side
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/biking.php" method="post">  
-			<fieldset style="background-color: #ff8080">
+			<fieldset style="background-color: #80dfff">
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine cykel tal, og de vil blive vist i tabellen nedenunder
 				</legend>  
