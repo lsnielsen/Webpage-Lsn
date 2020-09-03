@@ -82,7 +82,7 @@
 
                 chart.write("chartdiv");
                 // change value every 2 seconds
-                setInterval(randomValue, 2000);
+                setInterval(randomValue, 3000);
             });
 
 			var oldColor;
