@@ -82,19 +82,42 @@
 
                 chart.write("chartdiv");
                 // change value every 2 seconds
-                setInterval(randomValue, 2000);
+                setInterval(randomValue, 10000);
             });
+			
+			var oldColor;
+			var oldId;
 
             // set random value
             function randomValue() {
+				$(".runningFieldSet").css("background-color", "#ff8080");
 				var array = <?php echo json_encode($kmPerHourArray); ?>;
-				var arrayLength = array.length;
-                var value = Math.floor(Math.random() * (arrayLength-1));
+				var arrayLength = array.length/2;
+                var value = Math.floor(Math.random() * arrayLength);
                 arrow.setValue(array[value]);
                 axis.setBottomText(array[value] + " km/t");
+				
+				console.log("value: " + value + ", oldId: " + oldId + ", oldColor: " + oldColor);
+				
+				oldColor = $('#' + value).css("background-color");
+				console.log("value: " + value + ", oldId: " + oldId + ", oldColor: " + oldColor);
+				$("#" + value).css("background-color", "yellow");
+				
+				if (typeof(oldId) != "undefined" && oldId != null && typeof(oldColor) != "undefined" && oldColor != null) {
+					$("#" + oldId).css("background-color", oldColor);
+				}
+				oldId = value;
+				
+				
+				console.log("value: " + value + ", oldId: " + oldId + ", oldColor: " + oldColor);
+				console.log(" ");
             }
 
         </script>
+
+
+
+
 
 
 
