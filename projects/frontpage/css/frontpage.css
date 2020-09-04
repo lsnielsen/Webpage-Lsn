@@ -42,65 +42,11 @@
 	#cvButton:active {
 		box-shadow: 0 3px 0 #00823F;
 	}
+
 	
-	
-	
-	#dieselButton {
-		margin-left: 20px;
-		box-shadow: 0px 1px 0px 0px #fff6af;
-		background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-		background-color:#ffec64;
-		border-radius:6px;
-		border:1px solid #ffaa22;
-		display:inline-block;
-		cursor:pointer;
-		color:#333333;
-		font-family:Arial;
-		font-size:15px;
-		font-weight:bold;
-		padding:6px 24px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #ffee66;
-	}
-	#dieselButton:hover {
-		background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-		background-color:#ffab23;
-	}
-	#dieselButton:active {
-		position:relative;
-		top:1px;
-	}	
-	
-	#politicButton {
-		margin-left: 20px;
-		box-shadow: 0px 1px 0px 0px #eeffcc;
-		background:linear-gradient(to bottom, #ddff99 5%, #ccff66 100%);
-		background-color:#bbff33;
-		border-radius:6px;
-		border:1px solid #aaff00;
-		display:inline-block;
-		cursor:pointer;
-		color:#333333;
-		font-family:Arial;
-		font-size:15px;
-		font-weight:bold;
-		padding:6px 24px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #77b300;
-	}
-	#politicButton:hover {
-		background:linear-gradient(to bottom, #c4ff4d 5%, #d5ff80 100%);
-		background-color:#c4ff4d;
-	}
-	#politicButton:active {
-		position:relative;
-		top:1px;
-	}	
-	
-	#usedCarsButton {
+	.frontpageButton {
 		margin-left: 20px;
 		box-shadow: 0px 1px 0px 0px #ccd9ff;
-		background:linear-gradient(to bottom, #b3c6ff 5%, #809fff 100%);
 		background-color:#b3c6ff;
 		border-radius:6px;
 		border:1px solid #0039e6;
@@ -114,87 +60,15 @@
 		text-decoration:none;
 		text-shadow:0px 1px 0px #002699;
 	}
-	#usedCarsButton:hover {
+	.frontpageButton:hover {
 		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
 		background-color:#809fff;
 	}
-	#usedCarsButton:active {
+	.frontpageButton:active {
 		position:relative;
 		top:1px;
 	}
-	
-	
-	#runButton {
-		margin-left: 20px;
-		box-shadow: 0px 1px 0px 0px #ccd9ff;
-		background:linear-gradient(to bottom, #b3c6ff 5%, #661aff 100%);
-		background-color:#b3c6ff;
-		border-radius:6px;
-		border:1px solid #0039e6;
-		display:inline-block;
-		cursor:pointer;
-		color:#333333;
-		font-family:Arial;
-		font-size:15px;
-		font-weight:bold;
-		padding:6px 24px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #002699;
-	}
-	#runButton:hover {
-		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
-		background-color:#809fff;
-	}
-	#runButton:active {
-		position:relative;
-		top:1px;
-	}
-	
-	#bikeButton {
-		margin-left: 20px;
-		box-shadow: 0px 1px 0px 0px #ccd9ff;
-		background:linear-gradient(to bottom, #b3c6ff 5%, #009900 100%);
-		background-color:#b3c6ff;
-		border-radius:6px;
-		border:1px solid #0039e6;
-		display:inline-block;
-		cursor:pointer;
-		color:#333333;
-		font-family:Arial;
-		font-size:15px;
-		font-weight:bold;
-		padding:6px 24px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #002699;
-	}
-	#bikeButton:hover {
-		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
-		background-color:#809fff;
-	}
-	#bikeButton:active {
-		position:relative;
-		top:1px;
-	}
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
+		
 	#searchButton {
 		width: 400px;
 		margin-top: 20px;
