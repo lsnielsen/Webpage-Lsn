@@ -46,6 +46,7 @@
 		
 	function setDieselFrontpage()
 	{
+		session_start();
 		include "../projects/diesel/helpFunctions/frontPageHelper.php";
 		$con = mysqli_connect('127.0.0.1','root','');  
 		
@@ -63,7 +64,17 @@
 			$uniqueId = $row['id'];
 		}
 
-		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr'])) {
+		$dateCheck = (isset($_SESSION['date']) && isset($_POST['date'])) ? $_SESSION['date'] != $_POST['date'] : true;
+		$kmCheck = (isset($_SESSION['km']) && isset($_POST['km'])) ? $_SESSION['km'] != $_POST['km'] : true;
+		$literCheck = (isset($_SESSION['liter']) && isset($_POST['liter'])) ? $_SESSION['liter'] != $_POST['liter'] : true;
+		$krCheck = (isset($_SESSION['kr']) && isset($_POST['kr'])) ? $_SESSION['kr'] != $_POST['kr'] : true;
+		
+		if (isset($_POST['date']) && isset($_POST['km']) && isset($_POST['liter']) && isset($_POST['kr']) && $dateCheck && $kmCheck && $literCheck && $krCheck) {
+			
+			$_SESSION['date'] = $_POST['date'];
+			$_SESSION['km'] = $_POST['km'];
+			$_SESSION['liter'] = $_POST['liter'];
+			$_SESSION['kr'] = $_POST['kr'];
 			
 			$date = $_POST['date'];
 			$km = $_POST['km'];
@@ -84,7 +95,10 @@
 				setLowerHtmlBox();
 			}
 		}
-		
+		unset($_POST['date']);
+		unset($_POST['km']);
+		unset($_POST['liter']);
+		unset($_POST['kr']);
 		include ("../projects/diesel/view/dieselPage.html");
 	}
 		

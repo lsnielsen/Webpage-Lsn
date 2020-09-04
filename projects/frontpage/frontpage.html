@@ -8,6 +8,8 @@
 		<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 		<link rel="stylesheet" href="/../Webpage-Lsn/projects/frontpage/css/frontpage.css" type="text/css">
 		<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+		<script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script>
+
 	</head>
 	<body>
 		<h1>
@@ -29,9 +31,14 @@
 					Politik 
 				</button>
 			</form>
-			<form action="/Webpage-Lsn/controller/stock.php" method="post">
-				<button id="stockButton" type="submit" name="stockButton" value="stockPage"> 
-					Aktier 
+			<form action="/Webpage-Lsn/controller/usedCars.php" method="post">
+				<button id="usedCarsButton" type="submit" name="usedCarsButton" value="usedCarsPage"> 
+					Brugte biler 
+				</button>
+			</form>
+			<form action="/Webpage-Lsn/controller/running.php" method="post">
+				<button id="runButton" type="submit" name="runButton" value="runPage"> 
+					Løb 
 				</button>
 			</form>
 			<form action="/Webpage-Lsn/controller/biking.php" method="post">
@@ -45,9 +52,9 @@
 					<input id="theSearch" name="q" type="text" size="40" placeholder="Indtast søgeformular"/>
 					<input id="theSearch" type="submit" name="sa" value="Klik for at søge vha google" style="margin-top: 5px;" />
 				</center>
+				<input id="searchField" name="q" type="text" size="40" placeholder="Indtast søgeformular"/>
 			</form>
 		</div>
-		<div id="my-signin2"></div>
 
 	</body>
 
