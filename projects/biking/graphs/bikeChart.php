@@ -111,11 +111,9 @@
 			
 			function newValue()
 			{
-				console.log("newValue()");
 				arrayLength = array.length/2;
                 value = Math.floor(Math.random() * arrayLength);
 				while (typeof(oldValue) != "undefined" && oldValue != null && oldValue == value) {
-					console.log("while loop");
 					value = Math.floor(Math.random() * arrayLength);				
 				}
 				oldValue = value;
