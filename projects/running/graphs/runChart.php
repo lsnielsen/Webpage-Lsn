@@ -87,32 +87,39 @@
 			
 			var oldColor;
 			var oldId;
+			var oldValue;
+			var value;
+			var arrayLength;
+			var array;
 
             // set random value
             function randomValue() {
-				var array = <?php echo json_encode($kmPerHourArray); ?>;
-				var arrayLength = array.length/2;
-                var value = Math.floor(Math.random() * arrayLength);
+				array = <?php echo json_encode($kmPerHourArray); ?>;
+				value = newValue();
                 arrow.setValue(array[value]);
                 axis.setBottomText(array[value] + " km/t");
 				
 				if (typeof(oldId) != "undefined" && oldId != null && typeof(oldColor) != "undefined" && oldColor != null) {
 					$("#" + oldId).css("background-color", oldColor);
 				}
-			//	console.log("value: " + value + ", oldId: " + oldId + ", oldColor: " + oldColor);
 
 				oldColor = $('#' + value).css("background-color");
-			//	console.log("value: " + value + ", oldId: " + oldId + ", oldColor: " + oldColor);
-
 				$("#" + value).css("background-color", "#ff4d4d");
 				oldId = value;
-				
-				
-				
-				
-			//	console.log("value: " + value + ", oldId: " + oldId + ", oldColor: " + oldColor);
-			//	console.log(" ");
             }
+			
+			function newValue()
+			{
+				console.log("newValue()");
+				arrayLength = array.length/2;
+                value = Math.floor(Math.random() * arrayLength);
+				while (typeof(oldValue) != "undefined" && oldValue != null && oldValue == value) {
+					console.log("while loop");
+					value = Math.floor(Math.random() * arrayLength);				
+				}
+				oldValue = value;
+				return value;
+			}
 
         </script>
 
