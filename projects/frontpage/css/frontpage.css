@@ -43,6 +43,21 @@
 		box-shadow: 0 3px 0 #00823F;
 	}
 
+	#dieselButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #cccc00 100%);
+	}
+	#politicButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #ccff66 100%);
+	}
+	#usedCarsButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #809fff 100%);
+	}
+	#runButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #661aff 100%);
+	}
+	#bikeButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #145214 100%);
+	}
 	
 	.frontpageButton {
 		margin-left: 20px;
@@ -52,7 +67,7 @@
 		border:1px solid #0039e6;
 		display:inline-block;
 		cursor:pointer;
-		color:#333333;
+		color:#ffffff;
 		font-family:Arial;
 		font-size:15px;
 		font-weight:bold;
