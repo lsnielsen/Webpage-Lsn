@@ -19,6 +19,9 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	#my-signin2 {
+		margin-left: 20px;
+	}
 	#cvButton {
 		background-color: inherit;
 		border: 3px solid #993300;
@@ -130,10 +133,118 @@
 		position:relative;
 		top:1px;
 	}
+	
+	#runButton {
+		margin-left: 20px;
+		box-shadow: 0px 1px 0px 0px #ccd9ff;
+		background:linear-gradient(to bottom, #b3c6ff 5%, #661aff 100%);
+		background-color:#b3c6ff;
+		border-radius:6px;
+		border:1px solid #0039e6;
+		display:inline-block;
+		cursor:pointer;
+		color:#333333;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #002699;
+	}
+	#runButton:hover {
+		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
+		background-color:#809fff;
+	}
+	#runButton:active {
+		position:relative;
+		top:1px;
+	}
+	
+	#bikeButton {
+		margin-left: 20px;
+		box-shadow: 0px 1px 0px 0px #ccd9ff;
+		background:linear-gradient(to bottom, #b3c6ff 5%, #009900 100%);
+		background-color:#b3c6ff;
+		border-radius:6px;
+		border:1px solid #0039e6;
+		display:inline-block;
+		cursor:pointer;
+		color:#333333;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #002699;
+	}
+	#bikeButton:hover {
+		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
+		background-color:#809fff;
+	}
+	#bikeButton:active {
+		position:relative;
+		top:1px;
+	}
+	
+	#searchButton {
+		width: 400px;
+		margin-top: 20px;
+		margin-left: 20px;
+		box-shadow: 0px 1px 0px 0px #ccd9ff;
+		background:linear-gradient(to bottom, #b3c6ff 5%, #000080 100%);
+		background-color:#b3c6ff;
+		border-radius:6px;
+		border:1px solid #0039e6;
+		display:inline-block;
+		cursor:pointer;
+		color:#333333;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:8px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #002699;
+	}
+	#searchButton:hover {
+		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
+		background-color:#809fff;
+	}
+	#searchButton:active {
+		position:relative;
+		top:1px;
+	}
+	
+	#theSearch {
+		width: 300px;
+		margin-top: 5px;
+		box-shadow: 0px 1px 0px 0px #ccd9ff;
+		background:linear-gradient(to bottom, #b3c6ff 5%, #ff4dd2 100%);
+		background-color:#b3c6ff;
+		border-radius:6px;
+		border:1px solid #0039e6;
+		display:inline-block;
+		cursor:pointer;
+		color:#333333;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #002699;
+	}
+	#theSearch:hover {
+		background:linear-gradient(to bottom, #809fff 5%, #b3c6ff 100%);
+		background-color:#809fff;
+	}
+	#theSearch:active {
+		position:relative;
+		top:1px;
+	}
 
-	
-	
-	
+
+
+
+
 	
 	
 	
