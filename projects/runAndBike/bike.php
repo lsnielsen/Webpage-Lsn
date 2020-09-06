@@ -59,7 +59,10 @@
 							<th class="bikeHeader">Tid</th>
 							<th class="bikeHeader">Slet række</th>
 						</tr>
-						<?php include  '../projects/runAndBike/bikeTable.php'; ?>
+						<?php
+							$runAndBike = "bike";
+							include  '../projects/runAndBike/runAndBikeTable.php'; 
+						?>
 					</table>
 				</div>
 				<?php //include("statisticButtons.php"); ?>
