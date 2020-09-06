@@ -75,10 +75,14 @@
 			var array;
 
             // set random value
-            function randomValue() 
+            function randomValue(rowId = null) 
 			{
 				array = <?php echo json_encode($kmPerHourArray); ?>;
-				value = newValue();
+				if (rowId == null) {
+					value = newValue();
+				} else {
+					value = rowId;
+				}
                 arrow.setValue(array[value]);
                 axis.setBottomText(array[value] + " km/t");
 				
@@ -101,6 +105,11 @@
 				oldValue = value;
 				return value;
 			}
+			
+			$("tr").click(function() {
+				rowId = $(this).attr('id');
+				randomValue(rowId);
+			});
 
         </script>
 
