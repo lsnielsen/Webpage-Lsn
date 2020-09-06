@@ -65,7 +65,6 @@
 						?>
 					</table>
 				</div>
-				<?php //include("statisticButtons.php"); ?>
 			</fieldset>  
 		</form>     	
 		
