@@ -3,7 +3,7 @@
 
 
 
-	function setRunningErrorMessageBox($inputArray, $date, $km, $time) {	
+	function setRunAndBikeErrorMessageBox($inputArray, $date, $km, $time) {	
 		if ($inputArray['wrongDate'] == false) {
 			echo "<div class='errorMessage'> Dato formattet er ikke korrekt. "; 
 			if (!empty($date)) {
@@ -37,13 +37,13 @@
 		}
 	}
 	
-	function setUpperRunningHtmlBox()
+	function setUpperRunAndBikeHtmlBox()
 	{
 		?>
-			<div class="notDisplayingWrongInput wrongRunningInput" style="display: none;">
+			<div class="notDisplayingWrongInput wrongRunAndBikeInput" style="display: none;">
 				<span class="helper"></span>
 				<div style="max-width: 530;">
-					<div class="wrongRunningInputPopupCloseButton popupCloseButton">
+					<div class="wrongRunAndBikeInputPopupCloseButton popupCloseButton">
 						&times;
 					</div>
 					<div style="font-size: 25; margin-bottom: 20px;"> 
@@ -52,12 +52,12 @@
 		<?php 
 	}
 		
-	function setLowerRunningHtmlBox()
+	function setLowerRunAndBikeHtmlBox()
 	{
 		?>
 					<div>
-						<div class="wrongRunningInputButton runningPopupButton">Ok</div>
-						<div class="wrongRunningInputButton runningPopupButton">Fortryd</div>
+						<div class="wrongRunAndBikeInputButton runAndBikePopupButton">Ok</div>
+						<div class="wrongRunAndBikeInputButton runAndBikePopupButton">Fortryd</div>
 					</div>
 				</div>
 			</div>

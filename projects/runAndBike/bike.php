@@ -8,14 +8,14 @@
 		
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/gauge.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/biking/css/bike.css" type="text/css">
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/biking/css/popup.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/runAndBike/css/bike.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/runAndBike/css/popup.css" type="text/css">
 	</head>  
 	<body>
 		<h1>
 			Cykel side
 		</h1>   
-		<form action="/../Webpage-Lsn/controller/biking.php" method="post">  
+		<form action="/../Webpage-Lsn/controller/runAndBike.php" method="post">  
 			<fieldset style="background-color: #80dfff">
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine cykel tal, og de vil blive vist i tabellen nedenunder
@@ -59,7 +59,7 @@
 							<th class="bikeHeader">Tid</th>
 							<th class="bikeHeader">Slet række</th>
 						</tr>
-						<?php include  '../projects/biking/bikeTable.php'; ?>
+						<?php include  '../projects/runAndBike/bikeTable.php'; ?>
 					</table>
 				</div>
 				<?php //include("statisticButtons.php"); ?>
@@ -150,11 +150,11 @@
         $('.deleteBikeRow').hide();
     });
     
-	$('.wrongBikeInputButton').click(function(){
-        $('.wrongBikeInput').hide();
+	$('.wrongRunAndBikeInputButton').click(function(){
+        $('.wrongRunAndBikeInput').hide();
     });
-    $('.wrongBikeInputPopupCloseButton').click(function(){
-        $('.wrongBikeInput').hide();
+    $('.wrongRunAndBikeInputPopupCloseButton').click(function(){
+        $('.wrongRunAndBikeInput').hide();
     });
 	
 	if($(".notDisplayingWrongInput").length){

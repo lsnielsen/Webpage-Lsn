@@ -8,14 +8,14 @@
 		
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/gauge.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/run.css" type="text/css">
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/running/css/popup.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/runAndBike/css/run.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/runAndBike/css/popup.css" type="text/css">
 	</head>  
 	<body>
 		<h1>
 			Løbe side
 		</h1>   
-		<form action="/../Webpage-Lsn/controller/running.php" method="post">  
+		<form action="/../Webpage-Lsn/controller/runAndBike.php" method="post">  
 			<fieldset style="background-color: #ff8080">
 				<legend style="font-weight: bold; font-size: 23;"> 
 					Indtast dine løbe tal, og de vil blive vist i tabellen nedenunder
@@ -59,7 +59,7 @@
 							<th class="runHeader">Tid</th>
 							<th class="runHeader">Slet række</th>
 						</tr>
-						<?php include  '../projects/running/runTable.php'; ?>
+						<?php include  '../projects/runAndBike/runTable.php'; ?>
 					</table>
 				</div>
 				<?php //include("statisticButtons.php"); ?>
@@ -67,10 +67,10 @@
 		</form>     	
 		
 
-		<div class="deleteRunningRow">
+		<div class="deleteRunAndBikeRow">
 			<span class="helper"></span>
 			<div>
-				<div class="deleteRunningRowPopupCloseButton popupCloseButton">&times;</div>
+				<div class="deleteRunAndBikeRowPopupCloseButton popupCloseButton">&times;</div>
 				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
 				<ul class="rowToDelete">
 					<li class="dateToDelete"> </li>
@@ -78,11 +78,11 @@
 					<li class="timeToDelete"> </li>
 				</ul>
 				<div>
-					<div class="deleteRunningRowYes runPopupButton">Ja</div>
-					<div class="deleteRunningRowNo runPopupButton">Nej</div>
+					<div class="deleteRunAndBikeRowYes runPopupButton">Ja</div>
+					<div class="deleteRunAndBikeRowNo runPopupButton">Nej</div>
 				</div>
 			</div>
-			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/running.php" method="post">
+			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/RunAndBike.php" method="post">
 				<input type="hidden" id="hiddenField" name="runButton"/>
 			</form>
 		</div>
@@ -138,23 +138,23 @@
 		$(".kmToDelete").text(km);
 		$(".timeToDelete").text(time);
 		$("#hiddenField").val(id);
-		$('.deleteRunningRow').show();
-		$('.deleteRunningRowYes').click(function(){
+		$('.deleteRunAndBikeRow').show();
+		$('.deleteRunAndBikeRowYes').click(function(){
 			$("#deleteSpecificRow").submit();
 		});
 	});
-    $('.deleteRunningRowPopupCloseButton').click(function(){
-        $('.deleteRunningRow').hide();
+    $('.deleteRunAndBikeRowPopupCloseButton').click(function(){
+        $('.deleteRunAndBikeRow').hide();
     });
-    $('.deleteRunningRowNo').click(function(){
-        $('.deleteRunningRow').hide();
+    $('.deleteRunAndBikeRowNo').click(function(){
+        $('.deleteRunAndBikeRow').hide();
     });
     
-	$('.wrongRunningInputButton').click(function(){
-        $('.wrongRunningInput').hide();
+	$('.wrongRunAndBikeInputButton').click(function(){
+        $('.wrongRunAndBikeInput').hide();
     });
-    $('.wrongRunningInputPopupCloseButton').click(function(){
-        $('.wrongRunningInput').hide();
+    $('.wrongRunAndBikeInputPopupCloseButton').click(function(){
+        $('.wrongRunAndBikeInput').hide();
     });
 	
 	if($(".notDisplayingWrongInput").length){

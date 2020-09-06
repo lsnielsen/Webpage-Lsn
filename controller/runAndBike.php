@@ -52,9 +52,9 @@
 					echo 'Not inserted';  
 				}  
 			} else {		
-				setUpperRunningHtmlBox();
-				setRunningErrorMessageBox($inputArray, $date, $km, $time);
-				setLowerRunningHtmlBox();
+				setUpperRunAndBikeHtmlBox();
+				setRunAndBikeErrorMessageBox($inputArray, $date, $km, $time);
+				setLowerRunAndBikeHtmlBox();
 			}
 		} else {
 			unset($_SESSION['km']); 
