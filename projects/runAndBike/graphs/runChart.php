@@ -62,7 +62,7 @@
                 chart.addArrow(arrow);
 
                 chart.write("chartdiv");
-                // change value every 2 seconds
+                // change value every 3 seconds
                 setInterval(randomValue, 3000);
             });
 			
@@ -74,9 +74,14 @@
 			var array;
 
             // set random value
-            function randomValue() {
+            function randomValue(rowId = null) 
+			{
 				array = <?php echo json_encode($kmPerHourArray); ?>;
-				value = newValue();
+				if (rowId == null) {
+					value = newValue();
+				} else {
+					value = rowId;
+				}
                 arrow.setValue(array[value]);
                 axis.setBottomText(array[value] + " km/t");
 				
@@ -99,6 +104,11 @@
 				oldValue = value;
 				return value;
 			}
+			
+			$("tr").click(function() {
+				rowId = $(this).attr('id');
+				randomValue(rowId);
+			});
 
         </script>
 
