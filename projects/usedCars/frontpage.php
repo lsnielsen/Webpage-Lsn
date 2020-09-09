@@ -14,11 +14,14 @@
 				<button id="webscraperOne" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;"> 
 					Tryk her 1
 				</button>
-				<button id="webscraperTwo" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;"> 
+				<button id="webscraperTwo" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px; display: none;"> 
 					Tryk her 2
 				</button>
-				<button id="webscraperThree" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;"> 
+				<button id="webscraperThree" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;; display: none;"> 
 					Tryk her 3
+				</button>
+				<button id="webscraperFour" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;; display: none;"> 
+					Tryk her 4
 				</button>
 		
 		<div>
