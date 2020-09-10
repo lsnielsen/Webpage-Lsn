@@ -7,41 +7,30 @@
 
 	
 	var urlTempOne = "https://www.bilbasen.dk/brugt/bil?IncludeEngrosCVR=true&PriceFrom=0&includeLeasing=true";
-	var urlTempTwo = "https://www.bilbasen.dk/brugt/bil/vw";
-	var urlTempThree = "https://www.bilbasen.dk/brugt/bil/vw/passat";
-	var urlTempFour = "https://www.bilbasen.dk/brugt/bil/vw/passat/1,4_gte_variant_dsg_5d";
-	var urlTempFive = "https://www.bilbasen.dk/brugt/bil";
-	
-	// Denne url starter sådan: /brugt/bil/vw/passat/14-gte-variant-dsg-5d/4808684
-	urlTempUrl = "https://www.bilbasen.dk/brugt/bil/vw/passat/14-gte-variant-dsg-5d/4808684";
 
 	var firstUrlArr = new Array();
 	var secondUrlArr = new Array();
-	var thirdUrlArr = new Array();
-	var fourthUrlArr = new Array();
 	
 	$( document ).ready(function() {
-		console.log(starterArray);
-		$("#webscraperOne").click(function() {
-			console.log("first click");
-			for(i = 1; i<2; i++) {
-				setTimeout(
-					function() 
-					{
-						console.log("call " + i);
-						if (i >= 2) {
-							urlTempOne = urlTempOne + "&page=" + i;
-						}
-						callingFirstUrl(urlTempOne);
-					}, 5000
-				);
-			}
+		console.log("first click");
+		for(i = 1; i<2; i++) {
 			setTimeout(
 				function() 
 				{
-					$("#webscraperTwo").show();
-				}, 7000);
-		});
+					console.log("call " + i);
+					if (i >= 2) {
+						urlTempOne = urlTempOne + "&page=" + i;
+					}
+					callingFirstUrl(urlTempOne);
+				}, 5000
+			);
+		}
+		setTimeout(
+			function() 
+			{
+				$("#webscraperTwo").show();
+			}, 10000);
+	});
 	
 	function callingFirstUrl(urlOne) 
 	{
@@ -73,32 +62,31 @@
 		for(i = 0; i<firstUrlArr.length; i++) {
 			callingSecondUrl(firstUrlArr[i]);
 		}
-		setTimeout(
-			function() 
-			{
-				$("#webscraperThree").show();
-			}, 20000);
-
 	});
 	
 	function callingSecondUrl(url)
 	{
-		//console.log("callingSecondUrl " + url);
 		$.get(url, 
 			function( data ) {
-				console.log("inside dataTwo, url: " + url);
-				//console.log(dataTwo);
 				for ($i = 0; $i < data.length; $i++) {
-					subStr = data.substring($i, $i+140);
+					subStr = data.substring($i, $i+130);
 
 					tempOne = subStr.search(/<td class\=\"selectedcar\">[a-zA-Z0-9.,-\/ ]+<\/td>/);
 					tempTwo = subStr.search(/<td style="color: #888;">[a-zA-Z0-9.,-\/ ]+<\/td>/);
 					if (tempOne != -1 && tempTwo != -1) {
-						console.log("subStr: " + subStr);
-						var theString = subStr.substring(tempTwo + 1, subStr.length - 1);
-						console.log("matching attribute: " + theString);
+						
+						var theString = subStr.substring(tempTwo, subStr.length);
+						theString = theString.replace(/<\/td>\n[ ]*<td>&nbsp;<\/td>\n[ ]*<td class="selectedcar">/,'');
+						//theString = theString.replace("<td style=\"color: #888;\">", "");
+						//theString = theString.replace("</td>", "");
+						//theString = theString.replace("</td>", "");
+						//theString = theString.replace("</td>", "");
+						//theString = theString.replace("<td>&nbsp;", "");
+						//theString = theString.replace("<td class=\"selectedcar\">", "");
+						console.log(theString);
 						console.log(" ");
 						secondUrlArr.push(theString);
+						$i = $i + 133;
 					}
 				}
 			},
@@ -159,7 +147,7 @@
 				callingFourthUrl(thirdUrlArr[i]);
 			}			
 		});
-	});
+		
 	
 	function callingFourthUrl(fourthUrl) 
 	{
