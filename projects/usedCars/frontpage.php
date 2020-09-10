@@ -37,7 +37,7 @@
 </html>
 
 <?php
-	include("myfile.php");
+	include("myfileNew.php");
 ?>
 
 
