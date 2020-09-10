@@ -97,19 +97,14 @@
 						secondUrlArr.push(value);
 						
 						$i = $i + 133;
-					}
-					
-					
-					tempThree = subStr.search(/<li>[a-zA-Z-,.#;& ]+<\/li>/);
-					if (tempThree != -1) {
-						console.log(subStr);
-					}
-					
-					
-					
-					
-					
+					}					
 				}
+					tempThree = data.search("<section id=\"bbVipEquipment\" class=\"section\">");
+					tempFour = data.search("<section id=\"bbVipDescription\" class=\"section cf\">");
+					if (tempThree != -1 && tempFour != -1) {
+						equipString = data.substring(tempThree, tempFour);
+						console.log("equipString: " + equipString + "index: " + tempThree + " - " + tempFour);
+					}
 				secondUrlArr.push(url);
 				//console.log(" ");
 			},
