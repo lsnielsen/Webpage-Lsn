@@ -98,6 +98,17 @@
 						
 						$i = $i + 133;
 					}
+					
+					
+					tempThree = subStr.search(/<li>[a-zA-Z-,.#;& ]+<\/li>/);
+					if (tempThree != -1) {
+						console.log(subStr);
+					}
+					
+					
+					
+					
+					
 				}
 				secondUrlArr.push(url);
 				//console.log(" ");
