@@ -99,12 +99,30 @@
 						$i = $i + 133;
 					}					
 				}
+				
+				
+				
 					tempThree = data.search("<section id=\"bbVipEquipment\" class=\"section\">");
 					tempFour = data.search("<section id=\"bbVipDescription\" class=\"section cf\">");
 					if (tempThree != -1 && tempFour != -1) {
 						equipString = data.substring(tempThree, tempFour);
-						console.log("equipString: " + equipString + "index: " + tempThree + " - " + tempFour);
+						equipString = equipString.replace("<section id=\"bbVipEquipment\" class=\"section\">", "");
+						equipString = equipString.replace("<ul class=\"last\">", "");
+						equipString = equipString.replace("</ul>", "");
+						equipString = equipString.replace("</section>", "");
+
+						for(i=0; i<50; i++) {
+							equipString = equipString.replace("<li>", "");
+							equipString = equipString.replace("</li>", "");
+						}
 					}
+					
+					secondUrlArr.push(equipString);
+					
+					
+					
+					
+					
 				secondUrlArr.push(url);
 				//console.log(" ");
 			},
