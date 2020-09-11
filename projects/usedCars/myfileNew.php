@@ -39,7 +39,14 @@
 	
 	function makeArrayToPhp()
 	{
-		//$('#arrayButton').val(JSON.stringify(dataArray)), 
+		for(i=0; i<dataArray.length; i++) {
+			arrayValue = dataArray[i];
+			for(j=0; j<arrayValue.length; j++) {
+				if (arrayValue[j] == ",") {
+					arrayValue[j] = ".";
+				}
+			}
+		}
 		$('#arrayButton').val(dataArray);
 		$("#arrayButton").show();
 	}
@@ -88,13 +95,13 @@
 			function( data ) {
 				var singleCarArray = new Array();
 				setCarAttributes(data, singleCarArray);
-				setEquipmentAttributes(data, singleCarArray);
 				setRegAttributes(data, singleCarArray);
 				setProdAttributes(data, singleCarArray);
 				setModelAttributes(data, singleCarArray);
 				setSightAttributes(data, singleCarArray);
 				setColorAttributes(data, singleCarArray);
 				setPriceAttributes(data, singleCarArray);
+				setEquipmentAttributes(data, singleCarArray);
 					
 				singleCarArray.push(url);
 				dataArray.push(singleCarArray);
@@ -158,7 +165,7 @@
 			for(i=0; i<10; i++) {
 				sightString = sightString.replace(/\n/, "");
 			}
-			for(i=0; i<60; i++) {
+			for(i=0; i<200; i++) {
 				sightString = sightString.replace(" ", "");
 			}
 			//console.log(sightString);
@@ -186,10 +193,10 @@
 			for(i=0; i<10; i++) {
 				modelString = modelString.replace(/\n/, "");
 			}
-			for(i=0; i<60; i++) {
+			for(i=0; i<200; i++) {
 				modelString = modelString.replace(" ", "");
 			}
-			//console.log(modelString);
+			//console.log("Model: " + modelString);
 			singleCarArray.push(modelString);
 		}
 	}
@@ -208,10 +215,10 @@
 			for(i=0; i<5; i++) {
 				prodString = prodString.replace(/\n/, "");
 			}
-			for(i=0; i<60; i++) {
+			for(i=0; i<200; i++) {
 				prodString = prodString.replace(" ", "");
 			}
-			//console.log(prodString);
+			//console.log("production: " + prodString);
 			singleCarArray.push(prodString);
 		}
 	}
@@ -231,10 +238,10 @@
 			for(i=0; i<5; i++) {
 				regString = regString.replace(/\n/, "");
 			}
-			for(i=0; i<60; i++) {
+			for(i=0; i<200; i++) {
 				regString = regString.replace(" ", "");
 			}
-			//console.log(regString);
+			//console.log("registration: " + regString);
 			singleCarArray.push(regString);
 		}
 	}
@@ -291,22 +298,12 @@
 				equipString = equipString.replace(/\n +/, " ");
 			}
 			equipString = equipString.trim().split(" ");
-			
-
 		}
 		//console.log("Equipment values:");
 		//console.log(equipString);
 		
-		equipArr = new Array();
-		equipArr.push(equipString);
-		singleCarArray.push(equipArr);
+		singleCarArray.push(equipString);
 	}
-		
-		
-		
-		
-		
-		
 		
 		
 		
