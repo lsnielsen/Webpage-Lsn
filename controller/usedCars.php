@@ -20,11 +20,12 @@
 					$counter++;
 				}					
 			}
-			//for($i=0; $i< sizeof($dataArr); $i++) {
-			//	for($j=0; $j< sizeof($dataArr[$i]); $j++) {
-			//		echo $dataArr[$i][$j] . '<br>';
-			//	}
-			//}
+			for($i=0; $i< sizeof($dataArr); $i++) {
+				for($j=23; $j< sizeof($dataArr[$i])-2; $j++) {
+					$dataArr[$i]["extraEquipment"][] = $dataArr[$i][$j];
+				}
+			}
+			
 			echo '<pre>'; print_r($dataArr); echo '</pre>';
 			
 			
