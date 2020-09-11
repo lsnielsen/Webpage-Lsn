@@ -9,8 +9,7 @@
 	var urlTempOne = "https://www.bilbasen.dk/brugt/bil?IncludeEngrosCVR=true&PriceFrom=0&includeLeasing=true";
 
 	var firstUrlArr = new Array();
-	var secondUrlArr = new Array();
-	var specificationArr = new Array();
+	var dataArray = new Array();
 	
 	$( document ).ready(function() {
 		for(i = 1; i<2; i++) {
@@ -42,7 +41,7 @@
 			function() 
 			{
 				console.log("Second array:");
-				console.log(secondUrlArr);
+				console.log(dataArray);
 			}, 3000);
 	});
 	
@@ -94,7 +93,7 @@
 						value = value.replace(/ +/, "");
 						
 						//console.log(value);
-						secondUrlArr.push(value);
+						dataArray.push(value);
 						
 						$i = $i + 133;
 					}					
@@ -102,10 +101,10 @@
 				
 				
 				
-					tempThree = data.search("<section id=\"bbVipEquipment\" class=\"section\">");
-					tempFour = data.search("<section id=\"bbVipDescription\" class=\"section cf\">");
-					if (tempThree != -1 && tempFour != -1) {
-						equipString = data.substring(tempThree, tempFour);
+					equipStart = data.search("<section id=\"bbVipEquipment\" class=\"section\">");
+					equipEnd = data.search("<section id=\"bbVipDescription\" class=\"section cf\">");
+					if (equipStart != -1 && equipEnd != -1) {
+						equipString = data.substring(equipStart, equipEnd);
 						equipString = equipString.replace("<section id=\"bbVipEquipment\" class=\"section\">", "");
 						equipString = equipString.replace("<ul class=\"last\">", "");
 						equipString = equipString.replace("</ul>", "");
@@ -115,15 +114,82 @@
 							equipString = equipString.replace("<li>", "");
 							equipString = equipString.replace("</li>", "");
 						}
+						//So we still have one space left between each element
+						for(i=0; i<50; i++) {
+							equipString = equipString.replace(/\n +/, ", ");
+						}
+					}
+					//console.log(equipString);
+					equipArr = new Array();
+					equipArr.push(equipString);
+					dataArray.push(equipArr);
+					
+					
+					regStart = data.search("<div class=\"car-first-registration-date\">");
+					regEnd = data.search("<div class=\"car-production-date\">");
+					if (regStart != -1 && regEnd != -1) {
+						regString = data.substring(regStart, regEnd);
+						regString = regString.replace("<div class=\"car-first-registration-date\">", "");
+						regString = regString.replace("<span class=\"label\">1. registrering</span>", "");
+						regString = regString.replace("<img src='/Public/images/ico-tooltip.png' class=\"bb-vip-popover-icon\"/>", "");
+						regString = regString.replace("</div>", "");
+						regString = regString.replace("</span>", "");
+						regString = regString.replace("<span class=\"value\">", "");
+						for(i=0; i<5; i++) {
+							regString = regString.replace(/\n/, "");
+						}
+						for(i=0; i<60; i++) {
+							regString = regString.replace(" ", "");
+						}
+						//console.log(regString);
+						dataArray.push(regString);
 					}
 					
-					secondUrlArr.push(equipString);
+					prodStart = data.search("<div class=\"car-production-date\">");
+					prodEnd = data.search("<div class=\"car-model-year\">");
+					if (prodStart != -1 && prodEnd != -1) {
+						prodString = data.substring(prodStart, prodEnd);
+						prodString = prodString.replace("<div class=\"car-production-date\">", "");
+						prodString = prodString.replace("<span class=\"label\">Produceret</span>", "");
+						prodString = prodString.replace("</div>", "");
+						prodString = prodString.replace("</span>", "");
+						prodString = prodString.replace("<span class=\"value\">", "");
+						for(i=0; i<5; i++) {
+							prodString = prodString.replace(/\n/, "");
+						}
+						for(i=0; i<60; i++) {
+							prodString = prodString.replace(" ", "");
+						}
+						//console.log(prodString);
+						dataArray.push(prodString);
+					}
+					
+					modelStart = data.search("<div class=\"car-model-year\">");
+					modelEnd = data.search("<section class=\"section vip-finance\"");
+					if (modelStart != -1 && modelEnd != -1) {
+						modelString = data.substring(modelStart, modelEnd);
+						modelString = modelString.replace("<div class=\"car-model-year\">", "");
+						modelString = modelString.replace("<span class=\"label\">Modelår</span>", "");
+						modelString = modelString.replace("</div>", "");
+						modelString = modelString.replace("</div>", "");
+						modelString = modelString.replace("</div>", "");
+						modelString = modelString.replace("</div>", "");
+						modelString = modelString.replace("</section>", "");
+						modelString = modelString.replace("</span>", "");
+						modelString = modelString.replace("<span class=\"value\">", "");
+						for(i=0; i<10; i++) {
+							modelString = modelString.replace(/\n/, "");
+						}
+						for(i=0; i<60; i++) {
+							modelString = modelString.replace(" ", "");
+						}
+						//console.log(modelString);
+						dataArray.push(modelString);
+					}
 					
 					
 					
-					
-					
-				secondUrlArr.push(url);
+				dataArray.push(url);
 				//console.log(" ");
 			},
 			'html'
