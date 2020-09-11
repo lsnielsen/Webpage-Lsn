@@ -40,7 +40,8 @@
 	function makeArrayToPhp()
 	{
 		console.log("makeArray to php");
-		$('#arrayButton').val(JSON.stringify(dataArray)), 
+		//$('#arrayButton').val(JSON.stringify(dataArray)), 
+		$('#arrayButton').val(dataArray);
 		$("#arrayButton").show();
 	}
 	
