@@ -1,10 +1,14 @@
 
 <?php
 
-		$usedCarsButton = isset($_POST['usedCarsButton']) ? $_POST['usedCarsButton'] : ""; 
+		$usedCarsButton = isset($_POST['usedCarsArray']) ? $_POST['usedCarsArray'] : ""; 
+		//echo "used car button: " . $usedCarsButton;
+		if ($usedCarsButton != "") {
+			echo "do get here? <br>";
+			echo '<pre>'; print_r($usedCarsButton); echo '</pre>';
 
-		if ($usedCarsButton == "usedCarsDownload") {
-			$array=json_decode($_POST['jsondata']);
+			echo $usedCarsButton[0];
+			//$array=json_decode($_POST['arrayButton'], true);
 		} else {
 			include("../projects/usedCars/frontpage.php");	
 		}

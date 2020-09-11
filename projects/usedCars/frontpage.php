@@ -13,8 +13,14 @@
 		</h1>
 				<button id="webscraper" style="display: none;"> </button>
 
-				<form action="/Webpage-Lsn/controller/usedCars.php" method="post">
-					<button id="arrayButton" type="submit" style="display: none;" value="usedCarsDownload" name="usedCarsButton"> 
+				<form 	method="post" 
+						>
+					<button type="submit" 
+							id="arrayButton" 
+							name="usedCarsArray"
+							style="display: none; width: 200px; height: 200px;" 
+							action="/Webpage-Lsn/controller/usedCars.php"> 
+							Tryk her for at downloade din excel fil
 					</button>
 				</form>
 		

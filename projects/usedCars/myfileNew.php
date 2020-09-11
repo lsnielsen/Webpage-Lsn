@@ -27,11 +27,11 @@
 			function() 
 			{
 				$("#webscraper").click();
-			}, 10000);
-		setTimeout(
-			function() 
-			{
-				makeArrayToPhp();
+				setTimeout(
+					function() 
+					{
+						makeArrayToPhp();
+					}, 5000);
 			}, 10000);
 	});
 	
@@ -39,8 +39,9 @@
 	
 	function makeArrayToPhp()
 	{
-		JSON.stringify(dataArray);
-		$("#arrayButton").submit();
+		console.log("makeArray to php");
+		$('#arrayButton').val(JSON.stringify(dataArray)), 
+		$("#arrayButton").show();
 	}
 	
 	
@@ -85,6 +86,7 @@
 	{
 		$.get(url, 
 			function( data ) {
+				var singleC;
 				for ($i = 0; $i < data.length; $i++) {
 					subStr = data.substring($i, $i+130);
 
