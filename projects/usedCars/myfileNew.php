@@ -129,7 +129,6 @@
 		} else {
 			singleCarArray.push("No value for price");
 		}
-		singleCarArray.push("EXTRAEQUIPMENT");
 	}
 	
 	function setColorAttributes(data, singleCarArray)
