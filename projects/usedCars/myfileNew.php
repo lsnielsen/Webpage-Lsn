@@ -28,7 +28,23 @@
 			{
 				$("#webscraperTwo").click();
 			}, 10000);
+		setTimeout(
+			function() 
+			{
+				makeArrayToPhp();
+			}, 10000);
 	});
+	
+	
+	
+	function makeArrayToPhp()
+	{
+		JSON.stringify(dataArray) ;
+		$array=json_decode($_POST['jsondata']);
+	}
+	
+	
+	
 	
 		
 	$("#webscraperTwo").click(function() {
@@ -185,6 +201,63 @@
 						}
 						//console.log(modelString);
 						dataArray.push(modelString);
+					}
+					
+					sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
+					sightEnd = data.search("<li title=\"Farve\"><span>Farve:</span>");
+					//console.log("sight start, end: " + sightStart + " " + sightEnd);
+					if (sightStart != -1 && sightEnd != -1) {
+						sightString = data.substring(sightStart, sightEnd);
+						sightString = sightString.replace("<li title=\"Dato for sidste syn\"><span>Synet:</span>", "");
+						sightString = sightString.replace("</li>", "");
+						for(i=0; i<10; i++) {
+							sightString = sightString.replace(/\n/, "");
+						}
+						for(i=0; i<60; i++) {
+							sightString = sightString.replace(" ", "");
+						}
+						//console.log(sightString);
+						dataArray.push(sightString);
+					} else {
+						dataArray.push("No value for sight");
+					}
+					
+					colorStart = data.search("<span>Farve:</span>");
+					//console.log("color start, end: " + colorStart);
+					if (colorStart != -1) {
+						colorString = data.substring(colorStart, colorStart+60);
+						colorString = colorString.replace("<span>Farve:</span>", "");
+						colorString = colorString.replace("</li>", "");
+						for(i=0; i<10; i++) {
+							colorString = colorString.replace(/\n/, "");
+						}
+						for(i=0; i<60; i++) {
+							colorString = colorString.replace(" ", "");
+						}
+						colorString = colorString.replace(/<[a-z<>\/]*/, "");
+						colorString = colorString.replace(/<[a-z<>\/]*/, "");
+						//console.log(colorString);
+						dataArray.push(colorString);
+					} else {
+						dataArray.push("No value for color");
+					}
+					
+					
+					priceEnd = data.search("kr</td>");
+					//console.log("price start, end: " + priceEnd);
+					if (priceEnd != -1) {
+						priceString = data.substring(priceEnd-20, priceEnd);
+						for(i=0; i<10; i++) {
+							priceString = priceString.replace(/\n/, "");
+						}
+						for(i=0; i<60; i++) {
+							priceString = priceString.replace(" ", "");
+						}
+						priceString = priceString.replace(/[a-z">]+/, "");
+						//console.log(priceString);
+						dataArray.push(priceString);
+					} else {
+						dataArray.push("No value for price");
 					}
 					
 					
