@@ -11,7 +11,9 @@
 
 			$tempArr = explode(",", $usedCarsButton);
 			for($i=0; $i< sizeof($tempArr); $i++) {
-				echo $tempArr[$i] . '<br>';
+				if($tempArr[$i] != "") {
+					echo $tempArr[$i] . '<br>';
+				}
 			}
 			//echo '<pre>'; print_r($tempArr); echo '</pre>';
 			//echo $tempArr[93];
