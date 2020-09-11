@@ -5,12 +5,17 @@
 		//echo "used car button: " . $usedCarsButton;
 		if ($usedCarsButton != "") {
 			echo "do get here? <br>";
-			echo '<pre>'; print_r($usedCarsButton); echo '</pre>';
+			//echo '<pre>'; print_r($usedCarsButton); echo '</pre>';
 
-			echo $usedCarsButton;
+			//echo $usedCarsButton;
 
-			echo $usedCarsButton[0];
-			//$array=json_decode($_POST['arrayButton'], true);
+			$tempArr = explode(",", $usedCarsButton);
+			for($i=0; $i< sizeof($tempArr); $i++) {
+				echo $tempArr[$i] . '<br>';
+			}
+			//echo '<pre>'; print_r($tempArr); echo '</pre>';
+			//echo $tempArr[93];
+			
 		} else {
 			include("../projects/usedCars/frontpage.php");	
 		}
