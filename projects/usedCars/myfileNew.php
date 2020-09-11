@@ -26,7 +26,7 @@
 		setTimeout(
 			function() 
 			{
-				$("#webscraperTwo").click();
+				$("#webscraper").click();
 			}, 10000);
 		setTimeout(
 			function() 
@@ -39,15 +39,15 @@
 	
 	function makeArrayToPhp()
 	{
-		JSON.stringify(dataArray) ;
-		$array=json_decode($_POST['jsondata']);
+		JSON.stringify(dataArray);
+		$("#arrayButton").submit();
 	}
 	
 	
 	
 	
 		
-	$("#webscraperTwo").click(function() {
+	$("#webscraper").click(function() {
 		console.log("First array:");
 		console.log(firstUrlArr);
 		for(i = 0; i<firstUrlArr.length; i++) {

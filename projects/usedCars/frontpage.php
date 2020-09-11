@@ -11,12 +11,10 @@
 		<h1>
 			Forsøger her at downloade en excel fil med brugte biler
 		</h1>
-				<button id="webscraperTwo" type="submit" style="display: none;"> 
-					Tryk her 2
-				</button>
+				<button id="webscraper" style="display: none;"> </button>
+
 				<form action="/Webpage-Lsn/controller/usedCars.php" method="post">
-					<button id="arrayButton" type="submit" style="display: none;" value="usedCarsPage" name="usedCarsButton"> 
-						Tryk her 4
+					<button id="arrayButton" type="submit" style="display: none;" value="usedCarsDownload" name="usedCarsButton"> 
 					</button>
 				</form>
 		
