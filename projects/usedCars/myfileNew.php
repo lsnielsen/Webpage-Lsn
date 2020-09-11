@@ -128,6 +128,7 @@
 		} else {
 			singleCarArray.push("No value for price");
 		}
+		singleCarArray.push("EXTRAEQUIPMENT");
 	}
 	
 	function setColorAttributes(data, singleCarArray)
@@ -290,7 +291,7 @@
 			equipString = equipString.replace("</ul>", "");
 			equipString = equipString.replace("</section>", "");
 
-			for(i=0; i<80; i++) {
+			for(i=0; i<100; i++) {
 				equipString = equipString.replace("<li>", "");
 				equipString = equipString.replace("</li>", "");
 			}
