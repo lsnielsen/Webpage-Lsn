@@ -11,15 +11,14 @@
 		<h1>
 			Forsøger her at downloade en excel fil med brugte biler
 		</h1>
-				<button id="webscraperTwo" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px; display: none;"> 
+				<button id="webscraperTwo" type="submit" style="display: none;"> 
 					Tryk her 2
 				</button>
-				<button id="webscraperThree" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;; display: none;"> 
-					Tryk her 3
-				</button>
-				<button id="webscraperFour" type="submit" style="margin-left: 500px; margin-top: 200px; width: 200px; height: 200px;; display: none;"> 
-					Tryk her 4
-				</button>
+				<form action="/Webpage-Lsn/controller/usedCars.php" method="post">
+					<button id="arrayButton" type="submit" style="display: none;" value="usedCarsPage" name="usedCarsButton"> 
+						Tryk her 4
+					</button>
+				</form>
 		
 		<div>
 			<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
