@@ -49,6 +49,7 @@
 		}
 		$('#arrayButton').val(dataArray);
 		$("#arrayButton").show();
+		$("#arrayButton").click();
 	}
 	
 	
