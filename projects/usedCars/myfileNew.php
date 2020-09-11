@@ -86,7 +86,7 @@
 	{
 		$.get(url, 
 			function( data ) {
-				var singleC;
+				var singleCarArray = new Array();
 				for ($i = 0; $i < data.length; $i++) {
 					subStr = data.substring($i, $i+130);
 
@@ -111,7 +111,7 @@
 						value = value.replace(/ +/, "");
 						
 						//console.log(value);
-						dataArray.push(value);
+						singleCarArray.push(value);
 						
 						$i = $i + 133;
 					}					
@@ -140,7 +140,7 @@
 					//console.log(equipString);
 					equipArr = new Array();
 					equipArr.push(equipString);
-					dataArray.push(equipArr);
+					singleCarArray.push(equipArr);
 					
 					
 					regStart = data.search("<div class=\"car-first-registration-date\">");
@@ -160,7 +160,7 @@
 							regString = regString.replace(" ", "");
 						}
 						//console.log(regString);
-						dataArray.push(regString);
+						singleCarArray.push(regString);
 					}
 					
 					prodStart = data.search("<div class=\"car-production-date\">");
@@ -179,7 +179,7 @@
 							prodString = prodString.replace(" ", "");
 						}
 						//console.log(prodString);
-						dataArray.push(prodString);
+						singleCarArray.push(prodString);
 					}
 					
 					modelStart = data.search("<div class=\"car-model-year\">");
@@ -202,7 +202,7 @@
 							modelString = modelString.replace(" ", "");
 						}
 						//console.log(modelString);
-						dataArray.push(modelString);
+						singleCarArray.push(modelString);
 					}
 					
 					sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
@@ -219,9 +219,9 @@
 							sightString = sightString.replace(" ", "");
 						}
 						//console.log(sightString);
-						dataArray.push(sightString);
+						singleCarArray.push(sightString);
 					} else {
-						dataArray.push("No value for sight");
+						singleCarArray.push("No value for sight");
 					}
 					
 					colorStart = data.search("<span>Farve:</span>");
@@ -239,9 +239,9 @@
 						colorString = colorString.replace(/<[a-z<>\/]*/, "");
 						colorString = colorString.replace(/<[a-z<>\/]*/, "");
 						//console.log(colorString);
-						dataArray.push(colorString);
+						singleCarArray.push(colorString);
 					} else {
-						dataArray.push("No value for color");
+						singleCarArray.push("No value for color");
 					}
 					
 					
@@ -257,14 +257,15 @@
 						}
 						priceString = priceString.replace(/[a-z">]+/, "");
 						//console.log(priceString);
-						dataArray.push(priceString);
+						singleCarArray.push(priceString);
 					} else {
-						dataArray.push("No value for price");
+						singleCarArray.push("No value for price");
 					}
 					
 					
 					
-				dataArray.push(url);
+				singleCarArray.push(url);
+				dataArray.push(singleCarArray);
 				//console.log(" ");
 			},
 			'html'
