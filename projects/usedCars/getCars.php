@@ -32,7 +32,7 @@
 				setTimeout(
 					function() 
 					{
-						//makeArrayToPhp();
+						makeArrayToPhp();
 					}, 5000);
 			}, 13000);
 	});
