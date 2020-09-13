@@ -18,9 +18,11 @@
 			singleCarArray.push(secondSubstring);
 			
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
+			thirdSubstring = thirdSubstring.replace(",", ".");
 			singleCarArray.push(thirdSubstring);
 			//console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
 		} else {
+			singleCarArray.push("-");
 			singleCarArray.push("-");
 		}
 	}
@@ -201,10 +203,11 @@
 				} else if (subStr.search(/[0-9]+ cm/) != -1) {
 					singleCarArray['width'] = value;
 				} */
+				value = value.replace(",", ".");
 				singleCarArray.push(value);
 				
 				$i = $i + 133;
-			}					
+			} 			
 		}
 	}
 
