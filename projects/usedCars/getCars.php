@@ -22,7 +22,7 @@
 						theUrl = theUrl + "&page=" + i;
 					}
 					callingFirstUrl(theUrl);
-				}, 6000
+				}, 1000
 			);
 		}
 		setTimeout(
@@ -32,9 +32,9 @@
 				setTimeout(
 					function() 
 					{
-						makeArrayToPhp();
-					}, 5000);
-			}, 13000);
+						//makeArrayToPhp();
+					}, 100);
+			}, 10000);
 	});
 	
 	
@@ -100,7 +100,7 @@
 				singleCarArray.push(url);
 				getModelName(data, singleCarArray);
 				setPriceAttributes(data, singleCarArray);
-				setCarAttributes(data, singleCarArray);
+				setPrimerAttributes(data, singleCarArray);
 				setRegAttributes(data, singleCarArray);
 				setProdAttributes(data, singleCarArray);
 				setModelAttributes(data, singleCarArray);
