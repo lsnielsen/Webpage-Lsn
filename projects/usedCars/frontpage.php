@@ -37,7 +37,7 @@
 </html>
 
 <?php
-	include("myfileNew.php");
+	include("getCars.php");
 ?>
 
 
