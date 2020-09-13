@@ -30,7 +30,7 @@
 				setTimeout(
 					function() 
 					{
-						makeArrayToPhp();
+						//makeArrayToPhp();
 					}, 5000);
 			}, 13000);
 	});
@@ -104,7 +104,7 @@
 				setPriceAttributes(data, singleCarArray);
 				setEquipmentAttributes(data, singleCarArray);
 					
-				singleCarArray.push(url);
+				singleCarArray['link'] = url;
 				dataArray.push(singleCarArray);
 			},
 			'html'
@@ -125,9 +125,9 @@
 			}
 			priceString = priceString.replace(/[a-z">]+/, "");
 			//console.log(priceString);
-			singleCarArray.push(priceString);
+			singleCarArray['price'] = priceString;
 		} else {
-			singleCarArray.push("No value for price");
+			singleCarArray['price'] = "-";
 		}
 	}
 	
@@ -148,9 +148,9 @@
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			//console.log(colorString);
-			singleCarArray.push(colorString);
+			singleCarArray['color'] = colorString;
 		} else {
-			singleCarArray.push("No value for color");
+			singleCarArray['color'] = "-";
 		}
 	}
 	
@@ -170,9 +170,9 @@
 				sightString = sightString.replace(" ", "");
 			}
 			//console.log(sightString);
-			singleCarArray.push(sightString);
+			singleCarArray['sight'] = sightString;
 		} else {
-			singleCarArray.push("No value for sight");
+			singleCarArray['sight'] = "-";
 		}
 	}
 	
@@ -198,7 +198,7 @@
 				modelString = modelString.replace(" ", "");
 			}
 			//console.log("Model: " + modelString);
-			singleCarArray.push(modelString);
+			singleCarArray['model'] = modelString;
 		}
 	}
 	
@@ -220,7 +220,7 @@
 				prodString = prodString.replace(" ", "");
 			}
 			//console.log("production: " + prodString);
-			singleCarArray.push(prodString);
+			singleCarArray['productDate'] = prodString;
 		}
 	}
 	
@@ -243,7 +243,7 @@
 				regString = regString.replace(" ", "");
 			}
 			//console.log("registration: " + regString);
-			singleCarArray.push(regString);
+			singleCarArray['regDate'] = regString;
 		}
 	}
 		
