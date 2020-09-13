@@ -2,6 +2,7 @@
 <?php	
 	include("array.php");
 	include("getCarFunctions.php");
+	include("extraEquipment.php");
 ?>
 
 <script>
