@@ -6,223 +6,223 @@
 	function setExtraEquipment(data, singleCarArray)
 	{
 		equip = data.search("ABS-bremser");	
-		if(equip != -1) { singleCarArray['abs'] = "Ja"; } else { singleCarArray['abs'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Alufælge");	
-		if(equip != -1) { singleCarArray['alufælge'] = "Ja"; } else { singleCarArray['alufælge'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Android auto");	
-		if(equip != -1) { singleCarArray['android'] = "Ja"; } else { singleCarArray['android'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Anhængertræk");	
-		if(equip != -1) { singleCarArray['trækkrog'] = "Ja"; } else { singleCarArray['trækkrog'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Anhængertræk, aftagl.");	
-		if(equip != -1) { singleCarArray['aftagl'] = "Ja"; } else { singleCarArray['aftagl'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Antispin");	
-		if(equip != -1) { singleCarArray['antispin'] = "Ja"; } else { singleCarArray['antispin'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Apple carplay");	
-		if(equip != -1) { singleCarArray['appleCarplay'] = "Ja"; } else { singleCarArray['appleCarplay'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Armlæn");	
-		if(equip != -1) { singleCarArray['armlæn'] = "Ja"; } else { singleCarArray['armlæn'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Auto. nødbremse");	
-		if(equip != -1) { singleCarArray['autoBremse'] = "Ja"; } else { singleCarArray['autoBremse'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Auto. parkering");	
-		if(equip != -1) { singleCarArray['autoPark'] = "Ja"; } else { singleCarArray['autoPark'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Auto. start/stop");	
-		if(equip != -1) { singleCarArray['autoStartStop'] = "Ja"; } else { singleCarArray['autoStartStop'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Automatgear");	
-		if(equip != -1) { singleCarArray['autoGear'] = "Ja"; } else { singleCarArray['autoGear'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Automatisk lys");	
-		if(equip != -1) { singleCarArray['autoLys'] = "Ja"; } else { singleCarArray['autoLys'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("AUX tilslutning");	
-		if(equip != -1) { singleCarArray['auxTilslutning'] = "Ja"; } else { singleCarArray['auxTilslutning'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Bakkamera");	
-		if(equip != -1) { singleCarArray['bakkamera'] = "Ja"; } else { singleCarArray['bakkamera'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Bakspejl m. nedbl.");	
-		if(equip != -1) { singleCarArray['bakspejlNedbl'] = "Ja"; } else { singleCarArray['bakspejlNedbl'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Bi-xenon");	
-		if(equip != -1) { singleCarArray['bi-xenon'] = "Ja"; } else { singleCarArray['bi-xenon'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Blindvinkelassistent");	
-		if(equip != -1) { singleCarArray['blindvinkel'] = "Ja"; } else { singleCarArray['blindvinkel'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Bluetooth");	
-		if(equip != -1) { singleCarArray['bluetooth'] = "Ja"; } else { singleCarArray['bluetooth'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Brugtbilsattest");	
-		if(equip != -1) { singleCarArray['brugtbilsattest'] = "Ja"; } else { singleCarArray['brugtbilsattest'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Centrallås fjernb.");	
-		if(equip != -1) { singleCarArray['centrallås'] = "Ja"; } else { singleCarArray['centrallås'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("DAB radio");	
-		if(equip != -1) { singleCarArray['dabRadio'] = "Ja"; } else { singleCarArray['dabRadio'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Dæktryksmåler");	
-		if(equip != -1) { singleCarArray['dæktryksmåler'] = "Ja"; } else { singleCarArray['dæktryksmåler'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Digitalt cockpit");	
-		if(equip != -1) { singleCarArray['digitalCockpit'] = "Ja"; } else { singleCarArray['digitalCockpit'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("El indst. førersæde m. memory");	
-		if(equip != -1) { singleCarArray['memoryFrontseat'] = "Ja"; } else { singleCarArray['memoryFrontseat'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Elektrisk kabinevarmer");	
-		if(equip != -1) { singleCarArray['cabinWarmer'] = "Ja"; } else { singleCarArray['cabinWarmer'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Elektrisk parkeringsbremse");	
-		if(equip != -1) { singleCarArray['parkBreak'] = "Ja"; } else { singleCarArray['parkBreak'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Elektriske komfortsæder");	
-		if(equip != -1) { singleCarArray['comfSeats'] = "Ja"; } else { singleCarArray['comfSeats'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Elektronisk bagklap");	
-		if(equip != -1) { singleCarArray['elecBackDoor'] = "Ja"; } else { singleCarArray['elecBackDoor'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("El-klapbare sidespejle m. varme");	
-		if(equip != -1) { singleCarArray['sideMirrorElWarm'] = "Ja"; } else { singleCarArray['sideMirrorElWarm'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Fartpilot");	
-		if(equip != -1) { singleCarArray['speedPilot'] = "Ja"; } else { singleCarArray['speedPilot'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Fartpilot, adaptiv");	
-		if(equip != -1) { singleCarArray['speedPilotAdap'] = "Ja"; } else { singleCarArray['speedPilotAdap'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Fjernlysassistent");	
-		if(equip != -1) { singleCarArray['lightAssist'] = "Ja"; } else { singleCarArray['lightAssist'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Fuld LED forlygter");	
-		if(equip != -1) { singleCarArray['ledFront'] = "Ja"; } else { singleCarArray['ledFront'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Head-up display");	
-		if(equip != -1) { singleCarArray['headupDisplay'] = "Ja"; } else { singleCarArray['headupDisplay'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Infocenter");	
-		if(equip != -1) { singleCarArray['infocenter'] = "Ja"; } else { singleCarArray['infocenter'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Internet");	
-		if(equip != -1) { singleCarArray['internet'] = "Ja"; } else { singleCarArray['internet'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Isofix");	
-		if(equip != -1) { singleCarArray['isofix'] = "Ja"; } else { singleCarArray['isofix'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Klimaanlæg, 4-zonet");	
-		if(equip != -1) { singleCarArray['climate'] = "Ja"; } else { singleCarArray['climate'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Kørecomputer");	
-		if(equip != -1) { singleCarArray['driveComputer'] = "Ja"; } else { singleCarArray['driveComputer'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Kurvelys");	
-		if(equip != -1) { singleCarArray['curveLight'] = "Ja"; } else { singleCarArray['curveLight'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Læderrat");	
-		if(equip != -1) { singleCarArray['leatherWheel'] = "Ja"; } else { singleCarArray['leatherWheel'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("LED Kørelys");	
-		if(equip != -1) { singleCarArray['ledDriveLight'] = "Ja"; } else { singleCarArray['ledDriveLight'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Lygtevasker");	
-		if(equip != -1) { singleCarArray['lightWashing'] = "Ja"; } else { singleCarArray['lightWashing'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Musikstreaming via bluetooth");	
-		if(equip != -1) { singleCarArray['bluetoothMusic'] = "Ja"; } else { singleCarArray['bluetoothMusic'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Navigation");	
-		if(equip != -1) { singleCarArray['navigation'] = "Ja"; } else { singleCarArray['navigation'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Nøglefri betjening");	
-		if(equip != -1) { singleCarArray['keylessRemote'] = "Ja"; } else { singleCarArray['keylessRemote'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Panoramatag");	
-		if(equip != -1) { singleCarArray['panoramaRoof'] = "Ja"; } else { singleCarArray['panoramaRoof'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Parkeringssensor (bag)");	
-		if(equip != -1) { singleCarArray['parkSensorBack'] = "Ja"; } else { singleCarArray['parkSensorBack'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Parkeringssensor (for)");	
-		if(equip != -1) { singleCarArray['parkSensorFront'] = "Ja"; } else { singleCarArray['parkSensorFront'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Regnsensor");	
-		if(equip != -1) { singleCarArray['rainSensor'] = "Ja"; } else { singleCarArray['rainSensor'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Sædebetræk, dellæder");	
-		if(equip != -1) { singleCarArray['seatCover'] = "Ja"; } else { singleCarArray['seatCover'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Sædebetræk, læder");	
-		if(equip != -1) { singleCarArray['seatCoverLeather'] = "Ja"; } else { singleCarArray['seatCoverLeather'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Sædevarme");	
-		if(equip != -1) { singleCarArray['seatWarm'] = "Ja"; } else { singleCarArray['seatWarm'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("SD kortlæser");	
-		if(equip != -1) { singleCarArray['sdMap'] = "Ja"; } else { singleCarArray['sdMap'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Servo");	
-		if(equip != -1) { singleCarArray['servo'] = "Ja"; } else { singleCarArray['servo'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Service ok");	
-		if(equip != -1) { singleCarArray['okService'] = "Ja"; } else { singleCarArray['okService'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Skiltegenkendelse");	
-		if(equip != -1) { singleCarArray['signRecognition'] = "Ja"; } else { singleCarArray['signRecognition'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Soltag, elektrisk");	
-		if(equip != -1) { singleCarArray['sunRoofElec'] = "Ja"; } else { singleCarArray['sunRoofElec'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Soltag, manuelt");	
-		if(equip != -1) { singleCarArray['sunRoofManual'] = "Ja"; } else { singleCarArray['sunRoofManual'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Splitbagsæde");	
-		if(equip != -1) { singleCarArray['splitBackseat'] = "Ja"; } else { singleCarArray['splitBackseat'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Sportssæder");	
-		if(equip != -1) { singleCarArray['sportSeat'] = "Ja"; } else { singleCarArray['sportSeat'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Startspærre");	
-		if(equip != -1) { singleCarArray['immobilizer'] = "Ja"; } else { singleCarArray['immobilizer'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Svingbart træk (elektrisk)");	
-		if(equip != -1) { singleCarArray['swingDrawElec'] = "Ja"; } else { singleCarArray['swingDrawElec'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Svingbart træk (manuelt)");	
-		if(equip != -1) { singleCarArray['swingDrawManual'] = "Ja"; } else { singleCarArray['swingDrawManual'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Tågelygter");	
-		if(equip != -1) { singleCarArray['fogLight'] = "Ja"; } else { singleCarArray['fogLight'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Tagræling");	
-		if(equip != -1) { singleCarArray['roofRails'] = "Ja"; } else { singleCarArray['roofRails'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Trådløs mobilopladning");	
-		if(equip != -1) { singleCarArray['wirelessMobile'] = "Ja"; } else { singleCarArray['wirelessMobile'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Træthedsregistrering");	
-		if(equip != -1) { singleCarArray['fatigue'] = "Ja"; } else { singleCarArray['fatigue'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Undervogn, sænket");	
-		if(equip != -1) { singleCarArray['undercarriage'] = "Ja"; } else { singleCarArray['undercarriage'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("USB tilslutning");	
-		if(equip != -1) { singleCarArray['usbAdding'] = "Ja"; } else { singleCarArray['usbAdding'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Vognbaneassistent");	
-		if(equip != -1) { singleCarArray['laneAssist'] = "Ja"; } else { singleCarArray['laneAssist'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 		equip = data.search("Xenonlygter");	
-		if(equip != -1) { singleCarArray['xenonLight'] = "Ja"; } else { singleCarArray['xenonLight'] = "-"; }
+		if(equip != -1) { singleCarArray.push("Ja"); } else { singleCarArray.push("-"); }
 		
 	}
 

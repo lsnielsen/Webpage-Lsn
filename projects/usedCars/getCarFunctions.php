@@ -15,14 +15,13 @@
 			modelStart = firstSubstring.search("<span>");
 			modelEnd = firstSubstring.search("</span>");
 			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
-			singleCarArray['carModel'] = secondSubstring;
+			singleCarArray.push(secondSubstring);
 			
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
-			singleCarArray['engine'] = thirdSubstring;
+			singleCarArray.push(thirdSubstring);
 			//console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
 		} else {
-			singleCarArray['carModel'] = "-";
-			singleCarArray['engine'] = "-";
+			singleCarArray.push("-");
 		}
 	}
 
@@ -40,9 +39,9 @@
 			}
 			priceString = priceString.replace(/[a-z">]+/, "");
 			//console.log(priceString);
-			singleCarArray['price'] = priceString;
+			singleCarArray.push(priceString);
 		} else {
-			singleCarArray['price'] = "-";
+			singleCarArray.push("-");
 		}
 	}
 	
@@ -63,37 +62,10 @@
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			//console.log(colorString);
-			singleCarArray['color'] = colorString;
+			singleCarArray.push(colorString);
 		} else {
-			singleCarArray['color'] = "-";
+			singleCarArray.push("-");
 		}
-	}
-
-
-	function setEquipmentAttributes(data, singleCarArray)
-	{				
-		equipStart = data.search("<section id=\"bbVipEquipment\" class=\"section\">");
-		equipEnd = data.search("<section id=\"bbVipDescription\" class=\"section cf\">");
-		if (equipStart != -1 && equipEnd != -1) {
-			equipString = data.substring(equipStart, equipEnd);
-			equipString = equipString.replace("<section id=\"bbVipEquipment\" class=\"section\">", "");
-			equipString = equipString.replace("<ul class=\"last\">", "");
-			equipString = equipString.replace("</ul>", "");
-			equipString = equipString.replace("</section>", "");
-
-			for(i=0; i<100; i++) {
-				equipString = equipString.replace("<li>", "");
-				equipString = equipString.replace("</li>", "");
-			}
-			for(i=0; i<80; i++) {
-				equipString = equipString.replace(/\n +/, " ");
-			}
-			equipString = equipString.trim().split(" ");
-		}
-		//console.log("Equipment values:");
-		//console.log(equipString);
-		
-		singleCarArray.push(equipString);
 	}
 
 
@@ -113,9 +85,9 @@
 				sightString = sightString.replace(" ", "");
 			}
 			//console.log(sightString);
-			singleCarArray['sight'] = sightString;
+			singleCarArray.push(sightString);
 		} else {
-			singleCarArray['sight'] = "-";
+			singleCarArray.push("-");
 		}
 	}
 	
@@ -141,7 +113,7 @@
 				modelString = modelString.replace(" ", "");
 			}
 			//console.log("Model: " + modelString);
-			singleCarArray['model'] = modelString;
+			singleCarArray.push(modelString);
 		}
 	}
 	
@@ -163,7 +135,7 @@
 				prodString = prodString.replace(" ", "");
 			}
 			//console.log("production: " + prodString);
-			singleCarArray['productDate'] = prodString;
+			singleCarArray.push(prodString);
 		}
 	}
 	
@@ -186,7 +158,7 @@
 				regString = regString.replace(" ", "");
 			}
 			//console.log("registration: " + regString);
-			singleCarArray['regDate'] = regString;
+			singleCarArray.push(regString);
 		}
 	}
 		

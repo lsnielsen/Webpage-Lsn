@@ -97,19 +97,18 @@
 		$.get(url, 
 			function( data ) {
 				var singleCarArray = new Array();
+				singleCarArray.push(url);
 				getModelName(data, singleCarArray);
+				setPriceAttributes(data, singleCarArray);
 				setCarAttributes(data, singleCarArray);
 				setRegAttributes(data, singleCarArray);
 				setProdAttributes(data, singleCarArray);
 				setModelAttributes(data, singleCarArray);
 				setSightAttributes(data, singleCarArray);
 				setColorAttributes(data, singleCarArray);
-				setPriceAttributes(data, singleCarArray);
-				//setEquipmentAttributes(data, singleCarArray);
 				setExtraEquipment(data, singleCarArray);
 				
 					
-				singleCarArray['link'] = url;
 				dataArray.push(singleCarArray);
 			},
 			'html'
