@@ -1,0 +1,1541 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="da">
+<head runat="server">
+
+
+    
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/NYkAAOSwMipfNSu1/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/AKgAAOSwod1fNSu1/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/wdgAAOSwv2FfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/R88AAOSwe7tfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/01cAAOSwMIhfNSu3/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/HxQAAOSwrZdfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/CnAAAOSwz2pfNSu3/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/sNAAAOSwVVdfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/itwAAOSwSu5fNSu1/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/x9YAAOSwlGZfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/N90AAOSweRBfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/fIQAAOSwwW9fNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/DEoAAOSwZu9fNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/A9wAAOSwjFVfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/Ga8AAOSwyhVfNSu2/s-l400.jpg" />
+            <meta property="og:image" content="https://i.ebayimg.com/images/g/2LwAAOSwJF1fNSu3/s-l400.jpg" />
+
+<meta charset="utf-8" />
+<title>Brugt Kia Picanto 1,0 Limited Sport til salg - Bilbasen</title>
+<meta name="title" />
+<meta name="keywords" content="Kia, Picanto, 1,0 Limited Sport, Benzin, model&amp;#229;r 2015, brugt, billig, til salg, s&amp;#230;lges af forhandler" />
+<meta name="description" content="Model&#229;r 2015, Benzin, SPAR 5.000.-  p&#229; bilens pris hvis du samtidig finansierer via Bilhuset Storm. Rabatten g&#230;lder b&#229;de med og uden udbetaling. 
+
+Hos Bilhuset Storm finder du altid et stort udvalg af brugte familiebiler. Vi har altid minimum 60 biler p&#229; lager, b&#229;de benzin og diesel. Vi kan selvf&#248;lgelig ogs&#229; hj&#230;lpe med forsikring og finansiering af din nye bil b&#229;de med og uden udbetaling. 
+
+Velkommen hos Bilhuset Storm midt p&#229; Sj&#230;lland.
+
+Sidste service v/km 70510, alu., airc., fuldaut. klima, fjernb. c.l&#229;s, infocenter, startsp&#230;rre, udv. temp. m&#229;ler, s&#230;devarme, h&#248;jdejust. f&#248;rers&#230;de, 4x el-ruder, el-spejle, automatisk start/stop, d&#230;ktryksm&#229;ler, cd/radio, multifunktionsrat, h&#229;ndfrit til mobil, bluetooth, usb tilslutning, aux tilslutning, isofix, bagagerumsd&#230;kken, kopholder, stofindtr&#230;k, splitbags&#230;de, l&#230;derrat, automatisk lys, airbag, abs, antispin, esp, servo, tonede ruder, m&#248;rktonede ruder i bag, 1 ejer, ikke ryger
+
+Alle vores biler leveres serviceret og kosmetisk klargjort. Det er din tryghed for en god bilhandel. Ja tak til byttebiler. Finansiering b&#229;de med og uden udbetaling tilbydes til attraktive renter. OS064
+
+&#197;BNINGSTIDER hos Bilhuset Storm:
+Mandag - fredag: 10:00 - 17:30
+L&#248;rdag lukket
+S&#248;ndag: 11:00 - 15:00," />
+<meta name="apple-itunes-app" content="app-id=407218484, app-argument=https://www.bilbasen.dk">
+
+
+
+<meta property="og:image" content="https://www.bilbasen.dk/Public/images/logo/bilbasen-200x200.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/Public/images/72x72_bb_t_1.png" />
+<link rel="manifest" href="/manifest.json">
+<link href="https://plus.google.com/117717078087658121040" rel="publisher" />
+
+
+    
+
+
+
+<link href="https://www.bilbasen.dk/brugt/bil/kia/picanto/10-limited-sport/4807111" rel="canonical"></link>
+
+
+
+<!--[if IE 8]>
+    <script type="text/javascript" src="/Public/js/bb_respond_6815384F0275E0C170F99D629D53128A.js"></script>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script>
+    window.Bilbasen = window.Bilbasen || {};
+
+    Bilbasen.LegacyReadyHandlers = (function (window, undefined) {
+
+        var module = {},
+            record = {
+                readyHandlers: [],
+                bindHandlers: []
+            },
+            ready = function (func) {
+                record.readyHandlers.push(func);
+            },
+            custom = function (event, handler) {
+                record.bindHandlers.push({
+                    event: event,
+                    handler: handler
+                });
+            };
+
+        window.$ = function () {
+
+            if (typeof arguments[0] === 'function') {
+                record.readyHandlers.push(arguments[0]);
+                return undefined;
+            }
+
+            if (arguments[0] === document) {
+                return {
+                    ready: ready,
+                    bind: custom,
+                    on: custom
+                };
+            }
+
+            return undefined;
+        };
+
+        module.replay = function () {
+            //window.console && window.console.table(record.readyHandlers);
+            $.each(record.readyHandlers, function () {
+                $(this);
+            });
+
+            //window.console && window.console.table(record.bindHandlers);
+            $.each(record.bindHandlers, function () {
+                $(document).on(this.event, this.handler);
+            });
+        };
+
+        return module;
+    }(window));
+</script>
+
+    
+    <script type="text/javascript">
+        window.adjustFinanceFunnelToDesktop = true; // Used in the finance funnel components loaded by FinanceModal.tsx
+    </script>
+
+    <iframe class="hidden-iframe" style="display: none;" src="/fbpx/containerframe?traction=VIP&amp;l1=MFtIyzKzF6QlTrjDAOFjApYBeL6tQaiUSFsh8jO2xPtcAnrfyP9gtyW_xmCxMQb_gfXcwf2G-dN_EdYym5nx8A&amp;l2=v_a8Qa_nKqlKQTh9ME_5hpjrTUBvvJLeaQcn7mxI6XhQaAPwT-XyeeXS-NhAmapcNfR2fC2odqLNHqSqxxmiww"></iframe>
+
+    <script>
+    var incomingDataLayer = [{"p":{"t":"VIP","pl":"bilbasen-mvc","v":"abc1219"},"a":{"id":4807111,"t":"OFFERED","cdt":1597320013,"age":27,"lpdt":1599691202,"dl":1210,"ic":16,"prc":{"amt":5890000,"cur":"DKK"},"ftr":["ad-type-medium","ad-feature-bump-up-forteendays"],"u":{"li":false,"huid":"DAD02CCCD52245A45C5036338A1FB49B","hue":"jvsyRp5yGWQLDyi6HOU2VKAn4HyFVj4sbcUVoe6iD3goOZsfjd0JcogOysyqwGA49gHYxGvTgcMmA4SfGmY2A","at":"Dealer","tg":{"stg":""}},"attr":{"vehicle_listing_source":"Bilinfo","vehicle_owner_seller_type":"TRADE","vehicle_history_latest_mot":"2019-5","vehicle_history_kilometers_driven":"70000","vehicle_history_registration_date":"2015-06-18","vehicle_model_catalogue_id":"ccdab463-e772-c5ba-82fb-08d287885b8d","vehicle_model_year":"2016","vehicle_model_production_start_year":"2015","vehicle_model_production_end_year":"2017","vehicle_model_price_from_new":"104997","vehicle_model_newest_price_from_new":"0","vehicle_model_gear_type":"M","vehicle_model_gear_count":"5","vehicle_model_gear":"5","vehicle_model_motor":"1,0","vehicle_model_motor_num_cylinders":"3","vehicle_model_fuel_type":"Benzin","vehicle_model_fuel_economy":"24.4","vehicle_model_fuel_max":"35","vehicle_model_dimension_length":"360","vehicle_model_dimension_width":"160","vehicle_model_dimension_height":"148","vehicle_model_load_capacity":"536","vehicle_model_weight":"864","vehicle_model_trailer_weight":"0","vehicle_model_acc_0_to_100_kmh":"14.40","vehicle_model_top_speed":"153","vehicle_model_effect_nm":"95","vehicle_model_effect":"69","vehicle_model_airbag_count":"7","vehicle_model_drive_wheels":"F","vehicle_model_num_doors":"5","vehicle_price_delivery_price":"0","vehicle_color_name":"Rødmetal","vehicle_history_service":"none","vehicle_equipment_absbrakes":"True","vehicle_equipment_aircondition":"True","vehicle_equipment_alurims":"True","vehicle_equipment_antispin":"True","vehicle_equipment_autostartstop":"True","vehicle_equipment_automaticlight":"True","vehicle_equipment_auxconnection":"True","vehicle_equipment_bluetooth":"True","vehicle_equipment_remotecentrallocking":"True","vehicle_equipment_tirepressuresystem":"True","vehicle_equipment_powerwindowsx4":"True","vehicle_equipment_poweredwingmirrors":"True","vehicle_equipment_heightadjustabledriversseat":"True","vehicle_equipment_infocenter":"True","vehicle_equipment_isofix":"True","vehicle_equipment_climatecontrol":"True","vehicle_equipment_leathersteeringwheel":"True","vehicle_equipment_powerassistedsteering":"True","vehicle_equipment_splitfoldingrearseats":"True","vehicle_equipment_immobilizer":"True","vehicle_equipment_fabricseats":"True","vehicle_equipment_heatedseats":"True","vehicle_equipment_tintedwindows":"True","vehicle_equipment_usbconnection":"True","vehicle_model_weight_tax_calculated":"660","vehicle_model_weight_tax_period_calculated":"12"},"syiId":"7eb6ecc4-a74c-cfc5-8ecc-08d83f60e0ff"},"d":{"ck":"f0c82cec-de90-4819-bcfa-7a6827d84089","s_ck":"83f85f60-c09b-4a3e-a699-b1fa866eeac6","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36","ref":"localhost"},"c":{"l1":{"id":11,"n":"P"},"l2":{"id":397,"n":"Kia"},"l3":{"id":1679,"n":"Picanto"},"l4":{"id":25898,"n":"Limited Sport"},"c":{"id":25898,"n":"Limited Sport"}},"l":{"c":{"id":4320,"n":"Lejre"},"l1":{"id":1,"n":"Denmark"},"l2":{"id":1085,"n":"Region Sjælland"},"l3":{"id":265,"n":"Roskilde Kommune"},"l4":{"id":4320,"n":"Lejre"},"ltlng":"55.60;11.97","pcid":"4320"},"u":{"li":false,"tg":{}}},{"bb_env":"PROD"}];
+
+    //Perform a gentle transition to the new datalayer by appending if it already exists.
+    var dataLayerToModify = window.dataLayer || [];
+
+    for (var i = 0; i < incomingDataLayer.length; i++) {
+        dataLayerToModify.push(incomingDataLayer[i]);
+    }
+
+    window.dataLayer = dataLayerToModify;
+</script>
+
+<script src="//cdn.optimizely.com/js/200880799.js"></script>
+    
+
+    <link href="/sharedresources/vendor/vendor-styles-e4d7b68dbea25e677938.css" rel="stylesheet" />
+    <link href="/sharedresources/global/global-styles-6cd23dad61bef2ff1459.css" rel="stylesheet" />
+
+    
+    <link href="/Areas/UsedVehicles/Styles/vipAreaMaster.less?2001-24-9-0-0" rel="stylesheet" type="text/css" />
+    
+
+    <link href="/FrontendAssets/vip/vip-styles-e663389128da0114ba16.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <input name="__RequestVerificationToken" type="hidden" value="BGjRNz2md3Sa80-Cfe6ui-RMwmFm7PWnvstltPeqUhp5xYmh5uxo1cMhBnUbmcmCvpsFKlQpfGm95ksFWeUn5Jnqv681" />
+    
+<div id="google-dfp-wallpaper" class="adslot adslot-wallpaper default" data-adslot='{"bids":null,"adSlotId":"google-dfp-wallpaper","sizes":[[1,1]],"namedSizes":[],"targeting":[{"key":"position","values":["wallpaper"],"isEmpty":false},{"key":"pos","values":["wallpaper"],"isEmpty":false}],"collapse":false,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+
+    <script>
+    var incomingDataLayer = [{"listingId":"4807111","listingValue":"58900","dealerId":"12875","pageType":"vip","page":{"type":"vip","platform":"MVC","viewType":"dealer"},"platform":"MVC","isLoggedIn":"False","userId":"","justLoggedIn":"False","user":{"loggedIn":"False","hashedUserId":"","hashedEmail":""}}];
+
+    //Perform a gentle transition to the new datalayer by appending if it already exists.
+    var dataLayerToModify = window.dataLayer || [];
+
+    for (var i = 0; i < incomingDataLayer.length; i++) {
+        dataLayerToModify.push(incomingDataLayer[i]);
+    }
+
+    window.dataLayer = dataLayerToModify;
+</script>
+
+    <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-8NN6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function (w, d, s, l, i)
+    {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window,document,'script','dataLayer','GTM-8NN6');
+</script>
+<!-- End Google Tag Manager -->
+    
+<div id="google-dfp-top" class="adslot adslot-homepageTopCenter" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":159206}},{"bidder":"638","params":{"mid":612907}},{"bidder":"638","params":{"mid":759627}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk_vip_Top@930x180"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":411218}},{"bidder":"appnexus","params":{"placementId":9756675}},{"bidder":"msupply","params":{"placementId":13853988}},{"bidder":"msupply","params":{"placementId":18409185}},{"bidder":"criteo","params":{"zoneId":1260952}},{"bidder":"ix","params":{"siteId":"258380","size":[930,180]}}],"adSlotId":"google-dfp-top","sizes":[[930,180]],"namedSizes":[],"targeting":[{"key":"position","values":["top"],"isEmpty":false},{"key":"pos","values":["top"],"isEmpty":false}],"collapse":false,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+
+
+    <div class="bb-pagewrapper">
+        
+<div id="google-dfp-skyscraper-left" class="adslot adslot-skyscraper adslot-skyscraper-left" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":267456}},{"bidder":"638","params":{"mid":612890}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk-vip/Skyscraper_Left_1@160x600"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":532550}},{"bidder":"appnexus","params":{"placementId":9756676}},{"bidder":"msupply","params":{"placementId":13853962}},{"bidder":"criteo","params":{"zoneId":1260950}},{"bidder":"criteo","params":{"zoneId":1260951}},{"bidder":"ix","params":{"siteId":"257867","size":[160,600]}},{"bidder":"ix","params":{"siteId":"257867","size":[300,600]}}],"adSlotId":"google-dfp-skyscraper-left","sizes":[[160,600],[160,601],[300,600]],"namedSizes":[],"targeting":[{"key":"position","values":["skyscraper-left"],"isEmpty":false},{"key":"pos","values":["skyscraper-left"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+<div id="google-dfp-skyscraper-left-2" class="adslot adslot-skyscraper adslot-skyscraper-left adslot-skyscraper-2" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":267457}},{"bidder":"638","params":{"mid":612891}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk-vip/Skyscraper_Left_2@160x600"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":532552}},{"bidder":"appnexus","params":{"placementId":9756677}},{"bidder":"msupply","params":{"placementId":13853967}},{"bidder":"criteo","params":{"zoneId":1260950}},{"bidder":"criteo","params":{"zoneId":1260951}},{"bidder":"ix","params":{"siteId":"257869","size":[160,600]}},{"bidder":"ix","params":{"siteId":"257869","size":[300,600]}}],"adSlotId":"google-dfp-skyscraper-left-2","sizes":[[160,600],[160,603],[300,600]],"namedSizes":[],"targeting":[{"key":"position","values":["skyscraper-left-2"],"isEmpty":false},{"key":"pos","values":["skyscraper-left-2"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+
+        
+<div id="google-dfp-skyscraper-right" class="adslot adslot-skyscraper adslot-skyscraper-right" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":267458}},{"bidder":"638","params":{"mid":612892}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk-vip/Skyscraper_Right_1@160x600"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":532554}},{"bidder":"appnexus","params":{"placementId":9756678}},{"bidder":"msupply","params":{"placementId":13853976}},{"bidder":"criteo","params":{"zoneId":1260950}},{"bidder":"criteo","params":{"zoneId":1260951}},{"bidder":"ix","params":{"siteId":"257870","size":[160,600]}},{"bidder":"ix","params":{"siteId":"257870","size":[300,600]}}],"adSlotId":"google-dfp-skyscraper-right","sizes":[[160,600],[160,602],[300,600]],"namedSizes":[],"targeting":[{"key":"position","values":["skyscraper-right"],"isEmpty":false},{"key":"pos","values":["skyscraper-right"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+<div id="google-dfp-skyscraper-right-2" class="adslot adslot-skyscraper adslot-skyscraper-right adslot-skyscraper-2" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":267459}},{"bidder":"638","params":{"mid":612893}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk-vip/Skyscraper_Right_2@160x600"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":532556}},{"bidder":"appnexus","params":{"placementId":9756679}},{"bidder":"msupply","params":{"placementId":13853982}},{"bidder":"criteo","params":{"zoneId":1260950}},{"bidder":"criteo","params":{"zoneId":1260951}},{"bidder":"ix","params":{"siteId":"257871","size":[160,600]}},{"bidder":"ix","params":{"siteId":"257871","size":[300,600]}}],"adSlotId":"google-dfp-skyscraper-right-2","sizes":[[160,600],[160,604],[300,600]],"namedSizes":[],"targeting":[{"key":"position","values":["skyscraper-right-2"],"isEmpty":false},{"key":"pos","values":["skyscraper-right-2"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+
+        <div class="clearfix">
+            <div class="container-fluid bb-container">
+<nav class="bb-header navbar navbar-default"> <div class="no-padding-left-xs no-padding-left-sm no-padding-right-xs no-padding-right-sm no-padding-right-md"> <div class=navbar-header> <a href=/ class="navbar-brand gtm-track" data-track-action=HomePageClick> <img width=170 height=35 src=/sharedresources/icons/bilbasen-logo.svg alt="Brugte biler til salg på Bilbasen" title="Find brugte og nye biler - forsiden"/> </a> <div class=header-top-buttons> <div class="navbar-toggle user-menu hidden-xs"> <div class=not-logged-in-user style=display:none> <a href=/bruger/log-ind class="user-info-text gtm-track" data-track-action=LoginBegin>Log ind</a> </div> <div class=logged-in-user style=display:none> <a href=/bruger/opdater class="user-info-text gtm-track" id=userName data-track-action=MyHomeClick></a> <span class=user-favorites-icon> <a class="user-favorites-number gtm-track" id=favorites href=/mine/favoritter data-track-action=WatchlistClick></a> </span> </div> </div> <button type=button class="navbar-toggle collapsed main-menu gtm-track" data-track-action=MenuClick data-toggle=collapse data-target=#main-menu-list-collapse aria-expanded=false> <span class=main-menu-text>Menu</span> <span class=main-menu-icon></span> </button> </div> </div> <div class="collapse header-main-menu-list" id=main-menu-list-collapse> <div class=row> <div class="col-xs-6 col-sm-2 main-menu-list-column"> <div class=main-menu-list-header>Sælg bil</div> <ul> <li> <a href=/saelg-din-brugte-bil rel=bookmark class=gtm-track data-track-action=SellYourCarClick>Sælg din bil</a> </li> <li> <a href="/bilauktion?XPressCarsalesSourceOrigin=topmenusaelg" rel=bookmark class=gtm-track data-track-action=PostAuctionBegin>Xpress Bilauktion</a> </li> <li> <a href=/bilvurdering/ rel=bookmark class=gtm-track data-track-action=MyCarValuationBegin>Hvad er min bil værd?</a> </li> <li> <a href=/resources/guides/bil-salgsguide.pdf target=_blank rel="noopener bookmark" class=gtm-track data-track-action=ViewGuide data-track-label="guide=Salgsguide">Salgsguide</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 main-menu-list-column"> <div class=main-menu-list-header>Køb bil</div> <ul> <li> <a href=/find-en-forhandler rel=bookmark class=gtm-track data-track-action=FindADealerBegin>Find en forhandler</a> </li> <li> <a href=/finansiering/ rel=bookmark class=gtm-track data-track-action=FindFinanceBegin>Bilfinansiering</a> </li> <li> <a href=/forsikring rel=bookmark class=gtm-track data-track-action=FindInsuranceBegin>Bilforsikring</a> </li> <li> <a href=/nummerpladetjek rel=bookmark class=gtm-track data-track-action=LicensePlateCheckBegin>Nummerpladetjek</a> </li> <li> <a href=/resources/guides/bil-koebsguide.pdf target=_blank rel="noopener bookmark" class=gtm-track data-track-action=ViewGuide data-track-label="guide=Koebsguide">Købsguide</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 main-menu-list-column"> <div class=main-menu-list-header>Snak om biler</div> <ul> <li> <a href=/forum rel=bookmark class=gtm-track data-track-action=ForumClick>Forum</a> </li> <li> <a href=/alt-om rel=bookmark class=gtm-track data-track-action=ReviewsClick>Brugeranmeldelser</a> </li> <li> <a href=https://blog.bilbasen.dk/ target=_blank class=gtm-track data-track-action=BlogClick>Bilbasens blog</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 main-menu-list-column"> <div class=main-menu-list-header>Min Bilbase</div> <ul> <li> <a href=/mine/annoncer rel=bookmark class=gtm-track data-track-action=MyAdClick>Mine annoncer</a> </li> <li> <a href=/mine/favoritter rel=bookmark class=gtm-track data-track-action=WatchlistClick>Favoritter</a> </li> <li> <a href=/gemte-soegninger/ rel=bookmark class=gtm-track data-track-action=SavedSearchesClick>Gemte søgninger</a> </li> <li> <a href=/bruger/opdater rel=bookmark class=gtm-track data-track-action=MyAccountClick>Brugerprofil</a> </li> <li class=not-logged-in-user style=display:none> <a href="/bruger/opret?redirectToUserProfile=True" class=gtm-track data-track-action=UserRegistrationBegin>Opret bruger</a> </li> <li class=logged-in-user style=display:none> <a href=/bruger/log-af class=gtm-track data-track-action=LogoutBegin>Log ud</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 main-menu-list-column"> <div class=main-menu-list-header>Om Bilbasen</div> <ul> <li> <a href=https://jobs.ebayclassifiedsgroup.com/bilbasen rel=bookmark target=_blank class=gtm-track data-track-action=CareersClick>Jobs</a> </li> <li> <a href=https://bilbasen.presscloud.com/nr/#/frontpage rel=bookmark target=_blank class=gtm-track data-track-action=NewsClick>Presse</a> </li> <li> <a href=/brugeraftale rel=bookmark class=gtm-track data-track-action=LegalTC>Brugervilkår</a> </li> <li> <a href=/persondatapolitik rel=bookmark class=gtm-track data-track-action=LegalPrivacyClick>Persondatapolitik</a> </li> <li> <a href=/cookie-samtykke rel=bookmark class=gtm-track data-track-action=GdprConsentClick>Cookie-samtykke</a> </li> <li> <a href=/resources/guides/bil-sikkerhedsguide.pdf target=_blank rel="noopener bookmark" class=gtm-track data-track-action=ViewGuide data-track-label="guide=Sikkerhedsguide">Sikkerhedsguide</a> </li> <li> <a href=/support/faq rel=bookmark class=gtm-track data-track-action=HelpClick>Hjælp</a> </li> </ul> </div> <div class=not-logged-in-user style=display:none> <hr/> <div class="col-xs-12 main-menu-list-log-in-info"> <span class="col-xs-12 col-sm-12 no-padding-left-sm"> <a href=/bruger/log-ind class="info-action gtm-track" data-track-action=LoginBegin>Log ind</a> og få adgang til favoritter, gemte søgninger og meget andet eller <a href=/bruger/opret class="info-action gtm-track" data-track-action=UserRegistrationBegin>opret bruger</a> </span> </div> </div> </div> </div> <div class="row header-content"> <div id=freetext-search-area class="col-xs-12 col-sm-8 col-md-8 search-wrapper no-padding-left-xs no-padding-right-xs no-padding-right-sm"></div> <div class="col-xs-12 col-sm-4 col-md-4 hidden-xs"> <a href=/saelg-din-brugte-bil class="btn bb-btn-primary sell-your-car-button gtm-track" data-track-action=SellYourCarClick>Sælg din bil</a> </div> <div class="collapse header-inline-search gtm-track" id=inline-search-collapse></div> </div> </div> </nav> 
+
+
+
+
+<div class="bannerwrapper vip cf" id="bannerwrapper">
+    <div class="bbWrapper">
+        <div class="bbVipWrapper cf">
+            
+
+
+
+<script src="/Public/Scripts/ui/bootbox.min.js"></script>
+
+<input type="hidden" value="103" id="pageId" />
+
+
+
+<header class="cf vip-header">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb vip-breadcrumb">
+
+
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> 
+            <a itemprop="item" href="/" class="home-link" onclick="BilBasen.Tracking.Analytics.trackEvent('srp', 'breadcrumb', 'homepage'); ">
+                <span itemprop="name">Forside</span>
+            </a>
+            <meta itemprop="position" content="1"/>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> 
+            <a itemprop="item" href="/brugt/bil" class="" onclick="BilBasen.Tracking.Analytics.trackEvent('srp', 'breadcrumb', 'categorypage'); ">
+                <span itemprop="name">Brugte biler</span>
+            </a>
+            <meta itemprop="position" content="2"/>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> 
+            <a itemprop="item" href="/brugt/bil/kia" class="" onclick="BilBasen.Tracking.Analytics.trackEvent('srp', 'breadcrumb', 'make'); ">
+                <span itemprop="name">Kia</span>
+            </a>
+            <meta itemprop="position" content="3"/>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> 
+            <a itemprop="item" href="/brugt/bil/kia/picanto" class="" onclick="BilBasen.Tracking.Analytics.trackEvent('srp', 'breadcrumb', 'model'); ">
+                <span itemprop="name">Kia Picanto</span>
+            </a>
+            <meta itemprop="position" content="4"/>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> 
+            <a itemprop="item" href="/brugt/bil/kia/picanto/1,0_limited_sport_5d" class="" onclick="BilBasen.Tracking.Analytics.trackEvent('srp', 'breadcrumb', 'variant'); ">
+                <span itemprop="name">1,0 Limited Sport 5d</span>
+            </a>
+            <meta itemprop="position" content="5"/>
+        </li>
+</ol>
+
+
+
+<h1 id="bbVipTitle" title="Kia Picanto 1,0 Limited Sport 5d">
+    <span>Kia Picanto</span> 1,0 Limited Sport 5d
+
+</h1>
+
+
+
+
+        <div class="reviews-wrapper">
+            <div id="userRatingTop">
+                <div id="user-reviews">
+                    <div class="star-container">
+                        <div class="grey-stars"></div>
+                        <div class="gold-stars"></div>
+                    </div>
+                    <span class="rating-average" itemprop="rating" data-rating="4,26724137931035"></span>
+                    <div class="rating-text">
+                        <span class="rating-number">4,3</span>
+                        (<span itemprop="votes" class="review-votes">30</span>
+                        <span>brugeranmeldelser</span>)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<nav id="bbVipUserActions" class="cf">
+    <div id="bbVipUserActionsInteractWrapper">
+        <ul id="bbVipUserActionsInteract">
+            <li><a class="licenseplate-check" href="/nummerpladetjek" title="Nummerpladetjek" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'click', 'nummerpladetjek');">Nr.pladetjek</a></li>
+                <li class="save-favourite-notloggedin"><a href="/bruger/log-ind" id="user-links-login" data-track-act="WatchlistAddBegin"><span></span>Gem favorit</a></li>
+
+            <li>
+                <a href="#" class="compare-cars-container" data-listingid="4807111"><span class="compare-cars-icon" data-toggle="tooltip" data-placement="top" title="Tilføj til sammenligning"></span>Sammenlign</a>
+            </li>
+
+            <li>
+                <a href="#">Del</a>
+                <ul>
+                    <li class="submenu-item" style="display: none"><a href="#" id="actions-send-friend" title="Send til ven">Send til ven</a></li>
+                    <li class="submenu-item" style="display: none"><a href="#" id="user-links-facebook" title="Del p&aring; Facebook">Del p&aring; Facebook</a></li>
+
+                </ul>
+            </li>
+            <li><a href="#" id="report-ad" data-toggle="modal" title="Anmeld" class="">Anmeld</a></li>
+            <li><a href="/print/salespresentation?globalid=4807111" title="Print bil" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'print', 'ad');">Print bil</a></li>
+        </ul>
+    </div>
+
+    <ul id="bbVipUserActionsNavigate">
+        
+    </ul>
+</nav>
+
+</header>
+<!-- /#vip-header -->
+
+<div class="column1">
+
+    <input id="DetailsId" name="DetailsId" type="hidden" value="4807111" />
+
+    <div id="bbVipDetailsWrapper">
+        <input id="picturesource" name="picturesource" type="hidden" value="1" />
+<section id="bbVipGallery">
+
+        <figure id="bbVipDealerBanner">
+            <a href="https://www.bilbasen.dk/find-en-forhandler/bilforhandler-bilhuset-storm-id12875" title="Se forhandlerens 66 annoncer" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view dealerads top banner');">
+                <img src="https://i.ebayimg.com/images/g/c9wAAOSwgtddvBIK/s-l500.jpg" alt="Bilhuset Storm" height="35" width="480"/>
+            </a>
+        </figure>
+
+    <figure id="bbVipGalleryLarge">
+                <a href="https://i.ebayimg.com/images/g/NYkAAOSwMipfNSu1/s-l1600.jpg" id="bbVipGalleryLarge0" class="image0" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/NYkAAOSwMipfNSu1/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/NYkAAOSwMipfNSu1/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/AKgAAOSwod1fNSu1/s-l1600.jpg" id="bbVipGalleryLarge1" class="image1" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/AKgAAOSwod1fNSu1/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/AKgAAOSwod1fNSu1/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/wdgAAOSwv2FfNSu2/s-l1600.jpg" id="bbVipGalleryLarge2" class="image2" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/wdgAAOSwv2FfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/wdgAAOSwv2FfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/R88AAOSwe7tfNSu2/s-l1600.jpg" id="bbVipGalleryLarge3" class="image3" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/R88AAOSwe7tfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/R88AAOSwe7tfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/01cAAOSwMIhfNSu3/s-l1600.jpg" id="bbVipGalleryLarge4" class="image4" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/01cAAOSwMIhfNSu3/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/01cAAOSwMIhfNSu3/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/HxQAAOSwrZdfNSu2/s-l1600.jpg" id="bbVipGalleryLarge5" class="image5" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/HxQAAOSwrZdfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/HxQAAOSwrZdfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/CnAAAOSwz2pfNSu3/s-l1600.jpg" id="bbVipGalleryLarge6" class="image6" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/CnAAAOSwz2pfNSu3/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/CnAAAOSwz2pfNSu3/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/sNAAAOSwVVdfNSu2/s-l1600.jpg" id="bbVipGalleryLarge7" class="image7" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/sNAAAOSwVVdfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/sNAAAOSwVVdfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/itwAAOSwSu5fNSu1/s-l1600.jpg" id="bbVipGalleryLarge8" class="image8" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/itwAAOSwSu5fNSu1/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/itwAAOSwSu5fNSu1/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/x9YAAOSwlGZfNSu2/s-l1600.jpg" id="bbVipGalleryLarge9" class="image9" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/x9YAAOSwlGZfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/x9YAAOSwlGZfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/N90AAOSweRBfNSu2/s-l1600.jpg" id="bbVipGalleryLarge10" class="image10" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/N90AAOSweRBfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/N90AAOSweRBfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/fIQAAOSwwW9fNSu2/s-l1600.jpg" id="bbVipGalleryLarge11" class="image11" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/fIQAAOSwwW9fNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/fIQAAOSwwW9fNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/DEoAAOSwZu9fNSu2/s-l1600.jpg" id="bbVipGalleryLarge12" class="image12" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/DEoAAOSwZu9fNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/DEoAAOSwZu9fNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/A9wAAOSwjFVfNSu2/s-l1600.jpg" id="bbVipGalleryLarge13" class="image13" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/A9wAAOSwjFVfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/A9wAAOSwjFVfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/Ga8AAOSwyhVfNSu2/s-l1600.jpg" id="bbVipGalleryLarge14" class="image14" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/Ga8AAOSwyhVfNSu2/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/Ga8AAOSwyhVfNSu2/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+                <a href="https://i.ebayimg.com/images/g/2LwAAOSwJF1fNSu3/s-l1600.jpg" id="bbVipGalleryLarge15" class="image15" rel="bbPhoto[gallery1]">
+                    <div class="bbVipGalleryImgLarge bbVipGalleryImgLargeWithLogo" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view large', 'images');return false;" data-title="Kia Picanto 1,0 Limited Sport" style="background-image: url(https://i.ebayimg.com/images/g/2LwAAOSwJF1fNSu3/s-l640.jpg);"></div>
+                    <link rel="prefetch" href="https://i.ebayimg.com/images/g/2LwAAOSwJF1fNSu3/s-l640.jpg">
+                    <span class="bbVipGalleryOpen" title="Vis galleri"></span>
+                </a>
+    </figure>
+        <div id="bbVipGalleryThumbs">
+            <a href="#" class="thumbScroller thumbScrollerLeft" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'picscroll left');return false;">
+                <span></span>
+            </a>
+            <div class="thumbsWrapper" style="position: relative;">
+                <ul id="thumbsWrapperSlider" style="overflow: hidden">
+                        <li class="thumb">
+                            <a href="#" title="Billede 1/16" class="image0" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall0" data-img="bbVipGalleryLarge0">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/NYkAAOSwMipfNSu1/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 2/16" class="image1" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall1" data-img="bbVipGalleryLarge1">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/AKgAAOSwod1fNSu1/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 3/16" class="image2" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall2" data-img="bbVipGalleryLarge2">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/wdgAAOSwv2FfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 4/16" class="image3" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall3" data-img="bbVipGalleryLarge3">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/R88AAOSwe7tfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 5/16" class="image4" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall4" data-img="bbVipGalleryLarge4">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/01cAAOSwMIhfNSu3/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 6/16" class="image5" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall5" data-img="bbVipGalleryLarge5">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/HxQAAOSwrZdfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 7/16" class="image6" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall6" data-img="bbVipGalleryLarge6">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/CnAAAOSwz2pfNSu3/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 8/16" class="image7" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall7" data-img="bbVipGalleryLarge7">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/sNAAAOSwVVdfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 9/16" class="image8" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall8" data-img="bbVipGalleryLarge8">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/itwAAOSwSu5fNSu1/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 10/16" class="image9" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall9" data-img="bbVipGalleryLarge9">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/x9YAAOSwlGZfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 11/16" class="image10" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall10" data-img="bbVipGalleryLarge10">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/N90AAOSweRBfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 12/16" class="image11" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall11" data-img="bbVipGalleryLarge11">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/fIQAAOSwwW9fNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 13/16" class="image12" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall12" data-img="bbVipGalleryLarge12">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/DEoAAOSwZu9fNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 14/16" class="image13" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall13" data-img="bbVipGalleryLarge13">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/A9wAAOSwjFVfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 15/16" class="image14" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall14" data-img="bbVipGalleryLarge14">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/Ga8AAOSwyhVfNSu2/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                        <li class="thumb">
+                            <a href="#" title="Billede 16/16" class="image15" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'thumb click');return false;" id="bbVipGallerySmall15" data-img="bbVipGalleryLarge15">
+                                <span class="pointer"></span>
+                                <div style="background-image: url(https://i.ebayimg.com/images/g/2LwAAOSwJF1fNSu3/s-l96.jpg);"></div>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            <a href="#" class="thumbScroller thumbScrollerRight" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'picscroll right');return false;">
+                <span></span>
+            </a>
+        </div>
+</section>
+
+        
+        <div id="bbVipDetails" class="vip-details">
+            <section id="bbVipPrice" class="section">
+
+    <p id="bbVipPricePrice">
+        <span class="label">Pris</span>
+        <span class="value">58.900 kr.</span>
+
+        
+
+    </p>
+
+    <p
+        id="bbVipPriceAverage"
+        rel="popover"
+        onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info average price');"
+        data-toggle="popover"
+        data-original-title="Vægtet Gennemsnitspris"
+        data-content="<p>Bilbasen kan som Danmarks førende brugtbils-site udregne markedets mest præcise gennemsnitspris. Dette gøres ved at sammenligne tilsvarende bilers årgang og pris, vægtet i forhold til kørte km.</p>"
+        data-container="body">
+    </p>
+    
+
+</section>
+
+            <section id="bbVipMileage" class="section">
+    <p class="last">
+        <span class="label">Km</span>
+        <span class="value">
+            70.000
+        </span>
+    </p>
+</section>
+            
+
+<section id="bbVipUsage" class="section">
+
+        <p class="last"
+           rel="popover"
+           data-toggle="popover"
+           data-original-title="Energiklasse"
+           data-content="&lt;p&gt;Alle biler inddeles i 10 energiklasser fra A+++ til G, alt efter hvor langt de k&#248;rer p&#229; en liter benzin eller diesel:&lt;/p&gt;
+&lt;table cellspacing=&#39;0&#39; cellpadding=&#39;0&#39; class=&#39;energymark&#39; style=&#39;margin: 0;&#39;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;b&gt;Energiklasse&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;&lt;b&gt;Benzinbiler&lt;/b&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;&lt;b&gt;Dieselbiler&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a000&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Mindst 34,3&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Mindst 38,6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a00&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;25,2 - 34,2&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;28,1 - 38,5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a0&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;20,0 - 25,1&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;22,5 - 28,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;18,2 - 19,9&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;20,5 - 22,4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-b&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;15,4 - 18,1&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;17,3 - 20,4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-c&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;14,3 - 15,3&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;16,1 - 17,2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-d&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;12,5 - 14,2&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;14,1 - 16,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-e&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;11,8 - 12,4&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;13,2 - 14,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-f&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;10,5 - 11,7&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;11,9 - 13,1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-g&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Under 10,5&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Under 11,9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td colspan=&#39;3&#39; style=&#39;padding-top: 20px;&#39;&gt;L&#230;s mere om energim&#230;rket for biler&lt;a href=&#39;http://www.bilviden.dk/Energi-og-miljo/Energiklasser.aspx&#39; target=&#39;_blank&#39;&gt; her&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;"
+           data-container="body">
+
+                <span data-tooltip="&lt;p&gt;Alle biler inddeles i 10 energiklasser fra A+++ til G, alt efter hvor langt de k&#248;rer p&#229; en liter benzin eller diesel:&lt;/p&gt;
+&lt;table cellspacing=&#39;0&#39; cellpadding=&#39;0&#39; class=&#39;energymark&#39; style=&#39;margin: 0;&#39;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;b&gt;Energiklasse&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;&lt;b&gt;Benzinbiler&lt;/b&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;&lt;b&gt;Dieselbiler&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a000&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Mindst 34,3&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Mindst 38,6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a00&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;25,2 - 34,2&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;28,1 - 38,5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a0&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;20,0 - 25,1&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;22,5 - 28,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-a&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;18,2 - 19,9&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;20,5 - 22,4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-b&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;15,4 - 18,1&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;17,3 - 20,4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-c&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;14,3 - 15,3&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;16,1 - 17,2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-d&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;12,5 - 14,2&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;14,1 - 16,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-e&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;11,8 - 12,4&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;13,2 - 14,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-f&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;10,5 - 11,7&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;11,9 - 13,1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a class=&#39;energimaerke energimaerke-g&#39;&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Under 10,5&lt;/td&gt;
+        &lt;td class=&#39;align-r&#39;&gt;Under 11,9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td colspan=&#39;3&#39; style=&#39;padding-top: 20px;&#39;&gt;L&#230;s mere om energim&#230;rket for biler&lt;a href=&#39;http://www.bilviden.dk/Energi-og-miljo/Energiklasser.aspx&#39; target=&#39;_blank&#39;&gt; her&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info energy');">
+                    <span class="label">Km/l benzin</span>
+                    <span class="value">24,4</span>
+                    <span class="energimaerke energimaerke-a0">24,4</span>
+                </span>
+        </p>
+</section>
+            <section id="bbVipYear" class="section">
+    <div id="bbVipYearInfo"
+         rel="popover"
+         data-track-act="CarYearInfoClick"
+         data-toggle="popover"
+         data-original-title="Årstal"
+         data-content="<p>1. registrering er den måned og det år, hvor bilen første gang har fået nummerplade på.</p><p>Produceret er den måned og det år, bilen er blevet produceret.</p><p>Modelår angiver hvilken modelgeneration bilen tilhører.</p>"
+         data-container="body">
+        <div class="car-first-registration-date">
+            <span class="label">1. registrering</span>
+            <img src='/Public/images/ico-tooltip.png' class="bb-vip-popover-icon"/>
+            <span class="value">6/2015</span>
+        </div>
+        <div class="car-production-date">
+            <span class="label">Produceret</span>
+            <span class="value">-/-</span>
+        </div>
+        <div class="car-model-year">
+            <span class="label">Modelår</span>
+            <span class="value">2016</span>
+        </div>
+    </div>
+</section>
+
+
+        </div>
+    </div>
+    <section class="section vip-finance"
+             data-car-syi-id="7eb6ecc4-a74c-cfc5-8ecc-08d83f60e0ff"
+             data-finance-banner-flow-type="Clickout"
+             data-show-finance-offers-on-banner-click="False"
+             data-is-new-finance-company="False"
+             data-optimizely-variation="original" 
+             data-is-santander-finance-company="False"
+        >
+        <div id="bbVipFinanceInsurance" class="campaign insurance">
+<div class="autocom-banner">
+    <h2>
+        Sælg din bil på 24 timer
+    </h2>
+    <h3>
+        I samarbejde med Autocom
+    </h3>
+    <a class="bb-btn bb-btn-medium bb-btn-white"
+       href="https://www.bilbasen.dk//bilauktion?openedFromVip=1"
+       target="_blank"
+       rel="noopener"
+       data-track-action="ClickPartnerBanner"
+       data-track-label="Autocom"
+       >
+        Sælg på bilauktion
+    </a>
+</div>
+
+        </div>
+
+           <div id="bbVipFinanceFinance" class="campaign finance"></div>
+        <div class="modal finance-container" tabindex="-1" role="dialog" aria-labelledby="financeModal" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close-finance-modal" data-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body" id="financeContent">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="bbVipEquipment" class="section">
+            <ul class="last">
+                    <li>ABS-bremser</li>
+                    <li>Aircondition</li>
+                    <li>Aluf&#230;lge</li>
+                    <li>Antispin</li>
+                    <li>Auto. start/stop</li>
+                    <li>Automatisk lys</li>
+                    <li>AUX tilslutning</li>
+                    <li>Bluetooth</li>
+                    <li>Centrall&#229;s fjernb.</li>
+                    <li>D&#230;ktryksm&#229;ler</li>
+                    <li>Elruder, 4x</li>
+                    <li>Elsidespejle</li>
+                    <li>H&#248;jdejust. f&#248;rers&#230;de</li>
+                    <li>Infocenter</li>
+                    <li>Isofix</li>
+                    <li>Klimaanl&#230;g</li>
+                    <li>L&#230;derrat</li>
+                    <li>S&#230;debetr&#230;k, stof</li>
+                    <li>S&#230;devarme</li>
+                    <li>Servo</li>
+                    <li>Splitbags&#230;de</li>
+                    <li>Startsp&#230;rre</li>
+                    <li>Tonede ruder</li>
+                    <li>USB tilslutning</li>
+            </ul>
+    </section>
+
+
+    <section id="bbVipDescription" class="section cf">
+
+SPAR 5.000.-  p&#229; bilens pris hvis du samtidig finansierer via Bilhuset Storm. Rabatten g&#230;lder b&#229;de med og uden udbetaling. <br />
+<br />
+Hos Bilhuset Storm finder du altid et stort udvalg af brugte familiebiler. Vi har altid minimum 60 biler p&#229; lager, b&#229;de benzin og diesel. Vi kan selvf&#248;lgelig ogs&#229; hj&#230;lpe med forsikring og finansiering af din nye bil b&#229;de med og uden udbetaling. <br />
+<br />
+Velkommen hos Bilhuset Storm midt p&#229; Sj&#230;lland.<br />
+<br />
+Sidste service v/km 70510, alu., airc., fuldaut. klima, fjernb. c.l&#229;s, infocenter, startsp&#230;rre, udv. temp. m&#229;ler, s&#230;devarme, h&#248;jdejust. f&#248;rers&#230;de, 4x el-ruder, el-spejle, automatisk start/stop, d&#230;ktryksm&#229;ler, cd/radio, multifunktionsrat, h&#229;ndfrit til mobil, bluetooth, usb tilslutning, aux tilslutning, isofix, bagagerumsd&#230;kken, kopholder, stofindtr&#230;k, splitbags&#230;de, l&#230;derrat, automatisk lys, airbag, abs, antispin, esp, servo, tonede ruder, m&#248;rktonede ruder i bag, 1 ejer, ikke ryger<br />
+<br />
+Alle vores biler leveres serviceret og kosmetisk klargjort. Det er din tryghed for en god bilhandel. Ja tak til byttebiler. Finansiering b&#229;de med og uden udbetaling tilbydes til attraktive renter. OS064<br />
+<br />
+&#197;BNINGSTIDER hos Bilhuset Storm:<br />
+Mandag - fredag: 10:00 - 17:30<br />
+L&#248;rdag lukket<br />
+S&#248;ndag: 11:00 - 15:00,<br />
+    
+
+    <ul id="bbVipDescriptionFacts" class="last cf">
+            <li title="Dato for sidste syn"><span>Synet:</span>5/2019</li>
+                                            <li title="Farve"><span>Farve:</span> R&#248;dmetal</li>
+            </ul>
+</section>
+
+
+
+
+
+<h2 class="expand accordion-h accordion-h-active" id="model-information" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view model information', 'expandable');" title="Se bilens specifikationer i detaljer. Topfart, km/l, vægt, acceleration og meget andet.">Kia Picanto specifikationer</h2>
+<div class="accordion-b">
+    <p>Bemærk at du kan sammenligne generelle modeloplysninger for Kia Picanto med din egen bil, hvis du opretter den på <a href='/bruger/opdater'>Din Brugerprofil.</a></p>
+    <table class="type1" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <th class="specs">Specifikationer</th>
+            <th>&nbsp;</th>
+            <th class="selectedcar">Viste bil *</th>
+            <th class="currentcar">Din bil</th>
+        </tr>
+        <tr>
+            <td style="color: #888;width:150px;">Nypris</td>
+            <td>
+                <img class="tooltip-trigger"
+                     src="/Public/images/ico-tooltip.png"
+                     onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info spec newprice');return false;"
+                     title="Hvad betyder nypris?"
+                     rel="popover"
+                     data-toggle="popover"
+                     data-content="<p>Listeprisen på bilen fra ny. Prisen er uden ekstraudstyr, og der er ikke taget højde for eventuelle rabatter, kampagnepriser eller leveringsomkostninger.</p>"/>
+            </td>
+            <td class="selectedcar">104.997 kr</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">HK/Nm</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">69 hk / 95 Nm</td>
+            <td class="alignright">- / -</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">0 - 100 km/t</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">14,4 sek</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Tophastighed</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">153 km/t</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Drivmiddel</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">Benzin</td>
+            <td class="currentcar">-</td>
+        </tr>
+                    <tr>
+                <td style="color: #888;">Forbrug</td>
+                <td>&nbsp;</td>
+                <td class="selectedcar">24,4 km/l</td>
+                <td class="currentcar">-</td>
+            </tr>
+             <tr>
+            <td style="color: #888;">Forbrug (WLTP)</td>
+            <td>
+                <img class="tooltip-trigger"
+                     src="/Public/images/ico-tooltip.png"
+                     alt="Rækkevidde info"
+                     onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info spec range'); return false;"
+                     title="WLTP: Worldwide Harmonised Light Vehicle Test Procedure"
+                     rel="popover"
+                     data-toggle="popover"
+                     data-content="<p>
+                         WLTP målingsmetoden afspejler i højere grad kørselsmønstret ved virkelig kørsel og giver derfor et mere retvisende billede af bilens reelle brændstofforbrug og CO2-emission. Bilerne vil derfor med WLTP testproceduren få et forbrugstal, som forventes at være tættere på det faktiske forbrug.
+                     </p>"
+                     />
+            </td>
+            <td class="selectedcar">-</td>
+            <td class="currentcar">-</td>
+        </tr>
+         <tr>
+            <td style="color: #888;">Euronorm</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">5</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Bredde</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">160 cm</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Længde</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">360 cm</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Højde</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">148 cm</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Lasteevne</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">536 kg</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Trækhjul</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">Forhjul</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Cylindre</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">3</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">ABS-bremser</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">Ja</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Max. påhæng</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">-</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Airbags</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">7</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">ESP</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">Ja</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Tank</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">35 l</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Gear</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">5 gear</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Geartype</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">Manuel</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Vægt</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">864 kg</td>
+            <td class="currentcar">-</td>
+        </tr>
+        <tr>
+            <td style="color: #888;">Døre</td>
+            <td>&nbsp;</td>
+            <td class="selectedcar">5</td>
+            <td class="currentcar">-</td>
+        </tr>
+    </table>
+    <p>* Der tages forbehold for evt. fejl</p>
+</div>
+
+
+        <h2 class="expand accordion-h" id="vip-opinions" title="Tidligere ejere mener om denne bil." onclick=" BilBasen.Tracking.Analytics.trackEvent('vip', 'view reviews', 'expandable'); ">
+
+
+
+    <span style="font-size: 15px;">L&#230;s 30 brugeranmeldelser af Kia Picanto</span>
+
+        </h2>
+        <div class="accordion-b hidden vip-opinionsHidden" id="opinionsHidden">
+            <div class="bb-vip-user-buy-percentage"></div>
+            <div id="vip-reviews"></div>
+        </div>
+<h2 class="expand accordion-h" id="car-economics" title="Din bil økonomi" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view expandable', 'car economi');">Din biløkonomi</h2>
+<div class="accordion-b hidden">
+    <p>Få overblik over din biløkonomi (vist i DKK). Se de manglende nøgletal herunder ved at oprette din egen bil i din <a href='/bruger/opdater'>Brugerprofil</a> og sammenlign med den viste Kia Picanto.</p>
+    <table border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;" class="margin-n">
+        <tr>
+            <th style="width: 150px; min-width: 150px;">Udgifter</th>
+            <th class="alignright">&nbsp;</th>
+            <th class="alignright">Viste bil</th>
+            <th class="alignright">Din bil</th>
+            <th class="alignright">Forskel</th>
+        </tr>
+        <tr>
+            <td>Grøn ejerafgift</td>
+            <td class="alignleft">
+                <img 
+                    class="tooltip-trigger" 
+                    src="/Public/images/ico-tooltip.png" 
+                    title="Hvad er Grøn ejerafgift?" 
+                    onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info eco envtax');return false;"
+                    rel="popover" 
+                    data-toggle="popover" 
+                    data-container="body"
+                    data-content="<p>Årlig ejerafgift til staten. Ejerafgiften beregnes på baggrund af bilens brændstofforbrug.</p>
+                                  <p>Biler der er indregistreret første gang før 1. juli 1997 betaler i stedet vægtafgift, hvis der er tale om personbiler. For varebiler er skæringsdatoen 18. marts 2009.</p>
+                                  <p>Der er en tillægsafgift på varebiler på 6.250 kr for privat anvendelse, hvis totalvægten overstiger 2 tons, og bilen er indregistreret før 25. april 2007. Er bilen indregistreret d. 25. april 2007 eller derefter er der altid en tillægsafgift på 6.250 kr om året ved privat anvendelse.</p>
+                                  <p>Er bilen indregistreret d. 25. april 2007 eller derefter, og vejer over 3 tons er tillægsafgift for privat anvendelse på 18.560 kr om året.</p>
+                                  <p>Ved blandet brug (erhverv og privat) udgør tillægsafgiften halvdelen af beløbet.</p>
+                                  <p>Fra den 1. april 2010 opkræves endvidere et tillæg på 1.000 kr. årligt for alle dieseldrevne personbiler uden godkendt partikelfilter. Det samme gælder for dieseldrevne varebiler med en tilladt totalvægt på ikke over 3.500 kg., der er registreret første gang den 18. marts 2009 eller senere.</p>
+                                  <p>I forbindelse med omlægning af registreringsafgiften i 2017 blev ejerafgiften for biler, der er indregistreret fra den 3. oktober 2017 og frem, forhøjet. Denne forhøjelse trådte i kraft 1. juli 2018.</p>
+                                  <p>Konkret betyder det, at frem til 1. juli 2018 betalte alle samme ejerafgift. Fra 1. juli 2018 steg ejerafgiften for biler indregistreret fra d. 3. oktober 2017.</p>
+                                  <p>Importerede biler, der registreres i Danmark første gang efter 3. oktober 2017 (selvom bilens egen første registreringsdato ligger tidligere) er omfattet af den nye grønne ejerafgift.</p>" />
+            </td>
+            <td class="alignright">
+                660
+            </td>
+            <td class="alignright">
+                -
+            </td>
+            <td class="alignright">
+                -
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Værditab
+            </td>
+            <td class="alignleft">
+                <img 
+                    class="tooltip-trigger" 
+                    src="/Public/images/ico-tooltip.png" 
+                    title="Hvordan udregnes værditab?" 
+                    onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info eco valueloss');return false;" 
+                    rel="popover" 
+                    data-toggle="popover" 
+                    data-content="<p>Værditabet er udtryk for, hvor meget din bil gennemsnitligt vil tabe pr. år de næste 3 år.</p><p>Værditabet er beregnet ud fra dit indtastede kørselsbehov og de nuværende markedsforhold.</p><p>Hvis du ikke har oprettet en bil i Min BilBase eller ikke har indtastet dit årlige kørselsbehov, så er der taget udgangspunkt i et årligt kørselsbehov på 15.000 km.</p>"/>
+            </td>
+            <td class="alignright">
+                - 
+            </td>
+            <td class="alignright">
+                - 
+            </td>
+            <td class="alignright">
+                - 
+            </td>
+        </tr>
+        <tr>
+            <td>Brændstof</td>
+            <td class="alignleft">
+                <img 
+                    class="tooltip-trigger" 
+                    src="/Public/images/ico-tooltip.png" 
+                    title="Brændstof" 
+                    onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info eco fuel');return false;" 
+                    rel="popover" 
+                    data-toggle="popover" 
+                    data-content="<p>Din årlige anslåede udgift til brændstof beregnet på baggrund af:<p><ul><li>Dit årlige indtastede kørselsbehov</li><li>Den aktuelle pris pr. liter benzin/diesel</li><li>Hvor langt bilen kører pr. liter (fabrikstal - km/l)</li></ul><p>Hvis du ikke har oprettet en bil i Din BilBase eller ikke har indtastet dit årlige kørselsbehov, så er der taget udgangspunkt i et årligt kørselsbehov på 15.000 km.</p>"/>
+            </td>
+            <td class="alignright">
+                7.608 
+            </td>
+            <td class="alignright">
+                - 
+            </td>
+            <td class="alignright">
+                - 
+            </td>
+        </tr>
+        <tr>
+            <td class="border-t highlight">Forsikring</td>
+            <td class="border-t highlight alignleft">
+                <img 
+                    class="tooltip-trigger" 
+                    src="/Public/images/ico-tooltip.png" 
+                    title="Hvordan udregnes forsikringsøkonomi?" 
+                    onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'info eco insurance');return false;" 
+
+                    rel="popover" 
+                    data-toggle="popover" 
+                    data-original-title="Kaskoforsikring fra Ford Forsikring" 
+                    data-content="<p>Forsikringsprisen for den viste bil er baseret på din alder, dit postnummer og dit årlige kørselsbehov som anført i din profil på Bilbasen.<br /><br />Desuden tages der udgangspunkt i, at du har kørt skadefri de sidste 3 år med forsikring i eget navn (glasskade samt regres regnes ikke som skader).</p>"/>
+            </td>
+            <td class="border-t highlight alignright">
+                <span id="thiscarinsurance"></span>
+            </td>
+            <td class="border-t highlight alignright">
+                - 
+            </td>
+            <td class="border-t highlight alignright">
+                <span id="insurancediff"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="highlight">
+                <span id="insuranceDescription"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="highlight">
+                <a href="#" id="btnbuyinsurance" class="button" target="_blank" style="display: none;">Køb forsikring</a> <a href="#" id="btnCallinsurance" class="button" style="display: none;" target="_blank">Beregn pris</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="border-t">
+                I alt de næste 12 måneder
+            </td>
+            <td class="border-t align-l">
+                &nbsp;
+            </td>
+            <td class="border-t align-r">
+                <span id="totalthiscaryear"></span>
+            </td>
+            <td class="border-t align-r">
+                -
+            </td>
+            <td class="border-t align-r">
+                <span id="totalyeardiff"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="border-b ">
+                Pr. måned i alt
+            </td>
+            <td class="border-b align-l">
+                &nbsp;
+            </td>
+            <td class="border-b align-r">
+                <span id="totalthiscarmonth"></span>
+            </td>
+            <td class="border-b align-r">
+                -
+            </td>
+            <td class="border-b align-r">
+                <span id="totalmonthDiff"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="5">
+                <p class="smaller margin-n">
+                    Beregningen er vejledende og inkluderer ikke udgifter til service, reparationer og strøm til opladning.</p>
+            </td>
+        </tr>
+    </table>
+    <input id="ThisEconomiTotalYear" name="ThisEconomiTotalYear" type="hidden" value="0" />
+    <input id="YourEconomiTotalYearHidden" name="YourEconomiTotalYearHidden" type="hidden" value="0" />
+    <input id="YourInsuranceHidden" name="YourInsuranceHidden" type="hidden" value="0" />
+</div>
+</div>
+
+
+
+
+
+
+
+
+            <div class="column2">
+                
+    
+
+    <section id="sellerSectionDealer" class="section cf">
+<button id="vipUserRequestedATestDrive"
+        data-lq-extra="{ &quot;source&quot;: &quot;testdrive&quot;, &quot;userRequestedATestDrive&quot;: true }"
+        class="bb-btn bb-btn-large bb-btn-orange"
+        data-track-act="testdrive, send to dealer">
+    <span class="buttonIcon"></span>Book en prøvetur
+</button>
+<button id="vipContactSellerSendEmail"
+        data-lq-extra="{ &quot;source&quot;: &quot;direct&quot; }"
+        class="bb-btn bb-btn-large bb-btn-white"
+        data-track-act="emailSentBegin">
+    <span class="buttonIcon"></span>Skriv til sælger
+</button>
+
+        <div class="dealer-text-wrapper">
+                <div class="logo">
+                    <a href="https://www.bilhusetstorm.dk/?utm_source=bilbasen&amp;utm_medium=referral" target="_blank" class="content" data-track-ss='{"type": "listing", "listingId": 4807111, "location": "VIP", "action": "ClickOutWebsite"}' onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'visit homepage logo');" title="Gå til forhandlerens hjemmeside" rel="nofollow">
+                        <img src="https://i.ebayimg.com/images/g/u7gAAOSwkNRdvBHt/s-l300.jpg" alt="Forhandler logo" />
+                    </a>
+                </div>
+
+            <div>
+                <a class="dealer-name" href="https://www.bilbasen.dk/find-en-forhandler/bilforhandler-bilhuset-storm-id12875" data-track-act="vip_view dealerads" data-track-lbl="position=dealer_name_header">
+                    <h4>Bilhuset Storm</h4>
+                </a>
+            </div>
+
+            <div class="map actionLink">
+                <div class="base64Link address" data-hc="L0FjdGlvbi9NYXAvNDgwNzExMQ==" data-target="_blank" data-track-act="vip_view_map" data-track-ss="{&quot;type&quot;:&quot;listing&quot;,&quot;listingId&quot;:4807111,&quot;location&quot;:&quot;VIP&quot;,&quot;action&quot;:&quot;SellerOnMapBegin&quot;}">
+                    <div>Hovedvejen 180</div>
+                    <div>4320 Lejre</div>
+                </div>
+
+                <span class="phone-numbers">
+                    Tlf.
+                        <a href="tel:46400019">46400019</a>
+
+                </span>
+            </div>
+
+            <div id="additionalInfoBlock">
+                <ul class="dealer-links-wrapper">
+                        <li class="website actionLink">
+                            <a href="https://www.bilhusetstorm.dk/?utm_source=bilbasen&amp;utm_medium=referral" target="_blank" data-track-act="vip_visit homepage" data-track-ss='{"type": "listing", "listingId": 4807111, "location": "VIP", "action": "ClickOutWebsite"}' title="Gå til forhandlerens hjemmeside" rel="nofollow">
+                                <div class="content">Besøg www.bilhusetstorm.dk/</div>
+                            </a>
+                        </li>
+
+                    <li class="otherListings actionLink">
+                        <a href="https://www.bilbasen.dk/find-en-forhandler/bilforhandler-bilhuset-storm-id12875" data-track-act="vip_view dealerads" data-track-lbl="position=see_all_dealer_cars_link" data-track-ss='{"type": "listing", "listingId": 4807111, "location": "VIP", "action": "ResultsSellerBegin"}'>
+                            <div class="content">Se alle sælgers biler (66 biler)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+                    <div class="sellerImage">
+                        <div class="content">
+                                <img src="https://i.ebayimg.com/images/g/icQAAOSwKIhdvBJZ/s-l300.jpg" alt="Forhandlerbillede" />
+                            <div class="description">Hos Bilhuset Storm fors&#248;ger vi altid at m&#248;de vores kunder i &#248;jenh&#248;jde. Vi er et team som har v&#230;ret i bilbranchen i mange &#229;r. Vi har en bred viden om de forskellige m&#230;rker og modeller. Vi fors&#248;ger altid at have et stort udvalg i biler - Til de rigtige priser. 
+Kom forbi vores forretning og se om vi ikke ogs&#229; har den rigtige bil til dig/jer.
+Vi gl&#230;der os til at byde jer velkommen :-)
+</div>
+                                <ul class="bullets">
+                                        <li class="bullet">Altid skarpe priser p&#229; vores biler.</li>
+                                        <li class="bullet">Vi kan hj&#230;lpe med finansiering.</li>
+                                        <li class="bullet">Vi tager alle biler i bytte.</li>
+                                        <li class="bullet">Vi f&#248;lger altid k&#248;beloven.</li>
+                                </ul>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+<script type="text/javascript">
+    $(function () {
+        BilBasen.SellerSection.init();
+    });
+</script>
+
+
+                
+                                
+
+<div id="google-dfp-article-1" class="adslot adslot-article-banner" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":159203}},{"bidder":"638","params":{"mid":612910}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk_vip_Article_1@300x250"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":411214}},{"bidder":"appnexus","params":{"placementId":9756673}},{"bidder":"msupply","params":{"placementId":13853955}},{"bidder":"criteo","params":{"zoneId":1260953}},{"bidder":"ix","params":{"siteId":"257862","size":[300,250]}}],"adSlotId":"google-dfp-article-1","sizes":[[300,250]],"namedSizes":[],"targeting":[{"key":"position","values":["article-1"],"isEmpty":false},{"key":"pos","values":["article-1"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+
+                
+
+<div id="related-items-dealer">
+    <h4>Andre forslag</h4>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4816756,103,1);; window.location.href='/brugt/bil/kia/picanto/10-style-limited-5d/4816756';">
+            <img src="https://media-download.ecgh.dk/images/JisAAOSwO5xfP87Q/S157X111/picture.jpg" alt="Kia Picanto 1,0 Style+ Limited 5d" title="Kia Picanto 1,0 Style+ Limited 5d" />
+            
+            <p>Kia Picanto 1,0 Style+ Limited 5d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>69.900 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2017</dd>
+                <dt>Kilometer:</dt>
+                <dd>85.000</dd>
+            </dl>
+        </a>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4363901,103,1);; window.location.href='/brugt/bil/kia/picanto/10-style-3d/4363901';">
+            <img src="https://media-download.ecgh.dk/images/nnMAAOSwVLVdDOjH/S157X111/picture.jpg" alt="Kia Picanto 1,0 Style 3d" title="Kia Picanto 1,0 Style 3d" />
+            
+            <p>Kia Picanto 1,0 Style 3d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>59.800 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2015</dd>
+                <dt>Kilometer:</dt>
+                <dd>74.000</dd>
+            </dl>
+        </a>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4825759,103,1);; window.location.href='/brugt/bil/kia/picanto/10-motion-eco-5d/4825759';">
+            <img src="https://media-download.ecgh.dk/images/nIoAAOSwUDhfS6uX/S157X111/picture.jpg" alt="Kia Picanto 1,0 Motion+ Eco 5d" title="Kia Picanto 1,0 Motion+ Eco 5d" />
+            
+            <p>Kia Picanto 1,0 Motion+ Eco 5d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>47.900 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2014</dd>
+                <dt>Kilometer:</dt>
+                <dd>59.000</dd>
+            </dl>
+        </a>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4809039,103,1);; window.location.href='/brugt/bil/kia/picanto/10-style-limited-5d/4809039';">
+            <img src="https://media-download.ecgh.dk/images/yYsAAOSwV1lfP9aT/S157X111/picture.jpg" alt="Kia Picanto 1,0 Style Limited 5d" title="Kia Picanto 1,0 Style Limited 5d" />
+            
+            <p>Kia Picanto 1,0 Style Limited 5d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>64.895 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2017</dd>
+                <dt>Kilometer:</dt>
+                <dd>45.000</dd>
+            </dl>
+        </a>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4790488,103,1);; window.location.href='/brugt/bil/kia/picanto/10-motion-5d/4790488';">
+            <img src="https://media-download.ecgh.dk/images/AtsAAOSwBLNfLTSn/S157X111/picture.jpg" alt="Kia Picanto 1,0 Motion 5d" title="Kia Picanto 1,0 Motion 5d" />
+            
+            <p>Kia Picanto 1,0 Motion 5d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>54.900 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2013</dd>
+                <dt>Kilometer:</dt>
+                <dd>27.000</dd>
+            </dl>
+        </a>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4741388,103,1);; window.location.href='/brugt/bil/kia/picanto/10-attraction-5d/4741388';">
+            <img src="https://media-download.ecgh.dk/images/vTQAAOSwOzFe64YC/S157X111/picture.jpg" alt="Kia Picanto 1,0 Attraction+ 5d" title="Kia Picanto 1,0 Attraction+ 5d" />
+            
+            <p>Kia Picanto 1,0 Attraction+ 5d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>69.895 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2016</dd>
+                <dt>Kilometer:</dt>
+                <dd>102.000</dd>
+            </dl>
+        </a>
+        <a class="klikXtraLink" onclick="BilBasen.Tracking.Analytics.trackEvent('vip', 'view', 'klikxtra ads');BilBasen.Tracking.MoonrakerClick.click(4799815,103,1);; window.location.href='/brugt/bil/kia/picanto/10-exclusive-5d/4799815';">
+            <img src="https://media-download.ecgh.dk/images/~YsAAOSw7YtfM3yX/S157X111/picture.jpg" alt="Kia Picanto 1,0 Exclusive 5d" title="Kia Picanto 1,0 Exclusive 5d" />
+            
+            <p>Kia Picanto 1,0 Exclusive 5d</p>
+            <dl>
+                <dt>Pris:</dt>
+                <dd>49.900 kr.</dd>
+                <dt>Modelår:</dt>
+                <dd>2012</dd>
+                <dt>Kilometer:</dt>
+                <dd>92.000</dd>
+            </dl>
+        </a>
+</div>
+
+
+<div id="google-dfp-article-2" class="adslot adslot-article-banner" data-adslot='{"bids":[{"bidder":"adform","params":{"mid":159205}},{"bidder":"638","params":{"mid":612911}},{"bidder":"pubmatic","params":{"publisherId":"132591","adSlot":"bilbasen.dk_vip_Article_2@300x250"}},{"bidder":"rubicon","params":{"accountId":"10226","siteId":"86962","zoneId":411216}},{"bidder":"appnexus","params":{"placementId":9756674}},{"bidder":"msupply","params":{"placementId":13853958}},{"bidder":"criteo","params":{"zoneId":1260953}},{"bidder":"ix","params":{"siteId":"257865","size":[300,250]}}],"adSlotId":"google-dfp-article-2","sizes":[[300,250]],"namedSizes":[],"targeting":[{"key":"position","values":["article-2"],"isEmpty":false},{"key":"pos","values":["article-2"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+            </div>
+        </div>
+        <div>
+<section class="siloLinksSection">
+    <h2>Relaterede søgninger</h2>
+    <div id="related-searches-silolinks" class="siloLinkContainer">
+        <ul class="list-unstyled">
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto" rel="bookmark">kia picanto</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia" rel="bookmark">kia</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-1,2" rel="bookmark">1,2</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-gt_line" rel="bookmark">gt line</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto_1,2" rel="bookmark">kia picanto 1,2</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-sport" rel="bookmark">sport</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_rio" rel="bookmark">kia rio</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-attraction" rel="bookmark">attraction</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-picanto" rel="bookmark">picanto</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto_1,0_active_eco_5d" rel="bookmark">kia picanto 1,0 active eco 5d</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-exclusive" rel="bookmark">exclusive</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-toyota" rel="bookmark">toyota</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-attraction_plus" rel="bookmark">attraction plus</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto_attraction" rel="bookmark">kia picanto attraction</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto_2014" rel="bookmark">kia picanto 2014</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto_1,0_mpi_advance_5d" rel="bookmark">kia picanto 1,0 mpi advance 5d</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-t_gdi" rel="bookmark">t gdi</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-kia_picanto_12310" rel="bookmark">kia picanto 1.0</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-seat_mii" rel="bookmark">seat mii</a></li>   
+                <li><a href="/brugt/bil/kia/picanto/ps-1,1" rel="bookmark">1,1</a></li>   
+        </ul>
+    </div>
+</section>
+
+        </div>
+
+    </div>
+</div>
+<!-- /.bannerwrapper -->
+
+
+
+
+
+
+
+
+
+<footer class=bb-footer-sm> <div class=row> <div class="col-xs-6 col-sm-2 footer-menu-list-column"> <div class=footer-menu-list-header>Sælg bil</div> <ul> <li> <a href=/saelg-din-brugte-bil rel=bookmark class=gtm-track data-track-action=SellYourCarClick>Sælg din bil</a> </li> <li> <a href="/bilauktion?XPressCarsalesSourceOrigin=footersaelg" rel=bookmark class=gtm-track data-track-action=PostAuctionBegin>Xpress Bilauktion</a> </li> <li> <a href=/bilvurdering/ rel=bookmark class=gtm-track data-track-action=MyCarValuationBegin>Hvad er min bil værd?</a> </li> <li> <a href=/resources/guides/bil-salgsguide.pdf target=_blank rel="noopener bookmark" class=gtm-track data-track-action=ViewGuide data-track-label="guide=Salgsguide">Salgsguide</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 footer-menu-list-column"> <div class=footer-menu-list-header>Køb bil</div> <ul> <li> <a href=/find-en-forhandler rel=bookmark class=gtm-track data-track-action=FindADealerBegin>Find en forhandler</a> </li> <li> <a href=/finansiering/ rel=bookmark class=gtm-track data-track-action=FindFinanceBegin>Bilfinansiering</a> </li> <li> <a href=/forsikring rel=bookmark class=gtm-track data-track-action=FindInsuranceBegin>Bilforsikring</a> </li> <li> <a href=/nummerpladetjek rel=bookmark class=gtm-track data-track-action=LicensePlateCheckBegin>Nummerpladetjek</a> </li> <li> <a href=/resources/guides/bil-koebsguide.pdf target=_blank rel="noopener bookmark" class=gtm-track data-track-action=ViewGuide data-track-label="guide=Koebsguide">Købsguide</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 footer-menu-list-column"> <div class=footer-menu-list-header>Snak om biler</div> <ul> <li> <a href=/forum rel=bookmark class=gtm-track data-track-action=ForumClick>Forum</a> </li> <li> <a href=/alt-om rel=bookmark class=gtm-track data-track-action=ReviewsClick>Brugeranmeldelser</a> </li> <li> <a href=https://blog.bilbasen.dk/ target=_blank rel=noopener class=gtm-track data-track-action=BlogClick>Bilbasens blog</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 footer-menu-list-column"> <div class=footer-menu-list-header>Min Bilbase</div> <ul> <li> <a href=/mine/annoncer rel=bookmark class=gtm-track data-track-action=MyAdClick>Mine annoncer</a> </li> <li> <a href=/mine/favoritter rel=bookmark class=gtm-track data-track-action=WatchlistClick>Favoritter</a> </li> <li> <a href=/gemte-soegninger/ rel=bookmark class=gtm-track data-track-action=SavedSearchesClick>Gemte søgninger</a> </li> <li class=logged-in-user style=display:none> <a href=/bruger/opdater rel=bookmark class=gtm-track data-track-action=MyAccountClick>Brugerprofil</a> </li> <li class=logged-in-user style=display:none> <a href=/bruger/log-af class=gtm-track data-track-action=LogoutBegin>Log ud</a> </li> </ul> </div> <div class="col-xs-6 col-sm-2 footer-menu-list-column"> <div class=footer-menu-list-header>Om Bilbasen</div> <ul> <li> <a href=https://jobs.ebayclassifiedsgroup.com/bilbasen rel="noopener noreferrer bookmark" target=_blank class=gtm-track data-track-action=CareersClick>Jobs</a> </li> <li> <a href=https://bilbasen.presscloud.com/nr/#/frontpage rel="noopener noreferrer bookmark" target=_blank class=gtm-track data-track-action=NewsClick>Presse</a> </li> <li> <a href=/brugeraftale rel=bookmark class=gtm-track data-track-action=LegalTC>Brugervilkår</a> </li> <li> <a href=/persondatapolitik rel=bookmark class=gtm-track data-track-action=LegalPrivacyClick>Persondatapolitik</a> </li> <li> <a href=/cookie-samtykke rel=bookmark class=gtm-track data-track-action=GdprConsentClick>Cookie-samtykke</a> </li> <li> <a href=/resources/guides/bil-sikkerhedsguide.pdf target=_blank rel="noopener bookmark" class=gtm-track data-track-action=ViewGuide data-track-label="guide=Sikkerhedsguide">Sikkerhedsguide</a> </li> <li> <a href=/support/faq rel=bookmark class=gtm-track data-track-action=HelpClick>Hjælp</a> </li> <li> <a href=# class="switch-to-mobile-link gtm-track" data-track-action=BackToMobile>Mobilsite</a> </li> </ul> </div> </div> <div class=row> <div class="col-xs-8 col-sm-8 col-xs-push-2 col-sm-push-2"> <ul class="social-media-actions list-inline"> <li> <a class="facebook-icon gtm-track" href=https://www.facebook.com/bilbasen.dk target=_blank rel="noopener noreferrer" data-track-action=FaebookClick></a> </li> <li> <a class="twitter-icon gtm-track" href=https://twitter.com/BilBasen target=_blank rel="noopener noreferrer" data-track-action=TwitterClick></a> </li> <li> <a class="google-plus-icon gtm-track" href=https://plus.google.com/117717078087658121040 rel="publisher noopener noreferrer" target=_blank data-track-action=GoogleplusClick></a> </li> <li> <a class="instagram-icon gtm-track" href=https://www.instagram.com/bilbasen/ target=_blank rel="noopener noreferrer" data-track-action=InstagramClick></a> </li> </ul> </div> </div> <div class=row> <div class="col-xs-10 col-sm-8 col-xs-push-1 col-sm-push-2 footer-other-info"> <div> Andre bilsites: <a href=http://www.dba.dk/biler/ target=_blank rel=noopener class=gtm-track data-track-action=DbaDkClick>dba.dk</a> og <a href=http://www.mobile.de/ target=_blank rel="noopener noreferrer" class=gtm-track data-track-action=MobileDeClick>mobile.de</a> </div> <div> &copy; 2013 eBay Classifieds Scandinavia ApS - en del af <a href=http://www.ebayclassifiedsgroup.com/ target=_blank rel="noopener noreferrer" class=gtm-track data-track-action=EbayClick>eBay</a> </div> </div> </div> </footer> <footer class="bb-footer-xs visible-xs"> <div class=row> <div class="col-xs-6 desktop-link-wrapper"> <a href=# class=switch-to-desktop-link>Desktop</a> </div> <div class="col-xs-6 mobile-link-wrapper"> <span>Mobil</span> </div> </div> <div class="row extra-info-text"> Du har flere muligheder på desktop </div> <div class="row external-reference-text"> &copy; 2013 eBay Classifieds Scandinavia ApS - en del af <a href=http://www.ebayclassifiedsgroup.com/ target=_blank class=gtm-track data-track-action=EbayClick>eBay</a> </div> </footer> 
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modalContainer"></div>
+    <script type="text/javascript" src="/sharedresources/vendor/vendor.bundle.4a2a52e25a68cb8faa8d.js"></script>
+    <script type="text/javascript" src="/sharedresources/global/global.bundle.cccdd68b595be590a9de.js"></script>
+  
+    <script>
+        Bilbasen.LegacyReadyHandlers.replay();
+    </script>
+<script type="text/javascript">
+    window.userState = {"numberOfFavorites":0,"freeText":"","username":"","isLoggedIn":false,"useExtendedSearch":false};
+    if (window.userState.isLoggedIn === true) {
+        $('.logged-in-user').each(function() {
+            $(this).show();
+        });
+        $('.not-logged-in-user').each(function() {
+            $(this).hide();
+        });
+        $('#userName').html(window.userState.username);
+        $('#favorites').html(window.userState.numberOfFavorites);
+
+    } else {
+        $('.not-logged-in-user').each(function() {
+            $(this).show();
+        });
+        $('.logged-in-user').each(function() {
+            $(this).hide();
+        });
+    }
+    if (window.userState.useExtendedSearch) {
+        $('.inline-search-trigger').show();
+    }
+    $('#searchInput').val(window.userState.freeText);
+</script>
+<script type="text/javascript" src="/Public/js/bb_core_96538933B6D2017091653238CB019C6A.js"></script>
+
+
+<script type="text/javascript" src="/Public/js/bb_vip_scripts_EF248DA40A8D417BE3F6F63F0A576A8B.js"></script>
+    
+    <script src="/Public/Scripts/Plugins/jquery.bbThumbSlider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.environment = 'Production'; // Needed by Optimizely: "QA" or "Production"
+            window.isAlFinansFinanceCompany = 'False'; // Needed by Optimizely
+            BilBasen.Areas.UsedVehicles.Vip.init({ userBuySameDescription: '\u003cp\u003eUd af \u003cstrong\u003e30\u003c/strong\u003e tidligere ejere af \u003cstrong\u003eKia Picanto (2015-2017)\u003c/strong\u003e ville \u003cstrong\u003e93%\u003c/strong\u003e købe mærket igen.\u003c/p\u003e\u003cp\u003e\u003ca href=\u0027/alt-om/kia/picanto/\u0027 onclick=\u0027BilBasen.Areas.UsedVehicles.Vip.customtracking();\u0027\u003eAlle brugervurderinger af Kia Picanto\u003c/a\u003e\u003c/p\u003e', userBuyPercentage: Number(93) });
+            BilBasen.ThreeSixtyDegreeImage.init();
+            BilBasen.Areas.UsedVehicles.LeadQualificationModel.init();
+        });
+    </script>
+
+
+    <script src="/FrontendAssets/vip/vip.bundle.697ce74974b8821d31c1.js"></script>
+
+;
+<input id="User_AcceptedTos" name="User.AcceptedTos" type="hidden" value="" />
+
+
+<script type="text/javascript">
+    BilBasen.Tracking.Analytics.init();
+    BilBasen.Tracking.Analytics.trackPageView('/cars/usedcars/dealer/showcar.aspx');
+</script>
+<script type="text/javascript">
+    $(document).trigger("bb:ready"); //Trigger a pre-banner dom ready event
+    $(document).trigger("bb:bannerready"); //Trigger a pre-banner dom ready event
+    $(document).ready(function () {
+        Sys.Mvc.ValidatorRegistry.validators["notallowed"] = function (rule) {
+            var notAllowed = rule.ValidationParameters["notallowedtext"];
+            return function (value) {
+                if (value != notAllowed) {
+                    return true;
+                }
+                return rule.ErrorMessage;
+            };
+        };
+        $('input, textarea').placeholder();
+    });
+</script>
+
+
+<div id="google-dfp-audience" class="adslot adslot-audience" data-adslot='{"bids":null,"adSlotId":"google-dfp-audience","sizes":[[1,11]],"namedSizes":[],"targeting":[{"key":"position","values":["audience"],"isEmpty":false},{"key":"pos","values":["audience"],"isEmpty":false}],"collapse":true,"collapseBefore":false}' data-lazyloadpixeloffset='0' data-skyscraperpixeloffset='0' data-blockingcontent='[]'></div>
+<script data-script="GoogleDfpAdunit">
+    (function () {
+            window.performance && window.performance.mark && window.performance.mark('DFP_BEGIN');
+            
+            var thirdPartys = [];
+            Ecgdk.Prebid && thirdPartys.push(new Ecgdk.Prebid({"enabled":true,"bidsTimeout":1200,"usdExchangeRate":6.6,"euroExchangeRate":7.45,"logPrebidStats":false,"enableUserTracking":true,"googleAnalyticsGlobalName":"ga","adSlotSelector":".adslot","rtbFloorPriceSettings":null,"rtbPriceGranularitySettings":null,"loadDeferred":["google-dfp-intermingle-2"]}));
+            Ecgdk.GoogleDFP.AdUnitModel = {"adUnitPath":"/18031432/bilbasen.dk-webtraffic/standardplus","targeting":[{"key":"page","values":["vip"]},{"key":"iu","values":["/18031432/bilbasen.dk-webtraffic/standardplus"]},{"key":"listing_ownertype","values":["forhandler"]},{"key":"listing_price","values":["50001-75000"]},{"key":"g_cm","values":["Kia"]},{"key":"g_cmo","values":["Picanto"]},{"key":"attr_makemodel","values":["Kia Picanto 1.0 1.0 Limited Sport"]},{"key":"g_cy","values":["2016"]},{"key":"attr_vintage","values":["2016"]},{"key":"attr_numberofkm","values":["50001-75000"]},{"key":"attr_fuel","values":["Benzin"]},{"key":"attr_vatfree","values":["inklusivmoms"]},{"key":"attr_imageurl","values":["https://i.ebayimg.com/images/g/NYkAAOSwMipfNSu1/s-l1600.jpg"]},{"key":"Variant","values":["1.0 Limited Sport"]},{"key":"listing_price_raw","values":["58900"]},{"key":"listing_contact_zipcode","values":["4320"]},{"key":"listing_contact_municipality","values":["Lejre Kommune"]},{"key":"listing_contact_region","values":["Region Sjælland"]},{"key":"pt","values":["VIP"]},{"key":"ct","values":["25898"]},{"key":"li","values":["0"]},{"key":"ptg","values":["PTG_E_10pct"]},{"key":"g_hd","values":["f0c82cec-de90-4819-bcfa-7a6827d84089"]},{"key":"hn","values":["www.bilbasen.dk"]},{"key":"attr_dealerid","values":["12875"]}],"ppid":null,"stickyTopBanner":false,"thirdPartyNetworks":true};
+            Ecgdk.AdNetworks.configure(new Ecgdk.GoogleDFP.AdUnit(Ecgdk.GoogleDFP.AdUnitModel),
+                thirdPartys,
+                1200);
+            
+            $(document).on('dfp:init',
+                function () {
+                    var maxWaitCycles = 20;
+                    var retryCount = 0;
+
+                    var waitForCmp = function (key, callback) {
+                        window[key]
+                            ? callback()
+                            : setTimeout(function () {
+                                ++retryCount > maxWaitCycles
+                                    ? callback()
+                                    : waitForCmp(key, callback);
+                            }, 100);
+                    };
+
+                    waitForCmp("__cmpEcgdk", Ecgdk.AdNetworks.init);
+                }
+            );
+        }()
+    );
+</script>
+
+
+    <div class="listing-compare-footer"></div>
+
+    
+        <script src="/FrontendAssets/mvc/mvc.bundle.af39b855f29ff107ddac.js"></script>
+    
+</body>
+</html>
