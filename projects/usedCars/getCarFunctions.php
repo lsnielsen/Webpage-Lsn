@@ -20,7 +20,7 @@
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
 			thirdSubstring = thirdSubstring.replace(",", ".");
 			theEngine = thirdSubstring;
-			console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
+			//console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
 		} else {
 		    theCarModel = "-";
 			theEngine = "-";
@@ -181,10 +181,10 @@
 			horsePowerAndNm = "-";
 		}
 
-		colorStart = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
-		colorEnd = data.search("<td style=\"color: #888;\">Tophastighed</td>");
-		if (colorStart != -1 && colorEnd != -1) {
-			fromZeroToHundred = removePrimerAttributeSpace(colorStart, colorEnd, data);
+		zeroToHundredStart = data.search(/[0-9]+,[0-9]* sek/);
+		if (zeroToHundredStart != -1) {
+			fromZeroToHundred = data.substring(zeroToHundredStart, zeroToHundredStart+8);
+			fromZeroToHundred = fromZeroToHundred.replace("<", "");
 		} else {
 			fromZeroToHundred = "-";
 		}
@@ -205,11 +205,9 @@
 			energyToUse = "-";
 		}
 
-		usageStart = data.search("<td style=\"color: #888;\">Forbrug</td>");
-		usageEnd = data.search(/<td style="color: #888;">[a-zA-Z\(\) ]+<\/td>/);
-		//console.log("usageStart, usageEnd: " + usageStart + ", " + usageEnd);
-		if (usageStart != -1 && usageEnd != -1) {
-			energyUsage = removePrimerAttributeSpace(usageStart, usageEnd, data);
+		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
+		if (usageStart != -1) {
+			energyUsage = data.substring(usageStart, usageStart+9);
 		} else {
 			energyUsage = "-";
 		}
@@ -365,6 +363,9 @@
 
 		for(i=0; i<20; i++) {
 			value = value.replace(" ", "");
+		}
+		for(i=0; i<50; i++) {
+			value = value.replace("   ", "");
 		}
 		for(i=0; i<20; i++) {
 			value = value.replace(/\n/, "");
