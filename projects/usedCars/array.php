@@ -210,7 +210,7 @@
 		singleCarArray.push(laneAssistant);
 		singleCarArray.push(xenonLights);
 		
-		console.log("pushing to dataarray");
+		//console.log("pushing to dataarray");
 		dataArray.push(singleCarArray);
 	}
 
