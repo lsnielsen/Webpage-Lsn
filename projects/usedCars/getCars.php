@@ -22,7 +22,7 @@
 						theUrl = theUrl + "&page=" + i;
 					}
 					callingFirstUrl(theUrl);
-				}, 1000
+				}, 10
 			);
 		}
 		setTimeout(
@@ -39,38 +39,8 @@
 	
 	
 	
-	function makeArrayToPhp()
-	{
-		for(i=0; i<dataArray.length; i++) {
-			arrayValue = dataArray[i];
-			for(j=0; j<arrayValue.length; j++) {
-				if (arrayValue[j] == ",") {
-					arrayValue[j] = ".";
-				}
-			}
-		}
-		$('#arrayButton').val(dataArray);
-		$("#arrayButton").show();
-		$("#arrayButton").click();
-	}
 	
 	
-	
-	
-		
-	$("#webscraper").click(function() {
-		//console.log("First array:");
-		//console.log(firstUrlArr);
-		for(i = 0; i<firstUrlArr.length; i++) {
-			callingSecondUrl(firstUrlArr[i]);
-		}
-		setTimeout(
-			function() 
-			{
-				console.log("Second array:");
-				console.log(dataArray);
-			}, 3000);
-	});
 	
 	function callingFirstUrl(urlOne) 
 	{
@@ -91,13 +61,28 @@
 		);  
 	}		
 	
+		
+	$("#webscraper").click(function() {
+		//console.log("First array:");
+		//console.log(firstUrlArr);
+		for(i = 0; i<firstUrlArr.length; i++) {
+			callingSecondUrl(firstUrlArr[i]);
+		}
+		setTimeout(
+			function() 
+			{
+				console.log("Second array:");
+				console.log(dataArray);
+			}, 3000);
+	});
+	
 	
 	function callingSecondUrl(url)
 	{
 		$.get(url, 
 			function( data ) {
 				var singleCarArray = new Array();
-				singleCarArray.push(url);
+				theLink = url;
 				getModelName(data, singleCarArray);
 				setPriceAttributes(data, singleCarArray);
 				setPrimerAttributes(data, singleCarArray);
@@ -108,31 +93,36 @@
 				setColorAttributes(data, singleCarArray);
 				setExtraEquipment(data, singleCarArray);
 				
+				setTheFirstArray(singleCarArray);
 					
-				dataArray.push(singleCarArray);
+				setTimeout(
+					function() 
+					{
+						dataArray.push(singleCarArray);
+					}, 3000);
 			},
 			'html'
 		);
 	}
 	
+	
+	function makeArrayToPhp()
+	{
+		for(i=0; i<dataArray.length; i++) {
+			arrayValue = dataArray[i];
+			for(j=0; j<arrayValue.length; j++) {
+				if (arrayValue[j] == ",") {
+					arrayValue[j] = ".";
+				}
+			}
+		}
+		$('#arrayButton').val(dataArray);
+		$("#arrayButton").show();
+		$("#arrayButton").click();
+	}
 
 	
 		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	
 	
 	

@@ -13,8 +13,7 @@
 		</h1>
 				<button id="webscraper" style="display: none;"> </button>
 
-				<form 	method="post" 
-						>
+				<form method="post">
 					<button type="submit" 
 							id="arrayButton" 
 							name="usedCarsArray"
