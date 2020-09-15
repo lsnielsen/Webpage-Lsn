@@ -60,6 +60,7 @@
   
 			fclose($fp);
 			
+			include("../projects/usedCars/frontpage.php");	
 		} else {
 			include("../projects/usedCars/frontpage.php");	
 		}

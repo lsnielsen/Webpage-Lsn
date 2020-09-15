@@ -106,9 +106,6 @@
 
 	function setTheFirstArray(singleCarArray)
 	{
-		console.log("Link: \n " + theLink);
-		console.log("top speed: \n " + theTopSpeed);
-		console.log("Drivmiddel: \n " + energyToUse + "\n");
 		singleCarArray.push(theLink);
 		singleCarArray.push(theCarModel);
 		singleCarArray.push(theEngine);
