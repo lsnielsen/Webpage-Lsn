@@ -23,14 +23,18 @@
 							Tryk her for at downloade din excel fil
 					</button>
 				</form>
-			<div class="dropdown">
-				<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-					<div id="myDropdown" class="dropdown-content">
-						<a href="#">Link 1</a>
-						<a href="#">Link 2</a>
-						<a href="#">Link 3</a>
-					</div>
-			</div>
+					
+					
+				<form class="dropdown">
+					<label>Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
+					<select class="carModel">
+						<option> Vælg bilmodel </option>
+						<option value="volvo v60">Volvo V60</option>
+						<option value="Audi A3">Audi A3</option>
+						<option value="Saab 9-3">Saab 9-3</option>
+					</select>
+				</form>
+
 		<div>
 			<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
 				<button id="backButton" type="submit"> 
