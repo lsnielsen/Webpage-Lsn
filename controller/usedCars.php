@@ -51,7 +51,7 @@
 				}					
 			}
 			
-			$fp = fopen('data.csv' , 'w');
+			$fp = fopen('Brugte biler.csv' , 'w');
 			fputcsv($fp, $headerArray); 
 			foreach ($dataArr as $row) { 
 				fputcsv($fp, $row); 
