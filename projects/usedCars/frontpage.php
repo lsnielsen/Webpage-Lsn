@@ -6,6 +6,7 @@
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/usedCars.css" type="text/css">
 	</head>
 	<body>
 		<h1>
@@ -22,7 +23,14 @@
 							Tryk her for at downloade din excel fil
 					</button>
 				</form>
-		
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+			</div>
 		<div>
 			<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
 				<button id="backButton" type="submit"> 
