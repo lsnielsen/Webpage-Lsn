@@ -20,7 +20,7 @@
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
 			thirdSubstring = thirdSubstring.replace(",", ".");
 			theEngine = thirdSubstring;
-			//console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
+			console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
 		} else {
 		    theCarModel = "-";
 			theEngine = "-";

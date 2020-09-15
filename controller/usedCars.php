@@ -50,7 +50,6 @@
 					$counter++;
 				}					
 			}
-			echo '<pre>'; print_r($dataArr); echo '</pre>';
 			
 			$fp = fopen('data.csv' , 'w');
 			fputcsv($fp, $headerArray); 
@@ -61,6 +60,7 @@
 			fclose($fp);
 			
 			include("../projects/usedCars/frontpage.php");	
+			echo '<pre>'; print_r($dataArr); echo '</pre>';
 		} else {
 			include("../projects/usedCars/frontpage.php");	
 		}

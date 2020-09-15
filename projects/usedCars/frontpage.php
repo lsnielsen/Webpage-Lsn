@@ -30,6 +30,7 @@
 					<select class="carModel">
 						<option> Vælg bilmodel </option>
 						<option value="volvo v60">Volvo V60</option>
+						<option value="volvo xc40">Volvo XC40</option>
 						<option value="Audi A3">Audi A3</option>
 						<option value="Saab 9-3">Saab 9-3</option>
 					</select>
