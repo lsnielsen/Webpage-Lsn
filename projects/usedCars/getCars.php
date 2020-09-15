@@ -8,7 +8,9 @@
 <script>
 
 	
-	var basicUrl = "https://www.bilbasen.dk/brugt/bil?IncludeEngrosCVR=true&PriceFrom=0&includeLeasing=true";
+	var basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
+	var basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
+
 
 	var firstUrlArr = new Array();
 	var dataArray = new Array();
@@ -18,7 +20,9 @@
 		$(".dropdown").hide();
 		choosenModel = $(this).children("option:selected").val();
 		modelArray = choosenModel.split(" ");
-		console.log("chosen: " + modelArray);
+		//console.log("chosen: " + modelArray);
+		basicUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
+		
 		
 		var loopI = 1;
 		myLoop();
@@ -31,10 +35,10 @@
 					callingFirstUrl(basicUrl, modelArray);
 				}
 				loopI++;                  
-				if (loopI < 1560) {         
-				myLoop();             
+				if (loopI < 10) {         
+					myLoop();             
 				}                       
-			}, 150)
+			}, 100)
 		}
 		
 		
@@ -45,9 +49,9 @@
 				setTimeout(
 					function() 
 					{
-						//makeArrayToPhp();
-					}, 1000);
-			}, 250100);
+						makeArrayToPhp();
+					}, 180000);
+			}, 125000);
 	});
 	
 	
@@ -57,23 +61,21 @@
 	
 	function callingFirstUrl(urlOne, modelArray) 
 	{
-		console.log(" ");
+		//console.log("First url call ");
 		$.get(urlOne, 
 			function( data ) {
 		
 				for ($i = 0; $i < data.length; $i++) {
-					subStr = data.substring($i, $i+80);
+					subStr = data.substring($i, $i+200);
 					temp = subStr.search(/\"\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-,.\/]+\"$/);
 					if (temp != -1) {
 						var theFirstString = subStr.substring(temp + 1, subStr.length - 1);
 						//console.log("url: " + theFirstString);
 						//console.log("model: " + modelArray[0] + " " + modelArray[1]);
-						if (subStr.includes(modelArray[0]) && subStr.includes(modelArray[1])) {
-							console.log("true, includes: " + modelArray[0] + ", " + modelArray[1]);
-							theFirstString = "https://www.bilbasen.dk" + theFirstString;
-							console.log("url: " + theFirstString);
-							firstUrlArr.push(theFirstString);
-						}
+						//console.log("true, includes: " + modelArray[0] + ", " + modelArray[1]);
+						theFirstString = "https://www.bilbasen.dk" + theFirstString;
+						//console.log("url: " + theFirstString);
+						firstUrlArr.push(theFirstString);
 					}
 				}
 			}, 
@@ -96,7 +98,7 @@
 				if (loopII < firstUrlArr.length) {         
 					mySecondLoop();             
 				}                       
-			}, 80)
+			}, 120)
 		}
 		
 		setTimeout(
@@ -127,7 +129,7 @@
 				setExtraEquipment(data, singleCarArray);
 				
 				setTheFirstArray(singleCarArray);
-				console.log("single car array : " + singleCarArray);
+				//console.log("single car array : " + singleCarArray);
 			},
 			'html'
 		);
