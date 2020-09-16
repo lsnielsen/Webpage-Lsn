@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<h1>
-			Forsøger her at downloade en excel fil med brugte biler
+			Her kan du downloade en excel fil med brugte biler fra bilbasen.dk. Resultatet vil også blive vist i tabellen nedenfor.
 		</h1>
 				<button id="webscraper" style="display: none;"> </button>
 
@@ -28,17 +28,17 @@
 				<form class="modelDropdown">
 					<label>Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
 					<select class="carModel frontpageStyle">
-						<option> Vælg bilmodel </option>
-						<option value="volvo v60">Volvo V60</option>
-						<option value="volvo xc40">Volvo XC40</option>
-						<option value="Audi A3">Audi A3</option>
-						<option value="Saab 9-3">Saab 9-3</option>
+						<option style="font-size: 20px;"> Vælg bilmodel </option>
+						<option class="carModelOptions" value="volvo v60">Volvo V60</option>
+						<option class="carModelOptions" value="volvo xc40">Volvo XC40</option>
+						<option class="carModelOptions" value="Audi A3">Audi A3</option>
+						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
 					</select>
 				</form>
 
 		<div>
 			<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-				<button class="frontpageStyle" id="backButton" type="submit"> 
+				<button class="frontpageStyle" style="width: 160px;" id="backButton" type="submit"> 
 					Tilbage
 				</button>
 			</form>
@@ -49,11 +49,14 @@
 </html>
 
 <?php
-	include("../projects/usedCars/usedCarTable.php");	
 	include("getCars.php");
 ?>
 
 <style>
+	.carModelOptions {
+		font-size: 25px;
+	}
+
 	.frontpageStyle {
 		color: #fff !important;
 		text-transform: uppercase;
@@ -65,6 +68,7 @@
 		border: none;
 		transition: all 0.4s ease 0s;
 		margin-left: 100px;
+		width: 210px;
 	}
 	.frontpageStyle:hover {
 		background: #434343;

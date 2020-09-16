@@ -211,7 +211,12 @@
 		singleCarArray.push(xenonLights);
 		
 		//console.log("pushing to dataarray");
-		dataArray.push(singleCarArray);
+		carModel = singleCarArray[1];
+		engine = singleCarArray[2];
+		price = singleCarArray[3];
+		if(carModel != "-" && engine != "-" && price != "-") {
+			dataArray.push(singleCarArray);
+		}
 	}
 
 

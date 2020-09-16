@@ -29,10 +29,11 @@
 
 	function setPriceAttributes(data, singleCarArray)
 	{				
+		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
 		priceEnd = data.search("kr</td>");
 		//console.log("price start, end: " + priceEnd);
-		if (priceEnd != -1) {
-			priceString = data.substring(priceEnd-20, priceEnd);
+		if (priceStart != -1) {
+			priceString = data.substring(priceStart+20, priceStart+31);
 			for(i=0; i<10; i++) {
 				priceString = priceString.replace(/\n/, "");
 			}
@@ -172,7 +173,7 @@
 		
 	function setPrimerAttributes(data, singleCarArray)
 	{
-
+		console.log("setPrimerAttributes");
 		hkStart = data.search("<td style=\"color: #888;\">HK/Nm</td>");
 		hkEnd = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
 		if (hkStart != -1 && hkEnd != -1) {
@@ -338,8 +339,9 @@
 			theWeight = "-";
 		}
 
-		doorStart = data.search("<td style=\"color: #888;\">Døre</td>");
+		doorStart = data.search(/<td class="selectedcar">[0-9]<\/td>/);
 		doorEnd = data.search("<p>* Der tages forbehold for evt. fejl</p>");
+		console.log("doors; start: " + doorStart + ", end: " + doorEnd);
 		if (doorStart != -1 && doorEnd != -1) {
 			countOfDoors = removePrimerAttributeSpace(doorStart, doorEnd, data);
 		} else {

@@ -12,7 +12,7 @@
 							"ABS-bremser", "Max påhæng", "Airbags", "ESP", "Tank", 
 							"Gear", "Geartype", "Vægt", "Døre", 
 							"Registrerings dato", "Produktions år", "Modelår", 
-							"Synet", "Farve", "ABS-bremser", "Alufælge", "Andriod auto", 
+							"Synet", "Farve", "Alufælge", "Andriod auto", 
 							"Anhængertræk", "Anhængertræk aftagl.", "Antispin", "Apple carplay", 
 							"Armlæn", "Auto. nødbremse", "Auto parkering", "Auto start/stop", 
 							"Automatgear", "Automatisk lys", "AUX tilslutning", "Bakkamera", 
@@ -54,6 +54,7 @@
 			fclose($fp);
 			
 			include("../projects/usedCars/frontpage.php");	
+			include("../projects/usedCars/usedCarTable.php");	
 			
 			
 			//echo '<pre>'; print_r($dataArr); echo '</pre>';
