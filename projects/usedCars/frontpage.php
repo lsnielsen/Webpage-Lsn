@@ -8,7 +8,7 @@
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/usedCars.css" type="text/css">	
 	</head>
-	<body>
+	<body style="background-color: #ccff99;">
 		<h1>
 			Her kan du downloade en excel fil med brugte biler fra bilbasen.dk. Resultatet vil også blive vist i tabellen nedenfor.
 		</h1>
