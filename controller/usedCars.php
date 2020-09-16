@@ -35,15 +35,9 @@
 			$counter = 0;
 			$usedCarsArray = explode(",", $usedCarsArray);
 			
-			
-			//echo '<pre>'; print_r($usedCarsArray); echo '</pre>';
-			
-			
-			
 			for($i=0; $i< sizeof($usedCarsArray); $i++) {
 				if($usedCarsArray[$i] != "") {
 					$tempValue = trim(preg_replace('/\n/', ' ', $usedCarsArray[$i]));
-					//$tempValue = str_replace(' ', '', $tempValue);
 					$dataArr[$counter][] = $tempValue;
 				}
 				if (isset($usedCarsArray[$i+1]) && preg_match("/https:\/\/www.bilbasen.dk\/brugt\//", $usedCarsArray[$i+1])) {
@@ -60,7 +54,9 @@
 			fclose($fp);
 			
 			include("../projects/usedCars/frontpage.php");	
-			echo '<pre>'; print_r($dataArr); echo '</pre>';
+			
+			
+			//echo '<pre>'; print_r($dataArr); echo '</pre>';
 		} else {
 			include("../projects/usedCars/frontpage.php");	
 		}

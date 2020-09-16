@@ -185,6 +185,8 @@
 		if (zeroToHundredStart != -1) {
 			fromZeroToHundred = data.substring(zeroToHundredStart, zeroToHundredStart+8);
 			fromZeroToHundred = fromZeroToHundred.replace("<", "");
+			fromZeroToHundred = fromZeroToHundred.replace(",", ".");
+			//console.log("0-100 km/t: " + fromZeroToHundred);
 		} else {
 			fromZeroToHundred = "-";
 		}
@@ -193,6 +195,7 @@
 		topSpeedEnd = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
 		if (topSpeedStart != -1 && topSpeedEnd != -1) {
 			theTopSpeed = removePrimerAttributeSpace(topSpeedStart, topSpeedEnd, data);
+			//console.log("topspeed: " + theTopSpeed);
 		} else {
 			theTopSpeed = "-";
 		}
@@ -201,6 +204,7 @@
 		propellantEnd = data.search("<td style=\"color: #888;\">Forbrug</td>");
 		if (propellantStart != -1 && propellantEnd != -1) {
 			energyToUse = removePrimerAttributeSpace(propellantStart, propellantEnd, data);
+			energyToUse = energyToUse.replace(",", ".");
 		} else {
 			energyToUse = "-";
 		}
@@ -208,6 +212,8 @@
 		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
 		if (usageStart != -1) {
 			energyUsage = data.substring(usageStart, usageStart+9);
+			energyUsage = energyUsage.replace(",", ".");
+			console.log("Energi forbrug: " + energyUsage);
 		} else {
 			energyUsage = "-";
 		}

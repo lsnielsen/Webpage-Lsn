@@ -6,7 +6,7 @@
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/usedCars.css" type="text/css">
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/usedCars.css" type="text/css">	
 	</head>
 	<body>
 		<h1>
@@ -49,6 +49,7 @@
 </html>
 
 <?php
+	include("../projects/usedCars/usedCarTable.php");	
 	include("getCars.php");
 ?>
 

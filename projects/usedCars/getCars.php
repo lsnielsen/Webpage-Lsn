@@ -35,7 +35,7 @@
 					callingFirstUrl(basicUrl, modelArray);
 				}
 				loopI++;                  
-				if (loopI < 10) {         
+				if (loopI < 2) {         
 					myLoop();             
 				}                       
 			}, 100)
@@ -50,8 +50,8 @@
 					function() 
 					{
 						makeArrayToPhp();
-					}, 180000);
-			}, 125000);
+					}, 30000);
+			}, 20000);
 	});
 	
 	
@@ -85,14 +85,14 @@
 	
 		
 	$("#webscraper").click(function() {
-		console.log("First array:");
-		console.log(firstUrlArr);
+		//console.log("First array:");
+		//console.log(firstUrlArr);
 		
 		var loopII = 0;
 		mySecondLoop();
 		function mySecondLoop() {       
 			setTimeout(function() {   
-				console.log("Making second url call");
+				//console.log("Making second url call");
 				callingSecondUrl(firstUrlArr[loopII]);
 				loopII++;                  
 				if (loopII < firstUrlArr.length) {         
@@ -104,18 +104,18 @@
 		setTimeout(
 			function() 
 			{
-				console.log("Second array:");
-				console.log(dataArray);
+				//console.log("Second array:");
+				//console.log(dataArray);
 			}, 3000);
 	});
 	
 	
 	function callingSecondUrl(url)
 	{
-		console.log("second url calls, url: " + url);
+		//console.log("second url calls, url: " + url);
 		$.get(url, 
 			function( data ) {
-				console.log("calling the second url");
+				//console.log("calling the second url");
 				var singleCarArray = new Array();
 				theLink = url;
 				getModelName(data, singleCarArray);
