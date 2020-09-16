@@ -10,7 +10,11 @@
 	</head>
 	<body style="background-color: #ccff99;">
 		<h1>
-			Her kan du downloade en excel fil med brugte biler fra bilbasen.dk. Resultatet vil også blive vist i tabellen nedenfor.
+			Her kan du downloade en excel fil med brugte biler fra 
+			<a href="https:\\www.bilbasen.dk" target="_blank">
+				bilbasen.dk
+			</a>	
+			Resultatet vil også blive vist i tabellen nedenfor.
 		</h1>
 				<button id="webscraper" style="display: none;"> </button>
 
@@ -18,15 +22,26 @@
 					<button type="submit" 
 							id="arrayButton" 
 							name="usedCarsArray"
-							style="display: none; width: 200px; height: 200px;" 
+							style="display: none;" 
 							action="/Webpage-Lsn/controller/usedCars.php"> 
-							Tryk her for at downloade din excel fil
 					</button>
 				</form>
-					
+				
+				<div class="startSearch searchTxt infoTxt">
+					Du er nu gået igang med at søge efter biler på bilbasen, som har modellen xxx
+					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid.
+					Der er cirka yyy tid tilbage.
+				</div>
+				<div class="middleSearch searchTxt infoTxt">
+					Vi har nu hentet alle links til bilbasen, som er model xxx.
+				</div>
+				<div class="endSearch searchTxt infoTxt">
+					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om kort tid
+				</div>
+				
 					
 				<form class="modelDropdown">
-					<label>Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
+					<label class="infoTxt">Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
 					<select class="carModel frontpageStyle">
 						<option style="font-size: 20px;"> Vælg bilmodel </option>
 						<option class="carModelOptions" value="volvo v60">Volvo V60</option>
@@ -36,14 +51,12 @@
 					</select>
 				</form>
 
-		<div>
-			<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-				<button class="frontpageStyle" style="width: 160px;" id="backButton" type="submit"> 
-					Tilbage
-				</button>
-			</form>
+				<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
+					<button class="frontpageStyle" style="width: 160px;" id="backButton" type="submit"> 
+						Tilbage
+					</button>
+				</form>
 
-		</div>
 	</body>
 
 </html>
@@ -53,6 +66,12 @@
 ?>
 
 <style>
+	.infoTxt {
+		font-size: 25px;
+	}
+	.searchTxt {
+		display: none;
+	}
 	.carModelOptions {
 		font-size: 25px;
 	}
@@ -68,7 +87,6 @@
 		border: none;
 		transition: all 0.4s ease 0s;
 		margin-left: 100px;
-		width: 210px;
 	}
 	.frontpageStyle:hover {
 		background: #434343;
@@ -77,6 +95,10 @@
 		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		transition: all 0.4s ease 0s;
+	}
+	#backButton {
+		margin-left: 1100px;
+		margin-top: -70px;
 	}
 </style>
 

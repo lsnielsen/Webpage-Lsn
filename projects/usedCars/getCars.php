@@ -19,6 +19,8 @@
 	$("select.carModel").change(function(){
 		$("#backButton").hide();
 		$(".modelDropdown").hide();
+		$(".startSearch").show();
+		
 		choosenModel = $(this).children("option:selected").val();
 		modelArray = choosenModel.split(" ");
 		//console.log("chosen: " + modelArray);
@@ -46,10 +48,12 @@
 		setTimeout(
 			function() 
 			{
+				$(".middleSearch").show();
 				$("#webscraper").click();
 				setTimeout(
 					function() 
 					{
+						$(".endSearch").show();
 						makeArrayToPhp();
 					}, 10000);
 			}, 30000);
