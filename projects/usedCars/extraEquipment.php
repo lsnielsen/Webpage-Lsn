@@ -3,7 +3,7 @@
 <script>
 
 
-	function setExtraEquipment(data, singleCarArray)
+	function setExtraEquipment(data)
 	{
 		equip = data.search("ABS-bremser");	
 		if(equip != -1) { absBreaks = "Ja"; } else { absBreaks = "-"; }

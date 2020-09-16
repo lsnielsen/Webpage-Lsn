@@ -213,7 +213,7 @@
 		if (usageStart != -1) {
 			energyUsage = data.substring(usageStart, usageStart+9);
 			energyUsage = energyUsage.replace(",", ".");
-			console.log("Energi forbrug: " + energyUsage);
+			//console.log("Energi forbrug: " + energyUsage);
 		} else {
 			energyUsage = "-";
 		}

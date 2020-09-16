@@ -25,9 +25,9 @@
 				</form>
 					
 					
-				<form class="dropdown">
+				<form class="modelDropdown">
 					<label>Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
-					<select class="carModel">
+					<select class="carModel frontpageStyle">
 						<option> Vælg bilmodel </option>
 						<option value="volvo v60">Volvo V60</option>
 						<option value="volvo xc40">Volvo XC40</option>
@@ -38,7 +38,7 @@
 
 		<div>
 			<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-				<button id="backButton" type="submit"> 
+				<button class="frontpageStyle" id="backButton" type="submit"> 
 					Tilbage
 				</button>
 			</form>
@@ -53,9 +53,28 @@
 	include("getCars.php");
 ?>
 
-
-
-
+<style>
+	.frontpageStyle {
+		color: #fff !important;
+		text-transform: uppercase;
+		text-decoration: none;
+		background: #ed3330;
+		padding: 20px;
+		border-radius: 5px;
+		display: inline-block;
+		border: none;
+		transition: all 0.4s ease 0s;
+		margin-left: 100px;
+	}
+	.frontpageStyle:hover {
+		background: #434343;
+		letter-spacing: 1px;
+		-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		transition: all 0.4s ease 0s;
+	}
+</style>
 
 
 

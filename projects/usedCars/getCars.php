@@ -17,7 +17,8 @@
 	
         
 	$("select.carModel").change(function(){
-		$(".dropdown").hide();
+		$("#backButton").hide();
+		$(".modelDropdown").hide();
 		choosenModel = $(this).children("option:selected").val();
 		modelArray = choosenModel.split(" ");
 		//console.log("chosen: " + modelArray);
@@ -126,7 +127,7 @@
 				setModelAttributes(data, singleCarArray);
 				setSightAttributes(data, singleCarArray);
 				setColorAttributes(data, singleCarArray);
-				setExtraEquipment(data, singleCarArray);
+				setExtraEquipment(data);
 				
 				setTheFirstArray(singleCarArray);
 				//console.log("single car array : " + singleCarArray);

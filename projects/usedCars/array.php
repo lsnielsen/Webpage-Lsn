@@ -30,9 +30,9 @@
 	var yearOfTheModel;
 	var lastDateOfSight;
 	var theColor;
+	var towbar;
 	var alloyWheels;
 	var autoAndroid;
-	var towbar;
 	var towbarDetachable;
 	var antispin;
 	var carplayApple;
@@ -136,9 +136,9 @@
 		singleCarArray.push(yearOfTheModel);
 		singleCarArray.push(lastDateOfSight);
 		singleCarArray.push(theColor);
+		singleCarArray.push(towbar);
 		singleCarArray.push(alloyWheels);
 		singleCarArray.push(autoAndroid);
-		singleCarArray.push(towbar);
 		singleCarArray.push(towbarDetachable);
 		singleCarArray.push(antispin);
 		singleCarArray.push(carplayApple);

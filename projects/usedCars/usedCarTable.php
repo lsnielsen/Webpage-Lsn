@@ -30,7 +30,7 @@
 							<th>Model år</th>
 							<th>Synet</th>
 							<th>Farve</th>
-							<th>ABS-bremser</th>
+							<th>Anhængertræk</th>
 						</tr>
 						<?php
 						
@@ -40,7 +40,7 @@
 									for($j=0; $j<31; $j++) {
 										if ($j == 0) {
 											echo "<td>";
-											echo "<a href='".$dataArr[$i][$j]."'>Link til bilbasen</a>";
+											echo "<a href='".$dataArr[$i][$j]." target=\"_blank\"'>Link til bilbasen</a>";
 											echo "</td>";
 										} else {
 											echo "<td>";
