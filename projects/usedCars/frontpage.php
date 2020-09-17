@@ -32,7 +32,7 @@
 					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, højst 5 minutter.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
-					Vi har nu hentet alle links til bilbasen, som er model <center class="theChoosenModel"> </center>
+					Vi har nu hentet alle links til bilbasen.
 				</div>
 				<div class="endSearch searchTxt infoTxt">
 					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om kort tid

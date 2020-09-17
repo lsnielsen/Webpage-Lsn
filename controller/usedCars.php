@@ -15,7 +15,7 @@
 							"Synet", "Farve", "Alufælge", "Andriod auto", 
 							"Anhængertræk", "Anhængertræk aftagl.", "Antispin", "Apple carplay", 
 							"Armlæn", "Auto. nødbremse", "Auto parkering", "Auto start/stop", 
-							"Automatgear", "Automatisk lys", "AUX tilslutning", "Bakkamera", 
+							"Automatisk lys", "AUX tilslutning", "Bakkamera", 
 							"Bakspejl m. nedbl.", "Bi-xenon", "Blindvinkelassistent", "Bluetooth", 
 							"Brugtbilsattest", "Centrallås fjernb.", "Dab radio", "Dæktryksmåler", 
 							"Digitalt cockpit", "El inst. førersæde m. memory", "Elektrisk kabinevarmer", 

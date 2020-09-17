@@ -38,8 +38,8 @@
 		equip = data.search("Auto. start/stop");	
 		if(equip != -1) { autoStartStop = "Ja"; } else { autoStartStop = "-"; }
 		
-		equip = data.search("Automatgear");	
-		if(equip != -1) { autoGear = "Ja"; } else { autoGear = "-"; }
+		//equip = data.search("Automatgear");	
+		//if(equip != -1) { autoGear = "Ja"; } else { autoGear = "-"; }
 		
 		equip = data.search("Automatisk lys");	
 		if(equip != -1) { autoLight = "Ja"; } else { autoLight = "-"; }

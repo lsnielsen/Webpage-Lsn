@@ -20,7 +20,7 @@
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
 			thirdSubstring = thirdSubstring.replace(",", ".");
 			theEngine = thirdSubstring;
-			//console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
+			//console.log("Engine: " + thirdSubstring);
 		} else {
 		    theCarModel = "-";
 			theEngine = "-";
@@ -30,18 +30,12 @@
 	function setPriceAttributes(data, singleCarArray)
 	{				
 		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
-		priceEnd = data.search("kr</td>");
-		//console.log("price start, end: " + priceEnd);
 		if (priceStart != -1) {
-			priceString = data.substring(priceStart+20, priceStart+31);
-			for(i=0; i<10; i++) {
-				priceString = priceString.replace(/\n/, "");
-			}
-			for(i=0; i<60; i++) {
-				priceString = priceString.replace(" ", "");
-			}
-			priceString = priceString.replace(/[a-z">]+/, "");
-			//console.log(priceString);
+			priceString = data.substring(priceStart+20, priceStart+50);
+			priceEnd = priceString.search("kr.</span>");
+			//console.log("price start, end: " + priceStart + ", " + priceEnd);
+			priceString = priceString.substring(0, priceEnd);
+			//console.log("price: " + priceString + "\n");
 			thePrice = priceString;
 		} else {
 			thePrice = "-";

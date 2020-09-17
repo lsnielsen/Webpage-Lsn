@@ -40,7 +40,7 @@
 	var autoEmergencyBreak;
 	var autoParking;
 	var autoStartStop;
-	var autoGear;
+	//var autoGear;
 	var autoLight;
 	var auxAdding;
 	var rearCamera;
@@ -148,7 +148,7 @@
 		singleCarArray.push(autoEmergencyBreak);
 		singleCarArray.push(autoParking);
 		singleCarArray.push(autoStartStop);
-		singleCarArray.push(autoGear);
+		//singleCarArray.push(autoGear);
 		singleCarArray.push(autoLight);
 		singleCarArray.push(auxAdding);
 		singleCarArray.push(rearCamera);
