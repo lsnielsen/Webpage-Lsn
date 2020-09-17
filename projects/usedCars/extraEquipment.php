@@ -5,7 +5,7 @@
 
 	function setExtraEquipment(data)
 	{
-		console.log(data);
+		//console.log(data);
 		equip = data.search("ABS-bremser");	
 		if(equip != -1) { absBreaks = "Ja"; } else { absBreaks = "-"; }
 		
@@ -22,6 +22,7 @@
 		if(equip != -1) { towbarDetachable = "Ja"; } else { towbarDetachable = "-"; }
 		
 		equip = data.search("Antispin");	
+		//console.log("antispin: " + equip);
 		if(equip != -1) { antispin = "Ja"; } else { antispin = "-"; }
 		
 		equip = data.search("Apple carplay");	
