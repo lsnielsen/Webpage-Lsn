@@ -47,6 +47,7 @@
 						<option class="carModelOptions" value="volvo v60">Volvo V60</option>
 						<option class="carModelOptions" value="volvo xc40">Volvo XC40</option>
 						<option class="carModelOptions" value="Audi A3">Audi A3</option>
+						<option class="carModelOptions" value="Audi A6">Audi A6</option>
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
 					</select>
 				</form>

@@ -5,7 +5,7 @@
 
 		if ($usedCarsArray != "") {
 			
-			$headerArray = ['Link', 'Bilmærke', 'Motor', 'Pris',
+			$headerArray = ['Link', 'Kontakt info', 'Bilmærke', 'Motor', 'Pris',
 							'Hk/Nm', "0-100 km/t", "Tophastighed", "Drivmiddel", 
 							"Forbrug", "Euronorm", "Bredde", "Længde", "Højde", 
 							"Lasteevne", "Trækhjul", "Cylindre", 

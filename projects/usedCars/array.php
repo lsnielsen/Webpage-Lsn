@@ -103,10 +103,12 @@
 	var usbConnection;
 	var laneAssistant;
 	var xenonLights;
+	var contactInfo;
 
 	function setTheFirstArray(singleCarArray)
 	{
 		singleCarArray.push(theLink);
+		singleCarArray.push(contactInfo);
 		singleCarArray.push(theCarModel);
 		singleCarArray.push(theEngine);
 		singleCarArray.push(thePrice);

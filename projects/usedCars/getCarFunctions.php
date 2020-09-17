@@ -347,8 +347,42 @@
 			countOfDoors = "-";
 		}
 
+		getContactDetails(data);
+
 		
 	}
+	
+	function getContactDetails(data)
+	{
+		
+		cityStart = data.search(/<div>\d{4} [A-Za-zæøå ]+<\/div>/);
+		cityTxt = data.substring(cityStart+5 , cityStart+40);
+		cityEnd = cityTxt.search(/<\/div>/);
+		cityTxt = cityTxt.substring(0, cityEnd);
+		//console.log(" \n city; start: " + cityStart + ", \n cityTxt: " + cityTxt);
+		
+		adressStart = data.search(/<div>[a-zA-Z- æøå]+ [0-9a-zA-Z ]+<\/div>/);
+		adressTxt = data.substring(adressStart+5 , adressStart+40);
+		adressEnd = adressTxt.search(/<\/div>/);
+		adressTxt = adressTxt.substring(0, adressEnd);
+		//console.log("adress; start: " + adressStart + ", \n adressTxt: " + adressTxt);
+		
+		phoneStart = data.search(/<a href="tel:\d{8}">\d{8}<\/a>/);
+		phoneTxt = data.substring(phoneStart+23 , phoneStart+40);
+		phoneEnd = phoneTxt.search(/<\/a>/);
+		phoneTxt = phoneTxt.substring(0, phoneEnd);
+		//console.log(" phone; start: " + phoneStart + ", \n phoneTxt: " + phoneTxt + " \n");
+		
+		if(cityStart == -1) {
+			contactInfo = "-";
+		} else {
+			contactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
+			//console.log("Kontakt: " + contactInfo);
+		}
+		
+	}
+	
+	
 
 
 
