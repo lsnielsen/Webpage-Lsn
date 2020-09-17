@@ -28,12 +28,11 @@
 				</form>
 				
 				<div class="startSearch searchTxt infoTxt">
-					Du er nu gået igang med at søge efter biler på bilbasen, som har modellen xxx
+					Du er nu gået igang med at søge efter biler på bilbasen, som har modellen  <center class="theChoosenModel"> </center>
 					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid.
-					Der er cirka yyy tid tilbage.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
-					Vi har nu hentet alle links til bilbasen, som er model xxx.
+					Vi har nu hentet alle links til bilbasen, som er model <center class="theChoosenModel"> </center>
 				</div>
 				<div class="endSearch searchTxt infoTxt">
 					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om kort tid
@@ -44,8 +43,8 @@
 					<label class="infoTxt">Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
 					<select class="carModel frontpageStyle">
 						<option style="font-size: 20px;"> Vælg bilmodel </option>
-						<option class="carModelOptions" value="volvo v60">Volvo V60</option>
-						<option class="carModelOptions" value="volvo xc40">Volvo XC40</option>
+						<option class="carModelOptions" value="Volvo V60">Volvo V60</option>
+						<option class="carModelOptions" value="Volvo XC40">Volvo XC40</option>
 						<option class="carModelOptions" value="Audi A3">Audi A3</option>
 						<option class="carModelOptions" value="Audi A6">Audi A6</option>
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
@@ -67,6 +66,11 @@
 ?>
 
 <style>
+	.theChoosenModel {
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
 	.infoTxt {
 		font-size: 25px;
 	}

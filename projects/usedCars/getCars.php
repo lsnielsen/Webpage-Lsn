@@ -22,6 +22,8 @@
 		$(".startSearch").show();
 		
 		choosenModel = $(this).children("option:selected").val();
+		$(".theChoosenModel").text(choosenModel);
+		
 		modelArray = choosenModel.split(" ");
 		//console.log("chosen: " + modelArray);
 		basicUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
