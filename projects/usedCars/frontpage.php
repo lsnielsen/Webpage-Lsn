@@ -29,7 +29,7 @@
 				
 				<div class="startSearch searchTxt infoTxt">
 					Du er nu gået igang med at søge efter biler på bilbasen, som har modellen  <center class="theChoosenModel"> </center>
-					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid.
+					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, højst 5 minutter.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
 					Vi har nu hentet alle links til bilbasen, som er model <center class="theChoosenModel"> </center>
@@ -48,6 +48,7 @@
 						<option class="carModelOptions" value="Audi A3">Audi A3</option>
 						<option class="carModelOptions" value="Audi A6">Audi A6</option>
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
+						<option class="carModelOptions" value="Saab 9-5">Saab 9-5</option>
 					</select>
 				</form>
 
