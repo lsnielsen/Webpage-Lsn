@@ -75,24 +75,25 @@
 		{
 			//echo '<pre>'; print_r($titleArray); echo '</pre>';
 			//echo '<pre>'; print_r($array[0]); echo '</pre>';
-			$blankTester;
+			
+			$blankTest;
+			
 			for ($i=0; $i<sizeof($array); $i++) {
 				for ($j=31; $j<sizeof($array[$i]); $j++) {
-					if ($array[$i][$j] == "-") {
-						$blankTester[$j] = true;
+					if ($array[$i][$j] == "-" || !isset($blankTest[$j])) {
+						$blankTest[$j] = true;
 					} else {
-						$blankTester[$j] = false;
-						continue;
+						$blankTest[$j] = false;
 					}
 				}
 			}
 			
 			
-			$keys = array_keys($blankTester); 
+			$keys = array_keys($blankTest); 
 			for ($i=0; $i<sizeof($array); $i++) {
 				$columnCounter = 0;
 				for ($j=0; $j<sizeof($keys); $j++) {
-					if($blankTester[$keys[$j]] == true) {
+					if($blankTest[$keys[$j]] == true) {
 						//echo "columnCounter: " . $columnCounter . ", and j = " . $j . "<br>";
 						array_splice($array[$i], $keys[$j - $columnCounter], 1);
 						$columnCounter++;
@@ -102,7 +103,7 @@
 			$columnCounter = 0;
 
 			for ($j=0; $j<sizeof($keys); $j++) {
-				if($blankTester[$keys[$j]] == true) {
+				if($blankTest[$keys[$j]] == true) {
 					//echo "About to splice titleArray with j = " . $j . ", and keys[j] = " . $keys[$j] . " <br>";
 					array_splice($titleArray, $keys[$j-$columnCounter], 1);
 						$columnCounter++;
@@ -112,9 +113,10 @@
 			
 
 
-			//echo '<pre>'; print_r($blankTester); echo '</pre>';
+			//echo '<pre>'; print_r($blankTest); echo '</pre>';
 			//echo '<pre>'; print_r($keys); echo '</pre>';
 			//echo '<pre>'; print_r($titleArray); echo '</pre>';
+			//echo '<pre>'; print_r($array[0]); echo '</pre>';
 
 			return [$array, $titleArray];
 		}
