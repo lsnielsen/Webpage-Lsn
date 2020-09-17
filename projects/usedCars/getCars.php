@@ -1,8 +1,8 @@
 
 <?php	
-	include("array.php");
-	include("getCarFunctions.php");
-	include("extraEquipment.php");
+	include("bilbasen/array.php");
+	include("bilbasen/getCarFunctions.php");
+	include("bilbasen/extraEquipment.php");
 ?>
 
 <script>

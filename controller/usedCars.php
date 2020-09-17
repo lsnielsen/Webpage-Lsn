@@ -49,6 +49,7 @@
 			$dataArr = $tempArr[0];
 			$headerArray = $tempArr[1];
 			
+			sleep(5);
 			
 			$fileName = $dataArr[0][2];
 			

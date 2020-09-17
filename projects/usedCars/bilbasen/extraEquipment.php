@@ -31,7 +31,7 @@
 		equip = data.search("Arml&#230;n");	
 		if(equip != -1) { armRelax = "Ja"; } else { armRelax = "-"; }
 		
-		equip = data.search("Auto. n&oslash;dbremse");	
+		equip = data.search("Auto. n&#248;dbremse");	
 		if(equip != -1) { autoEmergencyBreak = "Ja"; } else { autoEmergencyBreak = "-"; }
 		
 		equip = data.search("Auto. parkering");	
@@ -67,19 +67,20 @@
 		equip = data.search("Brugtbilsattest");	
 		if(equip != -1) { usedCarAttest = "Ja"; } else { usedCarAttest = "-"; }
 		
-		equip = data.search("Centrall&aring;s fjernb.");	
-		if(equip != -1) { centralLockRemote = "Ja"; } else { centralLockRemote = "-"; }
+		equip = data.search("Centrall&#229;s fjernb.");	
+		equipII = data.search("Fjernbetjent Centrall&#229;s");	
+		if(equip != -1 || equipII != -1) { centralLockRemote = "Ja"; } else { centralLockRemote = "-"; }
 		
 		equip = data.search("DAB radio");	
 		if(equip != -1) { dabRadio = "Ja"; } else { dabRadio = "-"; }
 		
-		equip = data.search("D&#230;ktryksm&aring;ler");	
+		equip = data.search("D&#230;ktryksm&#229;ler");	
 		if(equip != -1) { wheelAirMeassure = "Ja"; } else { wheelAirMeassure = "-"; }
 		
 		equip = data.search("Digitalt cockpit");	
 		if(equip != -1) { cockpitDigital = "Ja"; } else { cockpitDigital = "-"; }
 		
-		equip = data.search("El indst. f&oslash;rers&#230;de m. memory");	
+		equip = data.search("El indst. f&#248;rers&#230;de m. memory");	
 		if(equip != -1) { frontseatElInstall = "Ja"; } else { frontseatElInstall = "-"; }
 		
 		equip = data.search("Elektrisk kabinevarmer");	
@@ -127,7 +128,7 @@
 		equip = data.search("Klimaanl&#230;g, 4-zonet");	
 		if(equip != -1) { climateCenterFourZone = "Ja"; } else { climateCenterFourZone = "-"; }
 		
-		equip = data.search("K&oslash;recomputer");	
+		equip = data.search("K&#248;recomputer");	
 		if(equip != -1) { drivingComputer = "Ja"; } else { drivingComputer = "-"; }
 		
 		equip = data.search("Kurvelys");	
@@ -136,7 +137,7 @@
 		equip = data.search("L&#230;derrat");	
 		if(equip != -1) { leatherWheel = "Ja"; } else { leatherWheel = "-"; }
 		
-		equip = data.search("LED K&oslash;relys");	
+		equip = data.search("LED K&#248;relys");	
 		if(equip != -1) { ledDrivingLight = "Ja"; } else { ledDrivingLight = "-"; }
 		
 		equip = data.search("Lygtevasker");	
@@ -148,7 +149,7 @@
 		equip = data.search("Navigation");	
 		if(equip != -1) { navigation = "Ja"; } else { navigation = "-"; }
 		
-		equip = data.search("N&oslash;glefri betjening");	
+		equip = data.search("N&#248;glefri betjening");	
 		if(equip != -1) { keylessOperation = "Ja"; } else { keylessOperation = "-"; }
 		
 		equip = data.search("Panoramatag");	
@@ -205,13 +206,13 @@
 		equip = data.search("Svingbart tr&#230;k (manuelt)");	
 		if(equip != -1) { pivotableTractionManual = "Ja"; } else { pivotableTractionManual = "-"; }
 		
-		equip = data.search("T&aring;gelygter");	
+		equip = data.search("T&#229;gelygter");	
 		if(equip != -1) { fogLights = "Ja"; } else { fogLights = "-"; }
 		
 		equip = data.search("Tagr&#230;ling");	
 		if(equip != -1) { roofRails = "Ja"; } else { roofRails = "-"; }
 		
-		equip = data.search("Tr&aring;dl&oslash;s mobilopladning");	
+		equip = data.search("Tr&#229;dl&#248;s mobilopladning");	
 		if(equip != -1) { wirelessMobileRecharge = "Ja"; } else { wirelessMobileRecharge = "-"; }
 		
 		equip = data.search("Tr&#230;thedsregistrering");	
