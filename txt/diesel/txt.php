@@ -61,6 +61,11 @@
 			'carModel' => 'Peugeot 206+',
 			'backButton' => 'Tilbage',
 		],
+		'statButtons' =>
+		[
+			'statistic' => 'Klik her, for at se en mere avanceret statistik',
+			'theCar' => 'Klik her, for at se hvilken bil det handler om',
+		],
 		'advanced' =>
 		[
 			
