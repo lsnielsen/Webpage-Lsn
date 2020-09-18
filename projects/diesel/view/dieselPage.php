@@ -1,16 +1,15 @@
 <html>  
-	<?php $txtFile = include("../txt/diesel.php"); ?>
+	<?php $txtFile = include("../txt/diesel/frontpage.php"); ?>
     <head>  
         <title>  
-			Diesel
+			<?php echo $txtFile['tabHeader']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/diesel.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/popup.css" type="text/css">
 	<body>
 		<h1>
-			<?php echo $txtFile['forside']; ?>
-			Diesel page
+			<?php echo $txtFile['header']; ?>
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">  
 			<fieldset style="background-color: #b3ecff">
