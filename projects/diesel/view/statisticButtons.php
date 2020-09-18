@@ -8,14 +8,14 @@
 						value="advancedDieselPage"
 						name="dieselButton"						
 						style="margin-left: auto;">
-					<?php $txtFile['statButtons']['statistic']; ?>
+					<?php echo $txtFile['statButtons']['statistic']; ?>
 				</button>
 				<button class="dieselButton" 
 						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="carDieselPage"
 						name="dieselButton"						
 						style="margin-left: 100px; position: relative;">
-					<?php $txtFile['statButtons']['theCar']; ?>
+					<?php echo $txtFile['statButtons']['theCar']; ?>
 				</button>	
 <?php
 	} else {
@@ -25,14 +25,14 @@
 						value="advancedDieselPage"
 						name="dieselButton"						
 						style="margin-left: 200px; position: relative; top: 10px;">
-					<?php $txtFile['statButtons']['statistic']; ?>
+					<?php echo $txtFile['statButtons']['statistic']; ?>
 				</button>
 				<button class="dieselButton" 
 						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="carDieselPage"
 						name="dieselButton"						
 						style="margin-left: 90px; position: relative; top: 10px;">
-					<?php $txtFile['statButtons']['theCar']; ?>
+					<?php echo $txtFile['statButtons']['theCar']; ?>
 				</button>
 <?php
 	}
