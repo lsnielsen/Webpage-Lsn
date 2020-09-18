@@ -15,35 +15,30 @@
 			modelStart = firstSubstring.search("<span>");
 			modelEnd = firstSubstring.search("</span>");
 			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
-			singleCarArray.push(secondSubstring);
+			theCarModel = secondSubstring;
 			
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
 			thirdSubstring = thirdSubstring.replace(",", ".");
-			singleCarArray.push(thirdSubstring);
-			//console.log("Model: " + secondSubstring + ", engine: " + thirdSubstring);
+			theEngine = thirdSubstring;
+			//console.log("Engine: " + thirdSubstring);
 		} else {
-			singleCarArray.push("-");
-			singleCarArray.push("-");
+		    theCarModel = "-";
+			theEngine = "-";
 		}
 	}
 
 	function setPriceAttributes(data, singleCarArray)
 	{				
-		priceEnd = data.search("kr</td>");
-		//console.log("price start, end: " + priceEnd);
-		if (priceEnd != -1) {
-			priceString = data.substring(priceEnd-20, priceEnd);
-			for(i=0; i<10; i++) {
-				priceString = priceString.replace(/\n/, "");
-			}
-			for(i=0; i<60; i++) {
-				priceString = priceString.replace(" ", "");
-			}
-			priceString = priceString.replace(/[a-z">]+/, "");
-			//console.log(priceString);
-			singleCarArray.push(priceString);
+		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
+		if (priceStart != -1) {
+			priceString = data.substring(priceStart+20, priceStart+50);
+			priceEnd = priceString.search("kr.</span>");
+			//console.log("price start, end: " + priceStart + ", " + priceEnd);
+			priceString = priceString.substring(0, priceEnd);
+			//console.log("price: " + priceString + "\n");
+			thePrice = priceString;
 		} else {
-			singleCarArray.push("-");
+			thePrice = "-";
 		}
 	}
 	
@@ -64,9 +59,9 @@
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			//console.log(colorString);
-			singleCarArray.push(colorString);
+			theColor = colorString;
 		} else {
-			singleCarArray.push("-");
+			theColor = "-";
 		}
 	}
 
@@ -87,9 +82,9 @@
 				sightString = sightString.replace(" ", "");
 			}
 			//console.log(sightString);
-			singleCarArray.push(sightString);
+			lastDateOfSight = sightString;
 		} else {
-			singleCarArray.push("-");
+			lastDateOfSight = "-";
 		}
 	}
 	
@@ -115,7 +110,9 @@
 				modelString = modelString.replace(" ", "");
 			}
 			//console.log("Model: " + modelString);
-			singleCarArray.push(modelString);
+			yearOfTheModel = modelString;
+		} else {
+			yearOfTheModel = "-";
 		}
 	}
 	
@@ -137,7 +134,9 @@
 				prodString = prodString.replace(" ", "");
 			}
 			//console.log("production: " + prodString);
-			singleCarArray.push(prodString);
+			theProductionDate = prodString;
+		} else {
+			theProductionDate = "-";
 		}
 	}
 	
@@ -160,188 +159,228 @@
 				regString = regString.replace(" ", "");
 			}
 			//console.log("registration: " + regString);
-			singleCarArray.push(regString);
+			theRegistrationDate = regString;
+		} else {
+			theRegistrationDate = "-";
 		}
 	}
 		
 	function setPrimerAttributes(data, singleCarArray)
 	{
-
 		hkStart = data.search("<td style=\"color: #888;\">HK/Nm</td>");
 		hkEnd = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
 		if (hkStart != -1 && hkEnd != -1) {
-			removePrimerAttributeSpace(hkStart, hkEnd, data, singleCarArray);
+			horsePowerAndNm = removePrimerAttributeSpace(hkStart, hkEnd, data);
 		} else {
-			singleCarArray.push("-");
+			horsePowerAndNm = "-";
 		}
 
-		colorStart = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
-		colorEnd = data.search("<td style=\"color: #888;\">Tophastighed</td>");
-		if (colorStart != -1 && colorEnd != -1) {
-			removePrimerAttributeSpace(colorStart, colorEnd, data, singleCarArray);
+		zeroToHundredStart = data.search(/[0-9]+,[0-9]* sek/);
+		if (zeroToHundredStart != -1) {
+			fromZeroToHundred = data.substring(zeroToHundredStart, zeroToHundredStart+8);
+			fromZeroToHundred = fromZeroToHundred.replace("<", "");
+			fromZeroToHundred = fromZeroToHundred.replace(",", ".");
+			//console.log("0-100 km/t: " + fromZeroToHundred);
 		} else {
-			singleCarArray.push("-");
+			fromZeroToHundred = "-";
 		}
 
 		topSpeedStart = data.search("<td style=\"color: #888;\">Tophastighed</td>");
 		topSpeedEnd = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
 		if (topSpeedStart != -1 && topSpeedEnd != -1) {
-			removePrimerAttributeSpace(topSpeedStart, topSpeedEnd, data, singleCarArray);
+			theTopSpeed = removePrimerAttributeSpace(topSpeedStart, topSpeedEnd, data);
+			//console.log("topspeed: " + theTopSpeed);
 		} else {
-			singleCarArray.push("-");
+			theTopSpeed = "-";
 		}
 
 		propellantStart = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
 		propellantEnd = data.search("<td style=\"color: #888;\">Forbrug</td>");
 		if (propellantStart != -1 && propellantEnd != -1) {
-			removePrimerAttributeSpace(propellantStart, propellantEnd, data, singleCarArray);
+			energyToUse = removePrimerAttributeSpace(propellantStart, propellantEnd, data);
+			energyToUse = energyToUse.replace(",", ".");
 		} else {
-			singleCarArray.push("-");
+			energyToUse = "-";
 		}
 
-		usageStart = data.search("<td style=\"color: #888;\">Forbrug</td>");
-		usageEnd = data.search(/<td style="color: #888;">[a-zA-Z\(\) ]+<\/td>/);
-		console.log("usageStart, usageEnd: " + usageStart + ", " + usageEnd);
-		if (usageStart != -1 && usageEnd != -1) {
-			removePrimerAttributeSpace(usageStart, usageEnd, data, singleCarArray);
+		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
+		if (usageStart != -1) {
+			energyUsage = data.substring(usageStart, usageStart+9);
+			energyUsage = energyUsage.replace(",", ".");
+			//console.log("Energi forbrug: " + energyUsage);
 		} else {
-			singleCarArray.push("-");
+			energyUsage = "-";
 		}
 
 		euroStart = data.search("<td style=\"color: #888;\">Euronorm</td>");
 		euroEnd = data.search("<td style=\"color: #888;\">Bredde</td>");
 		if (euroStart != -1 && euroEnd != -1) {
-			removePrimerAttributeSpace(euroStart, euroEnd, data, singleCarArray);
+			theEuronorm = removePrimerAttributeSpace(euroStart, euroEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theEuronorm = "-";
 		}
 
 		widthStart = data.search("<td style=\"color: #888;\">Bredde</td>");
 		widthEnd = data.search("<td style=\"color: #888;\">Længde</td>");
 		if (widthStart != -1 && widthEnd != -1) {
-			removePrimerAttributeSpace(widthStart, widthEnd, data, singleCarArray);
+			theWidth = removePrimerAttributeSpace(widthStart, widthEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theWidth = "-";
 		}
 
 		lengthStart = data.search("<td style=\"color: #888;\">Længde</td>");
 		lengthEnd = data.search("<td style=\"color: #888;\">Højde</td>");
 		if (lengthStart != -1 && lengthEnd != -1) {
-			removePrimerAttributeSpace(lengthStart, lengthEnd, data, singleCarArray);
+			theLength = removePrimerAttributeSpace(lengthStart, lengthEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theLength = "-";
 		}
 
 		heightStart = data.search("<td style=\"color: #888;\">Højde</td>");
 		heightEnd = data.search("<td style=\"color: #888;\">Lasteevne</td>");
 		if (heightStart != -1 && heightEnd != -1) {
-			removePrimerAttributeSpace(heightStart, heightEnd, data, singleCarArray);
+			theHeight = removePrimerAttributeSpace(heightStart, heightEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theHeight = "-";
 		}
 
 		loadStart = data.search("<td style=\"color: #888;\">Lasteevne</td>");
 		loadEnd = data.search("<td style=\"color: #888;\">Trækhjul</td>");
 		if (loadStart != -1 && loadEnd != -1) {
-			removePrimerAttributeSpace(loadStart, loadEnd, data, singleCarArray);
+			loadAbility = removePrimerAttributeSpace(loadStart, loadEnd, data);
 		} else {
-			singleCarArray.push("-");
+			loadAbility = "-";
 		}
 
 		tractionStart = data.search("<td style=\"color: #888;\">Trækhjul</td>");
 		tractionEnd = data.search("<td style=\"color: #888;\">Cylindre</td>");
 		if (tractionStart != -1 && tractionEnd != -1) {
-			removePrimerAttributeSpace(tractionStart, tractionEnd, data, singleCarArray);
+			drivingWheels = removePrimerAttributeSpace(tractionStart, tractionEnd, data);
 		} else {
-			singleCarArray.push("-");
+			drivingWheels = "-";
 		}
 
 		cylStart = data.search("<td style=\"color: #888;\">Cylindre</td>");
 		cylEnd = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
 		if (cylStart != -1 && cylEnd != -1) {
-			removePrimerAttributeSpace(cylStart, cylEnd, data, singleCarArray);
+			theCylinders = removePrimerAttributeSpace(cylStart, cylEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theCylinders = "-";
 		}
 
 		absStart = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
 		absEnd = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
 		if (absStart != -1 && absEnd != -1) {
-			removePrimerAttributeSpace(absStart, absEnd, data, singleCarArray);
+			absBreaks = removePrimerAttributeSpace(absStart, absEnd, data);
 		} else {
-			singleCarArray.push("-");
+			absBreaks = "-";
 		}
 
 		maxloadStart = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
 		maxloadEnd = data.search("<td style=\"color: #888;\">Airbags</td>");
 		if (maxloadStart != -1 && maxloadEnd != -1) {
-			removePrimerAttributeSpace(maxloadStart, maxloadEnd, data, singleCarArray);
+			theMaxLoad = removePrimerAttributeSpace(maxloadStart, maxloadEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theMaxLoad = "-";
 		}
 
 		airbagStart = data.search("<td style=\"color: #888;\">Airbags</td>");
 		airbagEnd = data.search("<td style=\"color: #888;\">ESP</td>");
 		if (airbagStart != -1 && airbagEnd != -1) {
-			removePrimerAttributeSpace(airbagStart, airbagEnd, data, singleCarArray);
+			numberOfAirbags = removePrimerAttributeSpace(airbagStart, airbagEnd, data);
 		} else {
-			singleCarArray.push("-");
+			numberOfAirbags = "-";
 		}
 
 		espStart = data.search("<td style=\"color: #888;\">ESP</td>");
 		espEnd = data.search("<td style=\"color: #888;\">Tank</td>");
 		if (espStart != -1 && espEnd != -1) {
-			removePrimerAttributeSpace(espStart, espEnd, data, singleCarArray);
+			doesEsp = removePrimerAttributeSpace(espStart, espEnd, data);
 		} else {
-			singleCarArray.push("-");
+			doesEsp = "-";
 		}
 
 		tankStart = data.search("<td style=\"color: #888;\">Tank</td>");
 		tankEnd = data.search("<td style=\"color: #888;\">Gear</td>");
 		if (tankStart != -1 && tankEnd != -1) {
-			removePrimerAttributeSpace(tankStart, tankEnd, data, singleCarArray);
+			theGasTank = removePrimerAttributeSpace(tankStart, tankEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theGasTank = "-";
 		}
 
 		gearStart = data.search("<td style=\"color: #888;\">Gear</td>");
 		gearEnd = data.search("<td style=\"color: #888;\">Geartype</td>");
 		if (gearStart != -1 && gearEnd != -1) {
-			removePrimerAttributeSpace(gearStart, gearEnd, data, singleCarArray);
+			theGears = removePrimerAttributeSpace(gearStart, gearEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theGears = "-";
 		}
 
 		geartypeStart = data.search("<td style=\"color: #888;\">Geartype</td>");
 		geartypeEnd = data.search("<td style=\"color: #888;\">Vægt</td>");
 		if (geartypeStart != -1 && geartypeEnd != -1) {
-			removePrimerAttributeSpace(geartypeStart, geartypeEnd, data, singleCarArray);
+			theGearType = removePrimerAttributeSpace(geartypeStart, geartypeEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theGearType = "-";
 		}
 
 		weightStart = data.search("<td style=\"color: #888;\">Vægt</td>");
 		weightEnd = data.search("<td style=\"color: #888;\">Døre</td>");
 		if (weightStart != -1 && weightEnd != -1) {
-			removePrimerAttributeSpace(weightStart, weightEnd, data, singleCarArray);
+			theWeight = removePrimerAttributeSpace(weightStart, weightEnd, data);
 		} else {
-			singleCarArray.push("-");
+			theWeight = "-";
 		}
 
-		doorStart = data.search("<td style=\"color: #888;\">Døre</td>");
-		doorEnd = data.search("<p>* Der tages forbehold for evt. fejl</p>");
-		if (doorStart != -1 && doorEnd != -1) {
-			removePrimerAttributeSpace(doorStart, doorEnd, data, singleCarArray);
+		doorStart = data.search(/<td style="color: #888;">Døre<\/td>/);
+		doorTxt = data.substring(doorStart+101 , doorStart+102);
+		//console.log("doors; start: " + doorStart + ", \n doorTxt: " + doorTxt);
+		if (doorStart != -1) {
+			countOfDoors = doorTxt;
 		} else {
-			singleCarArray.push("-");
+			countOfDoors = "-";
 		}
+
+		getContactDetails(data);
 
 		
 	}
+	
+	function getContactDetails(data)
+	{
+		
+		cityStart = data.search(/<div>\d{4} [A-Za-zæøå ]+<\/div>/);
+		cityTxt = data.substring(cityStart+5 , cityStart+40);
+		cityEnd = cityTxt.search(/<\/div>/);
+		cityTxt = cityTxt.substring(0, cityEnd);
+		//console.log(" \n city; start: " + cityStart + ", \n cityTxt: " + cityTxt);
+		
+		adressStart = data.search(/<div>[a-zA-Z- æøå]+ [0-9a-zA-Z ]+<\/div>/);
+		adressTxt = data.substring(adressStart+5 , adressStart+40);
+		adressEnd = adressTxt.search(/<\/div>/);
+		adressTxt = adressTxt.substring(0, adressEnd);
+		//console.log("adress; start: " + adressStart + ", \n adressTxt: " + adressTxt);
+		
+		phoneStart = data.search(/<a href="tel:\d{8}">\d{8}<\/a>/);
+		phoneTxt = data.substring(phoneStart+23 , phoneStart+40);
+		phoneEnd = phoneTxt.search(/<\/a>/);
+		phoneTxt = phoneTxt.substring(0, phoneEnd);
+		//console.log(" phone; start: " + phoneStart + ", \n phoneTxt: " + phoneTxt + " \n");
+		
+		if(cityStart == -1) {
+			contactInfo = "-";
+		} else {
+			contactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
+			//console.log("Kontakt: " + contactInfo);
+		}
+		
+	}
+	
+	
 
 
 
-	function removePrimerAttributeSpace(start, end, data, singleCarArray)
+	function removePrimerAttributeSpace(start, end, data)
 	{
 		var value = data.substring(start, end);
 		value = value.replace("<td style=\"color: #888;\">", "");
@@ -360,6 +399,9 @@
 		for(i=0; i<20; i++) {
 			value = value.replace(" ", "");
 		}
+		for(i=0; i<50; i++) {
+			value = value.replace("   ", "");
+		}
 		for(i=0; i<20; i++) {
 			value = value.replace(/\n/, "");
 		}
@@ -370,8 +412,7 @@
 		value = value.replace("</table>", "");
 
 		value = value.replace(",", ".");
-		//console.log( " \n \n value: \n " + value);
-		singleCarArray.push(value);
+		return value;
 	}
 
 
