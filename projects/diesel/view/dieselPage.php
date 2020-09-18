@@ -1,4 +1,5 @@
 <html>  
+	<?php $txtFile = include("../txt/diesel.php"); ?>
     <head>  
         <title>  
 			Diesel
@@ -6,7 +7,6 @@
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/diesel.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/popup.css" type="text/css">
-	<?php $txtFile = include("../txt/diesel.php"); ?>
 	<body>
 		<h1>
 			<?php echo $txtFile['forside']; ?>
