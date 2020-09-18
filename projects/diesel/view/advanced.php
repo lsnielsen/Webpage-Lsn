@@ -1,5 +1,6 @@
 <?php
 	include "../projects/diesel/helpFunctions/advancedHelper.php";
+	$txtFile = include("../txt/diesel/txt.php"); 
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -11,7 +12,7 @@
 <html>  
     <head>  
         <title>  
-            Advanced
+			<?php echo $txtFile['advanced']['tab']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
@@ -19,7 +20,7 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			Avanceret statistik for diesel forbrug
+			<?php echo $txtFile['advanced']['header']; ?>
 		</h1>  
 	
 		<?php include "dataTable.php"; ?>

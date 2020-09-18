@@ -68,7 +68,8 @@
 		],
 		'advanced' =>
 		[
-			
+			'tab' => 'Advanced',
+			'header' => 'Avanceret statistik for diesel forbrug',
 		]
 
 
