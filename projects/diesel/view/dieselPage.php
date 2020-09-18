@@ -1,8 +1,8 @@
 <html>  
-	<?php $txtFile = include("../txt/diesel/txt.php"); ?>
+	<?php $txtFile = include("../txt/global.php");  ?>
     <head>  
         <title>  
-			<?php echo $txtFile['frontpage']['tabHeader']; ?>
+			<?php echo $txtFile['general']['tabHeader']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/diesel.css" type="text/css">

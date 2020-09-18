@@ -1,6 +1,6 @@
 
 <?php
-	$txtFile = include("../txt/diesel/txt.php"); 
+	$txtFile = include("../txt/global.php"); 
 ?>
 	<center>
 		<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">

@@ -1,4 +1,5 @@
-	<?php $txtFile = include("../txt/diesel/txt.php"); ?>
+	
+	<?php $txtFile = include("../txt/global.php");  ?>
 		<table class="advancedTable statisticTable">
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">
