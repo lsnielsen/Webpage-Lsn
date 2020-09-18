@@ -99,7 +99,7 @@
 		unset($_POST['km']);
 		unset($_POST['liter']);
 		unset($_POST['kr']);
-		include ("../projects/diesel/view/dieselPage.html");
+		include ("../projects/diesel/view/dieselPage.php");
 	}
 		
 ?>

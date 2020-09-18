@@ -6,8 +6,10 @@
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/diesel.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/popup.css" type="text/css">
+	<?php $txtFile = include("../txt/diesel.php"); ?>
 	<body>
 		<h1>
+			<?php echo $txtFile['forside']; ?>
 			Diesel page
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">  
