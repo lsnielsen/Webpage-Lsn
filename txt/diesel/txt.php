@@ -70,6 +70,18 @@
 		[
 			'tab' => 'Advanced',
 			'header' => 'Avanceret statistik for diesel forbrug',
+		],
+		'advButs' =>
+		[
+			'backButton' => 'Tilbage',
+			'dateStats' => 'Statistik for datoerne',
+			'kmStats' => 'Statistik for km',
+			'literStats' => 'Statistik for liter',
+			'krStats' => 'Statistik for kr',
+			'krlStats' => 'Statistik for kr/l',
+			'kmlStats' => 'Statistik for km/l',
+			'kmKrStats' => 'Statistik for km/kr',
+			'customStats' => 'Lav din egen graf',
 		]
 
 
