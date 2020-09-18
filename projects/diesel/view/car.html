@@ -1,81 +1,82 @@
 <html>  
+	<?php $txtFile = include("../txt/diesel/txt.php"); ?>
     <head>  
-        <title>  
-			Diesel
+        <title>  		
+			<?php echo $txtFile['general']['tabHeader']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
 	<body style="background-color: #ff99ff">  
 		<h1>
 			<center>
-				Min bil
+				<?php echo $txtFile['carPage']['header']; ?>
 			</center>
 		</h1>   
 		<div style="margin-left: 100px; margin-top: 100px;">
 			<div style="font-size: 25px; font-weight: bold;">
-				Attributer for bilen:
+				<?php echo $txtFile['carPage']['carAttributes']; ?>
 			</div>
 			<ul style="font-size: 20px;">
 				<li> 
 					<div style="font-weight: bold; display: inline-block;"> 
-						Art: 
+						<?php echo $txtFile['carPage']['type']; ?>
 					</div>
-					Personbil 
+					<?php echo $txtFile['carPage']['carType']; ?>
 				</li>
 				<li>
 					<div style="font-weight: bold; display: inline-block;"> 
-						Antal siddepladser inkl. fører: 
+						<?php echo $txtFile['carPage']['seatNumber']; ?>
 					</div>
-					1/5 
+					<?php echo $txtFile['carPage']['seatValue']; ?>
 				</li>
 				<li> 
 					<div style="font-weight: bold; display: inline-block;"> 
-						Antal ståpladser: 
+						<?php echo $txtFile['carPage']['standNumber']; ?>
 					</div>
-					0 
+					<?php echo $txtFile['carPage']['standValue']; ?>
 				</li>
 				<li>
 					<div style="font-weight: bold; display: inline-block;"> 
-						Anvendelse: 
+						<?php echo $txtFile['carPage']['useIndex']; ?>
 					</div>
-					Privat personkørsel 
+					<?php echo $txtFile['carPage']['useValue']; ?>
 				</li>
 				<li>
 					<div style="font-weight: bold; display: inline-block;"> 
-						Drivkraft: 
+						<?php echo $txtFile['carPage']['driveForce']; ?>
 					</div>
-					Diesel 
+					<?php echo $txtFile['carPage']['diesel']; ?>
 				</li>
 				<li>
 					<div style="font-weight: bold; display: inline-block;"> 
-						Køreklar vægt:  
+						<?php echo $txtFile['carPage']['weightTxt']; ?>
 					</div>
-					1102kg 
+					<?php echo $txtFile['carPage']['weightValue']; ?>
 				</li>
 				<li> 
 					<div style="font-weight: bold; display: inline-block;"> 
-						Brændstofforbrug: 
+						<?php echo $txtFile['carPage']['gasTxt']; ?>
 					</div>
-					 25 km/l 
+					<?php echo $txtFile['carPage']['gasValue']; ?>
 				 </li>
 				<li> 
 					<div style="font-weight: bold; display: inline-block;"> 
-						Antal akser: 
+						<?php echo $txtFile['carPage']['axesNumber']; ?>
 					</div>
-					 2 
+					<?php echo $txtFile['carPage']['axesValue']; ?>
 				 </li>
 				<li>
 					<div style="font-weight: bold; display: inline-block;"> 
-						Største effekt (kW) :
+						<?php echo $txtFile['carPage']['kwTxt']; ?>
 					</div>
-					 50,0
+					<?php echo $txtFile['carPage']['kwValue']; ?>
 				 </li>
 			</ul>
 		</div>
 		<center style="margin-top: -370px">
 			<img src="../projects/diesel/images/car.jpg" alt="Peugeot 206+" style="width:700px;height:600px;">
 				<div style="margin-top: 10px; font-size: 25px;">
-					Peugeot 206+
+					<?php echo $txtFile['carPage']['carModel']; ?>
 				</div>
 			</img>
 			<form>
@@ -84,7 +85,7 @@
 						value="dieselPage"
 						name="dieselButton"						
 						style="margin-left: auto; width: 50%; margin-top: 50px; border-radius: 20px">
-					Tilbage
+					<?php echo $txtFile['carPage']['backButton']; ?>
 				</button>
 			</form>
 		</center>

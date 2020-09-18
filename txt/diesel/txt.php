@@ -3,12 +3,15 @@
 
 	return
 	[
-		'frontpage' => 
+		'general' => 
 		[
 			'tabHeader' => 'Diesel',
+			'date' => 'Dato',
+		],
+		'frontpage' => 
+		[
 			'header' => 'Diesel page',
 			'infoHeader' => 'Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre',
-			'date' => 'Dato',
 			'km' => 'Antal kilometer',
 			'liter' => 'Liter',
 			'kr' => 'Kroner',
@@ -32,7 +35,31 @@
 			'kr/km' => 'Kr/Km',
 			'l/km' => 'L/Km',
 			'l/kr' => 'L/Kr',
-			'date' => 'Dato',
+		],
+		'carPage' =>
+		[
+			'header' => 'Min bil',
+			'carAttributes' => 'Attributer for bilen:',
+			'type' => 'Art',
+			'carType' => 'Personbil',
+			'seatNumber' => 'Antal siddepladser inkl. fører: ',
+			'seatValue' => '1/5',
+			'standNumber' => 'Antal ståpladser:',
+			'standValue' => '0',
+			'useIndex' => 'Anvendelse:',
+			'useValue' => 'Privat personkørsel:',
+			'driveForce' => 'Drivkraft:',
+			'diesel' => 'Diesel',
+			'weightTxt' => 'Køreklar vægt:',
+			'weightValue' => '1102kg',
+			'gasTxt' => 'Brændstofforbrug:',
+			'gasValue' => '25 km/l',
+			'axesNumber' => 'Antal akser:',
+			'axesValue' => '2',
+			'kwTxt' => 'Største effekt (kW) :',
+			'kwValue' => '50,0',
+			'carModel' => 'Peugeot 206+',
+			'backButton' => 'Tilbage',
 		],
 		'advanced' =>
 		[

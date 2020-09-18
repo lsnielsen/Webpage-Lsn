@@ -2,7 +2,7 @@
 		<table class="advancedTable statisticTable">
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">
-								<?php echo $txtFile['dataTable']['date']; ?>
+								<?php echo $txtFile['general']['date']; ?>
 							</th>
 							<th class="dieselHeader headerSortDown kmColumn">
 								<?php echo $txtFile['dataTable']['km']; ?>

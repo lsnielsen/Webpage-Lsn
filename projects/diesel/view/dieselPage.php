@@ -19,7 +19,7 @@
 				<div style="margin-top: 30px;">
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
-							<?php echo $txtFile['frontpage']['date']; ?>
+							<?php echo $txtFile['general']['date']; ?>
 							<br>
 						</label>
 						<input class="dieselInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  
@@ -64,7 +64,7 @@
 					<table class="dieselTable">
 						<tr>
 							<th class="dieselHeader">
-								<?php echo $txtFile['frontpage']['date']; ?>
+								<?php echo $txtFile['general']['date']; ?>
 							</th>
 							<th class="dieselHeader">
 								<?php echo $txtFile['frontpage']['km']; ?>
