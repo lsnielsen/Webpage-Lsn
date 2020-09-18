@@ -1,5 +1,6 @@
 
 <?php
+	$txtFile = include("../txt/diesel/txt.php"); 
 	if (sizeof($graphArray) > 3) {
 ?>
 				<button class="dieselButton" 
@@ -7,7 +8,6 @@
 						value="advancedDieselPage"
 						name="dieselButton"						
 						style="margin-left: auto;">
-					<?php $txtFile = include("../txt/diesel/txt.php"); ?>
 					<?php $txtFile['statButtons']['statistic']; ?>
 				</button>
 				<button class="dieselButton" 
