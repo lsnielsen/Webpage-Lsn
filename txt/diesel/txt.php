@@ -19,6 +19,24 @@
 			'yes' => 'Ja',
 			'no' => 'Nej',
 			'backButton' => 'Tilbage til startside',
+		],
+		'dataTable' =>
+		[
+			'km' => 'Km',
+			'liter' => 'Liter',
+			'kr' => 'Kroner',
+			'kr/l' => 'Kr/L',
+			'km/l' => 'Km/L',
+			'km/kr' => 'Km/Kr',
+			'km/kr' => 'Km/Kr',
+			'kr/km' => 'Kr/Km',
+			'l/km' => 'L/Km',
+			'l/kr' => 'L/Kr',
+			'date' => 'Dato',
+		],
+		'advanced' =>
+		[
+			
 		]
 
 
