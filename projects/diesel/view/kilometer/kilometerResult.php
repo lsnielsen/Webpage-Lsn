@@ -1,7 +1,9 @@
 <table class="advancedTable bottomTable">
 		<tr>
 			<th class="dieselHeader" style="cursor: default"> </th>
-			<th class="dieselHeader" style="cursor: default">Kilometer</th>
+			<th class="dieselHeader" style="cursor: default">
+				<?php echo $txtFile['stats']['km']; ?>
+			</th>
 		</tr>	<tr class="bottomRows">
 		<?php
 			echo "<td class=dieselTableCell> Gennemsnit </td>";
