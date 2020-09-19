@@ -1,4 +1,5 @@
 <table class="advancedTable bottomTable">
+	<?php $txtFile = include("../text/global.php");  ?>
 		<tr>
 			<th class="dieselHeader" style="cursor: default"> </th>
 			<th class="dieselHeader" style="cursor: default">Kroner</th>

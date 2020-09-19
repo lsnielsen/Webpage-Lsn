@@ -1,5 +1,6 @@
 <?php
 	include "../projects/diesel/helpFunctions/advancedHelper.php";
+	$txtFile = include("../text/global.php");
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -11,7 +12,7 @@
 <html>  
     <head>  
         <title>  
-            Kroner/liter
+			<?php echo $txtFile['stats']['krl']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
@@ -19,7 +20,7 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			Avanceret statistik for kroner per liter
+			<?php echo $txtFile['stats']['krlHeader']; ?>
 		</h1>  
 	
 		<?php include "krPerLiterTable.php"; ?>
@@ -35,7 +36,7 @@
 						value="advancedDieselPage"
 						name="dieselButton"
 						style="margin-left: 10px;">
-					Tilbage
+						<?php echo $txtFile['general']['back']; ?>
 				</button>
 			</form>
 		
@@ -50,7 +51,7 @@
 					value="advancedDieselPage"
 					name="dieselButton"
 					style="margin-left: 10px;">
-				Tilbage
+				<?php echo $txtFile['general']['back']; ?>
 			</button>
 		</form>
 	</body>
