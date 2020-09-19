@@ -91,6 +91,7 @@
 					'krHeader' => 'Avanceret statistik for antal kroner',
 					'kmkrHeader' => 'Avanceret statistik for kilometer per kroner',
 					'kmHeader' => 'Avanceret statistik for kørte kilometer',
+					'dateHeader' => 'Avanceret statistik for dato',
 					'stdev' => 'Standard afvigelse',
 					'krl' => 'Kroner/liter',
 					'kr' => 'Kroner/liter',

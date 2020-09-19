@@ -1,6 +1,8 @@
 		<table class="advancedTable statisticTable">
 						<tr>
-							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
+							<th class="dieselHeader headerSortUp dateColumn">
+								<?php echo $txtFile['general']['date']; ?>
+							</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
