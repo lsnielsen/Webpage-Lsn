@@ -12,10 +12,10 @@
 		<h1>
 			Velkommen til hjemmesiden - Lsn
 		</h1>
-		<div id="languages">
+		
 			<img src="/Webpage-Lsn/projects/frontpage/image/dk.png" id="danish">
 			<img src="/Webpage-Lsn/projects/frontpage/image/en.png" id="english">
-		</div>
+		
 		
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
 			<button id="cvButton" type="submit" name="cvButton" value="cvPage"> Mit CV </button>
