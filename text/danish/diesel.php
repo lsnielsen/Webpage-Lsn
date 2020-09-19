@@ -87,10 +87,17 @@
 				[
 					'literHeader' => 'Avanceret statistik for antal liter',
 					'krlHeader' => 'Avanceret statistik for kroner per liter',
+					'kmlHeader' => 'Avanceret statistik for kilometer per liter',
 					'krHeader' => 'Avanceret statistik for antal kroner',
+					'kmkrHeader' => 'Avanceret statistik for kilometer per kroner',
 					'stdev' => 'Standard afvigelse',
 					'krl' => 'Kroner/liter',
 					'kr' => 'Kroner/liter',
+					'kml' => 'Kilometer/liter',
+					'kmKr' => 'Kilometer/kroner',
+					'km' => 'Kilometer',
+					'liter' => 'Liter',
+					'kmKr' => 'Km/Kr',
 				]
 			];
 		?>

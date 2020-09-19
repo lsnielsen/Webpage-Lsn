@@ -1,10 +1,20 @@
 		<table class="advancedTable statisticTable">
 						<tr>
-							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
-							<th class="dieselHeader headerSortDown kronerColumn">Kilometer</th>
-							<th class="dieselHeader headerSortDown literColumn">Liter</th>
-							<th class="dieselHeader headerSortDown krlColumn">Km/l</th>
-							<th class="dieselHeader headerSortDown krlColumn">Km/l st. afvigelse</th>
+							<th class="dieselHeader headerSortUp dateColumn">
+								<?php echo $txtFile['general']['date']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kronerColumn">
+								<?php echo $txtFile['stats']['km']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown literColumn">
+								<?php echo $txtFile['stats']['liter']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown krlColumn">
+								<?php echo $txtFile['stats']['kml']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown krlColumn">
+								<?php echo $txtFile['stats']['stdev']; ?>
+							</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
