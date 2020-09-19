@@ -14,13 +14,8 @@
 			<?php echo $txtFile['general']['tabHeader']; ?>
 		</h1>
 		<div id="languages">
-			<div id="danish">
-				Klik her for dansk
-			</div>
-			<div id="english">
-				Klik her for engelsk
-			</div>
-		
+			<img src="/Webpage-Lsn/projects/frontpage/image/dk.png" id="danish">
+			<img src="/Webpage-Lsn/projects/frontpage/image/en.png" id="english">
 		</div>
 		
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
@@ -70,15 +65,11 @@
 
 
 	$("#danish").click(function() {
-		globalLanguageVariable = "danish";
-		console.log("frontpage: " + globalLanguageVariable);
-		document.cookie = "language " + " = " + globalLanguageVariable;
+		document.cookie = "language = danish";
 	});
 	
 	$("#english").click(function() {
-		globalLanguageVariable = "english";
-		console.log("frontpage: " + globalLanguageVariable);
-		document.cookie = "language " + " = " + globalLanguageVariable;
+		document.cookie = "language = english";
 	});
 
 
