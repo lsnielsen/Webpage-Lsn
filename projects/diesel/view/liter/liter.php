@@ -12,7 +12,7 @@
 <html>  
     <head>  
         <title>  
-			<?php $txtFile['dataTable']['liter']; ?>
+			<?php echo $txtFile['dataTable']['liter']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			<?php $txtFile['stats']['literHeader']; ?>			
+			<?php echo $txtFile['stats']['literHeader']; ?>			
 		</h1>  
 	
 		<?php include "literTable.php"; ?>
@@ -36,7 +36,7 @@
 						value="advancedDieselPage"
 						name="dieselButton"
 						style="margin-left: 10px;">
-					<?php $txtFile['general']['back']; ?>			
+					<?php echo $txtFile['general']['back']; ?>			
 				</button>
 			</form>
 		<center>
@@ -51,7 +51,7 @@
 					value="advancedDieselPage"
 					name="dieselButton"
 					style="margin-left: 10px;">
-				<?php $txtFile['general']['back']; ?>			
+				<?php echo $txtFile['general']['back']; ?>			
 			</button>
 		</form>
 	</body>

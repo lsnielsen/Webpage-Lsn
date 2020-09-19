@@ -1,9 +1,9 @@
 <table class="advancedTable bottomTable">
-		<?php txtFile = include("../text/global.php"); ?>
+		<?php $txtFile = include("../text/global.php"); ?>
 		<tr>
 			<th class="dieselHeader" style="cursor: default"> </th>
 			<th class="dieselHeader" style="cursor: default">									
-				<?php $txtFile['dataTable']['liter']; ?>
+				<?php echo $txtFile['dataTable']['liter']; ?>
 			</th>
 		</tr>	<tr class="bottomRows">
 		<?php

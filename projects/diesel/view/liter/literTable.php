@@ -1,14 +1,14 @@
 		<table class="advancedTable statisticTable">
-			<?php txtFile = include("../text/global.php"); ?>
+			<?php $txtFile = include("../text/global.php"); ?>
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">
-								<?php $txtFile['general']['date']; ?>
+								<?php echo $txtFile['general']['date']; ?>
 							</th>
 							<th class="dieselHeader headerSortDown kronerColumn">									
-								<?php $txtFile['dataTable']['liter']; ?>
+								<?php echo $txtFile['dataTable']['liter']; ?>
 							</th>
 							<th class="dieselHeader headerSortDown kronerColumn">
-								<?php $txtFile['stats']['stdev']; ?>
+								<?php echo $txtFile['stats']['stdev']; ?>
 							</th>
 						</tr>
 						<?php
