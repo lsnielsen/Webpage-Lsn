@@ -1,7 +1,10 @@
 <table class="advancedTable bottomTable">
+		<?php txtFile = include("../text/global.php"); ?>
 		<tr>
 			<th class="dieselHeader" style="cursor: default"> </th>
-			<th class="dieselHeader" style="cursor: default">Liter</th>
+			<th class="dieselHeader" style="cursor: default">									
+				<?php $txtFile['dataTable']['liter']; ?>
+			</th>
 		</tr>	<tr class="bottomRows">
 		<?php
 			echo "<td class=dieselTableCell> Gennemsnit </td>";

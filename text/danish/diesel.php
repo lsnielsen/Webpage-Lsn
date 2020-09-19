@@ -6,6 +6,7 @@
 				[
 					'tabHeader' => 'Diesel',
 					'date' => 'Dato',
+					'back' => 'Tilbage',
 				],
 				'frontpage' => 
 				[
@@ -81,6 +82,11 @@
 					'kmlStats' => 'Statistik for km/l',
 					'kmKrStats' => 'Statistik for km/kr',
 					'customStats' => 'Lav din egen graf',
+				],
+				'stats' =>
+				[
+					'literHeader' => 'Avanceret statistik for antal liter',
+					'stdev' => 'Standard afvigelse'
 				]
 			];
 		?>
