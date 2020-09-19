@@ -87,8 +87,10 @@
 				[
 					'literHeader' => 'Avanceret statistik for antal liter',
 					'krlHeader' => 'Avanceret statistik for kroner per liter',
+					'krHeader' => 'Avanceret statistik for antal kroner',
 					'stdev' => 'Standard afvigelse',
 					'krl' => 'Kroner/liter',
+					'kr' => 'Kroner/liter',
 				]
 			];
 		?>
