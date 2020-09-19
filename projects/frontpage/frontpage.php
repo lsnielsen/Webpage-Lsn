@@ -11,7 +11,6 @@
 	<body>
 		<h1>
 			Velkommen til hjemmesiden - Lsn
-			<?php echo $txtFile['general']['tabHeader']; ?>
 		</h1>
 		<div id="languages">
 			<img src="/Webpage-Lsn/projects/frontpage/image/dk.png" id="danish">
