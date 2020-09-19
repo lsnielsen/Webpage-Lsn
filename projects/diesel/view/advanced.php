@@ -1,6 +1,6 @@
 <?php
 	include "../projects/diesel/helpFunctions/advancedHelper.php";
-	$txtFile = include("../txt/global.php"); 
+	$txtFile = include("../text/global.php"); 
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  

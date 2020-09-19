@@ -1,17 +1,17 @@
 
 <html lang="da">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<?php $txtFile = include("../text/global.php");  ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<head>
 		<title>
 			LSN
 		</title>
-		<link rel="stylesheet" href="/../Webpage-Lsn/projects/frontpage/css/frontpage.css" type="text/css">
-		<link href="../text/global.php">
-	
+		<link rel="stylesheet" href="/../Webpage-Lsn/projects/frontpage/css/frontpage.css" type="text/css">	
 	</head>
 	<body>
 		<h1>
 			Velkommen til hjemmesiden - Lsn
+			<?php echo $txtFile['general']['tabHeader']; ?>
 		</h1>
 		<div id="languages">
 			<div id="danish">
@@ -70,13 +70,15 @@
 
 
 	$("#danish").click(function() {
-		console.log("dansk");
 		globalLanguageVariable = "danish";
+		console.log("frontpage: " + globalLanguageVariable);
+		document.cookie = "language " + " = " + globalLanguageVariable;
 	});
 	
 	$("#english").click(function() {
-		console.log("engelsk");
 		globalLanguageVariable = "english";
+		console.log("frontpage: " + globalLanguageVariable);
+		document.cookie = "language " + " = " + globalLanguageVariable;
 	});
 
 

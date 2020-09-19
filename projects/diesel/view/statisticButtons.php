@@ -1,6 +1,6 @@
 
 <?php
-	$txtFile = include("../txt/global.php"); 
+	$txtFile = include("../text/global.php"); 
 	if (sizeof($graphArray) > 3) {
 ?>
 				<button class="dieselButton" 
