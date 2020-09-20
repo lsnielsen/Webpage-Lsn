@@ -160,6 +160,16 @@
 					'lVar' => 'Varians for liter', 
 					'lMedian' => 'Median for liter', 
 					'lAverage' => 'Gennemsnit for liter', 
+					'lkmHeader' => 'Liter  per kilometer statistik:', 
+					'lkmStdev' => 'Standard afvigelse liter per kilometer', 
+					'lkmVar' => 'Varians for liter per kilometer', 
+					'lkmMedian' => 'Median for liter per kilometer', 
+					'lkmAverage' => 'Gennemsnit for liter per kilometer', 
+					'lkrHeader' => 'Liter  per kroner statistik:', 
+					'lkrStdev' => 'Standard afvigelse liter per kroner', 
+					'lkrVar' => 'Varians for liter per kilometer', 
+					'lkrMedian' => 'Median for liter per kroner', 
+					'lkrAverage' => 'Gennemsnit for liter per kroner', 
 				],
 			];
 		?>

@@ -1,12 +1,11 @@
 <?php $txtFile = include("../text/global.php");  ?>	
 <div class="literPerKilometerValues">
 	<div class="headerLiterPerKilometerField">
-		<?php echo $txtFile['ownGraph']['lHeader']; ?>
-		Liter per Kilometer statistik: 
+		<?php echo $txtFile['ownGraph']['lkmHeader']; ?>
 	</div>
 	<div class="stdevLiterPerKilometerField">
 		<div class="stdevLiterPerKilometerTxt">
-			Standard afvigelse for liter per Kilometer
+			<?php echo $txtFile['ownGraph']['lkmStdev']; ?>
 		</div>
 		<div class="stdevLiterPerKilometerCross">
 			&#10060;
@@ -15,7 +14,7 @@
 
 	<div class="varLiterPerKilometerField">
 		<div class="varLiterPerKilometerTxt">
-			Varians for liter per Kilometer
+			<?php echo $txtFile['ownGraph']['lkmVar']; ?>
 		</div>
 		<div class="varLiterPerKilometerCross">
 			&#10060;
@@ -24,7 +23,7 @@
 
 	<div class="medianLiterPerKilometerField">
 		<div class="medianLiterPerKilometerTxt">
-			Median for liter per Kilometer
+			<?php echo $txtFile['ownGraph']['lkmMedian']; ?>
 		</div>
 		<div class="medianLiterPerKilometerCross">
 			&#10060;
@@ -33,7 +32,7 @@
 
 	<div class="averageLiterPerKilometerField">
 		<div class="averageLiterPerKilometerTxt">
-			Gennemsnit for liter per Kilometer
+			<?php echo $txtFile['ownGraph']['lkmAverage']; ?>
 		</div>
 		<div class="averageLiterPerKilometerCross">
 			&#10060;
