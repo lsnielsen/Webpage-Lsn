@@ -123,6 +123,10 @@
 					'lkm' => 'Liter per kilometer',
 					'krkm' => 'Kroner per kilometer',
 					'km' => 'Kilometer',
+					'median' => 'Median',
+					'varians' => 'Varians',
+					'stdev' => 'St. dev.',
+					'average' => 'Gennemsnit',
 				]
 			];
 		?>
