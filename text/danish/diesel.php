@@ -127,7 +127,35 @@
 					'varians' => 'Varians',
 					'stdev' => 'St. dev.',
 					'average' => 'Gennemsnit',
-				]
+				],
+				'ownGraph' =>
+				[
+					'kmkrHeader' => 'Kilometer per kroner statistik:', 
+					'kmkrStdev' => 'Standard afvigelse for kilometer per kroner', 
+					'kmkrVar' => 'Varians for kilometer per kroner', 
+					'kmkrMedian' => 'Median for kilometer per kroner', 
+					'kmkrAverage' => 'Gennemsnit for kilometer per kroner', 
+					'kmlHeader' => 'Kilometer per liter statistik:', 
+					'kmlStdev' => 'Standard afvigelse for kilometer per liter', 
+					'kmlVar' => 'Varians for kilometer per liter', 
+					'kmlMedian' => 'Median for kilometer per liter', 
+					'kmlAverage' => 'Gennemsnit for kilometer per liter', 
+					'krHeader' => 'Kroner statistik:', 
+					'krStdev' => 'Standard afvigelse for kroner', 
+					'krVar' => 'Varians for kroner', 
+					'krMedian' => 'Median for kroner', 
+					'krAverage' => 'Gennemsnit for kroner', 
+					'krkmHeader' => 'Kroner per kilometer statistik:', 
+					'krkmStdev' => 'Standard afvigelse for kroner per kilometer', 
+					'krkmVar' => 'Varians for kroner per kilometer', 
+					'krkmMedian' => 'Median for kroner per kilometer', 
+					'krkmAverage' => 'Gennemsnit for kroner per kilometer', 
+					'krlHeader' => 'Kroner per liter statistik:', 
+					'krlStdev' => 'Standard afvigelse for kroner per liter', 
+					'krlVar' => 'Varians for kroner per liter', 
+					'krlMedian' => 'Median for kroner per liter', 
+					'krlAverage' => 'Gennemsnit for kroner per liter', 
+				],
 			];
 		?>
 

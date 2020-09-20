@@ -1,6 +1,7 @@
-	
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="literValues">
 	<div class="headerLiterField">
+		<?php echo $txtFile['ownGraph']['krlHeader']; ?>
 		Liter statistik: 
 	</div>
 	<div class="stdevLiterField">
