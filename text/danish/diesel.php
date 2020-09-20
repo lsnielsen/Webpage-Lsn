@@ -154,7 +154,12 @@
 					'krlStdev' => 'Standard afvigelse for kroner per liter', 
 					'krlVar' => 'Varians for kroner per liter', 
 					'krlMedian' => 'Median for kroner per liter', 
-					'krlAverage' => 'Gennemsnit for kroner per liter', 
+					'krlAverage' => 'Gennemsnit for kroner per liter',
+					'lHeader' => 'Liter statistik:', 
+					'lStdev' => 'Standard afvigelse liter', 
+					'lVar' => 'Varians for liter', 
+					'lMedian' => 'Median for liter', 
+					'lAverage' => 'Gennemsnit for liter', 
 				],
 			];
 		?>

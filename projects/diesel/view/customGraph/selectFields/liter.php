@@ -1,12 +1,11 @@
 <?php $txtFile = include("../text/global.php");  ?>
 <div class="literValues">
 	<div class="headerLiterField">
-		<?php echo $txtFile['ownGraph']['krlHeader']; ?>
-		Liter statistik: 
+		<?php echo $txtFile['ownGraph']['lHeader']; ?>
 	</div>
 	<div class="stdevLiterField">
 		<div class="stdevLiterTxt">
-			Standard afvigelse for liter
+			<?php echo $txtFile['ownGraph']['lStdev']; ?>
 		</div>
 		<div class="stdevLiterCross">
 			&#10060;
@@ -15,7 +14,7 @@
 
 	<div class="varLiterField">
 		<div class="varLiterTxt">
-			Varians for liter
+			<?php echo $txtFile['ownGraph']['lVar']; ?>
 		</div>
 		<div class="varLiterCross">
 			&#10060;
@@ -24,7 +23,7 @@
 
 	<div class="medianLiterField">
 		<div class="medianLiterTxt">
-			Median for liter
+			<?php echo $txtFile['ownGraph']['lMedian']; ?>
 		</div>
 		<div class="medianLiterCross">
 			&#10060;
@@ -33,7 +32,7 @@
 
 	<div class="averageLiterField">
 		<div class="averageLiterTxt">
-			Gennemsnit for liter
+			<?php echo $txtFile['ownGraph']['lAverage']; ?>
 		</div>
 		<div class="averageLiterCross">
 			&#10060;

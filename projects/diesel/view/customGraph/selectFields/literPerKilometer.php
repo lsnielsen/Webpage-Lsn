@@ -1,6 +1,7 @@
-	
+<?php $txtFile = include("../text/global.php");  ?>	
 <div class="literPerKilometerValues">
 	<div class="headerLiterPerKilometerField">
+		<?php echo $txtFile['ownGraph']['lHeader']; ?>
 		Liter per Kilometer statistik: 
 	</div>
 	<div class="stdevLiterPerKilometerField">
