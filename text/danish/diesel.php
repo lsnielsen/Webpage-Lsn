@@ -170,6 +170,11 @@
 					'lkrVar' => 'Varians for liter per kilometer', 
 					'lkrMedian' => 'Median for liter per kroner', 
 					'lkrAverage' => 'Gennemsnit for liter per kroner', 
+					'kmHeader' => 'Kilometer statistik:', 
+					'kmStdev' => 'Standard afvigelse kilometer', 
+					'kmVar' => 'Varians for kilometer', 
+					'kmMedian' => 'Median for kroner', 
+					'kmAverage' => 'Gennemsnit for kroner', 
 				],
 			];
 		?>

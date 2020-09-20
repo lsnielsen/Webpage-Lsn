@@ -1,11 +1,11 @@
-	
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="userInputValues">
 	<div class="userInputField">
-		Bruger input: 
+		<?php echo $txtFile['dropdown']['userInput']; ?>
 	</div>
 	<div class="userInputKmField">
 		<div class="userInputKmTxt">
-			Kilometer
+			<?php echo $txtFile['dropdown']['km']; ?>
 		</div>
 		<div class="userInputKmCross">
 			&#10060;
@@ -14,7 +14,7 @@
 
 	<div class="userInputLiterField">
 		<div class="userInputLiterTxt">
-			Liter
+			<?php echo $txtFile['dropdown']['liter']; ?>
 		</div>
 		<div class="userInputLiterCross">
 			&#10060;
@@ -23,7 +23,7 @@
 
 	<div class="userInputKronerField">
 		<div class="userInputKronerTxt">
-			Kroner
+			<?php echo $txtFile['dropdown']['kr']; ?>
 		</div>
 		<div class="userInputKronerCross">
 			&#10060;
