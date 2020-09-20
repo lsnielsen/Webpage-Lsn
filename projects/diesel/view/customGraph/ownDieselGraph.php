@@ -70,10 +70,10 @@
 				<span class="slider round"></span>
 			</label>
 			<div class="functionGraphType">
-				<?php echo $txtFile['dropdown']['normalType']; ?>
+				<?php echo $txtFile['dropdown']['normalCurve']; ?>
 			</div>
 			<div class="coloumnGraphType">
-				<?php echo $txtFile['dropdown']['columnType']; ?>
+				<?php echo $txtFile['dropdown']['columCurve']; ?>
 			</div>
 			<p class="informTxt">
 				<?php echo $txtFile['dropdown']['note']; ?>
