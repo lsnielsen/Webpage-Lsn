@@ -62,13 +62,30 @@
 
 <script>
 
+	$(document).ready(function() { 
+		document.cookie = "langPlace = frontpage";
+	});
+	$("#dieselButton").click(function() {
+		document.cookie = "langPlace = diesel";
+	});
+	$("#politicButton").click(function() {
+		document.cookie = "langPlace = politic";
+	});
+	$("#usedCarsButton").click(function() {
+		document.cookie = "langPlace = usedCars";
+	});
+	$("#runButton").click(function() {
+		document.cookie = "langPlace = run";
+	});
+	$("#bikeButton").click(function() {
+		document.cookie = "langPlace = bike";
+	});
 
 	$("#danish").click(function() {
-		document.cookie = "language = danish";
+		document.cookie = "lang = danish";
 	});
-	
 	$("#english").click(function() {
-		document.cookie = "language = english";
+		document.cookie = "lang = english";
 	});
 
 

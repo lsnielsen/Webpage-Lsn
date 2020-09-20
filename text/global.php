@@ -5,7 +5,7 @@
 
 <?php
 	
-	$languageVar = isset($_COOKIE["language"]) ? $_COOKIE["language"] : "";
+	$languageVar = isset($_COOKIE["lang"]) ? $_COOKIE["lang"] : "";
 	if ($languageVar == "english") {
 		return include("../text/english/diesel.php");
 	} else {
