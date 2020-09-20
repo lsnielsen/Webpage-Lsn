@@ -12,7 +12,7 @@
 <html>  
     <head>  
         <title>  
-			<?php echo $txtFile['advanced']['tab']; ?>
+			<?php echo $txtFile['general']['tab']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			<?php echo $txtFile['advanced']['header']; ?>
+			<?php echo $txtFile['stats']['header']; ?>
 		</h1>  
 	
 		<?php include "dataTable.php"; ?>

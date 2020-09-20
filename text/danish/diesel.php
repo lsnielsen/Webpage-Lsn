@@ -7,6 +7,7 @@
 					'tabHeader' => 'Diesel',
 					'date' => 'Dato',
 					'back' => 'Tilbage',
+					'tab' => 'Advanced',
 				],
 				'frontpage' => 
 				[
@@ -66,11 +67,6 @@
 					'statistic' => 'Klik her, for at se en mere avanceret statistik',
 					'theCar' => 'Klik her, for at se hvilken bil det handler om',
 				],
-				'advanced' =>
-				[
-					'tab' => 'Advanced',
-					'header' => 'Avanceret statistik for diesel forbrug',
-				],
 				'advButs' =>
 				[
 					'backButton' => 'Tilbage',
@@ -85,6 +81,7 @@
 				],
 				'stats' =>
 				[
+					'header' => 'Avanceret statistik for diesel forbrug',
 					'literHeader' => 'Avanceret statistik for antal liter',
 					'krlHeader' => 'Avanceret statistik for kroner per liter',
 					'kmlHeader' => 'Avanceret statistik for kilometer per liter',
