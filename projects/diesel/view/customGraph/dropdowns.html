@@ -1,34 +1,57 @@
 <center style="position: relative; top: 10px;">
+	<?php $txtFile = include("../text/global.php");  ?>
 	<h2>
 		<div style="position: relative; right: 765px; bottom: 10px;">
-			Bruger input
+			<?php echo $txtFile['dropdown']['userInput']; ?>
 		</div>
 		<div style="position: relative; right: 520px; bottom: 35px;">
-			Simple beregninger
+			<?php echo $txtFile['dropdown']['simpleCalc']; ?>
 		</div>
 		<div style="position: relative; left: 170px; bottom: 60px;">
-			Avancerede beregninger
+			<?php echo $txtFile['dropdown']['advCalc']; ?>
 		</div>
 	</h2>
 	<div style="position: relative; bottom: 60px;">
 		<div class="dropdown" style="position: relative; right: 120px;">
-			<button class="dropbtn"> Indtastet værdier</button>
+			<button class="dropbtn"> 
+				<?php echo $txtFile['dropdown']['enterValues']; ?>
+			</button>
 			<div class="dropdown-content" style="width: 155px;">
-				<a class="numberOfKm">Kilometer</a>
-				<a class="numberOfLiter">Liter</a>
-				<a class="numberOfKr">Kroner</a>
+				<a class="numberOfKm">
+					<?php echo $txtFile['stats']['km']; ?>
+				</a>
+				<a class="numberOfLiter">
+					<?php echo $txtFile['stats']['liter']; ?>
+				</a>
+				<a class="numberOfKr">
+					<?php echo $txtFile['stats']['kr']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; right: 50px;">
-			<button class="dropbtn"> Beregnede værdier</button>
+			<button class="dropbtn"> 
+				<?php echo $txtFile['dropdown']['calcValues']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="krPerLiter">Kroner per liter</a>
-				<a class="kmPerLiter">Kilometer per liter</a>
-				<a class="kmPerKr">Kilometer per kroner</a>
-				<a class="literPerKm">Liter per kilometer</a>
-				<a class="literPerKr">Liter per kroner</a>
-				<a class="krPerkm">Kroner per kilometer</a>
+				<a class="krPerLiter">
+					<?php echo $txtFile['dropdown']['krl']; ?>
+				</a>
+				<a class="kmPerLiter">
+					<?php echo $txtFile['dropdown']['kml']; ?>
+				</a>
+				<a class="kmPerKr">
+					<?php echo $txtFile['dropdown']['kmkr']; ?>
+				</a>
+				<a class="literPerKm">
+					<?php echo $txtFile['dropdown']['lkm']; ?>
+				</a>
+				<a class="literPerKr">
+					<?php echo $txtFile['dropdown']['lkr']; ?>
+				</a>
+				<a class="krPerkm">
+					<?php echo $txtFile['dropdown']['krkm']; ?>
+				</a>
 			</div>
 		</div>
 		

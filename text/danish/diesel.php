@@ -89,14 +89,40 @@
 					'kmkrHeader' => 'Avanceret statistik for kilometer per kroner',
 					'kmHeader' => 'Avanceret statistik for kørte kilometer',
 					'dateHeader' => 'Avanceret statistik for dato',
-					'stdev' => 'Standard afvigelse',
+					'kmKr' => 'Km/Kr',
 					'krl' => 'Kroner/liter',
-					'kr' => 'Kroner/liter',
 					'kml' => 'Kilometer/liter',
 					'kmKr' => 'Kilometer/kroner',
+					'stdev' => 'Standard afvigelse',
 					'km' => 'Kilometer',
 					'liter' => 'Liter',
-					'kmKr' => 'Km/Kr',
+					'kr' => 'Kroner',
+				],
+				'dropdown' =>
+				[
+					'header' => 'Setup din egen graf, ved at vælge fra felterne nederst på siden',
+					'short' => 'Kort forklaring',
+					'explanation' => 'St dev står for standard deviation, som oversat er standard afvigelse. Den værdi er et udtryk
+										for hvor meget alle værdierne fordeler sig omkring deres middelværdi. <br>
+										Gen. er en forkortelse for gennemsnittet. <br>
+										Median er den midterste værdi af alle værdierne. <br>
+										Var står for variansen. Det er en værdi der angiver der angiver variabiliteten af alle værdierne.',
+					'curveType' => 'Her kan du vælge om du vil have et søjle diagram, eller en almindelig kurve:',
+					'normalCurve' => 'Almindelig funktion',
+					'columCurve' => 'Søjlediagram',
+					'note' => '(Det virker ikke endnu)',
+					'userInput' => 'Bruger input',
+					'simpleCalc' => 'Simple beregninger',
+					'advCalc' => 'Avancerede beregninger',
+					'enterValues' => 'Indtastet værdier',
+					'calcValues' => 'Beregnede værdier',
+					'krl' => 'Kroner per liter',
+					'kml' => 'Kilometer per liter',
+					'kmkr' => 'Kilometer per kroner',
+					'lkr' => 'Liter per kroner',
+					'lkm' => 'Liter per kilometer',
+					'krkm' => 'Kroner per kilometer',
+					'km' => 'Kilometer',
 				]
 			];
 		?>

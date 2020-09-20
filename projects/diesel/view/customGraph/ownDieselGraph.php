@@ -1,8 +1,9 @@
 
 <html>  
+	<?php $txtFile = include("../text/global.php");  ?>
     <head>  
         <title>  
-            Advanced
+			<?php echo $txtFile['general']['tab']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
@@ -26,7 +27,9 @@
 	
 	<body style="background-color: #d9ffb3;">  
 	
-		<h1> Setup din egen graf, ved at vælge fra felterne nederst på siden</h1>		
+		<h1> 
+			<?php echo $txtFile['dropdown']['header']; ?>
+		</h1>		
 <!--T
 		<?php //include("dropdowns.html"); ?>
 		
@@ -53,29 +56,27 @@
 		<?php include "../projects/diesel/view/customGraph/selectFields/graph.php" ?>
 		
 		<div class="statisticExplanation">
-			<h1> Kort forklaring </h1>
+			<h1> 
+				<?php echo $txtFile['dropdown']['short']; ?>
+			</h1>
 			<div class="explanationTxt">
-				St dev står for standard deviation, som oversat er standard afvigelse. Den værdi er et udtryk
-				for hvor meget alle værdierne fordeler sig omkring deres middelværdi. <br>
-				Gen. er en forkortelse for gennemsnittet. <br>
-				Median er den midterste værdi af alle værdierne. <br>
-				Var står for variansen. Det er en værdi der angiver der angiver variabiliteten af alle værdierne.	
+				<?php echo $txtFile['dropdown']['explanation']; ?>
 			</div>
 			<div class="coloumnOrFunction">
-				Her kan du vælge om du vil have et søjle diagram, eller en almindelig kurve:
+				<?php echo $txtFile['dropdown']['curveType']; ?>
 			</div>
 			<label class="switch">
 				<input class="testers" type="checkbox">
 				<span class="slider round"></span>
 			</label>
 			<div class="functionGraphType">
-				Almindelig funktion
+				<?php echo $txtFile['dropdown']['normalType']; ?>
 			</div>
 			<div class="coloumnGraphType">
-				Søjlediagram
+				<?php echo $txtFile['dropdown']['columnType']; ?>
 			</div>
 			<p class="informTxt">
-				(Det virker ikke endnu)
+				<?php echo $txtFile['dropdown']['note']; ?>
 			</p>
 		</div>
 	
@@ -84,7 +85,7 @@
 					value="advancedDieselPage"
 					name="dieselButton"
 					style="margin-left: auto; margin-top: 100px;">
-				Tilbage
+				<?php echo $txtFile['general']['back']; ?>
 			</button>
 		</form>
 	</body>
