@@ -8,9 +8,14 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "smallGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	chartTitle = "<?php echo $txtFile['dropdown']['lkm'] ?>";
+	xAxis = "<?php echo $txtFile['general']['date'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['lkm'] ?>";
+	yAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / kilometer', 'Gennemsnit'],
+			[xAxis, yAxis, yAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['l/km']),
@@ -28,7 +33,7 @@
 		]);
 
 		var options = {
-		  title: 'Liter per kilometer',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

@@ -8,9 +8,15 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "smallGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	chartTitle = "<?php echo $txtFile['graphs']['threeHeader'] ?>";
+	xAxis = "<?php echo $txtFile['general']['date'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['lkm'] ?>";
+	yAxisII = "<?php echo $txtFile['stats']['lkr'] ?>";
+	yAxisIII = "<?php echo $txtFile['stats']['krkm'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +25,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter / kilometer', 'Liter / krone', 'Kroner / kilometer'],
+			[xAxis, yAxis, yAxisII, yAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['l/km']),
@@ -29,7 +35,7 @@
 		]);
 
 		var options = {
-		  title: 'L/km, l/kr og kr/km',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

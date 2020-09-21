@@ -7,10 +7,14 @@
 	
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = handleAdvancedArray($result, "smallGraph");	
+	$graphArray = handleAdvancedArray($result, "smallGraph");
+	$txtFile = include("../text/global.php");	
 ?>
 
 <script>
+	chartTitle = "<?php echo $txtFile['dropdown']['krl'] ?>";
+	xAxis = "<?php echo $txtFile['general']['date'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['krl'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +23,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / liter'],
+			[xAxis, yAxis],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kr/l']),
@@ -27,7 +31,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner per liter',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
