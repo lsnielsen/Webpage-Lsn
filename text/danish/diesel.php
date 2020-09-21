@@ -104,8 +104,10 @@
 				'graphs' =>
 				[
 					'dateHeader' => 'Frekvens for dato',
+					'literHeader' => 'Frekvens diagram over liter',
 					'freqX' => 'Procent',
 					'freqY' => 'Årstal',
+					'literY' => 'Liter interval',
 					'dieselHeader' => 'Diesel regnskab',
 					'threeHeader' => 'L/km, l/kr og kr/km',
 				],
