@@ -13,9 +13,9 @@
 
 <script>
 
-	chartTitle = "<?php echo $txtFile['dropdown']['kmkr'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['kmKr'] ?>";
+	kmkrTitle = "<?php echo $txtFile['dropdown']['kmkr'] ?>";
+	kmkrxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	kmkryAxis = "<?php echo $txtFile['stats']['kmKr'] ?>";
 	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -24,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis],
+			[kmkrxAxis, kmkryAxis],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['km/kr'])
@@ -32,7 +32,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: kmkrTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

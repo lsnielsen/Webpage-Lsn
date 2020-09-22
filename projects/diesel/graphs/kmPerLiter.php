@@ -11,9 +11,9 @@
 ?>
 <script>
 
-	chartTitle = "<?php echo $txtFile['dropdown']['kml'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['kml'] ?>";
+	kmlTitle = "<?php echo $txtFile['dropdown']['kml'] ?>";
+	kmlxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	kmlyAxis = "<?php echo $txtFile['stats']['kml'] ?>";
 	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -22,7 +22,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis],
+			[kmlxAxis, kmlyAxis],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['km/l'])
@@ -30,7 +30,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: kmlTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

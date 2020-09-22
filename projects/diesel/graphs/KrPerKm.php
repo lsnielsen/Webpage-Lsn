@@ -12,10 +12,10 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['dropdown']['krkm'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['krkm'] ?>";
-	yAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	krkmTitle = "<?php echo $txtFile['dropdown']['krkm'] ?>";
+	krkmxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	krkmyAxis = "<?php echo $txtFile['stats']['krkm'] ?>";
+	krkmyAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -24,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis, yAxisII],
+			[krkmxAxis, krkmyAxis, krkmyAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kr/km']),
@@ -33,7 +33,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: krkmTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
