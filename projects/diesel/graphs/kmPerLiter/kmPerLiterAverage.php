@@ -11,11 +11,11 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['dropdown']['kml'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['kml'] ?>";
-	yAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
-	yAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
+	averageTitle = "<?php echo $txtFile['dropdown']['kml'] ?>";
+	averagexAxis = "<?php echo $txtFile['general']['date'] ?>";
+	averageyAxis = "<?php echo $txtFile['stats']['kml'] ?>";
+	averageyAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	averageyAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -24,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis, yAxisII, yAxisIII],
+			[averagexAxis, averageyAxis, averageyAxisII, averageyAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['km/l']),
@@ -34,7 +34,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: averageTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
