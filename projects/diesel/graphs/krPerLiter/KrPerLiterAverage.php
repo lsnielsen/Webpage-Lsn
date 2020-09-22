@@ -12,10 +12,12 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['stats']['literstdVar'] ?>";
+	chartTitle = "<?php echo $txtFile['dropdown']['krl'] ?>";
 	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['stdev'] ?>";
-	yAxisII = "<?php echo $txtFile['dropdown']['averVar'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['krl'] ?>";
+	yAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	yAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
+	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 
@@ -23,7 +25,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / liter', 'Gennemsnit', 'Median'],
+			[xAxis, yAxis, yAxisII, yAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kr/l']),
@@ -33,7 +35,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner per liter',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

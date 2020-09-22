@@ -8,9 +8,14 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	chartTitle = "<?php echo $txtFile['graphs']['krlStdVar'] ?>";
+	xAxis = "<?php echo $txtFile['general']['date'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['stdev'] ?>";
+	yAxisII = "<?php echo $txtFile['graphs']['averVar'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Standard afvigelse', 'Gennemsnit, varians'],
+			[xAxis, yAxis, yAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['krPerLiterStDev']),
@@ -28,7 +33,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner per liter - standard afvigelse og varians',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
