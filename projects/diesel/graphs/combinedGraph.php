@@ -12,11 +12,11 @@
 ?>
 
 <script>
-	chartTitle 	= "<?php echo $txtFile['graphs']['threeHeader'] ?>";
-	xAxis 		= "<?php echo $txtFile['general']['date'] 		?>";
-	yAxis 		= "<?php echo $txtFile['stats']['lkm'] 			?>";
-	yAxisII 	= "<?php echo $txtFile['stats']['lkr'] 			?>";
-	yAxisIII 	= "<?php echo $txtFile['stats']['krkm'] 		?>";
+	combinedTitle 		= "<?php echo $txtFile['graphs']['threeHeader'] ?>";
+	combinedxAxis 		= "<?php echo $txtFile['general']['date'] 		?>";
+	combinedyAxis 		= "<?php echo $txtFile['stats']['lkm'] 			?>";
+	combinedyAxisII 	= "<?php echo $txtFile['stats']['lkr'] 			?>";
+	combinedyAxisIII 	= "<?php echo $txtFile['stats']['krkm'] 		?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -25,7 +25,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis, yAxisII, yAxisIII],
+			[combinedxAxis, combinedyAxis, combinedyAxisII, combinedyAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['l/km']),
@@ -35,7 +35,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: combinedTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
