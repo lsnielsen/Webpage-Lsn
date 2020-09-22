@@ -98,6 +98,7 @@
 			'km' => 'Kilometer',
 			'liter' => 'Liter',
 			'kr' => 'Kroner',
+			'sum' => 'sum',
 		],
 		'graphs' =>
 		[
@@ -153,7 +154,7 @@
 			'krkm' => 'Kroner per kilometer',
 			'km' => 'Kilometer',
 			'median' => 'Median',
-			'variance' => 'Variance',
+			'varians' => 'Variance',
 			'stdev' => 'St. dev. ',
 			'average' => 'Average',
 		],

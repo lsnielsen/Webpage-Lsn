@@ -100,6 +100,7 @@
 					'km' => 'Kilometer',
 					'liter' => 'Liter',
 					'kr' => 'Kroner',
+					'sum' => 'sum',
 				],
 				'graphs' =>
 				[
