@@ -8,9 +8,15 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	chartTitle = "<?php echo $txtFile['dropdown']['kmkr'] ?>";
+	xAxis = "<?php echo $txtFile['general']['date'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['kmkr'] ?>";
+	yAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	yAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +25,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / krone', 'Gennemsnit', 'Median'],
+			[xAxis, yAxis, yAxisII, yAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['km/kr']),
@@ -29,7 +35,7 @@
 		]);
 
 		var options = {
-		  title: 'Kilometer per kroner',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
