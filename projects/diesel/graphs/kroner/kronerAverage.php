@@ -12,9 +12,10 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['graphs']['krlHeader'] ?>";
-	xAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
-	yAxis = "<?php echo $txtFile['graphs']['krlY'] ?>";
+	chartTitle = "<?php echo $txtFile['stats']['kr'] ?>";
+	xAxis = "<?php echo $txtFile['general']['date'] ?>";
+	yAxis = "<?php echo $txtFile['dropdown']['average'] ?>";
+	yAxisII = "<?php echo $txtFile['dropdown']['median'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -23,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner', 'Gennemsnit', 'Median'],
+			[xAxis, chartTitle, yAxis, yAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kroner']),
@@ -33,7 +34,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
