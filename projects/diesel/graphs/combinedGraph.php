@@ -12,11 +12,11 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['graphs']['threeHeader'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['lkm'] ?>";
-	yAxisII = "<?php echo $txtFile['stats']['lkr'] ?>";
-	yAxisIII = "<?php echo $txtFile['stats']['krkm'] ?>";
+	chartTitle 	= "<?php echo $txtFile['graphs']['threeHeader'] ?>";
+	xAxis 		= "<?php echo $txtFile['general']['date'] 		?>";
+	yAxis 		= "<?php echo $txtFile['stats']['lkm'] 			?>";
+	yAxisII 	= "<?php echo $txtFile['stats']['lkr'] 			?>";
+	yAxisIII 	= "<?php echo $txtFile['stats']['krkm'] 		?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);

@@ -12,9 +12,9 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['dropdown']['krl'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['stats']['krl'] ?>";
+	krlTitle = "<?php echo $txtFile['dropdown']['krl'] ?>";
+	krlxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	krlyAxis = "<?php echo $txtFile['stats']['krl'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -23,7 +23,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis],
+			[krlxAxis, krlyAxis],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kr/l']),
@@ -31,7 +31,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: krlTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
