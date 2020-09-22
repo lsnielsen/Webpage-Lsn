@@ -110,6 +110,9 @@
 					'literY' => 'Liter interval',
 					'dieselHeader' => 'Diesel regnskab',
 					'threeHeader' => 'L/km, l/kr og kr/km',
+					'literStdVar' => 'Liter - standard afvigelse og varians',
+					'stdev' => 'Standard afvigelse',
+					'averVar' => 'Gennemsnit, varians',
 				],
 				'dropdown' =>
 				[

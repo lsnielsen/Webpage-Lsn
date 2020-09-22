@@ -12,9 +12,11 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['graphs']['literHeader'] ?>";
-	xAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
-	yAxis = "<?php echo $txtFile['graphs']['literY'] ?>";
+	chartTitle = "<?php echo $txtFile['stats']['liter'] ?>";
+	xAxis = "<?php echo $txtFile['average']['date'] ?>";
+	yAxis = "<?php echo $txtFile['stats']['liter'] ?>";
+	yAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	yAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -23,7 +25,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Liter', 'Gennemsnit', 'Median'],
+			[xAxis yAxis, yAxisII, yAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['liter']),
@@ -33,7 +35,7 @@
 		]);
 
 		var options = {
-		  title: 'Liter',
+		  title: chartTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
