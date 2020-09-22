@@ -8,9 +8,13 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	chartTitle = "<?php echo $txtFile['graphs']['kmlHeader'] ?>";
+	xAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
+	yAxis = "<?php echo $txtFile['graphs']['kmlY'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -30,9 +34,9 @@
 		]);
 
 		var options = {
-			title: 'Frekvens diagram over kilometer per liter',
-			vAxis: {title: 'Kilometer per liter interval'},
-			hAxis: {title: 'Procent'},
+			title: chartTitle,
+			vAxis: {title: yAxis},
+			hAxis: {title: xAxis},
 			chartArea: {width: '50%'},
 			legend: 'none'
 		};

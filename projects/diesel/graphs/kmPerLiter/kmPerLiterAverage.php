@@ -7,8 +7,13 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
+
 <script>
+	chartTitle = "<?php echo $txtFile['graphs']['kmlHeader'] ?>";
+	xAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
+	yAxis = "<?php echo $txtFile['graphs']['kmlY'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
