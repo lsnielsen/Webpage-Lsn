@@ -12,10 +12,10 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['stats']['kr'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['dropdown']['average'] ?>";
-	yAxisII = "<?php echo $txtFile['dropdown']['median'] ?>";
+	averageTitle = "<?php echo $txtFile['stats']['kr'] ?>";
+	averagexAxis = "<?php echo $txtFile['general']['date'] ?>";
+	averageyAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	averageyAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -24,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, chartTitle, yAxis, yAxisII],
+			[averagexAxis, averageTitle, averageyAxisII, averageyAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kroner']),
@@ -34,7 +34,7 @@
 		]);
 
 		var options = {
-		  title: chartTitle,
+		  title: averageTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

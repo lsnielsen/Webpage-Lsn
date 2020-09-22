@@ -12,9 +12,9 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['graphs']['krHeader'] ?>";
-	xAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
-	yAxis = "<?php echo $txtFile['graphs']['krY'] ?>";
+	freqTitle = "<?php echo $txtFile['graphs']['krHeader'] ?>";
+	freqxAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
+	freqyAxis = "<?php echo $txtFile['graphs']['krY'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -33,9 +33,9 @@
 		]);
 
 		var options = {
-			title: chartTitle,
-			vAxis: {title: yAxis},
-			hAxis: {title: xAxis},
+			title: freqTitle,
+			vAxis: {title: freqyAxis},
+			hAxis: {title: freqxAxis},
 			chartArea: {width: '50%'},
 			legend: 'none'
 		};

@@ -12,10 +12,10 @@
 ?>
 
 <script>
-	chartTitle = "<?php echo $txtFile['graphs']['krStdVar'] ?>";
-	xAxis = "<?php echo $txtFile['general']['date'] ?>";
-	yAxis = "<?php echo $txtFile['graphs']['stdev'] ?>";
-	yAxisII = "<?php echo $txtFile['graphs']['averVar'] ?>";
+	stdevTitle = "<?php echo $txtFile['graphs']['krStdVar'] ?>";
+	stdevxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	stdevyAxis = "<?php echo $txtFile['graphs']['stdev'] ?>";
+	stdevyAxisII = "<?php echo $txtFile['graphs']['averVar'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -24,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			[xAxis, yAxis, yAxisII],
+			[stdevxAxis, stdevyAxis, stdevyAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['krStDev']),
@@ -33,7 +33,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner - standard afvigelse og varians',
+		  title: stdevTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
