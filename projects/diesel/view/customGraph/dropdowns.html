@@ -1,124 +1,238 @@
 <center style="position: relative; top: 10px;">
+	<?php $txtFile = include("../text/global.php");  ?>
 	<h2>
 		<div style="position: relative; right: 765px; bottom: 10px;">
-			Bruger input
+			<?php echo $txtFile['dropdown']['userInput']; ?>
 		</div>
 		<div style="position: relative; right: 520px; bottom: 35px;">
-			Simple beregninger
+			<?php echo $txtFile['dropdown']['simpleCalc']; ?>
 		</div>
 		<div style="position: relative; left: 170px; bottom: 60px;">
-			Avancerede beregninger
+			<?php echo $txtFile['dropdown']['advCalc']; ?>
 		</div>
 	</h2>
 	<div style="position: relative; bottom: 60px;">
 		<div class="dropdown" style="position: relative; right: 120px;">
-			<button class="dropbtn"> Indtastet værdier</button>
+			<button class="dropbtn"> 
+				<?php echo $txtFile['dropdown']['enterValues']; ?>
+			</button>
 			<div class="dropdown-content" style="width: 155px;">
-				<a class="numberOfKm">Kilometer</a>
-				<a class="numberOfLiter">Liter</a>
-				<a class="numberOfKr">Kroner</a>
+				<a class="numberOfKm">
+					<?php echo $txtFile['stats']['km']; ?>
+				</a>
+				<a class="numberOfLiter">
+					<?php echo $txtFile['stats']['liter']; ?>
+				</a>
+				<a class="numberOfKr">
+					<?php echo $txtFile['stats']['kr']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; right: 50px;">
-			<button class="dropbtn"> Beregnede værdier</button>
+			<button class="dropbtn"> 
+				<?php echo $txtFile['dropdown']['calcValues']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="krPerLiter">Kroner per liter</a>
-				<a class="kmPerLiter">Kilometer per liter</a>
-				<a class="kmPerKr">Kilometer per kroner</a>
-				<a class="literPerKm">Liter per kilometer</a>
-				<a class="literPerKr">Liter per kroner</a>
-				<a class="krPerkm">Kroner per kilometer</a>
+				<a class="krPerLiter">
+					<?php echo $txtFile['dropdown']['krl']; ?>
+				</a>
+				<a class="kmPerLiter">
+					<?php echo $txtFile['dropdown']['kml']; ?>
+				</a>
+				<a class="kmPerKr">
+					<?php echo $txtFile['dropdown']['kmkr']; ?>
+				</a>
+				<a class="literPerKm">
+					<?php echo $txtFile['dropdown']['lkm']; ?>
+				</a>
+				<a class="literPerKr">
+					<?php echo $txtFile['dropdown']['lkr']; ?>
+				</a>
+				<a class="krPerkm">
+					<?php echo $txtFile['dropdown']['krkm']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Kilometer </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dropdown']['km']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="kmMedian">Median</a>
-				<a class="kmVar">Varians</a>
-				<a class="kmStDev">St. dev</a>
-				<a class="kmAverage">Gennemsnit</a>
+				<a class="kmMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="kmVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="kmStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="kmAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Liter </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['liter']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="literMedian">Median</a>
-				<a class="literVar">Varians</a>
-				<a class="literStDev">St. dev</a>
-				<a class="literAverage">Gennemsnit</a>
+				<a class="literMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="literVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="literStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="literAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Kroner </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['kr']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="kronerMedian">Median</a>
-				<a class="kronerVar">Varians</a>
-				<a class="kronerStDev">St. dev</a>
-				<a class="kronerAverage">Gennemsnit</a>
+				<a class="kronerMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="kronerVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="kronerStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="kronerAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Kr/l </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['kr/l']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="kronerPerLiterMedian">Median</a>
-				<a class="kronerPerLiterVar">Varians</a>
-				<a class="kronerPerLiterStDev">St. dev</a>
-				<a class="kronerPerLiterAverage">Gennemsnit</a>
+				<a class="kronerPerLiterMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="kronerPerLiterVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="kronerPerLiterStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="kronerPerLiterAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Km/l </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['km/l']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="kmPerLiterMedian">Median</a>
-				<a class="kmPerLiterVar">Varians</a>
-				<a class="kmPerLiterStDev">St. dev</a>
-				<a class="kmPerLiterAverage">Gennemsnit</a>
+				<a class="kmPerLiterMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="kmPerLiterVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="kmPerLiterStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="kmPerLiterAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Km/kr </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['km/kr']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="kmPerKronerMedian">Median</a>
-				<a class="kmPerKronerVar">Varians</a>
-				<a class="kmPerKronerStDev">St. dev</a>
-				<a class="kmPerKronerAverage">Gennemsnit</a>
+				<a class="kmPerKronerMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="kmPerKronerVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="kmPerKronerStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="kmPerKronerAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> Kr/km </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['kr/km']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="kronerPerKmMedian">Median</a>
-				<a class="kronerPerKmVar">Varians</a>
-				<a class="kronerPerKmStDev">St. dev</a>
-				<a class="kronerPerKmAverage">Gennemsnit</a>
+				<a class="kronerPerKmMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="kronerPerKmVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="kronerPerKmStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="kronerPerKmAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> L/km </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['l/km']; ?>
+			</button>
 			<div class="dropdown-content">
-				<a class="literPerKmMedian">Median</a>
-				<a class="literPerKmVar">Varians</a>
-				<a class="literPerKmStDev">St. dev</a>
-				<a class="literPerKmAverage">Gennemsnit</a>
+				<a class="literPerKmMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="literPerKmVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="literPerKmStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="literPerKmAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 		
 		<div class="dropdown" style="position: relative; left: 50px;">
-			<button class="dropbtn advancedDropdown"> L/kr </button>
+			<button class="dropbtn advancedDropdown"> 
+				<?php echo $txtFile['dataTable']['l/kr']; ?>
+				L/kr 
+			</button>
 			<div class="dropdown-content">
-				<a class="literPerKrMedian">Median</a>
-				<a class="literPerKrVar">Varians</a>
-				<a class="literPerKrStDev">St. dev</a>
-				<a class="literPerKrAverage">Gennemsnit</a>
+				<a class="literPerKrMedian">
+					<?php echo $txtFile['dropdown']['median']; ?>
+				</a>
+				<a class="literPerKrVar">
+					<?php echo $txtFile['dropdown']['varians']; ?>
+				</a>
+				<a class="literPerKrStDev">
+					<?php echo $txtFile['dropdown']['stdev']; ?>
+				</a>
+				<a class="literPerKrAverage">
+					<?php echo $txtFile['dropdown']['average']; ?>
+				</a>
 			</div>
 		</div>
 	</div>	

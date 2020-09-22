@@ -1,11 +1,11 @@
-
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="kronerPerLiterValues">
 	<div class="headerkronerPerLiterField">
-		Kroner per liter statistik: 
+		<?php echo $txtFile['ownGraph']['krlHeader']; ?>
 	</div>
 	<div class="stdevkronerPerLiterField">
 		<div class="stdevkronerPerLiterTxt">
-			Standard afvigelse for kroner per liter
+			<?php echo $txtFile['ownGraph']['krlStdev']; ?>
 		</div>
 		<div class="stdevkronerPerLiterCross">
 			&#10060;
@@ -14,7 +14,7 @@
 
 	<div class="varkronerPerLiterField">
 		<div class="varkronerPerLiterTxt">
-			Varians for kroner per liter
+			<?php echo $txtFile['ownGraph']['krlVar']; ?>
 		</div>
 		<div class="varkronerPerLiterCross">
 			&#10060;
@@ -23,7 +23,7 @@
 
 	<div class="mediankronerPerLiterField">
 		<div class="mediankronerPerLiterTxt">
-			Median for kroner per liter
+			<?php echo $txtFile['ownGraph']['krlMedian']; ?>
 		</div>
 		<div class="mediankronerPerLiterCross">
 			&#10060;
@@ -32,7 +32,7 @@
 
 	<div class="averagekronerPerLiterField">
 		<div class="averagekronerPerLiterTxt">
-			Gennemsnit for kroner per liter
+			<?php echo $txtFile['ownGraph']['krlAverage']; ?>
 		</div>
 		<div class="averagekronerPerLiterCross">
 			&#10060;

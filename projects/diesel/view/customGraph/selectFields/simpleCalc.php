@@ -1,11 +1,11 @@
-	
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="inputValues">
 	<div class="headerInputField">
-		Simple beregninger: 
+		<?php echo $txtFile['dropdown']['simpleCalc']; ?>
 	</div>
 	<div class="kronerPerLiterField">
 		<div class="kronerPerLiterTxt">
-			Kroner per liter
+			<?php echo $txtFile['dropdown']['krl']; ?>
 		</div>
 		<div class="kronerPerLiterCross">
 			&#10060;
@@ -26,7 +26,7 @@
 
 	<div class="kilometerPerLiterField">
 		<div class="kilometerPerLiterTxt">
-			Kilometer Per liter
+			<?php echo $txtFile['dropdown']['kml']; ?>
 		</div>
 		<div class="kilometerPerLiterCross">
 			&#10060;
@@ -47,7 +47,7 @@
 
 	<div class="kilometerPerKronerField">
 		<div class="kilometerPerKronerTxt">
-			Kilometer per kroner
+			<?php echo $txtFile['dropdown']['kmkr']; ?>
 		</div>
 		<div class="kilometerPerKronerCross">
 			&#10060;
@@ -69,7 +69,7 @@
 
 	<div class="kronerPerKilometerField">
 		<div class="kronerPerKilometerTxt">
-			Kroner per kilometer
+			<?php echo $txtFile['dropdown']['krkm']; ?>
 		</div>
 		<div class="kronerPerKilometerCross">
 			&#10060;
@@ -90,7 +90,7 @@
 
 	<div class="literPerKilometerField">
 		<div class="literPerKilometerTxt">
-			Liter per kilometer
+			<?php echo $txtFile['dropdown']['lkm']; ?>
 		</div>
 		<div class="literPerKilometerCross">
 			&#10060;
@@ -111,7 +111,7 @@
 
 	<div class="literPerKronerField">
 		<div class="literPerKronerTxt">
-			Liter per kroner
+			<?php echo $txtFile['dropdown']['lkr']; ?>
 		</div>
 		<div class="literPerKronerCross">
 			&#10060;

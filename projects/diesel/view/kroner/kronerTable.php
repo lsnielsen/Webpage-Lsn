@@ -1,8 +1,15 @@
 		<table class="advancedTable statisticTable">
+			<?php $txtFile = include("../text/global.php");  ?>
 						<tr>
-							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
-							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
-							<th class="dieselHeader headerSortDown kronerColumn">Standard afvigelse</th>
+							<th class="dieselHeader headerSortUp dateColumn">
+								<?php echo $txtFile['general']['date']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kronerColumn">
+								<?php echo $txtFile['stats']['kr']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kronerColumn">
+								<?php echo $txtFile['stats']['stdev']; ?>
+							</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";

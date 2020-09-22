@@ -1,5 +1,6 @@
 
 <?php
+	$txtFile = include("../text/global.php"); 
 	if (sizeof($graphArray) > 3) {
 ?>
 				<button class="dieselButton" 
@@ -7,14 +8,14 @@
 						value="advancedDieselPage"
 						name="dieselButton"						
 						style="margin-left: auto;">
-					Klik her, for at se en mere avanceret statistik
+					<?php echo $txtFile['statButtons']['statistic']; ?>
 				</button>
 				<button class="dieselButton" 
 						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="carDieselPage"
 						name="dieselButton"						
 						style="margin-left: 100px; position: relative;">
-					Klik her, for at se hvilken bil det handler om
+					<?php echo $txtFile['statButtons']['theCar']; ?>
 				</button>	
 <?php
 	} else {
@@ -24,14 +25,14 @@
 						value="advancedDieselPage"
 						name="dieselButton"						
 						style="margin-left: 200px; position: relative; top: 10px;">
-					Klik her, for at se en mere avanceret statistik
+					<?php echo $txtFile['statButtons']['statistic']; ?>
 				</button>
 				<button class="dieselButton" 
 						action="/../Webpage-Lsn/controller/diesel.php" 
 						value="carDieselPage"
 						name="dieselButton"						
 						style="margin-left: 90px; position: relative; top: 10px;">
-					Klik her, for at se hvilken bil det handler om
+					<?php echo $txtFile['statButtons']['theCar']; ?>
 				</button>
 <?php
 	}

@@ -1,11 +1,11 @@
-
+<?php $txtFile = include("../text/global.php");  ?>	
 <div class="literPerKronerValues">
 	<div class="headerliterPerKronerField">
-		Liter per kroner statistik: 
+		<?php echo $txtFile['ownGraph']['lkrHeader']; ?>
 	</div>
 	<div class="stdevLiterPerKronerField">
 		<div class="stdevliterPerKronerTxt">
-			Standard afvigelse for liter per kroner
+			<?php echo $txtFile['ownGraph']['lkrStdev']; ?>
 		</div>
 		<div class="stdevliterPerKronerCross">
 			&#10060;
@@ -14,7 +14,7 @@
 
 	<div class="varLiterPerKronerField">
 		<div class="varliterPerKronerTxt">
-			Varians for liter per kroner
+			<?php echo $txtFile['ownGraph']['lkrVar']; ?>
 		</div>
 		<div class="varliterPerKronerCross">
 			&#10060;
@@ -23,7 +23,7 @@
 
 	<div class="medianLiterPerKronerField">
 		<div class="medianliterPerKronerTxt">
-			Median for liter per kroner
+			<?php echo $txtFile['ownGraph']['lkrMedian']; ?>
 		</div>
 		<div class="medianliterPerKronerCross">
 			&#10060;
@@ -32,7 +32,7 @@
 
 	<div class="averageLiterPerKronerField">
 		<div class="averageliterPerKronerTxt">
-			Gennemsnit for liter per kroner
+			<?php echo $txtFile['ownGraph']['lkrAverage']; ?>
 		</div>
 		<div class="averageliterPerKronerCross">
 			&#10060;

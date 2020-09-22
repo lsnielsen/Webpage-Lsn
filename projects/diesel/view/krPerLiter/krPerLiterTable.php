@@ -1,4 +1,5 @@
 		<table class="advancedTable statisticTable">
+			<?php $txtFile = include("../text/global.php");  ?>
 						<tr>
 							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
 							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>

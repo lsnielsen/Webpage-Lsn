@@ -1,11 +1,11 @@
-	
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="kronerPerKilometerValues">
 	<div class="headerKronerPerKilometerField">
-		Kroner per kilometer statistik: 
+		<?php echo $txtFile['ownGraph']['krkmHeader']; ?>
 	</div>
 	<div class="stdevKronerPerKilometerField">
 		<div class="stdevKronerPerKilometerTxt">
-			Standard afvigelse for kroner per kilometer
+			<?php echo $txtFile['ownGraph']['krkmStdev']; ?>
 		</div>
 		<div class="stdevKronerPerKilometerCross">
 			&#10060;
@@ -14,7 +14,7 @@
 
 	<div class="varKronerPerKilometerField">
 		<div class="varKronerPerKilometerTxt">
-			Varians for kroner per kilometer
+			<?php echo $txtFile['ownGraph']['krkmVar']; ?>
 		</div>
 		<div class="varKronerPerKilometerCross">
 			&#10060;
@@ -23,7 +23,7 @@
 
 	<div class="medianKronerPerKilometerField">
 		<div class="medianKronerPerKilometerTxt">
-			Median for kroner per kilometer
+			<?php echo $txtFile['ownGraph']['krkmMedian']; ?>
 		</div>
 		<div class="medianKronerPerKilometerCross">
 			&#10060;
@@ -32,7 +32,7 @@
 
 	<div class="averageKronerPerKilometerField">
 		<div class="averageKronerPerKilometerTxt">
-			Gennemsnit for kroner per kilometer
+			<?php echo $txtFile['ownGraph']['krkmAverage']; ?>
 		</div>
 		<div class="averageKronerPerKilometerCross">
 			&#10060;

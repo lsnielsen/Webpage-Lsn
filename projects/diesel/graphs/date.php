@@ -8,10 +8,14 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
-
+	dateTitle = "<?php echo $txtFile['graphs']['dateHeader'] ?>";
+	datexAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
+	dateyAxis = "<?php echo $txtFile['graphs']['freqY'] ?>";
+	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 
@@ -27,9 +31,9 @@
 		]);
 
 		var options = {
-			title: 'Frekvens for dato',
-			vAxis: {title: 'Årstal'},
-			hAxis: {title: 'Procent'},
+			title: dateTitle,
+			vAxis: {title: dateyAxis},
+			hAxis: {title: datexAxis},
 			chartArea: {width: '50%'},
 			legend: 'none'
 		};

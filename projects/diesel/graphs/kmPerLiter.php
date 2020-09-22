@@ -6,10 +6,15 @@
 <?php
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
-	$graphArray = handleAdvancedArray($result, "smallGraph");	
+	$graphArray = handleAdvancedArray($result, "smallGraph");		
+	$txtFile = include("../text/global.php");
 ?>
 <script>
 
+	kmlTitle = "<?php echo $txtFile['dropdown']['kml'] ?>";
+	kmlxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	kmlyAxis = "<?php echo $txtFile['stats']['kml'] ?>";
+	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 
@@ -17,7 +22,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kilometer / liter'],
+			[kmlxAxis, kmlyAxis],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['km/l'])
@@ -25,7 +30,7 @@
 		]);
 
 		var options = {
-		  title: 'Kilometer per liter',
+		  title: kmlTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

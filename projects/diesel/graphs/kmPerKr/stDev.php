@@ -8,9 +8,14 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	stdevTitle = "<?php echo $txtFile['graphs']['kmkrStdVar'] ?>";
+	stdevxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	stdevyAxis = "<?php echo $txtFile['graphs']['stdev'] ?>";
+	stdevyAxisII = "<?php echo $txtFile['graphs']['averVar'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Standard afvigelse', 'Gennemsnit, varians'],
+			[stdevxAxis, stdevyAxis, stdevyAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kmPerKrStDev']),
@@ -28,7 +33,7 @@
 		]);
 
 		var options = {
-		  title: 'Kilometer per kroner - standard afvigelse og varians',
+		  title: stdevTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

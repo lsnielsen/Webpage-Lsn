@@ -1,11 +1,12 @@
 
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="kronerValues">
 	<div class="headerKronerField">
-		Kroner statistik: 
+		<?php echo $txtFile['ownGraph']['krHeader']; ?>
 	</div>
 	<div class="stdevKronerField">
 		<div class="stdevKronerTxt">
-			Standard afvigelse for Kroner
+			<?php echo $txtFile['ownGraph']['krStdev']; ?>
 		</div>
 		<div class="stdevKronerCross">
 			&#10060;
@@ -14,7 +15,7 @@
 
 	<div class="varKronerField">
 		<div class="varKronerTxt">
-			Varians for Kroner
+			<?php echo $txtFile['ownGraph']['krVar']; ?>
 		</div>
 		<div class="varKronerCross">
 			&#10060;
@@ -23,7 +24,7 @@
 
 	<div class="medianKronerField">
 		<div class="medianKronerTxt">
-			Median for Kroner
+			<?php echo $txtFile['ownGraph']['krMedian']; ?>
 		</div>
 		<div class="medianKronerCross">
 			&#10060;
@@ -32,7 +33,7 @@
 
 	<div class="averageKronerField">
 		<div class="averageKronerTxt">
-			Gennemsnit for Kroner
+			<?php echo $txtFile['ownGraph']['krAverage']; ?>
 		</div>
 		<div class="averageKronerCross">
 			&#10060;

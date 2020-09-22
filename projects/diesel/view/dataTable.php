@@ -1,15 +1,37 @@
+	
+	<?php $txtFile = include("../text/global.php");  ?>
 		<table class="advancedTable statisticTable">
 						<tr>
-							<th class="dieselHeader headerSortUp dateColumn">Dato</th>
-							<th class="dieselHeader headerSortDown kmColumn">Km</th>
-							<th class="dieselHeader headerSortDown literColumn">Liter</th>
-							<th class="dieselHeader headerSortDown kronerColumn">Kroner</th>
-							<th class="dieselHeader headerSortDown krlColumn">Kr/l</th>
-							<th class="dieselHeader headerSortDown kmlColumn">Km/l</th>
-							<th class="dieselHeader headerSortDown kmkrColumn">Km/kr</th>
-							<th class="dieselHeader headerSortDown krkmColumn">Kr/km</th>
-							<th class="dieselHeader headerSortDown lkmColumn">L/km</th>
-							<th class="dieselHeader headerSortDown lkrColumn">L/kr</th>
+							<th class="dieselHeader headerSortUp dateColumn">
+								<?php echo $txtFile['general']['date']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kmColumn">
+								<?php echo $txtFile['dataTable']['km']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown literColumn">
+								<?php echo $txtFile['dataTable']['liter']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kronerColumn">
+								<?php echo $txtFile['dataTable']['kr']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown krlColumn">
+								<?php echo $txtFile['dataTable']['kr/l']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kmlColumn">
+								<?php echo $txtFile['dataTable']['km/l']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown kmkrColumn">
+								<?php echo $txtFile['dataTable']['km/kr']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown krkmColumn">
+								<?php echo $txtFile['dataTable']['kr/km']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown lkmColumn">
+								<?php echo $txtFile['dataTable']['l/km']; ?>
+							</th>
+							<th class="dieselHeader headerSortDown lkrColumn">
+								<?php echo $txtFile['dataTable']['l/kr']; ?>
+							</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";

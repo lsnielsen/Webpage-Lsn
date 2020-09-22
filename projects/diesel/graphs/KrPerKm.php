@@ -8,9 +8,14 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "smallGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	krkmTitle = "<?php echo $txtFile['dropdown']['krkm'] ?>";
+	krkmxAxis = "<?php echo $txtFile['general']['date'] ?>";
+	krkmyAxis = "<?php echo $txtFile['stats']['krkm'] ?>";
+	krkmyAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner / Kilometer', 'Gennemsnit'],
+			[krkmxAxis, krkmyAxis, krkmyAxisII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kr/km']),
@@ -28,7 +33,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner per kilometer',
+		  title: krkmTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};

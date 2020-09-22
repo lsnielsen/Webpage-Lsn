@@ -1,5 +1,6 @@
 <?php
 	include "../projects/diesel/helpFunctions/advancedHelper.php";
+	$txtFile = include("../text/global.php"); 
 	$con = mysqli_connect('127.0.0.1','root','');
 	if(!$con) {  
 		echo 'not connect to the server';  
@@ -11,7 +12,7 @@
 <html>  
     <head>  
         <title>  
-            Advanced
+			<?php echo $txtFile['general']['tab']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/advanced.css" type="text/css">
@@ -19,78 +20,14 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<body style="background-color: #d9ffb3;">  
 		<h1>
-			Avanceret statistik for diesel forbrug
+			<?php echo $txtFile['stats']['header']; ?>
 		</h1>  
 	
 		<?php include "dataTable.php"; ?>
-	
-		<?php //include "bottumTable.php"; ?>
 		
-		<center>
-			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
-				<button class="dieselButton" 
-						value="dieselPage"
-						name="dieselButton"
-						style="left: -800px;">
-					Tilbage
-				</button>
-				
-				<button class="dieselButton" 
-						value="datePage"
-						name="dieselButton"
-						style="left: -600px;">
-					Statistik for datoerne
-				</button>
 
-				<button class="dieselButton" 
-						value="kilometerPage"
-						name="dieselButton"
-						style="left: -400px;">
-					Statistik for km
-				</button>
+		<?php include "advancedButtons.php"; ?>
 
-				<button class="dieselButton" 
-						value="literPage"
-						name="dieselButton"
-						style="left: -200px;">
-					Statistik for liter
-				</button>
-
-				<button class="dieselButton" 
-						value="kronerPage"
-						name="dieselButton">
-					Statistik for kr
-				</button>
-
-				<button class="dieselButton" 
-						value="krPerLiter"
-						name="dieselButton"
-						style="left: 200px;">
-					Statistik for kr/l
-				</button>
-
-				<button class="dieselButton" 
-						value="kmPerLiter"
-						name="dieselButton"
-						style="left: 400px;">
-					Statistik for km/l
-				</button>
-				
-				<button class="dieselButton" 
-						value="kmPerKroner"
-						name="dieselButton"
-						style="left: 600px;">
-					Statistik for km/kr
-				</button>
-				
-				<button class="dieselButton" 
-						value="ownDieselGraph"
-						name="dieselButton"
-						style="left: 800px;">
-					Lav din egen graf
-				</button>
-			</form>
-		</center>
 		
 		<?php include "../projects/diesel/graphs/krPerLiter.php"; ?>
 		<div class="spaceBetweenGraphs"> </div>
@@ -104,72 +41,10 @@
 		<?php //include "../projects/diesel/graphs/literPerKm.php"; ?>
 		<?php //include "../projects/diesel/graphs/literPerKroner.php"; ?>
 		
+
+		<?php include "advancedButtons.php"; ?>
 		
-		<center>
-			<form action="/../Webpage-Lsn/controller/diesel.php"  method="post">
-				<button class="dieselButton" 
-						value="dieselPage"
-						name="dieselButton"
-						style="left: -800px;">
-					Tilbage
-				</button>
-				
-				<button class="dieselButton" 
-						value="datePage"
-						name="dieselButton"
-						style="left: -600px;">
-					Statistik for datoerne
-				</button>
-
-				<button class="dieselButton" 
-						value="kilometerPage"
-						name="dieselButton"
-						style="left: -400px;">
-					Statistik for km
-				</button>
-
-				<button class="dieselButton" 
-						value="literPage"
-						name="dieselButton"
-						style="left: -200px;">
-					Statistik for liter
-				</button>
-
-				<button class="dieselButton" 
-						value="kronerPage"
-						name="dieselButton">
-					Statistik for kr
-				</button>
-
-				<button class="dieselButton" 
-						value="krPerLiter"
-						name="dieselButton"
-						style="left: 200px;">
-					Statistik for kr/l
-				</button>
-
-				<button class="dieselButton" 
-						value="kmPerLiter"
-						name="dieselButton"
-						style="left: 400px;">
-					Statistik for km/l
-				</button>
-				
-				<button class="dieselButton" 
-						value="kmPerKroner"
-						name="dieselButton"
-						style="left: 600px;">
-					Statistik for km/kr
-				</button>
-				
-				<button class="dieselButton" 
-						value="ownDieselGraph"
-						name="dieselButton"
-						style="left: 800px;">
-					Lav din egen graf
-				</button>
-			</form>
-		</center>
+	
 	</body>
 </html>
 

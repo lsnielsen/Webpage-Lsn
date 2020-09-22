@@ -1,11 +1,11 @@
-	
+<?php $txtFile = include("../text/global.php");  ?>
 <div class="kilometerValues">
 	<div class="headerKilometerField">
-		Kilometer statistik: 
+		<?php echo $txtFile['ownGraph']['kmHeader']; ?>
 	</div>
 	<div class="stdevKilometerField">
 		<div class="stdevkilometerTxt">
-			Standard afvigelse for kilometer
+			<?php echo $txtFile['ownGraph']['kmStDev']; ?>
 		</div>
 		<div class="stdevKilometerCross">
 			&#10060;
@@ -14,7 +14,7 @@
 
 	<div class="varKilometerField">
 		<div class="varKilometerTxt">
-			Varians for kilometer
+		<?php echo $txtFile['ownGraph']['kmVar']; ?>
 		</div>
 		<div class="varKilometerCross">
 			&#10060;
@@ -23,7 +23,7 @@
 
 	<div class="medianKilometerField">
 		<div class="medianKilometerTxt">
-			Median for kilometer
+			<?php echo $txtFile['ownGraph']['kmMedian']; ?>
 		</div>
 		<div class="medianKilometerCross">
 			&#10060;
@@ -32,7 +32,7 @@
 
 	<div class="averageKilometerField">
 		<div class="averageKilometerTxt">
-			Gennemsnit for kilometer
+			<?php echo $txtFile['ownGraph']['kmAverage']; ?>
 		</div>
 		<div class="averageKilometerCross">
 			&#10060;

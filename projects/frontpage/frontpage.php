@@ -1,20 +1,21 @@
 
 <html lang="da">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<?php $txtFile = include("../text/global.php");  ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<head>
 		<title>
 			LSN
 		</title>
-		<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-		<link rel="stylesheet" href="/../Webpage-Lsn/projects/frontpage/css/frontpage.css" type="text/css">
-		<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-		<script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script>
-
+		<link rel="stylesheet" href="/../Webpage-Lsn/projects/frontpage/css/frontpage.css" type="text/css">	
 	</head>
 	<body>
 		<h1>
 			Velkommen til hjemmesiden - Lsn
 		</h1>
+		
+			<img src="/Webpage-Lsn/projects/frontpage/image/dk.png" id="danish">
+			<img src="/Webpage-Lsn/projects/frontpage/image/en.png" id="english">
+		
 		
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
 			<button id="cvButton" type="submit" name="cvButton" value="cvPage"> Mit CV </button>
@@ -60,36 +61,38 @@
 </html>
 
 <script>
-	function onSuccess(googleUser) {
-		console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-	}
-	function onFailure(error) {
-		console.log("failure");
-		console.log(error);
-	}
-	function renderButton() {
-		console.log("renderButton");
-		gapi.signin2.render('my-signin2', {
-			'scope': 'profile email',
-			'width': 240,
-			'height': 50,
-			'longtitle': true,
-			'theme': 'dark',
-			'onsuccess': onSuccess,
-			'onfailure': onFailure
-	  });
-	}
+
+	$(document).ready(function() { 
+		document.cookie = "langPlace = frontpage";
+	});
+	$("#dieselButton").click(function() {
+		document.cookie = "langPlace = diesel";
+	});
+	$("#politicButton").click(function() {
+		document.cookie = "langPlace = politic";
+	});
+	$("#usedCarsButton").click(function() {
+		document.cookie = "langPlace = usedCars";
+	});
+	$("#runButton").click(function() {
+		document.cookie = "langPlace = run";
+	});
+	$("#bikeButton").click(function() {
+		document.cookie = "langPlace = bike";
+	});
+
+	$("#danish").click(function() {
+		document.cookie = "lang = danish";
+	});
+	$("#english").click(function() {
+		document.cookie = "lang = english";
+	});
+
+
+
+
+
 </script>
-
-
-
-
-
-
-
-
-
-
 
 
 

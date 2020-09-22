@@ -8,9 +8,13 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	freqTitle = "<?php echo $txtFile['graphs']['kmkrHeader'] ?>";
+	freqyAxis = "<?php echo $txtFile['graphs']['kmkrY'] ?>";
+	freqxAxis = "<?php echo $txtFile['graphs']['freqX'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -28,9 +32,9 @@
 		]);
 
 		var options = {
-			title: 'Frekvens diagram over kilometer per kroner',
-			vAxis: {title: 'Kilometer per kroner interval'},
-			hAxis: {title: 'Procent'},
+			title: freqTitle,
+			vAxis: {title: freqyAxis},
+			hAxis: {title: freqxAxis},
 			chartArea: {width: '50%'},
 			legend: 'none'
 		};

@@ -1,30 +1,33 @@
 <html>  
+	<?php $txtFile = include("../text/global.php");  ?>
     <head>  
         <title>  
-			Diesel
+			<?php echo $txtFile['general']['tabHeader']; ?>
         </title>  
 	</head>  
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/diesel.css" type="text/css">
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/diesel/css/popup.css" type="text/css">
 	<body>
 		<h1>
-			Diesel page
+			<?php echo $txtFile['frontpage']['header']; ?>
 		</h1>   
 		<form action="/../Webpage-Lsn/controller/diesel.php" method="post">  
 			<fieldset style="background-color: #b3ecff">
 				<legend style="font-weight: bold; font-size: 23;"> 
-					Indtast dine tal nedenfor, og de vil blive vist i tabellen til højre
+					<?php echo $txtFile['frontpage']['infoHeader']; ?>
 				</legend>  
 				<div style="margin-top: 30px;">
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
-							Dato <br>
+							<?php echo $txtFile['general']['date']; ?>
+							<br>
 						</label>
 						<input class="dieselInput" type="text" placeholder="format: yyyy-mm-dd" name="date">  
 					</div>
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
-							Antal kilometer <br>
+							<?php echo $txtFile['frontpage']['km']; ?>
+							<br>
 						</label>
 						<input class="dieselInput" type="text" placeholder="ex: 659,4 " name="km">  				 
 					</div>
@@ -32,37 +35,49 @@
 				<div style="margin-top: 20px; margin-bottom: 200px;">
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
-							Liter <br>
+							<?php echo $txtFile['frontpage']['liter']; ?>
+							<br>
 						</label>  
 						<input class="dieselInput" type="text" placeholder="ex: 23,3 " name="liter"> 					 
 					</div>
 					
 					<div style="display: inline-block;">
 						<label style="margin-left: 40px; font-weight: bold;">
-							Kroner <br>
+							<?php echo $txtFile['frontpage']['kr']; ?>
+							<br>
 						</label>
 						<input class="dieselInput" type="text" placeholder="ex: 223,3 " name="kr">				 
 					</div>
 					<br> <br> <br>
 					
 					<button class="dieselButton" type="submit" value="dieselPage" name="dieselButton" style="margin-left: 10px;">  
-						Indsæt tal
+						<?php echo $txtFile['frontpage']['enterNumbers']; ?>
 					</button>
 
 				</div>
 				
 				<div class="dieselNumbers">
 					<h2 style="margin-left: 150px;">
-						Tabel over indtastede diesel tal
+						<?php echo $txtFile['frontpage']['tableHeader']; ?>
 					</h2>
 
 					<table class="dieselTable">
 						<tr>
-							<th class="dieselHeader">Dato</th>
-							<th class="dieselHeader">Kilometer</th>
-							<th class="dieselHeader">Kroner</th>
-							<th class="dieselHeader">Liter</th>
-							<th class="dieselHeader">Slet række</th>
+							<th class="dieselHeader">
+								<?php echo $txtFile['general']['date']; ?>
+							</th>
+							<th class="dieselHeader">
+								<?php echo $txtFile['frontpage']['km']; ?>
+							</th>
+							<th class="dieselHeader">
+								<?php echo $txtFile['frontpage']['kr']; ?>
+							</th>
+							<th class="dieselHeader">
+								<?php echo $txtFile['frontpage']['liter']; ?>
+							</th>
+							<th class="dieselHeader">
+								<?php echo $txtFile['frontpage']['deleteRow']; ?>
+							</th>
 						</tr>
 						<?php
 							$tableData = "SELECT * FROM diesel";
@@ -104,7 +119,9 @@
 			<span class="helper"></span>
 			<div>
 				<div class="deleteDieselRowPopupCloseButton popupCloseButton">&times;</div>
-				<div class="messageInfo">Er du sikker på, at du vil slette denne række?</div>
+				<div class="messageInfo">
+					<?php echo $txtFile['frontpage']['confirmDelete']; ?>
+				</div>
 				<ul class="rowToDelete">
 					<li class="dateToDelete"> </li>
 					<li class="kmToDelete"> </li>
@@ -112,8 +129,12 @@
 					<li class="literToDelete"> </li>
 				</ul>
 				<div>
-					<div class="deleteDieselRowYes dieselPopupButton">Ja</div>
-					<div class="deleteDieselRowNo dieselPopupButton">Nej</div>
+					<div class="deleteDieselRowYes dieselPopupButton">
+						<?php echo $txtFile['frontpage']['yes']; ?>
+					</div>
+					<div class="deleteDieselRowNo dieselPopupButton">
+						<?php echo $txtFile['frontpage']['no']; ?>
+					</div>
 				</div>
 			</div>
 			<form id="deleteSpecificRow" action="/../Webpage-Lsn/controller/diesel.php" method="post">
@@ -128,7 +149,7 @@
 	
 	<form action="/../Webpage-Lsn/controller/frontpage.php" method="post">
 		<button type="submit" name="dieselButton" id="backToStartButton" value="frontpage"> 
-			Tilbage til startside 
+			<?php echo $txtFile['frontpage']['backButton']; ?>
 		</button>
 	</form>
 </html> 

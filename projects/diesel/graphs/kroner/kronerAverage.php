@@ -8,9 +8,14 @@
 	$graphData = "SELECT * FROM diesel";
 	$result = mysqli_query($con,$graphData);
 	$graphArray = handleAdvancedArray($result, "bigGraph");	
+	$txtFile = include("../text/global.php");
 ?>
 
 <script>
+	averageTitle = "<?php echo $txtFile['stats']['kr'] ?>";
+	averagexAxis = "<?php echo $txtFile['general']['date'] ?>";
+	averageyAxisII = "<?php echo $txtFile['dropdown']['average'] ?>";
+	averageyAxisIII = "<?php echo $txtFile['dropdown']['median'] ?>";
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -19,7 +24,7 @@
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['Dato', 'Kroner', 'Gennemsnit', 'Median'],
+			[averagexAxis, averageTitle, averageyAxisII, averageyAxisIII],
 			[
 				graphArray[0][1], 
 				parseFloat(graphArray[0]['kroner']),
@@ -29,7 +34,7 @@
 		]);
 
 		var options = {
-		  title: 'Kroner',
+		  title: averageTitle,
 		  curveType: 'function',
 		  legend: { position: 'bottom' }
 		};
