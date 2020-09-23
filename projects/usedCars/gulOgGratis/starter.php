@@ -58,18 +58,18 @@
 	
 	function getTheCarGulOgGratis(url)
 	{
-		console.log("second url calls, url: " + url);
+		//console.log("second url calls, url: " + url);
 		$.get(url, 
 			function( data ) {
-				console.log("Gul og gratis car url: " + data);
-		//		var singleCarArray = new Array();
-		//		theLink = url;
-		//		getMainAttributes(data, singleCarArray);
-		//		setPrimerAttributes(data, singleCarArray);
-		//		setExtraEquipment(data);
+				//console.log("Gul og gratis car url: " + data);
+				var singleCarArray = new Array();
+				theLink = url;
+				getMainGogAttributes(data, singleCarArray);
+				setPrimerGogAttributes(data, singleCarArray);
+				setExtraGogEquipment(data);
 				
-				//setTheFirstArray(singleCarArray);
-				//console.log("single car array : " + singleCarArray);
+				console.log("single car array : " + singleCarArray);
+				setTheFirstGogArray(singleCarArray);
 			},
 			'html'
 		);
