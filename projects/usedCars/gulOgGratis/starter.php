@@ -63,15 +63,15 @@
 		$.get(url, 
 			function( data ) {
 				//console.log("Gul og gratis car url: " + data);
-				var singleCarArray = new Array();
+				var gogCarArray = new Array();
 
 				gogTheLink = url;
-				getMainGogAttributes(data, singleCarArray);
-				setPrimerGogAttributes(data, singleCarArray);
+				getMainGogAttributes(data, gogCarArray);
+				setPrimerGogAttributes(data, gogCarArray);
 				setExtraGogEquipment(data);
-				setTheFirstGogArray(singleCarArray);
+				setTheFirstGogArray(gogCarArray);
 
-				//console.log("single car array : " + singleCarArray);
+				//console.log("single car array : " + gogCarArray);
 			},
 			'html'
 		);

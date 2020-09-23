@@ -4,7 +4,7 @@
 
 
 
-	function getMainGogAttributes(data, singleCarArray)
+	function getMainGogAttributes(data, gogCarArray)
 	{
 		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
 		nameEnd = data.search("<div class=\"reviews-wrapper\">");
@@ -146,7 +146,7 @@
 		}
 	}
 		
-	function setPrimerGogAttributes(data, singleCarArray)
+	function setPrimerGogAttributes(data, gogCarArray)
 	{
 		hkStart = data.search("<td style=\"color: #888;\">HK/Nm</td>");
 		hkEnd = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
