@@ -51,7 +51,7 @@
 			function() 
 			{
 				$(".middleSearch").show();
-				$("#webscraper").click();
+				getTheUsedCar();
 				setTimeout(
 					function() 
 					{
@@ -91,7 +91,7 @@
 	}		
 	
 		
-	$("#webscraper").click(function() {
+	function getTheUsedCar() {
 		//console.log("First array:");
 		//console.log(firstUrlArr);
 		
@@ -114,7 +114,7 @@
 				//console.log("Second array:");
 				//console.log(dataArray);
 			}, 3000);
-	});
+	}
 	
 	
 	function callingSecondUrl(url)
