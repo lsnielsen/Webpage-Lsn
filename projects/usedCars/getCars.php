@@ -10,6 +10,9 @@
 	
 	var basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
 	var basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
+	
+	var secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
+	var basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
 
 
 	var firstUrlArr = new Array();
@@ -125,14 +128,8 @@
 				//console.log("calling the second url");
 				var singleCarArray = new Array();
 				theLink = url;
-				getModelName(data, singleCarArray);
-				setPriceAttributes(data, singleCarArray);
+				getMainAttributes(data, singleCarArray);
 				setPrimerAttributes(data, singleCarArray);
-				setRegAttributes(data, singleCarArray);
-				setProdAttributes(data, singleCarArray);
-				setModelAttributes(data, singleCarArray);
-				setSightAttributes(data, singleCarArray);
-				setColorAttributes(data, singleCarArray);
 				setExtraEquipment(data);
 				
 				setTheFirstArray(singleCarArray);
