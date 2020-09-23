@@ -140,7 +140,7 @@
 					'krkm' => 'Kroner per kilometer',
 					'km' => 'Kilometer',
 					'median' => 'Median',
-					'varians' => 'Varians',
+					'var' => 'Varians',
 					'stdev' => 'St. dev.',
 					'average' => 'Gennemsnit',
 					'header' => 'Setup din egen graf, ved at vælge fra felterne nederst på siden',

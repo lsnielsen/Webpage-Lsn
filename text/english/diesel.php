@@ -154,7 +154,7 @@
 			'krkm' => 'Kroner per kilometer',
 			'km' => 'Kilometer',
 			'median' => 'Median',
-			'varians' => 'Variance',
+			'var' => 'Variance',
 			'stdev' => 'St. dev. ',
 			'average' => 'Average',
 		],

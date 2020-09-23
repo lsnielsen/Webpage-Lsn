@@ -18,7 +18,7 @@
 			echo "</td></tr>";
 			
 			echo "	<tr class=bottomRows>";
-			echo "<td class=dieselTableCell> " . $txtFile['dropdown']['varians'] . " </td>";
+			echo "<td class=dieselTableCell> " . $txtFile['dropdown']['var'] . " </td>";
 			echo "<td class=dieselTableCell>";
 			echo number_format($graphArray[0]['kilometerVariance'], 2, ',', '.');
 			echo "</td></tr>";
