@@ -135,7 +135,7 @@
 		singleCarArray.push(gogCountOfDoors);
 		singleCarArray.push(gogTheRegistrationDate);
 		singleCarArray.push(gogTheProductionDate);
-		singleCarArray.push(gogyearOfTheModel);
+		singleCarArray.push(gogYearOfTheModel);
 		singleCarArray.push(gogLastDateOfSight);
 		singleCarArray.push(gogTheColor);
 		singleCarArray.push(gogAlloyWheels);

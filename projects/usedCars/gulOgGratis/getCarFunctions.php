@@ -15,15 +15,15 @@
 			modelStart = firstSubstring.search("<span>");
 			modelEnd = firstSubstring.search("</span>");
 			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
-			theCarModel = secondSubstring;
+			gogTheCarModel = secondSubstring;
 			
 			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
 			thirdSubstring = thirdSubstring.replace(",", ".");
-			theEngine = thirdSubstring;
+			gogTheEngine = thirdSubstring;
 			//console.log("Engine: " + thirdSubstring);
 		} else {
-		    theCarModel = "-";
-			theEngine = "-";
+		    gogTheCarModel = "-";
+			gogTheEngine = "-";
 		}
 			
 		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
@@ -33,9 +33,9 @@
 			//console.log("price start, end: " + priceStart + ", " + priceEnd);
 			priceString = priceString.substring(0, priceEnd);
 			//console.log("price: " + priceString + "\n");
-			thePrice = priceString;
+			gogThePrice = priceString;
 		} else {
-			thePrice = "-";
+			gogThePrice = "-";
 		}
 		
 		colorStart = data.search("<span>Farve:</span>");
@@ -53,9 +53,9 @@
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			colorString = colorString.replace(/<[a-z<>\/]*/, "");
 			//console.log(colorString);
-			theColor = colorString;
+			gogTheColor = colorString;
 		} else {
-			theColor = "-";
+			gogTheColor = "-";
 		}
 
 		sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
@@ -72,9 +72,9 @@
 				sightString = sightString.replace(" ", "");
 			}
 			//console.log(sightString);
-			lastDateOfSight = sightString;
+			gogLastDateOfSight = sightString;
 		} else {
-			lastDateOfSight = "-";
+			gogLastDateOfSight = "-";
 		}
 		
 		modelStart = data.search("<div class=\"car-model-year\">");
@@ -97,9 +97,9 @@
 				modelString = modelString.replace(" ", "");
 			}
 			//console.log("Model: " + modelString);
-			yearOfTheModel = modelString;
+			gogYearOfTheModel = modelString;
 		} else {
-			yearOfTheModel = "-";
+			gogYearOfTheModel = "-";
 		}
 				
 		prodStart = data.search("<div class=\"car-production-date\">");
@@ -118,9 +118,9 @@
 				prodString = prodString.replace(" ", "");
 			}
 			//console.log("production: " + prodString);
-			theProductionDate = prodString;
+			gogTheProductionDate = prodString;
 		} else {
-			theProductionDate = "-";
+			gogTheProductionDate = "-";
 		}
 				
 		regStart = data.search("<div class=\"car-first-registration-date\">");
@@ -140,9 +140,9 @@
 				regString = regString.replace(" ", "");
 			}
 			//console.log("registration: " + regString);
-			theRegistrationDate = regString;
+			gogTheRegistrationDate = regString;
 		} else {
-			theRegistrationDate = "-";
+			gogTheRegistrationDate = "-";
 		}
 	}
 		
@@ -151,175 +151,175 @@
 		hkStart = data.search("<td style=\"color: #888;\">HK/Nm</td>");
 		hkEnd = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
 		if (hkStart != -1 && hkEnd != -1) {
-			horsePowerAndNm = removePrimerGogAttributeSpace(hkStart, hkEnd, data);
+			gogHorsePowerAndNm = removePrimerGogAttributeSpace(hkStart, hkEnd, data);
 		} else {
-			horsePowerAndNm = "-";
+			gogHorsePowerAndNm = "-";
 		}
 
 		zeroToHundredStart = data.search(/[0-9]+,[0-9]* sek/);
 		if (zeroToHundredStart != -1) {
 			fromZeroToHundred = data.substring(zeroToHundredStart, zeroToHundredStart+8);
 			fromZeroToHundred = fromZeroToHundred.replace("<", "");
-			fromZeroToHundred = fromZeroToHundred.replace(",", ".");
+			gogFromZeroToHundred = fromZeroToHundred.replace(",", ".");
 			//console.log("0-100 km/t: " + fromZeroToHundred);
 		} else {
-			fromZeroToHundred = "-";
+			gogFromZeroToHundred = "-";
 		}
 
 		topSpeedStart = data.search("<td style=\"color: #888;\">Tophastighed</td>");
 		topSpeedEnd = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
 		if (topSpeedStart != -1 && topSpeedEnd != -1) {
-			theTopSpeed = removePrimerGogAttributeSpace(topSpeedStart, topSpeedEnd, data);
+			gogTheTopSpeed = removePrimerGogAttributeSpace(topSpeedStart, topSpeedEnd, data);
 			//console.log("topspeed: " + theTopSpeed);
 		} else {
-			theTopSpeed = "-";
+			gogTheTopSpeed = "-";
 		}
 
 		propellantStart = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
 		propellantEnd = data.search("<td style=\"color: #888;\">Forbrug</td>");
 		if (propellantStart != -1 && propellantEnd != -1) {
 			energyToUse = removePrimerGogAttributeSpace(propellantStart, propellantEnd, data);
-			energyToUse = energyToUse.replace(",", ".");
+			gogEnergyToUse = energyToUse.replace(",", ".");
 		} else {
-			energyToUse = "-";
+			gogEnergyToUse = "-";
 		}
 
 		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
 		if (usageStart != -1) {
 			energyUsage = data.substring(usageStart, usageStart+9);
-			energyUsage = energyUsage.replace(",", ".");
+			gogEnergyUsage = energyUsage.replace(",", ".");
 			//console.log("Energi forbrug: " + energyUsage);
 		} else {
-			energyUsage = "-";
+			gogEnergyUsage = "-";
 		}
 
 		euroStart = data.search("<td style=\"color: #888;\">Euronorm</td>");
 		euroEnd = data.search("<td style=\"color: #888;\">Bredde</td>");
 		if (euroStart != -1 && euroEnd != -1) {
-			theEuronorm = removePrimerGogAttributeSpace(euroStart, euroEnd, data);
+			gogTheEuronorm = removePrimerGogAttributeSpace(euroStart, euroEnd, data);
 		} else {
-			theEuronorm = "-";
+			gogTheEuronorm = "-";
 		}
 
 		widthStart = data.search("<td style=\"color: #888;\">Bredde</td>");
 		widthEnd = data.search("<td style=\"color: #888;\">Længde</td>");
 		if (widthStart != -1 && widthEnd != -1) {
-			theWidth = removePrimerGogAttributeSpace(widthStart, widthEnd, data);
+			gogTheWidth = removePrimerGogAttributeSpace(widthStart, widthEnd, data);
 		} else {
-			theWidth = "-";
+			gogTheWidth = "-";
 		}
 
 		lengthStart = data.search("<td style=\"color: #888;\">Længde</td>");
 		lengthEnd = data.search("<td style=\"color: #888;\">Højde</td>");
 		if (lengthStart != -1 && lengthEnd != -1) {
-			theLength = removePrimerGogAttributeSpace(lengthStart, lengthEnd, data);
+			gogTheLength = removePrimerGogAttributeSpace(lengthStart, lengthEnd, data);
 		} else {
-			theLength = "-";
+			gogTheLength = "-";
 		}
 
 		heightStart = data.search("<td style=\"color: #888;\">Højde</td>");
 		heightEnd = data.search("<td style=\"color: #888;\">Lasteevne</td>");
 		if (heightStart != -1 && heightEnd != -1) {
-			theHeight = removePrimerGogAttributeSpace(heightStart, heightEnd, data);
+			gogTheHeight = removePrimerGogAttributeSpace(heightStart, heightEnd, data);
 		} else {
-			theHeight = "-";
+			gogTheHeight = "-";
 		}
 
 		loadStart = data.search("<td style=\"color: #888;\">Lasteevne</td>");
 		loadEnd = data.search("<td style=\"color: #888;\">Trækhjul</td>");
 		if (loadStart != -1 && loadEnd != -1) {
-			loadAbility = removePrimerGogAttributeSpace(loadStart, loadEnd, data);
+			gogLoadAbility = removePrimerGogAttributeSpace(loadStart, loadEnd, data);
 		} else {
-			loadAbility = "-";
+			gogLoadAbility = "-";
 		}
 
 		tractionStart = data.search("<td style=\"color: #888;\">Trækhjul</td>");
 		tractionEnd = data.search("<td style=\"color: #888;\">Cylindre</td>");
 		if (tractionStart != -1 && tractionEnd != -1) {
-			drivingWheels = removePrimerGogAttributeSpace(tractionStart, tractionEnd, data);
+			gogDrivingWheels = removePrimerGogAttributeSpace(tractionStart, tractionEnd, data);
 		} else {
-			drivingWheels = "-";
+			gogDrivingWheels = "-";
 		}
 
 		cylStart = data.search("<td style=\"color: #888;\">Cylindre</td>");
 		cylEnd = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
 		if (cylStart != -1 && cylEnd != -1) {
-			theCylinders = removePrimerGogAttributeSpace(cylStart, cylEnd, data);
+			gogTheCylinders = removePrimerGogAttributeSpace(cylStart, cylEnd, data);
 		} else {
-			theCylinders = "-";
+			gogTheCylinders = "-";
 		}
 
 		absStart = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
 		absEnd = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
 		if (absStart != -1 && absEnd != -1) {
-			absBreaks = removePrimerGogAttributeSpace(absStart, absEnd, data);
+			gogAbsBreaks = removePrimerGogAttributeSpace(absStart, absEnd, data);
 		} else {
-			absBreaks = "-";
+			gogAbsBreaks = "-";
 		}
 
 		maxloadStart = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
 		maxloadEnd = data.search("<td style=\"color: #888;\">Airbags</td>");
 		if (maxloadStart != -1 && maxloadEnd != -1) {
-			theMaxLoad = removePrimerGogAttributeSpace(maxloadStart, maxloadEnd, data);
+			gogTheMaxLoad = removePrimerGogAttributeSpace(maxloadStart, maxloadEnd, data);
 		} else {
-			theMaxLoad = "-";
+			gogTheMaxLoad = "-";
 		}
 
 		airbagStart = data.search("<td style=\"color: #888;\">Airbags</td>");
 		airbagEnd = data.search("<td style=\"color: #888;\">ESP</td>");
 		if (airbagStart != -1 && airbagEnd != -1) {
-			numberOfAirbags = removePrimerGogAttributeSpace(airbagStart, airbagEnd, data);
+			gogNumberOfAirbags = removePrimerGogAttributeSpace(airbagStart, airbagEnd, data);
 		} else {
-			numberOfAirbags = "-";
+			gogNumberOfAirbags = "-";
 		}
 
 		espStart = data.search("<td style=\"color: #888;\">ESP</td>");
 		espEnd = data.search("<td style=\"color: #888;\">Tank</td>");
 		if (espStart != -1 && espEnd != -1) {
-			doesEsp = removePrimerGogAttributeSpace(espStart, espEnd, data);
+			gogDoesEsp = removePrimerGogAttributeSpace(espStart, espEnd, data);
 		} else {
-			doesEsp = "-";
+			gogDoesEsp = "-";
 		}
 
 		tankStart = data.search("<td style=\"color: #888;\">Tank</td>");
 		tankEnd = data.search("<td style=\"color: #888;\">Gear</td>");
 		if (tankStart != -1 && tankEnd != -1) {
-			theGasTank = removePrimerGogAttributeSpace(tankStart, tankEnd, data);
+			gogTheGasTank = removePrimerGogAttributeSpace(tankStart, tankEnd, data);
 		} else {
-			theGasTank = "-";
+			gogTheGasTank = "-";
 		}
 
 		gearStart = data.search("<td style=\"color: #888;\">Gear</td>");
 		gearEnd = data.search("<td style=\"color: #888;\">Geartype</td>");
 		if (gearStart != -1 && gearEnd != -1) {
-			theGears = removePrimerGogAttributeSpace(gearStart, gearEnd, data);
+			gogTheGears = removePrimerGogAttributeSpace(gearStart, gearEnd, data);
 		} else {
-			theGears = "-";
+			gogTheGears = "-";
 		}
 
 		geartypeStart = data.search("<td style=\"color: #888;\">Geartype</td>");
 		geartypeEnd = data.search("<td style=\"color: #888;\">Vægt</td>");
 		if (geartypeStart != -1 && geartypeEnd != -1) {
-			theGearType = removePrimerGogAttributeSpace(geartypeStart, geartypeEnd, data);
+			gogTheGearType = removePrimerGogAttributeSpace(geartypeStart, geartypeEnd, data);
 		} else {
-			theGearType = "-";
+			gogTheGearType = "-";
 		}
 
 		weightStart = data.search("<td style=\"color: #888;\">Vægt</td>");
 		weightEnd = data.search("<td style=\"color: #888;\">Døre</td>");
 		if (weightStart != -1 && weightEnd != -1) {
-			theWeight = removePrimerGogAttributeSpace(weightStart, weightEnd, data);
+			gogTheWeight = removePrimerGogAttributeSpace(weightStart, weightEnd, data);
 		} else {
-			theWeight = "-";
+			gogTheWeight = "-";
 		}
 
 		doorStart = data.search(/<td style="color: #888;">Døre<\/td>/);
 		doorTxt = data.substring(doorStart+101 , doorStart+102);
 		//console.log("doors; start: " + doorStart + ", \n doorTxt: " + doorTxt);
 		if (doorStart != -1) {
-			countOfDoors = doorTxt;
+			gogCountOfDoors = doorTxt;
 		} else {
-			countOfDoors = "-";
+			gogCountOfDoors = "-";
 		}
 
 		getGogContactDetails(data);
@@ -349,9 +349,9 @@
 		//console.log(" phone; start: " + phoneStart + ", \n phoneTxt: " + phoneTxt + " \n");
 		
 		if(cityStart == -1) {
-			contactInfo = "-";
+			gogContactInfo = "-";
 		} else {
-			contactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
+			gogContactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
 			//console.log("Kontakt: " + contactInfo);
 		}
 		

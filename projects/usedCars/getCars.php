@@ -6,6 +6,9 @@
 	include("bilbasen/starter.php");
 	
 	include("gulOgGratis/starter.php");
+	include("gulOgGratis/array.php");
+	include("gulOgGratis/getCarFunctions.php");
+	include("gulOgGratis/extraEquipment.php");
 ?>
 
 <script>
@@ -66,14 +69,14 @@
 	function gulOgGratisLoop() {       
 		setTimeout(function() {   
 			if (loopJ >= 2) {
-				theUrl = basicUrl + "&page=" + loopJ;
+				theUrl = gulOgGratisUrl + "/?n=" + loopJ*60;
 				callingSecondUrl(theUrl);
 			} else {
 				//console.log("Gul og gratis url: " + gulOgGratisUrl);
 				callingSecondUrl(gulOgGratisUrl);
 			}
 			loopJ++;                  
-			if (loopJ < 2) {         
+			if (loopJ < 5) {         
 				gulOgGratisLoop();             
 			}                       
 		}, 100)

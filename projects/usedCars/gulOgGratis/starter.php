@@ -18,6 +18,7 @@
 						//console.log("true, includes: " + modelArray[0] + ", " + modelArray[1]);
 						theFirstString = "https://www.guloggratis.dk" + theFirstString;
 						//console.log("url: " + theFirstString);
+						console.log(" ");
 						secondUrlArr.push(theFirstString);
 						//console.log("\n \n");
 					}
@@ -68,7 +69,7 @@
 				setPrimerGogAttributes(data, singleCarArray);
 				setExtraGogEquipment(data);
 				
-				console.log("single car array : " + singleCarArray);
+				//console.log("single car array : " + singleCarArray);
 				setTheFirstGogArray(singleCarArray);
 			},
 			'html'
