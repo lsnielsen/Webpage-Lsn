@@ -16,7 +16,6 @@
 			</a>	
 			Resultatet vil også blive vist i tabellen nedenfor.
 		</h1>
-				<button id="webscraper" style="display: none;"> </button>
 
 				<form method="post">
 					<button type="submit" 
