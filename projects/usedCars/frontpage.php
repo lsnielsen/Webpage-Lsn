@@ -40,7 +40,7 @@
 				
 					
 				<form class="modelDropdown">
-					<label class="infoTxt">Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
+					<label class="infoTxt">Her kan du vælge hvilken bilmodel du vil have i din csv fil:</label>
 					<select class="carModel frontpageStyle">
 						<option style="font-size: 20px;"> Vælg bilmodel </option>
 						<option class="carModelOptions" value="Volvo V60">Volvo V60</option>
