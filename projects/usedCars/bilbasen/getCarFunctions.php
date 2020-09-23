@@ -4,7 +4,7 @@
 
 
 
-	function getModelName(data, singleCarArray)
+	function getMainAttributes(data, singleCarArray)
 	{
 		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
 		nameEnd = data.search("<div class=\"reviews-wrapper\">");
@@ -25,10 +25,7 @@
 		    theCarModel = "-";
 			theEngine = "-";
 		}
-	}
-
-	function setPriceAttributes(data, singleCarArray)
-	{				
+			
 		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
 		if (priceStart != -1) {
 			priceString = data.substring(priceStart+20, priceStart+50);
@@ -40,10 +37,7 @@
 		} else {
 			thePrice = "-";
 		}
-	}
-	
-	function setColorAttributes(data, singleCarArray)
-	{			
+		
 		colorStart = data.search("<span>Farve:</span>");
 		//console.log("color start, end: " + colorStart);
 		if (colorStart != -1) {
@@ -63,11 +57,7 @@
 		} else {
 			theColor = "-";
 		}
-	}
 
-
-	function setSightAttributes(data, singleCarArray)
-	{
 		sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
 		sightEnd = data.search("<li title=\"Farve\"><span>Farve:</span>");
 		//console.log("sight start, end: " + sightStart + " " + sightEnd);
@@ -86,10 +76,7 @@
 		} else {
 			lastDateOfSight = "-";
 		}
-	}
-	
-	function setModelAttributes(data, singleCarArray)
-	{		
+		
 		modelStart = data.search("<div class=\"car-model-year\">");
 		modelEnd = data.search("<section class=\"section vip-finance\"");
 		if (modelStart != -1 && modelEnd != -1) {
@@ -114,10 +101,7 @@
 		} else {
 			yearOfTheModel = "-";
 		}
-	}
-	
-	function setProdAttributes(data, singleCarArray)
-	{				
+				
 		prodStart = data.search("<div class=\"car-production-date\">");
 		prodEnd = data.search("<div class=\"car-model-year\">");
 		if (prodStart != -1 && prodEnd != -1) {
@@ -138,10 +122,7 @@
 		} else {
 			theProductionDate = "-";
 		}
-	}
-	
-	function setRegAttributes(data, singleCarArray)
-	{					
+				
 		regStart = data.search("<div class=\"car-first-registration-date\">");
 		regEnd = data.search("<div class=\"car-production-date\">");
 		if (regStart != -1 && regEnd != -1) {
