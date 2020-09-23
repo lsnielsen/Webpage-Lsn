@@ -41,7 +41,7 @@
 				//console.log("Making second url call");
 				getTheCarGulOgGratis(secondUrlArr[loopJJ]);
 				loopJJ++;                  
-				if (loopJJ < 1) {         
+				if (loopJJ < secondUrlArr.length) {         
 					mySecondLoop();             
 				}                       
 			}, 120)
@@ -64,13 +64,14 @@
 			function( data ) {
 				//console.log("Gul og gratis car url: " + data);
 				var singleCarArray = new Array();
-				theLink = url;
+
+				gogTheLink = url;
 				getMainGogAttributes(data, singleCarArray);
 				setPrimerGogAttributes(data, singleCarArray);
 				setExtraGogEquipment(data);
-				
-				//console.log("single car array : " + singleCarArray);
 				setTheFirstGogArray(singleCarArray);
+
+				//console.log("single car array : " + singleCarArray);
 			},
 			'html'
 		);

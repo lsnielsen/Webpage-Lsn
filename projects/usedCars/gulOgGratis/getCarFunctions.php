@@ -329,7 +329,6 @@
 	
 	function getGogContactDetails(data)
 	{
-		
 		cityStart = data.search(/<div>\d{4} [A-Za-zæøå ]+<\/div>/);
 		cityTxt = data.substring(cityStart+5 , cityStart+40);
 		cityEnd = cityTxt.search(/<\/div>/);

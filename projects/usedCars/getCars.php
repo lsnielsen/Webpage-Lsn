@@ -47,7 +47,7 @@
 					{
 						$(".endSearch").show();
 						makeArrayToPhp();
-					}, 10000);
+					}, 30000);
 			}, 30000);
 	});
 		
@@ -96,6 +96,8 @@
 	
 	function makeArrayToPhp()
 	{
+		console.log("data array: ");
+		console.log(dataArray);
 		for(i=0; i<dataArray.length; i++) {
 			arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {
@@ -106,7 +108,7 @@
 		}
 		$('#arrayButton').val(dataArray);
 		$("#arrayButton").show();
-		$("#arrayButton").click();
+		//$("#arrayButton").click();
 	}
 	
 

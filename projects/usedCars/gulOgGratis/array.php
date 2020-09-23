@@ -107,8 +107,8 @@
 
 	function setTheFirstGogArray(singleCarArray)
 	{
-		singleCarArray.push(gogContactInfo);
 		singleCarArray.push(gogTheLink);
+		singleCarArray.push(gogContactInfo);
 		singleCarArray.push(gogTheCarModel);
 		singleCarArray.push(gogTheEngine);
 		singleCarArray.push(gogHorsePowerAndNm);
@@ -216,9 +216,10 @@
 		carModel = singleCarArray[1];
 		engine = singleCarArray[2];
 		price = singleCarArray[3];
-		if(carModel != "-" && engine != "-" && price != "-") {
-			dataArray.push(gogSingleCarArray);
-		}
+		//if(carModel != "-" && engine != "-" && price != "-") {
+			console.log("pushing to dataarray");
+			dataArray.push(singleCarArray);
+		//}
 	}
 
 
