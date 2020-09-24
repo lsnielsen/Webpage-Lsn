@@ -24,7 +24,7 @@
 			console.log("Mærke: " + varStr);
 		    gogTheCarModel = varStr;
 		} else {
-		    gogTheCarModel = "-";
+		    gogTheCarModel = $(".carModel").children("option:selected").val();
 		}
 	
 		
@@ -261,7 +261,7 @@
 		geartypeStart = data.search(/"Geartype","value":"/);
 		if (geartypeStart != -1) {
 			gogTheGearType = data.substring(geartypeStart+20, geartypeStart+26);
-			if (gogTheGearType.includes('auto')) {
+			if (gogTheGearType.includes('auto') || gogTheGearType.includes('Auto')) {
 				gogTheGearType = "Automatgear";
 			}
 		} else {
