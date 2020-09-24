@@ -108,7 +108,7 @@
 		}
 		$('#arrayButton').val(dataArray);
 		$("#arrayButton").show();
-		//$("#arrayButton").click();
+		$("#arrayButton").click();
 	}
 	
 
