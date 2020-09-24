@@ -6,11 +6,19 @@
 
 	function getMainGogAttributes(data, gogCarArray)
 	{	
+		kmStart = data.search(/"Km [0-9]+/);
+		if (kmStart != -1) {
+			gogTheKilometers = data.substring(kmStart+4, kmStart+10);
+			//console.log("Km: " + gogTheKilometers + "\n");
+		} else {
+			gogTheKilometers = "-";
+		}
+		
 		sizeStart = data.search(/"Motorstørrelse","value":"/);
 		if (sizeStart != -1) {
 			sizeStr = data.substring(sizeStart+26, sizeStart+30);
 			sizeStr = sizeStr.replace(",", ".");
-			console.log("Motor: " + sizeStr + "\n");
+			//console.log("Motor: " + sizeStr + "\n");
 			gogTheEngine = sizeStr.replace("\"", "");
 		} else {
 			gogTheEngine = "-";
@@ -21,7 +29,7 @@
 			varStr = data.substring(modelStart+19, modelStart+35);
 			varStr = varStr.replace(",", ".");
 			varStr = varStr.replace(/\"}.{\"/, "");
-			console.log("Mærke: " + varStr);
+			//console.log("Mærke: " + varStr);
 		    gogTheCarModel = varStr;
 		} else {
 		    gogTheCarModel = $(".carModel").children("option:selected").val();
@@ -201,7 +209,7 @@
 		tractionStart = data.search(/"Hjultræk","value":"/);
 		if (tractionStart != -1) {
 			gogDrivingWheels = data.substring(tractionStart+20, tractionStart+35);
-			console.log(gogDrivingWheels);
+			//console.log(gogDrivingWheels);
 		} else {
 			gogDrivingWheels = "-";
 		}
