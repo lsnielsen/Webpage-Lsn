@@ -6,6 +6,18 @@
 
 	function getMainAttributes(data, singleCarArray)
 	{
+		kmStart = data.search(/<span class="label">Km<\/span>/);
+		kmEnd = data.search(/<section id="bbVipUsage" class="section">/);
+		if (kmStart != -1) {
+			theKmSub = data.substring(kmStart, kmEnd);
+			kmNewStart = theKmSub.search(/<span class="value">/);
+			kmNewEnd = theKmSub.search(/ <\/span>/);
+			theKilometers = theKmSub.substring(kmNewStart+20, kmNewEnd);
+			//console.log("Km string: " + theKilometers + "\n");
+		} else {
+			theKilometers = "-";
+		}
+		
 		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
 		nameEnd = data.search("<div class=\"reviews-wrapper\">");
 		//console.log("nameStart, nameEnd = " + nameStart + ", " + nameEnd);
@@ -17,7 +29,7 @@
 			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
 			theCarModel = secondSubstring;
 			
-			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
+			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+12);
 			thirdSubstring = thirdSubstring.replace(",", ".");
 			theEngine = thirdSubstring;
 			//console.log("Engine: " + thirdSubstring);
