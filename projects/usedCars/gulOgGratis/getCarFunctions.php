@@ -6,33 +6,36 @@
 
 	function getMainGogAttributes(data, gogCarArray)
 	{
-		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
-		nameEnd = data.search("<div class=\"reviews-wrapper\">");
-		//console.log("nameStart, nameEnd = " + nameStart + ", " + nameEnd);
-		if (nameStart != -1 && nameEnd != -1) {
-			firstSubstring = data.substring(nameStart, nameEnd);
+		sizeStart = data.search(/"Motorstørrelse","value":"/);
+		sizeStr = data.substring(sizeStart+26, sizeStart+30);
+		sizeEnd = sizeStr.search(/"[ \n]*/);
+		gogTheSize = sizeStr.substring(0, sizeEnd);
+		
+	
+		varStart = data.search(/"Variant","value":"/);
+		varStr = data.substring(varStart+19, varStart+35);
+		varEnd = varStr.search(/"[ \n]*/);
+		gogTheVar = varStr.substring(0, varEnd);
+		
+		
+		if (sizeStart != -1 && sizeEnd != -1 && varStart != -1 && varEnd != -1) {
 			
-			modelStart = firstSubstring.search("<span>");
-			modelEnd = firstSubstring.search("</span>");
-			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
-			gogTheCarModel = secondSubstring;
-			
-			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
-			thirdSubstring = thirdSubstring.replace(",", ".");
-			gogTheEngine = thirdSubstring;
-			//console.log("Engine: " + thirdSubstring);
+			temp = gogTheSize + " " + gogTheVar;
+			gogTheEngine = temp.replace(",", ".");
+
+			console.log("Engine: " + gogTheEngine);
 		} else {
 		    gogTheCarModel = "-";
 			gogTheEngine = "-";
 		}
 			
-		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
+		priceStart = data.search(/,"text":"[0-9]+.[0-9]+ kr.","/);
 		if (priceStart != -1) {
-			priceString = data.substring(priceStart+20, priceStart+50);
-			priceEnd = priceString.search("kr.</span>");
-			//console.log("price start, end: " + priceStart + ", " + priceEnd);
+			priceString = data.substring(priceStart+9, priceStart+25);
+			priceEnd = priceString.search(/kr.","/);
+			console.log("price start, end: " + priceStart + ", " + priceEnd);
 			priceString = priceString.substring(0, priceEnd);
-			//console.log("price: " + priceString + "\n");
+			console.log("price: " + priceString + "\n");
 			gogThePrice = priceString;
 		} else {
 			gogThePrice = "-";
