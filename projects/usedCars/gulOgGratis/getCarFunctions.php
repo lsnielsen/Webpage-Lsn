@@ -329,9 +329,13 @@
 	
 	function getGogContactDetails(data)
 	{
-		cityStart = data.search(/<div>\d{4} [A-Za-zæøå ]+<\/div>/);
-		cityTxt = data.substring(cityStart+5 , cityStart+40);
-		cityEnd = cityTxt.search(/<\/div>/);
+		postalStart = data.search(/"zipcode":"/);
+		postalTxt = data.substring(postalStart+11 , postalStart+15);
+		//console.log(" \n postal start: " + postalStart + ", \n postalTxt: " + postalTxt);
+		
+		cityStart = data.search(/"city":"/);
+		cityTxt = data.substring(cityStart+8 , cityStart+50);
+		cityEnd = cityTxt.search(/","nearestRegion"/);
 		cityTxt = cityTxt.substring(0, cityEnd);
 		//console.log(" \n city; start: " + cityStart + ", \n cityTxt: " + cityTxt);
 		
@@ -350,7 +354,7 @@
 		if(cityStart == -1) {
 			gogContactInfo = "-";
 		} else {
-			gogContactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
+			gogContactInfo = postalTxt + " " + cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
 			//console.log("Kontakt: " + contactInfo);
 		}
 		
