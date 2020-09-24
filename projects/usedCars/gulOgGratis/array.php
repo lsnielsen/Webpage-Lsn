@@ -104,6 +104,7 @@
 	var gogLaneAssistant;
 	var gogxenonLights;
 	var gogContactInfo;
+	var gogTheKilometers;
 
 	function setTheFirstGogArray(gogCarArray)
 	{
@@ -112,15 +113,12 @@
 		gogCarArray.push(gogTheCarModel);
 		gogCarArray.push(gogTheEngine);
 		gogCarArray.push(gogThePrice);
+		gogCarArray.push(gogTheKilometers);
 		gogCarArray.push(gogHorsePowerAndNm);
 		gogCarArray.push(gogFromZeroToHundred);
 		gogCarArray.push(gogTheTopSpeed);
 		gogCarArray.push(gogEnergyToUse);
 		gogCarArray.push(gogEnergyUsage);
-		gogCarArray.push(gogTheEuronorm);
-		gogCarArray.push(gogTheWidth);
-		gogCarArray.push(gogTheLength);
-		gogCarArray.push(gogTheHeight);
 		gogCarArray.push(gogLoadAbility);
 		gogCarArray.push(gogDrivingWheels);
 		gogCarArray.push(gogTheCylinders);
@@ -144,6 +142,10 @@
 		gogCarArray.push(gogTowbarDetachable);
 		gogCarArray.push(gogAntispin);
 		gogCarArray.push(gogCarplayApple);
+		gogCarArray.push(gogTheEuronorm);
+		gogCarArray.push(gogTheWidth);
+		gogCarArray.push(gogTheLength);
+		gogCarArray.push(gogTheHeight);
 		gogCarArray.push(gogArmRelax);
 		gogCarArray.push(gogAutoEmergencyBreak);
 		gogCarArray.push(gogAutoParking);
@@ -217,7 +219,7 @@
 		engine = gogCarArray[2];
 		price = gogCarArray[3];
 		//if(carModel != "-" && engine != "-" && price != "-") {
-			console.log("pushing to dataarray");
+			//console.log("pushing to dataarray");
 			dataArray.push(gogCarArray);
 		//}
 	}
