@@ -7,15 +7,15 @@
 			include("../projects/usedCars/frontpage.php");	
 		} else {
 			
-			$headerArray = ['Link', 'Kontakt info', 'Bilmærke', 'Motor', 'Pris',
+			$headerArray = ['Link', 'Kontakt info', 'Bilmærke', 'Motor', 'Pris', 'Kørte kilometer',
 							'Hk/Nm', "0-100 km/t", "Tophastighed", "Drivmiddel", 
-							"Forbrug", "Euronorm", "Bredde", "Længde", "Højde", 
-							"Lasteevne", "Trækhjul", "Cylindre", 
+							"Forbrug", "Lasteevne", "Trækhjul", "Cylindre", 
 							"ABS-bremser", "Max påhæng", "Airbags", "ESP", "Tank", 
 							"Gear", "Geartype", "Vægt", "Døre", 
 							"Registrerings dato", "Produktions år", "Modelår", 
 							"Synet", "Farve", "Alufælge", "Andriod auto", 
 							"Anhængertræk", "Anhængertræk aftagl.", "Antispin", "Apple carplay", 
+							"Euronorm", "Bredde", "Længde", "Højde", 
 							"Armlæn", "Auto. nødbremse", "Auto parkering", "Auto start/stop", 
 							"Automatisk lys", "AUX tilslutning", "Bakkamera", 
 							"Bakspejl m. nedbl.", "Bi-xenon", "Blindvinkelassistent", "Bluetooth", 
