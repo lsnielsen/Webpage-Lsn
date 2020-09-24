@@ -6,19 +6,19 @@
 	function setExtraGogEquipment(data)
 	{
 		//console.log(data);
-		equip = data.search("ABS-bremser");	
+		equip = data.search(/abs/);	
 		if(equip != -1) { gogAbsBreaks = "Ja"; } else { gogAbsBreaks = "-"; }
 		
-		equip = data.search("Aluf&#230;lge");	
+		equip = data.search("Alufælge");	
 		if(equip != -1) { gogAlloyWheels = "Ja"; } else { gogAlloyWheels = "-"; }
 		
 		equip = data.search("Android auto");	
 		if(equip != -1) { gogAutoAndroid = "Ja"; } else { gogAutoAndroid = "-"; }
 		
-		equip = data.search("Anh&#230;ngertr&#230;k");	
+		equip = data.search("Anhængertræk");	
 		if(equip != -1) { gogTowbar = "Ja"; } else { gogTowbar = "-"; }
 		
-		equip = data.search("Anh&#230;ngertr&#230;k, aftagl.");	
+		equip = data.search("Anhængertræk, aftagl.");	
 		if(equip != -1) { gogTowbarDetachable = "Ja"; } else { gogTowbarDetachable = "-"; }
 		
 		equip = data.search("Antispin");	
@@ -28,10 +28,10 @@
 		equip = data.search("Apple carplay");	
 		if(equip != -1) { gogCarplayApple = "Ja"; } else { gogCarplayApple = "-"; }
 		
-		equip = data.search("Arml&#230;n");	
+		equip = data.search("Armlæn");	
 		if(equip != -1) { gogArmRelax = "Ja"; } else { gogArmRelax = "-"; }
 		
-		equip = data.search("Auto. n&#248;dbremse");	
+		equip = data.search("Auto. nødbremse");	
 		if(equip != -1) { gogAutoEmergencyBreak = "Ja"; } else { gogAutoEmergencyBreak = "-"; }
 		
 		equip = data.search("Auto. parkering");	
@@ -67,20 +67,20 @@
 		equip = data.search("Brugtbilsattest");	
 		if(equip != -1) { gogUsedCarAttest = "Ja"; } else { gogUsedCarAttest = "-"; }
 		
-		equip = data.search("Centrall&#229;s fjernb.");	
-		equipII = data.search("Fjernbetjent Centrall&#229;s");	
+		equip = data.search("Centrallås fjernb.");	
+		equipII = data.search("Fjernbetjent Centrallås");	
 		if(equip != -1 || equipII != -1) { gogCentralLockRemote = "Ja"; } else { gogCentralLockRemote = "-"; }
 		
 		equip = data.search("DAB radio");	
 		if(equip != -1) { gogDabRadio = "Ja"; } else { gogDabRadio = "-"; }
 		
-		equip = data.search("D&#230;ktryksm&#229;ler");	
+		equip = data.search("Dæktryksmåler");	
 		if(equip != -1) { gogwheelAirMeassure = "Ja"; } else { gogwheelAirMeassure = "-"; }
 		
 		equip = data.search("Digitalt cockpit");	
 		if(equip != -1) { gogCockpitDigital = "Ja"; } else { gogCockpitDigital = "-"; }
 		
-		equip = data.search("El indst. f&#248;rers&#230;de m. memory");	
+		equip = data.search("El indst. førersæde m. memory");	
 		if(equip != -1) { gogFrontseatElInstall = "Ja"; } else { gogFrontseatElInstall = "-"; }
 		
 		equip = data.search("Elektrisk kabinevarmer");	
@@ -89,7 +89,7 @@
 		equip = data.search("Elektrisk parkeringsbremse");	
 		if(equip != -1) { gogParkingBreakEl = "Ja"; } else { gogParkingBreakEl = "-"; }
 		
-		equip = data.search("Elektriske komforts&#230;der");	
+		equip = data.search("Elektriske komfortsæder");	
 		if(equip != -1) { gogElectricComfortableSeats = "Ja"; } else { gogElectricComfortableSeats = "-"; }
 		
 		equip = data.search("Elektronisk bagklap");	
@@ -101,7 +101,7 @@
 		equip = data.search("Elektriske vinduer");	
 		if(equip != -1) { gogElectricWindowsTimesFour = "Ja"; } else { gogElectricWindowsTimesFour = "-"; }
 		
-		equip = data.search("Fartpilot");	
+		equip = data.match(/Fartpilot/i);	
 		if(equip != -1) { gogSpeedPilot = "Ja"; } else { gogSpeedPilot = "-"; }
 		
 		equip = data.search("Fartpilot, adaptiv");	
@@ -125,19 +125,19 @@
 		equip = data.search("Isofix");	
 		if(equip != -1) { gogIsofix = "Ja"; } else { gogIsofix = "-"; }
 		
-		equip = data.search("Klimaanl&#230;g, 4-zonet");	
+		equip = data.search("Klimaanlæg, 4-zonet");	
 		if(equip != -1) { gogClimateCenterFourZone = "Ja"; } else { gogClimateCenterFourZone = "-"; }
 		
-		equip = data.search("K&#248;recomputer");	
+		equip = data.search("Kørecomputer");	
 		if(equip != -1) { gogDrivingComputer = "Ja"; } else { gogDrivingComputer = "-"; }
 		
 		equip = data.search("Kurvelys");	
 		if(equip != -1) { gogCurvingLight = "Ja"; } else { gogCurvingLight = "-"; }
 		
-		equip = data.search("L&#230;derrat");	
+		equip = data.search("Læderrat");	
 		if(equip != -1) { gogLeatherWheel = "Ja"; } else { gogLeatherWheel = "-"; }
 		
-		equip = data.search("LED K&#248;relys");	
+		equip = data.search("LED Kørelys");	
 		if(equip != -1) { gogLedDrivingLight = "Ja"; } else { gogLedDrivingLight = "-"; }
 		
 		equip = data.search("Lygtevasker");	
@@ -149,7 +149,7 @@
 		equip = data.search("Navigation");	
 		if(equip != -1) { gogNavigation = "Ja"; } else { gogNavigation = "-"; }
 		
-		equip = data.search("N&#248;glefri betjening");	
+		equip = data.search("Nøglefri betjening");	
 		if(equip != -1) { gogKeylessOperation = "Ja"; } else { gogKeylessOperation = "-"; }
 		
 		equip = data.search("Panoramatag");	
@@ -164,16 +164,16 @@
 		equip = data.search("Regnsensor");	
 		if(equip != -1) { gogRainSensor = "Ja"; } else { gogRainSensor = "-"; }
 		
-		equip = data.search("S&#230;debetr&#230;k, dell&#230;der");	
+		equip = data.search("Sædebetræk, dellæder");	
 		if(equip != -1) { gogSeatCoversPartlyLeather = "Ja"; } else { gogSeatCoversPartlyLeather = "-"; }
 		
-		equip = data.search("S&#230;debetr&#230;k, l&#230;der");	
+		equip = data.search("Sædebetræk, læder");	
 		if(equip != -1) { gogSeatCoverLeather = "Ja"; } else { gogSeatCoverLeather = "-"; }
 		
-		equip = data.search("S&#230;devarme");	
+		equip = data.search("Sædevarme");	
 		if(equip != -1) { gogSeatWarming = "Ja"; } else { gogSeatWarming = "-"; }
 		
-		equip = data.search("SD kortl&#230;ser");	
+		equip = data.search("SD kortlæser");	
 		if(equip != -1) { gogSdMapReader = "Ja"; } else { gogSdMapReader = "-"; }
 		
 		equip = data.search("Service ok");	
@@ -191,34 +191,34 @@
 		equip = data.search("Soltag, manuelt");	
 		if(equip != -1) { gogSunRoofManual = "Ja"; } else { gogSunRoofManual = "-"; }
 		
-		equip = data.search("Splitbags&#230;de");	
+		equip = data.search("Splitbagsæde");	
 		if(equip != -1) { gogBackSeatSplit = "Ja"; } else { gogBackSeatSplit = "-"; }
 		
-		equip = data.search("Sportss&#230;der");	
+		equip = data.search("Sportssæder");	
 		if(equip != -1) { gogSportSeats = "Ja"; } else { gogSportSeats = "-"; }
 		
-		equip = data.search("Startsp&#230;rre");	
+		equip = data.search("Startspærre");	
 		if(equip != -1) { gogStartingLight = "Ja"; } else { gogStartingLight = "-"; }
 		
-		equip = data.search("Svingbart tr&#230;k (elektrisk)");	
+		equip = data.search("Svingbart træk (elektrisk)");	
 		if(equip != -1) { gogPivotableTractionElectric = "Ja"; } else { gogPivotableTractionElectric = "-"; }
 		
-		equip = data.search("Svingbart tr&#230;k (manuelt)");	
+		equip = data.search("Svingbart træk (manuelt)");	
 		if(equip != -1) { gogPivotableTractionManual = "Ja"; } else { gogPivotableTractionManual = "-"; }
 		
-		equip = data.search("T&#229;gelygter");	
+		equip = data.search("Tågelygter");	
 		if(equip != -1) { gogFogLights = "Ja"; } else { gogFogLights = "-"; }
 		
-		equip = data.search("Tagr&#230;ling");	
+		equip = data.search("Tagræling");	
 		if(equip != -1) { gogRoofRails = "Ja"; } else { gogRoofRails = "-"; }
 		
-		equip = data.search("Tr&#229;dl&#248;s mobilopladning");	
+		equip = data.search("Trådløs mobilopladning");	
 		if(equip != -1) { gogwirelessMobileRecharge = "Ja"; } else { gogwirelessMobileRecharge = "-"; }
 		
-		equip = data.search("Tr&#230;thedsregistrering");	
+		equip = data.search("Træthedsregistrering");	
 		if(equip != -1) { gogRegistrationOfTired = "Ja"; } else { gogRegistrationOfTired = "-"; }
 		
-		equip = data.search("Undervogn, s&#230;nket");	
+		equip = data.search("Undervogn, sænket");	
 		if(equip != -1) { gogUnderCarLowered = "Ja"; } else { gogUnderCarLowered = "-"; }
 		
 		equip = data.search("USB tilslutning");	
