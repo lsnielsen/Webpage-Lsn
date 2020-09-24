@@ -57,7 +57,9 @@
 					</button>
 				</form>
 		
-		<?php 	echo "<h3> Antal biler fra 
+		<?php 	
+			if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
+				echo "<h3> Antal biler fra 
 					<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">
 					www.bilbasen.dk </a> : $bilbasenCount </h3>"; 
 				echo "<h3> Antal biler fra 
@@ -65,6 +67,7 @@
 					www.guloggratis.dk </a>:  $gulOgGratisCount </h3>"; 
 				$sum = $bilbasenCount + $gulOgGratisCount;
 				echo "<h3> Samlet: $sum </h3>";
+			}
 		?>
 
 	</body>
