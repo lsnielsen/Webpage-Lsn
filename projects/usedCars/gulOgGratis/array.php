@@ -111,8 +111,8 @@
 		gogCarArray.push(gogContactInfo);
 		gogCarArray.push(gogTheCarModel);
 		gogCarArray.push(gogTheEngine);
-		gogCarArray.push(gogHorsePowerAndNm);
 		gogCarArray.push(gogThePrice);
+		gogCarArray.push(gogHorsePowerAndNm);
 		gogCarArray.push(gogFromZeroToHundred);
 		gogCarArray.push(gogTheTopSpeed);
 		gogCarArray.push(gogEnergyToUse);
