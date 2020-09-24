@@ -47,8 +47,8 @@
 					{
 						$(".endSearch").show();
 						makeArrayToPhp();
-					}, 30000);
-			}, 30000);
+					}, 180100);
+			}, 180100);
 	});
 		
 	function bilbasenLoop() {       
@@ -60,10 +60,10 @@
 				callingFirstUrl(bilbasenUrl, modelArray);
 			}
 			loopI++;                  
-			if (loopI < 2) {         
+			if (loopI < 15) {         
 				bilbasenLoop();             
 			}                       
-		}, 100)
+		}, 150)
 	}
 
 	function gulOgGratisLoop() {       
@@ -76,10 +76,10 @@
 				callingSecondUrl(gulOgGratisUrl);
 			}
 			loopJ++;                  
-			if (loopJ < 5) {         
+			if (loopJ < 10) {         
 				gulOgGratisLoop();             
 			}                       
-		}, 100)
+		}, 150)
 	}
 	
 	
