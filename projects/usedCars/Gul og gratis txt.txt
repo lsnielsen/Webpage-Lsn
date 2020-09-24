@@ -132,8 +132,35 @@
 	title":"Audi A3 1,9 TDi Ambition SB | Tinglev - GulogGratis.dk","description":"1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16\" alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc...","canonical":"https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"},"phones":["+4570602033"],"user"
 	id":"256018","displayName":"Thomsens Auto","onlineListingsCount":137,"avatar":"182161376","registrationDate":"2007-04-25T07:38:53.000Z","bio":"","available"
 	from":null,"to":null},"websiteUrl":"http://www.thomsens-auto.dk","isBusiness":true,"isNemidValidated":false,"isDisabled":false,"contactByMail":true},"breadcrumbs":[{"title":"Forside","link":"/"},{"title":"Biler og tilbehør","link":"/biler"},{"title":"Personbiler","link":"/biler/personbiler"},{"title":"Audi","link":"/biler/personbiler/audi"},{"title":"A3","link":"/biler/personbiler/audi/a3"},{"title":"Audi A3 1,9 TDi Ambition SB","link":"/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"}],"profileListings":[],"advantages":[{"id":"lendme","title":"Indhent lånetilbud","desc":"Fra +10 banker","link":"https://lendme.dk/laan-penge/bil/guloggratis?utm_source=guloggratis&utm_medium=JMF&utm_campaign=PrisLink&utm_content=Bil","image":"lendme"},{"id":"samlino:loan","title":"Sammenlign billån","desc":"Én ansøgning, flere lånetilbud","link":"https://www.samlino.dk/laan?utm_source=guloggratis&utm_medium=cpc&utm_campaign=plweek26_20&loanPurpose=car&loanDuration=60&loanAmount=54400","image":"samlino"}],"tealium"
-	itemCondition":null,"adTransactionType":"Sælge","adShipment":null,"advertiserType":"Forhandler","retailerName":"Thomsens Auto","itemPrice":5440000,"adCategoryFields":"{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime":"172080","adSellerId":256018,"adPromotionStatus":"","adMessageCount":0,"ggCategoryLevel1":"Biler og tilbehør","ggCategoryLevel2":"Personbiler","ggCategoryLevel3":"Audi","ggCategoryLevel4":"A3"}}}}}};window['__SSR_META__'] = {"tealium"
-	itemCondition":null,"adTransactionType":"Sælge","adShipment":null,"advertiserType":"Forhandler","retailerName":"Thomsens Auto","itemPrice":5440000,"adCategoryFields":"{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime":"172080","adSellerId":256018,"adPromotionStatus":"","adMessageCount":0,"ggCategoryLevel1":"Biler og tilbehør","ggCategoryLevel2":"Personbiler","ggCategoryLevel3":"Audi","ggCategoryLevel4":"A3"},"pageName":"Listing view"};window['__SSR_ENV__'] = {"googleMap":"AIzaSyCkoKVMRWvHHbnHcazia1velJi6WBE98YI","recaptcha":"6Le-Z38UAAAAACqs08Ux9eE020AtLITqEg8UblxH","cmp"
+	
+	itemCondition":null,"adTransactionType
+Sælge","adShipment":null,"advertiserType
+Forhandler","retailerName
+Thomsens Auto","itemPrice":5440000,"adCategoryFields
+{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime
+172080","adSellerId":256018,"adPromotionStatus
+","adMessageCount":0,"ggCategoryLevel1
+Biler og tilbehør","ggCategoryLevel2
+Personbiler","ggCategoryLevel3
+Audi","ggCategoryLevel4
+A3"}}}}}};window['__SSR_META__'] = {"tealium"
+	itemCondition":null,"adTransactionType
+Sælge","adShipment":null,"advertiserType
+Forhandler","retailerName
+Thomsens Auto","itemPrice":5440000,"adCategoryFields
+
+{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime
+
+172080","adSellerId":256018,"adPromotionStatus
+","adMessageCount":0,"ggCategoryLevel1
+Biler og tilbehør","ggCategoryLevel2
+Personbiler","ggCategoryLevel3
+Audi","ggCategoryLevel4
+A3"},"pageName
+Listing view"};window['__SSR_ENV__'] = {"googleMap
+AIzaSyCkoKVMRWvHHbnHcazia1velJi6WBE98YI","recaptcha
+6Le-Z38UAAAAACqs08Ux9eE020AtLITqEg8UblxH","cmp"
+	
 	id":"614f06c9-d454-4e92-b009-8084bee59aec"},"tealium":"prod","zendeskWidgetKey":"869cd9dd-0b4a-4852-93f6-ee9c5ff58ef5","sentry"
 	dsn":null,"env":""},"env":"production","flags"
 	SocialMediaLoginApple":false,"SocialMediaLogin":false,"Recaptcha":true,"FavoriteSearch":true,"FavoriteSearchAppNotifications":false,"MailIsDown":false},"eroticConsent":false,"imageDeployed":"e5a4546bbde30059b68fadbf07a7600730ac3319","facebook"
