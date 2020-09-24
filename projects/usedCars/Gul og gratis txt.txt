@@ -1,151 +1,151 @@
 
-LINK: https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb
+	LINK: https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb
 
-<!DOCTYPE html
-html lang="da" class="__gg-rewrite-component__" style="--app-height:100vh"
-head
-title>Audi A3 1,9 TDi Ambition SB | Tinglev - GulogGratis.dk</title
-meta charSet="UTF-8"/
-meta name="viewport" content="width=device-width, initial-scale=1.0"/
-meta http-equiv="X-UA-Compatible" content="IE=edge"/
-meta name="keywords" content="Køb, design, pakkepost, sælg, gul, bolig, hunde, kæledyr, leje, annoncer, biler, gratis, tøj, brugt, markedsplads, bytte, handel, pakkelabel, koncertbilletter"/
-meta name="description" content="1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16&quot; alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc..."/
-meta name="google" content="nositelinkssearchbox"/
-link rel="canonical" href="https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"/
-meta property="og:title" content="Audi A3 1,9 TDi Ambition SB"/
-meta property="og:type" content="website"/
-meta property="og:description" content="1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16&quot; alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc..."/
-meta property="og:url" content="/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"/
-meta property="og:image" content="https://images.rw.guloggratis.dk/image/640/213775015.jpg"/
-meta name="twitter:title" content="Audi A3 1,9 TDi Ambition SB"/
-meta name="twitter:description" content="1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16&quot; alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc..."/
-meta name="twitter:image" content="https://images.rw.guloggratis.dk/image/640/213775015.jpg"/
-meta name="twitter:card" content="summary_large_image"/
-link rel="apple-touch-icon" sizes="180x180" href="https://static.rw.guloggratis.dk/assets/favicons/apple-touch-icon.407ec753bf4c54eb99a08e76dc9e9e81.png"/
-link rel="icon" type="image/png" sizes="32x32" href="https://static.rw.guloggratis.dk/assets/favicons/favicon-32x32.41dfbf453a4f3875807747db2d52e8d2.png"/
-link rel="icon" type="image/png" sizes="16x16" href="https://static.rw.guloggratis.dk/assets/favicons/favicon-16x16.cfdbafbf40fd0815bfbd6cb45d07f639.png"/
-link rel="manifest" href="/site.webmanifest"/
-link rel="shortcut icon" href="https://static.rw.guloggratis.dk/assets/favicons/favicon.712fc1a2a8f1a3662c6b46d592f51722.ico"/
-meta name="apple-mobile-web-app-title" content="GulogGratis"/
-meta name="application-name" content="GulogGratis"/
-meta name="msapplication-TileColor" content="#000000"/
-meta name="msapplication-config" content="/browserconfig.xml"/
-meta name="theme-color" content="#ffffff"/
-meta name="format-detection" content="telephone=no"/
-link rel="stylesheet" href="https://static.rw.guloggratis.dk/main.3d66bb9797979460c4b5.css"/
-script>window['__INITIAL_STATE__'] = {"1fojgqr"
-data"
-prevgenApi_listing"
+	<!DOCTYPE html
+	html lang="da" class="__gg-rewrite-component__" style="--app-height:100vh"
+	head
+	title>Audi A3 1,9 TDi Ambition SB | Tinglev - GulogGratis.dk</title
+	meta charSet="UTF-8"/
+	meta name="viewport" content="width=device-width, initial-scale=1.0"/
+	meta http-equiv="X-UA-Compatible" content="IE=edge"/
+	meta name="keywords" content="Køb, design, pakkepost, sælg, gul, bolig, hunde, kæledyr, leje, annoncer, biler, gratis, tøj, brugt, markedsplads, bytte, handel, pakkelabel, koncertbilletter"/
+	meta name="description" content="1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16&quot; alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc..."/
+	meta name="google" content="nositelinkssearchbox"/
+	link rel="canonical" href="https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"/
+	meta property="og:title" content="Audi A3 1,9 TDi Ambition SB"/
+	meta property="og:type" content="website"/
+	meta property="og:description" content="1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16&quot; alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc..."/
+	meta property="og:url" content="/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"/
+	meta property="og:image" content="https://images.rw.guloggratis.dk/image/640/213775015.jpg"/
+	meta name="twitter:title" content="Audi A3 1,9 TDi Ambition SB"/
+	meta name="twitter:description" content="1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16&quot; alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc..."/
+	meta name="twitter:image" content="https://images.rw.guloggratis.dk/image/640/213775015.jpg"/
+	meta name="twitter:card" content="summary_large_image"/
+	link rel="apple-touch-icon" sizes="180x180" href="https://static.rw.guloggratis.dk/assets/favicons/apple-touch-icon.407ec753bf4c54eb99a08e76dc9e9e81.png"/
+	link rel="icon" type="image/png" sizes="32x32" href="https://static.rw.guloggratis.dk/assets/favicons/favicon-32x32.41dfbf453a4f3875807747db2d52e8d2.png"/
+	link rel="icon" type="image/png" sizes="16x16" href="https://static.rw.guloggratis.dk/assets/favicons/favicon-16x16.cfdbafbf40fd0815bfbd6cb45d07f639.png"/
+	link rel="manifest" href="/site.webmanifest"/
+	link rel="shortcut icon" href="https://static.rw.guloggratis.dk/assets/favicons/favicon.712fc1a2a8f1a3662c6b46d592f51722.ico"/
+	meta name="apple-mobile-web-app-title" content="GulogGratis"/
+	meta name="application-name" content="GulogGratis"/
+	meta name="msapplication-TileColor" content="#000000"/
+	meta name="msapplication-config" content="/browserconfig.xml"/
+	meta name="theme-color" content="#ffffff"/
+	meta name="format-detection" content="telephone=no"/
+	link rel="stylesheet" href="https://static.rw.guloggratis.dk/main.3d66bb9797979460c4b5.css"/
+	script>window['__INITIAL_STATE__'] = {"1fojgqr"
+	data"
+	prevgenApi_listing"
 
-listingView"
-id":"47937506
-title":"Audi A3 1,9 TDi Ambition SB
+	listingView"
+	id":"47937506
+	title":"Audi A3 1,9 TDi Ambition SB
 
-description":"1,9 TDi Ambition SB
-2007
-sortmetal
-5 døre
-265000 Km
-!! KØB UDEN UDBETALING !!
-16\" alufælge
-2 zone klima
-fjernb. c.lås
-fartpilot
-kørecomputer
-infocenter
-startspærre
-højdejust. førersæde
-el-ruder
-el-spejle
-cd/radio
-armlæn
-bagagerumsdækken
-kopholder
-stofindtræk
-splitbagsæde
-4 airbags
-abs
-esp
-servo
-tonede ruder
-ikke ryger
-træk
-diesel partikel filter
-tidligere undervognsbehandlet
-Henv. Tlf. 7060 2033 -2013 7627
+	description":"1,9 TDi Ambition SB
+	2007
+	sortmetal
+	5 døre
+	265000 Km
+	!! KØB UDEN UDBETALING !!
+	16\" alufælge
+	2 zone klima
+	fjernb. c.lås
+	fartpilot
+	kørecomputer
+	infocenter
+	startspærre
+	højdejust. førersæde
+	el-ruder
+	el-spejle
+	cd/radio
+	armlæn
+	bagagerumsdækken
+	kopholder
+	stofindtræk
+	splitbagsæde
+	4 airbags
+	abs
+	esp
+	servo
+	tonede ruder
+	ikke ryger
+	træk
+	diesel partikel filter
+	tidligere undervognsbehandlet
+	Henv. Tlf. 7060 2033 -2013 7627
 
-link":"/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb
-pageViews":10,"keepAliveSystem":true,"deletedAt":null,"offlineAt":null,"obfuscatedAt":null,"price"
-value":"54400
-text":"54.400 kr.
-vatText":"68.000 kr.
-showVat":false,"acceptOffers":false,"type":"Sælges"},"images":["213775015
-213775019
-213775020
-213775022
-213775025
-213775029
-213775032
-213775036
-213775039
-213775042
-213775046
-213775049
-213775053
-213775055"],"productUrl":"http://www.thomsens-auto.dk
-category"
+	link":"/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb
+	pageViews":10,"keepAliveSystem":true,"deletedAt":null,"offlineAt":null,"obfuscatedAt":null,"price"
+	value":"54400
+	text":"54.400 kr.
+	vatText":"68.000 kr.
+	showVat":false,"acceptOffers":false,"type":"Sælges"},"images":["213775015
+	213775019
+	213775020
+	213775022
+	213775025
+	213775029
+	213775032
+	213775036
+	213775039
+	213775042
+	213775046
+	213775049
+	213775053
+	213775055"],"productUrl":"http://www.thomsens-auto.dk
+	category"
 
 
-id":1038,"link":"/biler/personbiler/audi/a3","name":"A3"},"banner"
-ownershipId":null},
+	id":1038,"link":"/biler/personbiler/audi/a3","name":"A3"},"banner"
+	ownershipId":null},
 
-"options":[{"name":"Detaljer","fields":[{
-"name":"Kilometer","value":"265000"
-"name":"Årgang","value":"2007"
-"name":"Døre","value":"5"
-"name":"Km/l","value":"19,2"
-"name":"Brændstof","value":"diesel"
-"name":"Tophastighed","value":"187"
-"name":"Variant","value":"TDi Ambition SB"
-"name":"Farve","value":"Sortmetal"
-"name":"HK","value":"105"
-"name":"Acceleration","value":"11,70"
-"name":"Motorstørrelse","value":"1,9"
-"name":"Moment","value":"250"}]
-"name":"Tilbehør","fields":[{"name":"Antal airbags","value":"6"}]
-"name":"Specifikationer","fields":[{"name":"Hjultræk","value":"forhjulstrukket"
-"name":"Geartype","value":"manuel"
-"name":"Gear","value":"5"
-"name":"Afgift pr. halvår","value":"2840"
-"name":"Nypris","value":"383778"
-"name":"Lasteevne","value":"560"
-"name":"Tank","value":"55"
-"name":"Ventiler","value":"8"
-"name":"Antal cylindre","value":"4"
-"name":"Længde","value":"429"
-"name":"Max vægt","value":"1895"
-"name":"Bredde","value":"176"
-"name":"Vægt","value":"1335"}]}],"location"
+	"options":[{"name":"Detaljer","fields":[{
+	"name":"Kilometer","value":"265000"
+	"name":"Årgang","value":"2007"
+	"name":"Døre","value":"5"
+	"name":"Km/l","value":"19,2"
+	"name":"Brændstof","value":"diesel"
+	"name":"Tophastighed","value":"187"
+	"name":"Variant","value":"TDi Ambition SB"
+	"name":"Farve","value":"Sortmetal"
+	"name":"HK","value":"105"
+	"name":"Acceleration","value":"11,70"
+	"name":"Motorstørrelse","value":"1,9"
+	"name":"Moment","value":"250"}]
+	"name":"Tilbehør","fields":[{"name":"Antal airbags","value":"6"}]
+	"name":"Specifikationer","fields":[{"name":"Hjultræk","value":"forhjulstrukket"
+	"name":"Geartype","value":"manuel"
+	"name":"Gear","value":"5"
+	"name":"Afgift pr. halvår","value":"2840"
+	"name":"Nypris","value":"383778"
+	"name":"Lasteevne","value":"560"
+	"name":"Tank","value":"55"
+	"name":"Ventiler","value":"8"
+	"name":"Antal cylindre","value":"4"
+	"name":"Længde","value":"429"
+	"name":"Max vægt","value":"1895"
+	"name":"Bredde","value":"176"
+	"name":"Vægt","value":"1335"}]}],"location"
 
-displayAddress":"Tømrersvinget 21, 6360 Tinglev","zipcode":"6360","city":"Tinglev","nearestRegion"
-label":"Sydjylland","value":"sydjylland"}},"seo"
-title":"Audi A3 1,9 TDi Ambition SB | Tinglev - GulogGratis.dk","description":"1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16\" alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc...","canonical":"https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"},"phones":["+4570602033"],"user"
-id":"256018","displayName":"Thomsens Auto","onlineListingsCount":137,"avatar":"182161376","registrationDate":"2007-04-25T07:38:53.000Z","bio":"","available"
-from":null,"to":null},"websiteUrl":"http://www.thomsens-auto.dk","isBusiness":true,"isNemidValidated":false,"isDisabled":false,"contactByMail":true},"breadcrumbs":[{"title":"Forside","link":"/"},{"title":"Biler og tilbehør","link":"/biler"},{"title":"Personbiler","link":"/biler/personbiler"},{"title":"Audi","link":"/biler/personbiler/audi"},{"title":"A3","link":"/biler/personbiler/audi/a3"},{"title":"Audi A3 1,9 TDi Ambition SB","link":"/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"}],"profileListings":[],"advantages":[{"id":"lendme","title":"Indhent lånetilbud","desc":"Fra +10 banker","link":"https://lendme.dk/laan-penge/bil/guloggratis?utm_source=guloggratis&utm_medium=JMF&utm_campaign=PrisLink&utm_content=Bil","image":"lendme"},{"id":"samlino:loan","title":"Sammenlign billån","desc":"Én ansøgning, flere lånetilbud","link":"https://www.samlino.dk/laan?utm_source=guloggratis&utm_medium=cpc&utm_campaign=plweek26_20&loanPurpose=car&loanDuration=60&loanAmount=54400","image":"samlino"}],"tealium"
-itemCondition":null,"adTransactionType":"Sælge","adShipment":null,"advertiserType":"Forhandler","retailerName":"Thomsens Auto","itemPrice":5440000,"adCategoryFields":"{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime":"172080","adSellerId":256018,"adPromotionStatus":"","adMessageCount":0,"ggCategoryLevel1":"Biler og tilbehør","ggCategoryLevel2":"Personbiler","ggCategoryLevel3":"Audi","ggCategoryLevel4":"A3"}}}}}};window['__SSR_META__'] = {"tealium"
-itemCondition":null,"adTransactionType":"Sælge","adShipment":null,"advertiserType":"Forhandler","retailerName":"Thomsens Auto","itemPrice":5440000,"adCategoryFields":"{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime":"172080","adSellerId":256018,"adPromotionStatus":"","adMessageCount":0,"ggCategoryLevel1":"Biler og tilbehør","ggCategoryLevel2":"Personbiler","ggCategoryLevel3":"Audi","ggCategoryLevel4":"A3"},"pageName":"Listing view"};window['__SSR_ENV__'] = {"googleMap":"AIzaSyCkoKVMRWvHHbnHcazia1velJi6WBE98YI","recaptcha":"6Le-Z38UAAAAACqs08Ux9eE020AtLITqEg8UblxH","cmp"
-id":"614f06c9-d454-4e92-b009-8084bee59aec"},"tealium":"prod","zendeskWidgetKey":"869cd9dd-0b4a-4852-93f6-ee9c5ff58ef5","sentry"
-dsn":null,"env":""},"env":"production","flags"
-SocialMediaLoginApple":false,"SocialMediaLogin":false,"Recaptcha":true,"FavoriteSearch":true,"FavoriteSearchAppNotifications":false,"MailIsDown":false},"eroticConsent":false,"imageDeployed":"e5a4546bbde30059b68fadbf07a7600730ac3319","facebook"
-appId":"746610588685230","loginPath":"/logind/facebook","callbackPath":"/logind/facebook/callback"},"google"
-loginPath":"/logind/google","callbackPath":"/logind/google/callback"},"apple"
-clientId":"dk.guloggratis.production","loginPath":"/logind/apple","callbackPath":"/logind/apple/callback"},"nemid"
-loginPath":"/nemid/auth","cookieKey":"nemIdReturnUrl"},"domain"
-www":"https://www.guloggratis.dk","static":"https://static.rw.guloggratis.dk","api":"https://api.rw.guloggratis.dk","rw":"https://rw.guloggratis.dk","wwwLegacy":"https://www.guloggratis.dk","imagesLegacy":"https://images.guloggratis.dk","images":"https://images.rw.guloggratis.dk","zendesk":"https://support.guloggratis.dk","paymentLegacy":"https://www.guloggratis.dk","payment":"https://rw.guloggratis.dk","files":"https://europe-west1-guloggratis-prod.cloudfunctions.net/file-management-prod","cookie":"guloggratis.dk"}};</script
-/head
-body
-div id="app"
-div class="_3Jasq9Tp9WuyxP3CJpDsbJ _1DS1oCbrJe80p_8uhE6_ae"
-div class="_1yEYN2Zm-3g4XUl7iDP4fh"
-/div
-header 
+	displayAddress":"Tømrersvinget 21, 6360 Tinglev","zipcode":"6360","city":"Tinglev","nearestRegion"
+	label":"Sydjylland","value":"sydjylland"}},"seo"
+	title":"Audi A3 1,9 TDi Ambition SB | Tinglev - GulogGratis.dk","description":"1,9 TDi Ambition SB, 2007, sortmetal, 5 døre, 265000 Km, !! KØB UDEN UDBETALING !!, 16\" alufælge, 2 zone klima, fjernb. c.lås, fartpilot, kørecomputer, infoc...","canonical":"https://www.guloggratis.dk/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"},"phones":["+4570602033"],"user"
+	id":"256018","displayName":"Thomsens Auto","onlineListingsCount":137,"avatar":"182161376","registrationDate":"2007-04-25T07:38:53.000Z","bio":"","available"
+	from":null,"to":null},"websiteUrl":"http://www.thomsens-auto.dk","isBusiness":true,"isNemidValidated":false,"isDisabled":false,"contactByMail":true},"breadcrumbs":[{"title":"Forside","link":"/"},{"title":"Biler og tilbehør","link":"/biler"},{"title":"Personbiler","link":"/biler/personbiler"},{"title":"Audi","link":"/biler/personbiler/audi"},{"title":"A3","link":"/biler/personbiler/audi/a3"},{"title":"Audi A3 1,9 TDi Ambition SB","link":"/biler/personbiler/audi/a3/annonce/erhverv/47937506-audi-a3-19-tdi-ambition-sb"}],"profileListings":[],"advantages":[{"id":"lendme","title":"Indhent lånetilbud","desc":"Fra +10 banker","link":"https://lendme.dk/laan-penge/bil/guloggratis?utm_source=guloggratis&utm_medium=JMF&utm_campaign=PrisLink&utm_content=Bil","image":"lendme"},{"id":"samlino:loan","title":"Sammenlign billån","desc":"Én ansøgning, flere lånetilbud","link":"https://www.samlino.dk/laan?utm_source=guloggratis&utm_medium=cpc&utm_campaign=plweek26_20&loanPurpose=car&loanDuration=60&loanAmount=54400","image":"samlino"}],"tealium"
+	itemCondition":null,"adTransactionType":"Sælge","adShipment":null,"advertiserType":"Forhandler","retailerName":"Thomsens Auto","itemPrice":5440000,"adCategoryFields":"{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime":"172080","adSellerId":256018,"adPromotionStatus":"","adMessageCount":0,"ggCategoryLevel1":"Biler og tilbehør","ggCategoryLevel2":"Personbiler","ggCategoryLevel3":"Audi","ggCategoryLevel4":"A3"}}}}}};window['__SSR_META__'] = {"tealium"
+	itemCondition":null,"adTransactionType":"Sælge","adShipment":null,"advertiserType":"Forhandler","retailerName":"Thomsens Auto","itemPrice":5440000,"adCategoryFields":"{\"Kilometer\":[\"Km 265000\"],\"Årgang\":[\"modelårg. 2007\"],\"Døre\":[\"5 døre\"],\"Km/l\":[\"19,2 km/l\"],\"Brændstof\":[\"diesel\"],\"Tophastighed\":[\"187 km/t\"],\"Antal airbags\":[\"6 airbags\"],\"Hjultræk\":[\"forhjulstrukket\"],\"Variant\":[\"TDi Ambition SB\"],\"Farve\":[\"Sortmetal\"],\"Geartype\":[\"geartype manuel\"],\"Gear\":[\"5 gear\"],\"HK\":[\"105 HK\"],\"Acceleration\":[\"11,70\"],\"Afgift pr. halvår\":[\"2840\"],\"Nypris\":[\"383778\"],\"Motorstørrelse\":[\"1,9\"],\"Moment\":[\"250\"],\"Lasteevne\":[\"560\"],\"Tank\":[\"55 liter\"],\"Ventiler\":[\"8\"],\"Antal cylindre\":[\"4\"],\"Længde\":[\"429 cm\"],\"Max vægt\":[\"1895 kg\"],\"Bredde\":[\"176 cm\"],\"Vægt\":[\"1335 kg\"]}","adOnlineTime":"172080","adSellerId":256018,"adPromotionStatus":"","adMessageCount":0,"ggCategoryLevel1":"Biler og tilbehør","ggCategoryLevel2":"Personbiler","ggCategoryLevel3":"Audi","ggCategoryLevel4":"A3"},"pageName":"Listing view"};window['__SSR_ENV__'] = {"googleMap":"AIzaSyCkoKVMRWvHHbnHcazia1velJi6WBE98YI","recaptcha":"6Le-Z38UAAAAACqs08Ux9eE020AtLITqEg8UblxH","cmp"
+	id":"614f06c9-d454-4e92-b009-8084bee59aec"},"tealium":"prod","zendeskWidgetKey":"869cd9dd-0b4a-4852-93f6-ee9c5ff58ef5","sentry"
+	dsn":null,"env":""},"env":"production","flags"
+	SocialMediaLoginApple":false,"SocialMediaLogin":false,"Recaptcha":true,"FavoriteSearch":true,"FavoriteSearchAppNotifications":false,"MailIsDown":false},"eroticConsent":false,"imageDeployed":"e5a4546bbde30059b68fadbf07a7600730ac3319","facebook"
+	appId":"746610588685230","loginPath":"/logind/facebook","callbackPath":"/logind/facebook/callback"},"google"
+	loginPath":"/logind/google","callbackPath":"/logind/google/callback"},"apple"
+	clientId":"dk.guloggratis.production","loginPath":"/logind/apple","callbackPath":"/logind/apple/callback"},"nemid"
+	loginPath":"/nemid/auth","cookieKey":"nemIdReturnUrl"},"domain"
+	www":"https://www.guloggratis.dk","static":"https://static.rw.guloggratis.dk","api":"https://api.rw.guloggratis.dk","rw":"https://rw.guloggratis.dk","wwwLegacy":"https://www.guloggratis.dk","imagesLegacy":"https://images.guloggratis.dk","images":"https://images.rw.guloggratis.dk","zendesk":"https://support.guloggratis.dk","paymentLegacy":"https://www.guloggratis.dk","payment":"https://rw.guloggratis.dk","files":"https://europe-west1-guloggratis-prod.cloudfunctions.net/file-management-prod","cookie":"guloggratis.dk"}};</script
+	/head
+	body
+	div id="app"
+	div class="_3Jasq9Tp9WuyxP3CJpDsbJ _1DS1oCbrJe80p_8uhE6_ae"
+	div class="_1yEYN2Zm-3g4XUl7iDP4fh"
+	/div
+	header 
