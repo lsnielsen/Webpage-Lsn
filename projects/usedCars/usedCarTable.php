@@ -12,9 +12,13 @@
 								for($i=0; $i<sizeOf($dataArr); $i++) {
 									echo "<tr>";
 										for($j=0; $j<sizeOf($dataArr[$i]); $j++) {
-											if ($j == 0) {
+											if ($j == 0 && strpos($dataArr[$i][0], 'bilbasen') !== false) {
 												echo "<td>";
 												echo "<a href='".$dataArr[$i][$j]."' target=\"_blank\">Link til bilbasen</a>";
+												echo "</td>";
+											} elseif ($j == 0 && strpos($dataArr[$i][0], 'guloggratis') !== false) {
+												echo "<td>";
+												echo "<a href='".$dataArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
 												echo "</td>";
 											} else {
 												echo "<td>";
