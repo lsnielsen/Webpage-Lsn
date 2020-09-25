@@ -342,7 +342,7 @@
 	function getContactDetails(data)
 	{
 		
-		cityStart = data.search(/<div>\d{4} [A-Za-zæøå ]+<\/div>/);
+		cityStart = data.search(/<div>\d{4} [A-Za-z(&AElig;)(&aring;)(&oslash;) ]+<\/div>/);
 		cityTxt = data.substring(cityStart+5 , cityStart+40);
 		cityEnd = cityTxt.search(/<\/div>/);
 		cityTxt = cityTxt.substring(0, cityEnd);
