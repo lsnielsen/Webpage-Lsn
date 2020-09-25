@@ -21,6 +21,7 @@
 	var firstUrlArr = new Array();
 	var secondUrlArr = new Array();
 	var dataArray = new Array();
+	var modelArray = new Array();
 	var loopI = 1;
 	var loopJ = 1;
 	
@@ -49,8 +50,8 @@
 					{
 						$(".endSearch").show();
 						makeArrayToPhp();
-					}, 1300100);
-			}, 90000);
+					}, 90000);
+			}, 20000);
 	});
 		
 	function bilbasenLoop() {       
@@ -65,7 +66,7 @@
 			if (loopI < 25) {         
 				bilbasenLoop();             
 			}                       
-		}, 500)
+		}, 250)
 	}
 
 	function gulOgGratisLoop() {       
@@ -81,7 +82,7 @@
 			if (loopJ < 20) {         
 				gulOgGratisLoop();             
 			}                       
-		}, 500)
+		}, 200)
 	}
 	
 	
