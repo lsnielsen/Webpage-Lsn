@@ -6,12 +6,12 @@
 		//console.log("First url call ");
 		$.get(urlOne, 
 			function( data ) {
-		
 				for ($i = 0; $i < data.length; $i++) {
 					subStr = data.substring($i, $i+200);
-					temp = subStr.search(/\"\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-,.\/]+\"$/);
+					//temp = subStr.search(/\"\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9-]+\/[0-9]+\"$/);
+					temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
 					if (temp != -1) {
-						var theFirstString = subStr.substring(temp + 1, subStr.length - 1);
+						var theFirstString = subStr.substring(temp + 6, subStr.length - 2);
 						//console.log("url: " + theFirstString);
 						//console.log("model: " + modelArray[0] + " " + modelArray[1]);
 						//console.log("true, includes: " + modelArray[0] + ", " + modelArray[1]);
@@ -40,7 +40,7 @@
 				if (loopII < firstUrlArr.length) {         
 					mySecondLoop();             
 				}                       
-			}, 1200)
+			}, 100)
 		}
 	}
 	
