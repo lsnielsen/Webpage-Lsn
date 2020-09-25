@@ -9,7 +9,7 @@
 				for ($i = 0; $i < data.length; $i++) {
 					subStr = data.substring($i, $i+200);
 					//temp = subStr.search(/\"\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9-]+\/[0-9]+\"$/);
-					temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
+					temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
 					if (temp != -1) {
 						var theFirstString = subStr.substring(temp + 6, subStr.length - 2);
 						//console.log("url: " + theFirstString);
