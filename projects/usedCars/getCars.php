@@ -51,7 +51,7 @@
 					{
 						$(".endSearch").show();
 						makeArrayToPhp();
-					}, 180100);
+					}, 400100);
 			}, 240100);
 	});
 		
@@ -64,7 +64,7 @@
 				callingFirstUrl(bilbasenUrl, modelArray);
 			}
 			loopI++;                  
-			if (loopI < 15) {         
+			if (loopI < 25) {         
 				bilbasenLoop();             
 			}                       
 		}, 200)
@@ -80,7 +80,7 @@
 				callingSecondUrl(gulOgGratisUrl);
 			}
 			loopJ++;                  
-			if (loopJ < 10) {         
+			if (loopJ < 20) {         
 				gulOgGratisLoop();             
 			}                       
 		}, 200)
