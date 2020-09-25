@@ -31,7 +31,9 @@
 					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, højst 5 minutter.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
-					Vi har nu hentet alle links til bilbasen.
+					Vi har nu hentet alle links til bilbasen. 
+					Vi fandt <div id="bilbasenurls" style="margin-left: 500px; margin-top: -25px;"> </div> biler hos bilbasen,
+					og <div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div> biler ved guloggratis.
 				</div>
 				<div class="endSearch searchTxt infoTxt">
 					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om kort tid
