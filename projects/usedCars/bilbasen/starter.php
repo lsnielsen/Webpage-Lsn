@@ -40,7 +40,7 @@
 				if (loopII < firstUrlArr.length) {         
 					mySecondLoop();             
 				}                       
-			}, 120)
+			}, 300)
 		}
 		
 		setTimeout(
