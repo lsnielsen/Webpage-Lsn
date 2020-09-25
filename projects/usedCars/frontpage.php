@@ -36,7 +36,7 @@
 					og <div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div> biler ved guloggratis.
 				</div>
 				<div class="endSearch searchTxt infoTxt">
-					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om kort tid
+					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 5 sek.
 				</div>
 				
 					
@@ -46,6 +46,7 @@
 						<option style="font-size: 20px;"> Vælg bilmodel </option>
 						<option class="carModelOptions" value="Volvo V60">Volvo V60</option>
 						<option class="carModelOptions" value="Volvo XC40">Volvo XC40</option>
+						<option class="carModelOptions" value="Volvo V40">Volvo V40</option>
 						<option class="carModelOptions" value="Audi A3">Audi A3</option>
 						<option class="carModelOptions" value="Audi A6">Audi A6</option>
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
