@@ -40,15 +40,8 @@
 				if (loopII < firstUrlArr.length) {         
 					mySecondLoop();             
 				}                       
-			}, 300)
+			}, 1200)
 		}
-		
-		setTimeout(
-			function() 
-			{
-				//console.log("Second array:");
-				//console.log(dataArray);
-			}, 3000);
 	}
 	
 	
