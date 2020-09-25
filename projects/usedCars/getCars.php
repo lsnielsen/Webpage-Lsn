@@ -50,7 +50,7 @@
 					{
 						$(".endSearch").show();
 						makeArrayToPhp();
-					}, 90000);
+					}, 180100);
 			}, 20000);
 	});
 		
