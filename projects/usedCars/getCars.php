@@ -39,6 +39,10 @@
 		setTimeout(
 			function() 
 			{
+				bilbasenCarCount = firstUrlArr.length;
+				guloggratisCarCount = secondUrlArr.length;
+				$("#bilbasenurls").text(bilbasenCarCount);
+				$("#guloggratisurls").text(guloggratisCarCount);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
 				getTheUsedCarGulOgGratis();
@@ -48,7 +52,7 @@
 						$(".endSearch").show();
 						makeArrayToPhp();
 					}, 180100);
-			}, 180100);
+			}, 240100);
 	});
 		
 	function bilbasenLoop() {       
@@ -63,7 +67,7 @@
 			if (loopI < 15) {         
 				bilbasenLoop();             
 			}                       
-		}, 150)
+		}, 200)
 	}
 
 	function gulOgGratisLoop() {       
@@ -79,7 +83,7 @@
 			if (loopJ < 10) {         
 				gulOgGratisLoop();             
 			}                       
-		}, 150)
+		}, 200)
 	}
 	
 	
