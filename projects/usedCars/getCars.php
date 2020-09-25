@@ -40,11 +40,17 @@
 		setTimeout(
 			function() 
 			{
+				gulOgGratisCars = secondUrlArr.length;
+				
+				firstUrlArr = unique(firstUrlArr)
+				
 				$("#bilbasenurls").text(firstUrlArr.length);
-				$("#guloggratisurls").text(secondUrlArr.length);
+				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
-				getTheUsedCarGulOgGratis();
+				if (gulOgGratisCars != 0) {
+					getTheUsedCarGulOgGratis();
+				}
 				setTimeout(
 					function() 
 					{
@@ -53,6 +59,14 @@
 					}, 180100);
 			}, 20000);
 	});
+	
+	function unique(list) {
+		var result = [];
+		$.each(list, function(i, e) {
+			if ($.inArray(e, result) == -1) result.push(e);
+		});
+		return result;
+	}
 		
 	function bilbasenLoop() {       
 		setTimeout(function() {   
