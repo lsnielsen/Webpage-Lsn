@@ -38,7 +38,7 @@
 		bilbasenLoop();
 		gulOgGratisLoop();
 		
-		console.log("chosen: " + modelArray);
+		//console.log("chosen: " + modelArray);
 		
 		firstPauseLoop();
 		
@@ -48,7 +48,7 @@
 	
 	function firstPauseLoop()
 	{
-		console.log("firstPauseLoop");
+		//console.log("firstPauseLoop");
 		setTimeout(function() {   
 			if (firstBool == false || secondBool == false) {         
 				firstPauseLoop();             
@@ -71,7 +71,7 @@
 	
 	function secondPauseLoop()
 	{
-		console.log("secondPauseLoop");
+		//console.log("secondPauseLoop");
 		setTimeout(
 			function() 
 			{
@@ -145,8 +145,8 @@
 	
 	function makeArrayToPhp()
 	{
-		console.log("data array: ");
-		console.log(dataArray);
+		//console.log("data array: ");
+		//console.log(dataArray);
 		for(i=0; i<dataArray.length; i++) {
 			arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {
