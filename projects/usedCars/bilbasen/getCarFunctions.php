@@ -18,21 +18,11 @@
 			theKilometers = "-";
 		}
 		
-		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
-		nameEnd = data.search("<div class=\"reviews-wrapper\">");
-		//console.log("nameStart, nameEnd = " + nameStart + ", " + nameEnd);
-		if (nameStart != -1 && nameEnd != -1) {
-			firstSubstring = data.substring(nameStart, nameEnd);
-			
-			modelStart = firstSubstring.search("<span>");
-			modelEnd = firstSubstring.search("</span>");
-			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
-			theCarModel = secondSubstring;
-			
-			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+12);
-			thirdSubstring = thirdSubstring.replace(",", ".");
-			theEngine = thirdSubstring;
-			//console.log("Engine: " + thirdSubstring);
+		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9]+) ([a-zA-Z0-9,]+ [a-zA-Z0-9]+)/;
+		var match = carRegexp.exec(data);
+		if (match !==  null) {
+			theCarModel = match[1];
+			theEngine = match[2].replace(",", ".");
 		} else {
 		    theCarModel = "-";
 			theEngine = "-";
@@ -341,32 +331,13 @@
 	
 	function getContactDetails(data)
 	{
-		
-		cityStart = data.search(/<div>\d{4} [A-Za-z(&AElig;)(&aring;)(&oslash;) ]+<\/div>/);
-		cityTxt = data.substring(cityStart+5 , cityStart+40);
-		cityEnd = cityTxt.search(/<\/div>/);
-		cityTxt = cityTxt.substring(0, cityEnd);
-		//console.log(" \n city; start: " + cityStart + ", \n cityTxt: " + cityTxt);
-		
-		adressStart = data.search(/<div>[a-zA-Z- æøå]+ [0-9a-zA-Z ]+<\/div>/);
-		adressTxt = data.substring(adressStart+5 , adressStart+40);
-		adressEnd = adressTxt.search(/<\/div>/);
-		adressTxt = adressTxt.substring(0, adressEnd);
-		//console.log("adress; start: " + adressStart + ", \n adressTxt: " + adressTxt);
-		
-		phoneStart = data.search(/<a href="tel:\d{8}">\d{8}<\/a>/);
-		phoneTxt = data.substring(phoneStart+23 , phoneStart+40);
-		phoneEnd = phoneTxt.search(/<\/a>/);
-		phoneTxt = phoneTxt.substring(0, phoneEnd);
-		//console.log(" phone; start: " + phoneStart + ", \n phoneTxt: " + phoneTxt + " \n");
-		
-		if(cityStart == -1) {
-			contactInfo = "-";
+		contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
+		var match = contactRegexp.exec(data);
+		if (match !==  null) {
+			contactInfo = match[1] + " " + match[2];
 		} else {
-			contactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
-			//console.log("Kontakt: " + contactInfo);
+			contactInfo = "-";
 		}
-		
 	}
 	
 	
