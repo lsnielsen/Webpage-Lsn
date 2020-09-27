@@ -28,7 +28,7 @@
 				
 				<div class="startSearch searchTxt infoTxt">
 					Du er nu gået igang med at søge efter biler på bilbasen, som har modellen  <center class="theChoosenModel"> </center>
-					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, højst 5 minutter.
+					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, cirka 1 minut.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
 					Vi har nu hentet alle links til bilbasen. 
@@ -36,7 +36,7 @@
 					og <div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div> biler ved guloggratis.
 				</div>
 				<div class="endSearch searchTxt infoTxt">
-					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 5 sek.
+					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 2 sek.
 				</div>
 				
 					
