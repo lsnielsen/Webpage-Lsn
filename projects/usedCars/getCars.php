@@ -24,26 +24,40 @@
 	var modelArray = new Array();
 	var loopI = 1;
 	var loopJ = 1;
+	var firstBool = false;
+	var secondBool = false;
+	var lastBool = false;
 	
         
 	$("select.carModel").change(function(){
 		setFrontpage();		
 		modelArray = choosenModel.split(" ");
-		//console.log("chosen: " + modelArray);
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 		
 		bilbasenLoop();
 		gulOgGratisLoop();
 		
+		console.log("chosen: " + modelArray);
 		
-		setTimeout(
-			function() 
-			{
+		firstPauseLoop();
+		
+		
+	
+	});
+	
+	function firstPauseLoop()
+	{
+		console.log("firstPauseLoop");
+		setTimeout(function() {   
+			if (firstBool == false || secondBool == false) {         
+				firstPauseLoop();             
+			} else {
+				console.log("After loop");
 				gulOgGratisCars = secondUrlArr.length;
-				
+
 				firstUrlArr = unique(firstUrlArr)
-				
+
 				$("#bilbasenurls").text(firstUrlArr.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
@@ -51,14 +65,26 @@
 				if (gulOgGratisCars != 0) {
 					getTheUsedCarGulOgGratis();
 				}
-				setTimeout(
-					function() 
-					{
-						$(".endSearch").show();
-						makeArrayToPhp();
-					}, 180100);
-			}, 20000);
-	});
+				secondPauseLoop();
+			}
+							
+		}, 2000)	
+	}
+	
+	function secondPauseLoop()
+	{
+		console.log("secondPauseLoop");
+		setTimeout(
+			function() 
+			{
+				if(lastBool == false) {
+					secondPauseLoop();
+				} else {
+					$(".endSearch").show();
+					makeArrayToPhp();
+				}
+		}, 2000);		
+	}
 	
 	function unique(list) {
 		var result = [];
@@ -79,7 +105,11 @@
 			loopI++;                  
 			if (loopI < 25) {         
 				bilbasenLoop();             
-			}                       
+			} else if (loopI == 25) {
+				setTimeout(function() {
+					secondBool = true;
+				}, 500)
+			}             
 		}, 250)
 	}
 
@@ -95,7 +125,11 @@
 			loopJ++;                  
 			if (loopJ < 20) {         
 				gulOgGratisLoop();             
-			}                       
+			} else if (loopJ == 20) {
+				setTimeout(function() {
+					firstBool = true;
+				}, 500)
+			}				
 		}, 200)
 	}
 	

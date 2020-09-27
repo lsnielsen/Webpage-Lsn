@@ -39,8 +39,10 @@
 				loopII++;                  
 				if (loopII < firstUrlArr.length) {         
 					mySecondLoop();             
-				}                       
-			}, 250)
+				} else {
+					lastBool = true;
+				}					
+			}, 100)
 		}
 	}
 	
