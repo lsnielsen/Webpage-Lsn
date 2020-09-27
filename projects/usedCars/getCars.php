@@ -78,10 +78,14 @@
 				if(lastBool == false) {
 					secondPauseLoop();
 				} else {
-					$(".endSearch").show();
-					makeArrayToPhp();
+					setTimeout(
+						function()
+						{
+							$(".endSearch").show();
+							makeArrayToPhp();
+						}, 500);
 				}
-		}, 2000);		
+		}, 5000);		
 	}
 	
 	function unique(list) {
