@@ -42,7 +42,7 @@
 				} else {
 					lastBool = true;
 				}					
-			}, 100)
+			}, 58)
 		}
 	}
 	

@@ -53,9 +53,7 @@
 			if (firstBool == false || secondBool == false) {         
 				firstPauseLoop();             
 			} else {
-				console.log("After loop");
 				gulOgGratisCars = secondUrlArr.length;
-
 				firstUrlArr = unique(firstUrlArr)
 
 				$("#bilbasenurls").text(firstUrlArr.length);

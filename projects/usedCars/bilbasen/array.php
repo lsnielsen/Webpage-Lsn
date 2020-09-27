@@ -218,9 +218,9 @@
 		carModel = singleCarArray[1];
 		engine = singleCarArray[2];
 		price = singleCarArray[3];
-		if(carModel != "-" && engine != "-" && price != "-") {
+		//if(carModel != "-" && engine != "-" && price != "-") {
 			dataArray.push(singleCarArray);
-		}
+		//}
 	}
 
 

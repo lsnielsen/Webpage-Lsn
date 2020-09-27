@@ -44,7 +44,7 @@
 				if (loopJJ < secondUrlArr.length) {         
 					mySecondLoop();             
 				}                       
-			}, 2000)
+			}, 1000)
 		}
 	}
 
