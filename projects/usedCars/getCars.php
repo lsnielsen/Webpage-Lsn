@@ -3,148 +3,118 @@
 	include("bilbasen/array.php");
 	include("bilbasen/getCarFunctions.php");
 	include("bilbasen/extraEquipment.php");
+	include("bilbasen/starter.php");
+	
+	include("gulOgGratis/starter.php");
+	include("gulOgGratis/array.php");
+	include("gulOgGratis/getCarFunctions.php");
+	include("gulOgGratis/extraEquipment.php");
 ?>
 
 <script>
-
 	
 	var basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
 	var basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
-
+	
+	var secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
 	var firstUrlArr = new Array();
+	var secondUrlArr = new Array();
 	var dataArray = new Array();
+	var modelArray = new Array();
+	var loopI = 1;
+	var loopJ = 1;
 	
         
 	$("select.carModel").change(function(){
-		$("#backButton").hide();
-		$(".modelDropdown").hide();
-		$(".startSearch").show();
-		
-		choosenModel = $(this).children("option:selected").val();
-		$(".theChoosenModel").text(choosenModel);
-		
+		setFrontpage();		
 		modelArray = choosenModel.split(" ");
 		//console.log("chosen: " + modelArray);
-		basicUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
+		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
+		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 		
-		
-		var loopI = 1;
-		myLoop();
-		function myLoop() {       
-			setTimeout(function() {   
-				if (loopI >= 2) {
-					theUrl = basicUrl + "&page=" + loopI;
-					callingFirstUrl(theUrl, modelArray);
-				} else {
-					callingFirstUrl(basicUrl, modelArray);
-				}
-				loopI++;                  
-				if (loopI < 2) {         
-					myLoop();             
-				}                       
-			}, 100)
-		}
+		bilbasenLoop();
+		gulOgGratisLoop();
 		
 		
 		setTimeout(
 			function() 
 			{
+				gulOgGratisCars = secondUrlArr.length;
+				
+				firstUrlArr = unique(firstUrlArr)
+				
+				$("#bilbasenurls").text(firstUrlArr.length);
+				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
-				$("#webscraper").click();
+				getTheUsedCarBilbasen();
+				if (gulOgGratisCars != 0) {
+					getTheUsedCarGulOgGratis();
+				}
 				setTimeout(
 					function() 
 					{
 						$(".endSearch").show();
 						makeArrayToPhp();
-					}, 10000);
-			}, 30000);
+					}, 180100);
+			}, 20000);
 	});
 	
+	function unique(list) {
+		var result = [];
+		$.each(list, function(i, e) {
+			if ($.inArray(e, result) == -1) result.push(e);
+		});
+		return result;
+	}
+		
+	function bilbasenLoop() {       
+		setTimeout(function() {   
+			if (loopI >= 2) {
+				pageUrl = bilbasenUrl + "&page=" + loopI;
+				callingFirstUrl(pageUrl, modelArray);
+			} else {
+				callingFirstUrl(bilbasenUrl, modelArray);
+			}
+			loopI++;                  
+			if (loopI < 25) {         
+				bilbasenLoop();             
+			}                       
+		}, 250)
+	}
+
+	function gulOgGratisLoop() {       
+		setTimeout(function() {   
+			if (loopJ >= 2) {
+				theUrl = gulOgGratisUrl + "/?n=" + loopJ*60;
+				callingSecondUrl(theUrl);
+			} else {
+				//console.log("Gul og gratis url: " + gulOgGratisUrl);
+				callingSecondUrl(gulOgGratisUrl);
+			}
+			loopJ++;                  
+			if (loopJ < 20) {         
+				gulOgGratisLoop();             
+			}                       
+		}, 200)
+	}
 	
 	
-	
-	
-	
-	function callingFirstUrl(urlOne, modelArray) 
+	function setFrontpage()
 	{
-		//console.log("First url call ");
-		$.get(urlOne, 
-			function( data ) {
+		$("#backButton").hide();
+		$(".modelDropdown").hide();
+		$(".startSearch").show();
 		
-				for ($i = 0; $i < data.length; $i++) {
-					subStr = data.substring($i, $i+200);
-					temp = subStr.search(/\"\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-,.\/]+\"$/);
-					if (temp != -1) {
-						var theFirstString = subStr.substring(temp + 1, subStr.length - 1);
-						//console.log("url: " + theFirstString);
-						//console.log("model: " + modelArray[0] + " " + modelArray[1]);
-						//console.log("true, includes: " + modelArray[0] + ", " + modelArray[1]);
-						theFirstString = "https://www.bilbasen.dk" + theFirstString;
-						//console.log("url: " + theFirstString);
-						firstUrlArr.push(theFirstString);
-					}
-				}
-			}, 
-			'html' // or 'text', 'xml', 'more'
-		);  
-	}		
-	
-		
-	$("#webscraper").click(function() {
-		//console.log("First array:");
-		//console.log(firstUrlArr);
-		
-		var loopII = 0;
-		mySecondLoop();
-		function mySecondLoop() {       
-			setTimeout(function() {   
-				//console.log("Making second url call");
-				callingSecondUrl(firstUrlArr[loopII]);
-				loopII++;                  
-				if (loopII < firstUrlArr.length) {         
-					mySecondLoop();             
-				}                       
-			}, 120)
-		}
-		
-		setTimeout(
-			function() 
-			{
-				//console.log("Second array:");
-				//console.log(dataArray);
-			}, 3000);
-	});
-	
-	
-	function callingSecondUrl(url)
-	{
-		//console.log("second url calls, url: " + url);
-		$.get(url, 
-			function( data ) {
-				//console.log("calling the second url");
-				var singleCarArray = new Array();
-				theLink = url;
-				getModelName(data, singleCarArray);
-				setPriceAttributes(data, singleCarArray);
-				setPrimerAttributes(data, singleCarArray);
-				setRegAttributes(data, singleCarArray);
-				setProdAttributes(data, singleCarArray);
-				setModelAttributes(data, singleCarArray);
-				setSightAttributes(data, singleCarArray);
-				setColorAttributes(data, singleCarArray);
-				setExtraEquipment(data);
-				
-				setTheFirstArray(singleCarArray);
-				//console.log("single car array : " + singleCarArray);
-			},
-			'html'
-		);
+		choosenModel = $(".carModel").children("option:selected").val();
+		$(".theChoosenModel").text(choosenModel);
 	}
 	
 	
 	function makeArrayToPhp()
 	{
+		console.log("data array: ");
+		console.log(dataArray);
 		for(i=0; i<dataArray.length; i++) {
 			arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {

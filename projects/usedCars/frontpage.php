@@ -6,7 +6,7 @@
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/usedCars.css" type="text/css">	
+		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/css/usedCars.css" type="text/css">	
 	</head>
 	<body style="background-color: #ccff99;">
 		<h1>
@@ -16,7 +16,6 @@
 			</a>	
 			Resultatet vil også blive vist i tabellen nedenfor.
 		</h1>
-				<button id="webscraper" style="display: none;"> </button>
 
 				<form method="post">
 					<button type="submit" 
@@ -32,19 +31,23 @@
 					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, højst 5 minutter.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
-					Vi har nu hentet alle links til bilbasen.
+					Vi har nu hentet alle links til bilbasen. 
+					Vi fandt <div id="bilbasenurls" style="margin-left: 500px; margin-top: -25px;"> </div> biler hos bilbasen,
+					og <div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div> biler ved guloggratis.
 				</div>
 				<div class="endSearch searchTxt infoTxt">
-					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om kort tid
+					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 5 sek.
 				</div>
 				
 					
 				<form class="modelDropdown">
-					<label class="infoTxt">Her kan du vælge hvilken bilmodel du vil se i din excel fil:</label>
+					<label class="infoTxt">Her kan du vælge hvilken bilmodel du vil have i din csv fil:</label>
 					<select class="carModel frontpageStyle">
 						<option style="font-size: 20px;"> Vælg bilmodel </option>
 						<option class="carModelOptions" value="Volvo V60">Volvo V60</option>
 						<option class="carModelOptions" value="Volvo XC40">Volvo XC40</option>
+						<option class="carModelOptions" value="Volvo V40">Volvo V40</option>
+						<option class="carModelOptions" value="Volvo V40%20CC">Volvo V40 CC</option>
 						<option class="carModelOptions" value="Audi A3">Audi A3</option>
 						<option class="carModelOptions" value="Audi A6">Audi A6</option>
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
@@ -57,6 +60,19 @@
 						Tilbage
 					</button>
 				</form>
+		
+		<?php 	
+			if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
+				echo "<h3> Antal biler fra 
+					<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">
+					www.bilbasen.dk </a> : $bilbasenCount </h3>"; 
+				echo "<h3> Antal biler fra 
+					<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">
+					www.guloggratis.dk </a>:  $gulOgGratisCount </h3>"; 
+				$sum = $bilbasenCount + $gulOgGratisCount;
+				echo "<h3> Samlet: $sum </h3>";
+			}
+		?>
 
 	</body>
 

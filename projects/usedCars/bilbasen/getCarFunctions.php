@@ -4,8 +4,20 @@
 
 
 
-	function getModelName(data, singleCarArray)
+	function getMainAttributes(data, singleCarArray)
 	{
+		kmStart = data.search(/<span class="label">Km<\/span>/);
+		kmEnd = data.search(/<section id="bbVipUsage" class="section">/);
+		if (kmStart != -1) {
+			theKmSub = data.substring(kmStart, kmEnd);
+			kmNewStart = theKmSub.search(/<span class="value">/);
+			kmNewEnd = theKmSub.search(/ <\/span>/);
+			theKilometers = theKmSub.substring(kmNewStart+20, kmNewEnd);
+			//console.log("Km string: " + theKilometers + "\n");
+		} else {
+			theKilometers = "-";
+		}
+		
 		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
 		nameEnd = data.search("<div class=\"reviews-wrapper\">");
 		//console.log("nameStart, nameEnd = " + nameStart + ", " + nameEnd);
@@ -17,7 +29,7 @@
 			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
 			theCarModel = secondSubstring;
 			
-			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+20);
+			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+12);
 			thirdSubstring = thirdSubstring.replace(",", ".");
 			theEngine = thirdSubstring;
 			//console.log("Engine: " + thirdSubstring);
@@ -25,10 +37,7 @@
 		    theCarModel = "-";
 			theEngine = "-";
 		}
-	}
-
-	function setPriceAttributes(data, singleCarArray)
-	{				
+			
 		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
 		if (priceStart != -1) {
 			priceString = data.substring(priceStart+20, priceStart+50);
@@ -40,10 +49,7 @@
 		} else {
 			thePrice = "-";
 		}
-	}
-	
-	function setColorAttributes(data, singleCarArray)
-	{			
+		
 		colorStart = data.search("<span>Farve:</span>");
 		//console.log("color start, end: " + colorStart);
 		if (colorStart != -1) {
@@ -63,11 +69,7 @@
 		} else {
 			theColor = "-";
 		}
-	}
 
-
-	function setSightAttributes(data, singleCarArray)
-	{
 		sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
 		sightEnd = data.search("<li title=\"Farve\"><span>Farve:</span>");
 		//console.log("sight start, end: " + sightStart + " " + sightEnd);
@@ -86,10 +88,7 @@
 		} else {
 			lastDateOfSight = "-";
 		}
-	}
-	
-	function setModelAttributes(data, singleCarArray)
-	{		
+		
 		modelStart = data.search("<div class=\"car-model-year\">");
 		modelEnd = data.search("<section class=\"section vip-finance\"");
 		if (modelStart != -1 && modelEnd != -1) {
@@ -114,10 +113,7 @@
 		} else {
 			yearOfTheModel = "-";
 		}
-	}
-	
-	function setProdAttributes(data, singleCarArray)
-	{				
+				
 		prodStart = data.search("<div class=\"car-production-date\">");
 		prodEnd = data.search("<div class=\"car-model-year\">");
 		if (prodStart != -1 && prodEnd != -1) {
@@ -138,10 +134,7 @@
 		} else {
 			theProductionDate = "-";
 		}
-	}
-	
-	function setRegAttributes(data, singleCarArray)
-	{					
+				
 		regStart = data.search("<div class=\"car-first-registration-date\">");
 		regEnd = data.search("<div class=\"car-production-date\">");
 		if (regStart != -1 && regEnd != -1) {
@@ -349,7 +342,7 @@
 	function getContactDetails(data)
 	{
 		
-		cityStart = data.search(/<div>\d{4} [A-Za-zæøå ]+<\/div>/);
+		cityStart = data.search(/<div>\d{4} [A-Za-z(&AElig;)(&aring;)(&oslash;) ]+<\/div>/);
 		cityTxt = data.substring(cityStart+5 , cityStart+40);
 		cityEnd = cityTxt.search(/<\/div>/);
 		cityTxt = cityTxt.substring(0, cityEnd);

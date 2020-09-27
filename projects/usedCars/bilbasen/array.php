@@ -104,6 +104,7 @@
 	var laneAssistant;
 	var xenonLights;
 	var contactInfo;
+	var theKilometers;
 
 	function setTheFirstArray(singleCarArray)
 	{
@@ -112,15 +113,12 @@
 		singleCarArray.push(theCarModel);
 		singleCarArray.push(theEngine);
 		singleCarArray.push(thePrice);
+		singleCarArray.push(theKilometers);
 		singleCarArray.push(horsePowerAndNm);
 		singleCarArray.push(fromZeroToHundred);
 		singleCarArray.push(theTopSpeed);
 		singleCarArray.push(energyToUse);
 		singleCarArray.push(energyUsage);
-		singleCarArray.push(theEuronorm);
-		singleCarArray.push(theWidth);
-		singleCarArray.push(theLength);
-		singleCarArray.push(theHeight);
 		singleCarArray.push(loadAbility);
 		singleCarArray.push(drivingWheels);
 		singleCarArray.push(theCylinders);
@@ -144,6 +142,10 @@
 		singleCarArray.push(towbarDetachable);
 		singleCarArray.push(antispin);
 		singleCarArray.push(carplayApple);
+		singleCarArray.push(theEuronorm);
+		singleCarArray.push(theWidth);
+		singleCarArray.push(theLength);
+		singleCarArray.push(theHeight);
 		singleCarArray.push(armRelax);
 		singleCarArray.push(autoEmergencyBreak);
 		singleCarArray.push(autoParking);
