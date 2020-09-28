@@ -39,10 +39,12 @@
 				loopII++;                  
 				if (loopII < firstUrlArr.length) {         
 					mySecondLoop();             
-				} else {
-					lastBool = true;
+				} else {  
+					setTimeout(function() {  
+						lastBool = true;
+					}, 3000)
 				}					
-			}, 60)
+			}, 120)
 		}
 	}
 	
