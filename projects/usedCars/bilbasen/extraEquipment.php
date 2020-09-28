@@ -200,35 +200,35 @@
 		startEquip = data.search("Startsp&#230;rre");	
 		if(startEquip != -1) { startingLight = "Ja"; } else { startingLight = "-"; }
 		
-		equip = data.search("Svingbart tr&#230;k (elektrisk)");	
-		if(equip != -1) { pivotableTractionElectric = "Ja"; } else { pivotableTractionElectric = "-"; }
+		elSwing = data.search("Svingbart tr&#230;k (elektrisk)");	
+		if(elSwing != -1) { pivotableTractionElectric = "Ja"; } else { pivotableTractionElectric = "-"; }
 		
-		equip = data.search("Svingbart tr&#230;k (manuelt)");	
-		if(equip != -1) { pivotableTractionManual = "Ja"; } else { pivotableTractionManual = "-"; }
+		manSwing = data.search("Svingbart tr&#230;k (manuelt)");	
+		if(manSwing != -1) { pivotableTractionManual = "Ja"; } else { pivotableTractionManual = "-"; }
 		
-		equip = data.search("T&#229;gelygter");	
-		if(equip != -1) { fogLights = "Ja"; } else { fogLights = "-"; }
+		fogEquip = data.search("T&#229;gelygter");	
+		if(fogEquip != -1) { fogLights = "Ja"; } else { fogLights = "-"; }
 		
-		equip = data.search("Tagr&#230;ling");	
-		if(equip != -1) { roofRails = "Ja"; } else { roofRails = "-"; }
+		roofEquip = data.search("Tagr&#230;ling");	
+		if(roofEquip != -1) { roofRails = "Ja"; } else { roofRails = "-"; }
 		
-		equip = data.search("Tr&#229;dl&#248;s mobilopladning");	
-		if(equip != -1) { wirelessMobileRecharge = "Ja"; } else { wirelessMobileRecharge = "-"; }
+		mobileEquip = data.search("Tr&#229;dl&#248;s mobilopladning");	
+		if(mobileEquip != -1) { wirelessMobileRecharge = "Ja"; } else { wirelessMobileRecharge = "-"; }
 		
-		equip = data.search("Tr&#230;thedsregistrering");	
-		if(equip != -1) { registrationOfTired = "Ja"; } else { registrationOfTired = "-"; }
+		tiredEquip = data.search("Tr&#230;thedsregistrering");	
+		if(tiredEquip != -1) { registrationOfTired = "Ja"; } else { registrationOfTired = "-"; }
 		
-		equip = data.search("Undervogn, s&#230;nket");	
-		if(equip != -1) { underCarLowered = "Ja"; } else { underCarLowered = "-"; }
+		underCarEquip = data.search("Undervogn, s&#230;nket");	
+		if(underCarEquip != -1) { underCarLowered = "Ja"; } else { underCarLowered = "-"; }
 		
-		equip = data.search("USB tilslutning");	
-		if(equip != -1) { usbConnection = "Ja"; } else { usbConnection = "-"; }
+		usbEquip = data.search("USB tilslutning");	
+		if(usbEquip != -1) { usbConnection = "Ja"; } else { usbConnection = "-"; }
 		
-		equip = data.search("Vognbaneassistent");	
-		if(equip != -1) { laneAssistant = "Ja"; } else { laneAssistant = "-"; }
+		laneEquip = data.search("Vognbaneassistent");	
+		if(laneEquip != -1) { laneAssistant = "Ja"; } else { laneAssistant = "-"; }
 		
-		equip = data.search("Xenonlygter");	
-		if(equip != -1) { xenonLights = "Ja"; } else { xenonLights = "-"; }
+		xenonLightEquip = data.search("Xenonlygter");	
+		if(xenonLightEquip != -1) { xenonLights = "Ja"; } else { xenonLights = "-"; }
 		
 	}
 
