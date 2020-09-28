@@ -115,6 +115,7 @@
 		singleCarArray.push(thePrice);
 		singleCarArray.push(theKilometers);
 		singleCarArray.push(horsePowerAndNm);
+		singleCarArray.push(theRegistrationDate);
 		singleCarArray.push(fromZeroToHundred);
 		singleCarArray.push(theTopSpeed);
 		singleCarArray.push(energyToUse);
@@ -131,7 +132,6 @@
 		singleCarArray.push(theGearType);
 		singleCarArray.push(theWeight);
 		singleCarArray.push(countOfDoors);
-		singleCarArray.push(theRegistrationDate);
 		singleCarArray.push(theProductionDate);
 		singleCarArray.push(yearOfTheModel);
 		singleCarArray.push(lastDateOfSight);
