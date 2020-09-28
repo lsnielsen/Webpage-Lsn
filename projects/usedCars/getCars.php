@@ -37,18 +37,11 @@
 		
 		bilbasenLoop();
 		gulOgGratisLoop();
-		
-		//console.log("chosen: " + modelArray);
-		
 		firstPauseLoop();
-		
-		
-	
 	});
 	
 	function firstPauseLoop()
 	{
-		//console.log("firstPauseLoop");
 		setTimeout(function() {   
 			if (firstBool == false || secondBool == false) {         
 				firstPauseLoop();             
@@ -71,7 +64,6 @@
 	
 	function secondPauseLoop()
 	{
-		//console.log("secondPauseLoop");
 		setTimeout(
 			function() 
 			{
@@ -81,9 +73,8 @@
 					setTimeout(
 						function()
 						{
-							$(".endSearch").show();
 							makeArrayToPhp();
-						}, 500);
+						}, 200);
 				}
 		}, 5000);		
 	}
@@ -121,7 +112,6 @@
 				theUrl = gulOgGratisUrl + "/?n=" + loopJ*60;
 				callingSecondUrl(theUrl);
 			} else {
-				//console.log("Gul og gratis url: " + gulOgGratisUrl);
 				callingSecondUrl(gulOgGratisUrl);
 			}
 			loopJ++;                  
@@ -149,8 +139,7 @@
 	
 	function makeArrayToPhp()
 	{
-		//console.log("data array: ");
-		//console.log(dataArray);
+		$(".endSearch").show();
 		for(i=0; i<dataArray.length; i++) {
 			arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {
