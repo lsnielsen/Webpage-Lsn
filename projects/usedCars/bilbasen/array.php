@@ -137,9 +137,9 @@
 		singleCarArray.push(lastDateOfSight);
 		singleCarArray.push(theColor);
 		singleCarArray.push(alloyWheels);
-		singleCarArray.push(autoAndroid);
 		singleCarArray.push(towbar);
 		singleCarArray.push(towbarDetachable);
+		singleCarArray.push(autoAndroid);
 		singleCarArray.push(antispin);
 		singleCarArray.push(carplayApple);
 		singleCarArray.push(theEuronorm);

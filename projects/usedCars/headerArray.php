@@ -1,7 +1,7 @@
 	
 <?php
 	
-		$headerArray = [
+	$headerArray = [
 							'Link', 
 							'Kontakt info', 
 							'Bilmærke', 
@@ -31,9 +31,9 @@
 							"Synet", 
 							"Farve", 
 							"Alufælge", 
-							"Andriod auto", 
 							"Anhængertræk", 
 							"Anhængertræk aftagl.", 
+							"Andriod auto", 
 							"Antispin", 
 							"Apple carplay", 
 							"Euronorm", 
