@@ -49,6 +49,7 @@
 						<option class="carModelOptions" value="Volvo V40">Volvo V40</option>
 						<option class="carModelOptions" value="Volvo V40%20CC">Volvo V40 CC</option>
 						<option class="carModelOptions" value="Audi A3">Audi A3</option>
+						<option class="carModelOptions" value="Audi A4">Audi A4</option>
 						<option class="carModelOptions" value="Audi A6">Audi A6</option>
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
 						<option class="carModelOptions" value="Saab 9-5">Saab 9-5</option>

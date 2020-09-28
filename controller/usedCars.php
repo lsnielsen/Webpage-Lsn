@@ -11,17 +11,31 @@
 			$bilbasenCount = 0;
 			$gulOgGratisCount = 0;
 			$dataArr = prepareArray($usedCarsArray);			
+			
 			$tempArr = removeBlankColoums($dataArr, $headerArray);
 			$dataArr = $tempArr[0];
 			$headerArray = $tempArr[1];
 			
+			$tempArr = spliceArray($dataArr);
+			$autoArr = $tempArr[0];
+			$manuelArr = $tempArr[1];
+
 			sleep(1);
 
 			$fileName = $dataArr[0][2];
 			
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
 			fputcsv($fp, $headerArray); 
-			foreach ($dataArr as $row) { 
+			foreach ($autoArr as $row) { 
+				fputcsv($fp, $row); 
+			} 
+			
+			fputcsv($fp, [ ]); 
+			fputcsv($fp, [ ]); 
+			fputcsv($fp, [ ]); 
+			
+			fputcsv($fp, $headerArray); 
+			foreach ($manuelArr as $row) { 
 				fputcsv($fp, $row); 
 			} 
   
@@ -32,6 +46,20 @@
 			
 			
 		}
+		
+	function spliceArray($array)
+	{
+		$autoArray;
+		$manuelArray;
+		for ($i=0; $i<sizeof($array); $i++) {
+			if(stripos($array[$i][8], "auto") !== false) {
+					$autoArray[] = $array[$i];
+			}	else if(stripos($array[$i][8], "manuel") !== false) {
+					$manuelArray[] = $array[$i];
+			}
+		}
+		return [$autoArray, $manuelArray];
+	}
 
 
 

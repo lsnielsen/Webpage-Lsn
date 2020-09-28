@@ -8,21 +8,43 @@
 						</tr>
 						<?php
 						
-							if (isset($dataArr)) {
-								for($i=0; $i<sizeOf($dataArr); $i++) {
+							if (isset($autoArr)) {
+								for($i=0; $i<sizeOf($autoArr); $i++) {
 									echo "<tr>";
-										for($j=0; $j<sizeOf($dataArr[$i]); $j++) {
-											if ($j == 0 && strpos($dataArr[$i][0], 'bilbasen') !== false) {
+										for($j=0; $j<sizeOf($autoArr[$i]); $j++) {
+											if ($j == 0 && strpos($autoArr[$i][0], 'bilbasen') !== false) {
 												echo "<td>";
-												echo "<a href='".$dataArr[$i][$j]."' target=\"_blank\">Link til bilbasen</a>";
+												echo "<a href='".$autoArr[$i][$j]."' target=\"_blank\">Link til bilbasen</a>";
 												echo "</td>";
-											} elseif ($j == 0 && strpos($dataArr[$i][0], 'guloggratis') !== false) {
+											} elseif ($j == 0 && strpos($autoArr[$i][0], 'guloggratis') !== false) {
 												echo "<td>";
-												echo "<a href='".$dataArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
+												echo "<a href='".$autoArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
 												echo "</td>";
 											} else {
 												echo "<td>";
-												echo $dataArr[$i][$j];
+												echo $autoArr[$i][$j];
+												echo "</td>";
+											}
+										}
+									echo "</tr>";
+								} 
+							}
+						
+							if (isset($manuelArr)) {
+								for($i=0; $i<sizeOf($manuelArr); $i++) {
+									echo "<tr>";
+										for($j=0; $j<sizeOf($manuelArr[$i]); $j++) {
+											if ($j == 0 && strpos($manuelArr[$i][0], 'bilbasen') !== false) {
+												echo "<td>";
+												echo "<a href='".$manuelArr[$i][$j]."' target=\"_blank\">Link til bilbasen</a>";
+												echo "</td>";
+											} elseif ($j == 0 && strpos($manuelArr[$i][0], 'guloggratis') !== false) {
+												echo "<td>";
+												echo "<a href='".$manuelArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
+												echo "</td>";
+											} else {
+												echo "<td>";
+												echo $manuelArr[$i][$j];
 												echo "</td>";
 											}
 										}
