@@ -98,107 +98,107 @@
 		varmMirrorEquip = data.search("El-klapbare sidespejle m. varme");	
 		if(varmMirrorEquip != -1) { electricSideMirrorWarm = "Ja"; } else { electricSideMirrorWarm = "-"; }
 		
-		equip = data.search("Elektriske vinduer");	
-		if(equip != -1) { electricWindowsTimesFour = "Ja"; } else { electricWindowsTimesFour = "-"; }
+		elWindowEquip = data.search("Elektriske vinduer");	
+		if(elWindowEquip != -1) { electricWindowsTimesFour = "Ja"; } else { electricWindowsTimesFour = "-"; }
 		
-		equip = data.search("Fartpilot");	
-		if(equip != -1) { speedPilot = "Ja"; } else { speedPilot = "-"; }
+		speedEquip = data.search("Fartpilot");	
+		if(speedEquip != -1) { speedPilot = "Ja"; } else { speedPilot = "-"; }
 		
-		equip = data.search("Fartpilot, adaptiv");	
-		if(equip != -1) { speedPilotAdaptive = "Ja"; } else { speedPilotAdaptive = "-"; }
+		speedAdapEquip = data.search("Fartpilot, adaptiv");	
+		if(speedAdapEquip != -1) { speedPilotAdaptive = "Ja"; } else { speedPilotAdaptive = "-"; }
 		
-		equip = data.search("Fjernlysassistent");	
-		if(equip != -1) { remoteLightAssistant = "Ja"; } else { remoteLightAssistant = "-"; }
+		remoteLightEquip = data.search("Fjernlysassistent");	
+		if(remoteLightEquip != -1) { remoteLightAssistant = "Ja"; } else { remoteLightAssistant = "-"; }
 		
-		equip = data.search("Fuld LED forlygter");	
-		if(equip != -1) { completeLedFrontLight = "Ja"; } else { completeLedFrontLight = "-"; }
+		ledEquip = data.search("Fuld LED forlygter");	
+		if(ledEquip != -1) { completeLedFrontLight = "Ja"; } else { completeLedFrontLight = "-"; }
 		
-		equip = data.search("Head-up display");	
-		if(equip != -1) { headUpDisplay = "Ja"; } else { headUpDisplay = "-"; }
+		headUpEquip = data.search("Head-up display");	
+		if(headUpEquip != -1) { headUpDisplay = "Ja"; } else { headUpDisplay = "-"; }
 		
-		equip = data.search("Infocenter");	
-		if(equip != -1) { infoCenter = "Ja"; } else { infoCenter = "-"; }
+		infoEquip = data.search("Infocenter");	
+		if(infoEquip != -1) { infoCenter = "Ja"; } else { infoCenter = "-"; }
 		
-		equip = data.search("Internet");	
-		if(equip != -1) { internet = "Ja"; } else { internet = "-"; }
+		internetEquip = data.search("Internet");	
+		if(internetEquip != -1) { internet = "Ja"; } else { internet = "-"; }
 		
-		equip = data.search("Isofix");	
-		if(equip != -1) { isofix = "Ja"; } else { isofix = "-"; }
+		isofixEquip = data.search("Isofix");	
+		if(isofixEquip != -1) { isofix = "Ja"; } else { isofix = "-"; }
 		
-		equip = data.search("Klimaanl&#230;g, 4-zonet");	
-		if(equip != -1) { climateCenterFourZone = "Ja"; } else { climateCenterFourZone = "-"; }
+		fourZoneEquip = data.search("Klimaanl&#230;g, 4-zonet");	
+		if(fourZoneEquip != -1) { climateCenterFourZone = "Ja"; } else { climateCenterFourZone = "-"; }
 		
-		equip = data.search("K&#248;recomputer");	
-		if(equip != -1) { drivingComputer = "Ja"; } else { drivingComputer = "-"; }
+		computerEquip = data.search("K&#248;recomputer");	
+		if(computerEquip != -1) { drivingComputer = "Ja"; } else { drivingComputer = "-"; }
 		
-		equip = data.search("Kurvelys");	
-		if(equip != -1) { curvingLight = "Ja"; } else { curvingLight = "-"; }
+		curveEquip = data.search("Kurvelys");	
+		if(curveEquip != -1) { curvingLight = "Ja"; } else { curvingLight = "-"; }
 		
-		equip = data.search("L&#230;derrat");	
-		if(equip != -1) { leatherWheel = "Ja"; } else { leatherWheel = "-"; }
+		leatherEquip = data.search("L&#230;derrat");	
+		if(leatherEquip != -1) { leatherWheel = "Ja"; } else { leatherWheel = "-"; }
 		
-		equip = data.search("LED K&#248;relys");	
-		if(equip != -1) { ledDrivingLight = "Ja"; } else { ledDrivingLight = "-"; }
+		ledDriveEquip = data.search("LED K&#248;relys");	
+		if(ledDriveEquip != -1) { ledDrivingLight = "Ja"; } else { ledDrivingLight = "-"; }
 		
-		equip = data.search("Lygtevasker");	
-		if(equip != -1) { lightWashers = "Ja"; } else { lightWashers = "-"; }
+		washEquip = data.search("Lygtevasker");	
+		if(washEquip != -1) { lightWashers = "Ja"; } else { lightWashers = "-"; }
 		
-		equip = data.search("Musikstreaming via bluetooth");	
-		if(equip != -1) { musicViaBluetooth = "Ja"; } else { musicViaBluetooth = "-"; }
+		musicEquip = data.search("Musikstreaming via bluetooth");	
+		if(musicEquip != -1) { musicViaBluetooth = "Ja"; } else { musicViaBluetooth = "-"; }
 		
-		equip = data.search("Navigation");	
-		if(equip != -1) { navigation = "Ja"; } else { navigation = "-"; }
+		navEquip = data.search("Navigation");	
+		if(navEquip != -1) { navigation = "Ja"; } else { navigation = "-"; }
 		
-		equip = data.search("N&#248;glefri betjening");	
-		if(equip != -1) { keylessOperation = "Ja"; } else { keylessOperation = "-"; }
+		keylessEquip = data.search("N&#248;glefri betjening");	
+		if(keylessEquip != -1) { keylessOperation = "Ja"; } else { keylessOperation = "-"; }
 		
-		equip = data.search("Panoramatag");	
-		if(equip != -1) { panoramaRoof = "Ja"; } else { panoramaRoof = "-"; }
+		panoramaEquip = data.search("Panoramatag");	
+		if(panoramaEquip != -1) { panoramaRoof = "Ja"; } else { panoramaRoof = "-"; }
 		
-		equip = data.search("Parkeringssensor (bag)");	
-		if(equip != -1) { parkingSensorBack = "Ja"; } else { parkingSensorBack = "-"; }
+		rearParkEquip = data.search("Parkeringssensor (bag)");	
+		if(rearParkEquip != -1) { parkingSensorBack = "Ja"; } else { parkingSensorBack = "-"; }
 		
-		equip = data.search("Parkeringssensor (for)");	
-		if(equip != -1) { parkingSensorFront = "Ja"; } else { parkingSensorFront = "-"; }
+		frontParkEquip = data.search("Parkeringssensor (for)");	
+		if(frontParkEquip != -1) { parkingSensorFront = "Ja"; } else { parkingSensorFront = "-"; }
 		
-		equip = data.search("Regnsensor");	
-		if(equip != -1) { rainSensor = "Ja"; } else { rainSensor = "-"; }
+		rainEquip = data.search("Regnsensor");	
+		if(rainEquip != -1) { rainSensor = "Ja"; } else { rainSensor = "-"; }
 		
-		equip = data.search("S&#230;debetr&#230;k, dell&#230;der");	
-		if(equip != -1) { seatCoversPartlyLeather = "Ja"; } else { seatCoversPartlyLeather = "-"; }
+		partLeatherEquip = data.search("S&#230;debetr&#230;k, dell&#230;der");	
+		if(partLeatherEquip != -1) { seatCoversPartlyLeather = "Ja"; } else { seatCoversPartlyLeather = "-"; }
 		
-		equip = data.search("S&#230;debetr&#230;k, l&#230;der");	
-		if(equip != -1) { seatCoverLeather = "Ja"; } else { seatCoverLeather = "-"; }
+		fullLeatherEquip = data.search("S&#230;debetr&#230;k, l&#230;der");	
+		if(fullLeatherEquip != -1) { seatCoverLeather = "Ja"; } else { seatCoverLeather = "-"; }
 		
-		equip = data.search("S&#230;devarme");	
-		if(equip != -1) { seatWarming = "Ja"; } else { seatWarming = "-"; }
+		seatWarmingEquip = data.search("S&#230;devarme");	
+		if(seatWarmingEquip != -1) { seatWarming = "Ja"; } else { seatWarming = "-"; }
 		
-		equip = data.search("SD kortl&#230;ser");	
-		if(equip != -1) { sdMapReader = "Ja"; } else { sdMapReader = "-"; }
+		sdEquip = data.search("SD kortl&#230;ser");	
+		if(sdEquip != -1) { sdMapReader = "Ja"; } else { sdMapReader = "-"; }
 		
-		equip = data.search("Service ok");	
-		if(equip != -1) { okService = "Ja"; } else { okService = "-"; }
+		serviceEquip = data.search("Service ok");	
+		if(serviceEquip != -1) { okService = "Ja"; } else { okService = "-"; }
 		
-		equip = data.search("Servo");	
-		if(equip != -1) { servo = "Ja"; } else { servo = "-"; }
+		servoEquip = data.search("Servo");	
+		if(servoEquip != -1) { servo = "Ja"; } else { servo = "-"; }
 		
-		equip = data.search("<li>Skiltegenkendelse</li>");	
-		if(equip != -1) { signRecognition = "Ja"; } else { signRecognition = "-"; }
+		signEquip = data.search("<li>Skiltegenkendelse</li>");	
+		if(signEquip != -1) { signRecognition = "Ja"; } else { signRecognition = "-"; }
 		
-		equip = data.search("Soltag, elektrisk");	
-		if(equip != -1) { sunRoofElectric = "Ja"; } else { sunRoofElectric = "-"; }
+		elSunEquip = data.search("Soltag, elektrisk");	
+		if(elSunEquip != -1) { sunRoofElectric = "Ja"; } else { sunRoofElectric = "-"; }
 		
-		equip = data.search("Soltag, manuelt");	
-		if(equip != -1) { sunRoofManual = "Ja"; } else { sunRoofManual = "-"; }
+		manSunEquip = data.search("Soltag, manuelt");	
+		if(manSunEquip != -1) { sunRoofManual = "Ja"; } else { sunRoofManual = "-"; }
 		
-		equip = data.search("Splitbags&#230;de");	
-		if(equip != -1) { backSeatSplit = "Ja"; } else { backSeatSplit = "-"; }
+		seatSplit = data.search("Splitbags&#230;de");	
+		if(seatSplit != -1) { backSeatSplit = "Ja"; } else { backSeatSplit = "-"; }
 		
-		equip = data.search("Sportss&#230;der");	
-		if(equip != -1) { sportSeats = "Ja"; } else { sportSeats = "-"; }
+		sportSeat = data.search("Sportss&#230;der");	
+		if(sportSeat != -1) { sportSeats = "Ja"; } else { sportSeats = "-"; }
 		
-		equip = data.search("Startsp&#230;rre");	
-		if(equip != -1) { startingLight = "Ja"; } else { startingLight = "-"; }
+		startEquip = data.search("Startsp&#230;rre");	
+		if(startEquip != -1) { startingLight = "Ja"; } else { startingLight = "-"; }
 		
 		equip = data.search("Svingbart tr&#230;k (elektrisk)");	
 		if(equip != -1) { pivotableTractionElectric = "Ja"; } else { pivotableTractionElectric = "-"; }
