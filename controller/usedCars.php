@@ -8,11 +8,11 @@
 		} else {
 			
 			$headerArray = ['Link', 'Kontakt info', 'Bilmærke', 'Motor', 'Pris', 'Kørte kilometer',
-							'Hk/Nm', "0-100 km/t", "Tophastighed", "Drivmiddel", 
+							'Hk/Nm', "Registrerings dato", "0-100 km/t", "Tophastighed", "Drivmiddel", 
 							"Forbrug", "Lasteevne", "Trækhjul", "Cylindre", 
 							"ABS-bremser", "Max påhæng", "Airbags", "ESP", "Tank", 
 							"Gear", "Geartype", "Vægt", "Døre", 
-							"Registrerings dato", "Produktions år", "Modelår", 
+							"Produktions år", "Modelår", 
 							"Synet", "Farve", "Alufælge", "Andriod auto", 
 							"Anhængertræk", "Anhængertræk aftagl.", "Antispin", "Apple carplay", 
 							"Euronorm", "Bredde", "Længde", "Højde", 
