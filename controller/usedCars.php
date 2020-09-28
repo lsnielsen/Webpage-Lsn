@@ -88,14 +88,14 @@
 		
 		
 		$keys = array_keys($blankTest); 
-		echo '<pre>'; print_r($blankTest); echo '</pre>';
-		echo '<pre>'; print_r($keys); echo '</pre>';
+		//echo '<pre>'; print_r($blankTest); echo '</pre>';
+		//echo '<pre>'; print_r($keys); echo '</pre>';
 		
 		for ($i=0; $i<sizeof($array); $i++) {
 			$columnCounter = 0;
 			for ($j=0; $j<sizeof($keys); $j++) {
 				if($blankTest[$keys[$j]] == false) {
-					echo "columnCounter: " . $columnCounter . ", and j = " . $j . "<br>";
+					//echo "columnCounter: " . $columnCounter . ", and j = " . $j . "<br>";
 					array_splice($array[$i], $keys[$j - $columnCounter], 1);
 					$columnCounter++;
 				}
