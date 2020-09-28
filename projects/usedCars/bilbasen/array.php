@@ -116,6 +116,7 @@
 		singleCarArray.push(theKilometers);
 		singleCarArray.push(horsePowerAndNm);
 		singleCarArray.push(theRegistrationDate);
+		singleCarArray.push(theGearType);
 		singleCarArray.push(fromZeroToHundred);
 		singleCarArray.push(theTopSpeed);
 		singleCarArray.push(energyToUse);
@@ -129,7 +130,6 @@
 		singleCarArray.push(doesEsp);
 		singleCarArray.push(theGasTank);
 		singleCarArray.push(theGears);
-		singleCarArray.push(theGearType);
 		singleCarArray.push(theWeight);
 		singleCarArray.push(countOfDoors);
 		singleCarArray.push(theProductionDate);
