@@ -6,97 +6,97 @@
 	function setExtraEquipment(data)
 	{
 		//console.log(data);
-		equip = data.search("ABS-bremser");	
-		if(equip != -1) { absBreaks = "Ja"; } else { absBreaks = "-"; }
+		absEquip = data.search("ABS-bremser");	
+		if(absEquip != -1) { absBreaks = "Ja"; } else { absBreaks = "-"; }
 		
-		equip = data.search("Aluf&#230;lge");	
-		if(equip != -1) { alloyWheels = "Ja"; } else { alloyWheels = "-"; }
+		aluEquip = data.search("Aluf&#230;lge");	
+		if(aluEquip != -1) { alloyWheels = "Ja"; } else { alloyWheels = "-"; }
 		
-		equip = data.search("Android auto");	
-		if(equip != -1) { autoAndroid = "Ja"; } else { autoAndroid = "-"; }
+		androidEquip = data.search("Android auto");	
+		if(androidEquip != -1) { autoAndroid = "Ja"; } else { autoAndroid = "-"; }
 		
-		equip = data.search("Anh&#230;ngertr&#230;k");	
-		if(equip != -1) { towbar = "Ja"; } else { towbar = "-"; }
+		towEquip = data.search("Anh&#230;ngertr&#230;k");	
+		if(towEquip != -1) { towbar = "Ja"; } else { towbar = "-"; }
 		
-		equip = data.search("Anh&#230;ngertr&#230;k, aftagl.");	
-		if(equip != -1) { towbarDetachable = "Ja"; } else { towbarDetachable = "-"; }
+		towDetachEquip = data.search("Anh&#230;ngertr&#230;k, aftagl.");	
+		if(towDetachEquip != -1) { towbarDetachable = "Ja"; } else { towbarDetachable = "-"; }
 		
-		equip = data.search("Antispin");	
-		//console.log("antispin: " + equip);
-		if(equip != -1) { antispin = "Ja"; } else { antispin = "-"; }
+		spinEquip = data.search("Antispin");	
+		//console.log("antispin: " + spinEquip);
+		if(spinEquip != -1) { antispin = "Ja"; } else { antispin = "-"; }
 		
-		equip = data.search("Apple carplay");	
-		if(equip != -1) { carplayApple = "Ja"; } else { carplayApple = "-"; }
+		appleEquip = data.search("Apple carplay");	
+		if(appleEquip != -1) { carplayApple = "Ja"; } else { carplayApple = "-"; }
 		
-		equip = data.search("Arml&#230;n");	
-		if(equip != -1) { armRelax = "Ja"; } else { armRelax = "-"; }
+		armEquip = data.search("Arml&#230;n");	
+		if(armEquip != -1) { armRelax = "Ja"; } else { armRelax = "-"; }
 		
-		equip = data.search("Auto. n&#248;dbremse");	
-		if(equip != -1) { autoEmergencyBreak = "Ja"; } else { autoEmergencyBreak = "-"; }
+		breakEquip = data.search("Auto. n&#248;dbremse");	
+		if(breakEquip != -1) { autoEmergencyBreak = "Ja"; } else { autoEmergencyBreak = "-"; }
 		
-		equip = data.search("Auto. parkering");	
-		if(equip != -1) { autoParking = "Ja"; } else { autoParking = "-"; }
+		parkEquip = data.search("Auto. parkering");	
+		if(parkEquip != -1) { autoParking = "Ja"; } else { autoParking = "-"; }
 		
-		equip = data.search("Auto. start/stop");	
-		if(equip != -1) { autoStartStop = "Ja"; } else { autoStartStop = "-"; }
+		autoEquip = data.search("Auto. start/stop");	
+		if(autoEquip != -1) { autoStartStop = "Ja"; } else { autoStartStop = "-"; }
 		
 		//equip = data.search("Automatgear");	
 		//if(equip != -1) { autoGear = "Ja"; } else { autoGear = "-"; }
 		
-		equip = data.search("Automatisk lys");	
-		if(equip != -1) { autoLight = "Ja"; } else { autoLight = "-"; }
+		lightEquip = data.search("Automatisk lys");	
+		if(lightEquip != -1) { autoLight = "Ja"; } else { autoLight = "-"; }
 		
-		equip = data.search("AUX tilslutning");	
-		if(equip != -1) { auxAdding = "Ja"; } else { auxAdding = "-"; }
+		auxEquip = data.search("AUX tilslutning");	
+		if(auxEquip != -1) { auxAdding = "Ja"; } else { auxAdding = "-"; }
 		
-		equip = data.search("Bakkamera");	
-		if(equip != -1) { rearCamera = "Ja"; } else { rearCamera = "-"; }
+		rearEquip = data.search("Bakkamera");	
+		if(rearEquip != -1) { rearCamera = "Ja"; } else { rearCamera = "-"; }
 		
-		equip = data.search("Bakspejl m. nedbl.");	
-		if(equip != -1) { rearMirrorLessLight = "Ja"; } else { rearMirrorLessLight = "-"; }
+		rearMirrorEquip = data.search("Bakspejl m. nedbl.");	
+		if(rearMirrorEquip != -1) { rearMirrorLessLight = "Ja"; } else { rearMirrorLessLight = "-"; }
 		
-		equip = data.search("Bi-xenon");	
-		if(equip != -1) { biXenon = "Ja"; } else { biXenon = "-"; }
+		xenonEquip = data.search("Bi-xenon");	
+		if(xenonEquip != -1) { biXenon = "Ja"; } else { biXenon = "-"; }
 		
-		equip = data.search("Blindvinkelassistent");	
-		if(equip != -1) { blindAngelassistent = "Ja"; } else { blindAngelassistent = "-"; }
+		angelEquip = data.search("Blindvinkelassistent");	
+		if(angelEquip != -1) { blindAngelassistent = "Ja"; } else { blindAngelassistent = "-"; }
 		
-		equip = data.search("Bluetooth");	
-		if(equip != -1) { bluetooth = "Ja"; } else { bluetooth = "-"; }
+		bluetoothEquip = data.search("Bluetooth");	
+		if(bluetoothEquip != -1) { bluetooth = "Ja"; } else { bluetooth = "-"; }
 		
-		equip = data.search("Brugtbilsattest");	
-		if(equip != -1) { usedCarAttest = "Ja"; } else { usedCarAttest = "-"; }
+		attestEquip = data.search("Brugtbilsattest");	
+		if(attestEquip != -1) { usedCarAttest = "Ja"; } else { usedCarAttest = "-"; }
 		
-		equip = data.search("Centrall&#229;s fjernb.");	
-		equipII = data.search("Fjernbetjent Centrall&#229;s");	
-		if(equip != -1 || equipII != -1) { centralLockRemote = "Ja"; } else { centralLockRemote = "-"; }
+		remoteEquip = data.search("Centrall&#229;s fjernb.");	
+		remoteEquipII = data.search("Fjernbetjent Centrall&#229;s");	
+		if(remoteEquip != -1 || remoteEquipII != -1) { centralLockRemote = "Ja"; } else { centralLockRemote = "-"; }
 		
-		equip = data.search("DAB radio");	
-		if(equip != -1) { dabRadio = "Ja"; } else { dabRadio = "-"; }
+		dabEquip = data.search("DAB radio");	
+		if(dabEquip != -1) { dabRadio = "Ja"; } else { dabRadio = "-"; }
 		
-		equip = data.search("D&#230;ktryksm&#229;ler");	
-		if(equip != -1) { wheelAirMeassure = "Ja"; } else { wheelAirMeassure = "-"; }
+		airEquip = data.search(/<li>d.+ktryksm.+ler<\/li>/i);	
+		if(airEquip != -1) { wheelAirMeassure = "Ja"; } else { wheelAirMeassure = "-"; }
 		
-		equip = data.search("Digitalt cockpit");	
-		if(equip != -1) { cockpitDigital = "Ja"; } else { cockpitDigital = "-"; }
+		cockpitEquip = data.search("Digitalt cockpit");	
+		if(cockpitEquip != -1) { cockpitDigital = "Ja"; } else { cockpitDigital = "-"; }
 		
-		equip = data.search("El indst. f&#248;rers&#230;de m. memory");	
-		if(equip != -1) { frontseatElInstall = "Ja"; } else { frontseatElInstall = "-"; }
+		seatEquip = data.search("El indst. f&#248;rers&#230;de m. memory");	
+		if(seatEquip != -1) { frontseatElInstall = "Ja"; } else { frontseatElInstall = "-"; }
 		
-		equip = data.search("Elektrisk kabinevarmer");	
-		if(equip != -1) { cabinWarmEl = "Ja"; } else { cabinWarmEl = "-"; }
+		warmEquip = data.search("Elektrisk kabinevarmer");	
+		if(warmEquip != -1) { cabinWarmEl = "Ja"; } else { cabinWarmEl = "-"; }
 		
-		equip = data.search("Elektrisk parkeringsbremse");	
-		if(equip != -1) { parkingBreakEl = "Ja"; } else { parkingBreakEl = "-"; }
+		parkingEquip = data.search("Elektrisk parkeringsbremse");	
+		if(parkingEquip != -1) { parkingBreakEl = "Ja"; } else { parkingBreakEl = "-"; }
 		
-		equip = data.search("Elektriske komforts&#230;der");	
-		if(equip != -1) { electricComfortableSeats = "Ja"; } else { electricComfortableSeats = "-"; }
+		elSeatEquip = data.search("Elektriske komforts&#230;der");	
+		if(elSeatEquip != -1) { electricComfortableSeats = "Ja"; } else { electricComfortableSeats = "-"; }
 		
-		equip = data.search("Elektronisk bagklap");	
-		if(equip != -1) { electricBackDoor = "Ja"; } else { electricBackDoor = "-"; }
+		backDoorEquip = data.search("Elektronisk bagklap");	
+		if(backDoorEquip != -1) { electricBackDoor = "Ja"; } else { electricBackDoor = "-"; }
 		
-		equip = data.search("El-klapbare sidespejle m. varme");	
-		if(equip != -1) { electricSideMirrorWarm = "Ja"; } else { electricSideMirrorWarm = "-"; }
+		varmMirrorEquip = data.search("El-klapbare sidespejle m. varme");	
+		if(varmMirrorEquip != -1) { electricSideMirrorWarm = "Ja"; } else { electricSideMirrorWarm = "-"; }
 		
 		equip = data.search("Elektriske vinduer");	
 		if(equip != -1) { electricWindowsTimesFour = "Ja"; } else { electricWindowsTimesFour = "-"; }
@@ -182,7 +182,7 @@
 		equip = data.search("Servo");	
 		if(equip != -1) { servo = "Ja"; } else { servo = "-"; }
 		
-		equip = data.search("Skiltegenkendelse");	
+		equip = data.search("<li>Skiltegenkendelse</li>");	
 		if(equip != -1) { signRecognition = "Ja"; } else { signRecognition = "-"; }
 		
 		equip = data.search("Soltag, elektrisk");	
