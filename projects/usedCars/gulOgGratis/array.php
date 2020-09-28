@@ -115,6 +115,7 @@
 		gogCarArray.push(gogThePrice);
 		gogCarArray.push(gogTheKilometers);
 		gogCarArray.push(gogHorsePowerAndNm);
+		gogCarArray.push(gogTheRegistrationDate);
 		gogCarArray.push(gogFromZeroToHundred);
 		gogCarArray.push(gogTheTopSpeed);
 		gogCarArray.push(gogEnergyToUse);
@@ -131,7 +132,6 @@
 		gogCarArray.push(gogTheGearType);
 		gogCarArray.push(gogTheWeight);
 		gogCarArray.push(gogCountOfDoors);
-		gogCarArray.push(gogTheRegistrationDate);
 		gogCarArray.push(gogTheProductionDate);
 		gogCarArray.push(gogYearOfTheModel);
 		gogCarArray.push(gogLastDateOfSight);
