@@ -329,13 +329,6 @@
 			countOfDoors = "-";
 		}
 
-		getContactDetails(data);
-
-		
-	}
-	
-	function getContactDetails(data)
-	{
 		contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
 		var match = contactRegexp.exec(data);
 		if (match !==  null) {
@@ -343,6 +336,8 @@
 		} else {
 			contactInfo = "-";
 		}
+
+		
 	}
 	
 	
