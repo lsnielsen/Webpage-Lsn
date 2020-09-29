@@ -7,6 +7,7 @@
 							'Bilmærke', 
 							'Motor', 
 							'Pris', 
+							'Ny pris', 
 							'Kørte kilometer',
 							'Hk/Nm', 
 							"Registrerings dato", 

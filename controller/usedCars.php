@@ -52,9 +52,9 @@
 		$autoArray;
 		$manuelArray;
 		for ($i=0; $i<sizeof($array); $i++) {
-			if(stripos($array[$i][8], "auto") !== false) {
+			if(stripos($array[$i][9], "auto") !== false) {
 					$autoArray[] = $array[$i];
-			}	else if(stripos($array[$i][8], "manuel") !== false) {
+			}	else if(stripos($array[$i][9], "manuel") !== false) {
 					$manuelArray[] = $array[$i];
 			}
 		}

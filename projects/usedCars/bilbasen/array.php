@@ -105,6 +105,7 @@
 	var xenonLights;
 	var contactInfo;
 	var theKilometers;
+	var theStarterPrice;
 
 	function setTheFirstArray(singleCarArray)
 	{
@@ -113,6 +114,7 @@
 		singleCarArray.push(theCarModel);
 		singleCarArray.push(theEngine);
 		singleCarArray.push(thePrice);
+		singleCarArray.push(theStarterPrice);
 		singleCarArray.push(theKilometers);
 		singleCarArray.push(horsePowerAndNm);
 		singleCarArray.push(theRegistrationDate);

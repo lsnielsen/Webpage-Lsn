@@ -105,6 +105,7 @@
 	var gogxenonLights;
 	var gogContactInfo;
 	var gogTheKilometers;
+	var gogTheStarterPrice = "-";
 
 	function setTheFirstGogArray(gogCarArray)
 	{
@@ -113,6 +114,7 @@
 		gogCarArray.push(gogTheCarModel);
 		gogCarArray.push(gogTheEngine);
 		gogCarArray.push(gogThePrice);
+		gogCarArray.push(gogTheStarterPrice);
 		gogCarArray.push(gogTheKilometers);
 		gogCarArray.push(gogHorsePowerAndNm);
 		gogCarArray.push(gogTheRegistrationDate);

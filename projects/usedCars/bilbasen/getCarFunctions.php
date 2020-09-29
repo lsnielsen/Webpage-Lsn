@@ -19,7 +19,7 @@
 		}
 		
 		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9]+) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
-		var match = carRegexp.exec(data);
+		match = carRegexp.exec(data);
 		if (match !==  null) {
 			theCarModel = match[1];
 			theEngine = match[2].replace(",", ".");
@@ -28,6 +28,12 @@
 			theEngine = "-";
 		}
 			
+		starterPriceRegexp = /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/;
+		match = starterPriceRegexp.exec(data);
+		if (match !==  null) {
+			theStarterPrice = match[1];
+		}
+
 		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
 		if (priceStart != -1) {
 			priceString = data.substring(priceStart+20, priceStart+50);
