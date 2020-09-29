@@ -156,10 +156,10 @@
 		
 	function setPrimerAttributes(data, singleCarArray)
 	{
-		hkStart = data.search("<td style=\"color: #888;\">HK/Nm</td>");
-		hkEnd = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
-		if (hkStart != -1 && hkEnd != -1) {
-			horsePowerAndNm = removePrimerAttributeSpace(hkStart, hkEnd, data);
+		horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
+		match = horsePowerRegexp.exec(data);
+		if (match !== null) {
+			horsePowerAndNm = match[1];
 		} else {
 			horsePowerAndNm = "-";
 		}
@@ -288,18 +288,18 @@
 			doesEsp = "-";
 		}
 
-		tankStart = data.search("<td style=\"color: #888;\">Tank</td>");
-		tankEnd = data.search("<td style=\"color: #888;\">Gear</td>");
-		if (tankStart != -1 && tankEnd != -1) {
-			theGasTank = removePrimerAttributeSpace(tankStart, tankEnd, data);
+		tankRegexp = /<td style="color: #888;">Tank<\/td>[\w\W]+([0-9]{2} l)<\/td>/;
+		match = tankRegexp.exec(data);
+		if (match !== null) {
+			theGasTank = match[1];
 		} else {
 			theGasTank = "-";
 		}
 
-		gearStart = data.search("<td style=\"color: #888;\">Gear</td>");
-		gearEnd = data.search("<td style=\"color: #888;\">Geartype</td>");
-		if (gearStart != -1 && gearEnd != -1) {
-			theGears = removePrimerAttributeSpace(gearStart, gearEnd, data);
+		gearRegexp = /<td style="color: #888;">Gear<\/td>[\w\W]+([0-9] gear)<\/td>/;
+		match = gearRegexp.exec(data);
+		if (match !== null) {
+			theGears = match[1];
 		} else {
 			theGears = "-";
 		}
@@ -312,10 +312,10 @@
 			theGearType = "-";
 		}
 
-		weightStart = data.search("<td style=\"color: #888;\">Vægt</td>");
-		weightEnd = data.search("<td style=\"color: #888;\">Døre</td>");
-		if (weightStart != -1 && weightEnd != -1) {
-			theWeight = removePrimerAttributeSpace(weightStart, weightEnd, data);
+		weightRegexp = /<td style="color: #888;">.{4}<\/td>[\w\W]+([0-9]{4} kg)<\/td>/;
+		match = weightRegexp.exec(data);
+		if (match !== null) {
+			theWeight = match[1];
 		} else {
 			theWeight = "-";
 		}
