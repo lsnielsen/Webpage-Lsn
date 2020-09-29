@@ -174,11 +174,10 @@
 			fromZeroToHundred = "-";
 		}
 
-		topSpeedStart = data.search("<td style=\"color: #888;\">Tophastighed</td>");
-		topSpeedEnd = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
-		if (topSpeedStart != -1 && topSpeedEnd != -1) {
-			theTopSpeed = removePrimerAttributeSpace(topSpeedStart, topSpeedEnd, data);
-			//console.log("topspeed: " + theTopSpeed);
+		topSpeedRegexp = /<td style="color: #888;">Tophastighed<\/td>[\w\W]+([0-9]{3} km\/t)<\/td>/;
+		match = topSpeedRegexp.exec(data);
+		if (match !== null) {
+			theTopSpeed = match[1];
 		} else {
 			theTopSpeed = "-";
 		}
@@ -233,10 +232,10 @@
 			theHeight = "-";
 		}
 
-		loadStart = data.search("<td style=\"color: #888;\">Lasteevne</td>");
-		loadEnd = data.search("<td style=\"color: #888;\">Trækhjul</td>");
-		if (loadStart != -1 && loadEnd != -1) {
-			loadAbility = removePrimerAttributeSpace(loadStart, loadEnd, data);
+		loadRegexp = /<td style="color: #888;">Lasteevne<\/td>[\w\W]+([0-9]{3} kg)<\/td>/;
+		match = loadRegexp.exec(data);
+		if (match !== null) {
+			loadAbility = match[1];
 		} else {
 			loadAbility = "-";
 		}
@@ -384,18 +383,6 @@
 		value = value.replace(",", ".");
 		return value;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
