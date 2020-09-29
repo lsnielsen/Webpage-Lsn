@@ -208,28 +208,28 @@
 			theEuronorm = "-";
 		}
 
-		widthStart = data.search("<td style=\"color: #888;\">Bredde</td>");
-		widthEnd = data.search("<td style=\"color: #888;\">Længde</td>");
-		if (widthStart != -1 && widthEnd != -1) {
-			theWidth = removePrimerAttributeSpace(widthStart, widthEnd, data);
+		heightRegexp = /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/;
+                heightMatch = heightRegexp.exec(data);
+		if (heightMatch !== null) {
+                    theHeight = heightMatch[1];
 		} else {
-			theWidth = "-";
+                    theHeight = "-";
 		}
 
-		lengthStart = data.search("<td style=\"color: #888;\">Længde</td>");
-		lengthEnd = data.search("<td style=\"color: #888;\">Højde</td>");
-		if (lengthStart != -1 && lengthEnd != -1) {
-			theLength = removePrimerAttributeSpace(lengthStart, lengthEnd, data);
+                lengthRegexp = /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/;
+                lengthMatch = lengthRegexp.exec(data);
+		if (lengthMatch !== null) {
+			theLength = lengthMatch[1];
 		} else {
 			theLength = "-";
 		}
-
-		heightStart = data.search("<td style=\"color: #888;\">Højde</td>");
-		heightEnd = data.search("<td style=\"color: #888;\">Lasteevne</td>");
-		if (heightStart != -1 && heightEnd != -1) {
-			theHeight = removePrimerAttributeSpace(heightStart, heightEnd, data);
+                
+		widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
+                widthMatch = widthRegexp.exec(data);
+		if (widthMatch !== null) {
+			theWidth = widthMatch[1];
 		} else {
-			theHeight = "-";
+			theWidth = "-";
 		}
 
 		loadRegexp = /<td style="color: #888;">Lasteevne<\/td>[\w\W]+([0-9]{3} kg)<\/td>/;
