@@ -14,6 +14,10 @@
 			<a href="https:\\www.bilbasen.dk" target="_blank">
 				bilbasen.dk
 			</a>	
+			og
+			<a href="https:\\www.guloggratis.dk" target="_blank">
+				guloggratis.dk
+			</a>	
 			Resultatet vil også blive vist i tabellen nedenfor.
 		</h1>
 
@@ -28,12 +32,15 @@
 				
 				<div class="startSearch searchTxt infoTxt">
 					Du er nu gået igang med at søge efter biler på bilbasen, som har modellen  <center class="theChoosenModel"> </center>
-					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid, cirka 1 minut.
+					Du skal væbne dig med lidt tålmodighed, da det tager lidt tid. Mellem 1 og 2 minutter, alt afhængig af antallet af biler.
 				</div>
 				<div class="middleSearch searchTxt infoTxt">
 					Vi har nu hentet alle links til bilbasen. 
-					Vi fandt <div id="bilbasenurls" style="margin-left: 500px; margin-top: -25px;"> </div> biler hos bilbasen,
-					og <div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div> biler ved guloggratis.
+					Vi fandt 
+					<div id="bilbasenurls" style="margin-left: 500px; margin-top: -25px;"> </div> 
+					biler hos bilbasen, og 
+					<div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div> 
+					biler ved guloggratis.
 				</div>
 				<div class="endSearch searchTxt infoTxt">
 					Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 2 sek.
