@@ -2,14 +2,14 @@
 <?php
 	
 	$headerArray = [
-							'Link', 
-							'Kontakt info', 
-							'Bilmærke', 
-							'Motor', 
-							'Pris', 
-							'Ny pris', 
-							'Kørte kilometer',
-							'Hk/Nm', 
+							"Link", 
+							"Kontakt info", 
+							"Bilmærke", 
+							"Motor", 
+							"Pris", 
+							"Ny pris", 
+							"Kørte kilometer",
+							"Hk/Nm", 
 							"Registrerings dato", 
 							"Geartype", 
 							"0-100 km/t", 
@@ -106,7 +106,7 @@
 							"Undervogn sænket", 
 							"USB tilslutning", 
 							"Vognbaneassistent", 
-							"Xenonlygter"
+							"Xenonlygter",
 						];
 							
 							
