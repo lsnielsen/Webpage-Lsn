@@ -40,7 +40,6 @@
 	var autoEmergencyBreak;
 	var autoParking;
 	var autoStartStop;
-	//var autoGear;
 	var autoLight;
 	var auxAdding;
 	var rearCamera;
@@ -152,7 +151,6 @@
 		singleCarArray.push(autoEmergencyBreak);
 		singleCarArray.push(autoParking);
 		singleCarArray.push(autoStartStop);
-		//singleCarArray.push(autoGear);
 		singleCarArray.push(autoLight);
 		singleCarArray.push(auxAdding);
 		singleCarArray.push(rearCamera);
@@ -216,10 +214,6 @@
 		singleCarArray.push(laneAssistant);
 		singleCarArray.push(xenonLights);
 		
-		//console.log("pushing to dataarray");
-		carModel = singleCarArray[1];
-		engine = singleCarArray[2];
-		price = singleCarArray[3];
 		dataArray.push(singleCarArray);
 	}
 
