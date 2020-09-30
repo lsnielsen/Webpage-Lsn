@@ -1,17 +1,17 @@
 
 <script>
 
-	function callingFirstUrl(urlOne, modelArray) 
+	function callingFirstUrl(urlOne)
 	{
             $.get(urlOne, 
                     function( data ) {
                             for ($i = 0; $i < data.length; $i++) {
-                                    subStr = data.substring($i, $i+200);
+                                    let subStr = data.substring($i, $i+200);
 
-                                    temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
+                                    let temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
                                     if (temp != -1) {
-                                            var theFirstString = subStr.substring(temp + 6, subStr.length - 2);
-                                            theFirstString = "https://www.bilbasen.dk" + theFirstString;
+                                        let theFirstString = subStr.substring(temp + 6, subStr.length - 2);
+                                        theFirstString = "https://www.bilbasen.dk" + theFirstString;
 
 											if (!firstUrlArr.includes(theFirstString)) {
 												firstUrlArr.push(theFirstString);
@@ -51,8 +51,8 @@
 
                             var singleCarArray = new Array();
                             theLink = url;
-                            getMainAttributes(data, singleCarArray);
-                            setPrimerAttributes(data, singleCarArray);
+                            getMainAttributes(data);
+                            setPrimerAttributes(data);
                             setExtraEquipment(data);
 
                             setTheFirstArray(singleCarArray);

@@ -83,9 +83,9 @@
 		setTimeout(function() {   
 			if (loopI >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + loopI;
-				callingFirstUrl(pageUrl, modelArray);
+				callingFirstUrl(pageUrl);
 			} else {
-				callingFirstUrl(bilbasenUrl, modelArray);
+				callingFirstUrl(bilbasenUrl);
 			}
 			loopI++;                  
 			if (loopI < 25) {         

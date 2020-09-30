@@ -4,7 +4,7 @@
 
 
 
-	function getMainAttributes(data, singleCarArray)
+	function getMainAttributes(data)
 	{
 		kmStart = data.search(/<span class="label">Km<\/span>/);
 		kmEnd = data.search(/<section id="bbVipUsage" class="section">/);
@@ -151,7 +151,7 @@
 		}
 	}
 		
-	function setPrimerAttributes(data, singleCarArray)
+	function setPrimerAttributes(data)
 	{
 		horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
 		match = horsePowerRegexp.exec(data);
