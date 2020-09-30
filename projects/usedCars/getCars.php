@@ -32,7 +32,7 @@
 	$("select.carModel").change(function(){
 		setFrontpage();		
 		modelArray = choosenModel.split(" ");
-		document.cookie = "theChoosenCarModel=" + modelArray[modelArray.length-1];
+		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 		
