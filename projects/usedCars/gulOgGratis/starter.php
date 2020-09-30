@@ -45,8 +45,8 @@
 				var gogCarArray = new Array();
 
 				gogTheLink = url;
-				getMainGogAttributes(data, gogCarArray);
-				setPrimerGogAttributes(data, gogCarArray);
+				getMainGogAttributes(data);
+				setPrimerGogAttributes(data);
 				setExtraGogEquipment(data);
 				setTheFirstGogArray(gogCarArray);
 			},
