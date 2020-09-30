@@ -40,9 +40,6 @@
 		autoEquip = data.search("Auto. start/stop");	
 		if(autoEquip != -1) { autoStartStop = "Ja"; } else { autoStartStop = "-"; }
 		
-		//equip = data.search("Automatgear");	
-		//if(equip != -1) { autoGear = "Ja"; } else { autoGear = "-"; }
-		
 		lightEquip = data.search("Automatisk lys");	
 		if(lightEquip != -1) { autoLight = "Ja"; } else { autoLight = "-"; }
 		
