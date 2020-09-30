@@ -35,16 +35,12 @@
 			theStarterPrice = match[1];
 		}
 
-		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
-		if (priceStart != -1) {
-			priceString = data.substring(priceStart+20, priceStart+50);
-			priceEnd = priceString.search("kr.</span>");
-			//console.log("price start, end: " + priceStart + ", " + priceEnd);
-			priceString = priceString.substring(0, priceEnd);
-			//console.log("price: " + priceString + "\n");
-			thePrice = priceString;
+		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+[a-z\/\. ]*)<\/span>/;
+		match = priceRegex.exec(data);
+		if (match !==  null) {
+			thePrice = match[1];
 		} else {
-			thePrice = "-";
+		    thePrice = "-";
 		}
 		
 		colorStart = data.search("<span>Farve:</span>");
