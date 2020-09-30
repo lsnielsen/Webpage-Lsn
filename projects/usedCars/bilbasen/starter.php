@@ -25,40 +25,40 @@
 	
 		
 	function getTheUsedCarBilbasen() {
-		
-            var loopII = 0;
-            mySecondLoop();
-            function mySecondLoop() {       
-                    setTimeout(function() {   
-							getTheCarFromBilbasen(firstUrlArr[loopII]);
-							loopII++;                  
-                            if (loopII < firstUrlArr.length) {         
-                                    mySecondLoop();             
-                            } else {  
-                                    setTimeout(function() {  
-                                            lastBool = true;
-                                    }, 3000)
-                            }					
-                    }, 120)
-            }
+
+        let loopII = 0;
+        mySecondLoop();
+        function mySecondLoop() {
+                setTimeout(function() {
+                        getTheCarFromBilbasen(firstUrlArr[loopII]);
+                        loopII++;
+                        if (loopII < firstUrlArr.length) {
+                                mySecondLoop();
+                        } else {
+                                setTimeout(function() {
+                                        lastBool = true;
+                                }, 3000)
+                        }
+                }, 120)
+        }
 	}
 	
 	
 	function getTheCarFromBilbasen(url)
 	{
-            $.get(url, 
-                    function( data ) {
+        $.get(url,
+                function( data ) {
 
-                            var singleCarArray = new Array();
-                            theLink = url;
-                            getMainAttributes(data);
-                            setPrimerAttributes(data);
-                            setExtraEquipment(data);
+                        var singleCarArray = new Array();
+                        theLink = url;
+                        getMainAttributes(data);
+                        setPrimerAttributes(data);
+                        setExtraEquipment(data);
 
-                            setTheFirstArray(singleCarArray);
-                    },
-                    'html'
-            );
+                        setTheFirstArray(singleCarArray);
+                },
+                'html'
+        );
 	}
 
 
