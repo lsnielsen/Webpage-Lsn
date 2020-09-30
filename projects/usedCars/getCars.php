@@ -102,7 +102,7 @@
 			} else if (loopI == 25) {
 				setTimeout(function() {
 					secondBool = true;
-				}, 500)
+				}, 250)
 			}             
 		}, 250)
 	}
