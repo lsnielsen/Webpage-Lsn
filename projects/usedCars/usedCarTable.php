@@ -47,7 +47,7 @@
 												echo "<a href='".$manuelArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
 												echo "</td class=\"carCell\">";
 											} else {
-												echo "<td>";
+												echo "<td class=\"carCell\">";
 												echo $manuelArr[$i][$j];
 												echo "</td>";
 											}

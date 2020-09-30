@@ -21,8 +21,11 @@
 			$manuelArr = $tempArr[1];
 
 			sleep(1);
-
-			$fileName = $dataArr[0][2];
+			
+			$fileName = "";
+			if(isset($_COOKIE['theChoosenCarModel'])) {
+				$fileName = $_COOKIE['theChoosenCarModel'];
+			}
 			
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
 			fputcsv($fp, $headerArray); 
