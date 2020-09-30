@@ -4,7 +4,7 @@
 
 
 
-	function getMainGogAttributes(data, gogCarArray)
+	function getMainGogAttributes(data)
 	{	
 		kmStart = data.search(/"Km [0-9]+/);
 		if (kmStart != -1) {
@@ -122,7 +122,7 @@
 		}
 	}
 		
-	function setPrimerGogAttributes(data, gogCarArray)
+	function setPrimerGogAttributes(data)
 	{
 		hkStart = data.search(/"HK","value":"/);
 		if (hkStart != -1) {
