@@ -39,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/stocks" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,6 +48,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Webpage-Lsn\projects\stocks" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,7 +65,7 @@
       <workItem from="1601489968527" duration="497000" />
       <workItem from="1601539435968" duration="3232000" />
       <workItem from="1601547561399" duration="7261000" />
-      <workItem from="1601562215202" duration="2076000" />
+      <workItem from="1601562215202" duration="5188000" />
     </task>
     <servers />
   </component>
@@ -80,6 +85,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1044" y="503" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601565855275">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1044" y="503" key="#com.intellij.fileTypes.FileTypeChooser/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601565855275" />
     <state x="1117" y="624" key="NewPhpFileDialog" timestamp="1601539906071">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -88,5 +97,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="782" y="346" key="SettingsEditor/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601490468902" />
+    <state x="987" y="300" width="587" height="801" key="find.popup" timestamp="1601566331131">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="987" y="300" width="587" height="801" key="find.popup/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601566331131" />
   </component>
 </project>

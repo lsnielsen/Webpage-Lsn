@@ -6,34 +6,42 @@
                 <th scope="col">Procentvis ændring</th>
                 <th scope="col">Værdi</th>
                 <th scope="col">Ændring</th>
-                <th scope="col">Hjemmeside</th>
+                <th scope="col">Link</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row">Guld</th>
-                <td>Op</td>
-                <td>23,3</td>
-                <td>2%</td>
-                <td>google.dk</td>
+                <td id="goldPercentage"></td>
+                <td id="goldVal"></td>
+                <td id="goldChange"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/stock/gold" target="_blank">
+                        marketwatch.com/gold
+                    </a>
+                </td>
             </tr>
             <tr>
                 <th scope="row">Euro/USD</th>
-                <td id="euroPercentage">Ned</td>
-                <td id="euroVal">54,4</td>
-                <td id="euroChange">5%</td>
+                <td id="euroPercentage"></td>
+                <td id="euroVal"></td>
+                <td id="euroChange"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/currency/eurusd" target="_blank">
-                        marketwatch.com
+                        marketwatch.com/eurusd
                     </a>
                 </td>
             </tr>
             <tr>
                 <th scope="row">Olie</th>
-                <td>Samme</td>
-                <td>94,234</td>
-                <td>10,5%</td>
-                <td>google.dk</td>
+                <td id="oilPercentage"></td>
+                <td id="oilVal"></td>
+                <td id="oilChange"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/fund/oil" target="_blank">
+                        marketwatch.com/oil
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -43,52 +51,8 @@
         function getStockData()
         {
             getEuroUsdData();
-        }
-
-        function getEuroUsdData()
-        {
-            callUrl();
-            function callUrl() {
-                var url = "https://www.marketwatch.com/investing/currency/eurusd";
-                    $.get( url,
-                        function( data ) {
-                            getEuroValue(data);
-                            getEuroPercentage(data);
-                            getEuroChange(data);
-                        },
-                        'html'
-                    );
-                setTimeout(function () {
-                    callUrl();
-                }, 500);
-            }
-        }
-
-        function getEuroValue(data)
-        {
-            let euroRegex = /channel="\/zigman2\/quotes\/210561242\/realtime\/sampled[ -=a-z0-9">]*">([0-9.]+)<\/bg-quote>/;
-            let euroMatch = euroRegex.exec(data);
-            if (euroMatch !== null) {
-                $("#euroVal").text(euroMatch[1]);
-            }
-        }
-
-        function getEuroPercentage(data)
-        {
-            let euroRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/210561242\/realtime\/sampled"[a-z-="0-9 ]*>([0-9.% ]+)<\/bg-quote>/;
-            let euroMatch = euroRegex.exec(data);
-            if (euroMatch !== null) {
-                $("#euroPercentage").text(euroMatch[1]);
-            }
-        }
-
-        function getEuroChange(data)
-        {
-            let euroRegex = /<bg-quote field="change" format="0,0\.00\[00\]" channel="\/zigman2\/quotes\/210561242\/realtime\/sampled"[ a-z0-9-="\.]*>([0-9\.]*)<\/bg-quote>/;
-            let euroMatch = euroRegex.exec(data);
-            if (euroMatch !== null) {
-                $("#euroChange").text(euroMatch[1]);
-            }
+            getGoldData();
+            getOilData();
         }
 
     </script>

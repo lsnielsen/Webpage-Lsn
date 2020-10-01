@@ -15,7 +15,12 @@
             <p>Der er kurser og tilhørende statistik</p>
         </div>
 
-        <?php include "stockTable.php"; ?>
+        <?php
+            include "oil.php";
+            include "euroUsd.php";
+            include "gold.php";
+            include "stockTable.php";
+        ?>
 
         <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
             <button type="submit" class="btn btn-dark btn-lg active">
