@@ -213,7 +213,7 @@
 		singleCarArray.push(usbConnection);
 		singleCarArray.push(laneAssistant);
 		singleCarArray.push(xenonLights);
-		
+
 		dataArray.push(singleCarArray);
 	}
 
