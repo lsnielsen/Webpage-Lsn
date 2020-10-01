@@ -2,7 +2,7 @@
     <table class="table table-hover table-dark table-bordered">
         <thead>
             <tr>
-                <th scope="col"> </th>
+                <th scope="col">Aktiv</th>
                 <th scope="col">Procentvis ændring</th>
                 <th scope="col">Værdi</th>
                 <th scope="col">Ændring</th>
@@ -46,13 +46,17 @@
         </tbody>
     </table>
 
+<script>
+    function getStockData()
+    {
+        getEuroUsdData();
+        getGoldData();
+        getOilData();
+    }
+</script>
 
-    <script>
-        function getStockData()
-        {
-            getEuroUsdData();
-            getGoldData();
-            getOilData();
-        }
-
-    </script>
+<style>
+    td, th{
+        text-align: center;
+    }
+</style>
