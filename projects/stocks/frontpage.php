@@ -15,7 +15,7 @@
         </div>
 
         <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-            <button type="submit" class="btn btn-dark">
+            <button type="submit" class="btn btn-dark btn-lg active">
                 Tilbage til forsiden
             </button>
         </form>
