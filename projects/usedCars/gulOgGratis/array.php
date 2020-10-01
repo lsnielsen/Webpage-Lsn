@@ -105,6 +105,7 @@
 	var gogxenonLights;
 	var gogContactInfo;
 	var gogTheKilometers;
+	var gogTheStarterPrice = "-";
 
 	function setTheFirstGogArray(gogCarArray)
 	{
@@ -113,8 +114,11 @@
 		gogCarArray.push(gogTheCarModel);
 		gogCarArray.push(gogTheEngine);
 		gogCarArray.push(gogThePrice);
+		gogCarArray.push(gogTheStarterPrice);
 		gogCarArray.push(gogTheKilometers);
 		gogCarArray.push(gogHorsePowerAndNm);
+		gogCarArray.push(gogTheRegistrationDate);
+		gogCarArray.push(gogTheGearType);
 		gogCarArray.push(gogFromZeroToHundred);
 		gogCarArray.push(gogTheTopSpeed);
 		gogCarArray.push(gogEnergyToUse);
@@ -128,10 +132,8 @@
 		gogCarArray.push(gogDoesEsp);
 		gogCarArray.push(gogTheGasTank);
 		gogCarArray.push(gogTheGears);
-		gogCarArray.push(gogTheGearType);
 		gogCarArray.push(gogTheWeight);
 		gogCarArray.push(gogCountOfDoors);
-		gogCarArray.push(gogTheRegistrationDate);
 		gogCarArray.push(gogTheProductionDate);
 		gogCarArray.push(gogYearOfTheModel);
 		gogCarArray.push(gogLastDateOfSight);

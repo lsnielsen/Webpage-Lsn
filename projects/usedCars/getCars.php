@@ -24,26 +24,31 @@
 	var modelArray = new Array();
 	var loopI = 1;
 	var loopJ = 1;
+	var firstBool = false;
+	var secondBool = false;
+	var lastBool = false;
 	
         
 	$("select.carModel").change(function(){
 		setFrontpage();		
 		modelArray = choosenModel.split(" ");
-		//console.log("chosen: " + modelArray);
+		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 		
 		bilbasenLoop();
 		gulOgGratisLoop();
-		
-		
-		setTimeout(
-			function() 
-			{
+		firstPauseLoop();
+	});
+	
+	function firstPauseLoop()
+	{
+		setTimeout(function() {   
+			if (firstBool == false || secondBool == false) {         
+				firstPauseLoop();             
+			} else {
 				gulOgGratisCars = secondUrlArr.length;
-				
-				firstUrlArr = unique(firstUrlArr)
-				
+
 				$("#bilbasenurls").text(firstUrlArr.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
@@ -51,35 +56,45 @@
 				if (gulOgGratisCars != 0) {
 					getTheUsedCarGulOgGratis();
 				}
-				setTimeout(
-					function() 
-					{
-						$(".endSearch").show();
-						makeArrayToPhp();
-					}, 180100);
-			}, 20000);
-	});
+				secondPauseLoop();
+			}
+							
+		}, 2000)	
+	}
 	
-	function unique(list) {
-		var result = [];
-		$.each(list, function(i, e) {
-			if ($.inArray(e, result) == -1) result.push(e);
-		});
-		return result;
+	function secondPauseLoop()
+	{
+            setTimeout(
+                    function() 
+                    {
+                            if(lastBool == false) {
+                                    secondPauseLoop();
+                            } else {
+                                    setTimeout(
+                                            function()
+                                            {
+                                                    makeArrayToPhp();
+                                            }, 200);
+                            }
+            }, 5000);		
 	}
 		
 	function bilbasenLoop() {       
 		setTimeout(function() {   
 			if (loopI >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + loopI;
-				callingFirstUrl(pageUrl, modelArray);
+				callingFirstUrl(pageUrl);
 			} else {
-				callingFirstUrl(bilbasenUrl, modelArray);
+				callingFirstUrl(bilbasenUrl);
 			}
 			loopI++;                  
 			if (loopI < 25) {         
 				bilbasenLoop();             
-			}                       
+			} else if (loopI == 25) {
+				setTimeout(function() {
+					secondBool = true;
+				}, 250)
+			}             
 		}, 250)
 	}
 
@@ -89,13 +104,16 @@
 				theUrl = gulOgGratisUrl + "/?n=" + loopJ*60;
 				callingSecondUrl(theUrl);
 			} else {
-				//console.log("Gul og gratis url: " + gulOgGratisUrl);
 				callingSecondUrl(gulOgGratisUrl);
 			}
 			loopJ++;                  
 			if (loopJ < 20) {         
 				gulOgGratisLoop();             
-			}                       
+			} else if (loopJ == 20) {
+				setTimeout(function() {
+					firstBool = true;
+				}, 500)
+			}				
 		}, 200)
 	}
 	
@@ -113,8 +131,7 @@
 	
 	function makeArrayToPhp()
 	{
-		console.log("data array: ");
-		console.log(dataArray);
+		$(".endSearch").show();
 		for(i=0; i<dataArray.length; i++) {
 			arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {

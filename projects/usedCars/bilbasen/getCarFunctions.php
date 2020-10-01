@@ -4,7 +4,7 @@
 
 
 
-	function getMainAttributes(data, singleCarArray)
+	function getMainAttributes(data)
 	{
 		kmStart = data.search(/<span class="label">Km<\/span>/);
 		kmEnd = data.search(/<section id="bbVipUsage" class="section">/);
@@ -18,36 +18,29 @@
 			theKilometers = "-";
 		}
 		
-		nameStart = data.search("<h1 id=\"bbVipTitle\" title=\"");
-		nameEnd = data.search("<div class=\"reviews-wrapper\">");
-		//console.log("nameStart, nameEnd = " + nameStart + ", " + nameEnd);
-		if (nameStart != -1 && nameEnd != -1) {
-			firstSubstring = data.substring(nameStart, nameEnd);
-			
-			modelStart = firstSubstring.search("<span>");
-			modelEnd = firstSubstring.search("</span>");
-			secondSubstring = firstSubstring.substring(modelStart+6, modelEnd);
-			theCarModel = secondSubstring;
-			
-			thirdSubstring = firstSubstring.substring(modelEnd+7, modelEnd+12);
-			thirdSubstring = thirdSubstring.replace(",", ".");
-			theEngine = thirdSubstring;
-			//console.log("Engine: " + thirdSubstring);
+		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9]+) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
+		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
+		match = carRegexp.exec(data);
+		if (match !==  null) {
+			theCarModel = match[1];
+			theEngine = match[2].replace(",", ".");
 		} else {
 		    theCarModel = "-";
 			theEngine = "-";
 		}
 			
-		priceStart = data.search(/<span class="value">[0-9]+.[0-9]+ kr.<\/span>/);
-		if (priceStart != -1) {
-			priceString = data.substring(priceStart+20, priceStart+50);
-			priceEnd = priceString.search("kr.</span>");
-			//console.log("price start, end: " + priceStart + ", " + priceEnd);
-			priceString = priceString.substring(0, priceEnd);
-			//console.log("price: " + priceString + "\n");
-			thePrice = priceString;
+		starterPriceRegexp = /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/;
+		match = starterPriceRegexp.exec(data);
+		if (match !==  null) {
+			theStarterPrice = match[1];
+		}
+
+		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+[a-z\/\. ]*)<\/span>/;
+		match = priceRegex.exec(data);
+		if (match !==  null) {
+			thePrice = match[1];
 		} else {
-			thePrice = "-";
+		    thePrice = "-";
 		}
 		
 		colorStart = data.search("<span>Farve:</span>");
@@ -158,12 +151,12 @@
 		}
 	}
 		
-	function setPrimerAttributes(data, singleCarArray)
+	function setPrimerAttributes(data)
 	{
-		hkStart = data.search("<td style=\"color: #888;\">HK/Nm</td>");
-		hkEnd = data.search("<td style=\"color: #888;\">0 - 100 km/t</td>");
-		if (hkStart != -1 && hkEnd != -1) {
-			horsePowerAndNm = removePrimerAttributeSpace(hkStart, hkEnd, data);
+		horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
+		match = horsePowerRegexp.exec(data);
+		if (match !== null) {
+			horsePowerAndNm = match[1];
 		} else {
 			horsePowerAndNm = "-";
 		}
@@ -178,11 +171,10 @@
 			fromZeroToHundred = "-";
 		}
 
-		topSpeedStart = data.search("<td style=\"color: #888;\">Tophastighed</td>");
-		topSpeedEnd = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
-		if (topSpeedStart != -1 && topSpeedEnd != -1) {
-			theTopSpeed = removePrimerAttributeSpace(topSpeedStart, topSpeedEnd, data);
-			//console.log("topspeed: " + theTopSpeed);
+		topSpeedRegexp = /<td style="color: #888;">Tophastighed<\/td>[\w\W]+([0-9]{3} km\/t)<\/td>/;
+		match = topSpeedRegexp.exec(data);
+		if (match !== null) {
+			theTopSpeed = match[1];
 		} else {
 			theTopSpeed = "-";
 		}
@@ -213,34 +205,34 @@
 			theEuronorm = "-";
 		}
 
-		widthStart = data.search("<td style=\"color: #888;\">Bredde</td>");
-		widthEnd = data.search("<td style=\"color: #888;\">Længde</td>");
-		if (widthStart != -1 && widthEnd != -1) {
-			theWidth = removePrimerAttributeSpace(widthStart, widthEnd, data);
+		heightRegexp = /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/;
+                heightMatch = heightRegexp.exec(data);
+		if (heightMatch !== null) {
+                    theHeight = heightMatch[1];
+		} else {
+                    theHeight = "-";
+		}
+
+                lengthRegexp = /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/;
+                lengthMatch = lengthRegexp.exec(data);
+		if (lengthMatch !== null) {
+			theLength = lengthMatch[1];
+		} else {
+			theLength = "-";
+		}
+                
+		widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
+                widthMatch = widthRegexp.exec(data);
+		if (widthMatch !== null) {
+			theWidth = widthMatch[1];
 		} else {
 			theWidth = "-";
 		}
 
-		lengthStart = data.search("<td style=\"color: #888;\">Længde</td>");
-		lengthEnd = data.search("<td style=\"color: #888;\">Højde</td>");
-		if (lengthStart != -1 && lengthEnd != -1) {
-			theLength = removePrimerAttributeSpace(lengthStart, lengthEnd, data);
-		} else {
-			theLength = "-";
-		}
-
-		heightStart = data.search("<td style=\"color: #888;\">Højde</td>");
-		heightEnd = data.search("<td style=\"color: #888;\">Lasteevne</td>");
-		if (heightStart != -1 && heightEnd != -1) {
-			theHeight = removePrimerAttributeSpace(heightStart, heightEnd, data);
-		} else {
-			theHeight = "-";
-		}
-
-		loadStart = data.search("<td style=\"color: #888;\">Lasteevne</td>");
-		loadEnd = data.search("<td style=\"color: #888;\">Trækhjul</td>");
-		if (loadStart != -1 && loadEnd != -1) {
-			loadAbility = removePrimerAttributeSpace(loadStart, loadEnd, data);
+		loadRegexp = /<td style="color: #888;">Lasteevne<\/td>[\w\W]+([0-9]{3} kg)<\/td>/;
+		match = loadRegexp.exec(data);
+		if (match !== null) {
+			loadAbility = match[1];
 		} else {
 			loadAbility = "-";
 		}
@@ -293,18 +285,18 @@
 			doesEsp = "-";
 		}
 
-		tankStart = data.search("<td style=\"color: #888;\">Tank</td>");
-		tankEnd = data.search("<td style=\"color: #888;\">Gear</td>");
-		if (tankStart != -1 && tankEnd != -1) {
-			theGasTank = removePrimerAttributeSpace(tankStart, tankEnd, data);
+		tankRegexp = /<td style="color: #888;">Tank<\/td>[\w\W]+([0-9]{2} l)<\/td>/;
+		match = tankRegexp.exec(data);
+		if (match !== null) {
+			theGasTank = match[1];
 		} else {
 			theGasTank = "-";
 		}
 
-		gearStart = data.search("<td style=\"color: #888;\">Gear</td>");
-		gearEnd = data.search("<td style=\"color: #888;\">Geartype</td>");
-		if (gearStart != -1 && gearEnd != -1) {
-			theGears = removePrimerAttributeSpace(gearStart, gearEnd, data);
+		gearRegexp = /<td style="color: #888;">Gear<\/td>[\w\W]+([0-9] gear)<\/td>/;
+		match = gearRegexp.exec(data);
+		if (match !== null) {
+			theGears = match[1];
 		} else {
 			theGears = "-";
 		}
@@ -317,10 +309,10 @@
 			theGearType = "-";
 		}
 
-		weightStart = data.search("<td style=\"color: #888;\">Vægt</td>");
-		weightEnd = data.search("<td style=\"color: #888;\">Døre</td>");
-		if (weightStart != -1 && weightEnd != -1) {
-			theWeight = removePrimerAttributeSpace(weightStart, weightEnd, data);
+		weightRegexp = /<td style="color: #888;">.{4}<\/td>[\w\W]+([0-9]{4} kg)<\/td>/;
+		match = weightRegexp.exec(data);
+		if (match !== null) {
+			theWeight = match[1];
 		} else {
 			theWeight = "-";
 		}
@@ -334,38 +326,14 @@
 			countOfDoors = "-";
 		}
 
-		getContactDetails(data);
-
-		
-	}
-	
-	function getContactDetails(data)
-	{
-		
-		cityStart = data.search(/<div>\d{4} [A-Za-z(&AElig;)(&aring;)(&oslash;) ]+<\/div>/);
-		cityTxt = data.substring(cityStart+5 , cityStart+40);
-		cityEnd = cityTxt.search(/<\/div>/);
-		cityTxt = cityTxt.substring(0, cityEnd);
-		//console.log(" \n city; start: " + cityStart + ", \n cityTxt: " + cityTxt);
-		
-		adressStart = data.search(/<div>[a-zA-Z- æøå]+ [0-9a-zA-Z ]+<\/div>/);
-		adressTxt = data.substring(adressStart+5 , adressStart+40);
-		adressEnd = adressTxt.search(/<\/div>/);
-		adressTxt = adressTxt.substring(0, adressEnd);
-		//console.log("adress; start: " + adressStart + ", \n adressTxt: " + adressTxt);
-		
-		phoneStart = data.search(/<a href="tel:\d{8}">\d{8}<\/a>/);
-		phoneTxt = data.substring(phoneStart+23 , phoneStart+40);
-		phoneEnd = phoneTxt.search(/<\/a>/);
-		phoneTxt = phoneTxt.substring(0, phoneEnd);
-		//console.log(" phone; start: " + phoneStart + ", \n phoneTxt: " + phoneTxt + " \n");
-		
-		if(cityStart == -1) {
-			contactInfo = "-";
+		contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
+		var match = contactRegexp.exec(data);
+		if (match !==  null) {
+			contactInfo = match[1] + " " + match[2];
 		} else {
-			contactInfo = cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
-			//console.log("Kontakt: " + contactInfo);
+			contactInfo = "-";
 		}
+
 		
 	}
 	
@@ -407,18 +375,6 @@
 		value = value.replace(",", ".");
 		return value;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

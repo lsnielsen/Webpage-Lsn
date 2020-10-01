@@ -6,49 +6,39 @@
 		if ($usedCarsArray == "") {
 			include("../projects/usedCars/frontpage.php");	
 		} else {
-			
-			$headerArray = ['Link', 'Kontakt info', 'Bilmærke', 'Motor', 'Pris', 'Kørte kilometer',
-							'Hk/Nm', "0-100 km/t", "Tophastighed", "Drivmiddel", 
-							"Forbrug", "Lasteevne", "Trækhjul", "Cylindre", 
-							"ABS-bremser", "Max påhæng", "Airbags", "ESP", "Tank", 
-							"Gear", "Geartype", "Vægt", "Døre", 
-							"Registrerings dato", "Produktions år", "Modelår", 
-							"Synet", "Farve", "Alufælge", "Andriod auto", 
-							"Anhængertræk", "Anhængertræk aftagl.", "Antispin", "Apple carplay", 
-							"Euronorm", "Bredde", "Længde", "Højde", 
-							"Armlæn", "Auto. nødbremse", "Auto parkering", "Auto start/stop", 
-							"Automatisk lys", "AUX tilslutning", "Bakkamera", 
-							"Bakspejl m. nedbl.", "Bi-xenon", "Blindvinkelassistent", "Bluetooth", 
-							"Brugtbilsattest", "Centrallås fjernb.", "Dab radio", "Dæktryksmåler", 
-							"Digitalt cockpit", "El inst. førersæde m. memory", "Elektrisk kabinevarmer", 
-							"Elektrisk parkeringsbremse", "Elektrisk komfortsæder", "Elektriskbagklap", 
-							"El-klapbare sidespejle m. varme", "Elruder, 4x", "Fartpilot", "Fartpilot adaptiv", 
-							"Fjernlysassistent", "Fuld LED forlygter", "Head-up display", "Infocenter", 
-							"Internet", "Isofix", "Klimaanlæg, 4-zonet", "Kørecomputer", "Kurvelys", 
-							"Læderrat", "LED kørelys", "Lygtevasker", "Musik via bluetooth", "Navigation", 
-							"Nøglefri betjening", "Panoramatag", "Parkeringssensor (bag)", 
-							"Parkeringssensor (for)", "Regnsensor", "Sædebetræk, dellæder", 
-							"Sædebetræk, læder", "Sædevarme", "SD kortlæser", "Service ok", "Servo", 
-							"Skiltegenkendelse", "Soltag, elektrisk", "Soltag, manuelt", "Splitbagsæde", 
-							"Sportssæder", "Startspærre", "Svingbart træk (elektrisk)", "Svingbart træk (manuelt", 
-							"Tågelygter", "Tagræling", "Trådløs mobilopladning", "Træthedsregistrering", 
-							"Undervogn sænket", "USB tilslutning", "Vognbaneassistent", "Xenonlygter"];
-	
+			include("../projects/usedCars/headerArray.php");
 
 			$bilbasenCount = 0;
 			$gulOgGratisCount = 0;
 			$dataArr = prepareArray($usedCarsArray);			
+			
 			$tempArr = removeBlankColoums($dataArr, $headerArray);
 			$dataArr = $tempArr[0];
 			$headerArray = $tempArr[1];
 			
-			sleep(5);
+			$tempArr = spliceArray($dataArr);
+			$autoArr = $tempArr[0];
+			$manuelArr = $tempArr[1];
 
-			$fileName = $dataArr[0][2];
+			sleep(1);
+			
+			$fileName = "";
+			if(isset($_COOKIE['theChoosenCarModel'])) {
+				$fileName = $_COOKIE['theChoosenCarModel'];
+			}
 			
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
 			fputcsv($fp, $headerArray); 
-			foreach ($dataArr as $row) { 
+			foreach ($autoArr as $row) { 
+				fputcsv($fp, $row); 
+			} 
+			
+			fputcsv($fp, [ ]); 
+			fputcsv($fp, [ ]); 
+			fputcsv($fp, [ ]); 
+			
+			fputcsv($fp, $headerArray); 
+			foreach ($manuelArr as $row) { 
 				fputcsv($fp, $row); 
 			} 
   
@@ -59,6 +49,20 @@
 			
 			
 		}
+		
+	function spliceArray($array)
+	{
+		$autoArray;
+		$manuelArray;
+		for ($i=0; $i<sizeof($array); $i++) {
+			if(stripos($array[$i][9], "auto") !== false) {
+					$autoArray[] = $array[$i];
+			}	else if(stripos($array[$i][9], "manuel") !== false) {
+					$manuelArray[] = $array[$i];
+			}
+		}
+		return [$autoArray, $manuelArray];
+	}
 
 
 
@@ -104,10 +108,10 @@
 		$blankTest;
 		
 		for ($i=0; $i<sizeof($array); $i++) {
-			for ($j=31; $j<sizeof($array[$i]); $j++) {
-				if ($array[$i][$j] == "-" || !isset($blankTest[$j])) {
+			for ($j=28; $j<sizeof($array[$i]); $j++) {
+				if ($array[$i][$j] != "-") {
 					$blankTest[$j] = true;
-				} else {
+				} elseif ($array[$i][$j] == "-" && !isset($blankTest[$j])) {
 					$blankTest[$j] = false;
 				}
 			}
@@ -115,10 +119,13 @@
 		
 		
 		$keys = array_keys($blankTest); 
+		//echo '<pre>'; print_r($blankTest); echo '</pre>';
+		//echo '<pre>'; print_r($keys); echo '</pre>';
+		
 		for ($i=0; $i<sizeof($array); $i++) {
 			$columnCounter = 0;
 			for ($j=0; $j<sizeof($keys); $j++) {
-				if($blankTest[$keys[$j]] == true) {
+				if($blankTest[$keys[$j]] == false) {
 					//echo "columnCounter: " . $columnCounter . ", and j = " . $j . "<br>";
 					array_splice($array[$i], $keys[$j - $columnCounter], 1);
 					$columnCounter++;
@@ -128,7 +135,7 @@
 		$columnCounter = 0;
 
 		for ($j=0; $j<sizeof($keys); $j++) {
-			if($blankTest[$keys[$j]] == true) {
+			if($blankTest[$keys[$j]] == false) {
 				//echo "About to splice titleArray with j = " . $j . ", and keys[j] = " . $keys[$j] . " <br>";
 				array_splice($titleArray, $keys[$j-$columnCounter], 1);
 					$columnCounter++;
@@ -147,14 +154,6 @@
 	}
 	
 	
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		

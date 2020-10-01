@@ -1,67 +1,64 @@
 
 <script>
 
-	function callingFirstUrl(urlOne, modelArray) 
+	function callingFirstUrl(urlOne)
 	{
-		//console.log("First url call ");
-		$.get(urlOne, 
-			function( data ) {
-				for ($i = 0; $i < data.length; $i++) {
-					subStr = data.substring($i, $i+200);
-					//temp = subStr.search(/\"\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9-]+\/[0-9]+\"$/);
-					temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
-					if (temp != -1) {
-						var theFirstString = subStr.substring(temp + 6, subStr.length - 2);
-						//console.log("url: " + theFirstString);
-						//console.log("model: " + modelArray[0] + " " + modelArray[1]);
-						//console.log("true, includes: " + modelArray[0] + ", " + modelArray[1]);
-						theFirstString = "https://www.bilbasen.dk" + theFirstString;
-						//console.log("url: " + theFirstString);
-						firstUrlArr.push(theFirstString);
-					}
-				}
-			}, 
-			'html' // or 'text', 'xml', 'more'
-		);  
+            $.get(urlOne, 
+                    function( data ) {
+                            for ($i = 0; $i < data.length; $i++) {
+                                    let subStr = data.substring($i, $i+200);
+
+                                    let temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
+                                    if (temp != -1) {
+                                        let theFirstString = subStr.substring(temp + 6, subStr.length - 2);
+                                        theFirstString = "https://www.bilbasen.dk" + theFirstString;
+
+											if (!firstUrlArr.includes(theFirstString)) {
+												firstUrlArr.push(theFirstString);
+											}
+                                    }
+                            }
+                    }, 
+                    'html' // or 'text', 'xml', 'more'
+            );  
 	}		
 	
 		
 	function getTheUsedCarBilbasen() {
-		//console.log("First array:");
-		//console.log(firstUrlArr);
-		
-		var loopII = 0;
-		mySecondLoop();
-		function mySecondLoop() {       
-			setTimeout(function() {   
-				//console.log("Making second url call");
-				getTheCarFromBilbasen(firstUrlArr[loopII]);
-				loopII++;                  
-				if (loopII < firstUrlArr.length) {         
-					mySecondLoop();             
-				}                       
-			}, 250)
-		}
+
+        let loopII = 0;
+        mySecondLoop();
+        function mySecondLoop() {
+                setTimeout(function() {
+                        getTheCarFromBilbasen(firstUrlArr[loopII]);
+                        loopII++;
+                        if (loopII < firstUrlArr.length) {
+                                mySecondLoop();
+                        } else {
+                                setTimeout(function() {
+                                        lastBool = true;
+                                }, 3000)
+                        }
+                }, 120)
+        }
 	}
 	
 	
 	function getTheCarFromBilbasen(url)
 	{
-		//console.log("second url calls, url: " + url);
-		$.get(url, 
-			function( data ) {
-				//console.log("calling the second url");
-				var singleCarArray = new Array();
-				theLink = url;
-				getMainAttributes(data, singleCarArray);
-				setPrimerAttributes(data, singleCarArray);
-				setExtraEquipment(data);
-				
-				setTheFirstArray(singleCarArray);
-				//console.log("single car array : " + singleCarArray);
-			},
-			'html'
-		);
+        $.get(url,
+                function( data ) {
+
+                        var singleCarArray = new Array();
+                        theLink = url;
+                        getMainAttributes(data);
+                        setPrimerAttributes(data);
+                        setExtraEquipment(data);
+
+                        setTheFirstArray(singleCarArray);
+                },
+                'html'
+        );
 	}
 
 

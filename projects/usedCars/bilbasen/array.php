@@ -40,7 +40,6 @@
 	var autoEmergencyBreak;
 	var autoParking;
 	var autoStartStop;
-	//var autoGear;
 	var autoLight;
 	var auxAdding;
 	var rearCamera;
@@ -105,6 +104,7 @@
 	var xenonLights;
 	var contactInfo;
 	var theKilometers;
+	var theStarterPrice;
 
 	function setTheFirstArray(singleCarArray)
 	{
@@ -113,8 +113,11 @@
 		singleCarArray.push(theCarModel);
 		singleCarArray.push(theEngine);
 		singleCarArray.push(thePrice);
+		singleCarArray.push(theStarterPrice);
 		singleCarArray.push(theKilometers);
 		singleCarArray.push(horsePowerAndNm);
+		singleCarArray.push(theRegistrationDate);
+		singleCarArray.push(theGearType);
 		singleCarArray.push(fromZeroToHundred);
 		singleCarArray.push(theTopSpeed);
 		singleCarArray.push(energyToUse);
@@ -128,18 +131,16 @@
 		singleCarArray.push(doesEsp);
 		singleCarArray.push(theGasTank);
 		singleCarArray.push(theGears);
-		singleCarArray.push(theGearType);
 		singleCarArray.push(theWeight);
 		singleCarArray.push(countOfDoors);
-		singleCarArray.push(theRegistrationDate);
 		singleCarArray.push(theProductionDate);
 		singleCarArray.push(yearOfTheModel);
 		singleCarArray.push(lastDateOfSight);
 		singleCarArray.push(theColor);
 		singleCarArray.push(alloyWheels);
-		singleCarArray.push(autoAndroid);
 		singleCarArray.push(towbar);
 		singleCarArray.push(towbarDetachable);
+		singleCarArray.push(autoAndroid);
 		singleCarArray.push(antispin);
 		singleCarArray.push(carplayApple);
 		singleCarArray.push(theEuronorm);
@@ -150,7 +151,6 @@
 		singleCarArray.push(autoEmergencyBreak);
 		singleCarArray.push(autoParking);
 		singleCarArray.push(autoStartStop);
-		//singleCarArray.push(autoGear);
 		singleCarArray.push(autoLight);
 		singleCarArray.push(auxAdding);
 		singleCarArray.push(rearCamera);
@@ -213,14 +213,8 @@
 		singleCarArray.push(usbConnection);
 		singleCarArray.push(laneAssistant);
 		singleCarArray.push(xenonLights);
-		
-		//console.log("pushing to dataarray");
-		carModel = singleCarArray[1];
-		engine = singleCarArray[2];
-		price = singleCarArray[3];
-		if(carModel != "-" && engine != "-" && price != "-") {
-			dataArray.push(singleCarArray);
-		}
+
+		dataArray.push(singleCarArray);
 	}
 
 
