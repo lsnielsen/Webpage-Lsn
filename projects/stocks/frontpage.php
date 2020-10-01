@@ -13,6 +13,12 @@
             <h1>Her er en oversigt over kurserne på enkelte ting</h1>
             <p>Der er kurser og tilhørende statistik</p>
         </div>
+
+        <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
+            <button type="submit" class="btn btn-dark">
+                Tilbage til forsiden
+            </button>
+        </form>
     </body>
 
 </html>
