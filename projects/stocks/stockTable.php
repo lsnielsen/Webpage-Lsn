@@ -67,10 +67,7 @@
             let euroRegex = /channel="\/zigman2\/quotes\/210561242\/realtime\/sampled[ -=a-z0-9">]*">([0-9.]+)<\/bg-quote>/;
             let euroMatch = euroRegex.exec(data);
             if (euroMatch !== null) {
-                console.log("Match: " + euroMatch[1]);
                 $("#euroVal").text(euroMatch[1]);
-            } else {
-                console.log("match = null: " + euroMatch);
             }
         }
 
