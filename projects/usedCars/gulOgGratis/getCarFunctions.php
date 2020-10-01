@@ -131,14 +131,14 @@
 			gogHorsePowerAndNm = "-";
 		}
 
-		zeroToHundredStart = data.search(/"Acceleration","value":"/);
-		if (zeroToHundredStart != -1) {
-			fromZeroToHundred = data.substring(zeroToHundredStart+24, zeroToHundredStart+29);
-			gogFromZeroToHundred = fromZeroToHundred.replace(",", ".");
-			//console.log("0-100 km/t: " + gogFromZeroToHundred);
-		} else {
-			gogFromZeroToHundred = "-";
-		}
+
+        zeroToHundredRegexp = /class="_1fTZdVMx6avWCXl7TuqKzA">Acceleration<\/dt><dd class="_3c9Ubpq8hEnOr0VfgTBnSN">([0-9]{1,2},[0-9]{1,2})<\/dd><\/dl>/;
+        match = zeroToHundredRegexp.exec(data);
+        if (match !==  null) {
+            gogFromZeroToHundred = match[1].replace(",", ".");
+        } else {
+            gogFromZeroToHundred = "-";
+        }
 
 		topSpeedStart = data.search(/"Tophastighed","value":"/);
 		if (topSpeedStart != -1) {
