@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th scope="col"> </th>
-                <th scope="col">Fald/stigning</th>
+                <th scope="col">Procentvis ændring</th>
                 <th scope="col">Værdi</th>
                 <th scope="col">Ændring</th>
                 <th scope="col">Hjemmeside</th>
@@ -19,9 +19,9 @@
             </tr>
             <tr>
                 <th scope="row">Euro/USD</th>
-                <td>Ned</td>
+                <td id="euroPercentage">Ned</td>
                 <td id="euroVal">54,4</td>
-                <td>5%</td>
+                <td id="euroChange">5%</td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/currency/eurusd" target="_blank">
                         marketwatch.com
@@ -53,6 +53,8 @@
                     $.get( url,
                         function( data ) {
                             getEuroValue(data);
+                            getEuroPercentage(data);
+                            getEuroChange(data);
                         },
                         'html'
                     );
@@ -68,6 +70,24 @@
             let euroMatch = euroRegex.exec(data);
             if (euroMatch !== null) {
                 $("#euroVal").text(euroMatch[1]);
+            }
+        }
+
+        function getEuroPercentage(data)
+        {
+            let euroRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/210561242\/realtime\/sampled"[a-z-="0-9 ]*>([0-9.% ]+)<\/bg-quote>/;
+            let euroMatch = euroRegex.exec(data);
+            if (euroMatch !== null) {
+                $("#euroPercentage").text(euroMatch[1]);
+            }
+        }
+
+        function getEuroChange(data)
+        {
+            let euroRegex = /<bg-quote field="change" format="0,0\.00\[00\]" channel="\/zigman2\/quotes\/210561242\/realtime\/sampled"[ a-z0-9-="\.]*>([0-9\.]*)<\/bg-quote>/;
+            let euroMatch = euroRegex.exec(data);
+            if (euroMatch !== null) {
+                $("#euroChange").text(euroMatch[1]);
             }
         }
 
