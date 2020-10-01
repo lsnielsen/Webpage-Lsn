@@ -47,6 +47,11 @@
 					Cykling 
 				</button>
 			</form>
+			<form action="/Webpage-Lsn/controller/stock.php" method="post">
+				<button class="frontpageButton" id="stockButton" type="submit" name="stockButton" value="stockPage">
+					Børs marked
+				</button>
+			</form>
 			<div id="my-signin2"></div>
 			<form class="frontpageButton" method="get" id="searchArea" action="https://www.google.com/search" target="_blank">
 				<center>

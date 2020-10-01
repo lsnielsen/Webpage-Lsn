@@ -74,6 +74,10 @@
 		background:linear-gradient(to bottom, #b3c6ff 5%, #145214 100%);
 		cursor:pointer;
 	}
+	#stockButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #d61340 100%);
+		cursor:pointer;
+	}
 	#searchArea {
 		margin-top: 20px;
 		width: 400px;
