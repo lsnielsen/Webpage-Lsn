@@ -24,7 +24,7 @@
 
     function getGoldValue(data)
     {
-        let goldRegex = /<bg-quote class="value[ a-z]*" field="Last" format="0,0\.00" channel="\/zigman2\/quotes\/201432642\/composite,\/zigman2\/quotes\/201432642\/lastsale"[ a-z0-9-="\.]*>([0-9\.]+)<\/bg-quote>/;
+        let goldRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
         let goldMatch = goldRegex.exec(data);
         if (goldMatch !== null) {
             $("#goldVal").text(goldMatch[1]);
@@ -33,7 +33,7 @@
 
     function getGoldPercentage(data)
     {
-        let goldRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/201432642\/composite"[a-z=" ]*>([0-9\.-]+)%<\/bg-quote>/;
+        let goldRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/"= ]+>([-0-9\.]+)%<\/bg-quote>/;
         let goldMatch = goldRegex.exec(data);
         if (goldMatch !== null) {
             $("#goldPercentage").text(goldMatch[1] + " %");

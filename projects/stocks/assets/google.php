@@ -24,7 +24,7 @@
 
     function getGoogleValue(data)
     {
-        let googleRegex = /<bg-quote class="value[ a-z]*" field="Last" format="0,0\.00" channel="\/zigman2\/quotes\/[0-9]{9}\/composite,\/zigman2\/quotes\/202490156\/lastsale" session="pre">([0-9\.,]+)<\/bg-quote>/;
+        let googleRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
         let googleMatch = googleRegex.exec(data);
         if (googleMatch !== null) {
             $("#googleVal").text(googleMatch[1]);
@@ -33,7 +33,7 @@
 
     function getGooglePercentage(data)
     {
-        let googleRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/[0-9]{9}\/[0-9-a-z=" ]*>([0-9\.-]+)%<\/bg-quote>/;
+        let googleRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/"= ]+>([-0-9\.]+)%<\/bg-quote>/;
         let googleMatch = googleRegex.exec(data);
         if (googleMatch !== null) {
             $("#googlePercentage").text(googleMatch[1] + " %");

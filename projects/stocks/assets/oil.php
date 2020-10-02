@@ -36,7 +36,7 @@
     }
     function getOilPercentage(data)
     {
-        let oilRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/204600377\/composite">([0-9\.-]+)%<\/bg-quote>/;
+        let oilRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/"= ]+>([-0-9\.]+)%<\/bg-quote>/;
         let oilMatch = oilRegex.exec(data);
         if (oilMatch !== null) {
             $("#oilPercentage").text(oilMatch[1] + " %");
