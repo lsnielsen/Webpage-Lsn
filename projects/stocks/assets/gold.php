@@ -33,10 +33,15 @@
 
     function getGoldPercentage(data)
     {
-        let goldRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/201432642\/composite"[a-z=" ]*>([0-9\.-]+%)<\/bg-quote>/;
+        let goldRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/201432642\/composite"[a-z=" ]*>([0-9\.-]+)%<\/bg-quote>/;
         let goldMatch = goldRegex.exec(data);
         if (goldMatch !== null) {
-            $("#goldPercentage").text(goldMatch[1]);
+            $("#goldPercentage").text(goldMatch[1] + " %");
+            if (goldMatch[1] < 0) {
+                $("#goldPercentage").css("color", "red");
+            } else {
+                $("#goldPercentage").css("color", "green");
+            }
         }
     }
 
@@ -46,6 +51,11 @@
         let goldMatch = goldRegex.exec(data);
         if (goldMatch !== null) {
             $("#goldChange").text(goldMatch[1]);
+            if (goldMatch[1] < 0) {
+                $("#goldChange").css("color", "red");
+            } else {
+                $("#goldChange").css("color", "green");
+            }
         }
     }
 

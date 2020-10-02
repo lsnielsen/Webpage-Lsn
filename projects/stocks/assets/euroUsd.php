@@ -33,10 +33,15 @@
 
     function getEuroPercentage(data)
     {
-        let euroRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/210561242\/realtime\/sampled"[a-z-="0-9 ]*>([0-9.% -]+)<\/bg-quote>/;
+        let euroRegex = /<bg-quote field="percentchange" format="0,0\.00%" channel="\/zigman2\/quotes\/210561242\/realtime\/sampled"[a-z-="0-9 ]*>([0-9. -]+)%<\/bg-quote>/;
         let euroMatch = euroRegex.exec(data);
         if (euroMatch !== null) {
-            $("#euroPercentage").text(euroMatch[1]);
+            $("#euroPercentage").text(euroMatch[1] + " %");
+            if (euroMatch[1] < 0) {
+                $("#euroPercentage").css("color", "red");
+            } else {
+                $("#euroPercentage").css("color", "green");
+            }
         }
     }
 
@@ -46,6 +51,11 @@
         let euroMatch = euroRegex.exec(data);
         if (euroMatch !== null) {
             $("#euroChange").text(euroMatch[1]);
+            if (euroMatch[1] < 0) {
+                $("#euroChange").css("color", "red");
+            } else {
+                $("#euroChange").css("color", "green");
+            }
         }
     }
 

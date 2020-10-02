@@ -3,18 +3,18 @@
         <thead>
             <tr>
                 <th scope="col">Aktiv</th>
-                <th scope="col">Ændring i %</th>
                 <th scope="col">Værdi USD</th>
                 <th scope="col">Ændring</th>
+                <th scope="col">Ændring i %</th>
                 <th scope="col">Link</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row">Guld</th>
-                <td id="goldPercentage"></td>
                 <td id="goldVal"></td>
                 <td id="goldChange"></td>
+                <td id="goldPercentage"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/stock/gold" target="_blank">
                         marketwatch.com/gold
@@ -23,9 +23,9 @@
             </tr>
             <tr>
                 <th scope="row">Euro/USD</th>
-                <td id="euroPercentage"></td>
                 <td id="euroVal"></td>
                 <td id="euroChange"></td>
+                <td id="euroPercentage"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/currency/eurusd" target="_blank">
                         marketwatch.com/eurusd
@@ -34,9 +34,9 @@
             </tr>
             <tr>
                 <th scope="row">Olie</th>
-                <td id="oilPercentage"></td>
                 <td id="oilVal"></td>
                 <td id="oilChange"></td>
+                <td id="oilPercentage"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/fund/oil" target="_blank">
                         marketwatch.com/oil
@@ -45,12 +45,23 @@
             </tr>
             <tr>
                 <th scope="row">Sølv</th>
-                <td id="silverPercentage"></td>
                 <td id="silverVal"></td>
                 <td id="silverChange"></td>
+                <td id="silverPercentage"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/future/si00" target="_blank">
                         marketwatch.com/silver
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Google</th>
+                <td id="googleVal"></td>
+                <td id="googleChange"></td>
+                <td id="googlePercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/stock/googl" target="_blank">
+                        marketwatch.com/google
                     </a>
                 </td>
             </tr>
@@ -64,6 +75,7 @@
         getGoldData();
         getOilData();
         getSilverData();
+        getGoogleData();
     }
 </script>
 
@@ -71,4 +83,7 @@
     td, th{
         text-align: center;
     }
+    .red {color:red}
+    .orange {color:grey}
+    .green {color:green}
 </style>
