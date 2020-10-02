@@ -63,6 +63,7 @@
         getEuroUsdData();
         getGoldData();
         getOilData();
+        getSilverData();
     }
 </script>
 

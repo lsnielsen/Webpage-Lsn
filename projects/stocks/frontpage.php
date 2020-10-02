@@ -19,6 +19,7 @@
             include "assets/oil.php";
             include "assets/euroUsd.php";
             include "assets/gold.php";
+            include "assets/silver.php";
             include "stockTable.php";
         ?>
 
