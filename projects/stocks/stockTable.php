@@ -49,8 +49,8 @@
                 <td id="silverVal"></td>
                 <td id="silverChange"></td>
                 <td>
-                    <a href="https://www.marketwatch.com/investing/fund/oil" target="_blank">
-                        marketwatch.com/oil
+                    <a href="https://www.marketwatch.com/investing/future/si00" target="_blank">
+                        marketwatch.com/silver
                     </a>
                 </td>
             </tr>

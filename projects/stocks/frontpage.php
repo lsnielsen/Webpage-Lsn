@@ -16,9 +16,9 @@
         </div>
 
         <?php
-            include "oil.php";
-            include "euroUsd.php";
-            include "gold.php";
+            include "assets/oil.php";
+            include "assets/euroUsd.php";
+            include "assets/gold.php";
             include "stockTable.php";
         ?>
 
