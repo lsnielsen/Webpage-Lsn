@@ -43,6 +43,17 @@
                     </a>
                 </td>
             </tr>
+            <tr>
+                <th scope="row">Sølv</th>
+                <td id="silverPercentage"></td>
+                <td id="silverVal"></td>
+                <td id="silverChange"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/fund/oil" target="_blank">
+                        marketwatch.com/oil
+                    </a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
