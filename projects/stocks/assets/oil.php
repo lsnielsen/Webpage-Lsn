@@ -2,7 +2,6 @@
 
 <script>
 
-
     function getOilData()
     {
         callUrl();
@@ -10,8 +9,8 @@
             var url = "https://www.marketwatch.com/investing/fund/oil";
             $.get( url,
                 function( data ) {
-                    //getOilValue(data);
-                    //getOilPercentage(data);
+                    getOilValue(data);
+                    getOilPercentage(data);
                     getOilChange(data);
                 },
                 'html'
@@ -51,30 +50,23 @@
     function oilPercentageTxt(match, field)
     {
         if (match[1] < 0) {
-            console.log("less than zero");
-            $("\"" + field + "\"").css("color", "red");
+            $(field).css("color", "red");
         } else {
-            console.log("larger than zero");
             $(field).css("color", "green");
         }
     }
 
     function getOilChange(data)
     {
-        console.log("oilChange");
-        let oilRegex = /<bg-quote field="change" format="0,0.00" channel="\/zigman2\/quotes\/204600377\/composite"[a-z=" ]+>([0-9\.-]+)<\/bg-quote>/;
+        let oilRegex = /<bg-quote field="change" format="0,0.00" channel="\/zigman2\/quotes\/204600377\/composite"[a-z=" ]*>([0-9\.-]+)<\/bg-quote>/;
         let oilMatch = oilRegex.exec(data);
         let changeClose = /<span class="change--point--q">([0-9-%\.]+)<\/span>/.exec(data);
         if (oilMatch !== null) {
-            console.log("Match");
             $("#oilChange").text(oilMatch[1]);
             oilPercentageTxt(oilMatch, "#oilChange");
         } else if (changeClose !== null) {
-            console.log("No match");
             $("#oilChange").text("Lukket: " + changeClose[1]);
             oilPercentageTxt(changeClose, "#oilChange");
         }
     }
-
-
 </script>
