@@ -3,8 +3,8 @@
         <thead>
             <tr>
                 <th scope="col">Aktiv</th>
-                <th scope="col">Procentvis ændring</th>
-                <th scope="col">Værdi</th>
+                <th scope="col">Ændring i %</th>
+                <th scope="col">Værdi USD</th>
                 <th scope="col">Ændring</th>
                 <th scope="col">Link</th>
             </tr>
