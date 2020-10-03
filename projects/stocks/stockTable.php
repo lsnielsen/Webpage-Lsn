@@ -66,7 +66,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Bitcoin</th>
+                <th scope="row" class="theAsset" onclick="assetPage('bitcoin')">Bitcoin</th>
                 <td id="bitcoinVal"></td>
                 <td id="bitcoinChange"></td>
                 <td id="bitcoinPercentage"></td>
@@ -88,6 +88,13 @@
         getSilverData();
         getGoogleData();
         getBitcoinData();
+    }
+    function assetPage(page) {
+        const form = document.createElement("form");
+        form.action = "/Webpage-Lsn/controller/stock.php";
+        document.cookie = "stockButton=" + page;
+        $(document.body).append(form);
+        form.submit();
     }
 </script>
 
