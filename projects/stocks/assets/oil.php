@@ -29,7 +29,7 @@
         if (oilMatch !== null) {
             $("#oilVal").text(oilMatch[1]);
         } else if (valueClose !== null) {
-            $("#oilVal").text("Lukket: " + valueClose[1]);
+            $("#oilVal").text(valueClose[1]);
         }
 
     }
@@ -42,17 +42,8 @@
             $("#oilPercentage").text(oilMatch[1] + " %");
             oilPercentageTxt(oilMatch, "#oilPercentage");
         } else if (percentageClose !== null) {
-            $("#oilPercentage").text("Lukket: " + percentageClose[1] + " %");
+            $("#oilPercentage").text(percentageClose[1] + " %");
             oilPercentageTxt(percentageClose, "#oilPercentage");
-        }
-    }
-
-    function oilPercentageTxt(match, field)
-    {
-        if (match[1] < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
         }
     }
 
@@ -65,8 +56,17 @@
             $("#oilChange").text(oilMatch[1]);
             oilPercentageTxt(oilMatch, "#oilChange");
         } else if (changeClose !== null) {
-            $("#oilChange").text("Lukket: " + changeClose[1]);
+            $("#oilChange").text(changeClose[1]);
             oilPercentageTxt(changeClose, "#oilChange");
+        }
+    }
+
+    function oilPercentageTxt(match, field)
+    {
+        if (match[1] < 0) {
+            $(field).css("color", "red");
+        } else {
+            $(field).css("color", "green");
         }
     }
 </script>
