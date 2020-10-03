@@ -12,7 +12,13 @@
     <body class="p-3 mb-2 bg-secondary text-dark" onload="getStockData()">
         <div class="jumbotron text-center">
             <h1>Her er en oversigt over kurserne på enkelte ting</h1>
-            <p>Der er kurser og tilhørende statistik</p>
+            <p>
+                Der er kurser og tilhørende statistik fra
+                <a href="https://www.nyse.com/index" target="_blank">
+                    New York Stock Exchange
+                </a>. <br>
+                Klik på det enkelte investerings element under "Aktiv", for at få en uddybbende specifikation
+            </p>
         </div>
 
         <?php
@@ -21,6 +27,7 @@
             include "assets/gold.php";
             include "assets/silver.php";
             include "assets/google.php";
+            include "assets/bitcoin.php";
             include "stockTable.php";
         ?>
 

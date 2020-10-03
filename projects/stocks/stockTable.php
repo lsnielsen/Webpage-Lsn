@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row">Guld</th>
+                <th scope="row" class="theAsset">Guld</th>
                 <td id="goldVal"></td>
                 <td id="goldChange"></td>
                 <td id="goldPercentage"></td>
@@ -22,7 +22,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Euro/USD</th>
+                <th scope="row" class="theAsset">Euro/USD</th>
                 <td id="euroVal"></td>
                 <td id="euroChange"></td>
                 <td id="euroPercentage"></td>
@@ -33,7 +33,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Olie</th>
+                <th scope="row" class="theAsset">Olie</th>
                 <td id="oilVal"></td>
                 <td id="oilChange"></td>
                 <td id="oilPercentage"></td>
@@ -44,7 +44,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Sølv</th>
+                <th scope="row" class="theAsset">Sølv</th>
                 <td id="silverVal"></td>
                 <td id="silverChange"></td>
                 <td id="silverPercentage"></td>
@@ -55,13 +55,24 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Google</th>
+                <th scope="row" class="theAsset">Google</th>
                 <td id="googleVal"></td>
                 <td id="googleChange"></td>
                 <td id="googlePercentage"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/stock/googl" target="_blank">
                         marketwatch.com/google
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="theAsset">Bitcoin</th>
+                <td id="bitcoinVal"></td>
+                <td id="bitcoinChange"></td>
+                <td id="bitcoinPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/cryptocurrency/btcusd" target="_blank">
+                        marketwatch.com/bitcoin
                     </a>
                 </td>
             </tr>
@@ -76,6 +87,7 @@
         getOilData();
         getSilverData();
         getGoogleData();
+        getBitcoinData();
     }
 </script>
 
@@ -83,7 +95,7 @@
     td, th{
         text-align: center;
     }
-    .red {color:red}
-    .orange {color:grey}
-    .green {color:green}
+    .theAsset {
+        cursor: pointer;
+    }
 </style>
