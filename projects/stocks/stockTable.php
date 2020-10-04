@@ -55,7 +55,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Google</th>
+                <th scope="row" class="theAsset">Google / Alphabet</th>
                 <td id="googleVal"></td>
                 <td id="googleChange"></td>
                 <td id="googlePercentage"></td>
