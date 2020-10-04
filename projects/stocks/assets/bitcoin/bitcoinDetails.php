@@ -9,9 +9,23 @@
         </title>
     </head>
 
+    <body class="p-3 mb-2 bg-secondary text-dark" onload="getStockData()">
+    <div class="jumbotron text-center">
+        <h1>Her er en oversigt over bitcoins</h1>
+        <p>
+            Informationerne er taget fra
+            <a href="https://www.marketwatch.com/investing/cryptocurrency/btcusd" target="_blank">
+                MarketWatch
+            </a>, hvorefter der er lavet yderligere beregning på dem.
+        </p>
+    </div>
 
-    <body>
 
+    <form action="/Webpage-Lsn/controller/stock.php" method="post">
+        <button type="submit" class="btn btn-dark btn-lg active" name="stockButton" value="stockPage">
+            Tilbage aktie siden
+        </button>
+    </form>
     </body>
 
 

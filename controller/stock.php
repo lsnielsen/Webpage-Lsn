@@ -6,7 +6,7 @@
     if ($stockButton == "stockPage") {
         include "../projects/stocks/frontpage.php";
     } elseif ($stockCookie == "bitcoin") {
-        include "../projects/stocks/assets/bitcoin/details.php";
+        include "../projects/stocks/assets/bitcoin/bitcoinDetails.php";
     }
 
 
