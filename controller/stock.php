@@ -7,6 +7,8 @@
         include "../projects/stocks/frontpage.php";
     } elseif ($stockCookie == "bitcoin") {
         include "../projects/stocks/assets/bitcoin/bitcoinDetails.php";
+    } elseif ($stockCookie == "euro/usd") {
+        include "../projects/stocks/assets/euroUsd/euroUsdDetails.php";
     }
 
 

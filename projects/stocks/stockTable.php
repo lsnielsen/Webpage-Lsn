@@ -22,7 +22,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Euro/USD</th>
+                <th scope="row" class="theAsset" onclick="assetPage('euro/usd')">Euro/USD</th>
                 <td id="euroVal"></td>
                 <td id="euroChange"></td>
                 <td id="euroPercentage"></td>
