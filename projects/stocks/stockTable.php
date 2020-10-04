@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row" class="theAsset">Guld</th>
+                <th scope="row" class="theAsset" onclick="assetPage('gold')">Guld</th>
                 <td id="goldVal"></td>
                 <td id="goldChange"></td>
                 <td id="goldPercentage"></td>
@@ -33,7 +33,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Olie</th>
+                <th scope="row" class="theAsset" onclick="assetPage('oil')">Olie</th>
                 <td id="oilVal"></td>
                 <td id="oilChange"></td>
                 <td id="oilPercentage"></td>
@@ -44,7 +44,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Sølv</th>
+                <th scope="row" class="theAsset" onclick="assetPage('silver')">Sølv</th>
                 <td id="silverVal"></td>
                 <td id="silverChange"></td>
                 <td id="silverPercentage"></td>
@@ -55,7 +55,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Google / Alphabet</th>
+                <th scope="row" class="theAsset" onclick="assetPage('google')">Google / Alphabet</th>
                 <td id="googleVal"></td>
                 <td id="googleChange"></td>
                 <td id="googlePercentage"></td>

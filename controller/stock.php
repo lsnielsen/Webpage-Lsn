@@ -9,6 +9,14 @@
         include "../projects/stocks/assets/bitcoin/bitcoinDetails.php";
     } elseif ($stockCookie == "euro/usd") {
         include "../projects/stocks/assets/euroUsd/euroUsdDetails.php";
+    } elseif ($stockCookie == "gold") {
+        include "../projects/stocks/assets/gold/goldDetails.php";
+    } elseif ($stockCookie == "google") {
+        include "../projects/stocks/assets/google/googleDetails.php";
+    } elseif ($stockCookie == "oil") {
+        include "../projects/stocks/assets/oil/oilDetails.php";
+    } elseif ($stockCookie == "silver") {
+        include "../projects/stocks/assets/silver/silverDetails.php";
     }
 
 
