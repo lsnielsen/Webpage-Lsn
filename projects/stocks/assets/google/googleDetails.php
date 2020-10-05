@@ -24,7 +24,7 @@
             <thead>
                 <tr>
                     <th scope="col">Data</th>
-                    <th scope="col">Værdi</th>
+                    <th scope="col">Værdi USD</th>
                 </tr>
             </thead>
             <tbody>
