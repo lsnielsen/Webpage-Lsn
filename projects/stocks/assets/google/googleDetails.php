@@ -29,6 +29,14 @@
             </thead>
             <tbody>
                 <tr>
+                    <th scope="row">Indtægter</th>
+                    <td id="revenue"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Nettoindkomst</th>
+                    <td id="netIncome"></td>
+                </tr>
+                <tr>
                     <th scope="row">Åbning</th>
                     <td id="openValue"></td>
                 </tr>
