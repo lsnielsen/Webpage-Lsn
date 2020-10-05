@@ -76,6 +76,17 @@
                     </a>
                 </td>
             </tr>
+            <tr>
+                <th scope="row" class="theAsset">Astralis Group</th>
+                <td id="astralisVal"></td>
+                <td id="astralisChange"></td>
+                <td id="astralisPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
+                        marketwatch.com/bitcoin
+                    </a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -88,6 +99,7 @@
         getSilverData();
         getGoogleData();
         getBitcoinData();
+        getAstralisData();
     }
     function assetPage(page) {
         const form = document.createElement("form");

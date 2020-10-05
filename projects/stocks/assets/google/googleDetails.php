@@ -85,7 +85,7 @@
                     <td id="peRatio"></td>
                 </tr>
                 <tr>
-                    <th scope="row">Sidste års vækst</th>
+                    <th scope="row">Sidste års salgsvækst</th>
                     <td id="lastYearGrowth"></td>
                 </tr>
                 <tr>
@@ -106,3 +106,4 @@
 </html>
 
 <?php include "data.php"; ?>
+<?php include "staticData.php"; ?>

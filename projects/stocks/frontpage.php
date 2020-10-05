@@ -29,6 +29,7 @@
             include "assets/silver.php";
             include "assets/google.php";
             include "assets/bitcoin.php";
+            include "assets/astralis.php";
             include "stockTable.php";
         ?>
 
