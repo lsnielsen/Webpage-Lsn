@@ -2,6 +2,7 @@
 
 <script>
 
+    var outstanding;
 
     function getDetailedStockData()
     {
@@ -19,12 +20,37 @@
                     getMarketCap(data);
                     getOutstanding(data);
                     getCloseValue(data);
+                    marketValuePerShare(data);
+                    getEarnings(data);
                 },
                 'html'
             );
             setTimeout(function () {
                 callUrl();
             }, 200);
+        }
+    }
+
+    function getEarnings(data)
+    {
+        let EPS = /EPS<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+)[A-Z]*<\/span>/.exec(data);
+        let outstanding = /Outstanding<\/small>[ \n]+<span class="primary kv__primary ">\$*([0-9,\. -]+)([A-Z]*)<\/span>/.exec(data);
+        if (EPS !== null && outstanding !== null) {
+            if (outstanding[2] == "M"){
+                let marketValuePerShare = (EPS[1] * outstanding[1]).toFixed(3);
+                $("#earnings").text(marketValuePerShare + " Million");
+            }
+        }
+    }
+
+    function marketValuePerShare(data)
+    {
+        let marketCap = /Market Cap<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+)([A-Z]*)<\/span>/.exec(data);
+        if (marketCap !== null) {
+            if (marketCap[2] == "B"){
+                let marketValuePerShare = ((marketCap[1] * 1000 * 1000 * 1000) / outstanding).toFixed(3);
+                $("#marketValuePerShare").text(marketValuePerShare);
+            }
         }
     }
 
@@ -39,19 +65,22 @@
 
     function getOutstanding(data)
     {
-        let stockRegex = /Outstanding<\/small>[ \n]+<span class="primary kv__primary ">\$*([0-9,\. -]+[A-Z]*)<\/span>/;
+        let stockRegex = /Outstanding<\/small>[ \n]+<span class="primary kv__primary ">\$*([0-9,\. -]+)([A-Z]*)<\/span>/;
         let stockMatch = stockRegex.exec(data);
         if (stockMatch !== null) {
-            $("#outstanding").text(stockMatch[1]);
+            if (stockMatch[2] == "M") {
+                outstanding = stockMatch[1] * 1000 * 1000;
+            }
+            $("#outstanding").text(stockMatch[1] + " " + stockMatch[2]);
         }
     }
 
     function getMarketCap(data)
     {
-        let stockRegex = /Market Cap<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+[A-Z]*)<\/span>/;
+        let stockRegex = /Market Cap<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+)([A-Z]*)<\/span>/;
         let stockMatch = stockRegex.exec(data);
         if (stockMatch !== null) {
-            $("#marketCap").text(stockMatch[1]);
+            $("#marketCap").text(stockMatch[1] + " " + stockMatch[2]);
         }
     }
 

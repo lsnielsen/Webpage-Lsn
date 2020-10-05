@@ -64,6 +64,14 @@
                     <th scope="row"">Udestående</th>
                     <td id="outstanding"></td>
                 </tr>
+                <tr>
+                    <th scope="row"">Markedsværdi per aktie</th>
+                    <td id="marketValuePerShare"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Indtjening</th>
+                    <td id="earnings"></td>
+                </tr>
             </tbody>
         </table>
 
