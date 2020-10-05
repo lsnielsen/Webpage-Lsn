@@ -65,12 +65,16 @@
                     <td id="outstanding"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Markedsværdi per aktie</th>
-                    <td id="marketValuePerShare"></td>
-                </tr>
-                <tr>
                     <th scope="row"">Indtjening</th>
                     <td id="earnings"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Indtjening per aktie</th>
+                    <td id="earningsPerShare"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">P/E Ratio</th>
+                    <td id="peRatio"></td>
                 </tr>
             </tbody>
         </table>

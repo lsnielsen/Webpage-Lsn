@@ -2,7 +2,9 @@
 
 <script>
 
-    var outstanding;
+    let outstanding;
+    let earnings;
+    let earningsPerShare;
 
     function getDetailedStockData()
     {
@@ -20,8 +22,11 @@
                     getMarketCap(data);
                     getOutstanding(data);
                     getCloseValue(data);
-                    marketValuePerShare(data);
+                    //getMarketValuePerShare(data);
                     getEarnings(data);
+                    getEarningsPerShare();
+                    getPERatio(data);
+                    //console.log("Aktier, indtjening, indtjening per aktie, markedsværdi per aktie: " + outstanding + ", " + earnings + ", " + earningsPerShare + ", " + marketValuePerShare);
                 },
                 'html'
             );
@@ -31,26 +36,27 @@
         }
     }
 
-    function getEarnings(data)
+    function getPERatio(data)
     {
-        let EPS = /EPS<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+)[A-Z]*<\/span>/.exec(data);
-        let outstanding = /Outstanding<\/small>[ \n]+<span class="primary kv__primary ">\$*([0-9,\. -]+)([A-Z]*)<\/span>/.exec(data);
-        if (EPS !== null && outstanding !== null) {
-            if (outstanding[2] == "M"){
-                let marketValuePerShare = (EPS[1] * outstanding[1]).toFixed(3);
-                $("#earnings").text(marketValuePerShare + " Million");
-            }
+        let stockRegex = /P\/E Ratio<\/small>[ \n]+<span class="primary kv__primary ">([0-9,\. -]+)[A-Z]*<\/span>/;
+        let stockMatch = stockRegex.exec(data);
+        if (stockMatch !== -1) {
+            $("#peRatio").text(stockMatch[1]);
         }
     }
 
-    function marketValuePerShare(data)
+    function getEarningsPerShare()
     {
-        let marketCap = /Market Cap<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+)([A-Z]*)<\/span>/.exec(data);
-        if (marketCap !== null) {
-            if (marketCap[2] == "B"){
-                let marketValuePerShare = ((marketCap[1] * 1000 * 1000 * 1000) / outstanding).toFixed(3);
-                $("#marketValuePerShare").text(marketValuePerShare);
-            }
+        earningsPerShare = (earnings / outstanding).toPrecision(3);
+        $("#earningsPerShare").text(earningsPerShare);
+    }
+
+    function getEarnings(data)
+    {
+        let EPS = /EPS<\/small>[ \n]+<span class="primary kv__primary ">\$([0-9,\. -]+)[A-Z]*<\/span>/.exec(data);
+        if (EPS !== null) {
+            earnings = (EPS[1] * outstanding).toPrecision(3);
+            $("#earnings").text(earnings);
         }
     }
 
