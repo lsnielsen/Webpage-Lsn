@@ -97,12 +97,3 @@
         form.submit();
     }
 </script>
-
-<style>
-    td, th{
-        text-align: center;
-    }
-    .theAsset {
-        cursor: pointer;
-    }
-</style>
