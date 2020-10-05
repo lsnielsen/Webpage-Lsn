@@ -5,12 +5,15 @@
     let outstanding;
     let earnings;
     let earningsPerShare;
+    let peRatio;
+    let lastYearGrowth;
 
     function getDetailedStockData()
     {
         callUrl();
         function callUrl() {
             var url = "https://www.marketwatch.com/investing/stock/googl";
+            var profileUrl = "https://www.marketwatch.com/investing/stock/googl/profile";
             $.get( url,
                 function( data ) {
                     getStockValue(data);
@@ -22,11 +25,16 @@
                     getMarketCap(data);
                     getOutstanding(data);
                     getCloseValue(data);
-                    //getMarketValuePerShare(data);
                     getEarnings(data);
                     getEarningsPerShare();
                     getPERatio(data);
-                    //console.log("Aktier, indtjening, indtjening per aktie, markedsværdi per aktie: " + outstanding + ", " + earnings + ", " + earningsPerShare + ", " + marketValuePerShare);
+                },
+                'html'
+            );
+            $.get( profileUrl,
+                function( profileData ) {
+                    getLastYearGrowth(profileData);
+                    getPEGRatio();
                 },
                 'html'
             );
@@ -36,12 +44,29 @@
         }
     }
 
+    function getPEGRatio()
+    {
+        let pegRatio = (peRatio / lastYearGrowth).toPrecision(3);
+        $("#pegRatio").text(pegRatio);
+    }
+
+    function getLastYearGrowth(data)
+    {
+        let stockRegex = /[0-9]{4} Sales Growth <\/p>[\w\W]*<p class="data lastcolumn">([0-9\.]+)%<\/p>/;
+        let stockMatch = stockRegex.exec(data);
+        if (stockMatch !== -1) {
+            lastYearGrowth = stockMatch[1];
+            $("#lastYearGrowth").text(lastYearGrowth + " %");
+        }
+    }
+
     function getPERatio(data)
     {
         let stockRegex = /P\/E Ratio<\/small>[ \n]+<span class="primary kv__primary ">([0-9,\. -]+)[A-Z]*<\/span>/;
         let stockMatch = stockRegex.exec(data);
         if (stockMatch !== -1) {
-            $("#peRatio").text(stockMatch[1]);
+            peRatio = stockMatch[1];
+            $("#peRatio").text(peRatio);
         }
     }
 

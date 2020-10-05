@@ -29,52 +29,60 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row"">Åbning</th>
+                    <th scope="row">Åbning</th>
                     <td id="openValue"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Lukning</th>
+                    <th scope="row">Lukning</th>
                     <td id="closeValue"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Aktie værdi</th>
+                    <th scope="row">Aktie værdi</th>
                     <td id="stockValue"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Ændring</th>
+                    <th scope="row">Ændring</th>
                     <td id="stockChange"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Ændring i %</th>
+                    <th scope="row">Ændring i %</th>
                     <td id="stockPercentage"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Dagens rækkevidde</th>
+                    <th scope="row">Dagens rækkevidde</th>
                     <td id="rangeValue"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Ugens rækkevidde</th>
+                    <th scope="row">Ugens rækkevidde</th>
                     <td id="weekRangeValue"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Markedsværdi</th>
+                    <th scope="row">Markedsværdi</th>
                     <td id="marketCap"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Udestående</th>
+                    <th scope="row">Udestående</th>
                     <td id="outstanding"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Indtjening</th>
+                    <th scope="row">Indtjening</th>
                     <td id="earnings"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">Indtjening per aktie</th>
+                    <th scope="row">Indtjening per aktie</th>
                     <td id="earningsPerShare"></td>
                 </tr>
                 <tr>
-                    <th scope="row"">P/E Ratio</th>
+                    <th scope="row">P/E Ratio</th>
                     <td id="peRatio"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Sidste års vækst</th>
+                    <td id="lastYearGrowth"></td>
+                </tr>
+                <tr>
+                    <th scope="row">PEG Ratio</th>
+                    <td id="pegRatio"></td>
                 </tr>
             </tbody>
         </table>
