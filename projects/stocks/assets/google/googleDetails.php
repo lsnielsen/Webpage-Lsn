@@ -29,6 +29,14 @@
             </thead>
             <tbody>
                 <tr>
+                    <th scope="row"">Åbning</th>
+                    <td id="openValue"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Lukning</th>
+                    <td id="closeValue"></td>
+                </tr>
+                <tr>
                     <th scope="row"">Aktie værdi</th>
                     <td id="stockValue"></td>
                 </tr>
@@ -39,6 +47,22 @@
                 <tr>
                     <th scope="row"">Ændring i %</th>
                     <td id="stockPercentage"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Dagens rækkevidde</th>
+                    <td id="rangeValue"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Ugens rækkevidde</th>
+                    <td id="weekRangeValue"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Markedsværdi</th>
+                    <td id="marketCap"></td>
+                </tr>
+                <tr>
+                    <th scope="row"">Udestående</th>
+                    <td id="outstanding"></td>
                 </tr>
             </tbody>
         </table>
