@@ -70,7 +70,7 @@
 
 <script>
 
-	$(document).ready(function() { 
+	$(document).onload(function() {
 		document.cookie = "langPlace = frontpage";
 	});
 	$("#dieselButton").click(function() {
