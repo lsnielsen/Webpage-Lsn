@@ -56,23 +56,21 @@
 
 	#dieselButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #cccc00 100%);
-		cursor:pointer;
 	}
 	#politicButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #ccff66 100%);
-		cursor:pointer;
 	}
 	#usedCarsButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #809fff 100%);
-		cursor:pointer;
 	}
 	#runButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #661aff 100%);
-		cursor:pointer;
 	}
 	#bikeButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #145214 100%);
-		cursor:pointer;
+	}
+	#stockButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #d61340 100%);
 	}
 	#searchArea {
 		margin-top: 20px;
@@ -87,6 +85,7 @@
 	}
 	
 	.frontpageButton {
+		cursor:pointer;
 		margin-left: 20px;
 		box-shadow: 0px 1px 0px 0px #ccd9ff;
 		background-color:#b3c6ff;
