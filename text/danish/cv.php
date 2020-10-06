@@ -22,6 +22,20 @@
             ],
             'general' => [
                 'pubSchool' => 'Lemtorpskolen Lemvig',
+                'masterSchool' => 'Kandidat datalogi',
+                'au' => 'Aarhus Universitet',
+                '14-16' => '2014 - 2016',
+                'weightLift' => 'Vægtløftning',
+                '02/02-2019' => 'BDM 2.februar 2019',
+                '19/08-2019' => 'BDM-Vest 19.august 2019, bronzemedalje',
+                'highSchool' => 'Aalborg Sportshøjskole',
+                '2011' => '2011',
+                'crossJoin' => 'Crossfit',
+                'eng' => 'Engelsk',
+                'langFloat' => 'Flydende',
+                'workHeader' => 'Arbejde',
+                'piipl' => 'Piipl, 2017-2018',
+                'bizsys' => 'Bizsys, 2019-2020',
             ]
         ];
 

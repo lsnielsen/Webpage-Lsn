@@ -1,33 +1,51 @@
 
 		<td class="tableCell education">
 			<div class="tableHeader">
-				Kandidat datalogi
+                <?php echo $txtFile['general']['masterSchool']; ?>
 			</div>
-			<li class="bulletTxt">Aarhus Universitet</li>
-			<li class="bulletTxt">2014-2016</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['au']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['14-16']; ?>
+            </li>
 		</td>
 		<td class="tableCell sparetime" style="padding-bottom: 20px">	
 			<div class="tableHeader">
-				V&#230;gtl&#248;ftning
+                <?php echo $txtFile['general']['weightLift']; ?>
 			</div>
-			<li class="bulletTxt">BDM 2.februar 2019</li>
-			<li class="bulletTxt">BDM-Vest 19.august 2019, bronzemedalje</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['02/02-2019']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['19/08-2019']; ?>
+            </li>
 		</td>
 		<td class="tableCell qualifications">
 			<div class="tableHeader">
-				Aalborg Sportsh&#248;jskole
+                <?php echo $txtFile['general']['highSchool']; ?>
 			</div>
-			<li class="bulletTxt">2011</li>
-			<li class="bulletTxt">Crossfit</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['2011']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['crossJoin']; ?>
+            </li>
 		</td>
 		<td class="tableCell language">
-			Engelsk
-				<li class="bulletTxt">Flydende</li>
+            <?php echo $txtFile['general']['eng']; ?>
+				<li class="bulletTxt">
+                    <?php echo $txtFile['general']['langFloat']; ?>
+                </li>
 			</td>
 		<td class="tableCell duringTime">
 			<div class="tableHeader">
-				Arbejde
+                <?php echo $txtFile['general']['workHeader']; ?>
 			</div>
-			<li class="bulletTxt">Piipl, 2017-2018</li>
-			<li class="bulletTxt">Bizsys, 2019-2020</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['piipl']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['bizsys']; ?>
+            </li>
 		</td>
