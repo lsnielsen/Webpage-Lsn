@@ -70,10 +70,19 @@
 		</div>
 	</tr>
 
-	<tr class="bodyTableInfo colOne" align="middle"> </tr>
-	<tr class="bodyTableInfo colTwo" align="middle"> </tr>
-	<tr class="bodyTableInfo colThree" align="middle"> </tr>
-	<tr class="bodyTableInfo colFour" align="middle" style="height: 71px;"> </tr>
+    <tr class="bodyTableInfo" align="middle">
+        <?php include "coloums/colOne.php"; ?>
+    </tr>
+    <tr class="bodyTableInfo" align="middle">
+        <?php include "coloums/colTwo.php"; ?>
+    </tr>
+    <tr class="bodyTableInfo" align="middle">
+        <?php include "coloums/colThree.php"; ?>
+    </tr>
+    <tr class="bodyTableInfo" align="middle">
+        <?php include "coloums/colFour.php"; ?>
+    </tr>
+
 </table>
 
 <script type="text/javascript">
@@ -111,13 +120,6 @@
 	});
 	$('.education').mouseleave(function(e){
 		$('.educationBox').hide(200);
-	});
-	
-	$(function() {
-		$(".colOne").load("/Webpage-Lsn/projects/cv/coloums/colOne.html");
-		$(".colTwo").load("/Webpage-Lsn/projects/cv/coloums/colTwo.html");
-		$(".colThree").load("/Webpage-Lsn/projects/cv/coloums/colThree.html");
-		$(".colFour").load("/Webpage-Lsn/projects/cv/coloums/colFour.html");
 	});
 
 </script>
