@@ -18,7 +18,10 @@
                 'langBubble' => 'Her er en lille uddybelse af hvor mit niveau ligger, og hvor meget jeg dyrker de forskellige sprog',
                 'langHeader' => 'Sprog',
                 'otherBubble' => 'Klik her, for at se en mere detaljeret beskrivelse af hvad jeg har lavet gennem tiden',
-                'otherHeader' => 'Gennem tiden'
+                'otherHeader' => 'Gennem tiden',
+            ],
+            'general' => [
+                'pubSchool' => 'Lemtorpskolen Lemvig',
             ]
         ];
 
