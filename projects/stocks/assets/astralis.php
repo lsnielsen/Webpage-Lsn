@@ -50,7 +50,7 @@
 
     function getAstralisChange(data)
     {
-        let astralisRegex = /<bg-quote field="change" format="0,0\.00\[0\]" channel="\/zigman2\/quotes\/[0-9]{9}\/delayed"[a-z=" ]*>([0-9\.-]+)<\/bg-quote>/;
+        let astralisRegex = /<bg-quote field="change" format="[0,\.\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/delayed"[a-z=" ]*>([0-9\.-]+)<\/bg-quote>/;
         let astralisMatch = astralisRegex.exec(data);
         let closeMatch = /<span class="change--point--q">([0-9-\.]+)<\/span>/.exec(data);
         if (astralisMatch !== null) {

@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetPage('gold')">Guld</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('gold')">Guld</th>
                 <td id="goldVal"></td>
                 <td id="goldChange"></td>
                 <td id="goldPercentage"></td>
@@ -22,7 +22,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetPage('euro/usd')">Euro/USD</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('euro/usd')">Euro/USD</th>
                 <td id="euroVal"></td>
                 <td id="euroChange"></td>
                 <td id="euroPercentage"></td>
@@ -33,7 +33,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetPage('oil')">Olie</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('oil')">Olie</th>
                 <td id="oilVal"></td>
                 <td id="oilChange"></td>
                 <td id="oilPercentage"></td>
@@ -44,7 +44,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetPage('silver')">Sølv</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('silver')">Sølv</th>
                 <td id="silverVal"></td>
                 <td id="silverChange"></td>
                 <td id="silverPercentage"></td>
@@ -55,7 +55,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetPage('google')">Google / Alphabet</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('google')">Google / Alphabet</th>
                 <td id="googleVal"></td>
                 <td id="googleChange"></td>
                 <td id="googlePercentage"></td>
@@ -66,7 +66,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetPage('bitcoin')">Bitcoin</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('bitcoin')">Bitcoin</th>
                 <td id="bitcoinVal"></td>
                 <td id="bitcoinChange"></td>
                 <td id="bitcoinPercentage"></td>
@@ -83,7 +83,7 @@
                 <td id="astralisPercentage"></td>
                 <td>
                     <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
-                        marketwatch.com/bitcoin
+                        marketwatch.com/astralis
                     </a>
                 </td>
             </tr>
@@ -101,7 +101,7 @@
         getBitcoinData();
         getAstralisData();
     }
-    function assetPage(page) {
+    function assetsPage(page) {
         const form = document.createElement("form");
         form.action = "/Webpage-Lsn/controller/stock.php";
         document.cookie = "stockButton=" + page;
