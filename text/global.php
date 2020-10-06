@@ -18,9 +18,9 @@
     } elseif ($langVar == "english" && $langPlace == "frontpage") {
 		return include("../text/english/frontpage.php");
 	} elseif ($langVar == "english" && $langPlace == "cv") {
-		return include("../text/english/frontpage.php");
+		return include("../text/english/cv.php");
 	} elseif ($langVar == "danish" && $langPlace == "cv") {
-		return include("../text/english/frontpage.php");
+		return include("../text/danish/cv.php");
 	}
 	
 	

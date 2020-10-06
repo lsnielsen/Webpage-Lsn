@@ -4,12 +4,12 @@
 		<div class="container">
 			<th>
 				<div class="infobox educationBox">
-					<div class="emptyBox"> </div> 
-					Her finder du en bedre beskrivelse af min uddannelse. Hvad jeg har fokuseret på osv
+					<div class="emptyBox"> </div>
+                    <?php echo $txtFile['frontpage']['educationBubble']; ?>
 				</div>
 				<form action="/Webpage-Lsn/controller/cv.php" method="post">
 					<button type="submit" name="cvButton" value="educationCv" class="cvHeadline education" style="color: #ffff66;">
-						Uddannelse
+                        <?php echo $txtFile['frontpage']['edu']; ?>
 					</button>
 				</form>
 			</th>
@@ -17,12 +17,12 @@
 		<div class="container">
 			<th>
 				<div class="infobox sparetimeBox">
-					<div class="emptyBox"> </div> 
-					Her finder du en bedre beskrivelse af hvad jeg laver i min fritid, og hvad jeg ellers bruger min tid på
+					<div class="emptyBox"> </div>
+                    <?php echo $txtFile['frontpage']['sparetimeBubble']; ?>
 				</div>
-				<form action="/Webpage-Lsn/controller/cv.php" method="post">
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
 					<button type="submit" name="cvButton" value="sparetimeCv" class="cvHeadline sparetime" style="color: #ff00ff;">
-						Fritidsinteresser
+                        <?php echo $txtFile['frontpage']['sparetimeHeader']; ?>
 					</button>
 				</form>
 			</th>
@@ -30,12 +30,12 @@
 		<div class="container">
 			<th>
 				<div class="infobox qualificationsBox">
-					<div class="emptyBox"> </div> 
-					Her finder du en bedre beskrivelse af hvilke mindre uddannelser og certificeringer jeg har taget gennem tiden
+					<div class="emptyBox"> </div>
+                    <?php echo $txtFile['frontpage']['qualBubble']; ?>
 				</div>
 				<form action="/Webpage-Lsn/controller/cv.php" method="post">
 					<button type="submit" name="cvButton" value="qualificationCv" class="cvHeadline qualifications" style="color: #9999ff;">
-						Kvalifikationer
+                        <?php echo $txtFile['frontpage']['qualHeader']; ?>
 					</button>
 				</form>
 			</th>
@@ -43,12 +43,12 @@
 		<div class="container">
 			<th>
 				<div class="infobox languageBox">
-					<div class="emptyBox"> </div> 
-					Her er en lille uddybelse af hvor mit niveau ligger, og hvor meget jeg dyrker de forskellige sprog
+					<div class="emptyBox"> </div>
+                    <?php echo $txtFile['frontpage']['langBubble']; ?>
 				</div>
 				<form action="/Webpage-Lsn/controller/cv.php" method="post">
 					<button type="submit" name="cvButton" value="languageCv" class="cvHeadline language" style="color: #ff9900;">
-						Sprog
+                        <?php echo $txtFile['frontpage']['langHeader']; ?>
 					</button>
 				</form>
 			</th>
@@ -56,12 +56,14 @@
 		<div class="container">
 			<th>
 				<div class="infobox otherBox">
-					<div class="emptyBox"> </div> 
-					Klik her, for at se en mere detaljeret beskrivelse af hvad jeg har lavet gennem tiden
+					<div class="emptyBox"> </div>
+                    <?php echo $txtFile['frontpage']['otherBubble']; ?>
 				</div>
 				<form action="/Webpage-Lsn/controller/cv.php" method="post">
 					<button type="submit" name="cvButton" value="otherCv" class="cvHeadline other" style="color: #993399;">
-						<nobr>Gennem tiden</nobr>
+						<nobr>
+                            <?php echo $txtFile['frontpage']['otherHeader']; ?>
+                        </nobr>
 					</button>
 				</form>
 			</th>
