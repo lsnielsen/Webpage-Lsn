@@ -21,7 +21,7 @@
                 <?php echo $txtFile['general']['itLang']; ?>
             </li>
 			<li class="bulletTxt">
-                <?php echo $txtFile['general']['itLang']; ?>
+                <?php echo $txtFile['general']['itGit']; ?>
             </li>
 		</td>
 		<td class="tableCell qualifications">
