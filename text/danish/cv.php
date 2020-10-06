@@ -4,7 +4,9 @@
 
     return
         [
-
+            'frontpage' => [
+                'tab' => 'Cv'
+            ]
         ];
 
 

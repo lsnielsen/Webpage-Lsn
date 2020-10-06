@@ -88,6 +88,9 @@
 	$("#bikeButton").click(function() {
 		document.cookie = "langPlace = bike";
 	});
+	$("#cvButton").click(function() {
+		document.cookie = "langPlace = cv";
+	});
 
 	$("#danish").click(function() {
 		document.cookie = "lang = danish";

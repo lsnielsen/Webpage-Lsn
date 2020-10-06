@@ -18,10 +18,10 @@
 
 	<body>
 		<center>
-			<div id="includeCvHeader"> </div>
-			
-			<div id="includeCvBody"> </div>
-		</center>
+			<?php include "cvHeader.php" ?>
+
+			<?php include "cvBody.php" ?>
+        </center>
 	</body>
 	
 	<form action="/Webpage-Lsn/controller/frontpage.php" method="post" style="margin-top: 15px;">
@@ -31,15 +31,7 @@
 	</form>
 </html>
 
-<script type="text/javascript">
-	
-	$(function() {
-		$("#includeCvHeader").load("/Webpage-Lsn/projects/cv/cvHeader.html");
-		$("#includeCvBody").load("/Webpage-Lsn/projects/cv/cvBody.html");
-	});
 
-
-</script>
 
 
 
