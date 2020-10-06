@@ -1,32 +1,52 @@
 
 		<td class="tableCell education">
 			<div class="tableHeader">
-				Lemvig Gymnasium 
+                <?php echo $txtFile['general']['gymSchool']; ?>
 			</div>
-			<li class="bulletTxt">2007-2010</li>
-			<li class="bulletTxt">Musisk student</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['07-10']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gymLine']; ?>
+            </li>
 		</td>
 		<td class="tableCell sparetime">
 			<div class="tableHeader">
-				Programmering
+                <?php echo $txtFile['general']['itHeader']; ?>
 			</div>
-			<li class="bulletTxt">Web programmering</li>
-			<li class="bulletTxt">PHP, jquery, javascript, css</li>
-			<li class="bulletTxt">Github, Git Desktop</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['itWeb']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['itLang']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['itLang']; ?>
+            </li>
 		</td>
 		<td class="tableCell qualifications">
 			<div class="tableHeader">
-				Ven&#248; efterskole
+                <?php echo $txtFile['general']['afterSchoolHeader']; ?>
 			</div>
-			<li class="bulletTxt">2006-2007</li>
-			<li class="bulletTxt">Natur og friluftsliv</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['06-07']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['afterSchoolLine']; ?>
+            </li>
 		</td>
 		<td class="tableCell language">
-			Fransk
-			<li class="bulletTxt">Element&#230;rt niveau</li>
+            <?php echo $txtFile['general']['fra']; ?>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gerLevel']; ?>
+            </li>
 		</td>
 		<td class="tableCell duringTime">
-			Crossfit
-			<li class="bulletTxt">Aarhus crossfit, Copenhagen crossfit</li>
-			<li class="bulletTxt">Gennem min studietid p&#229; universitetet</li>
+            <?php echo $txtFile['general']['crossJoin']; ?>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['crossJoinPlaces']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['crossJoinTime']; ?>
+            </li>
 		</td>	
