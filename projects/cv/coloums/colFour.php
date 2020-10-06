@@ -1,27 +1,41 @@
 
 		<td class="tableCell education">
 			<div class="tableHeader">
-				Lemtorpskolen Lemvig 
+                <?php echo $txtFile['general']['pubSchool']; ?>
 			</div>
 		</td>
 		<td class="tableCell sparetime">
-			Computer spil
-			<li class="bulletTxt">Blizzard</li>
-			<li class="bulletTxt">Overwatch, Heroes of the Storm</li>
+            <?php echo $txtFile['general']['comHeader']; ?>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['comBliz']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['comGames']; ?>
+            </li>
 		</td>
 		<td class="tableCell qualifications">
 			<div class="tableHeader">
-				Iv&#230;rks&#230;tter kursus
+                <?php echo $txtFile['general']['inoHeader']; ?>
 			</div>
-			<li class="bulletTxt">2010</li>
-			<li class="bulletTxt">Lemvig Gymnasium</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['2010']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['lemGym']; ?>
+            </li>
 		</td>
 		<td class="tableCell language">
-			Spansk
-			<li class="bulletTxt">Element&#230;rt niveau</li>
+            <?php echo $txtFile['general']['spa']; ?>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gerLevel']; ?>
+            </li>
 		</td>
 		<td class="tableCell duringTime">
-			Lokal fiskefabrik
-			<li class="bulletTxt">Jeka Fish</li>
-			<li class="bulletTxt">Kontor arbejde og produktion</li>
+            <?php echo $txtFile['general']['jekaHeader']; ?>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['jekaFish']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['jekaWork']; ?>
+            </li>
 		</td>

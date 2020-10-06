@@ -36,6 +36,7 @@
                 '19/08-2019' => 'BDM-Vest 19.august 2019, bronzemedalje',
                 'highSchool' => 'Aalborg Sportshøjskole',
                 '2011' => '2011',
+                '2010' => '2010',
                 'crossJoin' => 'Crossfit',
                 'crossJoinPlaces' => 'Aarhus crossfit, Copenhagen crossfit',
                 'crossJoinTime' => 'Gennem min studietid på universitetet',
@@ -63,6 +64,15 @@
                 'afterSchoolHeader' => 'Venø; efterskole',
                 'afterSchoolLine' => 'Natur og friluftsliv',
                 'fra' => 'Fransk',
+                'spa' => 'Spansk',
+                'comHeader' => 'Computer spil',
+                'comBliz' => 'Blizzard',
+                'comGames' => 'Overwatch, Heroes of the Storm',
+                'inoHeader' => 'Iværksætter kursus',
+                'lemGym' => 'Lemvig Gymnasium',
+                'jekaHeader' => 'Lokal fiskefabrik',
+                'jekaFish' => 'Jeka Fisk',
+                'jekaWork' => 'Kontor arbejde og produktion',
             ]
         ];
 
