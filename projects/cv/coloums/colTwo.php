@@ -1,35 +1,52 @@
 
 		<td class="tableCell education">
 			<div class="tableHeader">
-				Bachelor datalogi
+                <?php echo $txtFile['general']['gradSchool']; ?>
 			</div>
-			<li class="bulletTxt">Aarhus Universitet</li>
-			<li class="bulletTxt">2011-2014</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['au']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['11-14']; ?>
+            </li>
 		</td>
 		<td class="tableCell sparetime">
 			<div class="tableHeader">
-				Saxofon
+                <?php echo $txtFile['general']['saxHeader']; ?>
 			</div>
-			<li class="bulletTxt">Baryton saxofon</li>
-			<li class="bulletTxt">Saxofonkvartet, orkester</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['barSax']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['altSax']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['saxPlay']; ?>
+            </li>
 		</td>
 		<td class="tableCell qualifications">
 			<div class="tableHeader">
-				Den Kongelige Livgarde
+                <?php echo $txtFile['general']['miliHeader']; ?>
 			</div>
-			<li class="bulletTxt">2010-2011</li>
-			<li class="bulletTxt">Tambour - marchtromme</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['10-11']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['miliJob']; ?>
+            </li>
 		</td>
 		<td class="tableCell language">
-			Tysk
-			<li class="bulletTxt">Element&#230;rt niveau</li>
+            <?php echo $txtFile['general']['ger']; ?>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gerLevel']; ?>
+            </li>
 		</td>
 		<td class="tableCell duringTime">
-			Coursera.org
+            <?php echo $txtFile['general']['courseraHeader']; ?>
 			<li class="bulletTxt">
-				Introduction to Mathematical thinking
+                <?php echo $txtFile['general']['courseraMath']; ?>
 			</li>
 			<li class="bulletTxt">
-				How to reason and argue
+                <?php echo $txtFile['general']['courseraLogic']; ?>
 			</li>
 		</td>
