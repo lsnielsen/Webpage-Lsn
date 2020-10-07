@@ -21,6 +21,7 @@
                 'otherHeader' => 'Gennem tiden',
             ],
             'general' => [
+                'docProof' => 'Bevis',
                 'pubSchool' => 'Lemtorpskolen Lemvig',
                 'masterSchool' => 'Kandidat datalogi',
                 'gradSchool' => 'Bachelor datalogi',
@@ -76,6 +77,12 @@
                 'jekaHeader' => 'Lokal fiskefabrik',
                 'jekaFish' => 'Jeka Fisk',
                 'jekaWork' => 'Kontor arbejde og produktion',
+                'pdfCv' => 'Mit cv i pdf format:',
+                'pubProof' => 'Folkeskole bevis:',
+                'back' => 'Tilbage',
+                'backCv' => 'Tilbage til CV',
+                'cvEdu' => 'Cv - uddannelse',
+                'author' => 'Af Lars Søndertoft Nielsen',
             ]
         ];
 

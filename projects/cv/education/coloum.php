@@ -1,6 +1,6 @@
 <center>
 	<div class="tableCell education">
-		<a href="/Webpage-Lsn/projects/cv/education/master.html?cv=false">
+		<a href="/Webpage-Lsn/projects/cv/education/master.php?cv=false">
 			<div class="tableHeader">
                 <?php echo $txtFile['general']['masterSchool']; ?>
 			</div>
@@ -16,7 +16,7 @@
 		</a>
 	</div>
 	<div class="tableCell education">	
-		<a href="/Webpage-Lsn/projects/cv/education/bachelor.html">
+		<a href="/Webpage-Lsn/projects/cv/education/bachelor.php">
 			<div class="tableHeader">
                 <?php echo $txtFile['general']['gradSchool']; ?>
 			</div>
@@ -35,7 +35,7 @@
 		</a>
 	</div>
 	<div class="tableCell education">
-		<a href="/Webpage-Lsn/projects/cv/education/highSchool.html">
+		<a href="/Webpage-Lsn/projects/cv/education/highSchool.php">
 			<div class="tableHeader">
                 <?php echo $txtFile['general']['gymSchool']; ?>
 			</div>
@@ -51,7 +51,7 @@
 		</a>
 	</div>
 	<div class="tableCell education" style="height: 42px;">
-		<a href="/Webpage-Lsn/projects/cv/education/groundSchool.html">
+		<a href="/Webpage-Lsn/projects/cv/education/groundSchool.php">
 			<div class="tableHeader">
                 <?php echo $txtFile['general']['pubSchool']; ?>
 			</div>

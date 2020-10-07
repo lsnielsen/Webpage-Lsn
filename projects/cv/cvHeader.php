@@ -28,13 +28,13 @@
 			</div>
 			<div class="secondColumn columnTxt">
 				Uddannelse: 
-				<a href="/Webpage-Lsn/projects/cv/education/master.html?cv=true">
+				<a href="/Webpage-Lsn/projects/cv/education/master.php?cv=true">
 					<span class="attributeText" style="margin-left:45px;">
 						Kandidat i datalogi 
 					</span>		
 				</a>
 				Arbejdsrelation: 
-				<a href="/Webpage-Lsn/projects/cv/sparetime/flexyder.html">
+				<a href="/Webpage-Lsn/projects/cv/sparetime/flexyder.php">
 					<span class="attributeText" style="margin-left:10px;">
 						Flexyder <br>
 					</span>	
@@ -42,7 +42,7 @@
 				<div style="margin-left:50px; display:inline-block;">
 					Job: 
 				</div>
-				<a href="/Webpage-Lsn/projects/cv/sparetime/itDeveloper.html?cv=true">
+				<a href="/Webpage-Lsn/projects/cv/sparetime/itDeveloper.php?cv=true">
 					<span class="attributeText" style="margin-left:140px;">
 						It-udvikler
 					</span>
@@ -52,7 +52,7 @@
 				<center>
 				<a href="https://dk.linkedin.com/in/lars-sondertoft" target="_blank"> LinkedIn </a> <br>
 				<a href="mailto:lars.sondertoft@gmail.com"> E-mail </a> <br>
-				<a href="/Webpage-Lsn/projects/cv/education/cvPdf.html"> CV-pdf </a>
+				<a href="/Webpage-Lsn/projects/cv/education/cvPdf.php"> CV-pdf </a>
 				</center>
 			</div>
 		</div><br>
