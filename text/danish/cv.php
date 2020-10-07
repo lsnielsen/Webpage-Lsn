@@ -71,7 +71,7 @@
                 'itWeb' => 'Web programmering',
                 'itLang' => 'PHP, jquery, javascript, css',
                 'itGit' => 'Github, Git Desktop',
-                'afterSchoolHeader' => 'Venø; efterskole',
+                'afterSchoolHeader' => 'Venø efterskole',
                 'afterSchoolLine' => 'Natur og friluftsliv',
                 'fra' => 'Fransk',
                 'spa' => 'Spansk',

@@ -35,9 +35,11 @@
 		<td class="duringTimeCv" style="text-indent: 20px;">
 			Introduction to Mathematical thinking
 			<li class="bulletTxt">
-				<a class="duringTimeLink" href="/Webpage-Lsn/projects/cv/other/math.html">
-					Bevis
-				</a>
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                    <button class="duringTimeLink phpLink" name="cvButton" value="math" type="submit">
+                        Bevis
+                    </button>
+                </form>
 			</li>
 			<li class="bulletTxt">
 				Et mindre kursus, hvor man lærer generalt om den 
@@ -64,17 +66,21 @@
 				</a>
 			</li>
 			<li class="bulletTxt">
-				<a class="duringTimeLink" href="/Webpage-Lsn/projects/cv/other/statement.html">
-					Udtalelse fra min daværende kollega Shahram
-				</a>
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                    <button class="duringTimeLink phpLink" name="cvButton" value="statement" type="submit">
+                        Udtalelse fra min daværende kollega Shahram
+                    </button>
+                </form>
 			</li>
 		</td>
 		<td class="duringTimeCv" style="text-indent: 70px;">
 			How to reason and argue
 			<li class="bulletTxt">
-				<a class="duringTimeLink" href="/Webpage-Lsn/projects/cv/other/argue.html">
-					Bevis
-				</a>
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                    <a class="duringTimeLink" name="cvButton" value="argue" type="submit">
+                        Bevis
+                    </a>
+                </form>
 			</li>
 			<li class="bulletTxt">
 				Et mindre kursus, hvor man lærer det helt basale om
@@ -209,7 +215,15 @@
 	.tableHeader {
 		font-size: 35px;
 	}
-
+    .phpLink {
+        background-color: #993399;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        text-indent: 20px;
+        margin-top: -15px;
+        margin-bottom: -20px;
+    }
 </style>
 
 	
