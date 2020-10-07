@@ -2,38 +2,58 @@
 	<div class="tableCell education">
 		<a href="/Webpage-Lsn/projects/cv/education/master.html?cv=false">
 			<div class="tableHeader">
-				Kandidat datalogi
+                <?php echo $txtFile['general']['masterSchool']; ?>
 			</div>
-			<li class="bulletTxt">Aarhus Universitet</li>
-			<li class="bulletTxt">2014-2016</li>
-			<li class="bulletTxt">Speciale i kryptologisk protokolteori</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['au']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['14-16']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['masterSpecial']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell education">	
 		<a href="/Webpage-Lsn/projects/cv/education/bachelor.html">
 			<div class="tableHeader">
-				Bachelor datalogi
+                <?php echo $txtFile['general']['gradSchool']; ?>
 			</div>
-			<li class="bulletTxt">Aarhus Universitet</li>
-			<li class="bulletTxt">2011-2014</li>
-			<li class="bulletTxt">To valgfag i matematik</li>
-			<li class="bulletTxt">Skrev en compiler under specialet</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['au']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['11-14']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gradElective']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gradSpecial']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell education">
 		<a href="/Webpage-Lsn/projects/cv/education/highSchool.html">
 			<div class="tableHeader">
-				Lemvig Gymnasium
+                <?php echo $txtFile['general']['gymSchool']; ?>
 			</div>
-			<li class="bulletTxt">2007-2010</li>
-			<li class="bulletTxt">Musisk student</li>
-			<li class="bulletTxt">Musik A, matematik A, kemi B</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['07-10']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gymLine']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gymSubject']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell education" style="height: 42px;">
 		<a href="/Webpage-Lsn/projects/cv/education/groundSchool.html">
 			<div class="tableHeader">
-				Lemtorpskolen Lemvig
+                <?php echo $txtFile['general']['pubSchool']; ?>
 			</div>
 		</a>
 	</div>
