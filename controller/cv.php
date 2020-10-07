@@ -14,6 +14,8 @@ if ($cvButton == "cvPage") {
     include "../projects/cv/language/languageCv.html";
 } elseif ($cvButton == "otherCv") {
     include "../projects/cv/other/otherCv.html";
-} 
+}  elseif ($cvButton == "masterProof") {
+    include "../projects/cv/education/master.php";
+}
 	
 ?>

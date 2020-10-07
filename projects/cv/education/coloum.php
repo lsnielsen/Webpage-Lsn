@@ -1,20 +1,22 @@
 <center>
 	<div class="tableCell education">
-		<a href="/Webpage-Lsn/projects/cv/education/master.php?cv=false">
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+    		<button class="educationCell" type="submit" value="masterProof" name="cvButton">
 			<div class="tableHeader">
-                <?php echo $txtFile['general']['masterSchool']; ?>
-			</div>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['au']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['14-16']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['masterSpecial']; ?>
-            </li>
-		</a>
-	</div>
+                    <?php echo $txtFile['general']['masterSchool']; ?>
+                </div>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['au']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['14-16']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['masterSpecial']; ?>
+                </li>
+            </button>
+        </form>
+    </div>
 	<div class="tableCell education">	
 		<a href="/Webpage-Lsn/projects/cv/education/bachelor.php">
 			<div class="tableHeader">
@@ -64,6 +66,11 @@
 		width: 400px;
 		margin-bottom: 10px;
 	}
+    .educationCell {
+        background-color: #ffff66;
+        border: none;
+        cursor: pointer;
+    }
 
 </style>
 

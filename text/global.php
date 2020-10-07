@@ -7,7 +7,7 @@
 	
 	$langPlace = isset($_COOKIE["langPlace"]) ? $_COOKIE["langPlace"] : "";
 	$langVar = isset($_COOKIE["lang"]) ? $_COOKIE["lang"] : "";
-    echo "place: " .$langPlace . ", var: " . $langVar;
+    echo "place: " .$langPlace . ", lang: " . $langVar;
 
     if ($langVar == "english" && $langPlace == "diesel") {
         return include("../text/english/diesel.php");

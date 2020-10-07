@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php $txtFile = include("../../../../Webpage-Lsn/text/global.php");  ?>
+<?php $txtFile = include("../../Webpage-Lsn/text/global.php");  ?>
 <html id="certificatePage">
   <head>
     <title>
@@ -27,7 +27,9 @@
                 <?php echo $txtFile['general']['masterTxtThree']; ?>
             </div>
 			<form action="/Webpage-Lsn/controller/cv.php" method="post" id="masterBackButton">
-			
+                <button type="submit" name="cvButton" value="educationCv" id="button">
+                    <?php echo $txtFile['general']['back']; ?>
+                </button>
 			</form>
 		</div>
 	</div>
@@ -36,21 +38,6 @@
 
 
 
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
-    $(document).ready(function() {
-        const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const cv = urlParams.get("cv")
-		
-		if (cv=="true") {
-			$("#masterBackButton").html("<button type=\"submit\" name=\"cvButton\" value=\"cvPage\" id=\"button\"> <?php echo $txtFile['general']['backCv']; ?> </button>");
-		} else if (cv=="false") {
-			$("#masterBackButton").html("<button type=\"submit\" name=\"cvButton\" value=\"educationCv\" id=\"button\"> <?php echo $txtFile['general']['back']; ?> </button>");
-		}
-	}); 
- 
-</script>
 
 
 
