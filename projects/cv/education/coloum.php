@@ -39,20 +39,22 @@
         </form>
 	</div>
 	<div class="tableCell education">
-		<a href="/Webpage-Lsn/projects/cv/education/highSchool.php">
-			<div class="tableHeader">
-                <?php echo $txtFile['general']['gymSchool']; ?>
-			</div>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['07-10']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['gymLine']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['gymSubject']; ?>
-            </li>
-		</a>
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+            <button class="educationCell" type="submit" name="cvButton" value="gymProof">
+                <div class="tableHeader">
+                    <?php echo $txtFile['general']['gymSchool']; ?>
+                </div>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['07-10']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['gymLine']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['gymSubject']; ?>
+                </li>
+            </button>
+        </form>
 	</div>
 	<div class="tableCell education" style="height: 42px;">
 		<a href="/Webpage-Lsn/projects/cv/education/groundSchool.php">

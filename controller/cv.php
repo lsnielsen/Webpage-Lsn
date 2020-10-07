@@ -18,6 +18,8 @@ if ($cvButton == "cvPage") {
     include "../projects/cv/education/master.php";
 }  elseif ($cvButton == "gradProof") {
     include "../projects/cv/education/bachelor.php";
+}  elseif ($cvButton == "gymProof") {
+    include "../projects/cv/education/highSchool.php";
 }
 	
 ?>

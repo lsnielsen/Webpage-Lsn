@@ -23,6 +23,8 @@
             'general' => [
                 'masterProof' => 'Kandidat bevis:',
                 'gradProof' => 'Bachelor bevis:',
+                'gymProof' => 'Gymnasie bevis:',
+                'gymSubjects' => 'Min studieretning på gymnasiet var: Musik A, matematik A, kemi B',
                 'gradHeader' => 'Bachelor på datalogi',
                 'docProof' => 'Bevis',
                 'pubSchool' => 'Lemtorpskolen Lemvig',
@@ -101,7 +103,7 @@
                                 Det var sådan for alle datalogi studerende.',
                 'gradTxtTwo' => 'En compiler er det program, der groft sagt, oversætter eksempelvis den java eller python kode man har skrevet,
                                 til maskinkode. Hvis man er interesseret, kan man læse mere her: ',
-                'com' => 'Compiler'
+                'com' => 'Compiler',
             ]
         ];
 
