@@ -17,24 +17,26 @@
             </button>
         </form>
     </div>
-	<div class="tableCell education">	
-		<a href="/Webpage-Lsn/projects/cv/education/bachelor.php">
-			<div class="tableHeader">
-                <?php echo $txtFile['general']['gradSchool']; ?>
-			</div>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['au']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['11-14']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['gradElective']; ?>
-            </li>
-			<li class="bulletTxt">
-                <?php echo $txtFile['general']['gradSpecial']; ?>
-            </li>
-		</a>
+	<div class="tableCell education">
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+            <button class="educationCell" type="submit" value="gradProof" name="cvButton">
+                <div class="tableHeader">
+                    <?php echo $txtFile['general']['gradSchool']; ?>
+                </div>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['au']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['11-14']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['gradElective']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['gradSpecial']; ?>
+                </li>
+            </button>
+        </form>
 	</div>
 	<div class="tableCell education">
 		<a href="/Webpage-Lsn/projects/cv/education/highSchool.php">

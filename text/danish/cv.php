@@ -22,6 +22,8 @@
             ],
             'general' => [
                 'masterProof' => 'Kandidat bevis:',
+                'gradProof' => 'Bachelor bevis:',
+                'gradHeader' => 'Bachelor på datalogi',
                 'docProof' => 'Bevis',
                 'pubSchool' => 'Lemtorpskolen Lemvig',
                 'masterSchool' => 'Kandidat datalogi',
@@ -95,6 +97,11 @@
                                     protokol. På den måde kan man have protokollen med sig selv, for at aflevere den til en server,
                                     som kan verificere, at det er gøet korrekt for sig.',
                 'masterTxtThree' => 'Til sidst blev de to transformationer sammenlignet, med henblik på forskellene og deres anvendelser.',
+                'gradTxt' => 'Specialet på bachelor uddannelsen var på det tidspunkt, at skrive en compiler. 
+                                Det var sådan for alle datalogi studerende.',
+                'gradTxtTwo' => 'En compiler er det program, der groft sagt, oversætter eksempelvis den java eller python kode man har skrevet,
+                                til maskinkode. Hvis man er interesseret, kan man læse mere her: ',
+                'com' => 'Compiler'
             ]
         ];
 
