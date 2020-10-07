@@ -3,7 +3,7 @@
         <form action="/Webpage-Lsn/controller/cv.php" method="post">
             <button class="sparetimeCell" name="cvButton" type="submit" value="weightlifting">
                 <div class="tableHeader">
-                    Vægtløftning
+                    <?php echo $txtFile['general']['weightLift']; ?>
                 </div>
                 <li class="bulletTxt">BDM 2. februar 2019</li>
                 <li class="bulletTxt">BDM-Vest 19. august 2019, bronzemedalje</li>
@@ -61,6 +61,11 @@
 		width: 400px;
 		margin-bottom: 10px;
 	}
+    .sparetimeCell {
+        border: none;
+        background-color: #ff00ff;
+        cursor: pointer;
+    }
 
 </style>
 
