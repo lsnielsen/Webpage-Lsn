@@ -7,13 +7,13 @@ if ($cvButton == "cvPage") {
 } elseif ($cvButton == "educationCv") {
 	include "../projects/cv/education/educationCv.php";
 } elseif ($cvButton == "sparetimeCv") {
-    include "../projects/cv/sparetime/sparetimeCv.html";
+    include "../projects/cv/sparetime/sparetimeCv.php";
 } elseif ($cvButton == "qualificationCv") {
-    include "../projects/cv/qualifications/qualificationsCv.html";
+    include "../projects/cv/qualifications/qualificationsCv.php";
 } elseif ($cvButton == "languageCv") {
-    include "../projects/cv/language/languageCv.html";
+    include "../projects/cv/language/languageCv.php";
 } elseif ($cvButton == "otherCv") {
-    include "../projects/cv/other/otherCv.html";
+    include "../projects/cv/other/otherCv.php";
 }  elseif ($cvButton == "masterProof") {
     include "../projects/cv/education/master.php";
 }  elseif ($cvButton == "gradProof") {
