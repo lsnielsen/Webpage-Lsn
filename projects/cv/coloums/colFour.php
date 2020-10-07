@@ -21,7 +21,7 @@
                 <?php echo $txtFile['general']['2010']; ?>
             </li>
 			<li class="bulletTxt">
-                <?php echo $txtFile['general']['lemGym']; ?>
+                <?php echo $txtFile['general']['gymSchool']; ?>
             </li>
 		</td>
 		<td class="tableCell language">
