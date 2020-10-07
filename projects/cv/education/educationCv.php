@@ -12,14 +12,16 @@
 				Curriculum Vitae
 			</h1>
 			<div style="margin-top: -25px; font-style:italic;">
-				Af Lars S&#248;ndertoft Nielsen
+				Af Lars Søndertoft Nielsen
 			</div>	
 		</center>
 
 	<body>
-	
-		<div id="includeCvHeader"> </div>
-		
+
+        <?php
+            include ("../../Webpage-Lsn/projects/cv/cvHeader.php");
+        ?>
+
 		<center>
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
 				<button type="submit" name="cvButton" value="cvPage" class="subheader" style="color: #ffff66;">
@@ -27,8 +29,8 @@
 				</button>
 			</form>
 		</center>
-			
-		<div class="bodyTableInfo colOne" align="middle"> </div>	
+
+        <?php include ("coloum.php"); ?>
 
 		
 	</body>
@@ -38,15 +40,6 @@
 	</form>
 </html>
 
-<script type="text/javascript">
-	
-	$(function() {
-		$("#includeCvHeader").load("/Webpage-Lsn/projects/cv/cvHeader.html");
-		$(".colOne").load("/Webpage-Lsn/projects/cv/education/coloum.html");
-	});
-
-
-</script>
 
 
 
