@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $txtFile = include("../../Webpage-Lsn/text/global.php");  ?>
 <html id="certificatePage">
   <head>
     <title>

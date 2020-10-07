@@ -57,11 +57,13 @@
         </form>
 	</div>
 	<div class="tableCell education" style="height: 42px;">
-		<a href="/Webpage-Lsn/projects/cv/education/groundSchool.php">
-			<div class="tableHeader">
-                <?php echo $txtFile['general']['pubSchool']; ?>
-			</div>
-		</a>
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+            <button class="educationCell" name="cvButton" value="pubProof">
+                <div class="tableHeader">
+                    <?php echo $txtFile['general']['pubSchool']; ?>
+                </div>
+            </button>
+        </form>
 	</div>
 </center>
 
