@@ -21,6 +21,7 @@
                 'otherHeader' => 'Gennem tiden',
             ],
             'general' => [
+                'masterProof' => 'Kandidat bevis:',
                 'docProof' => 'Bevis',
                 'pubSchool' => 'Lemtorpskolen Lemvig',
                 'masterSchool' => 'Kandidat datalogi',
@@ -83,6 +84,17 @@
                 'backCv' => 'Tilbage til CV',
                 'cvEdu' => 'Cv - uddannelse',
                 'author' => 'Af Lars Søndertoft Nielsen',
+                'masterHeader' => 'Jeg skrev mit speciale i kryptologisk protokolteori. 
+                			Et fag der ligger i Crypto gruppen på datalogi ved Aarhus universitet.',
+                'masterTxtOne' => 'Specialet tog udgangspunkt i en interaktiv sigma-protokol og dens egenskaber. 
+                                    En sigma-protokol, er en protokol mellem en client og en server. Ideen er så, at clienten skal bevise 
+                                    at han er den han er vha en unik viden. 
+                                    Han skal bevise overfor serveren, at han har den unikke viden, uden at vise den pågældende viden. 
+                                    Ellers vil den ikke være unik mere.',
+                'masterTxtTwo' => 'Derefter var der en gennemgang af to forskellige transformationer af den interaktive sigma-protokol til en ikke-interaktiv
+                                    protokol. På den måde kan man have protokollen med sig selv, for at aflevere den til en server,
+                                    som kan verificere, at det er gøet korrekt for sig.',
+                'masterTxtThree' => 'Til sidst blev de to transformationer sammenlignet, med henblik på forskellene og deres anvendelser.',
             ]
         ];
 
