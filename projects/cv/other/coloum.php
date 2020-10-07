@@ -4,120 +4,120 @@
 		<th>	
 			<a href="/Webpage-Lsn/projects/cv/sparetime/work.html">
 				<div class="tableHeader">
-					Arbejde
+                    <?php echo $txtFile['otherPage']['workTime']; ?>
 				</div>
 			</a>
 		</th>
 		<th>	
 			<div class="tableHeader">
-				Fritid
+                <?php echo $txtFile['otherPage']['sparetimeBox']; ?>
 			</div>
 		</th>
 	</tr>
 	<tr>
 		<td class="duringTimeCv">
-			Piipl
+            <?php echo $txtFile['otherPage']['piipl']; ?>
 			<li class="bulletTxt">
-				It-udvikler, 2017-2018
+                <?php echo $txtFile['otherPage']['piiplWork']; ?>
 			</li>
 			<li class="bulletTxt">
 				<a class="duringTimeLink" href="https://piipl.dk/" target="_blank">
-					Link
-				</a>
+                    <?php echo $txtFile['otherPage']['workLink']; ?>
+                </a>
 			</li>
 			<li class="bulletTxt">
-				Det var mens jeg arbejdede her, jeg blev udredt i 
+                <?php echo $txtFile['otherPage']['piiplTxt']; ?>
 				<div style="text-indent: 40px;">
-					for at finde ud af, om jeg skulle være flexyder eller ej
+                    <?php echo $txtFile['otherPage']['piiplTxtTwo']; ?>
 				</div>
 			</li>
 		</td>
 		<td class="duringTimeCv" style="text-indent: 20px;">
-			Introduction to Mathematical thinking
+            <?php echo $txtFile['otherPage']['mathHeader']; ?>
 			<li class="bulletTxt">
                 <form action="/Webpage-Lsn/controller/cv.php" method="post">
                     <button class="duringTimeLink phpLink" name="cvButton" value="math" type="submit">
-                        Bevis
+                        <?php echo $txtFile['general']['docProof']; ?>
                     </button>
                 </form>
 			</li>
 			<li class="bulletTxt">
-				Et mindre kursus, hvor man lærer generalt om den 
+                <?php echo $txtFile['otherPage']['mathTxt']; ?>
 				<div style="text-indent: 40px;">
-					matematiske tankegang
+                    <?php echo $txtFile['otherPage']['mathTxt']; ?>
 				</div>
 			</li>
 			<li class="bulletTxt">
 				<a class="duringTimeLink" href="https://coursera.org/" target="_blank">
-					Link til coursera
+                    <?php echo $txtFile['otherPage']['courLink']; ?>
 				</a>
 			</li>
 		</td>
 	</tr>
 	<tr>
 		<td class="duringTimeCv">
-			Bizsys
+            <?php echo $txtFile['otherPage']['bizHeader']; ?>
 			<li class="bulletTxt">
-				It-udvikler, 2019-2020
+                <?php echo $txtFile['otherPage']['bizHeader']; ?>
 			</li>
 			<li class="bulletTxt">
 				<a class="duringTimeLink" href="https://bizsys.dk/" target="_blank">
-					Link
+                    <?php echo $txtFile['otherPage']['workLink']; ?>
 				</a>
 			</li>
 			<li class="bulletTxt">
                 <form action="/Webpage-Lsn/controller/cv.php" method="post">
                     <button class="duringTimeLink phpLink" name="cvButton" value="statement" type="submit">
-                        Udtalelse fra min daværende kollega Shahram
+                        <?php echo $txtFile['otherPage']['statement']; ?>
                     </button>
                 </form>
 			</li>
 		</td>
 		<td class="duringTimeCv" style="text-indent: 70px;">
-			How to reason and argue
+            <?php echo $txtFile['otherPage']['logicHeader']; ?>
 			<li class="bulletTxt">
                 <form action="/Webpage-Lsn/controller/cv.php" method="post">
                     <a class="duringTimeLink" name="cvButton" value="argue" type="submit">
-                        Bevis
+                        <?php echo $txtFile['general']['docProof']; ?>
                     </a>
                 </form>
 			</li>
 			<li class="bulletTxt">
-				Et mindre kursus, hvor man lærer det helt basale om
+                <?php echo $txtFile['otherPage']['logicTxt']; ?>
 				<div style="text-indent: 40px;">
-					at argumentere og ræsonere
+                    <?php echo $txtFile['otherPage']['logicTxtTwo']; ?>
 				</div>
 			</li>
 			<li class="bulletTxt">
 				<a class="duringTimeLink" href="https://coursera.org/" target="_blank">
-					Link til coursera
+                    <?php echo $txtFile['otherPage']['logicLink']; ?>
 				</a>
 			</li>
 		</td>
 	</tr>
 	<tr>
 		<td class="duringTimeCv">
-			Lokal fiskefabrik
+            <?php echo $txtFile['otherPage']['jekaLocal']; ?>
 			<li class="bulletTxt">
-				Jeka Fish
+                <?php echo $txtFile['otherPage']['jekaHeader']; ?>
 			</li>
 			<li class="bulletTxt">
-				Produktions arbejde
+                <?php echo $txtFile['otherPage']['jekaWork']; ?>
 			</li>
 			<li class="bulletTxt">
-				Kontor arbejde
+                <?php echo $txtFile['otherPage']['jekaWorkTwo']; ?>
 			</li>
 		</td>
 		<td class="duringTimeCv">
-				Crossfit
+            <?php echo $txtFile['general']['crossJoin']; ?>
 				<li class="bulletTxt">
-					Gennem min studietid på universitet
+                    <?php echo $txtFile['otherPage']['crossTime']; ?>
 				</li>
 				<li class="bulletTxt">
-					Aarhus Crossfit
+                    <?php echo $txtFile['otherPage']['crossAu']; ?>
 				</li>
 				<li class="bulletTxt">
-					Copenhagne Crossfit
+                    <?php echo $txtFile['otherPage']['crossCph']; ?>
 				</li>
 		</td>
 	</tr>
