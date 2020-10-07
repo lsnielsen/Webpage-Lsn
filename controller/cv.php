@@ -22,6 +22,12 @@ if ($cvButton == "cvPage") {
     include "../projects/cv/education/highSchool.php";
 }  elseif ($cvButton == "pubProof") {
     include "../projects/cv/education/groundSchool.php";
+}  elseif ($cvButton == "weightlifting") {
+    include "../projects/cv/sparetime/weightlifting.php";
+}  elseif ($cvButton == "music") {
+    include "../projects/cv/sparetime/music.php";
+}  elseif ($cvButton == "it") {
+    include "../projects/cv/sparetime/itDeveloper.php";
 }
 	
 ?>

@@ -1,31 +1,37 @@
 <center>
 	<div class="tableCell sparetime">
-		<a href="/Webpage-Lsn/projects/cv/sparetime/weightlifting.html">
-			<div class="tableHeader">
-				Vægtløftning
-			</div>
-			<li class="bulletTxt">BDM 2. februar 2019</li>
-			<li class="bulletTxt">BDM-Vest 19. august 2019, bronzemedalje</li>
-		</a>
-	</div>
-	<div class="tableCell sparetime">	
-		<a href="/Webpage-Lsn/projects/cv/sparetime/music.html">
-			<div class="tableHeader">
-				Saxofon
-			</div>
-			<li class="bulletTxt">Baryton saxofon</li>
-			<li class="bulletTxt">Saxofon kvartet</li>
-		</a>
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+            <button class="sparetimeCell" name="cvButton" type="submit" value="weightlifting">
+                <div class="tableHeader">
+                    Vægtløftning
+                </div>
+                <li class="bulletTxt">BDM 2. februar 2019</li>
+                <li class="bulletTxt">BDM-Vest 19. august 2019, bronzemedalje</li>
+            </button>
+        </form>
 	</div>
 	<div class="tableCell sparetime">
-		<a href="/Webpage-Lsn/projects/cv/sparetime/itDeveloper.html?cv=false">
-			<div class="tableHeader">
-				Programmering
-			</div>
-			<li class="bulletTxt">Web programmering</li>
-			<li class="bulletTxt">Php, jquery, javascript, css, html</li>
-			<li class="bulletTxt">Github, Git desktop</li>
-		</a>
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+            <button class="sparetimeCell" name="cvButton" type="submit" value="music">
+                <div class="tableHeader">
+                    Saxofon
+                </div>
+                <li class="bulletTxt">Baryton saxofon</li>
+                <li class="bulletTxt">Saxofon kvartet</li>
+            </button>
+        </form>
+	</div>
+	<div class="tableCell sparetime">
+        <form action="/Webpage-Lsn/controller/cv.php" method="post">
+            <button class="sparetimeCell" name="cvButton" type="submit" value="it">
+                <div class="tableHeader">
+                    Programmering
+                </div>
+                <li class="bulletTxt">Web programmering</li>
+                <li class="bulletTxt">Php, jquery, javascript, css, html</li>
+                <li class="bulletTxt">Github, Git desktop</li>
+            </button>
+        </form>
 	</div>
 	<div class="tableCell sparetime">
 			<div class="tableHeader">
