@@ -72,8 +72,9 @@
 
 	$(document).ready(function() {
 		document.cookie = "langPlace = frontpage";
-		if (getCookie("lang") == null) {
+		if (getCookie("lang") == null || getCookie("langPlace") == null) {
 		    document.cookie = "lang = danish";
+		    document.cookie = "langPlace = frontpage";
         }
 	});
 	$("#dieselButton").click(function() {
