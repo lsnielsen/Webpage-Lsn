@@ -22,7 +22,6 @@
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/cv/other/coloum.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/cv/other/coloum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/cv/other/otherCv.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/cv/other/otherCv.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/text/danish/cv.php" beforeDir="false" afterPath="$PROJECT_DIR$/text/danish/cv.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +87,8 @@
       <workItem from="1602010853768" duration="257000" />
       <workItem from="1602053111603" duration="4104000" />
       <workItem from="1602060673004" duration="12456000" />
-      <workItem from="1602090545386" duration="1605000" />
+      <workItem from="1602090545386" duration="2247000" />
+      <workItem from="1602143327322" duration="1283000" />
     </task>
     <servers />
   </component>

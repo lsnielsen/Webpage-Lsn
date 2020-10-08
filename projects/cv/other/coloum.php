@@ -44,7 +44,7 @@
 			<li class="bulletTxt">
                 <?php echo $txtFile['otherPage']['mathTxt']; ?>
 				<div style="text-indent: 40px;">
-                    <?php echo $txtFile['otherPage']['mathTxt']; ?>
+                    <?php echo $txtFile['otherPage']['mathTxtTwo']; ?>
 				</div>
 			</li>
 			<li class="bulletTxt">
@@ -75,13 +75,13 @@
 		</td>
 		<td class="duringTimeCv" style="text-indent: 70px;">
             <?php echo $txtFile['otherPage']['logicHeader']; ?>
-			<li class="bulletTxt">
-                <form action="/Webpage-Lsn/controller/cv.php" method="post">
-                    <a class="duringTimeLink" name="cvButton" value="argue" type="submit">
+            <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                <li class="bulletTxt">
+                    <button class="duringTimeLink phpLink" name="cvButton" value="argue" type="submit">
                         <?php echo $txtFile['general']['docProof']; ?>
-                    </a>
-                </form>
-			</li>
+                    </button>
+                </li>
+            </form>
 			<li class="bulletTxt">
                 <?php echo $txtFile['otherPage']['logicTxt']; ?>
 				<div style="text-indent: 40px;">
@@ -123,60 +123,61 @@
 	</tr>
 	<tr>
 		<td class="duringTimeCv">
-			Avisbud
+            <?php echo $txtFile['otherPage']['paperHeader']; ?>
 			<li class="bulletTxt">
-				Lokale avis
+                <?php echo $txtFile['otherPage']['paperWork']; ?>
 			</li>
 			<li class="bulletTxt">
-				Jyllands posten
+                <?php echo $txtFile['otherPage']['paperWorkTwo']; ?>
 			</li>
 		</td>
 		<td class="duringTimeCv">
-			Løb
+            <?php echo $txtFile['otherPage']['runHeader']; ?>
 			<li class="bulletTxt">
-				Gennem hele min tilværelse
+                <?php echo $txtFile['otherPage']['runTime']; ?>
 			</li>
 			<li class="bulletTxt">
-				Lemvig Byløb
+                <?php echo $txtFile['otherPage']['runEvent']; ?>
 			</li>
 		</td>
 	</tr>
 	<tr>
 		<td class="duringTimeCv">
-			Svømning
+            <?php echo $txtFile['otherPage']['swimHeader']; ?>
 			<li class="bulletTxt">
-				Lemvig Svømmeklub
+                <?php echo $txtFile['otherPage']['swimClub']; ?>
 			</li>
 			<li class="bulletTxt">
-				Instruktør i et år
+                <?php echo $txtFile['otherPage']['swimWork']; ?>
 			</li>
 		</td>
 		<td class="duringTimeCv">
-			Spejder
+            <?php echo $txtFile['otherPage']['scoutHeader']; ?>
 			<li class="bulletTxt">
-				DDS
+                <?php echo $txtFile['otherPage']['scoutType']; ?>
 			</li>
 			<li class="bulletTxt">
-				Thøger Larsen Gruppen Lemvig
+                <?php echo $txtFile['otherPage']['scoutClub']; ?>
 			</li>
 		</td>
 	</tr>
+    <tr>
 		<td class="duringTimeCv">
-			Slå græs
+            <?php echo $txtFile['otherPage']['scoutClub']; ?>
 			<li class="bulletTxt">
-				På egen grund, hos naboen
+                <?php echo $txtFile['otherPage']['scoutWork']; ?>
 			</li>
 			<li class="bulletTxt">
-				For grundejerforeningen
+                <?php echo $txtFile['otherPage']['scoutWorkTwo']; ?>
 			</li>
 		</td>
 		<td class="duringTimeCv">
-			Basketball
+            <?php echo $txtFile['otherPage']['basketHeader']; ?>
 			<li class="bulletTxt">
-				Lemvig Basket
+                <?php echo $txtFile['otherPage']['basketClub']; ?>
 			</li>
 			<li class="bulletTxt">
-				Limfjords Cup
+                <?php echo $txtFile['otherPage']['basketEvent']; ?>
 			</li>
 		</td>
 	</tr>
