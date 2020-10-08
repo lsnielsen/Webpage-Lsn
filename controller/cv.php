@@ -38,6 +38,18 @@
         include "../projects/cv/sparetime/flexyder.php";
     }  elseif ($cvButton == "workType") {
         include "../projects/cv/sparetime/itDeveloper.php";
+    }  elseif ($cvButton == "firebrand") {
+        include "../projects/cv/qualifications/firebrand.php";
+    }  elseif ($cvButton == "highschool") {
+        include "../projects/cv/qualifications/highSchool.php";
+    }  elseif ($cvButton == "climbing") {
+        include "../projects/cv/qualifications/climbing.php";
+    }  elseif ($cvButton == "mili") {
+        include "../projects/cv/qualifications/military.php";
+    }  elseif ($cvButton == "inovation") {
+        include "../projects/cv/qualifications/entrepreneur.php";
+    }  elseif ($cvButton == "venoe") {
+        include "../projects/cv/qualifications/veno.php";
     }
 	
 ?>
