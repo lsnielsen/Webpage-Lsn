@@ -24,7 +24,7 @@
                     <?php echo $txtFile['general']['barSax']; ?>
                 </li>
                 <li class="bulletTxt">
-                    <?php echo $txtFile['general']['saxQuartet']; ?>
+                    <?php echo $txtFile['sparetimePage']['saxQuartet']; ?>
                 </li>
             </button>
         </form>
