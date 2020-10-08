@@ -204,7 +204,6 @@
 		font-size: 15px;
 		color: black;
 		text-decoration: none; 
-		background-color: none;
 	}
 	.duringTimeLink {
 		color: black;
