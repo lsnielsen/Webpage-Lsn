@@ -163,12 +163,12 @@
 	</tr>
     <tr>
 		<td class="duringTimeCv">
-            <?php echo $txtFile['otherPage']['scoutClub']; ?>
+            <?php echo $txtFile['otherPage']['grassHeader']; ?>
 			<li class="bulletTxt">
-                <?php echo $txtFile['otherPage']['scoutWork']; ?>
+                <?php echo $txtFile['otherPage']['grassWork']; ?>
 			</li>
 			<li class="bulletTxt">
-                <?php echo $txtFile['otherPage']['scoutWorkTwo']; ?>
+                <?php echo $txtFile['otherPage']['grassWorkTwo']; ?>
 			</li>
 		</td>
 		<td class="duringTimeCv">
