@@ -13,8 +13,8 @@
             <?php echo $txtFile['frontHeader']; ?>
 		</h1>
 		
-			<img src="/Webpage-Lsn/projects/frontpage/image/dk.png" id="danish">
-			<img src="/Webpage-Lsn/projects/frontpage/image/en.png" id="english">
+			<img class="langImage" src="/Webpage-Lsn/projects/frontpage/image/dk.png" id="danish">
+			<img class="langImage" src="/Webpage-Lsn/projects/frontpage/image/en.png" id="english">
 		
 		
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
@@ -74,6 +74,7 @@
 		if (getCookie("lang") == null || getCookie("langPlace") == null) {
 		    document.cookie = "lang = danish";
 		    document.cookie = "langPlace = frontpage";
+            location.reload();
         }
 	});
 	$("#dieselButton").click(function() {
@@ -97,9 +98,15 @@
 
 	$("#danish").click(function() {
 		document.cookie = "lang = danish";
+        location.reload();
+        $("#danish").css("width", "20px");
+        $("#danish").css("height", "20px");
 	});
 	$("#english").click(function() {
 		document.cookie = "lang = english";
+        location.reload();
+        $("#english").css("width", "20px");
+        $("#english").css("height", "20px");
 	});
 
 
