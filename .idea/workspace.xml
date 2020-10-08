@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="" />
+    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/projects/cv/sparetime/itDeveloper.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/cv/sparetime/itDeveloper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text/danish/cv.php" beforeDir="false" afterPath="$PROJECT_DIR$/text/danish/cv.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,12 @@
       <workItem from="1601816213984" duration="3273000" />
       <workItem from="1601874858819" duration="16040000" />
       <workItem from="1601910227225" duration="684000" />
-      <workItem from="1601981483580" duration="298000" />
+      <workItem from="1601981483580" duration="12505000" />
+      <workItem from="1602010853768" duration="257000" />
+      <workItem from="1602053111603" duration="4104000" />
+      <workItem from="1602060673004" duration="12456000" />
+      <workItem from="1602090545386" duration="2247000" />
+      <workItem from="1602143327322" duration="14539000" />
     </task>
     <servers />
   </component>
@@ -103,14 +111,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1044" y="503" key="#com.intellij.fileTypes.FileTypeChooser/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601565855275" />
-    <state x="1117" y="624" key="NewPhpFileDialog" timestamp="1601583334282">
+    <state x="1117" y="624" key="NewPhpFileDialog" timestamp="1601982647437">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1117" y="624" key="NewPhpFileDialog/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601583334282" />
+    <state x="1117" y="624" key="NewPhpFileDialog/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601982647437" />
     <state x="782" y="346" key="SettingsEditor" timestamp="1601490468902">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="782" y="346" key="SettingsEditor/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601490468902" />
+    <state x="1098" y="615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602000548062">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1098" y="615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1602000548062" />
     <state x="987" y="300" width="587" height="801" key="find.popup" timestamp="1601566331131">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
