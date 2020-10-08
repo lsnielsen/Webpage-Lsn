@@ -14,7 +14,7 @@
         include "../projects/cv/language/languageCv.php";
     } elseif ($cvButton == "otherCv") {
         include "../projects/cv/other/otherCv.php";
-    }  elseif ($cvButton == "masterProof") {
+    }  elseif ($cvButton == "masterProof" || $cvButton == "masterPage") {
         include "../projects/cv/education/master.php";
     }  elseif ($cvButton == "gradProof") {
         include "../projects/cv/education/bachelor.php";
@@ -36,6 +36,8 @@
         include "../projects/cv/other/math.php";
     }  elseif ($cvButton == "flexyder") {
         include "../projects/cv/sparetime/flexyder.php";
+    }  elseif ($cvButton == "workType") {
+        include "../projects/cv/sparetime/itDeveloper.php";
     }
 	
 ?>

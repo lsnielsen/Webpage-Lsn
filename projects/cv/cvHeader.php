@@ -27,12 +27,14 @@
 
 			</div>
 			<div class="secondColumn columnTxt">
-				Uddannelse:
-				<a href="/Webpage-Lsn/projects/cv/education/master.php?cv=true">
-					<span class="attributeText" style="margin-left:45px;">
-						Kandidat i datalogi
-					</span>
-				</a>
+                <div class="pointHeader">
+    				Uddannelse:
+                </div>
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                    <button class="headerLink attributeText" name="cvButton" value="masterPage" type="submit">
+                        Kandidat i datalogi
+                    </button>
+                </form>
                 <div class="pointHeader">
                     Arbejdsrelation:
                 </div>
@@ -41,14 +43,14 @@
                         Flexyder
                     </button>
                 </form>
-				<div style="margin-left:50px; display:inline-block;">
+				<div class="pointHeader" style="margin-left:-170px; display:inline-block;">
 					Job:
 				</div>
-				<a href="/Webpage-Lsn/projects/cv/sparetime/itDeveloper.php?cv=true">
-					<span class="attributeText" style="margin-left:140px;">
-						It-udvikler
-					</span>
-				</a>
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                    <button class="headerLink attributeText" name="cvButton" value="workType" type="submit">
+                        It-udvikler
+                    </button>
+                </form>
 			</div>
 			<div class="thirdColumn columnTxt">
 				<center>
@@ -67,6 +69,7 @@
         background-color: inherit;
         margin-left: 150px;
         height: 5px;
+        cursor: pointer;
     }
     .pointHeader {
         position: absolute;
