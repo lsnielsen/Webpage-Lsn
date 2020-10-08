@@ -203,7 +203,7 @@
 		text-indent: 20px;
 		font-size: 15px;
 		color: black;
-		text-decoration: none; 
+		text-decoration: none;
 	}
 	.duringTimeLink {
 		color: black;
