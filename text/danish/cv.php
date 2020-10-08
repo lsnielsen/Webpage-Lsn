@@ -162,6 +162,7 @@
                 'hisHeader' => 'Historie',
                 'hisDates' => 'Årstal',
                 'hisEvent' => 'Begivenheder gennem tiden',
+                'sptHeader' => 'Cv - fritid',
 
             ]
         ];
