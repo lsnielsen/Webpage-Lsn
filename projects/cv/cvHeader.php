@@ -27,20 +27,22 @@
 
 			</div>
 			<div class="secondColumn columnTxt">
-				Uddannelse: 
+				Uddannelse:
 				<a href="/Webpage-Lsn/projects/cv/education/master.php?cv=true">
 					<span class="attributeText" style="margin-left:45px;">
-						Kandidat i datalogi 
-					</span>		
+						Kandidat i datalogi
+					</span>
 				</a>
-				Arbejdsrelation: 
-				<a href="/Webpage-Lsn/projects/cv/sparetime/flexyder.php">
-					<span class="attributeText" style="margin-left:10px;">
-						Flexyder <br>
-					</span>	
-				</a>
+                <div class="pointHeader">
+                    Arbejdsrelation:
+                </div>
+                <form action="/Webpage-Lsn/controller/cv.php" method="post">
+                    <button class="headerLink attributeText" name="cvButton" value="flexyder" type="submit">
+                        Flexyder
+                    </button>
+                </form>
 				<div style="margin-left:50px; display:inline-block;">
-					Job: 
+					Job:
 				</div>
 				<a href="/Webpage-Lsn/projects/cv/sparetime/itDeveloper.php?cv=true">
 					<span class="attributeText" style="margin-left:140px;">
@@ -58,4 +60,34 @@
 		</div><br>
 	</div>
 </div>
+
+<style>
+    .headerLink {
+        border: none;
+        background-color: inherit;
+        margin-left: 150px;
+        height: 5px;
+    }
+    .pointHeader {
+        position: absolute;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

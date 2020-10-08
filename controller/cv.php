@@ -34,6 +34,8 @@
         include "../projects/cv/other/statement.php";
     }  elseif ($cvButton == "math") {
         include "../projects/cv/other/math.php";
+    }  elseif ($cvButton == "flexyder") {
+        include "../projects/cv/sparetime/flexyder.php";
     }
 	
 ?>

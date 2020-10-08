@@ -182,6 +182,14 @@
                 'hisDates' => 'Årstal',
                 'hisEvent' => 'Begivenheder gennem tiden',
                 'sptHeader' => 'Cv - fritid',
+                'flexHeader' => 'Flexyder',
+                'flexTxt' => '			Jeg er desværre blevet flexyder, fordi jeg slog hovedet som otte-årig i en trafik ulykke
+                                        Har tilføjet et billede, hvor man kan se det ar jeg fik efter den ulykke: 
+                                        Det har desværre haft den konsekvens, at jeg har sværere ved at koncentere mig. 
+                                        Hvis jeg møder en opgave, jeg ikke har set før, skal jeg have god tid, til at komme ind i den og forstå den.
+                                        Men får jeg den lange tid, har jeg til gengæld muligheden for at kunne blive rigtig god indenfor 
+                                        lige netop det jeg arbejder med. 
+                                        Billedet er taget hvor jeg bliver klippet i militæret, hvorfor jeg smiler.',
 
             ]
         ];
