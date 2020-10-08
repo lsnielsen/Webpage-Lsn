@@ -5,8 +5,12 @@
                 <div class="tableHeader">
                     <?php echo $txtFile['general']['weightLift']; ?>
                 </div>
-                <li class="bulletTxt">BDM 2. februar 2019</li>
-                <li class="bulletTxt">BDM-Vest 19. august 2019, bronzemedalje</li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['sparetimePage']['weightEvent']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['sparetimePage']['weightEvent']; ?>
+                </li>
             </button>
         </form>
 	</div>
@@ -14,10 +18,14 @@
         <form action="/Webpage-Lsn/controller/cv.php" method="post">
             <button class="sparetimeCell" name="cvButton" type="submit" value="music">
                 <div class="tableHeader">
-                    Saxofon
+                    <?php echo $txtFile['general']['saxHeader']; ?>
                 </div>
-                <li class="bulletTxt">Baryton saxofon</li>
-                <li class="bulletTxt">Saxofon kvartet</li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['barSax']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['saxQuartet']; ?>
+                </li>
             </button>
         </form>
 	</div>
@@ -25,34 +33,52 @@
         <form action="/Webpage-Lsn/controller/cv.php" method="post">
             <button class="sparetimeCell" name="cvButton" type="submit" value="it">
                 <div class="tableHeader">
-                    Programmering
+                    <?php echo $txtFile['general']['itHeader']; ?>
                 </div>
-                <li class="bulletTxt">Web programmering</li>
-                <li class="bulletTxt">Php, jquery, javascript, css, html</li>
-                <li class="bulletTxt">Github, Git desktop</li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['itWeb']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['itLang']; ?>
+                </li>
+                <li class="bulletTxt">
+                    <?php echo $txtFile['general']['itGit']; ?>
+                </li>
             </button>
         </form>
 	</div>
 	<div class="tableCell sparetime">
 			<div class="tableHeader">
-				Computer spil
+                <?php echo $txtFile['general']['comHeader']; ?>
 			</div>
-			<li class="bulletTxt">Blizzard</li>
-			<li class="bulletTxt">Overwatch, Heroes of the Storm</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['comBliz']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['comGames']; ?>
+            </li>
 	</div>
 	<div class="tableCell sparetime">
 			<div class="tableHeader">
-				Politik
+                <?php echo $txtFile['sparetimePage']['polHeader']; ?>
 			</div>
-			<li class="bulletTxt">Følger den politiske situation</li>
-			<li class="bulletTxt">Diskuter gerne</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['sparetimePage']['polFollow']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['sparetimePage']['polDiscuss']; ?>
+            </li>
 	</div>
 	<div class="tableCell sparetime">
 			<div class="tableHeader">
-				Historie
+                <?php echo $txtFile['sparetimePage']['hisHeader']; ?>
 			</div>
-			<li class="bulletTxt">Årstal</li>
-			<li class="bulletTxt">Begivenheder gennem tiden</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['sparetimePage']['hisDates']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['sparetimePage']['hisEvent']; ?>
+            </li>
 	</div>
 </center>
 

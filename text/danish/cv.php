@@ -69,7 +69,7 @@
                 'courseraLogic' => 'How to reason and argue',
                 'itHeader' => 'Programmering',
                 'itWeb' => 'Web programmering',
-                'itLang' => 'PHP, jquery, javascript, css',
+                'itLang' => 'PHP, jquery, javascript, css, html',
                 'itGit' => 'Github, Git Desktop',
                 'afterSchoolHeader' => 'Venø efterskole',
                 'afterSchoolLine' => 'Natur og friluftsliv',
@@ -151,6 +151,18 @@
                 'basketHeader' => 'Basketball',
                 'basketClub' => 'Lemvig Basket',
                 'basketEvent' => 'Limfjordscup',
+            ],
+            'sparetimePage' => [
+                'weightEvent' => 'BDM 2. februar 2019',
+                'weightEventTwo' => 'BDM-Vest 19. august 2019, bronzemedalje',
+                'saxQuartet' => 'Saxofon kvartet',
+                'polHeader' => 'Politik',
+                'polFollow' => 'Følger den politiske situation',
+                'polDiscuss' => 'Diskuter gerne',
+                'hisHeader' => 'Historie',
+                'hisDates' => 'Årstal',
+                'hisEvent' => 'Begivenheder gennem tiden',
+
             ]
         ];
 
