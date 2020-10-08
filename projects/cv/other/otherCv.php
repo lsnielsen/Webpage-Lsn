@@ -37,7 +37,7 @@
 	
 	<form action="/Webpage-Lsn/controller/cv.php" method="post">
 		<button type="submit" name="cvButton" id="backToStartButton" value="cvPage">
-            <?php $txtFile['general']['backCv']; ?>
+            <?php echo $txtFile['general']['backCv']; ?>
          </button>
 	</form>
 </html>
