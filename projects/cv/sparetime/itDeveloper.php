@@ -1,61 +1,69 @@
 
 <!DOCTYPE html>
+    <?php $txtFile = include("../text/global.php"); ?>
 		<html id="flexyderPage">
 			<head>
 				<title>
-					It
+                    <?php echo $txtFile['itHeader']; ?>
 				</title>
 				<link rel="stylesheet" href="/Webpage-Lsn/projects/cv/css/stuff.css" type="text/css">
 			</head>
 			<body>
 			<div class="about-section">
 				<h1 class="header">
-					It-udvikling og programmering
+                    <?php echo $txtFile['itWork']; ?>
 				</h1>
 			</div>
 			<div class="container" style="margin-left: 200px; margin-top: 10px;">
 				<img src="/Webpage-Lsn/projects/cv/img/developer.jpg" width="500" height="333">
 				<div class="explanation" style="position: absolute; top: 120px; left: 730px; right: 600px;">
-					Her er lidt om hvad jeg har lavet og stadig arbejder med som it-udvikler
-					Jeg har arbejdet mest med web udvikling. Det inkluderer lidt af f&#248;lgende:
+                    <?php echo $txtFile['itTxt']; ?>
 					<ul>
-						<li> Php </li>
-						<li> Python </li>
-						<li> Html </li>
-						<li> Css </li>
-						<li> Jquery/javascript </li>
+						<li>
+                            <?php echo $txtFile['php']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['py']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['html']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['css']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['js']; ?>
+                        </li>
 					</ul>
-					Har brugt f&#248;lgende v&#230;rkt&#248;jer gennem tiden
+					<?php echo $txtFile['itTools']; ?>
 					<ul>
-						<li> Php Storm</li>
-						<li> Notepad++ </li>
-						<li> Django </li>
-						<li> Git </li>
-						<li> Git Desktop </li>
+                        <li>
+                            <?php echo $txtFile['phpS']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['np++']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['dj']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['git']; ?>
+                        </li>
+                        <li>
+                            <?php echo $txtFile['gitD']; ?>
+                        </li>
 					</ul>
 					<form action="/Webpage-Lsn/controller/cv.php" method="post" id="workBackButton">
-
+                        <button type="submit" name="cvButton" value="cvPage" id="backButton">
+                            <?php echo $txtFile['general']['backCv']; ?>
+                        </button>
 					</form>
 				</div>
 			</div>
 		  </body>
 		</html>
-		
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
-    $(document).ready(function() {
-        const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const cv = urlParams.get("cv")
-		
-		if (cv=="true") {
-			$("#workBackButton").html("<button type=\"submit\" name=\"cvButton\" value=\"cvPage\" id=\"backButton\"> Tilbage til cv </button>"); 
-		} else if (cv=="false") {
-			$("#workBackButton").html("<button type=\"submit\" name=\"cvButton\" value=\"sparetimeCv\" id=\"backButton\"> Tilbage </button>"); 
-		}
-	}); 
- 
-</script>
+
+
 		
 		
 		

@@ -210,6 +210,21 @@
             'liftTxt' => 'Jeg begyndte at dyrke vægtløftning da jeg var færdig med at studere
                         I den korte tid jeg har dyrket vægtløftning, har jeg været med til to stævner.
                         Jeg fik en bronzemedalje ved det stævne, som videoen er fra.',
+            'itHeader' => 'It',
+            'itWork' => 'It-udvikling og programmering',
+            'itTxt' => 'Her er lidt om hvad jeg har lavet og stadig arbejder med som it-udvikler
+					Jeg har arbejdet mest med web udvikling. Det inkluderer lidt af følgende:',
+            'php' => 'Php',
+            'py' => 'Python',
+            'html' => 'Html',
+            'css' => 'Css',
+            'js' => 'Jquery / javascript',
+            'itTools' => 'Har brugt følgende værktøjer gennem tiden',
+            'phpS' => 'Php Storm',
+            'np++' => 'Notepad++',
+            'dj' => 'Django',
+            'git' => 'Git',
+            'gitD' => 'Git Desktop',
         ];
 
 
