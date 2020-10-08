@@ -7,6 +7,9 @@
             'frontpage' => [
                 'tab' => 'Cv',
                 'cv' => 'Curriculum Vitae',
+                'adr' => 'Adresse:',
+                'adrTxt' => 'Bronzealdervej 64A, 8210 Aarhus V',
+                'nameHeader' => 'Navn:',
                 'name' => 'Af Lars Søndertoft Nielsen',
                 'back' => 'Tilbage til startside ',
                 'educationBubble' => 'Her finder du en bedre beskrivelse af min uddannelse. Hvad jeg har fokuseret på osv',
@@ -19,6 +22,16 @@
                 'langHeader' => 'Sprog',
                 'otherBubble' => 'Klik her, for at se en mere detaljeret beskrivelse af hvad jeg har lavet gennem tiden',
                 'otherHeader' => 'Gennem tiden',
+                'contactHeader' => 'Kontakt:',
+                'phoneNr' => '23309696:',
+                'webMail' => 'lars.sondertoft@gmail.com',
+                'workRelation' => 'Arbejdsrelation',
+                'theJob' => 'Job:',
+                'mailLink' => 'E-mail',
+                'pdfCv' => 'CV - pdf',
+                'theWork' => 'It-udvikler',
+                'linkedIn' => 'LinkedIn',
+                'flexWork' => 'Flexyder'
             ],
             'general' => [
                 'masterProof' => 'Kandidat bevis:',
