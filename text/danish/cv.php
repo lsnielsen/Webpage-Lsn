@@ -158,7 +158,8 @@
                                         Man lærer enkle, men vitale regler, man skal følge, når man overvejer ethvert emne 
                                         og kommer omkring almindelige og fristende fejl, som man skal undgå, når man vil argumentere sin sag. 
                                         man lærer hvordan man identificerer, analyserer og evaluerer argumenter fra andre mennesker
-                                        og hvordan man konstruerer egne argumenter.'
+                                        og hvordan man konstruerer egne argumenter.',
+                'stateHeader' => 'Udtalelse af Shahram:',
                 ],
             'sparetimePage' => [
                 'weightEvent' => 'BDM 2. februar 2019',
