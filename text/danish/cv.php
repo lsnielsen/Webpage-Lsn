@@ -204,7 +204,12 @@
                                         lige netop det jeg arbejder med. 
                                         Billedet er taget hvor jeg bliver klippet i militæret, hvorfor jeg smiler.',
 
-            ]
+            ],
+            'errorMess' => 'Your browser does not support the video tag.',
+            'eventHeader' => 'Her er et træk fra et stævne d. 19 august 2019',
+            'liftTxt' => 'Jeg begyndte at dyrke vægtløftning da jeg var færdig med at studere
+                        I den korte tid jeg har dyrket vægtløftning, har jeg været med til to stævner.
+                        Jeg fik en bronzemedalje ved det stævne, som videoen er fra.',
         ];
 
 
