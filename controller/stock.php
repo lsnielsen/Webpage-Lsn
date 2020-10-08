@@ -17,6 +17,8 @@
         include "../projects/stocks/assets/oil/oilDetails.php";
     } elseif ($stockCookie == "silver") {
         include "../projects/stocks/assets/silver/silverDetails.php";
+    } elseif ($stockCookie == "astralis") {
+        include "../projects/stocks/assets/astralis/astralisDetails.php";
     }
 
 
