@@ -21,6 +21,10 @@
 		return include("../text/english/cv.php");
 	} elseif ($langVar == "danish" && $langPlace == "cv") {
 		return include("../text/danish/cv.php");
+	} elseif ($langVar == "english" && $langPlace == "usedCars") {
+		return include("../text/english/usedCars.php");
+	} elseif ($langVar == "danish" && $langPlace == "usedCars") {
+		return include("../text/danish/usedCars.php");
 	}
 	
 	
