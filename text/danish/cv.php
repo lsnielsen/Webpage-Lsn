@@ -92,6 +92,7 @@
                 'comBliz' => 'Blizzard',
                 'comGames' => 'Overwatch, Heroes of the Storm',
                 'inoHeader' => 'Iværksætter kursus',
+                'inoProof' => 'Iværksætter bevis:',
                 'jekaHeader' => 'Lokal fiskefabrik',
                 'jekaFish' => 'Jeka Fisk',
                 'jekaWork' => 'Kontor arbejde og produktion',
@@ -225,6 +226,24 @@
             'dj' => 'Django',
             'git' => 'Git',
             'gitD' => 'Git Desktop',
+            'qual' => [
+                'cvHeader' => 'Cv - kvalifikationer',
+                'qual' => 'Kvalifikationer',
+                'climbProof' => 'Klatre bevis:',
+                'fireCourse' => 'Firebrand kursus',
+                'fireProof' => 'Firebrand bevis:',
+                'navDev' => 'Navision udvikler',
+                'navTxt' => 'Jeg tog dette kursus, da jeg i en meget kort periode var ansat som Navision udvikler',
+                '16' => '16',
+                'micNav' => 'Microsoft Navision',
+                'fireLocation' => 'Skåne i Sverige',
+                'highSchoolProof' => 'Højskole bevis',
+                'link' => 'Link',
+                'hsTxt' => 'til højskolen, hvor jeg var på crossfit linien.',
+                'miliProof' => 'Militær bevis:',
+                'miliNote' => 'Bemærkning:',
+                'miliTxt' => 'Jeg var ikke vagtgående, som der står på papiret. Jeg var tambour og spillede march tromme.',
+            ]
         ];
 
 

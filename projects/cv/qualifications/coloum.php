@@ -1,57 +1,83 @@
 <center>
 	<div class="tableCell qualifications">
-		<a href="/Webpage-Lsn/projects/cv/qualifications/firebrand.html">
+		<a href="/Webpage-Lsn/projects/cv/qualifications/firebrand.php">
 			<div class="tableHeader">
-				Firebrand kursus
+                <?php echo $txtFile['qual']['fireCourse']; ?>
 			</div>
-			<li class="bulletTxt">2016</li>
-			<li class="bulletTxt">Microsoft Navision</li>
-			<li class="bulletTxt">Skåne i Sverige</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['qual']['16']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['qual']['micNav']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['qual']['fireLocation']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell qualifications">
-		<a href="/Webpage-Lsn/projects/cv/qualifications/highSchool.html">
+		<a href="/Webpage-Lsn/projects/cv/qualifications/highSchool.php">
 			<div class="tableHeader">
-				Aalborg Sportshøjskole
+                <?php echo $txtFile['general']['highSchool']; ?>
 			</div>
-			<li class="bulletTxt">2011</li>
-			<li class="bulletTxt">Crossfit</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['2011']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['crossJoin']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell qualifications">	
-		<a href="/Webpage-Lsn/projects/cv/qualifications/climbing.html">
+		<a href="/Webpage-Lsn/projects/cv/qualifications/climbing.php">
 			<div class="tableHeader">
-				Klatrebevis
+                <?php echo $txtFile['qual']['climbProof']; ?>
 			</div>
-			<li class="bulletTxt">2011</li>
-			<li class="bulletTxt">Aalborg Sportshøjskole</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['2011']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['highSchool']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell qualifications">
-		<a href="/Webpage-Lsn/projects/cv/qualifications/military.html">
+		<a href="/Webpage-Lsn/projects/cv/qualifications/military.php">
 			<div class="tableHeader">
-				Den Kongelige Livgarde
+                <?php echo $txtFile['general']['miliHeader']; ?>
 			</div>
-			<li class="bulletTxt">2010-2011</li>
-			<li class="bulletTxt">Tambour - marchtromme</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['10-11']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['miliJob']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell qualifications">
-		<a href="/Webpage-Lsn/projects/cv/qualifications/entrepreneur.html">
+		<a href="/Webpage-Lsn/projects/cv/qualifications/entrepreneur.php">
 			<div class="tableHeader">
-				Iværksætter kursus
+                <?php echo $txtFile['general']['inoHeader']; ?>
 			</div>
-			<li class="bulletTxt">2010</li>
-			<li class="bulletTxt">Lemvig Gymnasium</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['2010']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['gymSchool']; ?>
+            </li>
 		</a>
 	</div>
 	<div class="tableCell qualifications">
 		<a href="/Webpage-Lsn/projects/cv/qualifications/veno.html">
 			<div class="tableHeader">
-				Venø efterskole
+                <?php echo $txtFile['general']['afterSchoolHeader']; ?>
 			</div>
-			<li class="bulletTxt">2006-2007</li>
-			<li class="bulletTxt">Natur og friluftsliv</li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['06-07']; ?>
+            </li>
+			<li class="bulletTxt">
+                <?php echo $txtFile['general']['afterSchoolLine']; ?>
+            </li>
 		</a>
 	</div>
 </center>
