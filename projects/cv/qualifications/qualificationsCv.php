@@ -1,5 +1,6 @@
 
 <html style="background-color:grey;">
+<?php $txtFile = include "../text/global.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<head>
 		<title>
@@ -17,9 +18,9 @@
 		</center>
 
 	<body>
-	
-		<div id="includeCvHeader"> </div>
-		
+
+        <?php include "../projects/cv/cvHeader.php"?>
+
 		<center>
 			<form action="/Webpage-Lsn/controller/cv.php" method="post">
 				<button type="submit" name="cvButton" value="cvPage" class="subheader" style="color: #9999ff;">
@@ -27,8 +28,8 @@
 				</button>
 			</form>
 		</center>
-			
-		<div class="bodyTableInfo colOne" align="middle"> </div>	
+
+        <?php include "../projects/cv/qualifications/coloum.php"?>
 			
 
 				
@@ -42,8 +43,8 @@
 <script type="text/javascript">
 	
 	$(function() {
-		$("#includeCvHeader").load("/Webpage-Lsn/projects/cv/cvHeader.html");
-		$(".colOne").load("/Webpage-Lsn/projects/cv/qualifications/coloum.html");
+		$("#includeCvHeader").load("/Webpage-Lsn/projects/cv/cvHeader.php");
+		$(".colOne").load("/Webpage-Lsn/projects/cv/qualifications/coloum.php");
 	});
 
 
