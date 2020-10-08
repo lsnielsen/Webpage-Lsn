@@ -1,31 +1,27 @@
 <!DOCTYPE html>
+<?php $txtFile = include("../text/global.php"); ?>
 <html id="certificatePage">
   <head>
     <title>
-		Bevis
+        <?php echo $txtFile['general']['docProof']; ?>
 	</title>
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/cv/css/pdfStyle.css" type="text/css">
   </head>
   <body>
     <h1>
-		Kursus bevis:
+        <?php echo $txtFile['otherPage']['courseProof']; ?>
 	</h1>
 	<iframe id="frame" src="/Webpage-Lsn/projects/cv/pdf/argue.pdf"> </iframe>
 	<div id="explanation">
 		<div id="header">
-			Think again: How to reason and argue
+            <?php echo $txtFile['otherPage']['argueName']; ?>
 		</div>
 		<div id="body">
-			Dette kurus handler om, at r&#230;sonnere og argumentere.
-			
-			Man l&#230;rer enkle, men vitale regler, man skal f&#248;lge, n&#229;r man overvejer ethvert emne 
-			og kommer omkring almindelige og fristende fejl, som man skal undg&#229;, n&#229;r man vil argumentere sin sag. 
-			man l&#230;rer hvordan man identificerer, analyserer og evaluerer argumenter fra andre mennesker
-			og hvordan man konstruerer egne argumenter.
+            <?php echo $txtFile['otherPage']['argueTxt']; ?>
 		</div>
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
-			<button type="submit" name="cvButton" value="otherCv" id="button" style="font-size: 20px;"> 
-				Tilbage
+			<button type="submit" name="cvButton" value="otherCv" id="button" style="font-size: 20px;">
+                <?php echo $txtFile['general']['back']; ?>
 			</button>
 		</form>
 	</div>
