@@ -1,33 +1,27 @@
 <!DOCTYPE html>
+<?php $txtFile = include("../text/global.php"); ?>
 <html id="certificatePage">
   <head>
     <title>
-		Bevis
+        <?php echo $txtFile['general']['docProof']; ?>
 	</title>
 	<link rel="stylesheet" href="/Webpage-Lsn/projects/cv/css/pdfStyle.css" type="text/css">
   </head>
   <body>
     <h1>
-		Kursus bevis:
+        <?php echo $txtFile['otherPage']['courseProof']; ?>
 	</h1>
 	<iframe id="frame" src="/Webpage-Lsn/projects/cv/pdf/mathmatical.pdf"> </iframe>
 	<div id="explanation">
 		<div id="header">
-			Introduction to mathematical thinking
+            <?php echo $txtFile['otherPage']['mathHeader']; ?>
 		</div>
-		<div id="body">		
-			Matematisk t&#230;nkning er ikke det samme som at lave matematik - i det mindste ikke, 
-			da matematik typisk pr&#230;senteres i vores skolesystem. 
-			Skolematematik fokuserer typisk p&#229; indl&#230;ringsprocedurer for at l&#248;se meget stereotype problemer. 
-			Professionelle matematikere t&#230;nker p&#229; en bestemt m&#229;de at l&#248;se virkelige problemer, problemer, 
-			der kan opst&#229; fra den daglige verden, eller fra videnskab, eller fra selve matematikken. 
-			N&#248;glen til succes i skolematematik er at l&#230;re at t&#230;nke inden i boksen. 
-			I mods&#230;tning hertil er et vigtigt tr&#230;k ved matematisk t&#230;nkning udenfor boksen - en v&#230;rdifuld evne i dagens verden. 
-			Dette kursus hj&#230;lper med at udvikle den afg&#248;rende tankegang.
+		<div id="body">
+            <?php echo $txtFile['otherPage']['mathDescription']; ?>
 		</div>
 		<form action="/Webpage-Lsn/controller/cv.php" method="post">
-			<button type="submit" name="cvButton" value="otherCv" id="button" style="font-size: 20px;"> 
-				Tilbage
+			<button type="submit" name="cvButton" value="otherCv" id="button" style="font-size: 20px;">
+                <?php echo $txtFile['general']['back']; ?>
 			</button>
 		</form>
 	</div>

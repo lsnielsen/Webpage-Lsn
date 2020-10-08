@@ -28,10 +28,12 @@
         include "../projects/cv/sparetime/music.php";
     }  elseif ($cvButton == "it") {
         include "../projects/cv/sparetime/itDeveloper.php";
-    }  elseif ($cvButton == "math") {
+    }  elseif ($cvButton == "argue") {
         include "../projects/cv/other/argue.php";
     }  elseif ($cvButton == "statement") {
         include "../projects/cv/other/statement.php";
+    }  elseif ($cvButton == "math") {
+        include "../projects/cv/other/math.php";
     }
 	
 ?>

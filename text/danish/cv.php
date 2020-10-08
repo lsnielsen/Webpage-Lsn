@@ -160,6 +160,16 @@
                                         man lærer hvordan man identificerer, analyserer og evaluerer argumenter fra andre mennesker
                                         og hvordan man konstruerer egne argumenter.',
                 'stateHeader' => 'Udtalelse af Shahram:',
+                'courseProof' => 'Kursus bevis:',
+                'mathHeader' => 'Introduction to mathematical thinking',
+                'mathDescription' => 'Matematisk tænkning er ikke det samme som at lave matematik - i det mindste ikke, 
+                                da matematik typisk præsenteres i vores skolesystem. 
+                                Skolematematik fokuserer typisk på indlæringsprocedurer for at løse meget stereotype problemer. 
+                                Professionelle matematikere tænker på en bestemt måde at løse virkelige problemer, problemer, 
+                                der kan opstå fra den daglige verden, eller fra videnskab, eller fra selve matematikken. 
+                                Nøglen til succes i skolematematik er at lære at tænke inden i boksen. 
+                                I modsætning hertil er et vigtigt træk ved matematisk tænkning udenfor boksen - en værdifuld evne i dagens verden. 
+                                Dette kursus hjælper med at udvikle den afgørende tankegang.',
                 ],
             'sparetimePage' => [
                 'weightEvent' => 'BDM 2. februar 2019',
