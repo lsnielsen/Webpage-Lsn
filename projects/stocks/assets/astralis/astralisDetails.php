@@ -29,68 +29,16 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Indtægter</th>
-                    <td id="revenue"></td>
+                    <th scope="row">Pris/aktie 12/08-2019</th>
+                    <td>7.30</td>
                 </tr>
                 <tr>
-                    <th scope="row">Nettoindkomst</th>
-                    <td id="netIncome"></td>
+                    <th scope="row">Dagens pris</th>
+                    <td id="priceToday"></td>
                 </tr>
                 <tr>
-                    <th scope="row">Åbning</th>
-                    <td id="openValue"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Lukning</th>
-                    <td id="closeValue"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Aktie værdi</th>
-                    <td id="stockValue"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Ændring</th>
-                    <td id="stockChange"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Ændring i %</th>
-                    <td id="stockPercentage"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Dagens rækkevidde</th>
-                    <td id="rangeValue"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Ugens rækkevidde</th>
-                    <td id="weekRangeValue"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Markedsværdi</th>
-                    <td id="marketCap"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Udestående</th>
-                    <td id="outstanding"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Indtjening</th>
-                    <td id="earnings"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Indtjening per aktie</th>
-                    <td id="earningsPerShare"></td>
-                </tr>
-                <tr>
-                    <th scope="row">P/E Ratio</th>
-                    <td id="peRatio"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Sidste års salgsvækst</th>
-                    <td id="lastYearGrowth"></td>
-                </tr>
-                <tr>
-                    <th scope="row">PEG Ratio</th>
-                    <td id="pegRatio"></td>
+                    <th scope="row">Forskel siden dag 1</th>
+                    <td id="totalDiff"></td>
                 </tr>
             </tbody>
         </table>
@@ -106,4 +54,3 @@
 </html>
 
 <?php include "data.php"; ?>
-<?php include "staticData.php"; ?>
