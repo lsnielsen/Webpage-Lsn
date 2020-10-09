@@ -77,7 +77,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset">Astralis Group</th>
+                <th scope="row" class="theAsset" onclick="assetsPage('astralis')">Astralis Group</th>
                 <td id="astralisVal"></td>
                 <td id="astralisChange"></td>
                 <td id="astralisPercentage"></td>
