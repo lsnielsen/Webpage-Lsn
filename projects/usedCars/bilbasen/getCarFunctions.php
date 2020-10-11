@@ -35,7 +35,7 @@
 			theStarterPrice = match[1];
 		}
 
-		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+[a-z\/\. ]*)<\/span>/;
+		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/;
 		match = priceRegex.exec(data);
 		if (match !==  null) {
 			thePrice = match[1];
