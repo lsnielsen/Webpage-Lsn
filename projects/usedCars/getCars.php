@@ -1,14 +1,17 @@
 
-<?php	
-	include("bilbasen/array.php");
-	include("bilbasen/getCarFunctions.php");
-	include("bilbasen/extraEquipment.php");
-	include("bilbasen/starter.php");
-	
-	include("gulOgGratis/starter.php");
-	include("gulOgGratis/array.php");
-	include("gulOgGratis/getCarFunctions.php");
-	include("gulOgGratis/extraEquipment.php");
+<?php
+    //include("bilbasen/array.php");
+    include("bilbasen/getCarFunctions.php");
+    include("bilbasen/extraEquipment.php");
+    include("bilbasen/starter.php");
+
+    include("gulOgGratis/starter.php");
+    //include("gulOgGratis/array.php");
+    include("gulOgGratis/getCarFunctions.php");
+    include("gulOgGratis/extraEquipment.php");
+
+    include("dataArray.php");
+
 ?>
 
 <script>
@@ -54,7 +57,7 @@
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
 				if (gulOgGratisCars != 0) {
-					getTheUsedCarGulOgGratis();
+                    getTheUsedCarGulOgGratis();
 				}
 				secondPauseLoop();
 			}
