@@ -156,18 +156,14 @@
 			EnergyToUse = "-";
 		}
 
-		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
-		usageStartII = data.search(/km\/l: [0-9]+,[0-9]*/);
-		if (usageStart != -1) {
-			energyUsage = data.substring(usageStart, usageStart+9);
-			EnergyUsage = energyUsage.replace(",", ".");
-			//console.log("Energi forbrug: " + energyUsage);
-		} else if (usageStartII != -1) {
-			energyUsage = data.substring(usageStart+7, usageStart+16);
-			EnergyUsage = energyUsage.replace(",", ".");
-		} else {
-			EnergyUsage = "-";
-		}
+        usageRegex = /<div data-grid="column" class=[\w\W]+?Km\/l[\w\W]+?>([0-9]{0,2},?[0-9]{0,2})<\/dd><\/dl><\/div>/;
+		usageMatch = usageRegex.exec(data);
+        if (usageMatch !== null) {
+            energyUsage = usageMatch[1].replace(",", ".") + " km/l";
+            //console.log("Energi forbrug: " + energyUsage);
+        } else {
+            energyUsage = "-";
+        }
 
 		euroStart = data.search("<td style=\"color: #888;\">Euronorm</td>");
 		euroEnd = data.search("<td style=\"color: #888;\">Bredde</td>");
