@@ -8,10 +8,10 @@
 	{	
 		kmStart = data.search(/"Km [0-9]+/);
 		if (kmStart != -1) {
-			gogTheKilometers = data.substring(kmStart+4, kmStart+10);
-			//console.log("Km: " + gogTheKilometers + "\n");
+			TheKilometers = data.substring(kmStart+4, kmStart+10);
+			//console.log("Km: " + TheKilometers + "\n");
 		} else {
-			gogTheKilometers = "-";
+			TheKilometers = "-";
 		}
 		
 		sizeStart = data.search(/"Motorstørrelse","value":"/);
@@ -19,9 +19,9 @@
 			sizeStr = data.substring(sizeStart+26, sizeStart+30);
 			sizeStr = sizeStr.replace(",", ".");
 			//console.log("Motor: " + sizeStr + "\n");
-			gogTheEngine = sizeStr.replace("\"", "");
+			TheEngine = sizeStr.replace("\"", "");
 		} else {
-			gogTheEngine = "-";
+			TheEngine = "-";
 		}
 
 		modelStart = data.search(/"Variant","value":"/);
@@ -30,9 +30,9 @@
 			varStr = varStr.replace(",", ".");
 			varStr = varStr.replace(/\"}.{\"/, "");
 			//console.log("Mærke: " + varStr);
-		    gogTheCarModel = varStr;
+		    TheCarModel = varStr;
 		} else {
-		    gogTheCarModel = $(".carModel").children("option:selected").val();
+		    TheCarModel = $(".carModel").children("option:selected").val();
 		}
 	
 		
@@ -43,9 +43,9 @@
 			//console.log("price start, end: " + priceStart + ", " + priceEnd);
 			priceString = priceString.substring(0, priceEnd);
 			//console.log("price: " + priceString + "\n");
-			gogThePrice = priceString;
+			ThePrice = priceString;
 		} else {
-			gogThePrice = "-";
+			ThePrice = "-";
 		}
 		
 		colorStart = data.search(/"Farve","value":"/);
@@ -58,9 +58,9 @@
 			colorString = colorString.replace("\{", "");
 			colorString = colorString.replace("\"", "");
 			colorString = colorString.replace("name", "");
-			gogTheColor = colorString;
+			TheColor = colorString;
 		} else {
-			gogTheColor = "-";
+			TheColor = "-";
 		}
 
 		sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
@@ -77,18 +77,18 @@
 				sightString = sightString.replace(" ", "");
 			}
 			//console.log(sightString);
-			gogLastDateOfSight = sightString;
+			LastDateOfSight = sightString;
 		} else {
-			gogLastDateOfSight = "-";
+			LastDateOfSight = "-";
 		}
 		
 		modelStart = data.search(/Årgang","value":"/);
 		if (modelStart != -1) {
 			modelString = data.substring(modelStart+17, modelStart+21);
 			//console.log("Model: " + modelString);
-			gogYearOfTheModel = modelString;
+			YearOfTheModel = modelString;
 		} else {
-			gogYearOfTheModel = "-";
+			YearOfTheModel = "-";
 		}
 				
 		prodStart = data.search("<div class=\"car-production-date\">");
@@ -107,18 +107,18 @@
 				prodString = prodString.replace(" ", "");
 			}
 			//console.log("production: " + prodString);
-			gogTheProductionDate = prodString;
+			TheProductionDate = prodString;
 		} else {
-			gogTheProductionDate = "-";
+			TheProductionDate = "-";
 		}
 				
 		regStart = data.search(/"registrationDate":"/);
 		if (regStart != -1) {
 			regString = data.substring(regStart+20, regStart+30);
 			//console.log("registration: " + regString);
-			gogTheRegistrationDate = regString;
+			TheRegistrationDate = regString;
 		} else {
-			gogTheRegistrationDate = "-";
+			TheRegistrationDate = "-";
 		}
 	}
 		
@@ -126,172 +126,168 @@
 	{
 		hkStart = data.search(/"HK","value":"/);
 		if (hkStart != -1) {
-			gogHorsePowerAndNm = data.substring(hkStart+14, hkStart+17) + " hk";
+			HorsePowerAndNm = data.substring(hkStart+14, hkStart+17) + " hk";
 		} else {
-			gogHorsePowerAndNm = "-";
+			HorsePowerAndNm = "-";
 		}
 
 
         zeroToHundredRegexp = /class="_1fTZdVMx6avWCXl7TuqKzA">Acceleration<\/dt><dd class="_3c9Ubpq8hEnOr0VfgTBnSN">([0-9]{1,2},[0-9]{1,2})<\/dd><\/dl>/;
         match = zeroToHundredRegexp.exec(data);
         if (match !==  null) {
-            gogFromZeroToHundred = match[1].replace(",", ".");
+            FromZeroToHundred = match[1].replace(",", ".");
         } else {
-            gogFromZeroToHundred = "-";
+            FromZeroToHundred = "-";
         }
 
 		topSpeedStart = data.search(/"Tophastighed","value":"/);
 		if (topSpeedStart != -1) {
-			gogTheTopSpeed = data.substring(topSpeedStart+24, topSpeedStart+27) + " km/t";
-			//console.log("topspeed: " + gogTheTopSpeed);
+			TheTopSpeed = data.substring(topSpeedStart+24, topSpeedStart+27) + " km/t";
+			//console.log("topspeed: " + TheTopSpeed);
 		} else {
-			gogTheTopSpeed = "-";
+			TheTopSpeed = "-";
 		}
 
 		propellantStart = data.search(/"Brændstof","value":"/);
 		if (propellantStart != -1) {
 			energyToUse = data.substring(propellantStart+21, propellantStart + 27);
-			gogEnergyToUse = energyToUse.replace(",", ".");
+			EnergyToUse = energyToUse.replace(",", ".");
 		} else {
-			gogEnergyToUse = "-";
+			EnergyToUse = "-";
 		}
 
-		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
-		usageStartII = data.search(/km\/l: [0-9]+,[0-9]*/);
-		if (usageStart != -1) {
-			energyUsage = data.substring(usageStart, usageStart+9);
-			gogEnergyUsage = energyUsage.replace(",", ".");
-			//console.log("Energi forbrug: " + energyUsage);
-		} else if (usageStartII != -1) {
-			energyUsage = data.substring(usageStart+7, usageStart+16);
-			gogEnergyUsage = energyUsage.replace(",", ".");
-		} else {
-			gogEnergyUsage = "-";
-		}
+        usageRegex = /<div data-grid="column" class=[\w\W]+?Km\/l[\w\W]+?>([0-9]{0,2},?[0-9]{0,2})<\/dd><\/dl><\/div>/;
+		usageMatch = usageRegex.exec(data);
+        if (usageMatch !== null) {
+            energyUsage = usageMatch[1].replace(",", ".") + " km/l";
+            //console.log("Energi forbrug: " + energyUsage);
+        } else {
+            energyUsage = "-";
+        }
 
 		euroStart = data.search("<td style=\"color: #888;\">Euronorm</td>");
 		euroEnd = data.search("<td style=\"color: #888;\">Bredde</td>");
 		if (euroStart != -1 && euroEnd != -1) {
-			gogTheEuronorm = removePrimerGogAttributeSpace(euroStart, euroEnd, data);
+			TheEuronorm = removePrimerAttributeSpace(euroStart, euroEnd, data);
 		} else {
-			gogTheEuronorm = "-";
+			TheEuronorm = "-";
 		}
 
 		widthStart = data.search(/"Bredde","value":"/);
 		if (widthStart != -1) {
-			gogTheWidth = data.substring(widthStart+18, widthStart+21) + " cm";
+			TheWidth = data.substring(widthStart+18, widthStart+21) + " cm";
 		} else {
-			gogTheWidth = "-";
+			TheWidth = "-";
 		}
 
 		lengthStart = data.search(/"Længde","value":"/);
 		if (lengthStart != -1) {
-			gogTheLength = data.substring(lengthStart+18, lengthStart+21) + " cm";
+			TheLength = data.substring(lengthStart+18, lengthStart+21) + " cm";
 		} else {
-			gogTheLength = "-";
+			TheLength = "-";
 		}
 
 		heightStart = data.search("<td style=\"color: #888;\">Højde</td>");
 		heightEnd = data.search("<td style=\"color: #888;\">Lasteevne</td>");
 		if (heightStart != -1 && heightEnd != -1) {
-			gogTheHeight = removePrimerGogAttributeSpace(heightStart, heightEnd, data);
+			TheHeight = removePrimerAttributeSpace(heightStart, heightEnd, data);
 		} else {
-			gogTheHeight = "-";
+			TheHeight = "-";
 		}
 
 		loadStart = data.search(/"Max vægt","value":"/);
 		if (loadStart != -1) {
-			gogLoadAbility = data.substring(loadStart+20, loadStart+24) + " kg";
+			LoadAbility = data.substring(loadStart+20, loadStart+24) + " kg";
 		} else {
-			gogLoadAbility = "-";
+			LoadAbility = "-";
 		}
 
 		tractionStart = data.search(/"Hjultræk","value":"/);
 		if (tractionStart != -1) {
-			gogDrivingWheels = data.substring(tractionStart+20, tractionStart+35);
-			//console.log(gogDrivingWheels);
+			DrivingWheels = data.substring(tractionStart+20, tractionStart+35);
+			//console.log(DrivingWheels);
 		} else {
-			gogDrivingWheels = "-";
+			DrivingWheels = "-";
 		}
 
 		cylStart = data.search(/"Antal cylindre","value":"/);
 		if (cylStart != -1) {
-			gogTheCylinders = data.substring(cylStart+26, cylStart+27);
+			TheCylinders = data.substring(cylStart+26, cylStart+27);
 		} else {
-			gogTheCylinders = "-";
+			TheCylinders = "-";
 		}
 
 		absStart = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
 		absEnd = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
 		if (absStart != -1 && absEnd != -1) {
-			gogAbsBreaks = removePrimerGogAttributeSpace(absStart, absEnd, data);
+			AbsBreaks = removePrimerAttributeSpace(absStart, absEnd, data);
 		} else {
-			gogAbsBreaks = "-";
+			AbsBreaks = "-";
 		}
 
 		maxloadStart = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
 		maxloadEnd = data.search("<td style=\"color: #888;\">Airbags</td>");
 		if (maxloadStart != -1 && maxloadEnd != -1) {
-			gogTheMaxLoad = removePrimerGogAttributeSpace(maxloadStart, maxloadEnd, data);
+			TheMaxLoad = removePrimerAttributeSpace(maxloadStart, maxloadEnd, data);
 		} else {
-			gogTheMaxLoad = "-";
+			TheMaxLoad = "-";
 		}
 
 		airbagStart = data.search(/"Antal airbags","value":"/);
 		if (airbagStart != -1) {
-			gogNumberOfAirbags = data.substring(airbagStart+25, airbagStart+26);
+			NumberOfAirbags = data.substring(airbagStart+25, airbagStart+26);
 		} else {
-			gogNumberOfAirbags = "-";
+			NumberOfAirbags = "-";
 		}
 
 		espStart = data.search("<td style=\"color: #888;\">ESP</td>");
 		espEnd = data.search("<td style=\"color: #888;\">Tank</td>");
 		if (espStart != -1 && espEnd != -1) {
-			gogDoesEsp = removePrimerGogAttributeSpace(espStart, espEnd, data);
+			DoesEsp = removePrimerAttributeSpace(espStart, espEnd, data);
 		} else {
-			gogDoesEsp = "-";
+			DoesEsp = "-";
 		}
 
 		tankStart = data.search(/"Tank","value":"/);
 		if (tankStart != -1) {
-			gogTheGasTank = data.substring(tankStart+16, tankStart+18) + " l";
+			TheGasTank = data.substring(tankStart+16, tankStart+18) + " l";
 		} else {
-			gogTheGasTank = "-";
+			TheGasTank = "-";
 		}
 
 		gearStart = data.search(/"Gear","value":"/);
 		if (gearStart != -1) {
-			gogTheGears = data.substring(gearStart+16, gearStart+17);
+			TheGears = data.substring(gearStart+16, gearStart+17);
 		} else {
-			gogTheGears = "-";
+			TheGears = "-";
 		}
 
 		geartypeStart = data.search(/"Geartype","value":"/);
 		if (geartypeStart != -1) {
-			gogTheGearType = data.substring(geartypeStart+20, geartypeStart+26);
-			if (gogTheGearType.includes('auto') || gogTheGearType.includes('Auto')) {
-				gogTheGearType = "Automatgear";
+			TheGearType = data.substring(geartypeStart+20, geartypeStart+26);
+			if (TheGearType.includes('auto') || TheGearType.includes('Auto')) {
+				TheGearType = "Automatgear";
 			}
 		} else {
-			gogTheGearType = "-";
+			TheGearType = "-";
 		}
 
 		weightStart = data.search(/"Vægt","value":"/);
 		if (weightStart != -1) {
-			gogTheWeight = data.substring(weightStart+16, weightStart+20);
+			TheWeight = data.substring(weightStart+16, weightStart+20);
 		} else {
-			gogTheWeight = "-";
+			TheWeight = "-";
 		}
 
 		doorStart = data.search(/"Døre","value":"/);
 		if (doorStart != -1) {
 			//console.log("doors; start: " + doorStart + ", \n doorTxt: " + doorTxt);
-			gogCountOfDoors = doorTxt = data.substring(doorStart+16, doorStart+17);
+			CountOfDoors = doorTxt = data.substring(doorStart+16, doorStart+17);
 		} else {
-			gogCountOfDoors = "-";
+			CountOfDoors = "-";
 		}
 
-		getGogContactDetails(data);
+        getGogContactDetails(data);
 
 		
 	}
@@ -321,9 +317,9 @@
 		//console.log(" phone; start: " + phoneStart + ", \n phoneTxt: " + phoneTxt + " \n");
 		
 		if(cityStart == -1) {
-			gogContactInfo = "-";
+			ContactInfo = "-";
 		} else {
-			gogContactInfo = postalTxt + " " + cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
+			ContactInfo = postalTxt + " " + cityTxt; // + "\n" + adressTxt + "\n" + phoneTxt;
 			//console.log("Kontakt: " + contactInfo);
 		}
 		

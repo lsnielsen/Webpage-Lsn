@@ -43,12 +43,11 @@
 		$.get(url, 
 			function( data ) {
 				var gogCarArray = new Array();
-
-				gogTheLink = url;
-				getMainGogAttributes(data);
-				setPrimerGogAttributes(data);
-				setExtraGogEquipment(data);
-				setTheFirstGogArray(gogCarArray);
+				theLink = url;
+                getMainGogAttributes(data);
+                setPrimerGogAttributes(data);
+                setExtraGogEquipment(data);
+                setTheFirstArray(gogCarArray);
 			},
 			'html'
 		);

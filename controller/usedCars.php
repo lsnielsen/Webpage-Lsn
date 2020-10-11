@@ -52,12 +52,12 @@
 		
 	function spliceArray($array)
 	{
-		$autoArray;
-		$manuelArray;
+        $autoArray = array();
+		$manuelArray = array();
 		for ($i=0; $i<sizeof($array); $i++) {
-			if(stripos($array[$i][9], "auto") !== false) {
+			if(in_array("Automatisk", $array[$i]) !== false) {
 					$autoArray[] = $array[$i];
-			}	else if(stripos($array[$i][9], "manuel") !== false) {
+			}	else if(in_array("Manuel", $array[$i]) !== false) {
 					$manuelArray[] = $array[$i];
 			}
 		}

@@ -8,6 +8,7 @@
 							"Motor", 
 							"Pris", 
 							"Ny pris", 
+							"Pris forskel",
 							"Kørte kilometer",
 							"Hk/Nm", 
 							"Registrerings dato", 

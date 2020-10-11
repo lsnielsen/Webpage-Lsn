@@ -35,7 +35,7 @@
 			theStarterPrice = match[1];
 		}
 
-		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+[a-z\/\. ]*)<\/span>/;
+		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/;
 		match = priceRegex.exec(data);
 		if (match !==  null) {
 			thePrice = match[1];
@@ -206,7 +206,7 @@
 		}
 
 		heightRegexp = /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/;
-                heightMatch = heightRegexp.exec(data);
+        heightMatch = heightRegexp.exec(data);
 		if (heightMatch !== null) {
                     theHeight = heightMatch[1];
 		} else {
