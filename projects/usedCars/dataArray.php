@@ -114,7 +114,7 @@
         singleCarArray.push(theEngine);
         singleCarArray.push(thePrice);
         singleCarArray.push(theStarterPrice);
-        singleCarArray.push(theStarterPrice - thePrice);
+        singleCarArray.push((theStarterPrice - thePrice).toFixed(3));
         singleCarArray.push(theKilometers);
         singleCarArray.push(horsePowerAndNm);
         singleCarArray.push(theRegistrationDate);
