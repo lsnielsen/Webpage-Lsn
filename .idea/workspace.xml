@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/getCars.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/getCars.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/extraEquipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/extraEquipment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/getCarFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/getCarFunctions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/starter.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/starter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/usedCars.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usedCars.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/usedCars/dataArray.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/dataArray.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/usedCars/headerArray.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/headerArray.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
