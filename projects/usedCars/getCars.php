@@ -1,12 +1,10 @@
 
 <?php
-    //include("bilbasen/array.php");
     include("bilbasen/getCarFunctions.php");
     include("bilbasen/extraEquipment.php");
     include("bilbasen/starter.php");
 
     include("gulOgGratis/starter.php");
-    //include("gulOgGratis/array.php");
     include("gulOgGratis/getCarFunctions.php");
     include("gulOgGratis/extraEquipment.php");
 
