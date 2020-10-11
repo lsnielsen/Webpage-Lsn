@@ -206,7 +206,7 @@
 		}
 
 		heightRegexp = /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/;
-                heightMatch = heightRegexp.exec(data);
+        heightMatch = heightRegexp.exec(data);
 		if (heightMatch !== null) {
                     theHeight = heightMatch[1];
 		} else {

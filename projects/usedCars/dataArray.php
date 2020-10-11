@@ -105,16 +105,27 @@
     var contactInfo;
     var theKilometers;
     var theStarterPrice;
+    var priceDiff;
+
+    function setDiffPrice()
+    {
+        if (thePrice !== "-" && theStarterPrice !== "-") {
+            priceDiff = (theStarterPrice - thePrice).toFixed(3);
+        } else {
+            priceDiff = "-";
+        }
+    }
 
     function setTheFirstArray(singleCarArray)
     {
+        setDiffPrice();
         singleCarArray.push(theLink);
         singleCarArray.push(contactInfo);
         singleCarArray.push(theCarModel);
         singleCarArray.push(theEngine);
         singleCarArray.push(thePrice);
         singleCarArray.push(theStarterPrice);
-        singleCarArray.push((theStarterPrice - thePrice).toFixed(3));
+        singleCarArray.push(priceDiff);
         singleCarArray.push(theKilometers);
         singleCarArray.push(horsePowerAndNm);
         singleCarArray.push(theRegistrationDate);
