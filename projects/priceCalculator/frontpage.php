@@ -28,7 +28,7 @@
         </div>
 
 
-        <form class="form-inline" action="/action_page.php">
+        <form class="form-inline" action="../controller/priceCalculator.php" method="post">
 
             <div class="makeSpace"> </div>
 
@@ -37,9 +37,9 @@
                     Mærke
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Audi A3</a>
+                    <a class="dropdown-item" href="#">Volvo V60</a>
+                    <a class="dropdown-item" href="#">Saab 9-5</a>
                 </div>
             </div>
 
@@ -50,9 +50,27 @@
                     Årgang
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">2020</a>
+                    <a class="dropdown-item" href="#">2019</a>
+                    <a class="dropdown-item" href="#">2018</a>
+                    <a class="dropdown-item" href="#">2017</a>
+                    <a class="dropdown-item" href="#">2016</a>
+                    <a class="dropdown-item" href="#">2015</a>
+                    <a class="dropdown-item" href="#">2014</a>
+                    <a class="dropdown-item" href="#">2013</a>
+                    <a class="dropdown-item" href="#">2012</a>
+                    <a class="dropdown-item" href="#">2011</a>
+                    <a class="dropdown-item" href="#">2010</a>
+                    <a class="dropdown-item" href="#">2009</a>
+                    <a class="dropdown-item" href="#">2008</a>
+                    <a class="dropdown-item" href="#">2007</a>
+                    <a class="dropdown-item" href="#">2006</a>
+                    <a class="dropdown-item" href="#">2005</a>
+                    <a class="dropdown-item" href="#">2004</a>
+                    <a class="dropdown-item" href="#">2003</a>
+                    <a class="dropdown-item" href="#">2002</a>
+                    <a class="dropdown-item" href="#">2001</a>
+                    <a class="dropdown-item" href="#">2000</a>
                 </div>
             </div>
 
@@ -85,9 +103,10 @@
                     Antal gear
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">5</a>
+                    <a class="dropdown-item" href="#">6</a>
+                    <a class="dropdown-item" href="#">7</a>
+                    <a class="dropdown-item" href="#">8</a>
                 </div>
             </div>
 
@@ -104,7 +123,7 @@
 
             <div class="makeSpace"> </div>
 
-            <button type="submit" class="btn btn-lg btn-success">
+            <button type="submit" class="btn btn-lg btn-success" name="priceCalculator" value="priceCalculatorPage">
                 Beregn
             </button>
 
