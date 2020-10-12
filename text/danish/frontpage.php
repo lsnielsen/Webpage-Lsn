@@ -17,6 +17,7 @@ return
         'cvTxt' => 'Mit CV',
         'searchPlaceholder' => 'Indtast søgeformular',
         'searchButton' => 'Klik for at søge vha google',
+        'priceCalc' => 'Brugtbils pris beregner',
     ];
 
 

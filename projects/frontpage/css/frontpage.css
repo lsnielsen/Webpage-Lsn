@@ -72,6 +72,9 @@
 	#stockButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #d61340 100%);
 	}
+	#priceButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #d67813 100%);
+	}
 	#searchArea {
 		margin-top: 20px;
 		width: 400px;
