@@ -28,24 +28,78 @@
         </div>
 
 
+        <form class="form-inline" action="/action_page.php">
+
+            <div class="makeSpace"> </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mærke
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+
+            <div class="makeSpace"> </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Årgang
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+
+            <div class="makeSpace"> </div>
+
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">
+                        Antal kilometer:
+                    </span>
+                </div>
+                <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
+            </div>
+
+            <div class="makeSpace"> </div>
+
+            <button type="submit" class="btn btn-lg btn-success">
+                Beregn
+            </button>
+
+        </form>
 
 
 
-    <form action="../controller/frontpage.php">
-        <button type="submit" class="btn btn-info btn-lg" style="margin-left: 20px;">
-            Tilbage til forsiden
-        </button>
-    </form>
 
 
-
-
+        <form action="../controller/frontpage.php">
+            <button type="submit" class="btn btn-info btn-lg backButton">
+                Tilbage til forsiden
+            </button>
+        </form>
 
 
     </body>
 </html>
 
+<style>
+    .makeSpace {
+        width: 20px;
+    }
+    .backButton {
+        margin-left: 20px;
+        margin-top: 250px;
+    }
 
+
+</style>
 
 
 
