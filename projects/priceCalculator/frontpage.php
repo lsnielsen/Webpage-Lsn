@@ -13,16 +13,29 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <title>Hello, world!</title>
+        <title>Pris beregner</title>
     </head>
-    <body>
-        <h1>Hello, world!</h1>
+    <body class="p-3 mb-2 bg-warning text-dark">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">
+                    Her kan du beregne prisen på din brugte bil
+                </h1>
+                <p class="lead">
+                    Indtast værdierne for din bil nedenfor, og klik på beregn.
+                </p>
+            </div>
+        </div>
 
 
-    
 
 
 
+    <form action="../controller/frontpage.php">
+        <button type="submit" class="btn btn-info btn-lg" style="margin-left: 20px;">
+            Tilbage til forsiden
+        </button>
+    </form>
 
 
 
