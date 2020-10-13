@@ -2,16 +2,12 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <title>Pris beregner</title>
     </head>
@@ -32,94 +28,27 @@
 
             <div class="makeSpace"> </div>
 
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mærke
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Audi A3</a>
-                    <a class="dropdown-item" href="#">Volvo V60</a>
-                    <a class="dropdown-item" href="#">Saab 9-5</a>
-                </div>
-            </div>
+            <?php include "input/model.php"; ?>
 
             <div class="makeSpace"> </div>
 
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Årgang
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">2020</a>
-                    <a class="dropdown-item" href="#">2019</a>
-                    <a class="dropdown-item" href="#">2018</a>
-                    <a class="dropdown-item" href="#">2017</a>
-                    <a class="dropdown-item" href="#">2016</a>
-                    <a class="dropdown-item" href="#">2015</a>
-                    <a class="dropdown-item" href="#">2014</a>
-                    <a class="dropdown-item" href="#">2013</a>
-                    <a class="dropdown-item" href="#">2012</a>
-                    <a class="dropdown-item" href="#">2011</a>
-                    <a class="dropdown-item" href="#">2010</a>
-                    <a class="dropdown-item" href="#">2009</a>
-                    <a class="dropdown-item" href="#">2008</a>
-                    <a class="dropdown-item" href="#">2007</a>
-                    <a class="dropdown-item" href="#">2006</a>
-                    <a class="dropdown-item" href="#">2005</a>
-                    <a class="dropdown-item" href="#">2004</a>
-                    <a class="dropdown-item" href="#">2003</a>
-                    <a class="dropdown-item" href="#">2002</a>
-                    <a class="dropdown-item" href="#">2001</a>
-                    <a class="dropdown-item" href="#">2000</a>
-                </div>
-            </div>
+            <?php include "input/year.php"; ?>
 
             <div class="makeSpace"> </div>
 
-            <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">
-                        Antal kilometer:
-                    </span>
-                </div>
-                <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
-            </div>
+            <?php include "input/kilometers.php"; ?>
 
             <div class="makeSpace"> </div>
 
-            <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">
-                        Motor:
-                    </span>
-                </div>
-                <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
-            </div>
+            <?php include "input/engine.php"; ?>
 
             <div class="makeSpace"> </div>
 
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Antal gear
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">5</a>
-                    <a class="dropdown-item" href="#">6</a>
-                    <a class="dropdown-item" href="#">7</a>
-                    <a class="dropdown-item" href="#">8</a>
-                </div>
-            </div>
+            <?php include "input/gears.php"; ?>
 
             <div class="makeSpace"> </div>
 
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active btn-lg">
-                    <input type="radio" name="options" id="option1" autocomplete="off"> Automatgear
-                </label>
-                <label class="btn btn-secondary btn-lg">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Manuel gear
-                </label>
-            </div>
+            <?php include "input/gearType.php"; ?>
 
             <div class="makeSpace"> </div>
 
@@ -128,8 +57,6 @@
             </button>
 
         </form>
-
-
 
 
 
@@ -154,21 +81,6 @@
 
 
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
