@@ -17,7 +17,7 @@
                 <h1 class="display-4">
                     Her kan du beregne prisen på din brugte bil
                 </h1>
-                <p class="lead">
+                <p class="lead" style="text-align: center">
                     Indtast værdierne for din bil nedenfor, og klik på beregn.
                 </p>
             </div>
