@@ -30,7 +30,7 @@
             <tbody>
                 <tr>
                     <th scope="row">Pris/aktie 12/08-2019</th>
-                    <td>7.30</td>
+                    <td>8.30</td>
                 </tr>
                 <tr>
                     <th scope="row">Dagens pris</th>
