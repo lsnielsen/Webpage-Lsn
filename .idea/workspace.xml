@@ -21,9 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/priceCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/priceCalculator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/priceCalculator/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/frontpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/input/engine.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/input/engine.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/priceCalculator/input/gearType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/input/gearType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/input/inputHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/input/inputHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/priceCalculator/input/kilometers.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/input/kilometers.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +95,8 @@
       <workItem from="1602224907989" duration="4503000" />
       <workItem from="1602414698435" duration="3995000" />
       <workItem from="1602506549855" duration="8418000" />
-      <workItem from="1602580135135" duration="7052000" />
+      <workItem from="1602580135135" duration="7345000" />
+      <workItem from="1602594585860" duration="2468000" />
     </task>
     <servers />
   </component>

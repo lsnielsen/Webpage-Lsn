@@ -25,7 +25,7 @@
 
 
         <div class="form-inline">
-            <div class="makeSpace"> </div>
+            <div class="makeSpace" style="margin-left: 90px;"> </div>
 
             <?php include "input/model.php"; ?>
 
@@ -51,12 +51,19 @@
 
             <div class="makeSpace"> </div>
 
-            <button type="submit" class="btn btn-lg btn-success" id="inputSubmit" name="priceCalculator" value="priceCalculatorPage">
+            <button type="submit" class="btn btn-lg btn-success" id="inputSubmit" name="priceCalculator" value="priceSubmitPage">
                 Beregn
             </button>
         </div>
 
+        <div class="makeSpace"> </div>
+
+        <?php include "input/inputHandler.php"; ?>
+
         <form class="form-inline" action="../controller/priceCalculator.php" method="post">
+            <button type="submit" style="display: none;" id="submitValues" name="priceCalculator" value="priceSubmitPage">
+
+            </button>
         </form>
 
 
@@ -81,6 +88,5 @@
 </style>
 
 
-<?php include "input/inputHandler.php"; ?>
 
 

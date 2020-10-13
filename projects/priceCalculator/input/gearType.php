@@ -18,7 +18,7 @@
         $(".gearTypeHolder").text("Automatgear");
 
         $(".gearType").click(function () {
-            gearType = $(this).text();
+            gearType = $(this).text().trim();
             $(".gearTypeHolder").text(gearType);
         });
 
