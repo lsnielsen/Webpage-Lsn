@@ -2,12 +2,12 @@
 <script>
 
     $("#inputSubmit").click(function () {
+        const model = $(".modelDropdown").text();
+        const year = $(".yearDropdown").text();
+        const km = $(".kmTxtValue").text();
+        const engine = $(".engineTxtValue").text();
         const gears = $(".gearDropdown").text();
         const gearType = $(".gearTypeHolder").text();
-        const engine = $(".engineTxtValue").text();
-        const km = $(".kmTxtValue").text();
-        const year = $(".yearDropdown").text();
-        const model = $(".modelDropdown").text();
 
         $(".theModel").text(model);
         $(".theYear").text(year);
