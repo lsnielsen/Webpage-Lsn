@@ -51,6 +51,11 @@
         <span class="badge badge-secondary theGeartype">
         </span>
     </h4>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen for de biler
+        </li>
+    </ul>
 </center>
 
 
