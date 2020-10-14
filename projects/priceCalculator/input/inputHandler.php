@@ -1,4 +1,5 @@
 
+
 <script>
 
     $("#inputSubmit").click(function () {
@@ -8,7 +9,7 @@
         const engine = $(".engineTxtValue").text();
         const gears = $(".gearDropdown").text();
         const gearType = $(".gearTypeHolder").text();
-        console.log("input handling");
+
         if (checkModel(model) && checkYear(year) && checkKm(km) && checkEngine(engine) && checkGear(gears)) {
             $(".theModel").text(model);
             $(".theYear").text(year);
@@ -17,6 +18,7 @@
             $(".theGears").text(gears);
             $(".theGeartype").text(gearType);
             $(".choosenInput").show();
+            carGetter();
         } else {
             $(".errorModal").show();
         }
