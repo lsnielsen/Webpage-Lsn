@@ -23,6 +23,7 @@
             </div>
         </div>
 
+        <?php include "input/errorModal.php"; ?>
 
         <div class="form-inline">
             <div class="makeSpace" style="margin-left: 90px;"> </div>

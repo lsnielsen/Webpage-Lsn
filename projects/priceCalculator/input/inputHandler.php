@@ -8,15 +8,43 @@
         const engine = $(".engineTxtValue").text();
         const gears = $(".gearDropdown").text();
         const gearType = $(".gearTypeHolder").text();
-
-        $(".theModel").text(model);
-        $(".theYear").text(year);
-        $(".theKm").text(km);
-        $(".theEngine").text(engine);
-        $(".theGears").text(gears);
-        $(".theGeartype").text(gearType);
-        $(".choosenInput").show();
+        console.log("input handling");
+        if (checkModel(model) && checkYear(year) && checkKm(km) && checkEngine(engine) && checkGear(gears)) {
+            $(".theModel").text(model);
+            $(".theYear").text(year);
+            $(".theKm").text(km);
+            $(".theEngine").text(engine);
+            $(".theGears").text(gears);
+            $(".theGeartype").text(gearType);
+            $(".choosenInput").show();
+        } else {
+            $(".errorModal").show();
+        }
     });
+
+    function checkModel(modelVar) {
+        if (modelVar == "Mærke") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    function checkYear(yearVar) {
+        if (yearVar == "Årgang") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    function checkKm (kmVar) {
+        return (/(^((?![\w\W]).)*[0-9]+((?![\w\W]).)*)/.test(kmVar))
+    }
+    function checkEngine (engineVar) {
+        return (/(^((?![\w\W]).)*[0-9a-zA-Z,]((?![\w\W]).)*)/.test(engineVar))
+    }
+    function checkGear (gearVar) {
+        return (/(^((?![\w\W]).)*[0-9]((?![\w\W]).)*)/.test(gearVar))
+    }
 
 </script>
 

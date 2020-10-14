@@ -9,7 +9,7 @@
                 Antal kilometer:
             </span>
         </div>
-        <input type="text" class="form-control kmTxt" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
+        <input type="text" class="form-control kmTxt" aria-label="Large" aria-describedby="inputGroup-sizing-lg" placeholder="fx: 260560">
     </div>
 
     <div class="kmTxtValue" style="display: none;"></div>

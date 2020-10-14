@@ -9,7 +9,7 @@
                 Motor:
             </span>
         </div>
-        <input type="text" class="form-control engineTxt" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
+        <input type="text" class="form-control engineTxt" aria-label="Large" aria-describedby="inputGroup-sizing-lg" placeholder="fx: tdi 3,5">
     </div>
 
     <div class="engineTxtValue" style="display: none;"></div>
