@@ -6,7 +6,6 @@
 
     function carGetter()
     {
-        console.log("carGetter");
         const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
         const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
         const bilbasenUrl = basicStartUrl + "audi" + "/" + "a3" + basicEndUrl;
@@ -23,23 +22,32 @@
                 carGetter();
             } else if (loopI == 25) {
                 setTimeout(function() {
-                    secondBool = true;
+
                 }, 250)
             }
         }, 250)
     }
 
     function getLinks(webpage) {
-        console.log("getLinks");
-        const regex = /<div class="row">[\n ]*<a class="listing-heading darkLink" href="(\/brugt\/bil\/[a-z]+\/[a-z0-9]+\/[0-9a-z-]+\/[0-9]+)">[0-9a-zA-Z ,\.-]+<\/a>[\n ]*<\/div>/g;
-        const match = regex.exec(webpage);
-        let temp;
-        if (match !== null) {
-            for (let $i = 1; $i < match.length; $i++) {
-                temp = "https://www.bilbasen.dk" + match[$i];
-                linkArray.push(temp);
-            }
-        }
+        $.get(webpage,
+            function( data ) {
+                for (let i = 0; i < data.length; i++) {
+                    let subStr = data.substring(i, i+200);
+                    const regex = /href="(\/brugt\/bil\/[a-z]+\/[0-9a-z]+\/[a-z0-9-]+\/[0-9]+)">/;
+                    const match = regex.exec(subStr);
+                    let temp;
+                    if (match !== null) {
+                        temp = "https://www.bilbasen.dk" + match[1];
+                        if (!linkArray.includes(temp)) {
+                            console.log("match");
+                            linkArray.push(temp);
+                        }
+                    }
+                }
+            },
+            'html' // or 'text', 'xml', 'more'
+        );
+        console.log("linkArray.length: " + linkArray.length);
     }
 
     function temporary()
