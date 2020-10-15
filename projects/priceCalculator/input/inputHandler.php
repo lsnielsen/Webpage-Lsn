@@ -21,8 +21,7 @@
             $(".choosenInput").show();
             carGetter();
         } else {
-            carGetter();
-            //$(".errorModal").show();
+            $(".errorModal").show();
         }
     });
 
