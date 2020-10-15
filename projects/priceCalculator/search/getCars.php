@@ -69,7 +69,7 @@
             $.get(linkArray[carDetailsLoop],
                 function (data) {
                     let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
-                    let kmMatch = /<span class="label">Km<\/span>[\n ]*<span class="value">[\n ]*([0-9]+.[0-9]+)[\n ]*<\/span>/.exec(data);
+                    let kmMatch = /Km.* ([0-9]{1,3}\.[0-9]{3}).*<\/span>.*<\/p>.*\/section>.*<section id="bbVipUsage"/s.exec(data);
                     let gearMatch = /<td class="selectedcar">([0-9]) gear<\/td>/.exec(data);
                     let gearTypeMatch = /<td class="selectedcar">(Automatisk|Manuel)<\/td>/.exec(data);
                     let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3})[ a-z\.\/]*<\/span>/.exec(data);
@@ -114,16 +114,12 @@
                     getAttributeLoop();
                 }, 150);
             } else {
-                console.log("Year array: ");
                 console.log(yearArray);
-                console.log("Km array: ");
                 console.log(kmArray);
-                console.log("Gear array: ");
                 console.log(gearArray);
-                console.log("Geartype array: ");
                 console.log(geartypeArray);
-                console.log("Price array: ");
                 console.log(priceArray);
+                console.log(linkArray);
             }
         }
     }
