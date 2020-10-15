@@ -1,9 +1,10 @@
 
 
 <script>
+    let model;
 
     $("#inputSubmit").click(function () {
-        const model = $(".modelDropdown").text();
+        model = $(".modelDropdown").text();
         const year = $(".yearDropdown").text();
         const km = $(".kmTxtValue").text();
         const engine = $(".engineTxtValue").text();
@@ -20,7 +21,8 @@
             $(".choosenInput").show();
             carGetter();
         } else {
-            $(".errorModal").show();
+            carGetter();
+            //$(".errorModal").show();
         }
     });
 
