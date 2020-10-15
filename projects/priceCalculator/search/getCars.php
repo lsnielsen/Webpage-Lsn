@@ -2,7 +2,13 @@
 
 <script>
     loopI = 1;
+    carDetailsLoop = 0;
     linkArray = new Array();
+    yearArray = new Array();
+    kmArray = new Array();
+    priceArray = new Array();
+    gearArray = new Array();
+    geartypeArray = new Array();
 
     function carGetter()
     {
@@ -22,8 +28,8 @@
                 carGetter();
             } else if (loopI == 25) {
                 setTimeout(function() {
-
-                }, 250)
+                    getCarDetails();
+                }, 500)
             }
         }, 250)
     }
@@ -39,7 +45,6 @@
                     if (match !== null) {
                         temp = "https://www.bilbasen.dk" + match[1];
                         if (!linkArray.includes(temp)) {
-                            console.log("match");
                             linkArray.push(temp);
                         }
                     }
@@ -47,29 +52,73 @@
             },
             'html' // or 'text', 'xml', 'more'
         );
-        console.log("linkArray.length: " + linkArray.length);
     }
 
-    function temporary()
+    function getCarDetails()
     {
-        $.get(urlOne,
-            function( data ) {
-                for (let $i = 0; $i < data.length; $i++) {
-                    let subStr = data.substring($i, $i+200);
+        getAttributeLoop();
+        function getAttributeLoop()
+        {
+            $.get(linkArray[carDetailsLoop],
+                function (data) {
+                    let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
+                    let kmMatch = /<span class="value">[\n ]*([0-9]+.[0-9]+)[\n ]*<\/span>/.exec(data);
+                    let gearMatch = /<td class="selectedcar">([0-9]) gear<\/td>/.exec(data);
+                    let gearTypeMatch = /<td class="selectedcar">(Automatisk|Manuel)<\/td>/.exec(data);
+                    let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3})[ a-z\.\/]*<\/span>/.exec(data);
 
-                    let temp = subStr.search(/href="\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+(\">)$/);
-                    if (temp != -1) {
-                        let theFirstString = subStr.substring(temp + 6, subStr.length - 2);
-                        theFirstString = "https://www.bilbasen.dk" + theFirstString;
-
-                        if (!firstUrlArr.includes(theFirstString)) {
-                            firstUrlArr.push(theFirstString);
-                        }
+                    if (yearMatch !== null) {
+                        yearArray.push(yearMatch[1]);
+                    } else {
+                        //console.log("No year match " + linkArray[i]);
+                        yearArray.push("-");
                     }
-                }
-            },
-            'html' // or 'text', 'xml', 'more'
-        );
+                    if (kmMatch !== null) {
+                        kmArray.push(kmMatch[1]);
+                    } else {
+                        //console.log("No km match " + linkArray[i]);
+                        kmArray.push("-");
+                    }
+                    if (gearMatch !== null) {
+                        gearArray.push(gearMatch[1]);
+                    } else {
+                        //console.log("No gear match " + linkArray[i]);
+                        gearArray.push("-");
+                    }
+                    if (gearTypeMatch !== null) {
+                        geartypeArray.push(gearTypeMatch[1]);
+                    } else {
+                        //console.log("No geartype match "  + linkArray[i]);
+                        geartypeArray.push("-");
+                    }
+                    if (priceMatch !== null) {
+                        priceArray.push(priceMatch[1]);
+                    } else {
+                        //console.log("No price match "  + linkArray[i]);
+                        priceArray.push("-");
+                    }
+                },
+                'html' // or 'text', 'xml', 'more'
+            );
+            if(carDetailsLoop < linkArray.length) {
+                carDetailsLoop++;
+                console.log("loop: " + carDetailsLoop);
+                setTimeout(function() {
+                    getAttributeLoop();
+                }, 100);
+            } else {
+                console.log("Year array: ");
+                console.log(yearArray);
+                console.log("Km array: ");
+                console.log(kmArray);
+                console.log("Gear array: ");
+                console.log(gearArray);
+                console.log("Geartype array: ");
+                console.log(geartypeArray);
+                console.log("Price array: ");
+                console.log(priceArray);
+            }
+        }
     }
 
 
