@@ -14,7 +14,14 @@
     {
         const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
         const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
-        const bilbasenUrl = basicStartUrl + "audi" + "/" + "a3" + basicEndUrl;
+        let bilbasenUrl;
+        if (typeof(model)    !== 'undefined') {
+            let temporary = model.split(" ");
+            bilbasenUrl = basicStartUrl + temporary[0] + "/" + temporary[1] + basicEndUrl;
+        } else {
+            console.log("what");
+            bilbasenUrl = basicStartUrl + "audi" + "/" + "a3" + basicEndUrl;
+        }
         setTimeout(function() {
             let pageUrl;
             if (loopI === 1) {
@@ -62,7 +69,7 @@
             $.get(linkArray[carDetailsLoop],
                 function (data) {
                     let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
-                    let kmMatch = /<span class="value">[\n ]*([0-9]+.[0-9]+)[\n ]*<\/span>/.exec(data);
+                    let kmMatch = /<span class="label">Km<\/span>[\n ]*<span class="value">[\n ]*([0-9]+.[0-9]+)[\n ]*<\/span>/.exec(data);
                     let gearMatch = /<td class="selectedcar">([0-9]) gear<\/td>/.exec(data);
                     let gearTypeMatch = /<td class="selectedcar">(Automatisk|Manuel)<\/td>/.exec(data);
                     let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3})[ a-z\.\/]*<\/span>/.exec(data);
@@ -105,7 +112,7 @@
                 console.log("loop: " + carDetailsLoop);
                 setTimeout(function() {
                     getAttributeLoop();
-                }, 100);
+                }, 150);
             } else {
                 console.log("Year array: ");
                 console.log(yearArray);
