@@ -39,8 +39,8 @@
 
     function totalDiff()
     {
-        let diff = 7.30 - todayPrice;
-        let percentage = (Math.abs(diff) / 7.30 * 100).toFixed(2);
+        let diff = 8.30 - todayPrice;
+        let percentage = (Math.abs(diff) / 8.30 * 100).toFixed(2);
         $("#totalDiff").text(percentage + " %");
         if (diff > 0) {
             $("#totalDiff").css("color", "red");

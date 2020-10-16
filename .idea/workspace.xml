@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/bilbasen/getCarFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/bilbasen/getCarFunctions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/dataArray.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/dataArray.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/getCarFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/gulOgGratis/getCarFunctions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/search/getCars.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/search/getCars.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +36,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iF4NlfInxVI06h7ZlhjDG5vHiC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/stocks/assets" />
@@ -92,6 +95,12 @@
       <workItem from="1602143327322" duration="14539000" />
       <workItem from="1602224907989" duration="4503000" />
       <workItem from="1602414698435" duration="3995000" />
+      <workItem from="1602506549855" duration="8418000" />
+      <workItem from="1602580135135" duration="7345000" />
+      <workItem from="1602594585860" duration="4266000" />
+      <workItem from="1602672776812" duration="4548000" />
+      <workItem from="1602683082008" duration="2620000" />
+      <workItem from="1602696801638" duration="3366000" />
     </task>
     <servers />
   </component>
@@ -110,15 +119,18 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1044" y="503" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601565855275">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1044" y="503" key="#com.intellij.fileTypes.FileTypeChooser/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601565855275" />
-    <state x="1117" y="624" key="NewPhpFileDialog" timestamp="1601982647437">
+    <state x="946" y="619" key="NewPhpFileDialog" timestamp="1602507028659">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1117" y="624" key="NewPhpFileDialog/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1601982647437" />
+    <state x="946" y="619" key="NewPhpFileDialog/3840.544.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1602507028659" />
     <state x="782" y="346" key="SettingsEditor" timestamp="1601490468902">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

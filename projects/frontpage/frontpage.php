@@ -54,6 +54,11 @@
                     <?php echo $txtFile['stockMarket']; ?>
 				</button>
 			</form>
+			<form action="/Webpage-Lsn/controller/priceCalculator.php" method="post">
+				<button class="frontpageButton" id="priceButton" type="submit" name="priceCalculator" value="priceCalculatorPage">
+                    <?php echo $txtFile['priceCalc']; ?>
+				</button>
+			</form>
 			<div id="my-signin2"></div>
 			<form class="frontpageButton" method="get" id="searchArea" action="https://www.google.com/search" target="_blank">
 				<center>
@@ -94,6 +99,9 @@
 	});
 	$("#cvButton").click(function() {
 		document.cookie = "langPlace = cv";
+	});
+	$("#priceButton").click(function() {
+		document.cookie = "langPlace = priceCalculator";
 	});
 
 	$("#danish").click(function() {

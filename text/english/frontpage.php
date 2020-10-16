@@ -17,6 +17,7 @@ return
         'cvTxt' => 'My CV',
         'searchPlaceholder' => 'Enter search form',
         'searchButton' => 'Click to search using google',
+        'priceCalc' => 'Used car price calculator',
     ];
 
 
