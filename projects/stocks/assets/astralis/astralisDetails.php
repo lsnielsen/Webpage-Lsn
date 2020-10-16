@@ -15,9 +15,13 @@
             <h1>Her er en oversigt over Astralis</h1>
             <p>
                 Informationerne er taget fra
+                <a href="https://www.euroinvestor.dk/markeder/aktier/astralis-group-as/170180" target="_blank">
+                    Euroinvestor
+                </a> og
                 <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
                     MarketWatch
-                </a>, hvorefter der er lavet yderligere beregning på dem.
+                </a>
+                , hvorefter der er lavet yderligere beregning på dem.
             </p>
         </div>
         <table class="table table-hover table-dark table-bordered">
@@ -30,7 +34,7 @@
             <tbody>
                 <tr>
                     <th scope="row">Pris/aktie 12/08-2019</th>
-                    <td>8.30</td>
+                    <td>8.95</td>
                 </tr>
                 <tr>
                     <th scope="row">Dagens pris</th>
