@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/Webpage-Lsn/projects/stocks/css/table.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <title>
-            Google details
+            Astralis details
         </title>
     </head>
 
@@ -45,6 +45,7 @@
                     <td id="totalDiff"></td>
                 </tr>
             </tbody>
+            <div id="dataHolder"> </div>
         </table>
 
         <form action="/Webpage-Lsn/controller/stock.php" method="post">
