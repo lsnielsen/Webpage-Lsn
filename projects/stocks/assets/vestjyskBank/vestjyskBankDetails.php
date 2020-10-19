@@ -6,18 +6,15 @@
         <link rel="stylesheet" href="/Webpage-Lsn/projects/stocks/css/table.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <title>
-            Astralis details
+            Vestjysk Bank details
         </title>
     </head>
 
     <body class="p-3 mb-2 bg-secondary text-dark" onload="getDetailedStockData();">
         <div class="jumbotron text-center">
-            <h1>Her er en oversigt over Astralis</h1>
+            <h1>Her er en oversigt over Vestjysk Bank</h1>
             <p>
                 Informationerne er taget fra
-                <a href="https://www.euroinvestor.dk/markeder/aktier/astralis-group-as/170180" target="_blank">
-                    Euroinvestor
-                </a> og
                 <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
                     MarketWatch
                 </a>
@@ -34,7 +31,7 @@
             <tbody>
                 <tr>
                     <th scope="row">Pris/aktie 12/08-2019</th>
-                    <td>8.95</td>
+                    <td>3.00</td>
                 </tr>
                 <tr>
                     <th scope="row">Dagens pris</th>

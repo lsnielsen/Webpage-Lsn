@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="" />
+    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +100,7 @@
       <workItem from="1602683082008" duration="2620000" />
       <workItem from="1602696801638" duration="3366000" />
       <workItem from="1603032584190" duration="44000" />
-      <workItem from="1603093846793" duration="806000" />
+      <workItem from="1603093846793" duration="1120000" />
     </task>
     <servers />
   </component>

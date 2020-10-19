@@ -5,7 +5,7 @@
 
     function getData()
     {
-        var profileUrl = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
+        var profileUrl = "https://www.marketwatch.com/investing/stock/vjba?countrycode=dk";
         $.get( profileUrl,
             function( profileData ) {
                 getLastYearGrowth(profileData);
