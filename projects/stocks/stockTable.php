@@ -109,6 +109,17 @@
                     </a>
                 </td>
             </tr>
+            <tr>
+                <th scope="row" class="theAsset" onclick="assetsPage('swissFranc')">Schweizer Frank</th>
+                <td id="swissFrancVal"></td>
+                <td id="swissFrancChange"></td>
+                <td id="swissFrancPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/currency/usdchf" target="_blank">
+                        marketwatch.com/swissFranc
+                    </a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -124,6 +135,7 @@
         getAstralisData();
         getVestjyskBankData();
         getDanskeBankData();
+        getSwissFrancData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

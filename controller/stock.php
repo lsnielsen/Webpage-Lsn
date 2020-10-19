@@ -23,6 +23,8 @@
         include "../projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php";
     } elseif ($stockCookie == "danskeBank") {
         include "../projects/stocks/assets/danskeBank/danskeBankDetails.php";
+    } elseif ($stockCookie == "swissFranc") {
+        include "../projects/stocks/assets/swissFranc/swissFrancDetails.php";
     }
 
 

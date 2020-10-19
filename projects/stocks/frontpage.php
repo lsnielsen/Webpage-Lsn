@@ -32,6 +32,7 @@
             include "assets/astralis/astralis.php";
             include "assets/vestjyskBank/vestjyskBank.php";
             include "assets/danskeBank/danskeBank.php";
+            include "assets/swissFranc/swissFranc.php";
             include "stockTable.php";
         ?>
 
