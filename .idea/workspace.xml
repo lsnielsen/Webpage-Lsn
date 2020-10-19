@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/staticData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/swissFranc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/swissFrancDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/frontpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/stockTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/stockTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/swissFranc.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/swissFranc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +100,7 @@
       <workItem from="1602683082008" duration="2620000" />
       <workItem from="1602696801638" duration="3366000" />
       <workItem from="1603032584190" duration="44000" />
-      <workItem from="1603093846793" duration="3814000" />
+      <workItem from="1603093846793" duration="4571000" />
     </task>
     <servers />
   </component>

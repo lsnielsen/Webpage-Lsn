@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <th scope="col">Data</th>
-                    <th scope="col">Værdi</th>
+                    <th scope="col">Værdi CHF</th>
                 </tr>
             </thead>
             <tbody>
