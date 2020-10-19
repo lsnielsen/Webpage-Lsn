@@ -2,7 +2,7 @@
 
 <script>
 
-    let todayPrice;
+    var todayPrice;
 
     function getDetailedStockData()
     {
