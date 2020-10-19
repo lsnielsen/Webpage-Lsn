@@ -47,7 +47,7 @@
 
     function getGoogleChange(data)
     {
-        let googleRegex = /<bg-quote field="change" format="[0,\.\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[\w\W]*>([0-9\.-]+)<\/bg-quote><\/span>/;
+        let googleRegex = /<bg-quote field="change" format="[0,\.\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[\w\W]*?>([0-9\.-]+)<\/bg-quote><\/span>/;
         let googleMatch = googleRegex.exec(data);
         if (googleMatch !== null) {
             $("#googleChange").text(googleMatch[1]);
