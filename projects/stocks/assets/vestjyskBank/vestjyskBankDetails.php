@@ -15,7 +15,7 @@
             <h1>Her er en oversigt over Vestjysk Bank</h1>
             <p>
                 Informationerne er taget fra
-                <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
+                <a href="https://www.marketwatch.com/investing/stock/vjba?countrycode=dk" target="_blank">
                     MarketWatch
                 </a>
                 , hvorefter der er lavet yderligere beregning på dem.
@@ -30,8 +30,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Pris/aktie 12/08-2019</th>
-                    <td>3.00</td>
+                    <th scope="row">Pris/aktie 04/01-1990</th>
+                    <td>4.91</td>
                 </tr>
                 <tr>
                     <th scope="row">Dagens pris</th>
