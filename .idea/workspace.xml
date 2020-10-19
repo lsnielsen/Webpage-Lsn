@@ -19,28 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/astralis/astralis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/bitcoin/bitcoin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/euroUsd/euroUsd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/gold/gold.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/google/google.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/oil/oil.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/silver/silver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/vestjyskBank/data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/vestjyskBank/staticData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/vestjyskBank/vestjyskBank.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/astralis.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/bitcoin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/euroUsd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/gold.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/google.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/oil.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/silver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/frontpage.php" afterDir="false" />
-    </list>
+    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +98,7 @@
       <workItem from="1602683082008" duration="2620000" />
       <workItem from="1602696801638" duration="3366000" />
       <workItem from="1603032584190" duration="44000" />
-      <workItem from="1603093846793" duration="352000" />
+      <workItem from="1603093846793" duration="806000" />
     </task>
     <servers />
   </component>

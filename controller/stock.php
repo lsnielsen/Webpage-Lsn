@@ -19,6 +19,8 @@
         include "../projects/stocks/assets/silver/silverDetails.php";
     } elseif ($stockCookie == "astralis") {
         include "../projects/stocks/assets/astralis/astralisDetails.php";
+    } elseif ($stockCookie == "vestjyskBank") {
+        include "../projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php";
     }
 
 

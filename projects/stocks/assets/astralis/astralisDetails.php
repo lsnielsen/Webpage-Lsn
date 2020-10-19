@@ -15,9 +15,6 @@
             <h1>Her er en oversigt over Astralis</h1>
             <p>
                 Informationerne er taget fra
-                <a href="https://www.euroinvestor.dk/markeder/aktier/astralis-group-as/170180" target="_blank">
-                    Euroinvestor
-                </a> og
                 <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
                     MarketWatch
                 </a>
