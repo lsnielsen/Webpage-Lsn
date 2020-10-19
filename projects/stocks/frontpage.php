@@ -23,13 +23,14 @@
         </div>
 
         <?php
-            include "assets/oil.php";
-            include "assets/euroUsd.php";
-            include "assets/gold.php";
-            include "assets/silver.php";
-            include "assets/google.php";
-            include "assets/bitcoin.php";
-            include "assets/astralis.php";
+            include "assets/oil/oil.php";
+            include "assets/euroUsd/euroUsd.php";
+            include "assets/gold/gold.php";
+            include "assets/silver/silver.php";
+            include "assets/google/google.php";
+            include "assets/bitcoin/bitcoin.php";
+            include "assets/astralis/astralis.php";
+            include "assets/vestjyskBank/vestjyskBank.php";
             include "stockTable.php";
         ?>
 
