@@ -98,6 +98,17 @@
                     </a>
                 </td>
             </tr>
+            <tr>
+                <th scope="row" class="theAsset" onclick="assetsPage('danskeBank')">Danske Bank</th>
+                <td id="danskeBankVal"></td>
+                <td id="danskeBankChange"></td>
+                <td id="danskeBankPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/stock/danske?countrycode=dk" target="_blank">
+                        marketwatch.com/danskeBank
+                    </a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -112,6 +123,7 @@
         getBitcoinData();
         getAstralisData();
         getVestjyskBankData();
+        getDanskeBankData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

@@ -21,6 +21,8 @@
         include "../projects/stocks/assets/astralis/astralisDetails.php";
     } elseif ($stockCookie == "vestjyskBank") {
         include "../projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php";
+    } elseif ($stockCookie == "danskeBank") {
+        include "../projects/stocks/assets/danskeBank/danskeBankDetails.php";
     }
 
 

@@ -31,6 +31,7 @@
             include "assets/bitcoin/bitcoin.php";
             include "assets/astralis/astralis.php";
             include "assets/vestjyskBank/vestjyskBank.php";
+            include "assets/danskeBank/danskeBank.php";
             include "stockTable.php";
         ?>
 
