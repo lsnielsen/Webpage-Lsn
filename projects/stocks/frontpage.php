@@ -17,7 +17,7 @@
                 Der er kurser og tilhørende statistik fra
                 <a href="https://www.nyse.com/index" target="_blank">
                     New York Stock Exchange
-                </a>. <br>
+                </a> <br>
                 Klik på det enkelte investerings element under "Aktiv", for at få en uddybbende specifikation
             </p>
         </div>

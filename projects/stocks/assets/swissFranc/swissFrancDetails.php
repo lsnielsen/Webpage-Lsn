@@ -42,6 +42,7 @@
                     <td id="totalDiff"></td>
                 </tr>
             </tbody>
+            <?php include "stockIntradayData.html"; ?>
             <div id="dataHolder"> </div>
         </table>
 
