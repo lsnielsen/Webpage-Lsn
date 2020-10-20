@@ -18,19 +18,26 @@
 			const chartData = [];
 
 			function generateChartData() {
+				$.ajax({
+					type: "GET",
+					url: "/Webpage-Lsn/projects/stocks/assets/swissFranc/data.csv",
+					dataType: "text",
+					success: function(data) {processData(data);}
+				});
 				const todayPrice = getSwizzPrice();
-				console.log("today price: " + todayPrice);
-
 				var firstDate = new Date(2012, 0, 1);
+
 				firstDate.setDate(firstDate.getDate() - 1000);
 				firstDate.setHours(0, 0, 0, 0);
-
 				for (var i = 0; i < 1000; i++) {
+
 					var newDate = new Date(firstDate);
 					newDate.setHours(0, i, 0, 0);
-
 					var a = Math.round(Math.random() * (40 + i)) + 100 + i;
 					var b = Math.round(Math.random() * 100000000);
+
+					//console.log("today price: " + currentSwizzPrice);
+					//console.log("date: " + newDate);
 
 					chartData.push({
 						date: newDate,
@@ -41,6 +48,25 @@
 				setTimeout(function () {
 					//generateChartData();
 				}, 2000);
+			}
+
+			function processData(allText) {
+				var allTextLines = allText.split(/\r\n|\n/);
+				var headers = allTextLines[0].split(',');
+				var lines = [];
+
+				for (var i=1; i<allTextLines.length; i++) {
+					var data = allTextLines[i].split(',');
+					if (data.length == headers.length) {
+
+						var tarr = [];
+						for (var j=0; j<headers.length; j++) {
+							tarr.push(headers[j]+":"+data[j]);
+						}
+						lines.push(tarr);
+					}
+				}
+				console.log(lines);
 			}
 
 			function getSwizzPrice()
@@ -55,7 +81,6 @@
 								currentSwizzPrice = openMatch[1];
 							}
 						}, "html" );
-				console.log("regex, match " + currentSwizzPrice);
 				return currentSwizzPrice;
 			}
 
