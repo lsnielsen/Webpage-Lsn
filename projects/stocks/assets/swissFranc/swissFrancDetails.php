@@ -44,7 +44,6 @@
             </tbody>
             <div id="dataHolder"> </div>
         </table>
-        <?php include "stockIntradayData.html"; ?>
 
         <form action="/Webpage-Lsn/controller/stock.php" method="post">
             <button type="submit" class="btn btn-dark btn-lg active" name="stockButton" value="stockPage">
