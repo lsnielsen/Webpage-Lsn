@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/dailyGraph.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/stockIntradayData.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/stockIntradayData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/swissFrancDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/stocks/assets/swissFranc/swissFrancDetails.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <workItem from="1603032584190" duration="44000" />
       <workItem from="1603093846793" duration="11726000" />
       <workItem from="1603182727688" duration="1367000" />
-      <workItem from="1603269095704" duration="2086000" />
+      <workItem from="1603269095704" duration="3239000" />
     </task>
     <servers />
   </component>

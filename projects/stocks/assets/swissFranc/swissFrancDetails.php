@@ -4,7 +4,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="/Webpage-Lsn/projects/stocks/css/table.css">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script><script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
         <title>
             Schweiz Franc details
         </title>
@@ -42,8 +44,9 @@
                     <td id="totalDiff"></td>
                 </tr>
             </tbody>
-            <div id="dataHolder"> </div>
         </table>
+
+        <div id="graphDiv"></div>
 
         <form action="/Webpage-Lsn/controller/stock.php" method="post">
             <button type="submit" class="btn btn-dark btn-lg active" name="stockButton" value="stockPage">
@@ -55,4 +58,13 @@
 
 </html>
 
+<?php include "dailyGraph.php"; ?>
 <?php include "data.php"; ?>
+
+<style>
+
+    #graphDiv {
+        width: 80%;
+        height: 300px;
+    }
+</style>
