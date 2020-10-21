@@ -64,6 +64,7 @@
 <style>
 
     #graphDiv {
+        margin: auto;
         width: 80%;
         height: 300px;
     }
