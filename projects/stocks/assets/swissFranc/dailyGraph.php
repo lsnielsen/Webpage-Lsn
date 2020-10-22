@@ -25,9 +25,9 @@
     var data = [];
     var i = 0;
 
-    for (i = 0; i <= 30; i++) {
+    for (i = 0; i <= 1200; i++) {
         let todayPrice = document.cookie;
-        data.push({date: new Date().setSeconds(i - 30), value: todayPrice});
+        data.push({date: new Date().setSeconds(i - 1200), value: null});
     }
 
     chart.data = data;
@@ -85,10 +85,10 @@
             var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
             let todayPrice = document.cookie;
             chart.addData(
-                { date: new Date(lastdataItem.dateX.getTime() + 2000), value: todayPrice },
+                { date: new Date(lastdataItem.dateX.getTime() + 1500), value: todayPrice },
                 1
             );
-        }, 2000);
+        }, 1500);
     }
 
     startInterval();
