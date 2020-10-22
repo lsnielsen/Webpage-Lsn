@@ -23,12 +23,11 @@
     chart.zoomOutButton.disabled = true;
 
     var data = [];
-    var visits = 10;
     var i = 0;
 
     for (i = 0; i <= 30; i++) {
-        visits -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
-        data.push({ date: new Date().setSeconds(i - 30), value: visits });
+        let todayPrice = document.cookie;
+        data.push({date: new Date().setSeconds(i - 30), value: todayPrice});
     }
 
     chart.data = data;
@@ -80,14 +79,13 @@
     }, false);
 
     // add data
-    var interval;
+    let interval;
     function startInterval() {
         interval = setInterval(function() {
-            visits =
-                visits + Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5);
             var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
+            let todayPrice = document.cookie;
             chart.addData(
-                { date: new Date(lastdataItem.dateX.getTime() + 1000), value: visits },
+                { date: new Date(lastdataItem.dateX.getTime() + 1000), value: todayPrice },
                 1
             );
         }, 1000);

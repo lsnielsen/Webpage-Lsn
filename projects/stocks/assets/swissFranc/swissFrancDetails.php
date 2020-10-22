@@ -58,8 +58,8 @@
 
 </html>
 
-<?php include "dailyGraph.php"; ?>
 <?php include "data.php"; ?>
+<?php include "dailyGraph.php"; ?>
 
 <style>
 

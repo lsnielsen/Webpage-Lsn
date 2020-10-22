@@ -34,6 +34,7 @@
         } else if (openMatch !== null) {
             todayPrice = openMatch[1];
         }
+        document.cookie = "currentPrice=" + todayPrice;
         $("#priceToday").text(todayPrice);
     }
 
