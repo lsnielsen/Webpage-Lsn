@@ -85,10 +85,10 @@
             var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
             let todayPrice = document.cookie;
             chart.addData(
-                { date: new Date(lastdataItem.dateX.getTime() + 1000), value: todayPrice },
+                { date: new Date(lastdataItem.dateX.getTime() + 2000), value: todayPrice },
                 1
             );
-        }, 1000);
+        }, 2000);
     }
 
     startInterval();
