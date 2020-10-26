@@ -65,7 +65,7 @@
     </h4>
     <ul class="list-group">
         <li class="list-group-item list-group-item-warning">
-            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen per kilometer for de biler med den valgte model og årgang.
+            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen per kilometer.
         </li>
     </ul>
 </center>
@@ -80,7 +80,7 @@
             Med den ovenstående pris, har vi beregnet, at din bil er følgende værd:
         </li>
     </ul>
-    <h4>
+    <h4 style="margin-top: 10px;">
         Prisen for din brugte bil:
         <span class="badge badge-secondary theResultPrice"> </span>
     </h4>
