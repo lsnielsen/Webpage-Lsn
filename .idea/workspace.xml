@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/frontpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/search/getCars.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/search/getCars.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/input/inputHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/input/inputHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
