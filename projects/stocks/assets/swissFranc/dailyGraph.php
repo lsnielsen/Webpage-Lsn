@@ -18,7 +18,7 @@
     var chart = am4core.create("graphDiv", am4charts.XYChart);
     chart.hiddenState.properties.opacity = 0;
 
-    chart.padding(0, 0, 0, 0);
+    chart.padding(10, 10, 10, 10);
 
     chart.zoomOutButton.disabled = true;
 
@@ -27,7 +27,7 @@
 
     for (i = 0; i <= 1200; i++) {
         let todayPrice = document.cookie;
-        data.push({date: new Date().setSeconds(i - 1200), value: null});
+        data.push({date: new Date().setSeconds(i - 1200), value: todayPrice});
     }
 
     chart.data = data;
@@ -70,6 +70,7 @@
     document.addEventListener("visibilitychange", function() {
         if (document.hidden) {
             if (interval) {
+                //startInterval();
                 clearInterval(interval);
             }
         }
