@@ -9,6 +9,7 @@
     priceArray = new Array();
     startPriceArray = new Array();
     secondLinkArray = new Array();
+    let bilbasenUrl;
 
     function carGetter()
     {
@@ -19,11 +20,11 @@
         const endUrlThree = "&pricefrom=0&includeleasing=true";
 
         let theChosenYear = $(".theYear").text();
-        if (typeof(model)    !== 'undefined') {
+        if (typeof (model) !== 'undefined') {
             let temporary = model.split(" ");
             bilbasenUrl = basicStartUrl + temporary[0] + "/" + temporary[1] + endUrlOne + theChosenYear + endUrlTwo + theChosenYear + endUrlThree;
+            console.log(bilbasenUrl);
         } else {
-            console.log("what");
             bilbasenUrl = basicStartUrl + "audi" + "/" + "a3" + basicEndUrl;
         }
         setTimeout(function() {
@@ -85,6 +86,8 @@
                         priceArray.push(priceMatch[1]);
                         startPriceArray.push(startPrice[1]);
                         secondLinkArray.push(linkArray[carDetailsLoop]);
+                    } else {
+                        console.log("error");
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
@@ -95,11 +98,12 @@
                     getAttributeLoop();
                 }, 50);
             } else {
-                console.log(yearArray);
-                console.log(kmArray);
-                console.log(priceArray);
-                console.log(startPriceArray);
-                console.log(secondLinkArray);
+                //console.log(yearArray);
+                //console.log(kmArray);
+                //console.log(priceArray);
+                //console.log(startPriceArray);
+                //console.log(secondLinkArray);
+                console.log(linkArray);
                 calculateTheResult();
             }
         }
