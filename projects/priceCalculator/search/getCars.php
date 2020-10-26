@@ -14,10 +14,14 @@
     {
         const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
         const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
-        let bilbasenUrl;
+        const endUrlOne = "?includeengroscvr=true&YearFrom=";
+        const endUrlTwo = "&YearTo=";
+        const endUrlThree = "&pricefrom=0&includeleasing=true";
+
+        let theChosenYear = $(".theYear").text();
         if (typeof(model)    !== 'undefined') {
             let temporary = model.split(" ");
-            bilbasenUrl = basicStartUrl + temporary[0] + "/" + temporary[1] + basicEndUrl;
+            bilbasenUrl = basicStartUrl + temporary[0] + "/" + temporary[1] + endUrlOne + theChosenYear + endUrlTwo + theChosenYear + endUrlThree;
         } else {
             console.log("what");
             bilbasenUrl = basicStartUrl + "audi" + "/" + "a3" + basicEndUrl;
@@ -68,9 +72,9 @@
         {
             $.get(linkArray[carDetailsLoop],
                 function (data) {
-                    let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
-                    let kmMatch = /Km.* ([0-9]{1,3}\.[0-9]{3}).*<\/span>.*<\/p>.*\/section>.*<section id="bbVipUsage"/s.exec(data);
-                    let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3}) (kr\.|kr\.\/md\.)<\/span>/.exec(data);
+                    let yearMatch = /<span class="value">\d{1,2}\/([0-9]{4})<\/span>/.exec(data);
+                    let kmMatch = /Km<\/span>\s*<span class="value">\s*([0-9]{1,3}\.[0-9]{3})\s*<\/span>\s*<\/p>\s*<\/section>\s*<section id="bbVipUsage" class="section">/.exec(data);
+                    let priceMatch = /class="label">Pris<\/span>\s*<span class="value">([0-9]{1,3}\.[0-9]{3}) (kr\.|kr\.\/md\.)<\/span>/.exec(data);
                     let startPrice = /<tr>\s*<td style="color: #888;width:150px;">Nypris<\/td>[\w\W]*"Hvad betyder nypris?[\w\W]*<td class="selectedcar">([0-9]{1,3}\.[0-9]{3}) kr<\/td>/.exec(data);
                     let priceType = checkPriceType(priceMatch);
                     let yearBool = checkForYearMatch(yearMatch);
@@ -138,7 +142,7 @@
             let temp = (startPriceArray[i] - priceArray[i]) / kmArray[i];
             $(".dataTable").append("<tr>" +
                 "<td>" + i + "</td>" +
-                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Link <a></td>" +
+                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> <a></td>" +
                 "<td>" + yearArray[i] + "</td>" +
                 "<td>" + startPriceArray[i] + "</td>" +
                 "<td>" + priceArray[i] + "</td>" +
