@@ -65,7 +65,19 @@
     </h4>
     <ul class="list-group">
         <li class="list-group-item list-group-item-success">
-            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen for de biler
+            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen per kilometer for de biler med den valgte model og årgang.
+        </li>
+    </ul>
+</center>
+
+<center class="choosenInput" style="margin-top: 90px; display: none;">
+    <h4>
+        Valgte model:
+        <span class="badge badge-secondary theModel"> </span>
+    </h4>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen per kilometer for de biler med den valgte model og årgang.
         </li>
     </ul>
 </center>

@@ -69,15 +69,13 @@
                     let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
                     let kmMatch = /Km.* ([0-9]{1,3}\.[0-9]{3}).*<\/span>.*<\/p>.*\/section>.*<section id="bbVipUsage"/s.exec(data);
                     let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3}) (kr\.|kr\.\/md\.)<\/span>/.exec(data);
+                    let priceType = checkPriceType(priceMatch);
+                    let yearBool = checkForYearMatch(yearMatch);
 
-                    if (yearMatch !== null && kmMatch !== null && priceMatch !== null && priceMatch[2] !== "kr./md.") {
+                    if (yearBool && kmMatch !== null && priceMatch !== null && priceType) {
                         yearArray.push(yearMatch[1]);
                         kmArray.push(kmMatch[1]);
                         priceArray.push(priceMatch[1]);
-                    } else {
-                        yearArray.push("-");
-                        kmArray.push("-");
-                        priceArray.push("-");
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
@@ -87,17 +85,42 @@
                 console.log("loop: " + carDetailsLoop);
                 setTimeout(function() {
                     getAttributeLoop();
-                }, 150);
+                }, 50);
             } else {
                 console.log(yearArray);
                 console.log(kmArray);
                 console.log(priceArray);
-                console.log(linkArray);
+               // console.log(linkArray);
             }
         }
     }
 
+    function checkForYearMatch(yearMatch)
+    {
+        let chosenYear = $(".theYear").text();
+        if (yearMatch !== null) {
+            if (chosenYear == yearMatch[1]) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 
+    function checkPriceType(priceMatch)
+    {
+        if (priceMatch !== null) {
+            if (priceMatch[2] == "kr./md.") {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
 
 
 
