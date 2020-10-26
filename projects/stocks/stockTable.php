@@ -87,6 +87,39 @@
                     </a>
                 </td>
             </tr>
+            <tr>
+                <th scope="row" class="theAsset" onclick="assetsPage('vestjyskBank')">Vestjysk Bank</th>
+                <td id="vestjyskBankVal"></td>
+                <td id="vestjyskBankChange"></td>
+                <td id="vestjyskBankPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/stock/vjba?countrycode=dk" target="_blank">
+                        marketwatch.com/vestjyskBank
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="theAsset" onclick="assetsPage('danskeBank')">Danske Bank</th>
+                <td id="danskeBankVal"></td>
+                <td id="danskeBankChange"></td>
+                <td id="danskeBankPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/stock/danske?countrycode=dk" target="_blank">
+                        marketwatch.com/danskeBank
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="theAsset" onclick="assetsPage('swissFranc')">Schweizer Frank</th>
+                <td id="swissFrancVal"></td>
+                <td id="swissFrancChange"></td>
+                <td id="swissFrancPercentage"></td>
+                <td>
+                    <a href="https://www.marketwatch.com/investing/currency/usdchf" target="_blank">
+                        marketwatch.com/swissFranc
+                    </a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -100,6 +133,9 @@
         getGoogleData();
         getBitcoinData();
         getAstralisData();
+        getVestjyskBankData();
+        getDanskeBankData();
+        getSwissFrancData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

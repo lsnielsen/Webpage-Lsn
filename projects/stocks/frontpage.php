@@ -17,19 +17,22 @@
                 Der er kurser og tilhørende statistik fra
                 <a href="https://www.nyse.com/index" target="_blank">
                     New York Stock Exchange
-                </a>. <br>
+                </a> <br>
                 Klik på det enkelte investerings element under "Aktiv", for at få en uddybbende specifikation
             </p>
         </div>
 
         <?php
-            include "assets/oil.php";
-            include "assets/euroUsd.php";
-            include "assets/gold.php";
-            include "assets/silver.php";
-            include "assets/google.php";
-            include "assets/bitcoin.php";
-            include "assets/astralis.php";
+            include "assets/oil/oil.php";
+            include "assets/euroUsd/euroUsd.php";
+            include "assets/gold/gold.php";
+            include "assets/silver/silver.php";
+            include "assets/google/google.php";
+            include "assets/bitcoin/bitcoin.php";
+            include "assets/astralis/astralis.php";
+            include "assets/vestjyskBank/vestjyskBank.php";
+            include "assets/danskeBank/danskeBank.php";
+            include "assets/swissFranc/swissFranc.php";
             include "stockTable.php";
         ?>
 

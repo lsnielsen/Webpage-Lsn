@@ -47,7 +47,7 @@
 
     function getGoldChange(data)
     {
-        let goldRegex = /<bg-quote field="change" format="0,0\.00\[00\]" channel="\/zigman2\/quotes\/201432642\/composite"[ a-z0-9="-\.]*>([0-9\.-]+)<\/bg-quote>/;
+        let goldRegex = /<bg-quote field="change" format="[0,\.\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[\w\W]*>([0-9\.-]+)<\/bg-quote><\/span>/;
         let goldMatch = goldRegex.exec(data);
         if (goldMatch !== null) {
             $("#goldChange").text(goldMatch[1]);

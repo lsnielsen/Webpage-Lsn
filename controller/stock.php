@@ -19,6 +19,12 @@
         include "../projects/stocks/assets/silver/silverDetails.php";
     } elseif ($stockCookie == "astralis") {
         include "../projects/stocks/assets/astralis/astralisDetails.php";
+    } elseif ($stockCookie == "vestjyskBank") {
+        include "../projects/stocks/assets/vestjyskBank/vestjyskBankDetails.php";
+    } elseif ($stockCookie == "danskeBank") {
+        include "../projects/stocks/assets/danskeBank/danskeBankDetails.php";
+    } elseif ($stockCookie == "swissFranc") {
+        include "../projects/stocks/assets/swissFranc/swissFrancDetails.php";
     }
 
 
