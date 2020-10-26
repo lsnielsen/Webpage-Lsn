@@ -7,8 +7,6 @@
     yearArray = new Array();
     kmArray = new Array();
     priceArray = new Array();
-    gearArray = new Array();
-    geartypeArray = new Array();
 
     function carGetter()
     {
@@ -70,38 +68,15 @@
                 function (data) {
                     let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
                     let kmMatch = /Km.* ([0-9]{1,3}\.[0-9]{3}).*<\/span>.*<\/p>.*\/section>.*<section id="bbVipUsage"/s.exec(data);
-                    let gearMatch = /<td class="selectedcar">([0-9]) gear<\/td>/.exec(data);
-                    let gearTypeMatch = /<td class="selectedcar">(Automatisk|Manuel)<\/td>/.exec(data);
-                    let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3})[ a-z\.\/]*<\/span>/.exec(data);
+                    let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3}) (kr\.|kr\.\/md\.)<\/span>/.exec(data);
 
-                    if (yearMatch !== null) {
+                    if (yearMatch !== null && kmMatch !== null && priceMatch !== null && priceMatch[2] !== "kr./md.") {
                         yearArray.push(yearMatch[1]);
-                    } else {
-                        //console.log("No year match " + linkArray[i]);
-                        yearArray.push("-");
-                    }
-                    if (kmMatch !== null) {
                         kmArray.push(kmMatch[1]);
-                    } else {
-                        //console.log("No km match " + linkArray[i]);
-                        kmArray.push("-");
-                    }
-                    if (gearMatch !== null) {
-                        gearArray.push(gearMatch[1]);
-                    } else {
-                        //console.log("No gear match " + linkArray[i]);
-                        gearArray.push("-");
-                    }
-                    if (gearTypeMatch !== null) {
-                        geartypeArray.push(gearTypeMatch[1]);
-                    } else {
-                        //console.log("No geartype match "  + linkArray[i]);
-                        geartypeArray.push("-");
-                    }
-                    if (priceMatch !== null) {
                         priceArray.push(priceMatch[1]);
                     } else {
-                        //console.log("No price match "  + linkArray[i]);
+                        yearArray.push("-");
+                        kmArray.push("-");
                         priceArray.push("-");
                     }
                 },
@@ -116,8 +91,6 @@
             } else {
                 console.log(yearArray);
                 console.log(kmArray);
-                console.log(gearArray);
-                console.log(geartypeArray);
                 console.log(priceArray);
                 console.log(linkArray);
             }

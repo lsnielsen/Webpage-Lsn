@@ -45,18 +45,6 @@
 
             <div class="makeSpace"> </div>
 
-            <?php include "input/engine.php"; ?>
-
-            <div class="makeSpace"> </div>
-
-            <?php include "input/gears.php"; ?>
-
-            <div class="makeSpace"> </div>
-
-            <?php include "input/gearType.php"; ?>
-
-            <div class="makeSpace"> </div>
-
             <button type="submit" class="btn btn-lg btn-success" id="inputSubmit" name="priceCalculator" value="priceSubmitPage">
                 Beregn
             </button>
