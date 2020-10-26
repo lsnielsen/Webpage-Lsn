@@ -8,6 +8,7 @@
     kmArray = new Array();
     priceArray = new Array();
     startPriceArray = new Array();
+    secondLinkArray = new Array();
 
     function carGetter()
     {
@@ -79,6 +80,7 @@
                         kmArray.push(kmMatch[1]);
                         priceArray.push(priceMatch[1]);
                         startPriceArray.push(startPrice[1]);
+                        secondLinkArray.push(linkArray[carDetailsLoop]);
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
@@ -89,11 +91,11 @@
                     getAttributeLoop();
                 }, 50);
             } else {
-                //console.log(yearArray);
-                //console.log(kmArray);
-                //console.log(priceArray);
-                //console.log(startPriceArray);
-                //console.log(linkArray);
+                console.log(yearArray);
+                console.log(kmArray);
+                console.log(priceArray);
+                console.log(startPriceArray);
+                console.log(secondLinkArray);
                 calculateTheResult();
             }
         }
@@ -133,8 +135,17 @@
         let drivenKilometer;
         let finalResult;
         for (let i = 0; i < kmArray.length; i++) {
-            let temp = priceArray[i] / kmArray[i];
-            pricePerKilometer = pricePerKilometer + (startPriceArray[i] - priceArray[i]) / kmArray[i];
+            let temp = (startPriceArray[i] - priceArray[i]) / kmArray[i];
+            $(".dataTable").append("<tr>" +
+                "<td>" + i + "</td>" +
+                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Link <a></td>" +
+                "<td>" + yearArray[i] + "</td>" +
+                "<td>" + startPriceArray[i] + "</td>" +
+                "<td>" + priceArray[i] + "</td>" +
+                "<td>" + kmArray[i] + "</td>" +
+                "<td>" + temp.toFixed(2) + "</td>" +
+                "</tr>");
+            pricePerKilometer = pricePerKilometer + temp;
         }
         pricePerKilometer = (pricePerKilometer / kmArray.length).toFixed(2);
         $(".theAveragePricePerKm").text(pricePerKilometer);

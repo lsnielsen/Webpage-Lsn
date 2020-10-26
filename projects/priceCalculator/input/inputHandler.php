@@ -84,6 +84,24 @@
         Prisen for din brugte bil:
         <span class="badge badge-secondary theResultPrice"> </span>
     </h4>
+    <h4 style="margin-top: 10px;">
+        Her kan du se de modeller vi fandt på bilbasen:
+    </h4>
+    <table class="table table-striped table-dark dataTable">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Link</th>
+                <th scope="col">Årgang</th>
+                <th scope="col">Ny pris</th>
+                <th scope="col">Brugt pris</th>
+                <th scope="col">Km</th>
+                <th scope="col">Tab/km</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+        </tbody>
+    </table>
 </center>
 
 
