@@ -7,6 +7,7 @@
     yearArray = new Array();
     kmArray = new Array();
     priceArray = new Array();
+    startPriceArray = new Array();
 
     function carGetter()
     {
@@ -69,28 +70,31 @@
                     let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
                     let kmMatch = /Km.* ([0-9]{1,3}\.[0-9]{3}).*<\/span>.*<\/p>.*\/section>.*<section id="bbVipUsage"/s.exec(data);
                     let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3}) (kr\.|kr\.\/md\.)<\/span>/.exec(data);
+                    let startPrice = /<tr>\s*<td style="color: #888;width:150px;">Nypris<\/td>[\w\W]*"Hvad betyder nypris?[\w\W]*<td class="selectedcar">([0-9]{1,3}\.[0-9]{3}) kr<\/td>/.exec(data);
                     let priceType = checkPriceType(priceMatch);
                     let yearBool = checkForYearMatch(yearMatch);
 
-                    if (yearBool && kmMatch !== null && priceMatch !== null && priceType) {
+                    if (yearBool && kmMatch !== null && priceMatch !== null && priceType && startPrice !== null) {
                         yearArray.push(yearMatch[1]);
                         kmArray.push(kmMatch[1]);
                         priceArray.push(priceMatch[1]);
+                        startPriceArray.push(startPrice[1]);
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
             );
             if(carDetailsLoop < linkArray.length) {
                 carDetailsLoop++;
-                console.log("loop: " + carDetailsLoop);
                 setTimeout(function() {
                     getAttributeLoop();
                 }, 50);
             } else {
-                console.log(yearArray);
-                console.log(kmArray);
-                console.log(priceArray);
-               // console.log(linkArray);
+                //console.log(yearArray);
+                //console.log(kmArray);
+                //console.log(priceArray);
+                //console.log(startPriceArray);
+                //console.log(linkArray);
+                calculateTheResult();
             }
         }
     }
@@ -120,6 +124,31 @@
         } else {
             return false;
         }
+    }
+
+    function calculateTheResult()
+    {
+        let pricePerKilometer = 0;
+        let starterPrice;
+        let drivenKilometer;
+        let finalResult;
+        for (let i = 0; i < kmArray.length; i++) {
+            let temp = priceArray[i] / kmArray[i];
+            pricePerKilometer = pricePerKilometer + (startPriceArray[i] - priceArray[i]) / kmArray[i];
+        }
+        pricePerKilometer = (pricePerKilometer / kmArray.length).toFixed(2);
+        $(".theAveragePricePerKm").text(pricePerKilometer);
+        starterPrice = $(".theStartPrice").text();
+        drivenKilometer = $(".theKm").text();
+        finalResult = (starterPrice - (drivenKilometer * pricePerKilometer)).toFixed(2);
+        $(".theResultPrice").text(finalResult);
+
+        //console.log("pris/km: " + pricePerKilometer);
+        //console.log("start pris: " + starterPrice);
+        //console.log("Antal km: " + drivenKilometer);
+        //console.log("Resultat: " + finalResult);
+
+        $(".theResults").show();
     }
 
 
