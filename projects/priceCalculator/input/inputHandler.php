@@ -83,6 +83,7 @@
     <h4 style="margin-top: 10px;">
         Prisen for din brugte bil:
         <span class="badge badge-secondary theResultPrice"> </span>
+        DKK
     </h4>
     <h4 style="margin-top: 10px;">
         Her kan du se de modeller vi fandt på bilbasen:
