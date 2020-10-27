@@ -96,12 +96,12 @@
                     getAttributeLoop();
                 }, 50);
             } else {
-                //console.log(yearArray);
-                //console.log(kmArray);
-                //console.log(priceArray);
-                //console.log(startPriceArray);
-                //console.log(secondLinkArray);
-                //console.log(linkArray);
+                console.log(yearArray);
+                console.log(kmArray);
+                console.log(priceArray);
+                console.log(startPriceArray);
+                console.log(secondLinkArray);
+                console.log(linkArray);
                 calculateTheResult();
             }
         }
@@ -111,7 +111,7 @@
     {
         let chosenYear = $(".theYear").text();
         if (yearMatch !== null) {
-            if (chosenYear == yearMatch[1]) {
+            if (chosenYear - 1 == yearMatch[1] || chosenYear == yearMatch[1] || chosenYear + 1 == yearMatch[1]) {
                 return true;
             } else {
                 return false;
