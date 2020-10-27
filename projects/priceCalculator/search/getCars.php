@@ -2,7 +2,6 @@
 
 <script>
     loopI = 1;
-    carDetailsLoop = 0;
     linkArray = new Array();
     yearArray = new Array();
     kmArray = new Array();
@@ -71,7 +70,7 @@
         getAttributeLoop();
         function getAttributeLoop()
         {
-            $.get(linkArray[carDetailsLoop],
+            $.get(linkArray[0],
                 function (data) {
                     let yearMatch = /<span class="value">\d{1,2}\/([0-9]{4})<\/span>/.exec(data);
                     let kmMatch = /Km<\/span>\s*<span class="value">\s*([0-9]{1,3}\.[0-9]{3})\s*<\/span>\s*<\/p>\s*<\/section>\s*<section id="bbVipUsage" class="section">/.exec(data);
@@ -79,24 +78,23 @@
                     let startPrice = /<tr>\s*<td style="color: #888;width:150px;">Nypris<\/td>[\w\W]*"Hvad betyder nypris?[\w\W]*<td class="selectedcar">([0-9]{1,3}\.[0-9]{3}) kr<\/td>/.exec(data);
                     let priceType = checkPriceType(priceMatch);
                     let yearBool = checkForYearMatch(yearMatch);
+                    let duplicate = secondLinkArray.includes(linkArray[0]);
 
-                    if (yearBool && kmMatch !== null && priceMatch !== null && priceType && startPrice !== null) {
+                    if (yearBool && kmMatch !== null && priceMatch !== null && priceType && startPrice !== null && !duplicate) {
                         yearArray.push(yearMatch[1]);
                         kmArray.push(kmMatch[1]);
                         priceArray.push(priceMatch[1]);
                         startPriceArray.push(startPrice[1]);
-                        secondLinkArray.push(linkArray[carDetailsLoop]);
-                    } else {
-                        //console.log("error");
+                        secondLinkArray.push(linkArray[0]);
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
             );
-            if(carDetailsLoop < linkArray.length) {
-                carDetailsLoop++;
+            if(linkArray.length > 0) {
+                linkArray.shift();
                 setTimeout(function() {
                     getAttributeLoop();
-                }, 750);
+                }, 150);
             } else {
                 //console.log(yearArray);
                 //console.log(kmArray);
