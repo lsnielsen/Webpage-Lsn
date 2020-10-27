@@ -94,7 +94,7 @@
                 linkArray.shift();
                 setTimeout(function() {
                     getAttributeLoop();
-                }, 150);
+                }, 50);
             } else {
                 //console.log(yearArray);
                 //console.log(kmArray);
@@ -145,7 +145,7 @@
             let temp = (startPriceArray[i] - priceArray[i]) / kmArray[i];
             $(".dataTable").append("<tr>" +
                 "<td>" + tableCounter + "</td>" +
-                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Link <a></td>" +
+                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Virker ikke <a></td>" +
                 "<td>" + yearArray[i] + "</td>" +
                 "<td>" + startPriceArray[i] + "</td>" +
                 "<td>" + priceArray[i] + "</td>" +
