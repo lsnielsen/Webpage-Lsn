@@ -87,7 +87,7 @@
                         startPriceArray.push(startPrice[1]);
                         secondLinkArray.push(linkArray[carDetailsLoop]);
                     } else {
-                        console.log("error");
+                        //console.log("error");
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
@@ -96,14 +96,14 @@
                 carDetailsLoop++;
                 setTimeout(function() {
                     getAttributeLoop();
-                }, 50);
+                }, 750);
             } else {
                 //console.log(yearArray);
                 //console.log(kmArray);
                 //console.log(priceArray);
                 //console.log(startPriceArray);
                 //console.log(secondLinkArray);
-                console.log(linkArray);
+                //console.log(linkArray);
                 calculateTheResult();
             }
         }
@@ -143,10 +143,11 @@
         let drivenKilometer;
         let finalResult;
         for (let i = 0; i < kmArray.length; i++) {
+            let tableCounter = i + 1;
             let temp = (startPriceArray[i] - priceArray[i]) / kmArray[i];
             $(".dataTable").append("<tr>" +
-                "<td>" + i + "</td>" +
-                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> <a></td>" +
+                "<td>" + tableCounter + "</td>" +
+                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Link <a></td>" +
                 "<td>" + yearArray[i] + "</td>" +
                 "<td>" + startPriceArray[i] + "</td>" +
                 "<td>" + priceArray[i] + "</td>" +
