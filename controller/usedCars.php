@@ -152,13 +152,15 @@
 
 		return [$array, $titleArray];
 	}
-	
-	
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+// File to be included in all controllers:
+    include "allIncludes.php";
+
 ?>

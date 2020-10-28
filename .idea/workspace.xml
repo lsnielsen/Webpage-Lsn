@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/projects/priceCalculator/input/inputHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/priceCalculator/input/inputHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/allIncludes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/diesel.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/diesel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/politics.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/politics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/runAndBike.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/runAndBike.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/stock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/usedCars.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usedCars.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +111,7 @@
       <workItem from="1603182727688" duration="1367000" />
       <workItem from="1603269095704" duration="4272000" />
       <workItem from="1603351655716" duration="1294000" />
+      <workItem from="1603881025036" duration="432000" />
     </task>
     <servers />
   </component>
