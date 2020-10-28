@@ -84,7 +84,6 @@
 	.searchField {
 		width: 300px;
 		background:linear-gradient(to bottom, #b3c6ff 5%, #e6e6e6 100%);
-		cursor:text;
 	}
 	
 	.frontpageButton {
