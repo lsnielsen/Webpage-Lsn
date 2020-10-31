@@ -66,6 +66,9 @@
 						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
 						<option class="carModelOptions" value="Saab 9-5">Saab 9-5</option>
 						<option class="carModelOptions" value="Ford Fiesta">Ford Fiesta</option>
+						<option class="carModelOptions" value="BMW ms-3-Serie">Bmw 3-serie</option>
+						<option class="carModelOptions" value="BMW ms-2-Serie">Bmw 2-serie</option>
+						<option class="carModelOptions" value="Peugeot 206">Peugeot 206+</option>
 					</select>
 				</form>
 
