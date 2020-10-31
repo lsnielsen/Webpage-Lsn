@@ -18,8 +18,7 @@
 			theKilometers = "-";
 		}
 		
-		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9]+) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
-		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
+		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9-]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
 		match = carRegexp.exec(data);
 		if (match !==  null) {
 			theCarModel = match[1];
