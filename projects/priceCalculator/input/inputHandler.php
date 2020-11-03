@@ -7,17 +7,15 @@
         model = $(".modelDropdown").text();
         const year = $(".yearDropdown").text();
         const km = $(".kmTxtValue").text();
-        const engine = $(".engineTxtValue").text();
-        const gears = $(".gearDropdown").text();
         const gearType = $(".gearTypeHolder").text();
+        const startPrice = $(".newPriceValue").text();
 
-        if (checkModel(model) && checkYear(year) && checkKm(km) && checkEngine(engine) && checkGear(gears)) {
+        if (checkModel(model) && checkYear(year) && checkKm(km) && checkStartPrice(startPrice)) {
             $(".theModel").text(model);
             $(".theYear").text(year);
             $(".theKm").text(km);
-            $(".theEngine").text(engine);
-            $(".theGears").text(gears);
             $(".theGeartype").text(gearType);
+            $(".theStartPrice").text(startPrice);
             $(".choosenInput").show();
             carGetter();
         } else {
@@ -40,13 +38,10 @@
         }
     }
     function checkKm (kmVar) {
-        return (/(^((?![\w\W]).)*[0-9]+((?![\w\W]).)*)/.test(kmVar))
+        return (/(^((?![\w\W]).)*[0-9]+((?![\w\W]).)*)/.test(kmVar));
     }
-    function checkEngine (engineVar) {
-        return (/(^((?![\w\W]).)*[0-9a-zA-Z,]((?![\w\W]).)*)/.test(engineVar))
-    }
-    function checkGear (gearVar) {
-        return (/(^((?![\w\W]).)*[0-9]((?![\w\W]).)*)/.test(gearVar))
+    function checkStartPrice(startPrice) {
+        return (/(^((?![\w\W]).)*[0-9]((?![\w\W]).)*)/.test(startPrice));
     }
 
 </script>
@@ -54,39 +49,60 @@
 <center class="choosenInput" style="margin-top: 90px; display: none;">
     <h4>
         Valgte model:
-        <span class="badge badge-secondary theModel">
-        </span>
+        <span class="badge badge-secondary theModel"> </span>
     </h4>
     <h4>
         Valgte årgang:
-        <span class="badge badge-secondary theYear">
-        </span>
+        <span class="badge badge-secondary theYear"> </span>
+    </h4>
+    <h4>
+        Valgte pris fra ny:
+        <span class="badge badge-secondary theStartPrice"> </span>
     </h4>
     <h4>
         Valgte km:
-        <span class="badge badge-secondary theKm">
-        </span>
+        <span class="badge badge-secondary theKm"> </span>
     </h4>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-warning">
+            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen per kilometer.
+        </li>
+    </ul>
+</center>
+
+<center class="theResults" style="margin-top: 90px; display: none;">
     <h4>
-        Valgte motor:
-        <span class="badge badge-secondary theEngine">
-        </span>
-    </h4>
-    <h4>
-        Valgte gear:
-        <span class="badge badge-secondary theGears">
-        </span>
-    </h4>
-    <h4>
-        Valgte gear type:
-        <span class="badge badge-secondary theGeartype">
-        </span>
+        Gennemsnitlige pris per kilometer:
+        <span class="badge badge-secondary theAveragePricePerKm"> </span>
     </h4>
     <ul class="list-group">
         <li class="list-group-item list-group-item-success">
-            Vi vil nu søge på bilbasen efter biler, der har de valgte input, og finde gennemsnits prisen for de biler
+            Med den ovenstående pris, har vi beregnet, at din bil er følgende værd:
         </li>
     </ul>
+    <h4 style="margin-top: 10px;">
+        Prisen for din brugte bil:
+        <span class="badge badge-secondary theResultPrice"> </span>
+        DKK
+    </h4>
+    <h4 style="margin-top: 10px;">
+        Her kan du se de modeller vi fandt på bilbasen:
+    </h4>
+    <table class="table table-striped table-dark dataTable">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Link</th>
+                <th scope="col">Årgang</th>
+                <th scope="col">Ny pris</th>
+                <th scope="col">Brugt pris</th>
+                <th scope="col">Km</th>
+                <th scope="col">Tab/km</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+        </tbody>
+    </table>
 </center>
 
 

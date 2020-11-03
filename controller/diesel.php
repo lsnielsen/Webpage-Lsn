@@ -101,7 +101,10 @@
 		unset($_POST['kr']);
 		include ("../projects/diesel/view/dieselPage.php");
 	}
-		
+
+// File to be included in all controllers:
+	include "allIncludes.php";
+
 ?>
 
 

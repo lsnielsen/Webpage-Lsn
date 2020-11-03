@@ -37,19 +37,11 @@
 
             <div class="makeSpace"> </div>
 
+            <?php include "input/startPrice.php"; ?>
+
+            <div class="makeSpace"> </div>
+
             <?php include "input/kilometers.php"; ?>
-
-            <div class="makeSpace"> </div>
-
-            <?php include "input/engine.php"; ?>
-
-            <div class="makeSpace"> </div>
-
-            <?php include "input/gears.php"; ?>
-
-            <div class="makeSpace"> </div>
-
-            <?php include "input/gearType.php"; ?>
 
             <div class="makeSpace"> </div>
 

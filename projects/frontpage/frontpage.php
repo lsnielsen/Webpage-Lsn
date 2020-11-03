@@ -62,7 +62,7 @@
 			<div id="my-signin2"></div>
 			<form class="frontpageButton" method="get" id="searchArea" action="https://www.google.com/search" target="_blank">
 				<center>
-					<input class="frontpageButton searchField" name="q" type="text" size="40"
+					<input class="frontpageButton searchField" name="q" type="text" size="40" style="cursor: text;"
                            placeholder="<?php echo $txtFile['searchPlaceholder']; ?>"/>
 					<input class="frontpageButton" type="submit" name="sa" value="<?php echo $txtFile['searchButton']; ?>" style="margin-top: 5px;" />
 				</center>

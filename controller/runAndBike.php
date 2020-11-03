@@ -126,5 +126,7 @@
 		}
 		return $km;
 	}
-	
+
+// File to be included in all controllers:
+    include "allIncludes.php";
 ?>

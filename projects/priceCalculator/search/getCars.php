@@ -2,24 +2,28 @@
 
 <script>
     loopI = 1;
-    carDetailsLoop = 0;
     linkArray = new Array();
     yearArray = new Array();
     kmArray = new Array();
     priceArray = new Array();
-    gearArray = new Array();
-    geartypeArray = new Array();
+    startPriceArray = new Array();
+    secondLinkArray = new Array();
+    let bilbasenUrl;
 
     function carGetter()
     {
         const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
         const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
-        let bilbasenUrl;
-        if (typeof(model)    !== 'undefined') {
+        const endUrlOne = "?includeengroscvr=true&YearFrom=";
+        const endUrlTwo = "&YearTo=";
+        const endUrlThree = "&pricefrom=0&includeleasing=true";
+
+        let theChosenYear = $(".theYear").text();
+        if (typeof (model) !== 'undefined') {
             let temporary = model.split(" ");
-            bilbasenUrl = basicStartUrl + temporary[0] + "/" + temporary[1] + basicEndUrl;
+            bilbasenUrl = basicStartUrl + temporary[0] + "/" + temporary[1] + endUrlOne + theChosenYear + endUrlTwo + theChosenYear + endUrlThree;
+            console.log(bilbasenUrl);
         } else {
-            console.log("what");
             bilbasenUrl = basicStartUrl + "audi" + "/" + "a3" + basicEndUrl;
         }
         setTimeout(function() {
@@ -66,65 +70,104 @@
         getAttributeLoop();
         function getAttributeLoop()
         {
-            $.get(linkArray[carDetailsLoop],
+            $.get(linkArray[0],
                 function (data) {
-                    let yearMatch = /<span class="value">.+([0-9]{4})<\/span>/.exec(data);
-                    let kmMatch = /Km.* ([0-9]{1,3}\.[0-9]{3}).*<\/span>.*<\/p>.*\/section>.*<section id="bbVipUsage"/s.exec(data);
-                    let gearMatch = /<td class="selectedcar">([0-9]) gear<\/td>/.exec(data);
-                    let gearTypeMatch = /<td class="selectedcar">(Automatisk|Manuel)<\/td>/.exec(data);
-                    let priceMatch = /<span class="value">([0-9]{1,3}\.[0-9]{3})[ a-z\.\/]*<\/span>/.exec(data);
+                    let yearMatch = /<span class="value">\d{1,2}\/([0-9]{4})<\/span>/.exec(data);
+                    let kmMatch = /Km<\/span>\s*<span class="value">\s*([0-9]{1,3}\.[0-9]{3})\s*<\/span>\s*<\/p>\s*<\/section>\s*<section id="bbVipUsage" class="section">/.exec(data);
+                    let priceMatch = /class="label">Pris<\/span>\s*<span class="value">([0-9]{1,3}\.[0-9]{3}) (kr\.|kr\.\/md\.)<\/span>/.exec(data);
+                    let startPrice = /<tr>\s*<td style="color: #888;width:150px;">Nypris<\/td>[\w\W]*"Hvad betyder nypris?[\w\W]*<td class="selectedcar">([0-9]{1,3}\.[0-9]{3}) kr<\/td>/.exec(data);
+                    let priceType = checkPriceType(priceMatch);
+                    let yearBool = checkForYearMatch(yearMatch);
+                    let duplicate = secondLinkArray.includes(linkArray[0]);
 
-                    if (yearMatch !== null) {
+                    if (yearBool && kmMatch !== null && priceMatch !== null && priceType && startPrice !== null && !duplicate) {
                         yearArray.push(yearMatch[1]);
-                    } else {
-                        //console.log("No year match " + linkArray[i]);
-                        yearArray.push("-");
-                    }
-                    if (kmMatch !== null) {
                         kmArray.push(kmMatch[1]);
-                    } else {
-                        //console.log("No km match " + linkArray[i]);
-                        kmArray.push("-");
-                    }
-                    if (gearMatch !== null) {
-                        gearArray.push(gearMatch[1]);
-                    } else {
-                        //console.log("No gear match " + linkArray[i]);
-                        gearArray.push("-");
-                    }
-                    if (gearTypeMatch !== null) {
-                        geartypeArray.push(gearTypeMatch[1]);
-                    } else {
-                        //console.log("No geartype match "  + linkArray[i]);
-                        geartypeArray.push("-");
-                    }
-                    if (priceMatch !== null) {
                         priceArray.push(priceMatch[1]);
-                    } else {
-                        //console.log("No price match "  + linkArray[i]);
-                        priceArray.push("-");
+                        startPriceArray.push(startPrice[1]);
+                        secondLinkArray.push(linkArray[0]);
                     }
                 },
                 'html' // or 'text', 'xml', 'more'
             );
-            if(carDetailsLoop < linkArray.length) {
-                carDetailsLoop++;
-                console.log("loop: " + carDetailsLoop);
+            if(linkArray.length > 0) {
+                linkArray.shift();
                 setTimeout(function() {
                     getAttributeLoop();
-                }, 150);
+                }, 50);
             } else {
                 console.log(yearArray);
                 console.log(kmArray);
-                console.log(gearArray);
-                console.log(geartypeArray);
                 console.log(priceArray);
+                console.log(startPriceArray);
+                console.log(secondLinkArray);
                 console.log(linkArray);
+                calculateTheResult();
             }
         }
     }
 
+    function checkForYearMatch(yearMatch)
+    {
+        let chosenYear = $(".theYear").text();
+        if (yearMatch !== null) {
+            if (chosenYear - 1 == yearMatch[1] || chosenYear == yearMatch[1] || chosenYear + 1 == yearMatch[1]) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 
+    function checkPriceType(priceMatch)
+    {
+        if (priceMatch !== null) {
+            if (priceMatch[2] == "kr./md.") {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function calculateTheResult()
+    {
+        let pricePerKilometer = 0;
+        let starterPrice;
+        let drivenKilometer;
+        let finalResult;
+        for (let i = 0; i < kmArray.length; i++) {
+            let tableCounter = i + 1;
+            let temp = (startPriceArray[i] - priceArray[i]) / kmArray[i];
+            $(".dataTable").append("<tr>" +
+                "<td>" + tableCounter + "</td>" +
+                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Virker ikke <a></td>" +
+                "<td>" + yearArray[i] + "</td>" +
+                "<td>" + startPriceArray[i] + "</td>" +
+                "<td>" + priceArray[i] + "</td>" +
+                "<td>" + kmArray[i] + "</td>" +
+                "<td>" + temp.toFixed(2) + "</td>" +
+                "</tr>");
+            pricePerKilometer = pricePerKilometer + temp;
+        }
+        pricePerKilometer = (pricePerKilometer / kmArray.length).toFixed(2);
+        $(".theAveragePricePerKm").text(pricePerKilometer);
+        starterPrice = $(".theStartPrice").text();
+        drivenKilometer = $(".theKm").text();
+        finalResult = (starterPrice - (drivenKilometer * pricePerKilometer)).toFixed(2);
+        $(".theResultPrice").text(finalResult);
+
+        //console.log("pris/km: " + pricePerKilometer);
+        //console.log("start pris: " + starterPrice);
+        //console.log("Antal km: " + drivenKilometer);
+        //console.log("Resultat: " + finalResult);
+
+        $(".theResults").show();
+    }
 
 
 
