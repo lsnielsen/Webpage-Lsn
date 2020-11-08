@@ -8,6 +8,7 @@
     priceArray = new Array();
     startPriceArray = new Array();
     secondLinkArray = new Array();
+    pricePerKilometerArray = new Array();
     let bilbasenUrl;
 
     function carGetter()
@@ -133,43 +134,5 @@
             return false;
         }
     }
-
-    function calculateTheResult()
-    {
-        let pricePerKilometer = 0;
-        let starterPrice;
-        let drivenKilometer;
-        let finalResult;
-        for (let i = 0; i < kmArray.length; i++) {
-            let tableCounter = i + 1;
-            let temp = (startPriceArray[i] - priceArray[i]) / kmArray[i];
-            $(".dataTable").append("<tr>" +
-                "<td>" + tableCounter + "</td>" +
-                "<td><a href=\"" + secondLinkArray[i] + "\" target='_blank'> Virker ikke <a></td>" +
-                "<td>" + yearArray[i] + "</td>" +
-                "<td>" + startPriceArray[i] + "</td>" +
-                "<td>" + priceArray[i] + "</td>" +
-                "<td>" + kmArray[i] + "</td>" +
-                "<td>" + temp.toFixed(2) + "</td>" +
-                "</tr>");
-            pricePerKilometer = pricePerKilometer + temp;
-        }
-        pricePerKilometer = (pricePerKilometer / kmArray.length).toFixed(2);
-        $(".theAveragePricePerKm").text(pricePerKilometer);
-        starterPrice = $(".theStartPrice").text();
-        drivenKilometer = $(".theKm").text();
-        finalResult = (starterPrice - (drivenKilometer * pricePerKilometer)).toFixed(2);
-        $(".theResultPrice").text(finalResult);
-
-        //console.log("pris/km: " + pricePerKilometer);
-        //console.log("start pris: " + starterPrice);
-        //console.log("Antal km: " + drivenKilometer);
-        //console.log("Resultat: " + finalResult);
-
-        $(".theResults").show();
-    }
-
-
-
 
 </script>
