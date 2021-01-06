@@ -1,5 +1,6 @@
 
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <div style="box-sizing:border-box;display:flex;justify-content:center;align-items:center">
     <h1> Sentence Generator</h1>
     <button style="" onclick="sentence()">Refresh<i class="fa fa-refresh" aria-hidden="true"></i></button>
@@ -10,6 +11,8 @@
 
 
 <script>
+    let nounsII = '../projects/langTrainer/nouns.js';
+    let adjectivesII = '../projects/langTrainer/adjectives.js';
     let verbs, nouns, adjectives, adverbs, preposition;
     nouns = ["bird", "clock", "boy", "plastic", "duck", "teacher", "old lady", "professor", "hamster", "dog"];
     verbs = ["kicked", "ran", "flew", "dodged", "sliced", "rolled", "died", "breathed", "slept", "killed"];
@@ -21,6 +24,20 @@
         return Math.floor(Math.random() * 5);
     }
 
+    $.getScript(adjectivesII, function(){
+        $(document).ready(function(){
+            console.log(adjectiveArray.length);
+            adjectives = adjectiveArray;
+        });
+    });
+
+    $.getScript(nounsII, function(){
+        $(document).ready(function(){
+            console.log(nounArray.length);
+            nouns = nounArray;
+        });
+    });
+
     function sentence() {
         const rand1 = Math.floor(Math.random() * 10);
         const rand2 = Math.floor(Math.random() * 10);
@@ -30,6 +47,7 @@
         const rand6 = Math.floor(Math.random() * 10);
 //                var randCol = [rand1,rand2,rand3,rand4,rand5];
 //                var i = randGen();
+        console.log(rand1 + ", " + rand2 + ", " + rand3 + ", " + rand4 + ", " + rand5 + ", " + rand6);
         const content = "The " + adjectives[rand1] + " " + nouns[rand2] + " " + adverbs[rand3] + " " + verbs[rand4] + " because some " + nouns[rand1] + " " + adverbs[rand1] + " " + verbs[rand1] + " " + preposition[rand1] + " a " + adjectives[rand2] + " " + nouns[rand5] + " which, became a " + adjectives[rand3] + ", " + adjectives[rand4] + " " + nouns[rand6] + ".";
 
         document.getElementById('sentence').innerHTML = "&quot;" + content + "&quot;";
