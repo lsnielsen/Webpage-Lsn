@@ -64,7 +64,7 @@
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
-        width: 73px;
+        width: 73cr;
        /*                top: 20vh;*/
     }
 
