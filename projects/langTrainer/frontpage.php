@@ -1,33 +1,34 @@
 
 
 <html lang="en">
-<head>
-    <script type="module" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <title>
-        Sprog træner
-    </title>
-</head>
-<body>
-    <div style="box-sizing:border-box;display:flex;justify-content:center;align-items:center">
-        <h1> Sentence Generator</h1>
-        <button style="" onclick="sentence()">
-            Refresh
-            <i class="fa fa-refresh" aria-hidden="true"></i>
-        </button>
-    </div>
-    <div class="container">
-        <center>
-            <p id="sentence"></p>
-        </center>
-    </div>
-</body>
+    <head>
+        <script type="module" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <title>
+            Sprog træner
+        </title>
+    </head>
+    <body>
+        <div style="box-sizing:border-box;display:flex;justify-content:center;align-items:center">
+            <h1> Sentence Generator</h1>
+            <button style="" onclick="sentence()">
+                Refresh
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="container">
+            <center>
+                <p id="sentence"></p>
+            </center>
+        </div>
+    </body>
+</html>
 
-<?php include "adjectives.php"; ?>
-<?php include "nouns.php"; ?>
-<?php include "prepositions.php"; ?>
-<?php include "verbs.php"; ?>
-<?php include "adverbs.php"; ?>
+<?php include "words/adjectives.php"; ?>
+<?php include "words/nouns.php"; ?>
+<?php include "words/prepositions.php"; ?>
+<?php include "words/verbs.php"; ?>
+<?php include "words/adverbs.php"; ?>
 <script>
     function randGen() {
         return Math.floor(Math.random() * 5);
@@ -70,7 +71,7 @@
             nouns[noun4] + ".";
 
         $("#sentence").text(content);
-    };
+    }
     sentence();
 </script>
 
