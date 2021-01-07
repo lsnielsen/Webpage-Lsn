@@ -25,17 +25,19 @@
 
 <?php include "adjectives.php"; ?>
 <?php include "nouns.php"; ?>
+<?php include "prepositions.php"; ?>
+<?php include "verbs.php"; ?>
+<?php include "adverbs.php"; ?>
 <script>
-    let verbs = ["kicked", "ran", "flew", "dodged", "sliced", "rolled", "died", "breathed", "slept", "killed"];
-    let adverbs = ["slowly", "elegantly", "precisely", "quickly", "sadly", "humbly", "proudly", "shockingly", "calmly", "passionately"];
-    let preposition = ["down", "into", "up", "on", "upon", "below", "above", "through", "across", "towards"];
-
     function randGen() {
         return Math.floor(Math.random() * 5);
     }
 
     let adjLength = adjectives.length;
     let nounLength = nouns.length;
+    let prepLength = prepositions.length;
+    let verbLength = verbs.length;
+    let advLength = adverbs.length;
 
     function sentence() {
         const adj1 = Math.floor(Math.random() * adjLength);
@@ -46,11 +48,11 @@
         const noun2 = Math.floor(Math.random() * nounLength);
         const noun3 = Math.floor(Math.random() * nounLength);
         const noun4 = Math.floor(Math.random() * nounLength);
-        const adv1 = Math.floor(Math.random() * adverbs.length);
-        const adv2 = Math.floor(Math.random() * adverbs.length);
-        const pre1 = Math.floor(Math.random() * preposition.length);
-        const ver1 = Math.floor(Math.random() * verbs.length);
-        const ver2 = Math.floor(Math.random() * verbs.length);
+        const pre1 = Math.floor(Math.random() * prepLength);
+        const adv1 = Math.floor(Math.random() * advLength);
+        const adv2 = Math.floor(Math.random() * advLength);
+        const ver1 = Math.floor(Math.random() * verbLength);
+        const ver2 = Math.floor(Math.random() * verbLength);
 
         const content = "The " +
             adjectives[adj1] + " " +
@@ -60,7 +62,7 @@
             nouns[noun2] + " " +
             adverbs[adv2] + " " +
             verbs[ver2] + " " +
-            preposition[pre1] + " a " +
+            prepositions[pre1] + " a " +
             adjectives[adj2] + " " +
             nouns[noun3] + " which, became a " +
             adjectives[adj3] + ", " +
