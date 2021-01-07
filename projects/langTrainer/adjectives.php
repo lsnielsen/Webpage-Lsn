@@ -1,8 +1,8 @@
-// yes, we're going to be crude and load all the words into memory... it's really not so bad.
-// the list comes from this gem:
-// http://www.ashley-bovan.co.uk/words/partsofspeech.html
 
-let adjectiveArray = [
+
+<script>
+
+let adjectives = [
 "abased",
 "abject",
 "able",
@@ -5178,4 +5178,7 @@ let adjectiveArray = [
 "zinky",
 "zippy",
 "zonate",
-"zoning"];
+"zoning"
+];
+
+</script>
