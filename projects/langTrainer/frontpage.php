@@ -15,16 +15,16 @@
             Sentence Generator
         </h1>
         <div class="jumbotron bg-info">
-            <h1>
-                <small id="sentence" class="text-center text-body"></small>
+            <h1 class="text-center">
+                <small id="sentence" class="text-body"></small>
             </h1>
             <div style="margin-top: 20px;"></div>
-            <h1>
-                <small id="translatedSentence" class="text-center text-body" style="display: none;"></small>
+            <h1 id="translateBox" class="text-center">
+                <small id="translatedSentence" class="text-secondary"></small>
             </h1>
             <div class="row" style="margin-top: 100px;">
                 <div class="col-sm-3"></div>
-                <button onclick="sentence()" class="btn btn-primary active col-sm-2">
+                <button onclick="sentence()" id="newSentence" class="btn btn-primary active col-sm-2">
                     Tryk her for at få en ny sætning
                 </button>
                 <div class="col-sm-1"></div>
@@ -56,6 +56,7 @@
     let prepLength = prepositions.length;
     let verbLength = verbs.length;
     let advLength = adverbs.length;
+    let theSenctence;
 
     function sentence() {
         const adj1 = Math.floor(Math.random() * adjLength);
@@ -88,13 +89,19 @@
             nouns[noun4] + ".";
 
         $("#sentence").text(content);
-        $("#translatedSentence").text(content);
-        $("#translatedSentence").hide();
+        theSenctence = content;
+        //$("#translatedSentence").text(content);
+        //$("#translateBox").hide();
     }
     sentence();
 
     $("#translation").click(function () {
-        $("#translatedSentence").show();
+        $("#translatedSentence").text(theSenctence);
+        $("#translateBox").show();
+    });
+
+    $("#newSentence").click(function () {
+        $("#translateBox").hide();
     });
 
 </script>
