@@ -2,25 +2,34 @@
 
 <html lang="en">
     <head>
-        <script type="module" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Webpage-Lsn/projects/stocks/css/table.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <title>
             Sprog træner
         </title>
     </head>
-    <body>
-        <div style="box-sizing:border-box;display:flex;justify-content:center;align-items:center">
-            <h1> Sentence Generator</h1>
-            <button style="" onclick="sentence()">
-                Refresh
-                <i class="fa fa-refresh" aria-hidden="true"></i>
+    <body class="p-3 mb-2 bg-secondary">
+        <h1 class="jumbotron text-center">
+            Sentence Generator
+        </h1>
+        <div class="jumbotron bg-info">
+            <h1>
+                <small id="sentence" class="text-center text-body"></small>
+            </h1>
+            <div class="row" style="margin-top: 500px;">
+                <div class="col-sm-5"></div>
+                <button onclick="sentence()" class="btn btn-primary active col-sm-2">
+                    Tryk her for at få en ny sætning
+                </button>
+            </div>
+        </div>
+        <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
+            <button type="submit" class="btn btn-dark btn-lg active">
+                Tilbage til forsiden
             </button>
-        </div>
-        <div class="container">
-            <center>
-                <p id="sentence"></p>
-            </center>
-        </div>
+        </form>
     </body>
 </html>
 
@@ -74,5 +83,3 @@
     }
     sentence();
 </script>
-
-<?php include "style.php"; ?>
