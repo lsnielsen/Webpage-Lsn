@@ -4,8 +4,8 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="/Webpage-Lsn/projects/stocks/css/table.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <title>
             Sprog træner
         </title>
@@ -14,13 +14,14 @@
         <h1 class="jumbotron text-center">
             Sentence Generator
         </h1>
+        <div id="google_translate_element"></div>
         <div class="jumbotron bg-info">
             <h1 class="text-center">
                 <small id="sentence" class="text-body"></small>
             </h1>
             <div style="margin-top: 20px;"></div>
             <h1 id="translateBox" class="text-center">
-                <small id="translatedSentence" class="text-secondary"></small>
+                <small id="translatedSentence" class="text-warning "></small>
             </h1>
             <div class="row" style="margin-top: 100px;">
                 <div class="col-sm-3"></div>
@@ -50,6 +51,17 @@
     $(document).ready(function(){
         sentence();
     });
+
+    $("#translation").click(function () {
+        $("#translatedSentence").text(theSenctence);
+        $("#translateBox").show();
+    });
+
+    $("#newSentence").click(function () {
+        sentence();
+        $("#translateBox").hide();
+    });
+
     function randGen() {
         return Math.floor(Math.random() * 5);
     }
@@ -93,18 +105,11 @@
 
         $("#sentence").text(content);
         theSenctence = content;
-        //$("#translatedSentence").text(content);
-        //$("#translateBox").hide();
     }
 
-    $("#translation").click(function () {
-        $("#translatedSentence").text(theSenctence);
-        $("#translateBox").show();
-    });
-
-    $("#newSentence").click(function () {
-        sentence();
-        $("#translateBox").hide();
-    });
-
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
 </script>
+
+
