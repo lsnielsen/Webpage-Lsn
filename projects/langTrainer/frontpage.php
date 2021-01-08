@@ -18,6 +18,7 @@
             <h1>
                 <small id="sentence" class="text-center text-body"></small>
             </h1>
+            <div style="margin-top: 20px;"></div>
             <h1>
                 <small id="translatedSentence" class="text-center text-body" style="display: none;"></small>
             </h1>
@@ -27,7 +28,7 @@
                     Tryk her for at få en ny sætning
                 </button>
                 <div class="col-sm-1"></div>
-                <button class="btn btn-info active col-sm-2">
+                <button id="translation" class="btn btn-info active col-sm-2">
                     Tryk her for at se oversættelsen
                 </button>
             </div>
@@ -88,6 +89,12 @@
 
         $("#sentence").text(content);
         $("#translatedSentence").text(content);
+        $("#translatedSentence").hide();
     }
     sentence();
+
+    $("#translation").click(function () {
+        $("#translatedSentence").show();
+    });
+
 </script>
