@@ -24,7 +24,7 @@
             </h1>
             <div class="row" style="margin-top: 100px;">
                 <div class="col-sm-3"></div>
-                <button onclick="sentence()" id="newSentence" class="btn btn-primary active col-sm-2">
+                <button id="newSentence" class="btn btn-primary active col-sm-2">
                     Tryk her for at få en ny sætning
                 </button>
                 <div class="col-sm-1"></div>
@@ -47,6 +47,9 @@
 <?php include "words/verbs.php"; ?>
 <?php include "words/adverbs.php"; ?>
 <script>
+    $(document).ready(function(){
+        sentence();
+    });
     function randGen() {
         return Math.floor(Math.random() * 5);
     }
@@ -93,7 +96,6 @@
         //$("#translatedSentence").text(content);
         //$("#translateBox").hide();
     }
-    sentence();
 
     $("#translation").click(function () {
         $("#translatedSentence").text(theSenctence);
@@ -101,6 +103,7 @@
     });
 
     $("#newSentence").click(function () {
+        sentence();
         $("#translateBox").hide();
     });
 
