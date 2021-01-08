@@ -75,6 +75,9 @@
 	#priceButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #d67813 100%);
 	}
+	#langButton {
+		background:linear-gradient(to bottom, #b3c6ff 5%, #13d644 100%);
+	}
 	#searchArea {
 		margin-top: 20px;
 		width: 400px;
