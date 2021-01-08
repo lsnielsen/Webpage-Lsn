@@ -14,7 +14,7 @@
         <h1 class="jumbotron text-center">
             Sentence Generator
         </h1>
-        <div id="google_translate_element"></div>
+        <div id="translatorSelector"></div>
         <div class="jumbotron bg-info">
             <h1 class="text-center">
                 <small id="sentence" class="text-body"></small>
@@ -108,7 +108,7 @@
     }
 
     function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'translatorSelector');
     }
 </script>
 
