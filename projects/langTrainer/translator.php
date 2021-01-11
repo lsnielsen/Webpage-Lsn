@@ -18,6 +18,8 @@
 <!-- 4. Markup for the language selection tool (this is where the localization widget will appear) -->
 <div id="selectLanguageDropdown" class="localizationTool"></div>
 
+<?php include "dropdown.php"; ?>
+
 <!-- ... just some more content -->
 <p id="welcomeText">Welcome! the dropdown should go above this text!</p>
 <input type="text" placeholder="test placeholder"></input>
