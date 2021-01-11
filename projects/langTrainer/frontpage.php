@@ -14,7 +14,6 @@
         <h1 class="jumbotron text-center">
             Sentence Generator
         </h1>
-        <div id="translatorSelector"></div>
         <div class="jumbotron bg-info">
             <h1 class="text-center">
                 <small id="sentence" class="text-body"></small>
@@ -47,6 +46,7 @@
 <?php include "words/prepositions.php"; ?>
 <?php include "words/verbs.php"; ?>
 <?php include "words/adverbs.php"; ?>
+<?php include "words/pronouns.php"; ?>
 <script>
     $(document).ready(function(){
         sentence();
@@ -71,6 +71,7 @@
     let prepLength = prepositions.length;
     let verbLength = verbs.length;
     let advLength = adverbs.length;
+    let proLength = accusativeGender.length;
     let theSenctence;
 
     function sentence() {
@@ -87,18 +88,22 @@
         const adv2 = Math.floor(Math.random() * advLength);
         const ver1 = Math.floor(Math.random() * verbLength);
         const ver2 = Math.floor(Math.random() * verbLength);
+        const pro1 = Math.floor(Math.random() * proLength);
+        const pro2 = Math.floor(Math.random() * proLength);
 
         const content = "The " +
             adjectives[adj1] + " " +
             nouns[noun1] + " " +
             adverbs[adv1] + " " +
-            verbs[ver1] + " because some " +
+            verbs[ver1] + " " +
+            accusativeGender[pro1] + " because some " +
             nouns[noun2] + " " +
             adverbs[adv2] + " " +
             verbs[ver2] + " " +
+            accusativeGender[pro2]  + ", " +
             prepositions[pre1] + " a " +
             adjectives[adj2] + " " +
-            nouns[noun3] + " which, became a " +
+            nouns[noun3] + ", which became a " +
             adjectives[adj3] + ", " +
             adjectives[adj4] + " " +
             nouns[noun4] + ".";
@@ -107,9 +112,8 @@
         theSenctence = content;
     }
 
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'}, 'translatorSelector');
-    }
 </script>
 
 
+
+<?php include "translator.php"; ?>
