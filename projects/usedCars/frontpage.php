@@ -25,27 +25,7 @@
                 </a>
                 <?php echo $txtFile['resultTxt']; ?>
             </h1>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h3>Her kan du vælge hvilken bilmodel du gerne vil se nærmere på:</h3>
-                    </div>
-                    <div class="col-sm-2">
-                        <h3>
-                            <?php include "dropdownII.php"; ?>
-                        </h3>
-                    </div>
-                    <div class="col-sm-2">
-                        <h3>
-                            <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-                                <button class="frontpageStyle" style="width: 160px;" type="submit">
-                                    <?php echo $txtFile['back']; ?>
-                                </button>
-                            </form>
-                        </h3>
-                    </div>
-                </div>
-            </div>
+                            <?php include "searchInfo.php"; ?>
 				
                 <?php //include "dropdown.php"; ?>
 
