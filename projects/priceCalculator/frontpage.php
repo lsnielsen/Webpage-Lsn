@@ -1,6 +1,7 @@
 
 <!doctype html>
 <?php include "search/getCars.php"; ?>
+<?php include "search/result.php"; ?>
 <html lang="en">
     <head>
         <meta charset="utf-8">
