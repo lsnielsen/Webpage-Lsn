@@ -11,7 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
-	<body class="p-3 mb-2 bg-secondary">
+	<body class="p-3 mb-2 bg-success">
             <h1 class="jumbotron text-center">
                 <?php echo $txtFile['linkTxt']; ?>
                 <a href="https:\\www.bilbasen.dk" target="_blank" class="text-body">
