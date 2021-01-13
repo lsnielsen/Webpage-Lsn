@@ -1,15 +1,16 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-2 pt-3"></div>
+        <div class="col-sm-4 text-center">
             <h3 class="pt-3">
                 Her kan du vælge hvilken bilmodel du gerne vil se nærmere på:
             </h3>
         </div>
-        <div class="form-group col-sm-3 pt-3">
+        <div class="form-group col-sm-2 pt-3">
             <select class="carModel custom-select form-select form-select-lg mb-3" aria-label=".form-select-lg">
                 <option> <?php echo $txtFile['chooseModel']; ?> </option>
-                <h5 class="dropdown-header">Volvo</h5>
+                <option class="dropdown-item" style="font-size: 30px;" disabled>Volvo</option>
                 <option class="dropdown-item" value="Volvo V60">Volvo V60</option>
                 <option class="dropdown-item" value="Volvo XC40">Volvo XC40</option>
                 <option class="dropdown-item" value="Volvo V40">Volvo V40</option>
@@ -32,16 +33,16 @@
                 <option class="dropdown-item" value="Peugeot 206">Peugeot 206+</option>
             </select>
         </div>
-        <div class="col-sm-2">
+    </div>
+        <div class="col-sm-2 pt-3">
             <h3>
                 <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-                    <button class="frontpageStyle" style="width: 160px;" type="submit">
+                    <button class="btn btn-info btn-lg active" type="submit">
                         <?php echo $txtFile['back']; ?>
                     </button>
                 </form>
             </h3>
         </div>
-    </div>
 </div>
 
 <div class="startSearch searchTxt infoTxt">
