@@ -7,79 +7,50 @@
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/css/usedCars.css" type="text/css">	
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	</head>
-	<body style="background-color: #ccff99;">
-		<h1>
-            <?php echo $txtFile['linkTxt']; ?>
-			<a href="https:\\www.bilbasen.dk" target="_blank">
-                <?php echo $txtFile['linkOne']; ?>
-			</a>
-            <?php echo $txtFile['oneMore']; ?>
-			<a href="https:\\www.guloggratis.dk" target="_blank">
-                <?php echo $txtFile['linkTwo']; ?>
-
-			</a>
-            <?php echo $txtFile['resultTxt']; ?>
-		</h1>
-
-				<form method="post">
-					<button type="submit" 
-							id="arrayButton" 
-							name="usedCarsArray"
-							style="display: none;" 
-							action="/Webpage-Lsn/controller/usedCars.php"> 
-					</button>
-				</form>
-				
-				<div class="startSearch searchTxt infoTxt">
-                    <?php echo $txtFile['searchOne']; ?>  <center class="theChoosenModel"> </center>
-                    <?php echo $txtFile['searchTwo']; ?>
+	<body class="p-3 mb-2 bg-secondary">
+            <h1 class="jumbotron text-center">
+                <?php echo $txtFile['linkTxt']; ?>
+                <a href="https:\\www.bilbasen.dk" target="_blank" class="text-body">
+                    <u>
+                        <?php echo $txtFile['linkOne']; ?>
+                    </u>
+                </a>
+                <?php echo $txtFile['oneMore']; ?>
+                <a href="https:\\www.guloggratis.dk" target="_blank" class="text-body">
+                    <u>
+                        <?php echo $txtFile['linkTwo']; ?>
+                    </u>
+                </a>
+                <?php echo $txtFile['resultTxt']; ?>
+            </h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Her kan du vælge hvilken bilmodel du gerne vil se nærmere på:</h3>
+                    </div>
+                    <div class="col-sm-2">
+                        <h3>
+                            <?php include "dropdownII.php"; ?>
+                        </h3>
+                    </div>
+                    <div class="col-sm-2">
+                        <h3>
+                            <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
+                                <button class="frontpageStyle" style="width: 160px;" type="submit">
+                                    <?php echo $txtFile['back']; ?>
+                                </button>
+                            </form>
+                        </h3>
+                    </div>
                 </div>
-				<div class="middleSearch searchTxt infoTxt">
-                    <?php echo $txtFile['searchThree']; ?>
-					<div id="bilbasenurls" style="margin-left: 500px; margin-top: -25px;"> </div>
-                    <?php echo $txtFile['searchFour']; ?>
-					<div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div>
-                    <?php echo $txtFile['searchFive']; ?>
-				</div>
-				<div class="endSearch searchTxt infoTxt">
-                    <?php echo $txtFile['searchFinish']; ?>
-				</div>
+            </div>
 				
-					
-				<form class="modelDropdown">
-					<label class="infoTxt">
-                        <?php echo $txtFile['dropdownTxt']; ?>
-                    </label>
-					<select class="carModel frontpageStyle">
-						<option style="font-size: 20px;">
-                            <?php echo $txtFile['chooseModel']; ?>
-                        </option>
-						<option class="carModelOptions" value="Volvo V60">Volvo V60</option>
-						<option class="carModelOptions" value="Volvo XC40">Volvo XC40</option>
-						<option class="carModelOptions" value="Volvo V40">Volvo V40</option>
-						<option class="carModelOptions" value="vw t-roc">Vw T-roc</option>
-						<option class="carModelOptions" value="Volvo V40%20CC V40CC">Volvo V40 CC</option>
-						<option class="carModelOptions" value="Audi A3">Audi A3</option>
-						<option class="carModelOptions" value="Audi A4">Audi A4</option>
-						<option class="carModelOptions" value="Audi A6">Audi A6</option>
-						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
-						<option class="carModelOptions" value="Saab 9-5">Saab 9-5</option>
-						<option class="carModelOptions" value="Ford Fiesta">Ford Fiesta</option>
-						<option class="carModelOptions" value="BMW ms-3-Serie">Bmw 3-serie</option>
-						<option class="carModelOptions" value="BMW ms-2-Serie">Bmw 2-serie</option>
-						<option class="carModelOptions" value="Peugeot 206">Peugeot 206+</option>
-					</select>
-				</form>
+                <?php //include "dropdown.php"; ?>
 
-				<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-					<button class="frontpageStyle" style="width: 160px;" id="backButton" type="submit">
-                        <?php echo $txtFile['back']; ?>
-					</button>
-				</form>
-		
-		<?php 	
+
+        <?php
 			if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
 				echo "<h3>";
 				echo $txtFile['nrOfCars'];
