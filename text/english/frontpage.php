@@ -18,6 +18,7 @@ return
         'searchPlaceholder' => 'Enter search form',
         'searchButton' => 'Click to search using google',
         'priceCalc' => 'Used car price calculator',
+        'langTrainer' => 'Language coach',
     ];
 
 

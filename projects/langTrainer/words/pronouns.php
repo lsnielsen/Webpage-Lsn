@@ -1,0 +1,98 @@
+
+
+<script>
+
+        let nominativeGender = [
+                'they',
+                'he',
+                'she',
+                'ey',
+                'E',
+                'hu',
+                'peh',
+                'per',
+                'thon',
+                'jee',
+                've',
+                'xe',
+                'ze',
+                'ze',
+                'ze',
+                'zhe',
+        ];
+        let accusativeGender = [
+                'them',
+                'him',
+                'her',
+                'em',
+                'Em',
+                'hum',
+                'pehm',
+                'per',
+                'thon',
+                'jem',
+                'ver',
+                'xem',
+                'zem',
+                'hir',
+                'mer',
+                'zhim',
+        ];
+        let reflexiveGender = [
+                'themself',
+                'himself',
+                'herself',
+                'eirself',
+                'Emself',
+                'humself',
+                'pehself',
+                'perself',
+                'thonself',
+                'jemself',
+                'verself',
+                'xemself',
+                'zirself',
+                'hirself',
+                'zemself',
+                'zhimself',
+        ];
+        let possessivePron = [
+                'their',
+                'his',
+                'her',
+                'eir',
+                'Eir',
+                'hus',
+                'peh\'s',
+                'per',
+                'thons',
+                'jeir',
+                'vis',
+                'xyr',
+                'zes',
+                'hir',
+                'zer',
+                'zher',
+        ];
+        let predicativePron = [
+                'theirs',
+                'his',
+                'hers',
+                'eirs',
+                'Eirs',
+                'hus',
+                'peh\'s',
+                'pers',
+                'thons',
+                'jeirs',
+                'vis',
+                'xyrs',
+                'zes',
+                'hirs',
+                'zers',
+                'zhers',
+        ];
+
+
+
+</script>

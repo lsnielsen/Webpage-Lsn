@@ -59,6 +59,11 @@
                     <?php echo $txtFile['priceCalc']; ?>
 				</button>
 			</form>
+			<form action="/Webpage-Lsn/controller/langTrainer.php" method="post">
+				<button class="frontpageButton" id="langButton" type="submit" name="langTrainer" value="langTrainerPage">
+                    <?php echo $txtFile['langTrainer']; ?>
+				</button>
+			</form>
 			<div id="my-signin2"></div>
 			<form class="frontpageButton" method="get" id="searchArea" action="https://www.google.com/search" target="_blank">
 				<center>
