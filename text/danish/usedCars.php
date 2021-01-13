@@ -17,7 +17,7 @@ return [
     'searchFinish' => 'Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 2 sek.',
     'dropdownTxt' => 'Her kan du vælge hvilken bilmodel du gerne vil se nærmere på:',
     'chooseModel' => 'Vælg bilmodel',
-    'back' => 'Tilbage',
+    'back' => 'Tilbage til forsiden',
     'nrOfCars' => 'Antal biler fra',
     'bilbasenLink' => 'www.bilbasen.dk',
     'guloggratisLink' => 'www.guloggratis.dk',
