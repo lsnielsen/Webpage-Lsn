@@ -50,7 +50,7 @@
         text-transform: uppercase;
         text-decoration: none;
         background: #4b4b48;
-        padding:  20px 30px 20px 10px;
+        padding:  20px 30px 20px 15px;
         border-radius: 5px;
         display: inline-block;
         border: none;

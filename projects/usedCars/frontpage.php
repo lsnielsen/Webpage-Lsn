@@ -28,9 +28,6 @@
                 <?php echo $txtFile['resultTxt']; ?>
             </h1>
             <?php include "searchInfo.php"; ?>
-				
-                <?php //include "dropdown.php"; ?>
-
 
         <?php
 			if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
@@ -57,24 +54,6 @@
 	include("getCars.php");
 ?>
 
-<style>
-	.theChoosenModel {
-		margin-top: -25px;
-		margin-left: -25px;
-	}
-
-	.infoTxt {
-		font-size: 25px;
-	}
-	.searchTxt {
-		display: none;
-	}
-
-	#backButton {
-		margin-left: 1100px;
-		margin-top: -70px;
-	}
-</style>
 
 
 

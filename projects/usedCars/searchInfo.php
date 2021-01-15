@@ -34,3 +34,18 @@
 <div class="endSearch searchTxt infoTxt">
     <?php echo $txtFile['searchFinish']; ?>
 </div>
+
+
+<style>
+    .theChoosenModel {
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+
+    .infoTxt {
+        font-size: 25px;
+    }
+    .searchTxt {
+        display: none;
+    }
+</style>
