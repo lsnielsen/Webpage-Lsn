@@ -4,7 +4,7 @@
 
 
 <form class="modelDropdown">
-    <select class="carModel frontpageStyle">
+    <select class="carModel dropdownStyle">
         <option style="font-size: 20px;">
             <?php echo $txtFile['chooseModel']; ?>
         </option>
@@ -42,28 +42,24 @@
 <style>
     .subheader {
         font-size: 21px;
-        text-align: center;
-        padding-left: 10px;
+        font-weight: bold;
+        color: #8282ff;
     }
-    .carOption {
-        padding-left: -10px;
-    }
-    .frontpageStyle {
+    .dropdownStyle {
         color: #fff !important;
         text-transform: uppercase;
         text-decoration: none;
-        background: #ed3330;
-        padding: 20px;
+        background: #4b4b48;
+        padding:  20px 30px 20px 10px;
         border-radius: 5px;
         display: inline-block;
         border: none;
         transition: all 0.4s ease 0s;
-        margin-left: 100px;
+        margin-left: 30px;
     }
-    .frontpageStyle:hover {
+    .dropdownStyle:hover {
         background: #434343;
-        letter-spacing: 1px;
-        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
         transition: all 0.4s ease 0s;
