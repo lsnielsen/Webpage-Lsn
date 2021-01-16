@@ -27,7 +27,7 @@
                 </a>
                 <?php echo $txtFile['resultTxt']; ?>
             </h1>
-            <?php include "searchInfo.php"; ?>
+            <?php include "frontpage/searchInfo.php"; ?>
 
         <?php
 			if (isset($bilbasenCount) && isset($gulOgGratisCount)) {

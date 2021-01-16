@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/usedCars/frontpage/dropdown.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/usedCars/frontpage/searchInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/usedCars/dropdownII.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/dropdownII.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/usedCars/css/usedCars.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/usedCars/dropdown.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/usedCars/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/usedCars/getCars.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/usedCars/getCars.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/usedCars/searchInfo.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +52,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/stocks/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -113,6 +120,7 @@
       <workItem from="1604839160904" duration="1795000" />
       <workItem from="1604840993628" duration="1269000" />
       <workItem from="1610536610841" duration="4424000" />
+      <workItem from="1610809250462" duration="11313000" />
     </task>
     <servers />
   </component>

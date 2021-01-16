@@ -36,9 +36,9 @@
 		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
-		
+
 		bilbasenLoop();
-		gulOgGratisLoop();
+		//gulOgGratisLoop();
 		firstPauseLoop();
 	});
 	
@@ -49,7 +49,7 @@
 				firstPauseLoop();             
 			} else {
 				gulOgGratisCars = secondUrlArr.length;
-
+                console.log("get here");
 				$("#bilbasenurls").text(firstUrlArr.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
@@ -81,7 +81,8 @@
 	}
 		
 	function bilbasenLoop() {       
-		setTimeout(function() {   
+		setTimeout(function() {
+		    console.log("bilbasenLoop");
 			if (loopI >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + loopI;
 				callingFirstUrl(pageUrl);
@@ -117,14 +118,19 @@
 			}				
 		}, 200)
 	}
-	
-	
+
+
 	function setFrontpage()
 	{
-		$("#backButton").hide();
-		$(".modelDropdown").hide();
+        $(".searchInfo").show();
+        $("#backButton").hide();
+		$("#headerInfo").hide();
+        $(".modelDropdown").hide();
+
 		$(".startSearch").show();
-		
+		$(".middleSearch").hide();
+		$(".endSearch").hide();
+
 		choosenModel = $(".carModel").children("option:selected").val();
 		$(".theChoosenModel").text(choosenModel);
 	}
