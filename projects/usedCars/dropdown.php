@@ -28,7 +28,7 @@
         <option class="carOption" value="Saab 9-5">Saab 9-5</option>
 
         <option class="subheader" disabled>Ford: </option>
-        <option class="" value="Ford Fiesta">Ford Fiesta</option>
+        <option class="carOption" value="Ford Fiesta">Ford Fiesta</option>
 
         <option class="subheader" disabled>Bmw: </option>
         <option class="carOption" value="BMW ms-3-Serie">Bmw 3-serie</option>
@@ -40,6 +40,9 @@
 </form>
 
 <style>
+    .carOption {
+        font-weight: bolder;
+    }
     .subheader {
         font-size: 21px;
         font-weight: bold;
@@ -63,5 +66,6 @@
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
         transition: all 0.4s ease 0s;
+        cursor: pointer;
     }
 </style>
