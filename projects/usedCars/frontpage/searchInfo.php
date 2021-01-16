@@ -56,7 +56,4 @@
         margin-left: 5px;
         font-weight: bold;
     }
-    .startSearch, .middleSearch, .endSearch {
-
-    }
 </style>
