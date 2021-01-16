@@ -15,15 +15,15 @@
             <h1 class="jumbotron text-center">
                 <?php echo $txtFile['linkTxt']; ?>
                 <a href="https:\\www.bilbasen.dk" target="_blank" class="text-body">
-                    <u>
+                    <em>
                         <?php echo $txtFile['linkOne']; ?>
-                    </u>
+                    </em>
                 </a>
                 <?php echo $txtFile['oneMore']; ?>
                 <a href="https:\\www.guloggratis.dk" target="_blank" class="text-body">
-                    <u>
+                    <em>
                         <?php echo $txtFile['linkTwo']; ?>
-                    </u>
+                    </em>
                 </a>
                 <?php echo $txtFile['resultTxt']; ?>
             </h1>
