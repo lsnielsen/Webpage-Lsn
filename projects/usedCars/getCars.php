@@ -8,7 +8,7 @@
     include("gulOgGratis/getCarFunctions.php");
     include("gulOgGratis/extraEquipment.php");
 
-    include("dataArray.php");
+    include("table/dataArray.php");
 
 ?>
 

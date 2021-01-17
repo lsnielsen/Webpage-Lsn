@@ -40,11 +40,11 @@
         </div>
         <div class="col-" id="bilbasenurls">  </div>
         <div class="col-">
-            biler hos bilbasen og
+            links hos bilbasen og
         </div>
         <div class="col-" id="guloggratisurls">  </div>
         <div class="col-">
-            biler ved guloggratis.
+            links ved guloggratis.
         </div>
     </div>
     <div class="row endSearch">

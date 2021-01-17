@@ -6,7 +6,7 @@
 		if ($usedCarsArray == "") {
 			include("../projects/usedCars/frontpage.php");	
 		} else {
-			include("../projects/usedCars/headerArray.php");
+			include("../projects/usedCars/table/headerArray.php");
 
 			$bilbasenCount = 0;
 			$gulOgGratisCount = 0;
@@ -48,7 +48,7 @@
 			fclose($fp);
 			
 			include("../projects/usedCars/frontpage.php");	
-			include("../projects/usedCars/usedCarTable.php");	
+			include("../projects/usedCars/table/usedCarTable.php");
 			
 			
 		}
