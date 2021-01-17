@@ -42,7 +42,7 @@
                     echo "<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">";
                     echo $txtFile['guloggratisLink'];
                     echo "</a>:  $gulOgGratisCount </h3>";
-                    $sum = $bilbasenCount + $gulOgGratisCount;
+                    $sum = $bilbasenCount + $gulOgGratisCount + 1;
                     echo "<h3> Samlet: $sum </h3>";
                 }
             ?>
