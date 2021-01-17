@@ -1,12 +1,18 @@
-		<table id="usedCars">
-            <tr>
-            <?php
-                echo "<th>Nr: </th>";
-                foreach($headerArray as $attribute) {
-                    echo "<th>" . $attribute . "</th>";
-                }
-            ?>
-            </tr>
+
+
+
+    <div class="tableContainer">
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                <?php
+                    echo "<th>Nr: </th>";
+                    foreach($headerArray as $attribute) {
+                        echo "<th>" . $attribute . "</th>";
+                    }
+                ?>
+                </tr>
+            </thead>
             <?php
                 $carCounter = 1;
                 if (isset($autoArr)) {
@@ -58,39 +64,13 @@
                 }
                 ?>
 		</table>
-		
-		
-<style>		
-	#usedCars {
-	  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	  border-collapse: collapse;
-	  width: 90%;
-	}
+    </div>
 
-	#usedCars .carCounterCell {
-		border: 1px solid #ddd;
-		padding: 8px;
-		min-width: 20px;
-		text-align: center;
-	}
-	
-	#usedCars .carCell {
-		border: 1px solid #ddd;
-		padding: 8px;
-		min-width: 120px;
-		text-align: center;
-	}
-
-	#usedCars tr:nth-child(even){background-color: #f2f2f2;}
-
-	#usedCars tr:hover {background-color: #ddd;}
-
-	#usedCars th {
-	  padding-top: 12px;
-	  padding-bottom: 12px;
-	  background-color: #4CAF50;
-	  color: white;
-	}
+<style>
+    .tableContainer {
+        margin-left: -15px;
+    }
 </style>
+
 
 
