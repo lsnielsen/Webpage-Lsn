@@ -122,13 +122,15 @@
 
 	function setFrontpage()
 	{
-        $(".searchInfo").show();
         $("#backButton").hide();
-		$("#headerInfo").hide();
+        $("#headerInfo").hide();
         $(".modelDropdown").hide();
+        $(".tableContainer").hide();
+        $(".nrOfCarsDiv").hide();
 
+        $(".searchInfo").show();
 		$(".startSearch").show();
-		$(".middleSearch").hide();
+        $(".middleSearch").hide();
 		$(".endSearch").hide();
 
 		choosenModel = $(".carModel").children("option:selected").val();
