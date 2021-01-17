@@ -46,6 +46,15 @@
 			}
 		?>
 
+            <form method="post">
+                <button type="submit"
+                        id="arrayButton"
+                        name="usedCarsArray"
+                        style="display: none;"
+                        action="/Webpage-Lsn/controller/usedCars.php">
+                </button>
+            </form>
+
 	</body>
 
 </html>
