@@ -36,7 +36,7 @@
     </div>
     <div class="row middleSearch">
         <div class="col-">
-            Vi har nu hentet alle links til bilbasen. Vi fandt
+            Vi har nu hentet alle links fra de to sider. Vi fandt
         </div>
         <div class="col-" id="bilbasenurls">  </div>
         <div class="col-">
