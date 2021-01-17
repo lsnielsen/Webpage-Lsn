@@ -26,10 +26,13 @@
 			if(isset($_COOKIE['theChoosenCarModel'])) {
 				$fileName = $_COOKIE['theChoosenCarModel'];
 			}
-			
+
+            if (!file_exists('../diverse/carFiles')) {
+                mkdir('../diverse/carFiles', 0777, true);
+            }
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
 			fputcsv($fp, $headerArray); 
-			foreach ($autoArr as $row) { 
+			foreach ($autoArr as $row) {
 				fputcsv($fp, $row); 
 			} 
 			
