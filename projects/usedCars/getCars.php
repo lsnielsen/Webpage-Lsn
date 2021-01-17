@@ -75,7 +75,8 @@
                         function()
                         {
                             makeArrayToPhp();
-                        }, 200);
+                        }, 200
+                    );
                 }
             }, 5000
         );
