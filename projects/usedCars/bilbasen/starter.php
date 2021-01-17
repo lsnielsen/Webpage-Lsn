@@ -24,21 +24,21 @@
 	}		
 	
 		
-	function getTheUsedCarBilbasen() {
-
+	function getTheUsedCarBilbasen()
+    {
         let loopII = 0;
         mySecondLoop();
         function mySecondLoop() {
-                setTimeout(function() {
-                        getTheCarFromBilbasen(firstUrlArr[loopII]);
-                        loopII++;
-                        if (loopII < firstUrlArr.length) {
-                                mySecondLoop();
-                        } else {
-                                setTimeout(function() {
-                                        lastBool = true;
-                                }, 3000)
-                        }
+            setTimeout(function() {
+                    getTheCarFromBilbasen(firstUrlArr[loopII]);
+                    loopII++;
+                    if (loopII < firstUrlArr.length) {
+                        mySecondLoop();
+                    } else {
+                        setTimeout(function() {
+                            lastBool = true;
+                        }, 3000)
+                    }
                 }, 120)
         }
 	}
