@@ -38,7 +38,7 @@
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 
 		bilbasenLoop();
-		//gulOgGratisLoop();
+		gulOgGratisLoop();
 		firstPauseLoop();
 	});
 	
@@ -49,7 +49,6 @@
 				firstPauseLoop();             
 			} else {
 				gulOgGratisCars = secondUrlArr.length;
-                console.log("get here");
 				$("#bilbasenurls").text(firstUrlArr.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
@@ -84,7 +83,6 @@
 		
 	function bilbasenLoop() {       
 		setTimeout(function() {
-		    console.log("bilbasenLoop");
 			if (loopI >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + loopI;
 				callingFirstUrl(pageUrl);
