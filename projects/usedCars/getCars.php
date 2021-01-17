@@ -65,19 +65,20 @@
 	
 	function secondPauseLoop()
 	{
-            setTimeout(
-                    function() 
-                    {
-                            if(lastBool == false) {
-                                    secondPauseLoop();
-                            } else {
-                                    setTimeout(
-                                            function()
-                                            {
-                                                    makeArrayToPhp();
-                                            }, 200);
-                            }
-            }, 5000);		
+        setTimeout(
+            function()
+            {
+                if(lastBool == false) {
+                    secondPauseLoop();
+                } else {
+                    setTimeout(
+                        function()
+                        {
+                            makeArrayToPhp();
+                        }, 200);
+                }
+            }, 5000
+        );
 	}
 		
 	function bilbasenLoop() {       
