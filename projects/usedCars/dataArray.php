@@ -109,11 +109,12 @@
 
     function setDiffPrice()
     {
-        let notNaN = (!isNaN(thePrice) && !isNaN(theStarterPrice));
-        let notUndef = (typeof thePrice !== "undefined" && typeof theStarterPrice !== "undefined");
-        if (notNaN && notUndef) {
+        let priceCheck = (!isNaN(thePrice) && typeof(thePrice) !== "undefined");
+        let starterCheck = (!isNaN(theStarterPrice) && typeof theStarterPrice !== "undefined");
+        if (priceCheck && starterCheck) {
             priceDiff = (theStarterPrice - thePrice).toFixed(3);
         } else {
+            //console.log(priceCheck + ", " + starterCheck);
             priceDiff = "-";
         }
     }
