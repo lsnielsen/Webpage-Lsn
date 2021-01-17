@@ -35,11 +35,17 @@
         </div>
     </div>
     <div class="row middleSearch">
-        Vi har nu hentet alle links til bilbasen. Vi fandt
-        <div id="bilbasenurls"> 2 </div>
-        biler og
-        <div id="guloggratisurls"> 4 </div>
-        biler ved guloggratis.
+        <div class="col-">
+            Vi har nu hentet alle links til bilbasen. Vi fandt
+        </div>
+        <div class="col-" id="bilbasenurls">  </div>
+        <div class="col-">
+            biler hos bilbasen og
+        </div>
+        <div class="col-" id="guloggratisurls">  </div>
+        <div class="col-">
+            biler ved guloggratis.
+        </div>
     </div>
     <div class="row endSearch">
         Nu er alle bilerne hentet fra bilbasen, så nu bliver de vist for dig, om cirka 2 sek.
@@ -55,5 +61,8 @@
     .theChoosenModel {
         margin-left: 5px;
         font-weight: bold;
+    }
+    #bilbasenurls, #guloggratisurls {
+        padding: 0px 5px 0px 5px;
     }
 </style>
