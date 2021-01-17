@@ -144,11 +144,11 @@
         singleCarArray.push(theMaxLoad);
         singleCarArray.push(numberOfAirbags);
         singleCarArray.push(doesEsp);
-        singleCarArray.push(theGasTank);
         singleCarArray.push(theGears);
+        singleCarArray.push(theGasTank);
         singleCarArray.push(theWeight);
-        singleCarArray.push(countOfDoors);
         singleCarArray.push(theProductionDate);
+        singleCarArray.push(countOfDoors);
         singleCarArray.push(yearOfTheModel);
         singleCarArray.push(lastDateOfSight);
         singleCarArray.push(theColor);
