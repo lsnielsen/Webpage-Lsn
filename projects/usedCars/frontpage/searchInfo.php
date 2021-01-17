@@ -22,7 +22,7 @@
 
 
 
-<div class="container searchInfo" style="font-size: 25px;">
+<div class="container searchInfo">
     <div class="row startSearch">
         <div class="col-">
             Du er nu gået igang med at søge efter biler på bilbasen og guloggratis, som har modellen
@@ -57,6 +57,7 @@
         max-width: 1400px;
         width: 100%;
         display: none;
+        font-size: 25px;
     }
     .theChoosenModel {
         margin-left: 5px;
