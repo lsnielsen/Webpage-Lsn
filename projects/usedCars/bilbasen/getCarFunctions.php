@@ -188,10 +188,13 @@
 		}
 
 		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
-		if (usageStart != -1) {
+        usageRegexp = /<td class="selectedcar">(Diesel)|(Benzin)<\/td>/;
+        usageMatch = usageRegexp.exec(data);
+		if (usageMatch !== null) {
 			energyUsage = data.substring(usageStart, usageStart+9);
 			energyUsage = energyUsage.replace(",", ".");
             energyUsage = energyUsage.replace("<", "");
+            energyUsage = usageMatch[1];
 			//console.log("Energi forbrug: " + energyUsage);
 		} else {
 			energyUsage = "-";
@@ -213,8 +216,8 @@
                     theHeight = "-";
 		}
 
-                lengthRegexp = /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/;
-                lengthMatch = lengthRegexp.exec(data);
+        lengthRegexp = /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/;
+        lengthMatch = lengthRegexp.exec(data);
 		if (lengthMatch !== null) {
 			theLength = lengthMatch[1];
 		} else {
