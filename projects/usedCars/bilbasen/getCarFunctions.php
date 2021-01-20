@@ -187,13 +187,9 @@
 			energyToUse = "-";
 		}
 
-		usageStart = data.search(/[0-9]+,[0-9]* km\/l/);
-        usageRegexp = /<td class="selectedcar">(Diesel)|(Benzin)<\/td>/;
+        usageRegexp = /<td class="selectedcar">(Diesel|Benzin)<\/td>/;
         usageMatch = usageRegexp.exec(data);
 		if (usageMatch !== null) {
-			energyUsage = data.substring(usageStart, usageStart+9);
-			energyUsage = energyUsage.replace(",", ".");
-            energyUsage = energyUsage.replace("<", "");
             energyUsage = usageMatch[1];
 			//console.log("Energi forbrug: " + energyUsage);
 		} else {
@@ -225,7 +221,7 @@
 		}
                 
 		widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
-                widthMatch = widthRegexp.exec(data);
+        widthMatch = widthRegexp.exec(data);
 		if (widthMatch !== null) {
 			theWidth = widthMatch[1];
 		} else {
@@ -328,17 +324,18 @@
 		} else {
 			countOfDoors = "-";
 		}
-
-		contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
-		var match = contactRegexp.exec(data);
-		if (match !==  null) {
-			contactInfo = match[1] + " " + match[2];
-		} else {
-			contactInfo = "-";
-		}
-
-		
 	}
+
+	function getContactInfo(data)
+    {
+        contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
+        var match = contactRegexp.exec(data);
+        if (match !==  null) {
+            return match[1] + " " + match[2];
+        } else {
+            return "-";
+        }
+    }
 	
 	
 
