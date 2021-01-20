@@ -55,7 +55,7 @@
                         setPrimerAttributes(data);
                         setExtraEquipment(data);
 
-                        setTheFirstArray(singleCarArray);
+                        setTheFirstArray(singleCarArray, data);
                 },
                 'html'
         );
