@@ -119,11 +119,11 @@
         }
     }
 
-    function setTheFirstArray(singleCarArray)
+    function setTheFirstArray(singleCarArray, data)
     {
         setDiffPrice();
         singleCarArray.push(theLink);
-        singleCarArray.push(contactInfo);
+        singleCarArray.push(getContactInfo(data));
         singleCarArray.push(theCarModel);
         singleCarArray.push(theEngine);
         singleCarArray.push(thePrice);
