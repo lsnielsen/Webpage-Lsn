@@ -299,15 +299,18 @@
 		} else {
 			theGears = "-";
 		}
-
-		geartypeStart = data.search("<td style=\"color: #888;\">Geartype</td>");
-		geartypeEnd = data.search("<td style=\"color: #888;\">Vægt</td>");
-		if (geartypeStart != -1 && geartypeEnd != -1) {
-			theGearType = removePrimerAttributeSpace(geartypeStart, geartypeEnd, data);
-		} else {
-			theGearType = "-";
-		}
 	}
+
+	function getGeartype(data)
+    {
+        let geartypeRegexp = /<td style="color: #888;">Geartype<\/td>[\w\W]+\">(Manuel|Automatisk|Auto)<\/td>/;
+        let match = geartypeRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return  "-";
+        }
+    }
 
 	function getWeight(data)
     {

@@ -22,7 +22,6 @@
 	let doesEsp;
 	let theGasTank;
 	let theGears;
-	let theGearType;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -130,7 +129,7 @@
         singleCarArray.push(theKilometers);
         singleCarArray.push(horsePowerAndNm);
         singleCarArray.push(theRegistrationDate);
-        singleCarArray.push(theGearType);
+        singleCarArray.push(getGeartype(data));
         singleCarArray.push(fromZeroToHundred);
         singleCarArray.push(theTopSpeed);
         singleCarArray.push(energyToUse);
