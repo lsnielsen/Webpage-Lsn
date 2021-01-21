@@ -14,7 +14,6 @@
 	let theLength;
 	let theHeight;
 	let loadAbility;
-	let drivingWheels;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -128,7 +127,7 @@
         singleCarArray.push(energyToUse);
         singleCarArray.push(energyUsage);
         singleCarArray.push(loadAbility);
-        singleCarArray.push(drivingWheels);
+        singleCarArray.push(getTraction(data));
         singleCarArray.push(getCylinders(data));
         singleCarArray.push(getAbs(data));
         singleCarArray.push(getMaxPayload(data));

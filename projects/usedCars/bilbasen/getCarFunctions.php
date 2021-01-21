@@ -235,15 +235,18 @@
 		} else {
 			loadAbility = "-";
 		}
-
-		tractionStart = data.search("<td style=\"color: #888;\">Trækhjul</td>");
-		tractionEnd = data.search("<td style=\"color: #888;\">Cylindre</td>");
-		if (tractionStart != -1 && tractionEnd != -1) {
-			drivingWheels = removePrimerAttributeSpace(tractionStart, tractionEnd, data);
-		} else {
-			drivingWheels = "-";
-		}
 	}
+
+	function getTraction(data)
+    {
+        let tractionRegex = /<td style="color: #888;">Trækhjul<\/td>[\w\W]*?">([a-zA-Z]+)<\/td>/;
+        let match = tractionRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getCylinders(data)
     {
