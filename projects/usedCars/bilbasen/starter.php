@@ -52,7 +52,7 @@
                         var singleCarArray = new Array();
                         theLink = url;
                         getMainAttributes(data);
-                        setPrimerAttributes(data);
+                        //setPrimerAttributes(data);
                         setExtraEquipment(data);
 
                         setTheFirstArray(singleCarArray, data);

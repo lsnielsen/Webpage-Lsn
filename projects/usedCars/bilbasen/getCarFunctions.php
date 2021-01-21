@@ -150,26 +150,27 @@
 		}
 	}
 		
-	function setPrimerAttributes(data)
+	function getHorsePower(data)
 	{
 		horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
 		match = horsePowerRegexp.exec(data);
 		if (match !== null) {
-			horsePowerAndNm = match[1];
+			return match[1];
 		} else {
-			horsePowerAndNm = "-";
-		}
-
-		zeroToHundredStart = data.search(/[0-9]+,[0-9]* sek/);
-		if (zeroToHundredStart != -1) {
-			fromZeroToHundred = data.substring(zeroToHundredStart, zeroToHundredStart+8);
-			fromZeroToHundred = fromZeroToHundred.replace("<", "");
-			fromZeroToHundred = fromZeroToHundred.replace(",", ".");
-			//console.log("0-100 km/t: " + fromZeroToHundred);
-		} else {
-			fromZeroToHundred = "-";
+			return "-";
 		}
 	}
+
+	function getZeroToHundred(data)
+    {
+        zeroToHundredRegex = /<td style="color: #888;">0 - 100 km\/t<\/td>[\w\W]+?([0-9,]+ sek)<\/td>/;
+        let match = zeroToHundredRegex.exec(data);
+        if (match !== null) {
+            return match[1].replace(",", ".");
+        } else {
+            return "-";
+        }
+    }
 
 	function getTopSpeed(data)
     {
