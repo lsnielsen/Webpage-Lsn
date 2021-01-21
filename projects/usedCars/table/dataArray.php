@@ -9,7 +9,6 @@
 	let theTopSpeed;
 	let energyToUse;
 	let energyUsage;
-	let theEuronorm;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -143,7 +142,7 @@
         singleCarArray.push(autoAndroid);
         singleCarArray.push(antispin);
         singleCarArray.push(carplayApple);
-        singleCarArray.push(theEuronorm);
+        singleCarArray.push(getEuronorm(data));
         singleCarArray.push(getWidth(data));
         singleCarArray.push(getLength(data));
         singleCarArray.push(getHeight(data));

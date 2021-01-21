@@ -195,15 +195,18 @@
 		} else {
 			energyUsage = "-";
 		}
-
-		euroStart = data.search("<td style=\"color: #888;\">Euronorm</td>");
-		euroEnd = data.search("<td style=\"color: #888;\">Bredde</td>");
-		if (euroStart != -1 && euroEnd != -1) {
-			theEuronorm = removePrimerAttributeSpace(euroStart, euroEnd, data);
-		} else {
-			theEuronorm = "-";
-		}
 	}
+
+	function getEuronorm(data)
+    {
+        let euroRegex = /<td style="color: #888;">Euronorm<\/td>[\w\W]+?([0-9])<\/td>/;
+        let match = euroRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getHeight(data)
     {
