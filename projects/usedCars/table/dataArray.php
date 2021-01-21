@@ -10,10 +10,8 @@
 	let energyToUse;
 	let energyUsage;
 	let theEuronorm;
-	let theWidth;
 	let theLength;
 	let theHeight;
-	let loadAbility;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -126,7 +124,7 @@
         singleCarArray.push(theTopSpeed);
         singleCarArray.push(energyToUse);
         singleCarArray.push(energyUsage);
-        singleCarArray.push(loadAbility);
+        singleCarArray.push(getLoad(data));
         singleCarArray.push(getTraction(data));
         singleCarArray.push(getCylinders(data));
         singleCarArray.push(getAbs(data));
@@ -148,7 +146,7 @@
         singleCarArray.push(antispin);
         singleCarArray.push(carplayApple);
         singleCarArray.push(theEuronorm);
-        singleCarArray.push(theWidth);
+        singleCarArray.push(getWidth(data));
         singleCarArray.push(theLength);
         singleCarArray.push(theHeight);
         singleCarArray.push(armRelax);

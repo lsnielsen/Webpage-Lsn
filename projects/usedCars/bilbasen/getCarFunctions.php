@@ -219,23 +219,29 @@
 		} else {
 			theLength = "-";
 		}
-                
-		widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
-        widthMatch = widthRegexp.exec(data);
-		if (widthMatch !== null) {
-			theWidth = widthMatch[1];
-		} else {
-			theWidth = "-";
-		}
-
-		loadRegexp = /<td style="color: #888;">Lasteevne<\/td>[\w\W]+([0-9]{3} kg)<\/td>/;
-		match = loadRegexp.exec(data);
-		if (match !== null) {
-			loadAbility = match[1];
-		} else {
-			loadAbility = "-";
-		}
 	}
+
+	function getWidth(data)
+    {
+        widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
+        widthMatch = widthRegexp.exec(data);
+        if (widthMatch !== null) {
+            return widthMatch[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getLoad(data)
+    {
+        let loadRegexp = /<td style="color: #888;">Lasteevne<\/td>[\w\W]+?([0-9]{3} kg)<\/td>/;
+        let match = loadRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getTraction(data)
     {
