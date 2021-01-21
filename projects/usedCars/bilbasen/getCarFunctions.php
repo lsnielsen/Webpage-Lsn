@@ -284,22 +284,29 @@
 			doesEsp = "-";
 		}
 
-		tankRegexp = /<td style="color: #888;">Tank<\/td>[\w\W]+([0-9]{2} l)<\/td>/;
-		match = tankRegexp.exec(data);
-		if (match !== null) {
-			theGasTank = match[1];
-		} else {
-			theGasTank = "-";
-		}
-
-		gearRegexp = /<td style="color: #888;">Gear<\/td>[\w\W]+([0-9] gear)<\/td>/;
-		match = gearRegexp.exec(data);
-		if (match !== null) {
-			theGears = match[1];
-		} else {
-			theGears = "-";
-		}
 	}
+
+	function getGasTank(data)
+    {
+        let tankRegexp = /<td style="color: #888;">Tank<\/td>[\w\W]+([0-9]{2} l)<\/td>/;
+        let match = tankRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getGears(data)
+    {
+        let gearRegexp = /<td style="color: #888;">Gear<\/td>[\w\W]+([0-9] gear)<\/td>/;
+        let match = gearRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getGeartype(data)
     {
@@ -308,7 +315,7 @@
         if (match !== null) {
             return match[1];
         } else {
-            return  "-";
+            return "-";
         }
     }
 
@@ -319,7 +326,7 @@
         if (match !== null) {
             return match[1];
         } else {
-            return  "-";
+            return "-";
         }
     }
 

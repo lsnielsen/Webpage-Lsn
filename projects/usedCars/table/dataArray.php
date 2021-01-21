@@ -20,8 +20,6 @@
 	let theMaxLoad;
 	let numberOfAirbags;
 	let doesEsp;
-	let theGasTank;
-	let theGears;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -141,8 +139,8 @@
         singleCarArray.push(theMaxLoad);
         singleCarArray.push(numberOfAirbags);
         singleCarArray.push(doesEsp);
-        singleCarArray.push(theGears);
-        singleCarArray.push(theGasTank);
+        singleCarArray.push(getGears(data));
+        singleCarArray.push(getGasTank(data));
         singleCarArray.push(getWeight(data));
         singleCarArray.push(theProductionDate);
         singleCarArray.push(getDoors(data));
