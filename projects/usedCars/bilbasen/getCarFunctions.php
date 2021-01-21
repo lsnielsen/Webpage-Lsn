@@ -275,16 +275,18 @@
 		} else {
 			numberOfAirbags = "-";
 		}
-
-		espStart = data.search("<td style=\"color: #888;\">ESP</td>");
-		espEnd = data.search("<td style=\"color: #888;\">Tank</td>");
-		if (espStart != -1 && espEnd != -1) {
-			doesEsp = removePrimerAttributeSpace(espStart, espEnd, data);
-		} else {
-			doesEsp = "-";
-		}
-
 	}
+
+	function getEsp(data)
+    {
+        let espRegex = /<td style=\"color: #888;">ESP<\/td>[\W\w]+selectedcar">([a-zA-Z]{2,3})<\/td>/;
+        let match = espRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getGasTank(data)
     {
