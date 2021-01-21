@@ -243,22 +243,25 @@
 		} else {
 			drivingWheels = "-";
 		}
-
-		cylStart = data.search("<td style=\"color: #888;\">Cylindre</td>");
-		cylEnd = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
-		if (cylStart != -1 && cylEnd != -1) {
-			theCylinders = removePrimerAttributeSpace(cylStart, cylEnd, data);
-		} else {
-			theCylinders = "-";
-		}
 	}
+
+	function getCylinders(data)
+    {
+        cylRegex = /<td style="color: #888;">Cylindre<\/td>[\w\W]*?">([0-9])<\/td>/;
+        let match = cylRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getAbs(data)
     {
         let absRegex = /<td style="color: #888;">ABS-bremser<\/td>[\w\W]*?">(Ja)<\/td>/;
         let match = absRegex.exec(data);
         if (match !== null) {
-            return match[1]
+            return match[1];
         } else {
             return "-";
         }
