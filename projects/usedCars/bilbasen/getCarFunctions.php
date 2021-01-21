@@ -267,15 +267,18 @@
 		} else {
 			theMaxLoad = "-";
 		}
-
-		airbagStart = data.search("<td style=\"color: #888;\">Airbags</td>");
-		airbagEnd = data.search("<td style=\"color: #888;\">ESP</td>");
-		if (airbagStart != -1 && airbagEnd != -1) {
-			numberOfAirbags = removePrimerAttributeSpace(airbagStart, airbagEnd, data);
-		} else {
-			numberOfAirbags = "-";
-		}
 	}
+
+	function getAirbags(data)
+    {
+        let airbagRegex = /<td style=\"color: #888;">Airbags<\/td>[\w\W]*?">([0-9]{1,2})<\/td>/;
+        let match = airbagRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getEsp(data)
     {
