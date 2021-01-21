@@ -177,25 +177,29 @@
 		} else {
 			theTopSpeed = "-";
 		}
-
-		propellantStart = data.search("<td style=\"color: #888;\">Drivmiddel</td>");
-		propellantEnd = data.search("<td style=\"color: #888;\">Forbrug</td>");
-		if (propellantStart != -1 && propellantEnd != -1) {
-			energyToUse = removePrimerAttributeSpace(propellantStart, propellantEnd, data);
-			energyToUse = energyToUse.replace(",", ".");
-		} else {
-			energyToUse = "-";
-		}
-
-        usageRegexp = /<td class="selectedcar">(Diesel|Benzin)<\/td>/;
-        usageMatch = usageRegexp.exec(data);
-		if (usageMatch !== null) {
-            energyUsage = usageMatch[1];
-			//console.log("Energi forbrug: " + energyUsage);
-		} else {
-			energyUsage = "-";
-		}
 	}
+
+	function getPropellant(data)
+    {
+        let propRegexp = /<td class="selectedcar">(Diesel|Benzin)<\/td>/;
+        let match = propRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getUsage(data)
+    {
+        let usageRegexp = /<td style="color: #888;">[a-zA-Z() ]*<\/td>[\w\W]+?([0-9,]+ km\/l)<\/td>/;
+        let match = usageRegexp.exec(data);
+        if (match !== null) {
+            return match[1].replace(",", ".");
+        } else {
+            return "-";
+        }
+    }
 
 	function getEuronorm(data)
     {
