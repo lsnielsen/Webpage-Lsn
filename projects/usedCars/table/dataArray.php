@@ -10,8 +10,6 @@
 	let energyToUse;
 	let energyUsage;
 	let theEuronorm;
-	let theLength;
-	let theHeight;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -147,8 +145,8 @@
         singleCarArray.push(carplayApple);
         singleCarArray.push(theEuronorm);
         singleCarArray.push(getWidth(data));
-        singleCarArray.push(theLength);
-        singleCarArray.push(theHeight);
+        singleCarArray.push(getLength(data));
+        singleCarArray.push(getHeight(data));
         singleCarArray.push(armRelax);
         singleCarArray.push(autoEmergencyBreak);
         singleCarArray.push(autoParking);

@@ -203,28 +203,34 @@
 		} else {
 			theEuronorm = "-";
 		}
-
-		heightRegexp = /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/;
-        heightMatch = heightRegexp.exec(data);
-		if (heightMatch !== null) {
-                    theHeight = heightMatch[1];
-		} else {
-                    theHeight = "-";
-		}
-
-        lengthRegexp = /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/;
-        lengthMatch = lengthRegexp.exec(data);
-		if (lengthMatch !== null) {
-			theLength = lengthMatch[1];
-		} else {
-			theLength = "-";
-		}
 	}
+
+	function getHeight(data)
+    {
+        let heightRegexp = /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/;
+        let match = heightRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getLength(data)
+    {
+        let lengthRegexp = /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/;
+        let lengthMatch = lengthRegexp.exec(data);
+        if (lengthMatch !== null) {
+            return lengthMatch[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getWidth(data)
     {
-        widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
-        widthMatch = widthRegexp.exec(data);
+        let widthRegexp = /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/;
+        let widthMatch = widthRegexp.exec(data);
         if (widthMatch !== null) {
             return widthMatch[1];
         } else {
