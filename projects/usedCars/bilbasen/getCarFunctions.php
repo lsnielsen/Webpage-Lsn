@@ -307,15 +307,18 @@
 		} else {
 			theGearType = "-";
 		}
-
-		weightRegexp = /<td style="color: #888;">.{4}<\/td>[\w\W]+([0-9]{4} kg)<\/td>/;
-		match = weightRegexp.exec(data);
-		if (match !== null) {
-			theWeight = match[1];
-		} else {
-			theWeight = "-";
-		}
 	}
+
+	function getWeight(data)
+    {
+        let weightRegexp = /<td style="color: #888;">.{4}<\/td>[\w\W]+\">([0-9]{3,4} kg)<\/td>/;
+        let match = weightRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return  "-";
+        }
+    }
 
 	function getDoors(data)
     {

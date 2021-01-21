@@ -23,7 +23,6 @@
 	let theGasTank;
 	let theGears;
 	let theGearType;
-	let theWeight;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -145,7 +144,7 @@
         singleCarArray.push(doesEsp);
         singleCarArray.push(theGears);
         singleCarArray.push(theGasTank);
-        singleCarArray.push(theWeight);
+        singleCarArray.push(getWeight(data));
         singleCarArray.push(theProductionDate);
         singleCarArray.push(getDoors(data));
         singleCarArray.push(yearOfTheModel);
