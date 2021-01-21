@@ -315,21 +315,23 @@
 		} else {
 			theWeight = "-";
 		}
-
-		doorStart = data.search(/<td style="color: #888;">Døre<\/td>/);
-		doorTxt = data.substring(doorStart+101 , doorStart+102);
-		//console.log("doors; start: " + doorStart + ", \n doorTxt: " + doorTxt);
-		if (doorStart != -1) {
-			countOfDoors = doorTxt;
-		} else {
-			countOfDoors = "-";
-		}
 	}
+
+	function getDoors(data)
+    {
+        let doorRegexp = /<td style="color: #888;">.{4}<\/td>[\w\W]+class=\"selectedcar\">([0-9]{0,2})<\/td>/;
+        const match = doorRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getContactInfo(data)
     {
-        contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
-        var match = contactRegexp.exec(data);
+        let contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
+        const match = contactRegexp.exec(data);
         if (match !==  null) {
             return match[1] + " " + match[2];
         } else {
