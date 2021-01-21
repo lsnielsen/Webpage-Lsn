@@ -251,15 +251,18 @@
 		} else {
 			theCylinders = "-";
 		}
-
-		absStart = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
-		absEnd = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
-		if (absStart != -1 && absEnd != -1) {
-			absBreaks = removePrimerAttributeSpace(absStart, absEnd, data);
-		} else {
-			absBreaks = "-";
-		}
 	}
+
+	function getAbs(data)
+    {
+        let absRegex = /<td style="color: #888;">ABS-bremser<\/td>[\w\W]*?">(Ja)<\/td>/;
+        let match = absRegex.exec(data);
+        if (match !== null) {
+            return match[1]
+        } else {
+            return "-";
+        }
+    }
 
 	function getMaxPayload(data)
     {

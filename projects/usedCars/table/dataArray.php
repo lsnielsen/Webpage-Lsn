@@ -16,7 +16,6 @@
 	let loadAbility;
 	let drivingWheels;
 	let theCylinders;
-	let absBreaks;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -132,7 +131,7 @@
         singleCarArray.push(loadAbility);
         singleCarArray.push(drivingWheels);
         singleCarArray.push(theCylinders);
-        singleCarArray.push(absBreaks);
+        singleCarArray.push(getAbs(data));
         singleCarArray.push(getMaxPayload(data));
         singleCarArray.push(getAirbags(data));
         singleCarArray.push(getEsp(data));
