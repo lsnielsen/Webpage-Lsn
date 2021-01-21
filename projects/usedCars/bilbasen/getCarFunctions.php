@@ -259,15 +259,18 @@
 		} else {
 			absBreaks = "-";
 		}
-
-		maxloadStart = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
-		maxloadEnd = data.search("<td style=\"color: #888;\">Airbags</td>");
-		if (maxloadStart != -1 && maxloadEnd != -1) {
-			theMaxLoad = removePrimerAttributeSpace(maxloadStart, maxloadEnd, data);
-		} else {
-			theMaxLoad = "-";
-		}
 	}
+
+	function getMaxPayload(data)
+    {
+        let maxloadRegex = /<td style="color: #888;">Max. påhæng<\/td>[\w\W]*?">([0-9.]+ kg)<\/td>/;
+        let match = maxloadRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getAirbags(data)
     {
