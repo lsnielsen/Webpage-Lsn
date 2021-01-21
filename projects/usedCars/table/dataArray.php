@@ -6,7 +6,6 @@
 	let thePrice;
 	let horsePowerAndNm;
 	let fromZeroToHundred;
-	let theTopSpeed;
 	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
@@ -116,7 +115,7 @@
         singleCarArray.push(theRegistrationDate);
         singleCarArray.push(getGeartype(data));
         singleCarArray.push(fromZeroToHundred);
-        singleCarArray.push(theTopSpeed);
+        singleCarArray.push(getTopSpeed(data));
         singleCarArray.push(getPropellant(data));
         singleCarArray.push(getUsage(data));
         singleCarArray.push(getLoad(data));

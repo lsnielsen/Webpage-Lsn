@@ -169,15 +169,18 @@
 		} else {
 			fromZeroToHundred = "-";
 		}
-
-		topSpeedRegexp = /<td style="color: #888;">Tophastighed<\/td>[\w\W]+([0-9]{3} km\/t)<\/td>/;
-		match = topSpeedRegexp.exec(data);
-		if (match !== null) {
-			theTopSpeed = match[1];
-		} else {
-			theTopSpeed = "-";
-		}
 	}
+
+	function getTopSpeed(data)
+    {
+        let topSpeedRegexp = /<td style="color: #888;">Tophastighed<\/td>[\w\W]+([0-9]{3} km\/t)<\/td>/;
+        let match = topSpeedRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getPropellant(data)
     {
