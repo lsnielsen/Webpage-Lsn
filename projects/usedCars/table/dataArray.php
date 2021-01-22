@@ -4,7 +4,6 @@
 	let theCarModel;
 	let theEngine;
 	let thePrice;
-	let theRegistrationDate;
     let theProductionDate;
     let yearOfTheModel;
     let lastDateOfSight;
@@ -110,7 +109,7 @@
         singleCarArray.push(priceDiff);
         singleCarArray.push(theKilometers);
         singleCarArray.push(getHorsePower(data));
-        singleCarArray.push(theRegistrationDate);
+        singleCarArray.push(getRegDate(data));
         singleCarArray.push(getGeartype(data));
         singleCarArray.push(getZeroToHundred(data));
         singleCarArray.push(getTopSpeed(data));
