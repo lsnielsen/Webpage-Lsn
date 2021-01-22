@@ -1,8 +1,6 @@
 <script>
 
 	let theLink;
-	let theCarModel;
-	let theEngine;
     let towbar;
     let alloyWheels;
     let autoAndroid;
@@ -96,8 +94,8 @@
         //setDiffPrice();
         singleCarArray.push(theLink);
         singleCarArray.push(getContactInfo(data));
-        singleCarArray.push(theCarModel);
-        singleCarArray.push(theEngine);
+        singleCarArray.push(getCarAttr(data)[0]);
+        singleCarArray.push(getCarAttr(data)[1]);
         singleCarArray.push(getPrice(data));
         singleCarArray.push(getNewPrice(data));
         singleCarArray.push("5");

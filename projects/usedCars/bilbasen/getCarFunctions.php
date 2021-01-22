@@ -17,17 +17,18 @@
 		} else {
 			theKilometers = "-";
 		}
-		
-		carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9-]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
-		match = carRegexp.exec(data);
-		if (match !==  null) {
-			theCarModel = match[1];
-			theEngine = match[2].replace(",", ".");
-		} else {
-		    theCarModel = "-";
-			theEngine = "-";
-		}
 	}
+
+	function getCarAttr(data)
+    {
+        let carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9-]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
+        let match = carRegexp.exec(data);
+        if (match !==  null) {
+            return [match[1], match[2].replace(",", ".")];
+        } else {
+            return ["-", "-"];
+        }
+    }
 
 	function getNewPrice(data)
     {
