@@ -27,7 +27,7 @@
                             "Gear",
                             "Tank",
 							"Vægt",
-                            "Produktions år",
+                            "Prod. år",
                             "Døre",
 							"Modelår",
 							"Synet", 
