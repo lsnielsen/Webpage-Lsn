@@ -4,19 +4,15 @@
 
 
 
-	function getMainAttributes(data)
+	function getKm(data)
 	{
-		kmStart = data.search(/<span class="label">Km<\/span>/);
-		kmEnd = data.search(/<section id="bbVipUsage" class="section">/);
-		if (kmStart != -1) {
-			theKmSub = data.substring(kmStart, kmEnd);
-			kmNewStart = theKmSub.search(/<span class="value">/);
-			kmNewEnd = theKmSub.search(/ <\/span>/);
-			theKilometers = theKmSub.substring(kmNewStart+20, kmNewEnd);
-			//console.log("Km string: " + theKilometers + "\n");
-		} else {
-			theKilometers = "-";
-		}
+        let kmRegexp = /<section id="bbVipMileage" class="section">[\w\W]*?>Km<[\w\W]*?([0-9.]+)/;
+        let match = kmRegexp.exec(data);
+        if (match !==  null) {
+            return match[1];
+        } else {
+            return "-";
+        }
 	}
 
 	function getCarAttr(data)

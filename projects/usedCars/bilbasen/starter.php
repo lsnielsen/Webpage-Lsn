@@ -47,16 +47,13 @@
 	function getTheCarFromBilbasen(url)
 	{
         $.get(url,
-                function( data ) {
-
-                        var singleCarArray = new Array();
-                        theLink = url;
-                        getMainAttributes(data);
-                        setExtraEquipment(data);
-
-                        setTheFirstArray(singleCarArray, data);
-                },
-                'html'
+            function( data ) {
+                let singleCarArray = new Array();
+                theLink = url;
+                setExtraEquipment(data);
+                setTheFirstArray(singleCarArray, data);
+            },
+            'html'
         );
 	}
 

@@ -74,7 +74,6 @@
     let laneAssistant;
     let xenonLights;
     let contactInfo;
-    let theKilometers;
     let priceDiff;
 
     function setDiffPrice()
@@ -99,7 +98,7 @@
         singleCarArray.push(getPrice(data));
         singleCarArray.push(getNewPrice(data));
         singleCarArray.push("5");
-        singleCarArray.push(theKilometers);
+        singleCarArray.push(getKm(data));
         singleCarArray.push(getHorsePower(data));
         singleCarArray.push(getRegDate(data));
         singleCarArray.push(getGeartype(data));
