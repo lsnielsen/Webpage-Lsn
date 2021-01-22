@@ -80,32 +80,18 @@
 		} else {
 			lastDateOfSight = "-";
 		}
-		
-		modelStart = data.search("<div class=\"car-model-year\">");
-		modelEnd = data.search("<section class=\"section vip-finance\"");
-		if (modelStart != -1 && modelEnd != -1) {
-			modelString = data.substring(modelStart, modelEnd);
-			modelString = modelString.replace("<div class=\"car-model-year\">", "");
-			modelString = modelString.replace("<span class=\"label\">Modelår</span>", "");
-			modelString = modelString.replace("</div>", "");
-			modelString = modelString.replace("</div>", "");
-			modelString = modelString.replace("</div>", "");
-			modelString = modelString.replace("</div>", "");
-			modelString = modelString.replace("</section>", "");
-			modelString = modelString.replace("</span>", "");
-			modelString = modelString.replace("<span class=\"value\">", "");
-			for(i=0; i<10; i++) {
-				modelString = modelString.replace(/\n/, "");
-			}
-			for(i=0; i<200; i++) {
-				modelString = modelString.replace(" ", "");
-			}
-			//console.log("Model: " + modelString);
-			yearOfTheModel = modelString;
-		} else {
-			yearOfTheModel = "-";
-		}
 	}
+
+	function getModelDate(data)
+    {
+        let modelDateRegexp = /<div class="car-model-year">[\w\W]+?([0-9]{4})<\/span>/;
+        let match = modelDateRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getProdDate(data)
     {
