@@ -344,46 +344,6 @@
             return "-";
         }
     }
-	
-	
-
-
-
-	function removePrimerAttributeSpace(start, end, data)
-	{
-		var value = data.substring(start, end);
-		value = value.replace("<td style=\"color: #888;\">", "");
-		value = value.replace("</td>", "");
-		value = value.replace("</td>", "");
-		value = value.replace("</td>", "");
-		value = value.replace("<td>&nbsp;", "");
-		value = value.replace("<td class=\"selectedcar\">", "");
-		value = value.replace(/\n/, "");
-		value = value.replace(/\n/, "");
-		value = value.replace("<td class=\"currentcar\">-</td>", "");
-		value = value.replace("</tr>", "");
-		value = value.replace("<tr>", "");
-		value = value.replace("<td class=\"alignright\">- / -</td>", "");
-
-		for(i=0; i<20; i++) {
-			value = value.replace(" ", "");
-		}
-		for(i=0; i<50; i++) {
-			value = value.replace("   ", "");
-		}
-		for(i=0; i<20; i++) {
-			value = value.replace(/\n/, "");
-		}
-		
-		value = value.substr(value.indexOf(" ") + 1);
-		value = value.replace(/ +/, "");
-		
-		value = value.replace("</table>", "");
-
-		value = value.replace(",", ".");
-		return value;
-	}
-
 
 
 
