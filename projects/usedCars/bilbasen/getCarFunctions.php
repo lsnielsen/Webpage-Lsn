@@ -105,28 +105,18 @@
 		} else {
 			yearOfTheModel = "-";
 		}
-				
-		prodStart = data.search("<div class=\"car-production-date\">");
-		prodEnd = data.search("<div class=\"car-model-year\">");
-		if (prodStart != -1 && prodEnd != -1) {
-			prodString = data.substring(prodStart, prodEnd);
-			prodString = prodString.replace("<div class=\"car-production-date\">", "");
-			prodString = prodString.replace("<span class=\"label\">Produceret</span>", "");
-			prodString = prodString.replace("</div>", "");
-			prodString = prodString.replace("</span>", "");
-			prodString = prodString.replace("<span class=\"value\">", "");
-			for(i=0; i<5; i++) {
-				prodString = prodString.replace(/\n/, "");
-			}
-			for(i=0; i<200; i++) {
-				prodString = prodString.replace(" ", "");
-			}
-			//console.log("production: " + prodString);
-			theProductionDate = prodString;
-		} else {
-			theProductionDate = "-";
-		}
 	}
+
+	function getProdDate(data)
+    {
+        let prodDateRegexp = /<div class="car-production-date">[\w\W]+?([0-9- \/]{3,})<\/span>/;
+        let match = prodDateRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getRegDate(data)
     {

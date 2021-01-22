@@ -4,7 +4,6 @@
 	let theCarModel;
 	let theEngine;
 	let thePrice;
-    let theProductionDate;
     let yearOfTheModel;
     let lastDateOfSight;
     let theColor;
@@ -125,7 +124,7 @@
         singleCarArray.push(getGears(data));
         singleCarArray.push(getGasTank(data));
         singleCarArray.push(getWeight(data));
-        singleCarArray.push(theProductionDate);
+        singleCarArray.push(getProdDate(data));
         singleCarArray.push(getDoors(data));
         singleCarArray.push(yearOfTheModel);
         singleCarArray.push(lastDateOfSight);
