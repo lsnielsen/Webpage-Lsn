@@ -126,34 +126,23 @@
 		} else {
 			theProductionDate = "-";
 		}
-				
-		regStart = data.search("<div class=\"car-first-registration-date\">");
-		regEnd = data.search("<div class=\"car-production-date\">");
-		if (regStart != -1 && regEnd != -1) {
-			regString = data.substring(regStart, regEnd);
-			regString = regString.replace("<div class=\"car-first-registration-date\">", "");
-			regString = regString.replace("<span class=\"label\">1. registrering</span>", "");
-			regString = regString.replace("<img src='/Public/images/ico-tooltip.png' class=\"bb-vip-popover-icon\"/>", "");
-			regString = regString.replace("</div>", "");
-			regString = regString.replace("</span>", "");
-			regString = regString.replace("<span class=\"value\">", "");
-			for(i=0; i<5; i++) {
-				regString = regString.replace(/\n/, "");
-			}
-			for(i=0; i<200; i++) {
-				regString = regString.replace(" ", "");
-			}
-			//console.log("registration: " + regString);
-			theRegistrationDate = regString;
-		} else {
-			theRegistrationDate = "-";
-		}
 	}
+
+	function getRegDate(data)
+    {
+        let regDateRegexp = /<div class="car-first-registration-date">[\w\W]+">([0-9]{1,2}\/[0-9]{4})<\/span>/;
+        let match = regDateRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 		
 	function getHorsePower(data)
 	{
-		horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
-		match = horsePowerRegexp.exec(data);
+        let horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
+        let match = horsePowerRegexp.exec(data);
 		if (match !== null) {
 			return match[1];
 		} else {
@@ -163,7 +152,7 @@
 
 	function getZeroToHundred(data)
     {
-        zeroToHundredRegex = /<td style="color: #888;">0 - 100 km\/t<\/td>[\w\W]+?([0-9,]+ sek)<\/td>/;
+        let zeroToHundredRegex = /<td style="color: #888;">0 - 100 km\/t<\/td>[\w\W]+?([0-9,]+ sek)<\/td>/;
         let match = zeroToHundredRegex.exec(data);
         if (match !== null) {
             return match[1].replace(",", ".");
