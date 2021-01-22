@@ -33,15 +33,18 @@
 		if (match !==  null) {
 			theStarterPrice = match[1];
 		}
-
-		priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/;
-		match = priceRegex.exec(data);
-		if (match !==  null) {
-			thePrice = match[1];
-		} else {
-		    thePrice = "-";
-		}
 	}
+
+	function getPrice(data)
+    {
+        let priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/;
+        let match = priceRegex.exec(data);
+        if (match !==  null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getColor(data)
     {

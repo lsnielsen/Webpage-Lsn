@@ -3,7 +3,6 @@
 	let theLink;
 	let theCarModel;
 	let theEngine;
-	let thePrice;
     let towbar;
     let alloyWheels;
     let autoAndroid;
@@ -95,14 +94,14 @@
 
     function setTheFirstArray(singleCarArray, data)
     {
-        setDiffPrice();
+        //setDiffPrice();
         singleCarArray.push(theLink);
         singleCarArray.push(getContactInfo(data));
         singleCarArray.push(theCarModel);
         singleCarArray.push(theEngine);
-        singleCarArray.push(thePrice);
+        singleCarArray.push(getPrice(data));
         singleCarArray.push(theStarterPrice);
-        singleCarArray.push(priceDiff);
+        singleCarArray.push("5");
         singleCarArray.push(theKilometers);
         singleCarArray.push(getHorsePower(data));
         singleCarArray.push(getRegDate(data));
