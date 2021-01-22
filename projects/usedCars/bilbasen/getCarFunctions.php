@@ -2,7 +2,14 @@
 
 <script>
 
-
+    function getDiffPrice(data)
+    {
+        if (getPrice(data) !== "-" && getNewPrice(data) !== "-") {
+            return (getNewPrice(data) - getPrice(data)).toFixed(3);
+        } else {
+            return "-";
+        }
+    }
 
 	function getKm(data)
 	{

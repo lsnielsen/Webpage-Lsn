@@ -74,30 +74,16 @@
     let laneAssistant;
     let xenonLights;
     let contactInfo;
-    let priceDiff;
-
-    function setDiffPrice()
-    {
-        let priceCheck = (!isNaN(thePrice) && typeof(thePrice) !== "undefined");
-        let starterCheck = (!isNaN(theStarterPrice) && typeof theStarterPrice !== "undefined");
-        if (priceCheck && starterCheck) {
-            priceDiff = (theStarterPrice - thePrice).toFixed(3);
-        } else {
-            //console.log(priceCheck + ", " + starterCheck);
-            priceDiff = "-";
-        }
-    }
 
     function setTheFirstArray(singleCarArray, data)
     {
-        //setDiffPrice();
         singleCarArray.push(theLink);
         singleCarArray.push(getContactInfo(data));
         singleCarArray.push(getCarAttr(data)[0]);
         singleCarArray.push(getCarAttr(data)[1]);
         singleCarArray.push(getPrice(data));
         singleCarArray.push(getNewPrice(data));
-        singleCarArray.push("5");
+        singleCarArray.push(getDiffPrice(data));
         singleCarArray.push(getKm(data));
         singleCarArray.push(getHorsePower(data));
         singleCarArray.push(getRegDate(data));
