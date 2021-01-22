@@ -1,6 +1,5 @@
 <script>
 
-	let theLink;
     let towbar;
     let alloyWheels;
     let autoAndroid;
@@ -75,9 +74,9 @@
     let xenonLights;
     let contactInfo;
 
-    function setTheFirstArray(singleCarArray, data)
+    function setTheFirstArray(singleCarArray, data, url)
     {
-        singleCarArray.push(theLink);
+        singleCarArray.push(url);
         singleCarArray.push(getContactInfo(data));
         singleCarArray.push(getCarAttr(data)[0]);
         singleCarArray.push(getCarAttr(data)[1]);
