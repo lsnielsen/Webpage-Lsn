@@ -4,8 +4,10 @@
 
     function getDiffPrice(data)
     {
-        if (getPrice(data) !== "-" && getNewPrice(data) !== "-") {
-            return (getNewPrice(data) - getPrice(data)).toFixed(3);
+        let price = getPrice(data);
+        let newPrice = getNewPrice(data);
+        if (price !== "-" && newPrice !== "-") {
+            return (price - newPrice).toFixed(3);
         } else {
             return "-";
         }
