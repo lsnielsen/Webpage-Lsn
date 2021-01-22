@@ -61,26 +61,18 @@
 		} else {
 			theColor = "-";
 		}
-
-		sightStart = data.search("<li title=\"Dato for sidste syn\"><span>Synet:</span>");
-		sightEnd = data.search("<li title=\"Farve\"><span>Farve:</span>");
-		//console.log("sight start, end: " + sightStart + " " + sightEnd);
-		if (sightStart != -1 && sightEnd != -1) {
-			sightString = data.substring(sightStart, sightEnd);
-			sightString = sightString.replace("<li title=\"Dato for sidste syn\"><span>Synet:</span>", "");
-			sightString = sightString.replace("</li>", "");
-			for(i=0; i<10; i++) {
-				sightString = sightString.replace(/\n/, "");
-			}
-			for(i=0; i<200; i++) {
-				sightString = sightString.replace(" ", "");
-			}
-			//console.log(sightString);
-			lastDateOfSight = sightString;
-		} else {
-			lastDateOfSight = "-";
-		}
 	}
+
+	function getSightDate(data)
+    {
+        let sightDateRegexp = /<li title="Dato for sidste syn"><span>Synet:<\/span>([0-9\/]+)<\/li>/;
+        let match = sightDateRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getModelDate(data)
     {

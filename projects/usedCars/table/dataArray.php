@@ -4,7 +4,6 @@
 	let theCarModel;
 	let theEngine;
 	let thePrice;
-    let lastDateOfSight;
     let theColor;
     let towbar;
     let alloyWheels;
@@ -126,7 +125,7 @@
         singleCarArray.push(getProdDate(data));
         singleCarArray.push(getDoors(data));
         singleCarArray.push(getModelDate(data));
-        singleCarArray.push(lastDateOfSight);
+        singleCarArray.push(getSightDate(data));
         singleCarArray.push(theColor);
         singleCarArray.push(alloyWheels);
         singleCarArray.push(towbar);
