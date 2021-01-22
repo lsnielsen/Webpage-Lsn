@@ -141,7 +141,7 @@
 		
 	function getHorsePower(data)
 	{
-        let horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{3} hk \/ [0-9]{3} Nm)<\/td>/;
+        let horsePowerRegexp = /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+([0-9]{2,3} hk \/ [0-9]{2,3} Nm)<\/td>/;
         let match = horsePowerRegexp.exec(data);
 		if (match !== null) {
 			return match[1];
