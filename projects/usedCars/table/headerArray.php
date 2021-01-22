@@ -11,7 +11,7 @@
 							"Pris forskel",
 							"Kørte kilometer",
 							"Hk/Nm", 
-							"Registrerings dato", 
+							"Reg. dato",
 							"Geartype", 
 							"0-100 km/t", 
 							"Tophastighed", 
