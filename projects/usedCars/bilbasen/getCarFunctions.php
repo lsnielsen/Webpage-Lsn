@@ -41,27 +41,18 @@
 		} else {
 		    thePrice = "-";
 		}
-		
-		colorStart = data.search("<span>Farve:</span>");
-		//console.log("color start, end: " + colorStart);
-		if (colorStart != -1) {
-			colorString = data.substring(colorStart, colorStart+60);
-			colorString = colorString.replace("<span>Farve:</span>", "");
-			colorString = colorString.replace("</li>", "");
-			for(i=0; i<10; i++) {
-				colorString = colorString.replace(/\n/, "");
-			}
-			for(i=0; i<60; i++) {
-				colorString = colorString.replace(" ", "");
-			}
-			colorString = colorString.replace(/<[a-z<>\/]*/, "");
-			colorString = colorString.replace(/<[a-z<>\/]*/, "");
-			//console.log(colorString);
-			theColor = colorString;
-		} else {
-			theColor = "-";
-		}
 	}
+
+	function getColor(data)
+    {
+        let colorRegexp = /<li title="Farve"><span>Farve:<\/span>([a-zA-Zøåæ ]+)<\/li>/;
+        let match = colorRegexp.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getSightDate(data)
     {
