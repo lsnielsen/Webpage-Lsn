@@ -27,13 +27,18 @@
 		    theCarModel = "-";
 			theEngine = "-";
 		}
-			
-		starterPriceRegexp = /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/;
-		match = starterPriceRegexp.exec(data);
-		if (match !==  null) {
-			theStarterPrice = match[1];
-		}
 	}
+
+	function getNewPrice(data)
+    {
+        let starterPriceRegexp = /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/;
+        let match = starterPriceRegexp.exec(data);
+        if (match !==  null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getPrice(data)
     {

@@ -77,7 +77,6 @@
     let xenonLights;
     let contactInfo;
     let theKilometers;
-    let theStarterPrice;
     let priceDiff;
 
     function setDiffPrice()
@@ -100,7 +99,7 @@
         singleCarArray.push(theCarModel);
         singleCarArray.push(theEngine);
         singleCarArray.push(getPrice(data));
-        singleCarArray.push(theStarterPrice);
+        singleCarArray.push(getNewPrice(data));
         singleCarArray.push("5");
         singleCarArray.push(theKilometers);
         singleCarArray.push(getHorsePower(data));
