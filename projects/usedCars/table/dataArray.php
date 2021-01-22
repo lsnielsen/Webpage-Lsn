@@ -184,6 +184,5 @@
         singleCarArray.push(xenonLights);
 
 		dataArray.push(singleCarArray);
-
     }
 </script>
