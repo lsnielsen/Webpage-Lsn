@@ -2,22 +2,21 @@
 <html lang="en">
 
     <head>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Business Frontpage - Start Bootstrap Template</title>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet"/>
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>Business Frontpage - Start Bootstrap Template</title>
 
     </head>
 
-    <body>
+    <body class="bg-info">
 
-<!-- Navigation -->
+        <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Start Bootstrap</a>
@@ -41,11 +40,17 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
+
+                    <form action="/Webpage-Lsn/controller/frontpage.php" method="post" style="margin-left: auto;">
+                        <button type="submit" class="btn btn-dark btn-lg active">
+                            Tilbage til forsiden
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
 
-<!-- Header -->
+        <!-- Header -->
         <header class="bg-primary py-5 mb-5">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
@@ -57,7 +62,7 @@
             </div>
         </header>
 
-<!-- Page Content -->
+        <!-- Page Content -->
         <div class="container">
 
             <div class="row">
@@ -129,22 +134,15 @@
             <!-- /.row -->
 
         </div>
-<!-- /.container -->
+        <!-- /.container -->
 
-<!-- Footer -->
+        <!-- Footer -->
         <footer class="py-5 bg-dark">
             <div class="container">
                 <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
             </div>
             <!-- /.container -->
         </footer>
-
-
-        <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-            <button type="submit" class="btn btn-dark btn-lg active">
-                Tilbage til forsiden
-            </button>
-        </form>
 
     </body>
 
