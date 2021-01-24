@@ -29,21 +29,23 @@
             </h1>
             <?php include "frontpage/searchInfo.php"; ?>
 
-        <div class="nrOfCarsDiv">
+        <div class="container bg-success text-white pt-4 nrOfCarsDiv">
             <?php
                 if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
-                    echo "<h3>";
-                    echo $txtFile['nrOfCars'];
-                    echo "<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">";
-                    echo $txtFile['bilbasenLink'];
-                    echo "</a> : $bilbasenCount </h3>";
-                    echo "<h3>";
-                    echo $txtFile['nrOfCars'];
-                    echo "<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">";
-                    echo $txtFile['guloggratisLink'];
-                    echo "</a>:  $gulOgGratisCount </h3>";
-                    $sum = $bilbasenCount + $gulOgGratisCount + 1;
-                    echo "<h3> Samlet: $sum </h3>";
+                    echo "<h1 class='text-center'> Resultat af søgning: </h1>";
+                    echo "<h3 class='theChoosenModel'> </h3>";
+                    //echo "<h3>";
+                    //echo $txtFile['nrOfCars'];
+                    //echo "<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">";
+                    //echo $txtFile['bilbasenLink'];
+                    //echo "</a> : $bilbasenCount </h3>";
+                    //echo "<h3>";
+                    //echo $txtFile['nrOfCars'];
+                    //echo "<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">";
+                    //echo $txtFile['guloggratisLink'];
+                    //echo "</a>:  $gulOgGratisCount </h3>";
+                    //$sum = $bilbasenCount + $gulOgGratisCount + 1;
+                    //echo "<h3> Samlet: $sum </h3>";
                 }
             ?>
         </div>
