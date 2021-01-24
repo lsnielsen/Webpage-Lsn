@@ -31,22 +31,22 @@
                 mkdir('../diverse/carFiles', 0777, true);
             }
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
-            header("Content-Disposition: attachment; filename=\"Brugte biler -\"$fileName");
-			fputcsv($fp, $headerArray); 
-			foreach ($autoArr as $row) {
-				fputcsv($fp, $row); 
-			} 
-			
-			fputcsv($fp, [ ]); 
-			fputcsv($fp, [ ]); 
-			fputcsv($fp, [ ]); 
-			
-			fputcsv($fp, $headerArray); 
-			foreach ($manuelArr as $row) { 
-				fputcsv($fp, $row); 
-			} 
-  
-			fclose($fp);
+            fputcsv($fp, $headerArray);
+            foreach ($autoArr as $row) {
+                fputcsv($fp, $row);
+            }
+
+            fputcsv($fp, [ ]);
+            fputcsv($fp, [ ]);
+            fputcsv($fp, [ ]);
+
+            fputcsv($fp, $headerArray);
+            foreach ($manuelArr as $row) {
+                fputcsv($fp, $row);
+            }
+
+            header("Content-Disposition: $fp; filename=\"Brugte biler -\"$fileName");
+            fclose($fp);
 			
 			include("../projects/usedCars/frontpage.php");	
 			include("../projects/usedCars/table/usedCarTable.php");
