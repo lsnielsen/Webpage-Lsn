@@ -5,7 +5,6 @@
 
 	function setExtraEquipment(data)
 	{
-		//console.log(data);
 		absEquip = data.search("ABS-bremser");	
 		if(absEquip != -1) { absBreaks = "Ja"; } else { absBreaks = "-"; }
 		
@@ -21,8 +20,7 @@
 		towDetachEquip = data.search("Anh&#230;ngertr&#230;k, aftagl.");	
 		if(towDetachEquip != -1) { towbarDetachable = "Ja"; } else { towbarDetachable = "-"; }
 		
-		spinEquip = data.search("Antispin");	
-		//console.log("antispin: " + spinEquip);
+		spinEquip = data.search("Antispin");
 		if(spinEquip != -1) { antispin = "Ja"; } else { antispin = "-"; }
 		
 		appleEquip = data.search("Apple carplay");	
@@ -228,10 +226,6 @@
 		if(xenonLightEquip != -1) { xenonLights = "Ja"; } else { xenonLights = "-"; }
 		
 	}
-
-
-
-
 
 
 

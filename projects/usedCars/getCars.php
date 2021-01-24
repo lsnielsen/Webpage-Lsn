@@ -8,7 +8,7 @@
     include("gulOgGratis/getCarFunctions.php");
     include("gulOgGratis/extraEquipment.php");
 
-    include("dataArray.php");
+    include("table/dataArray.php");
 
 ?>
 
@@ -36,7 +36,7 @@
 		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
-		
+
 		bilbasenLoop();
 		gulOgGratisLoop();
 		firstPauseLoop();
@@ -49,7 +49,6 @@
 				firstPauseLoop();             
 			} else {
 				gulOgGratisCars = secondUrlArr.length;
-
 				$("#bilbasenurls").text(firstUrlArr.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
@@ -65,23 +64,25 @@
 	
 	function secondPauseLoop()
 	{
-            setTimeout(
-                    function() 
-                    {
-                            if(lastBool == false) {
-                                    secondPauseLoop();
-                            } else {
-                                    setTimeout(
-                                            function()
-                                            {
-                                                    makeArrayToPhp();
-                                            }, 200);
-                            }
-            }, 5000);		
+        setTimeout(
+            function()
+            {
+                if(lastBool == false) {
+                    secondPauseLoop();
+                } else {
+                    setTimeout(
+                        function()
+                        {
+                            makeArrayToPhp();
+                        }, 200
+                    );
+                }
+            }, 5000
+        );
 	}
 		
 	function bilbasenLoop() {       
-		setTimeout(function() {   
+		setTimeout(function() {
 			if (loopI >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + loopI;
 				callingFirstUrl(pageUrl);
@@ -117,14 +118,21 @@
 			}				
 		}, 200)
 	}
-	
-	
+
+
 	function setFrontpage()
 	{
-		$("#backButton").hide();
-		$(".modelDropdown").hide();
+        $("#backButton").hide();
+        $("#headerInfo").hide();
+        $(".modelDropdown").hide();
+        $(".tableContainer").hide();
+        $(".nrOfCarsDiv").hide();
+
+        $(".searchInfo").show();
 		$(".startSearch").show();
-		
+        $(".middleSearch").hide();
+		$(".endSearch").hide();
+
 		choosenModel = $(".carModel").children("option:selected").val();
 		$(".theChoosenModel").text(choosenModel);
 	}

@@ -6,7 +6,7 @@
 		if ($usedCarsArray == "") {
 			include("../projects/usedCars/frontpage.php");	
 		} else {
-			include("../projects/usedCars/headerArray.php");
+			include("../projects/usedCars/table/headerArray.php");
 
 			$bilbasenCount = 0;
 			$gulOgGratisCount = 0;
@@ -26,10 +26,13 @@
 			if(isset($_COOKIE['theChoosenCarModel'])) {
 				$fileName = $_COOKIE['theChoosenCarModel'];
 			}
-			
+
+            if (!file_exists('../diverse/carFiles')) {
+                mkdir('../diverse/carFiles', 0777, true);
+            }
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
 			fputcsv($fp, $headerArray); 
-			foreach ($autoArr as $row) { 
+			foreach ($autoArr as $row) {
 				fputcsv($fp, $row); 
 			} 
 			
@@ -45,7 +48,7 @@
 			fclose($fp);
 			
 			include("../projects/usedCars/frontpage.php");	
-			include("../projects/usedCars/usedCarTable.php");	
+			include("../projects/usedCars/table/usedCarTable.php");
 			
 			
 		}

@@ -7,94 +7,57 @@
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="/Webpage-Lsn/projects/usedCars/css/usedCars.css" type="text/css">	
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
-	<body style="background-color: #ccff99;">
-		<h1>
-            <?php echo $txtFile['linkTxt']; ?>
-			<a href="https:\\www.bilbasen.dk" target="_blank">
-                <?php echo $txtFile['linkOne']; ?>
-			</a>
-            <?php echo $txtFile['oneMore']; ?>
-			<a href="https:\\www.guloggratis.dk" target="_blank">
-                <?php echo $txtFile['linkTwo']; ?>
+	<body class="p-3 mb-2 bg-success">
+            <h1 class="jumbotron text-center">
+                <?php echo $txtFile['linkTxt']; ?>
+                <a href="https:\\www.bilbasen.dk" target="_blank" class="text-body">
+                    <em>
+                        <?php echo $txtFile['linkOne']; ?>
+                    </em>
+                </a>
+                <?php echo $txtFile['oneMore']; ?>
+                <a href="https:\\www.guloggratis.dk" target="_blank" class="text-body">
+                    <em>
+                        <?php echo $txtFile['linkTwo']; ?>
+                    </em>
+                </a>
+                <?php echo $txtFile['resultTxt']; ?>
+            </h1>
+            <?php include "frontpage/searchInfo.php"; ?>
 
-			</a>
-            <?php echo $txtFile['resultTxt']; ?>
-		</h1>
+        <div class="container bg-success text-white pt-4 nrOfCarsDiv">
+            <?php
+                if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
+                    echo "<h1 class='text-center'> Resultat af søgning: </h1>";
+                    echo "<h3 class='theChoosenModel'> </h3>";
+                    //echo "<h3>";
+                    //echo $txtFile['nrOfCars'];
+                    //echo "<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">";
+                    //echo $txtFile['bilbasenLink'];
+                    //echo "</a> : $bilbasenCount </h3>";
+                    //echo "<h3>";
+                    //echo $txtFile['nrOfCars'];
+                    //echo "<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">";
+                    //echo $txtFile['guloggratisLink'];
+                    //echo "</a>:  $gulOgGratisCount </h3>";
+                    //$sum = $bilbasenCount + $gulOgGratisCount + 1;
+                    //echo "<h3> Samlet: $sum </h3>";
+                }
+            ?>
+        </div>
 
-				<form method="post">
-					<button type="submit" 
-							id="arrayButton" 
-							name="usedCarsArray"
-							style="display: none;" 
-							action="/Webpage-Lsn/controller/usedCars.php"> 
-					</button>
-				</form>
-				
-				<div class="startSearch searchTxt infoTxt">
-                    <?php echo $txtFile['searchOne']; ?>  <center class="theChoosenModel"> </center>
-                    <?php echo $txtFile['searchTwo']; ?>
-                </div>
-				<div class="middleSearch searchTxt infoTxt">
-                    <?php echo $txtFile['searchThree']; ?>
-					<div id="bilbasenurls" style="margin-left: 500px; margin-top: -25px;"> </div>
-                    <?php echo $txtFile['searchFour']; ?>
-					<div id="guloggratisurls" style="margin-left: 220px; margin-top: -25px;"> </div>
-                    <?php echo $txtFile['searchFive']; ?>
-				</div>
-				<div class="endSearch searchTxt infoTxt">
-                    <?php echo $txtFile['searchFinish']; ?>
-				</div>
-				
-					
-				<form class="modelDropdown">
-					<label class="infoTxt">
-                        <?php echo $txtFile['dropdownTxt']; ?>
-                    </label>
-					<select class="carModel frontpageStyle">
-						<option style="font-size: 20px;">
-                            <?php echo $txtFile['chooseModel']; ?>
-                        </option>
-						<option class="carModelOptions" value="Volvo V60">Volvo V60</option>
-						<option class="carModelOptions" value="Volvo XC40">Volvo XC40</option>
-						<option class="carModelOptions" value="Volvo V40">Volvo V40</option>
-						<option class="carModelOptions" value="vw t-roc">Vw T-roc</option>
-						<option class="carModelOptions" value="Volvo V40%20CC V40CC">Volvo V40 CC</option>
-						<option class="carModelOptions" value="Audi A3">Audi A3</option>
-						<option class="carModelOptions" value="Audi A4">Audi A4</option>
-						<option class="carModelOptions" value="Audi A6">Audi A6</option>
-						<option class="carModelOptions" value="Saab 9-3">Saab 9-3</option>
-						<option class="carModelOptions" value="Saab 9-5">Saab 9-5</option>
-						<option class="carModelOptions" value="Ford Fiesta">Ford Fiesta</option>
-						<option class="carModelOptions" value="BMW ms-3-Serie">Bmw 3-serie</option>
-						<option class="carModelOptions" value="BMW ms-2-Serie">Bmw 2-serie</option>
-						<option class="carModelOptions" value="Peugeot 206">Peugeot 206+</option>
-					</select>
-				</form>
-
-				<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-					<button class="frontpageStyle" style="width: 160px;" id="backButton" type="submit">
-                        <?php echo $txtFile['back']; ?>
-					</button>
-				</form>
-		
-		<?php 	
-			if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
-				echo "<h3>";
-				echo $txtFile['nrOfCars'];
-				echo "<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">";
-                echo $txtFile['bilbasenLink'];
-                echo "</a> : $bilbasenCount </h3>";
-				echo "<h3>";
-                echo $txtFile['nrOfCars'];
-                echo "<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">";
-                echo $txtFile['guloggratisLink'];
-                echo "</a>:  $gulOgGratisCount </h3>";
-				$sum = $bilbasenCount + $gulOgGratisCount;
-				echo "<h3> Samlet: $sum </h3>";
-			}
-		?>
+            <form method="post">
+                <button type="submit"
+                        id="arrayButton"
+                        name="usedCarsArray"
+                        style="display: none;"
+                        action="/Webpage-Lsn/controller/usedCars.php">
+                </button>
+            </form>
 
 	</body>
 
@@ -103,67 +66,5 @@
 <?php
 	include("getCars.php");
 ?>
-
-<style>
-	.theChoosenModel {
-		margin-top: -25px;
-		margin-left: -25px;
-	}
-
-	.infoTxt {
-		font-size: 25px;
-	}
-	.searchTxt {
-		display: none;
-	}
-	.carModelOptions {
-		font-size: 25px;
-	}
-
-	.frontpageStyle {
-		color: #fff !important;
-		text-transform: uppercase;
-		text-decoration: none;
-		background: #ed3330;
-		padding: 20px;
-		border-radius: 5px;
-		display: inline-block;
-		border: none;
-		transition: all 0.4s ease 0s;
-		margin-left: 100px;
-	}
-	.frontpageStyle:hover {
-		background: #434343;
-		letter-spacing: 1px;
-		-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-		transition: all 0.4s ease 0s;
-	}
-	#backButton {
-		margin-left: 1100px;
-		margin-top: -70px;
-	}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
