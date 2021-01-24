@@ -31,6 +31,7 @@
                 mkdir('../diverse/carFiles', 0777, true);
             }
 			$fp = fopen('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv' , 'w');
+            header("Content-Disposition: attachment; filename=\"Brugte biler -\"$fileName");
 			fputcsv($fp, $headerArray); 
 			foreach ($autoArr as $row) {
 				fputcsv($fp, $row); 
