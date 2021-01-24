@@ -64,6 +64,11 @@
                     <?php echo $txtFile['langTrainer']; ?>
 				</button>
 			</form>
+			<form action="/Webpage-Lsn/controller/debt.php" method="post">
+				<button class="frontpageButton" id="debtButton" type="submit" name="debt" value="debtPage">
+                    Gælds side
+				</button>
+			</form>
 			<div id="my-signin2"></div>
 			<form class="frontpageButton" method="get" id="searchArea" action="https://www.google.com/search" target="_blank">
 				<center>
