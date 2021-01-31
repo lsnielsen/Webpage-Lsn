@@ -224,7 +224,6 @@
 		
 		xenonLightEquip = data.search("Xenonlygter");	
 		if(xenonLightEquip != -1) { xenonLights = "Ja"; } else { xenonLights = "-"; }
-		
 	}
 
 
