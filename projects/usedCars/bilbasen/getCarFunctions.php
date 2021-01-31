@@ -6,8 +6,10 @@
     {
         let price = getPrice(data);
         let newPrice = getNewPrice(data);
-        if (price !== "-" && newPrice !== "-") {
-            return (price - newPrice).toFixed(3);
+        let emptyCheck = (price !== "-") && (newPrice !== "-");
+        let sizeCheck = (parseFloat(newPrice) > parseFloat(price)) && (parseFloat(price) >= 10.000);
+        if (emptyCheck && sizeCheck) {
+            return (newPrice - price).toFixed(3);
         } else {
             return "-";
         }
