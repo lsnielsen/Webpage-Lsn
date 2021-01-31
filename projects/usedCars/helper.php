@@ -43,7 +43,6 @@ function setFrontpageWithData($usedCarsArray)
 
     header("Content-Disposition: $fp; filename=\"Brugte biler -\"$fileName");
     fclose($fp);
-
     include("../projects/usedCars/frontpage.php");
     include("../projects/usedCars/table/usedCarTable.php");
 }
