@@ -6,8 +6,6 @@ function setFrontpageWithData($usedCarsArray)
 {
     include("../projects/usedCars/table/headerArray.php");
 
-    $bilbasenCount = 0;
-    $gulOgGratisCount = 0;
     $dataArr = prepareArray($usedCarsArray);
 
     $tempArr = removeBlankColoums($dataArr, $headerArray);
