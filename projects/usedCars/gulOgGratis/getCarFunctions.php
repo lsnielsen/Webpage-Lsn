@@ -185,29 +185,40 @@
 		} else {
 			TheLength = "-";
 		}
+	}
 
-		heightStart = data.search("<td style=\"color: #888;\">Højde</td>");
-		heightEnd = data.search("<td style=\"color: #888;\">Lasteevne</td>");
-		if (heightStart != -1 && heightEnd != -1) {
-			TheHeight = removePrimerAttributeSpace(heightStart, heightEnd, data);
-		} else {
-			TheHeight = "-";
-		}
+    function getHeight(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Højde[\w\W]+">([0-9a-zA-Z-.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
-		loadStart = data.search(/"Max vægt","value":"/);
-		if (loadStart != -1) {
-			LoadAbility = data.substring(loadStart+20, loadStart+24) + " kg";
-		} else {
-			LoadAbility = "-";
-		}
+    function getLoad(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Max vægt[\w\W]+">([0-9a-zA-Z-.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
-		tractionStart = data.search(/"Hjultræk","value":"/);
-		if (tractionStart != -1) {
-			DrivingWheels = data.substring(tractionStart+20, tractionStart+35);
-			//console.log(DrivingWheels);
-		} else {
-			DrivingWheels = "-";
-		}	}
+    function getTraction(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Hjultræk[\w\W]+">([0-9a-zA-Z-.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
     function getCylinders(data)
     {
