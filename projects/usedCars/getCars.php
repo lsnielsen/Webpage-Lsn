@@ -14,21 +14,21 @@
 ?>
 
 <script>
-	
-	var basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
-	var basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
-	
-	var secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
-	var firstUrlArr = new Array();
-	var secondUrlArr = new Array();
-	var dataArray = new Array();
-	var modelArray = new Array();
-	var loopI = 1;
-	var loopJ = 1;
-	var firstBool = false;
-	var secondBool = false;
-	var lastBool = false;
+    const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
+    const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
+
+    const secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
+
+    const firstUrlArr = new Array();
+    const secondUrlArr = new Array();
+    const dataArray = new Array();
+    let modelArray = new Array();
+	let loopI = 1;
+	let loopJ = 1;
+	let firstBool = false;
+	let secondBool = false;
+	let lastBool = false;
 	
         
 	$("select.carModel").change(function(){
