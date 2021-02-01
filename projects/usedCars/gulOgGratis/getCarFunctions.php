@@ -207,23 +207,29 @@
 			//console.log(DrivingWheels);
 		} else {
 			DrivingWheels = "-";
-		}
+		}	}
 
-		cylStart = data.search(/"Antal cylindre","value":"/);
-		if (cylStart != -1) {
-			TheCylinders = data.substring(cylStart+26, cylStart+27);
-		} else {
-			TheCylinders = "-";
-		}
+    function getCylinders(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Antal cylindre[\w\W]+">([0-9a-zA-Z.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
-		absStart = data.search("<td style=\"color: #888;\">ABS-bremser</td>");
-		absEnd = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
-		if (absStart != -1 && absEnd != -1) {
-			AbsBreaks = removePrimerAttributeSpace(absStart, absEnd, data);
-		} else {
-			AbsBreaks = "-";
-		}
-	}
+    function getAbs(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">ABS-bremser[\w\W]+">([0-9a-zA-Z.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
     function getMaxPayload(data)
     {
