@@ -9,6 +9,7 @@
     include("gulOgGratis/extraEquipment.php");
 
     include("table/dataArray.php");
+    include("table/dataArrayGog.php");
 
 ?>
 
