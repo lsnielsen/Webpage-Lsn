@@ -42,12 +42,14 @@
 	{
 		$.get(url, 
 			function( data ) {
-				var gogCarArray = new Array();
-				theLink = url;
-                getMainGogAttributes(data);
-                setPrimerGogAttributes(data);
+                const gogCarArray = new Array();
                 setExtraGogEquipment(data);
-                setTheFirstArray(gogCarArray);
+                setTheFirstArray(gogCarArray, data, url);
+
+                //getMainGogAttributes(data);
+                //setPrimerGogAttributes(data);
+                //setExtraGogEquipment(data);
+                //setTheFirstArray(gogCarArray);
 			},
 			'html'
 		);
