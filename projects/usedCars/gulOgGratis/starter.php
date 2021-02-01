@@ -44,7 +44,7 @@
 			function( data ) {
                 const gogCarArray = new Array();
                 setExtraGogEquipment(data);
-                setTheFirstArray(gogCarArray, data, url);
+                setTheFirstArrayGog(gogCarArray, data, url);
 
                 //getMainGogAttributes(data);
                 //setPrimerGogAttributes(data);
