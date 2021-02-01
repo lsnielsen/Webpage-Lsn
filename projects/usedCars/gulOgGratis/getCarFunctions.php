@@ -120,7 +120,7 @@
 			TheRegistrationDate = "-";
 		}
 	}
-		
+
 	function setPrimerGogAttributes(data)
 	{
 		hkStart = data.search(/"HK","value":"/);
@@ -223,61 +223,78 @@
 		} else {
 			AbsBreaks = "-";
 		}
-
-		maxloadStart = data.search("<td style=\"color: #888;\">Max. påhæng</td>");
-		maxloadEnd = data.search("<td style=\"color: #888;\">Airbags</td>");
-		if (maxloadStart != -1 && maxloadEnd != -1) {
-			TheMaxLoad = removePrimerAttributeSpace(maxloadStart, maxloadEnd, data);
-		} else {
-			TheMaxLoad = "-";
-		}
-
-		airbagStart = data.search(/"Antal airbags","value":"/);
-		if (airbagStart != -1) {
-			NumberOfAirbags = data.substring(airbagStart+25, airbagStart+26);
-		} else {
-			NumberOfAirbags = "-";
-		}
-
-		espStart = data.search("<td style=\"color: #888;\">ESP</td>");
-		espEnd = data.search("<td style=\"color: #888;\">Tank</td>");
-		if (espStart != -1 && espEnd != -1) {
-			DoesEsp = removePrimerAttributeSpace(espStart, espEnd, data);
-		} else {
-			DoesEsp = "-";
-		}
-
-		tankStart = data.search(/"Tank","value":"/);
-		if (tankStart != -1) {
-			TheGasTank = data.substring(tankStart+16, tankStart+18) + " l";
-		} else {
-			TheGasTank = "-";
-		}
-
-		gearStart = data.search(/"Gear","value":"/);
-		if (gearStart != -1) {
-			TheGears = data.substring(gearStart+16, gearStart+17);
-		} else {
-			TheGears = "-";
-		}
-
-		geartypeStart = data.search(/"Geartype","value":"/);
-		if (geartypeStart != -1) {
-			TheGearType = data.substring(geartypeStart+20, geartypeStart+26);
-			if (TheGearType.includes('auto') || TheGearType.includes('Auto')) {
-				TheGearType = "Automatgear";
-			}
-		} else {
-			TheGearType = "-";
-		}
-
-		weightStart = data.search(/"Vægt","value":"/);
-		if (weightStart != -1) {
-			TheWeight = data.substring(weightStart+16, weightStart+20);
-		} else {
-			TheWeight = "-";
-		}
 	}
+
+    function getMaxPayload(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Max påhængsvægt[\w\W]+">([0-9.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+    function getAirbags(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Antal airbags[\w\W]+">([0-9]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getEsp(data)
+    {
+        return "-";
+    }
+
+	function getGasTank(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Tank[\w\W]+">([0-9]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getGeartype(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Gear[\w\W]+">([0-9]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getGears(data)
+    {
+        let regex = /<div data-grid="column"[\w\W]+">Gear[\w\W]+">([0-9.]+)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+	function getWeight(data)
+    {
+        let weightRegex = /<div data-grid="column"[\w\W]+">Vægt[\w\W]+">([0-9.]+)<\/dd><\/dl><\/div>/;
+        let match = weightRegex.exec(data);
+        if (match !== null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
 
 	function getDoors(data)
     {
