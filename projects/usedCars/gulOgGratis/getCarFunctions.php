@@ -30,7 +30,7 @@
 
 	function getCarAttrGog(data)
     {
-        let regex = /<div data-grid="column"[\w\W]+">Motorstørrelse[\w\W]+">([\//0-9a-zA-Z-.,]+)<\/dd><\/dl><\/div>/;
+        let regex = /<dl class="_35sVIAXVbKbano4g_1_PYh"><dt[\w\W]*">Motorstørrelse[\w\W]*">([a-z0-9, A-Z]+)<\/dd><\/dl>/;
         let match = regex.exec(data);
         if (match !== null) {
             return match[1];
@@ -335,11 +335,9 @@
 	    let contactRegex = /<div class=[\w\W]+">([0-9]{4} [a-zA-Z]*)<\/span><\/div>/;
 	    let match = contactRegex.exec(data);
 	    if (match !== null) {
-	        console.log("contact match");
 	        return match[1];
         } else {
-            console.log("contact no match");
-	        return "-";
+            return "-";
         }
 	}
 
