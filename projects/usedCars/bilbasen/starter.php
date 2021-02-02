@@ -49,7 +49,6 @@
         $.get(url,
             function( data ) {
                 let singleCarArray = new Array();
-                setExtraEquipment(data);
                 setTheFirstArray(singleCarArray, data, url);
             },
             'html'
