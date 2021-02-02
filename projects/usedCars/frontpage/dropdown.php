@@ -6,7 +6,7 @@
 <form class="modelDropdown">
     <select class="carModel dropdownStyle">
         <option style="font-size: 20px;">
-            Her kan du vælge din bilmodel
+            Vælg bilmodel
         </option>
 
         <option class="subheader" disabled> Volvo: </option>
