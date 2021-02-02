@@ -6,7 +6,7 @@
 <form class="modelDropdown">
     <select class="carModel dropdownStyle">
         <option style="font-size: 20px;">
-            <?php echo $txtFile['chooseModel']; ?>
+            Her kan du vælge din bilmodel
         </option>
 
         <option class="subheader" disabled> Volvo: </option>
