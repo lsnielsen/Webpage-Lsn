@@ -16,7 +16,7 @@
         <option class="carOption" value="Volvo V40%20CC V40CC">Volvo V40 CC</option>
 
         <option class="subheader" disabled>Volkswagen: </option>
-        <option class="carOption" value="vw t-roc">Vw T-roc</option>
+        <option class="carOption" value="VW T-roc">Vw T-roc</option>
 
         <option class="subheader" disabled>Audi: </option>
         <option class="carOption" value="Audi A3">Audi A3</option>
