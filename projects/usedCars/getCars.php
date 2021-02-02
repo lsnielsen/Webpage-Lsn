@@ -142,8 +142,8 @@
 	function makeArrayToPhp()
 	{
 		$(".endSearch").show();
-		for(i=0; i<dataArray.length; i++) {
-			arrayValue = dataArray[i];
+		for(let i=0; i<dataArray.length; i++) {
+			let arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {
 				if (arrayValue[j] == ",") {
 					arrayValue[j] = ".";
