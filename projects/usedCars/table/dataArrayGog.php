@@ -6,7 +6,7 @@
         if(extraEquip != -1) { return "Ja"; } else { return "-"; }
     }
 
-    function setTheFirstArray(singleCarArray, data, url)
+    function setTheFirstArrayGog(singleCarArray, data, url)
     {
         singleCarArray.push(url);
         singleCarArray.push(getContactInfo(data));
