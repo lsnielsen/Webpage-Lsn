@@ -3,7 +3,7 @@
 <?php $txtFile = include "../text/global.php"; ?>
 	<head>
 		<title>
-			<?php echo $txtFile['tabTitle']; ?>
+            Brugte biler
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
@@ -13,19 +13,19 @@
 	</head>
 	<body class="p-3 mb-2 bg-success">
             <h1 class="jumbotron text-center">
-                <?php echo $txtFile['linkTxt']; ?>
+                Her kan du downloade en excel fil med brugte biler fra
                 <a href="https:\\www.bilbasen.dk" target="_blank" class="text-body">
                     <em>
-                        <?php echo $txtFile['linkOne']; ?>
+                        bilbasen.dk
                     </em>
                 </a>
-                <?php echo $txtFile['oneMore']; ?>
+                og
                 <a href="https:\\www.guloggratis.dk" target="_blank" class="text-body">
                     <em>
-                        <?php echo $txtFile['linkTwo']; ?>
+                        guloggratis.dk.
                     </em>
                 </a>
-                <?php echo $txtFile['resultTxt']; ?>
+                Resultatet vil også blive vist i en tabel nedenfor.
             </h1>
             <?php include "frontpage/searchInfo.php"; ?>
 
