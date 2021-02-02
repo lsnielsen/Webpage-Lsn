@@ -43,13 +43,7 @@
 		$.get(url, 
 			function( data ) {
                 const gogCarArray = new Array();
-                setExtraGogEquipment(data);
                 setTheFirstArrayGog(gogCarArray, data, url);
-
-                //getMainGogAttributes(data);
-                //setPrimerGogAttributes(data);
-                //setExtraGogEquipment(data);
-                //setTheFirstArray(gogCarArray);
 			},
 			'html'
 		);
