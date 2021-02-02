@@ -74,6 +74,13 @@
     let xenonLights;
     let contactInfo;
 
+    function setExtraDefaultEquip(data, searchString)
+    {
+        let extraEquip = data.search(searchString);
+        if(extraEquip != -1) {
+            return "Ja"; } else { return "-"; }
+    }
+
     function setTheFirstArray(singleCarArray, data, url)
     {
         singleCarArray.push(url);
@@ -106,12 +113,12 @@
         singleCarArray.push(getModelDate(data));
         singleCarArray.push(getSightDate(data));
         singleCarArray.push(getColor(data));
-        singleCarArray.push(alloyWheels);
-        singleCarArray.push(towbar);
-        singleCarArray.push(towbarDetachable);
-        singleCarArray.push(autoAndroid);
-        singleCarArray.push(antispin);
-        singleCarArray.push(carplayApple);
+        singleCarArray.push(setExtraDefaultEquip(data, "Aluf&#230;lge"));
+        singleCarArray.push(setExtraDefaultEquip(data, "Anh&#230;ngertr&#230;k"));
+        singleCarArray.push(setExtraDefaultEquip(data, "Anh&#230;ngertr&#230;k, aftagl."));
+        singleCarArray.push(setExtraDefaultEquip(data, "Android auto"));
+        singleCarArray.push(setExtraDefaultEquip(data, "Antispin"));
+        singleCarArray.push(setExtraDefaultEquip(data, "Apple carplay"));
         singleCarArray.push(getEuronorm(data));
         singleCarArray.push(getWidth(data));
         singleCarArray.push(getLength(data));
@@ -182,6 +189,7 @@
         singleCarArray.push(usbConnection);
         singleCarArray.push(laneAssistant);
         singleCarArray.push(xenonLights);
+    //    singleCarArray.push(getWidth(data, "xenonlygter"));
 
 		dataArray.push(singleCarArray);
     }
