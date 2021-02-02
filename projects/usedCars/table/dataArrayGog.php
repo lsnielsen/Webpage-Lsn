@@ -10,8 +10,8 @@
     {
         singleCarArray.push(url);
         singleCarArray.push(getContactInfoGog(data));
-        singleCarArray.push(getCarAttrGog(data)[0]);
-        singleCarArray.push(getCarAttrGog(data)[1]);
+        singleCarArray.push(getCarAttrGog(data));
+        singleCarArray.push(getCarAttrGog(data));
         singleCarArray.push(getPriceGog(data));
         singleCarArray.push(getNewPriceGog(data));
         singleCarArray.push(getDiffPriceGog(data));
