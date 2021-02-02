@@ -2,7 +2,20 @@
 
 <script>
 
+    function getDiffPriceGog(data)
+    {
+        return "-";
+    }
 
+    function getNewPriceGog(data)
+    {
+        return "-";
+    }
+
+    function getColorGog(data)
+    {
+        return "-";
+    }
 
 	function getKmGog(data)
 	{
@@ -322,8 +335,10 @@
 	    let contactRegex = /<div class=[\w\W]+">([0-9]{4} [a-zA-Z]*)<\/span><\/div>/;
 	    let match = contactRegex.exec(data);
 	    if (match !== null) {
+	        console.log("contact match");
 	        return match[1];
         } else {
+            console.log("contact no match");
 	        return "-";
         }
 	}
