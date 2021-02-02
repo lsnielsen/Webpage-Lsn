@@ -3,8 +3,7 @@
     function setExtraDefaultEquip(data, searchString)
     {
         let extraEquip = data.search(searchString);
-        if(extraEquip != -1) {
-            return "Ja"; } else { return "-"; }
+        if(extraEquip != -1) { return "Ja"; } else { return "-"; }
     }
 
     function setTheFirstArray(singleCarArray, data, url)
