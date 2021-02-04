@@ -11,7 +11,9 @@
 					if (temp != -1) {
 						var theFirstString = subStr.substring(temp + 1, subStr.length - 1);
 						theFirstString = "https://www.guloggratis.dk" + theFirstString;
-						secondUrlArr.push(theFirstString);
+                        if (!secondUrlArr.includes(theFirstString)) {
+                            secondUrlArr.push(theFirstString);
+                        }
 					}
 				}
 			}, 
