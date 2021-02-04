@@ -4,12 +4,26 @@
 
     function getDiffPriceGog(data)
     {
-        return "-";
+        let price = getPriceGog(data);
+        let newPrice = getNewPriceGog(data);
+        let emptyCheck = (price !== "-") && (newPrice !== "-");
+        let sizeCheck = (parseFloat(newPrice) > parseFloat(price)) && (parseFloat(price) >= 10.000);
+        if (emptyCheck && sizeCheck) {
+            return (newPrice - price).toFixed(3);
+        } else {
+            return "-";
+        }
     }
 
     function getNewPriceGog(data)
     {
-        return "-";
+        let regex = /<dt class="CJwC7ukoOZNDCw3qM5xNY">Nypris[\w\W]+?">([0-9.]*)<\/dd><\/dl><\/div>/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return match[1].replace(",", ".");;
+        } else {
+            return "-";
+        }
     }
 
     function getColorGog(data)
@@ -44,7 +58,7 @@
         let regex = /<div data-grid="column"[\w\W]+">Variant[\w\W]+?">([\//0-9a-zA-Z-.,]+)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", "");
         } else {
             return "-";
         }
@@ -55,7 +69,7 @@
         let regex = /<div class="[\w\W]+price">[\w\W]+?">([0-9. a-z]+)<\/div><\/div><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace("kr.", "");
         } else {
             return "-";
         }
@@ -129,7 +143,7 @@
 
     function getTopSpeedGog(data)
     {
-        let regex = /<div data-grid="column"[\w\W]+">Tophastighed[\w\W]+">([0-9a-zA-Z-.]+)<\/dd><\/dl><\/div>/;
+        let regex = /<dt class="CJwC7ukoOZNDCw3qM5xNY">Tophastighed[\w\W]+?">([0-9.]*)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
             return match[1].replace(",", ".");;
@@ -140,7 +154,7 @@
 
     function getPropellantGog(data)
     {
-        let regex = /<div data-grid="column"[\w\W]+">Brændstof[\w\W]+">([0-9a-zA-Z-.]+)<\/dd><\/dl><\/div>/;
+        let regex = /<dt class="CJwC7ukoOZNDCw3qM5xNY">Brændstof[\w\W]+?">([A-Za-z]*)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
             return match[1].replace(",", ".");;
@@ -239,10 +253,10 @@
 
     function getAbsGog(data)
     {
-        let regex = /<div data-grid="column"[\w\W]+">ABS-bremser[\w\W]+?">([0-9a-zA-Z.]+)<\/dd><\/dl><\/div>/;
+        let regex = /ABS Bremser/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return "Ja";
         } else {
             return "-";
         }
@@ -264,7 +278,7 @@
         let regex = /<div data-grid="column"[\w\W]+">Antal airbags[\w\W]+?">([0-9]+)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
@@ -272,7 +286,13 @@
 
 	function getEspGog(data)
     {
-        return "-";
+        let regex = /ESP\/ESC/;
+        let match = regex.exec(data);
+        if (match !== null) {
+            return "Ja";
+        } else {
+            return "-";
+        }
     }
 
 	function getGasTankGog(data)
@@ -280,7 +300,7 @@
         let regex = /<div data-grid="column"[\w\W]+">Tank[\w\W]+?">([0-9]+)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
@@ -291,7 +311,7 @@
         let regex = /<dt class="CJwC7ukoOZNDCw3qM5xNY">Geartype[\w\W]+?">([A-Za-z]*)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
@@ -302,7 +322,7 @@
         let regex = /<div data-grid="column"[\w\W]+">Gear[\w\W]+?">([0-9.]+)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
@@ -313,7 +333,7 @@
         let weightRegex = /<div data-grid="column"[\w\W]+">Vægt[\w\W]+?">([0-9.]+)<\/dd><\/dl><\/div>/;
         let match = weightRegex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
@@ -324,7 +344,7 @@
         let doorRegex = /class=[\w\W]+">Døre<\/dt>[\w\W]+?">([0-9])<\/dd><\/dl><\/div>/;
         let match = doorRegex.exec(data);
         if (match !== null) {
-            return match[1].replace(",", ".");;
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
