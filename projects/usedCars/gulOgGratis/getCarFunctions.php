@@ -19,7 +19,7 @@
 
 	function getKmGog(data)
 	{
-        let regex = /<div data-grid="column"[\w\W]+">Km[\w\W]+?">([\//0-9a-zA-Z-.,]+)<\/dd><\/dl><\/div>/;
+        let regex = /<dt class="[\w\W]*Kilometer<\/dt>[\w\W]*?">([0-9]*)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
             return match[1].replace(",", ".");;
@@ -288,7 +288,7 @@
 
 	function getGeartypeGog(data)
     {
-        let regex = /<div data-grid="column"[\w\W]+">Gear[\w\W]+?">([0-9]+)<\/dd><\/dl><\/div>/;
+        let regex = /<dt class="CJwC7ukoOZNDCw3qM5xNY">Geartype[\w\W]+?">([A-Za-z]*)<\/dd><\/dl><\/div>/;
         let match = regex.exec(data);
         if (match !== null) {
             return match[1].replace(",", ".");;
