@@ -55,7 +55,7 @@ function spliceArray($array)
     for ($i=0; $i<sizeof($array); $i++) {
         if(in_array("Automatisk", $array[$i]) !== false) {
             $autoArray[] = $array[$i];
-        }	else if(in_array("Manuel", $array[$i]) !== false) {
+        }	else if(in_array("Manuel", $array[$i]) !== false || in_array("Manuel", $array[$i]) !== false) {
             $manuelArray[] = $array[$i];
         } else {
             $tempArray[] = $array[$i];
