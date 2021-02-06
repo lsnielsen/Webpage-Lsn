@@ -40,8 +40,9 @@ function setFrontpageWithData($usedCarsArray)
     foreach ($manuelArr as $row) {
         fputcsv($fp, $row);
     }
+    header("Content-type: text/csv");
+    header("Content-Disposition: attachment;Filename=Brugte biler " . $fileName);
 
-    header("Content-Disposition: $fp; filename=\"Brugte biler -\"$fileName");
     fclose($fp);
     include("../projects/usedCars/frontpage.php");
     include("../projects/usedCars/table/usedCarTable.php");
@@ -71,8 +72,6 @@ function prepareArray($input)
     $counter = 0;
     $input = explode(",", $input);
 
-    //echo '<pre>'; print_r($input); echo '</pre>';
-
     for($i=0; $i< sizeof($input); $i++) {
         if($input[$i] != "") {
             $tempValue = trim(preg_replace('/\n/', ' ', $input[$i]));
@@ -93,9 +92,6 @@ function prepareArray($input)
 
 function removeBlankColoums($array, $titleArray)
 {
-    //echo '<pre>'; print_r($titleArray); echo '</pre>';
-    //echo '<pre>'; print_r($array[0]); echo '</pre>';
-
     $blankTest;
 
     for ($i=0; $i<sizeof($array); $i++) {
@@ -109,8 +105,6 @@ function removeBlankColoums($array, $titleArray)
     }
 
     $keys = array_keys($blankTest);
-    //echo '<pre>'; print_r($blankTest); echo '</pre>';
-    //echo '<pre>'; print_r($keys); echo '</pre>';
 
     for ($i=0; $i<sizeof($array); $i++) {
         $columnCounter = 0;
@@ -131,10 +125,6 @@ function removeBlankColoums($array, $titleArray)
             $columnCounter++;
         }
     }
-    //echo '<pre>'; print_r($blankTest); echo '</pre>';
-    //echo '<pre>'; print_r($keys); echo '</pre>';
-    //echo '<pre>'; print_r($titleArray); echo '</pre>';
-    //echo '<pre>'; print_r($array[0]); echo '</pre>';
 
     return [$array, $titleArray];
 }
