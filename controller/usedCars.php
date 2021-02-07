@@ -5,9 +5,11 @@
         $usedCarsArray = isset($_POST['usedCarsArray']) ? $_POST['usedCarsArray'] : "";
 
 		if ($usedCarsArray == "") {
-			include("../projects/usedCars/frontpage.php");	
+			include("../projects/usedCars/frontpage.php");
+        } else if ($usedCarsArray == "downloadCsvFile") {
+            downloadCSVFile();
 		} else {
-		    setFrontpageWithData($usedCarsArray);
+            setFrontpageWithData($usedCarsArray);
 		}
 
 

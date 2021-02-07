@@ -2,6 +2,15 @@
 
 <?php
 
+function getFileName()
+{
+    $fileName = "";
+    if(isset($_COOKIE['theChoosenCarModel'])) {
+        $fileName = $_COOKIE['theChoosenCarModel'];
+    }
+    return $fileName;
+}
+
 function setFrontpageWithData($usedCarsArray)
 {
     include("../projects/usedCars/table/headerArray.php");
@@ -17,11 +26,7 @@ function setFrontpageWithData($usedCarsArray)
     $manuelArr = $tempArr[1];
 
     sleep(1);
-
-    $fileName = "";
-    if(isset($_COOKIE['theChoosenCarModel'])) {
-        $fileName = $_COOKIE['theChoosenCarModel'];
-    }
+    $fileName = getFileName();
 
     if (!file_exists('../diverse/carFiles')) {
         mkdir('../diverse/carFiles', 0777, true);
@@ -40,12 +45,26 @@ function setFrontpageWithData($usedCarsArray)
     foreach ($manuelArr as $row) {
         fputcsv($fp, $row);
     }
-    header("Content-type: text/csv");
-    header("Content-Disposition: attachment;Filename=Brugte biler " . $fileName);
-
     fclose($fp);
+    $downloadButton = "isset";
+
     include("../projects/usedCars/frontpage.php");
+    //include("../projects/usedCars/frontpage/downloadButton.php");
     include("../projects/usedCars/table/usedCarTable.php");
+}
+
+function downloadCSVFile()
+{
+    $fileName = getFileName();
+    $url = '../diverse/carFiles/Brugte biler - ' . $fileName . '.csv';
+    $file_name = basename($url);
+    $info = pathinfo($file_name);
+
+    if ($info["extension"] == "csv" && isset($_POST['usedCarsArray'])) {
+        header("Content-Description: File Transfer");
+        header("Content-Type: application/octet-stream");
+        header("Content-Disposition: attachment; filename=\"" . $file_name . "\"");
+    }
 }
 
 function spliceArray($array)
