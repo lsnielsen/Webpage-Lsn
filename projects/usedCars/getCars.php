@@ -1,33 +1,32 @@
 
 <?php
     include("bilbasen/getCarFunctions.php");
-    include("bilbasen/extraEquipment.php");
     include("bilbasen/starter.php");
 
     include("gulOgGratis/starter.php");
     include("gulOgGratis/getCarFunctions.php");
-    include("gulOgGratis/extraEquipment.php");
 
     include("table/dataArray.php");
+    include("table/dataArrayGog.php");
 
 ?>
 
 <script>
-	
-	var basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
-	var basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
-	
-	var secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
-	var firstUrlArr = new Array();
-	var secondUrlArr = new Array();
-	var dataArray = new Array();
-	var modelArray = new Array();
-	var loopI = 1;
-	var loopJ = 1;
-	var firstBool = false;
-	var secondBool = false;
-	var lastBool = false;
+    const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
+    const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
+
+    const secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
+
+    const firstUrlArr = new Array();
+    const secondUrlArr = new Array();
+    const dataArray = new Array();
+    let modelArray = new Array();
+	let loopI = 1;
+	let loopJ = 1;
+	let firstBool = false;
+	let secondBool = false;
+	let lastBool = false;
 	
         
 	$("select.carModel").change(function(){
@@ -141,8 +140,8 @@
 	function makeArrayToPhp()
 	{
 		$(".endSearch").show();
-		for(i=0; i<dataArray.length; i++) {
-			arrayValue = dataArray[i];
+		for(let i=0; i<dataArray.length; i++) {
+			let arrayValue = dataArray[i];
 			for(j=0; j<arrayValue.length; j++) {
 				if (arrayValue[j] == ",") {
 					arrayValue[j] = ".";

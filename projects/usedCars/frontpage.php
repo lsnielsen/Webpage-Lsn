@@ -3,7 +3,7 @@
 <?php $txtFile = include "../text/global.php"; ?>
 	<head>
 		<title>
-			<?php echo $txtFile['tabTitle']; ?>
+            Brugte biler
 		</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/Webpage-Lsn/diverse/amcharts/amcharts.js" type="text/javascript"></script>
@@ -13,39 +13,26 @@
 	</head>
 	<body class="p-3 mb-2 bg-success">
             <h1 class="jumbotron text-center">
-                <?php echo $txtFile['linkTxt']; ?>
+                Her kan du downloade en excel fil med brugte biler fra
                 <a href="https:\\www.bilbasen.dk" target="_blank" class="text-body">
                     <em>
-                        <?php echo $txtFile['linkOne']; ?>
+                        bilbasen.dk
                     </em>
                 </a>
-                <?php echo $txtFile['oneMore']; ?>
+                og
                 <a href="https:\\www.guloggratis.dk" target="_blank" class="text-body">
                     <em>
-                        <?php echo $txtFile['linkTwo']; ?>
+                        guloggratis.dk.
                     </em>
                 </a>
-                <?php echo $txtFile['resultTxt']; ?>
+                Resultatet vil også blive vist i en tabel nedenfor.
             </h1>
             <?php include "frontpage/searchInfo.php"; ?>
 
         <div class="container bg-success text-white pt-4 nrOfCarsDiv">
             <?php
-                if (isset($bilbasenCount) && isset($gulOgGratisCount)) {
-                    echo "<h1 class='text-center'> Resultat af søgning: </h1>";
-                    echo "<h3 class='theChoosenModel'> </h3>";
-                    //echo "<h3>";
-                    //echo $txtFile['nrOfCars'];
-                    //echo "<a href=\"https:\\www.bilbasen.dk\" target=\"_blank\">";
-                    //echo $txtFile['bilbasenLink'];
-                    //echo "</a> : $bilbasenCount </h3>";
-                    //echo "<h3>";
-                    //echo $txtFile['nrOfCars'];
-                    //echo "<a href=\"https:\\www.guloggratis.dk\" target=\"_blank\">";
-                    //echo $txtFile['guloggratisLink'];
-                    //echo "</a>:  $gulOgGratisCount </h3>";
-                    //$sum = $bilbasenCount + $gulOgGratisCount + 1;
-                    //echo "<h3> Samlet: $sum </h3>";
+                if (isset($fileName)) {
+                    echo "<h1 class='text-center'> Resultat af søgning efter $fileName: </h1>";
                 }
             ?>
         </div>

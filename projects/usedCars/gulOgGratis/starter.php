@@ -5,15 +5,14 @@
 	{
 		$.get(url, 
 			function( data ) {
-				for ($i = 0; $i < data.length; $i++) {
-					subStr = data.substring($i, $i+200);
-					temp = subStr.search(/\"\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+\"$/);
-					if (temp != -1) {
-						var theFirstString = subStr.substring(temp + 1, subStr.length - 1);
-						theFirstString = "https://www.guloggratis.dk" + theFirstString;
-						secondUrlArr.push(theFirstString);
-					}
-				}
+                let theGoglinkRegex = data.match(/\"\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+\"/g);
+                for (let i = 0; i < theGoglinkRegex.length; i++) {
+                    let theGogTemp = theGoglinkRegex[i].match(/\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+/);
+                    let theGogFirstString = "https://www.guloggratis.dk" + theGogTemp;
+                    if (!secondUrlArr.includes(theGogFirstString)) {
+                        secondUrlArr.push(theGogFirstString);
+                    }
+                }
 			}, 
 			'html' // or 'text', 'xml', 'more'
 		);  
@@ -42,12 +41,8 @@
 	{
 		$.get(url, 
 			function( data ) {
-				var gogCarArray = new Array();
-				theLink = url;
-                getMainGogAttributes(data);
-                setPrimerGogAttributes(data);
-                setExtraGogEquipment(data);
-                setTheFirstArray(gogCarArray);
+                const gogCarArray = new Array();
+                setTheFirstArrayGog(gogCarArray, data, url);
 			},
 			'html'
 		);

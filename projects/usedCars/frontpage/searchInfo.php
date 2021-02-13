@@ -18,6 +18,9 @@
             </form>
         </h3>
     </div>
+    <?php if (isset($downloadButton) && $downloadButton == "isset") {
+        include "downloadButton.php";
+    } ?>
 </div>
 
 
