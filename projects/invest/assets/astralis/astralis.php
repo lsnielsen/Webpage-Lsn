@@ -2,17 +2,22 @@
 
 <script>
 
+    let astralisDate = "9/1 - 2021";
+    let astralisPrice = 8000.00;
+    let astralisName = "Astralis Group";
+    let astralisStocks = 1210;
 
     function getAstralisData()
     {
         callUrl();
         function callUrl() {
-            var url = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
+            const url = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
             $.get( url,
                 function( data ) {
                     getAstralisValue(data);
                     getAstralisPercentage(data);
-                    getAstralisChange(data);
+                    getAstralisStockResult(data);
+                    setStandardData();
                 },
                 'html'
             );
@@ -20,6 +25,16 @@
                 callUrl();
             }, 200);
         }
+    }
+
+    function setStandardData()
+    {
+        $("#astralisDate").text(astralisDate);
+        $("#astralisPrice").text(astralisPrice);
+        $("#astralisName").text(astralisName);
+        $("#astralisStocks").text(astralisStocks);
+        let pricePerStock = (astralisPrice / astralisStocks).toFixed(2);
+        $("#astralisStockPrice").text(pricePerStock);
     }
 
     function getAstralisValue(data)
@@ -48,17 +63,17 @@
         }
     }
 
-    function getAstralisChange(data)
+    function getAstralisStockResult(data)
     {
         let astralisRegex = /<bg-quote field="change" format="[0,\.\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/delayed"[a-z=" ]*>([0-9\.-]+)<\/bg-quote>/;
         let astralisMatch = astralisRegex.exec(data);
         let closeMatch = /<span class="change--point--q">([0-9-\.]+)<\/span>/.exec(data);
         if (astralisMatch !== null) {
-            $("#astralisChange").text(astralisMatch[1] + " DKK");
-            textColor(astralisMatch[1], "#astralisChange");
+            $("#astralisStockResult").text(astralisMatch[1] + " DKK");
+            textColor(astralisMatch[1], "#astralisStockResult");
         } else if (closeMatch !== null) {
-            $("#astralisChange").text(closeMatch[1] + " DKK");
-            textColor(closeMatch[1], "#astralisChange");
+            $("#astralisStockResult").text(closeMatch[1] + " DKK");
+            textColor(closeMatch[1], "#astralisStockResult");
         }
     }
 
