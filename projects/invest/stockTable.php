@@ -124,7 +124,7 @@
     </table>
 
 <script>
-    function getStockData()
+    function getInvestData()
     {
         getEuroUsdData();
         getGoldData();
