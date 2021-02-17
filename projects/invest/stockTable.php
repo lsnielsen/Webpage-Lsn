@@ -28,12 +28,12 @@
             <tr>
                 <td id="novoDate"></td>
                 <td id="novoPrice"></td>
-                <th scope="row" class="theAsset" onclick="assetsPage('novo')">Novo Nordisk</th>
+                <th id="novoName" scope="row" class="theAsset" onclick="assetsPage('novo')"></th>
                 <td id="novoStocks"></td>
                 <td id="novoStockPrice"></td>
                 <td id="novoVal"></td>
                 <td id="novoStockResult"></td>
-                <td id="novoStockPercentage"></td>
+                <td id="novoPercentage"></td>
                 <td id="novoResult"></td>
             </tr>
         </tbody>
