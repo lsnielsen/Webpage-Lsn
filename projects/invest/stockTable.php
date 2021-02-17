@@ -9,7 +9,7 @@
                 <th scope="col">Pris/aktie</th>
                 <th scope="col">Kurs</th>
                 <th scope="col">Tab/gevinst per aktie</th>
-                <th scope="col">Procentvis ændring</th>
+                <th scope="col">Procentvis ændring per aktie</th>
                 <th scope="col">Samlet resultat</th>
             </tr>
         </thead>
