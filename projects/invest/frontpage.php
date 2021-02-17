@@ -18,7 +18,7 @@
         </div>
 
         <?php
-            include "assets/astralis/astralis.php";
+            include "assets/astralis.php";
             include "assets/novo/novo.php";
             include "stockTable.php";
         ?>
