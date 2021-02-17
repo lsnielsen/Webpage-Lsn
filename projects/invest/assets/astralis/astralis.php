@@ -58,7 +58,8 @@
         $("#astralisStockResult").text(stockValue);
         textColor(percentageValue, "#astralisPercentage");
         textColor(totalValue, "#astralisResult");
-        textColor(stockValue, "#astralisStockResult");}
+        textColor(stockValue, "#astralisStockResult");
+    }
 
     function textColor(value, field)
     {
