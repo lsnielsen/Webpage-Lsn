@@ -8,17 +8,21 @@
                 <th scope="col">Antal aktier</th>
                 <th scope="col">Pris/aktie</th>
                 <th scope="col">Kurs</th>
-                <th scope="col">Tab/Gevinst</th>
+                <th scope="col">Tab/gevinst per aktie</th>
+                <th scope="col">Procentvis ændring</th>
+                <th scope="col">Samlet resultat</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td id="astralisDate"></td>
-                <td id="astralisPrice"></td>
-                <th scope="row" class="theAsset" onclick="assetsPage('astralis')">Astralis Group</th>
+                <td id="astralisDate"> </td>
+                <td id="astralisPrice">  </td>
+                <th id="astralisName" scope="row" class="theAsset" onclick="assetsPage('astralis')"></th>
                 <td id="astralisStocks"></td>
                 <td id="astralisStockPrice"></td>
                 <td id="astralisVal"></td>
+                <td id="astralisStockResult"></td>
+                <td id="astralisPercentage"></td>
                 <td id="astralisResult"></td>
             </tr>
             <tr>
@@ -28,6 +32,8 @@
                 <td id="novoStocks"></td>
                 <td id="novoStockPrice"></td>
                 <td id="novoVal"></td>
+                <td id="novoStockResult"></td>
+                <td id="novoStockPercentage"></td>
                 <td id="novoResult"></td>
             </tr>
         </tbody>
