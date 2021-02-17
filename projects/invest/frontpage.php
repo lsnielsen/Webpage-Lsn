@@ -6,20 +6,13 @@
         <link rel="stylesheet" href="/Webpage-Lsn/projects/stocks/css/table.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <title>
-            Aktie kurser
+            Investering
         </title>
     </head>
 
-    <body class="p-3 mb-2 bg-secondary text-dark" onload="getStockData()">
+    <body class="p-3 mb-2 bg-secondary text-dark" onload="getInvestData()">
         <div class="jumbotron text-center">
-            <h1>Her er en oversigt over kurserne på enkelte ting</h1>
-            <p>
-                Der er kurser og tilhørende statistik fra
-                <a href="https://www.nyse.com/index" target="_blank">
-                    New York Stock Exchange
-                </a> <br>
-                Klik på det enkelte investerings element under "Aktiv", for at få en uddybbende specifikation
-            </p>
+            <h1>Her er en oversigt over min invistering</h1>
         </div>
 
         <?php
