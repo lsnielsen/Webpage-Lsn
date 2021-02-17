@@ -2,123 +2,33 @@
     <table class="table table-hover table-dark table-bordered">
         <thead>
             <tr>
+                <th scope="col">Dato</th>
+                <th scope="col">Købspris</th>
                 <th scope="col">Aktiv</th>
-                <th scope="col">Værdi USD</th>
-                <th scope="col">Ændring</th>
-                <th scope="col">Ændring i %</th>
-                <th scope="col">Link</th>
+                <th scope="col">Antal aktier</th>
+                <th scope="col">Pris/aktie</th>
+                <th scope="col">Kurs</th>
+                <th scope="col">Tab/Gevinst</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('gold')">Guld</th>
-                <td id="goldVal"></td>
-                <td id="goldChange"></td>
-                <td id="goldPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/stock/gold" target="_blank">
-                        marketwatch.com/gold
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('euro/usd')">Euro/USD</th>
-                <td id="euroVal"></td>
-                <td id="euroChange"></td>
-                <td id="euroPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/currency/eurusd" target="_blank">
-                        marketwatch.com/eurusd
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('oil')">Olie</th>
-                <td id="oilVal"></td>
-                <td id="oilChange"></td>
-                <td id="oilPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/fund/oil" target="_blank">
-                        marketwatch.com/oil
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('silver')">Sølv</th>
-                <td id="silverVal"></td>
-                <td id="silverChange"></td>
-                <td id="silverPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/future/si00" target="_blank">
-                        marketwatch.com/silver
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('google')">Google / Alphabet</th>
-                <td id="googleVal"></td>
-                <td id="googleChange"></td>
-                <td id="googlePercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/stock/googl" target="_blank">
-                        marketwatch.com/google
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('bitcoin')">Bitcoin</th>
-                <td id="bitcoinVal"></td>
-                <td id="bitcoinChange"></td>
-                <td id="bitcoinPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/cryptocurrency/btcusd" target="_blank">
-                        marketwatch.com/bitcoin
-                    </a>
-                </td>
-            </tr>
-            <tr>
+                <td id="astralisDate"></td>
+                <td id="astralisPrice"></td>
                 <th scope="row" class="theAsset" onclick="assetsPage('astralis')">Astralis Group</th>
+                <td id="astralisStocks"></td>
+                <td id="astralisStockPrice"></td>
                 <td id="astralisVal"></td>
-                <td id="astralisChange"></td>
-                <td id="astralisPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk" target="_blank">
-                        marketwatch.com/astralis
-                    </a>
-                </td>
+                <td id="astralisResult"></td>
             </tr>
             <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('vestjyskBank')">Vestjysk Bank</th>
-                <td id="vestjyskBankVal"></td>
-                <td id="vestjyskBankChange"></td>
-                <td id="vestjyskBankPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/stock/vjba?countrycode=dk" target="_blank">
-                        marketwatch.com/vestjyskBank
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('danskeBank')">Danske Bank</th>
-                <td id="danskeBankVal"></td>
-                <td id="danskeBankChange"></td>
-                <td id="danskeBankPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/stock/danske?countrycode=dk" target="_blank">
-                        marketwatch.com/danskeBank
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="theAsset" onclick="assetsPage('swissFranc')">Schweizer Frank</th>
-                <td id="swissFrancVal"></td>
-                <td id="swissFrancChange"></td>
-                <td id="swissFrancPercentage"></td>
-                <td>
-                    <a href="https://www.marketwatch.com/investing/currency/usdchf" target="_blank">
-                        marketwatch.com/swissFranc
-                    </a>
-                </td>
+                <td id="novoDate"></td>
+                <td id="novoPrice"></td>
+                <th scope="row" class="theAsset" onclick="assetsPage('novo')">Novo Nordisk</th>
+                <td id="novoStocks"></td>
+                <td id="novoStockPrice"></td>
+                <td id="novoVal"></td>
+                <td id="novoResult"></td>
             </tr>
         </tbody>
     </table>
@@ -126,16 +36,8 @@
 <script>
     function getInvestData()
     {
-        getEuroUsdData();
-        getGoldData();
-        getOilData();
-        getSilverData();
-        getGoogleData();
-        getBitcoinData();
         getAstralisData();
-        getVestjyskBankData();
-        getDanskeBankData();
-        getSwissFrancData();
+        getNovoData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

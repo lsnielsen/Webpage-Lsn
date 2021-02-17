@@ -12,20 +12,14 @@
 
     <body class="p-3 mb-2 bg-secondary text-dark" onload="getInvestData()">
         <div class="jumbotron text-center">
-            <h1>Her er en oversigt over min invistering</h1>
+            <h1>
+                Her er en oversigt over min invistering
+            </h1>
         </div>
 
         <?php
-            include "assets/oil/oil.php";
-            include "assets/euroUsd/euroUsd.php";
-            include "assets/gold/gold.php";
-            include "assets/silver/silver.php";
-            include "assets/google/google.php";
-            include "assets/bitcoin/bitcoin.php";
             include "assets/astralis/astralis.php";
-            include "assets/vestjyskBank/vestjyskBank.php";
-            include "assets/danskeBank/danskeBank.php";
-            include "assets/swissFranc/swissFranc.php";
+            include "assets/novo/novo.php";
             include "stockTable.php";
         ?>
 

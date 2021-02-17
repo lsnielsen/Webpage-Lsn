@@ -3,11 +3,11 @@
 <script>
 
 
-    function getGoldData()
+    function getNovoData()
     {
         callUrl();
         function callUrl() {
-            var url = "https://www.marketwatch.com/investing/stock/gold";
+            var url = "https://www.marketwatch.com/investing/stock/nvo";
             $.get( url,
                 function( data ) {
                     getGoldValue(data);

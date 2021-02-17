@@ -20,9 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/invest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/invest/frontpage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/invest/assets/novo/novoDetails.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/bitcoin/bitcoin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/bitcoin/bitcoinDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/danskeBank/danskeBank.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/danskeBank/danskeBankDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/danskeBank/data.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/danskeBank/staticData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/euroUsd/euroUsd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/euroUsd/euroUsdDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/gold/gold.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/assets/novo/novo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/gold/goldDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/google/data.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/google/google.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/google/googleDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/google/staticData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/oil/oil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/oil/oilDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/silver/silver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/silver/silverDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/swissFranc/dailyGraph.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/swissFranc/data.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/swissFranc/getPostData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/swissFranc/staticData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/swissFranc/swissFranc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/swissFranc/swissFrancDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/vestjyskBank/data.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/vestjyskBank/staticData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/vestjyskBank/vestjyskBank.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/assets/vestjyskBank/vestjyskBankDetails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/stockTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/stockTable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +145,7 @@
       <workItem from="1610536610841" duration="4424000" />
       <workItem from="1610809250462" duration="11313000" />
       <workItem from="1613503509686" duration="1778000" />
+      <workItem from="1613563205341" duration="1408000" />
     </task>
     <servers />
   </component>
