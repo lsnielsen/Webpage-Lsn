@@ -6,6 +6,7 @@
     let astralisPrice = 8000.00;
     let astralisName = "Astralis Group";
     let astralisStocks = 1210;
+    let pricePerStock = (astralisPrice / astralisStocks).toFixed(2);
 
     function getAstralisData()
     {
@@ -16,7 +17,6 @@
                 function( data ) {
                     getAstralisValue(data);
                     getAstralisPercentage(data);
-                    getAstralisStockResult(data);
                     setStandardData();
                 },
                 'html'
@@ -33,7 +33,6 @@
         $("#astralisPrice").text(astralisPrice);
         $("#astralisName").text(astralisName);
         $("#astralisStocks").text(astralisStocks);
-        let pricePerStock = (astralisPrice / astralisStocks).toFixed(2);
         $("#astralisStockPrice").text(pricePerStock);
     }
 
@@ -43,9 +42,21 @@
         let astralisMatch = astralisRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (astralisMatch !== null) {
-            $("#astralisVal").text(astralisMatch[1] + " DKK");
+            $("#astralisVal").text(astralisMatch[1]);
+            let totalValue = ((astralisMatch[1] * astralisStocks) - astralisPrice).toFixed(2);
+            let stockValue = (astralisMatch[1] - pricePerStock).toFixed(2);
+            $("#astralisResult").text(totalValue);
+            textColor(totalValue, "#astralisResult");
+            $("#astralisStockResult").text(stockValue);
+            textColor(stockValue, "#astralisStockResult");
         } else if (closeMatch !== null) {
-            $("#astralisVal").text(closeMatch[1] + " DKK");
+            $("#astralisVal").text(closeMatch[1]);
+            let totalValue = ((closeMatch[1] * astralisStocks) - astralisPrice).toFixed(2);
+            let stockValue = (astralisMatch[1] - pricePerStock).toFixed(2);
+            $("#astralisResult").text(totalValue);
+            textColor(totalValue, "#astralisResult");
+            $("#astralisStockResult").text(stockValue);
+            textColor(stockValue, "#astralisStockResult");
         }
     }
 
@@ -60,20 +71,6 @@
         } else if (closeMatch !== null) {
             $("#astralisPercentage").text(closeMatch[1] + " %");
             textColor(closeMatch[1], "#astralisPercentage");
-        }
-    }
-
-    function getAstralisStockResult(data)
-    {
-        let astralisRegex = /<bg-quote field="change" format="[0,\.\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/delayed"[a-z=" ]*>([0-9\.-]+)<\/bg-quote>/;
-        let astralisMatch = astralisRegex.exec(data);
-        let closeMatch = /<span class="change--point--q">([0-9-\.]+)<\/span>/.exec(data);
-        if (astralisMatch !== null) {
-            $("#astralisStockResult").text(astralisMatch[1] + " DKK");
-            textColor(astralisMatch[1], "#astralisStockResult");
-        } else if (closeMatch !== null) {
-            $("#astralisStockResult").text(closeMatch[1] + " DKK");
-            textColor(closeMatch[1], "#astralisStockResult");
         }
     }
 
