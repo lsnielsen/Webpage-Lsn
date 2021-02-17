@@ -2,11 +2,12 @@
 
 <script>
 
-    let novoDate = "12/2 - 2021";
-    let novoPrice = 1780.40;
-    let novoName = "Novo Nordisk";
-    let novoStocks = 4;
-    let pricePerStockNovo = (novoPrice / novoStocks).toFixed(2);
+    const novoDate = "12/2 - 2021";
+    const novoPrice = 1780.40;
+    const novoName = "Novo Nordisk";
+    const novoStocks = 4;
+    const pricePerStockNovo = (novoPrice / novoStocks).toFixed(2);
+    let theCurrency;
 
     function getNovoData()
     {
@@ -24,6 +25,20 @@
                 callUrl();
             }, 1200);
         }
+    }
+
+    function getCurrency()
+    {
+        let url = "https://themoneyconverter.com/USD/DKK";
+        $.get(url ,function( data ) {
+            let currencyRegex = /1 usd = ([0-9]{1,2}\.[0-9]{4}) dkk/i;
+            let currencyMatch = currencyRegex.exec(data);
+            if (currencyMatch !== null) {
+                theCurrency = currencyMatch[1];
+            } else {
+                theCurrency = 1;
+            }
+        }, 'html' );
     }
 
     function setNovoStandardData()
@@ -47,12 +62,14 @@
         }
     }
 
-    function setNovoData(startValue)
+    function setNovoData(marketValue)
     {
-        $("#novoVal").text(startValue);
-        let totalValue = ((startValue * novoStocks) - novoPrice).toFixed(2);
-        let stockValue = (startValue - pricePerStockNovo).toFixed(2);
-        let percentageValue = (((startValue / pricePerStockNovo) * 100) - 100).toFixed(2);
+        getCurrency();
+        marketValue = (marketValue * theCurrency).toFixed(2);
+        $("#novoVal").text(marketValue);
+        let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
+        let stockValue = (marketValue - pricePerStockNovo).toFixed(2);
+        let percentageValue = (((marketValue / pricePerStockNovo) * 100) - 100).toFixed(2);
         $("#novoPercentage").text(percentageValue + " %");
         $("#novoResult").text(totalValue);
         $("#novoStockResult").text(stockValue);
