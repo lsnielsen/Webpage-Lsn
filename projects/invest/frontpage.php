@@ -19,7 +19,7 @@
 
         <?php
             include "assets/astralis.php";
-            include "assets/novo/novo.php";
+            include "assets/novo.php";
             include "stockTable.php";
         ?>
 
