@@ -18,9 +18,7 @@
         </div>
 
         <?php
-            include "danish/astralis.php";
-            include "danish/novo.php";
-            include "danish/stockTable.php";
+            include "danish/danishInclude.php";
         ?>
 
         <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
@@ -31,3 +29,10 @@
     </body>
 
 </html>
+
+<script>
+    function getData()
+    {
+        getDanishData();
+    }
+</script>
