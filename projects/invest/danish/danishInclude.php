@@ -6,6 +6,7 @@
     include "astralis.php";
     include "novo.php";
     include "danishStockTable.php";
+    include "danishResult.php";
 ?>
 
 <script>

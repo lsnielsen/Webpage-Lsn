@@ -17,7 +17,7 @@
             <tr>
                 <td id="astralisDate"> </td>
                 <td id="astralisPrice">  </td>
-                <th id="astralisName" scope="row" class="theAsset" onclick="assetsPage('astralis')"></th>
+                <td id="astralisName" scope="row" class="theAsset" onclick="assetsPage('astralis')"></td>
                 <td id="astralisStocks"></td>
                 <td id="astralisStockPrice"></td>
                 <td id="astralisVal"></td>
@@ -28,7 +28,7 @@
             <tr>
                 <td id="novoDate"></td>
                 <td id="novoPrice"></td>
-                <th id="novoName" scope="row" class="theAsset" onclick="assetsPage('novo')"></th>
+                <td id="novoName" scope="row" class="theAsset" onclick="assetsPage('novo')"></td>
                 <td id="novoStocks"></td>
                 <td id="novoStockPrice"></td>
                 <td id="novoVal"></td>
