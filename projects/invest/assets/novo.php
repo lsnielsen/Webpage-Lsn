@@ -67,15 +67,18 @@
         getCurrency();
         marketValue = (marketValue * theCurrency).toFixed(2);
         $("#novoVal").text(marketValue);
-        let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
+
         let stockValue = (marketValue - pricePerStockNovo).toFixed(2);
+        textColor(stockValue, "#novoStockResult");
+        $("#novoStockResult").text(stockValue);
+
         let percentageValue = (((marketValue / pricePerStockNovo) * 100) - 100).toFixed(2);
         $("#novoPercentage").text(percentageValue + " %");
-        $("#novoResult").text(totalValue);
-        $("#novoStockResult").text(stockValue);
         textColor(percentageValue, "#novoPercentage");
+
+        let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
+        $("#novoResult").text(totalValue);
         textColor(totalValue, "#novoResult");
-        textColor(stockValue, "#novoStockResult");
     }
 
     function textColor(value, field)
