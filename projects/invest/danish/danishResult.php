@@ -25,6 +25,7 @@
 <script>
     let currentAstralisValue;
     let currentNovoValue;
+    let usdDkkCurrency;
 
     $( document ).ready(function() {
         callTotalDanishUrl();
@@ -37,6 +38,7 @@
             $.get(novoUrl, function (novoData) {
                 getNovoResultValue(novoData);
             }, 'html');
+            getUsdDkkCurrency();
             setDanishResultValues();
             setTimeout(function () {
                 callTotalDanishUrl();
@@ -46,7 +48,6 @@
 
     function setDanishResultValues()
     {
-        console.log("astalis: " + currentAstralisValue + ", and novo: " + currentNovoValue);
         let totalBuyValue = astralisPrice + novoPrice;
         let currentTotalValue = ((currentAstralisValue * astralisStocks) + (currentNovoValue * novoStocks)).toFixed(2);
         let totalWinLoss = (currentTotalValue - totalBuyValue).toFixed(2);
@@ -73,10 +74,24 @@
         let novoMatch = novoRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (novoMatch !== null) {
-            currentNovoValue = novoMatch[1] * theCurrency;
+            currentNovoValue = novoMatch[1] * usdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentNovoValue = closeMatch[1] * theCurrency;
+            currentNovoValue = closeMatch[1] * usdDkkCurrency;
         }
+    }
+
+    function getUsdDkkCurrency()
+    {
+        let url = "https://themoneyconverter.com/USD/DKK";
+        $.get(url ,function( data ) {
+            let currencyRegex = /1 usd = ([0-9]{1,2}\.[0-9]{4}) dkk/i;
+            let currencyMatch = currencyRegex.exec(data);
+            if (currencyMatch !== null) {
+                usdDkkCurrency = currencyMatch[1];
+            } else {
+                usdDkkCurrency = 1;
+            }
+        }, 'html' );
     }
 
 </script>
