@@ -23,7 +23,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 1200);
+            }, 2000);
         }
     }
 
