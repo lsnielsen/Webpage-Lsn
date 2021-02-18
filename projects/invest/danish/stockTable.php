@@ -40,7 +40,12 @@
     </table>
 
 <script>
-    function getInvestData()
+    function getData()
+    {
+        getDanishData();
+    }
+
+    function getDanishData()
     {
         getAstralisData();
         getNovoData();

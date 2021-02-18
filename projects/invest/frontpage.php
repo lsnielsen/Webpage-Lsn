@@ -10,7 +10,7 @@
         </title>
     </head>
 
-    <body class="p-3 mb-2 bg-secondary text-dark" onload="getInvestData()">
+    <body class="p-3 mb-2 bg-secondary text-dark" onload="getData()">
         <div class="jumbotron text-center">
             <h1>
                 Her er en oversigt over min invistering
@@ -18,9 +18,9 @@
         </div>
 
         <?php
-            include "assets/astralis.php";
-            include "assets/novo.php";
-            include "stockTable.php";
+            include "danish/astralis.php";
+            include "danish/novo.php";
+            include "danish/stockTable.php";
         ?>
 
         <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
