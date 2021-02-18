@@ -78,6 +78,12 @@
 	#langButton {
 		background:linear-gradient(to bottom, #b3c6ff 5%, #13d644 100%);
 	}
+	#newFrontpageButton {
+		background:linear-gradient(to bottom, #1a3586 5%, #8bd613 100%);
+	}
+	#investButton {
+		background:linear-gradient(to bottom, #b08f73 5%, #811b5b 100%);
+	}
 	#searchArea {
 		margin-top: 20px;
 		width: 400px;

@@ -69,6 +69,16 @@
                     Gælds side
 				</button>
 			</form>
+			<form action="/Webpage-Lsn/controller/newFrontpage.php" method="post">
+				<button class="frontpageButton" id="newFrontpageButton" type="submit" name="newFrontpage" value="newFrontPage">
+                    Ide til ny forside
+				</button>
+			</form>
+			<form action="/Webpage-Lsn/controller/invest.php" method="post">
+				<button class="frontpageButton" id="investButton" type="submit" name="invest" value="investPage">
+                    Investering
+				</button>
+			</form>
 			<div id="my-signin2"></div>
 			<form class="frontpageButton" method="get" id="searchArea" action="https://www.google.com/search" target="_blank">
 				<center>
