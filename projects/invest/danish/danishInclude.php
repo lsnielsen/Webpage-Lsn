@@ -1,6 +1,13 @@
 
 
 
+<div class="container-sm">
+    <div class="page-header text-center" style="color: #ff884d;">
+        <h2>
+            Danske aktier:
+        </h2>
+    </div>
+</div>
 
 <?php
     include "astralis.php";
