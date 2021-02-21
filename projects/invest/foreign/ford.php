@@ -2,17 +2,17 @@
 
 <script>
 
-    let fordDate = "9/1 - 2021";
-    let fordPrice = 8000.00;
+    let fordDate = "12/2 - 2021";
+    let fordPrice = 1453.40;
     let fordName = "Ford Group";
-    let fordStocks = 1210;
-    let pricePerStock = (fordPrice / fordStocks).toFixed(2);
+    let fordStocks = 20;
+    let pricePerStockFord = (fordPrice / fordStocks).toFixed(2);
 
     function getFordData()
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
+            const url = "https://www.marketwatch.com/investing/stock/f";
             $.get( url,
                 function( data ) {
                     getFordValue(data);
@@ -32,7 +32,7 @@
         $("#fordPrice").text(fordPrice);
         $("#fordName").text(fordName);
         $("#fordStocks").text(fordStocks);
-        $("#fordStockPrice").text(pricePerStock);
+        $("#fordStockPrice").text(pricePerStockFord);
     }
 
     function getFordValue(data)
@@ -41,18 +41,19 @@
         let fordMatch = fordRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (fordMatch !== null) {
-            setData(fordMatch[1]);
+            setFordData(fordMatch[1]);
         } else if (closeMatch !== null) {
-            setData(closeMatch[1]);
+            setFordData(closeMatch[1]);
         }
     }
 
-    function setData(startValue)
+    function setFordData(marketValue)
     {
-        $("#fordVal").text(startValue);
-        let totalValue = ((startValue * fordStocks) - fordPrice).toFixed(2);
-        let stockValue = (startValue - pricePerStock).toFixed(2);
-        let percentageValue = (((startValue / pricePerStock) * 100) - 100).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+        $("#fordVal").text(marketValue);
+        let totalValue = ((marketValue * fordStocks) - fordPrice).toFixed(2);
+        let stockValue = (marketValue - pricePerStockFord).toFixed(2);
+        let percentageValue = (((marketValue / pricePerStockFord) * 100) - 100).toFixed(2);
         $("#fordPercentage").text(percentageValue + " %");
         $("#fordResult").text(totalValue);
         $("#fordStockResult").text(stockValue);

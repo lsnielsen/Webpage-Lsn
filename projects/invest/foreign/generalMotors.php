@@ -2,9 +2,9 @@
 
 <script>
 
-    const gmDate = "12/2 - 2021";
-    const gmPrice = 1780.40;
-    const gmName = "Gm Nordisk";
+    const gmDate = "28/1 - 2021";
+    const gmPrice = 1326.00;
+    const gmName = "General Motors";
     const gmStocks = 4;
     const pricePerStockGm = (gmPrice / gmStocks).toFixed(2);
 
@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/nvo";
+            const url = "https://www.marketwatch.com/investing/stock/gm";
             $.get( url,
                 function( data ) {
                     getGmValue(data);

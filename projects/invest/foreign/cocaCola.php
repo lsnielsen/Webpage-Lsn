@@ -3,7 +3,7 @@
 <script>
 
     const colaDate = "12/2 - 2021";
-    const colaPrice = 1780.40;
+    const colaPrice = 1898.73;
     const colaName = "Coca Cola";
     const colaStocks = 6;
     const pricePerStockCola = (colaPrice / colaStocks).toFixed(2);

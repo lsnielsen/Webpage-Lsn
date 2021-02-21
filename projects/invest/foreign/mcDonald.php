@@ -3,7 +3,7 @@
 <script>
 
     const mcDonaldDate = "12/2 - 2021";
-    const mcDonaldPrice = 1317.29;
+    const mcDonaldPrice = 2634.58;
     const mcDonaldName = "McDonald's";
     const mcDonaldStocks = 2;
     const pricePerStockMcDonald = (mcDonaldPrice / mcDonaldStocks).toFixed(2);
