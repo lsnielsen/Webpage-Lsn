@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/invest/totalResult.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/ford.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/ford.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/danish/danishResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/danish/danishResult.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/invest/foreign/foreignResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/foreignResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/generalMotors.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/generalMotors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/mcDonald.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/mcDonald.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/frontpage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +122,7 @@
       <workItem from="1613917359311" duration="1781000" />
       <workItem from="1613919167927" duration="2166000" />
       <workItem from="1613921426931" duration="1145000" />
+      <workItem from="1613923234380" duration="1442000" />
     </task>
     <servers />
   </component>

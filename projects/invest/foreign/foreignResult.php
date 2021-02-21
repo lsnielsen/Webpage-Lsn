@@ -30,6 +30,22 @@
     let currentGmValue;
     let currentFordValue;
     let foreignUsdDkkCurrency;
+    let totalForeignBuyValue;
+    let currentTotalForeignValue;
+    let totalForeignWinLoss;
+
+    function setForeignResultValues()
+    {
+        totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + gmPrice + mcDonaldPrice).toFixed(2);
+        currentTotalForeignValue = ((currentColaValue * colaStocks) +
+            (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
+            (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
+            (currentMcDonaldValue * mcDonaldStocks)).toFixed(2);
+        totalForeignWinLoss = (currentTotalForeignValue - totalForeignBuyValue).toFixed(2);
+        $("#totalForeignBuyValue").text(totalForeignBuyValue);
+        $("#currentTotalForeignValue").text(currentTotalForeignValue);
+        $("#totalForeignWinLoss").text(totalForeignWinLoss);
+    }
 
     $( document ).ready(function() {
         callTotalForeignUrl();
@@ -65,19 +81,6 @@
             }, 2000);
         }
     });
-
-    function setForeignResultValues()
-    {
-        let totalBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + gmPrice + mcDonaldPrice).toFixed(2);
-        let currentTotalValue = ((currentColaValue * colaStocks) +
-            (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
-            (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
-            (currentMcDonaldValue * mcDonaldStocks)).toFixed(2);
-        let totalWinLoss = (currentTotalValue - totalBuyValue).toFixed(2);
-        $("#totalForeignBuyValue").text(totalBuyValue);
-        $("#currentTotalForeignValue").text(currentTotalValue);
-        $("#totalForeignWinLoss").text(totalWinLoss);
-    }
 
     function getMcDonaldResultValue(data)
     {
