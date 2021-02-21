@@ -85,9 +85,9 @@
         let mcDonaldMatch = mcDonaldRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (mcDonaldMatch !== null) {
-            currentMcDonaldValue = mcDonaldMatch[1];
+            currentMcDonaldValue = mcDonaldMatch[1] * foreignUsdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentMcDonaldValue = closeMatch[1];
+            currentMcDonaldValue = closeMatch[1] * foreignUsdDkkCurrency;
         }
     }
 
@@ -97,9 +97,9 @@
         let fordMatch = fordRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (fordMatch !== null) {
-            currentFordValue = fordMatch[1];
+            currentFordValue = fordMatch[1] * foreignUsdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentFordValue = closeMatch[1];
+            currentFordValue = closeMatch[1] * foreignUsdDkkCurrency;
         }
     }
 
@@ -109,9 +109,9 @@
         let gmMatch = gmRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (gmMatch !== null) {
-            currentGmValue = gmMatch[1];
+            currentGmValue = gmMatch[1] * foreignUsdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentGmValue = closeMatch[1];
+            currentGmValue = closeMatch[1] * foreignUsdDkkCurrency;
         }
     }
 
@@ -121,9 +121,9 @@
         let visaMatch = visaRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (visaMatch !== null) {
-            currentVisaValue = visaMatch[1];
+            currentVisaValue = visaMatch[1] * foreignUsdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentVisaValue = closeMatch[1];
+            currentVisaValue = closeMatch[1] * foreignUsdDkkCurrency;
         }
     }
 
@@ -133,9 +133,9 @@
         let colaMatch = colaRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (colaMatch !== null) {
-            currentColaValue = colaMatch[1];
+            currentColaValue = colaMatch[1] * foreignUsdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentColaValue = closeMatch[1];
+            currentColaValue = closeMatch[1] * foreignUsdDkkCurrency;
         }
     }
 
