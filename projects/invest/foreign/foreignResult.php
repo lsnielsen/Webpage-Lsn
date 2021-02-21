@@ -14,82 +14,82 @@
         <tbody>
             <tr>
                 <th scope="row">Samlet</th>
-                <td id="totalDanishBuyValue"></td>
-                <td id="currentTotalDanishValue"></td>
-                <td id="totalDanishWinLoss"></td>
+                <td id="totalForeignBuyValue"></td>
+                <td id="currentTotalForeignValue"></td>
+                <td id="totalForeignWinLoss"></td>
             </tr>
         </tbody>
     </table>
 </div>
 
 <script>
-    let currentAstralisValue;
-    let currentNovoValue;
-    let usdDkkCurrency;
+    let currentColaValue;
+    let currentDisneyValue;
+    let foreignUsdDkkCurrency;
 
     $( document ).ready(function() {
-        callTotalDanishUrl();
-        function callTotalDanishUrl() {
-            const astralisUrl = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
-            const novoUrl = "https://www.marketwatch.com/investing/stock/nvo";
-            $.get( astralisUrl, function( astralisData ) {
-                getAstralisResultValue(astralisData);
+        callTotalForeignUrl();
+        function callTotalForeignUrl() {
+            const colaUrl = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
+            const disneyUrl = "https://www.marketwatch.com/investing/stock/nvo";
+            $.get( colaUrl, function( colaData ) {
+                getColaResultValue(colaData);
             }, 'html');
-            $.get(novoUrl, function (novoData) {
-                getNovoResultValue(novoData);
+            $.get(disneyUrl, function (disneyData) {
+                getDisneyResultValue(disneyData);
             }, 'html');
-            getUsdDkkCurrency();
-            setDanishResultValues();
+            getForeignUsdDkkCurrency();
+            setForeignResultValues();
             setTimeout(function () {
-                callTotalDanishUrl();
+                callTotalForeignUrl();
             }, 2000);
         }
     });
 
-    function setDanishResultValues()
+    function setForeignResultValues()
     {
-        let totalBuyValue = astralisPrice + novoPrice;
-        let currentTotalValue = ((currentAstralisValue * astralisStocks) + (currentNovoValue * novoStocks)).toFixed(2);
+        let totalBuyValue = colaPrice + disneyPrice;
+        let currentTotalValue = ((currentColaValue * colaStocks) + (currentDisneyValue * disneyStocks)).toFixed(2);
         let totalWinLoss = (currentTotalValue - totalBuyValue).toFixed(2);
-        $("#totalDanishBuyValue").text(totalBuyValue);
-        $("#currentTotalDanishValue").text(currentTotalValue);
-        $("#totalDanishWinLoss").text(totalWinLoss);
+        $("#totalForeignBuyValue").text(totalBuyValue);
+        $("#currentTotalForeignValue").text(currentTotalValue);
+        $("#totalForeignWinLoss").text(totalWinLoss);
     }
 
-    function getAstralisResultValue(data)
+    function getColaResultValue(data)
     {
-        let astralisRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
-        let astralisMatch = astralisRegex.exec(data);
+        let colaRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let colaMatch = colaRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (astralisMatch !== null) {
-            currentAstralisValue = astralisMatch[1];
+        if (colaMatch !== null) {
+            currentColaValue = colaMatch[1];
         } else if (closeMatch !== null) {
-            currentAstralisValue = closeMatch[1];
+            currentColaValue = closeMatch[1];
         }
     }
 
-    function getNovoResultValue(data)
+    function getDisneyResultValue(data)
     {
-        let novoRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
-        let novoMatch = novoRegex.exec(data);
+        let disneyRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let disneyMatch = disneyRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (novoMatch !== null) {
-            currentNovoValue = novoMatch[1] * usdDkkCurrency;
+        if (disneyMatch !== null) {
+            currentDisneyValue = disneyMatch[1] * foreignUsdDkkCurrency;
         } else if (closeMatch !== null) {
-            currentNovoValue = closeMatch[1] * usdDkkCurrency;
+            currentDisneyValue = closeMatch[1] * foreignUsdDkkCurrency;
         }
     }
 
-    function getUsdDkkCurrency()
+    function getForeignUsdDkkCurrency()
     {
         let url = "https://themoneyconverter.com/USD/DKK";
         $.get(url ,function( data ) {
             let currencyRegex = /1 usd = ([0-9]{1,2}\.[0-9]{4}) dkk/i;
             let currencyMatch = currencyRegex.exec(data);
             if (currencyMatch !== null) {
-                usdDkkCurrency = currencyMatch[1];
+                foreignUsdDkkCurrency = currencyMatch[1];
             } else {
-                usdDkkCurrency = 1;
+                foreignUsdDkkCurrency = 1;
             }
         }, 'html' );
     }

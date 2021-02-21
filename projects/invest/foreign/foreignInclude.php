@@ -24,8 +24,12 @@
 
     function getForeignData()
     {
-        getAstralisData();
-        getNovoData();
+        getDisneyData();
+        getVisaData();
+        getDonaldData();
+        getGmData();
+        getFordData();
+        getColaData();
     }
 </script>
 
