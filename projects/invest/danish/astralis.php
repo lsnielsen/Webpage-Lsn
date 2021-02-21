@@ -16,7 +16,7 @@
             $.get( url,
                 function( data ) {
                     getAstralisValue(data);
-                    setStandardData();
+                    setAstralisStandardData();
                 },
                 'html'
             );
@@ -26,7 +26,7 @@
         }
     }
 
-    function setStandardData()
+    function setAstralisStandardData()
     {
         $("#astralisDate").text(astralisDate);
         $("#astralisPrice").text(astralisPrice);
