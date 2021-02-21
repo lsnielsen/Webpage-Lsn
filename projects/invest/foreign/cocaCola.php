@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/coca-cola-founders";
+            const url = "https://www.marketwatch.com/investing/stock/ko";
             $.get( url,
                 function( data ) {
                     getColaValue(data);
@@ -49,7 +49,7 @@
 
     function setFordData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#fordVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockFord).toFixed(2);

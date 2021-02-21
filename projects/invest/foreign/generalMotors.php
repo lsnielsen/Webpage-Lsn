@@ -49,7 +49,7 @@
 
     function setGmData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#gmVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockGm).toFixed(2);

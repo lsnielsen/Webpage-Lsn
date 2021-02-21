@@ -25,18 +25,23 @@
 <script>
     let currentColaValue;
     let currentDisneyValue;
+    let currentVisaValue;
     let foreignUsdDkkCurrency;
 
     $( document ).ready(function() {
         callTotalForeignUrl();
         function callTotalForeignUrl() {
-            const colaUrl = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
-            const disneyUrl = "https://www.marketwatch.com/investing/stock/nvo";
+            const colaUrl = "https://www.marketwatch.com/investing/stock/ko";
+            const disneyUrl = "https://www.marketwatch.com/investing/stock/dis";
+            const visaUrl = "https://www.marketwatch.com/investing/stock/v";
             $.get( colaUrl, function( colaData ) {
                 getColaResultValue(colaData);
             }, 'html');
             $.get(disneyUrl, function (disneyData) {
                 getDisneyResultValue(disneyData);
+            }, 'html');
+            $.get(visaUrl, function (visaData) {
+                getVisaResultValue(visaData);
             }, 'html');
             getForeignUsdDkkCurrency();
             setForeignResultValues();
@@ -54,6 +59,18 @@
         $("#totalForeignBuyValue").text(totalBuyValue);
         $("#currentTotalForeignValue").text(currentTotalValue);
         $("#totalForeignWinLoss").text(totalWinLoss);
+    }
+
+    function getVisaResultValue(data)
+    {
+        let visaRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let visaMatch = visaRegex.exec(data);
+        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
+        if (visaMatch !== null) {
+            currentVisaValue = visaMatch[1];
+        } else if (closeMatch !== null) {
+            currentVisaValue = closeMatch[1];
+        }
     }
 
     function getColaResultValue(data)

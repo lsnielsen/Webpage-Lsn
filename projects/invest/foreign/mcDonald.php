@@ -49,7 +49,7 @@
 
     function setMcDonaldData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#mcDonaldVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockMcDonald).toFixed(2);

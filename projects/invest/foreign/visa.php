@@ -2,17 +2,17 @@
 
 <script>
 
-    const visaDate = "12/2 - 2021";
-    const visaPrice = 1780.40;
-    const visaName = "Visa Nordisk";
-    const visaStocks = 4;
+    const visaDate = "28/1 - 2021";
+    const visaPrice = 2502.61;
+    const visaName = "Visa Inc.";
+    const visaStocks = 2;
     const pricePerStockVisa = (visaPrice / visaStocks).toFixed(2);
 
     function getVisaData()
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/nvo";
+            const url = "https://www.marketwatch.com/investing/stock/v";
             $.get( url,
                 function( data ) {
                     getVisaValue(data);
@@ -49,7 +49,7 @@
 
     function setVisaData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#visaVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockVisa).toFixed(2);

@@ -2,17 +2,17 @@
 
 <script>
 
-    const disneyDate = "12/2 - 2021";
-    const disneyPrice = 1780.40;
-    const disneyName = "Disney Nordisk";
-    const disneyStocks = 4;
+    const disneyDate = "28/1 - 2021";
+    const disneyPrice = 2134.07;
+    const disneyName = "Walt Disney";
+    const disneyStocks = 2;
     const pricePerStockDisney = (disneyPrice / disneyStocks).toFixed(2);
 
     function getDisneyData()
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/nvo";
+            const url = "https://www.marketwatch.com/investing/stock/dis";
             $.get( url,
                 function( data ) {
                     getDisneyValue(data);
@@ -49,7 +49,7 @@
 
     function setDisneyData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#disneyVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockDisney).toFixed(2);
