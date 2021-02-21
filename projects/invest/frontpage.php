@@ -19,6 +19,7 @@
 
         <?php
             include "danish/danishInclude.php";
+            include "foreign/foreignInclude.php";
         ?>
 
         <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
@@ -34,5 +35,6 @@
     function getData()
     {
         getDanishData();
+        getForeignData();
     }
 </script>
