@@ -48,15 +48,15 @@
                 <td id="colaResult"></td>
             </tr>
             <tr>
-                <td id="donaldDate"></td>
-                <td id="donaldPrice"></td>
-                <td id="donaldName"></td>
-                <td id="donaldStocks"></td>
-                <td id="donaldStockPrice"></td>
-                <td id="donaldVal"></td>
-                <td id="donaldStockResult"></td>
-                <td id="donaldPercentage"></td>
-                <td id="donaldResult"></td>
+                <td id="mcDonaldDate"></td>
+                <td id="mcDonaldPrice"></td>
+                <td id="mcDonaldName"></td>
+                <td id="mcDonaldStocks"></td>
+                <td id="mcDonaldStockPrice"></td>
+                <td id="mcDonaldVal"></td>
+                <td id="mcDonaldStockResult"></td>
+                <td id="mcDonaldPercentage"></td>
+                <td id="mcDonaldResult"></td>
             </tr>
             <tr>
                 <td id="gmDate"></td>

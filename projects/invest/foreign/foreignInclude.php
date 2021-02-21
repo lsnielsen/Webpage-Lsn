@@ -27,7 +27,7 @@
         getDisneyData();
         getVisaData();
         getColaData();
-        getDonaldData();
+        getMcDonaldData();
         getGmData();
         getFordData();
     }

@@ -3,16 +3,16 @@
 <script>
 
     const mcDonaldDate = "12/2 - 2021";
-    const mcDonaldPrice = 1780.40;
-    const mcDonaldName = "McDonald Nordisk";
-    const mcDonaldStocks = 4;
+    const mcDonaldPrice = 1317.29;
+    const mcDonaldName = "McDonald's";
+    const mcDonaldStocks = 2;
     const pricePerStockMcDonald = (mcDonaldPrice / mcDonaldStocks).toFixed(2);
 
     function getMcDonaldData()
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/nvo";
+            const url = "https://www.marketwatch.com/investing/stock/mcd";
             $.get( url,
                 function( data ) {
                     getMcDonaldValue(data);

@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="" />
+    <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/mcDonald.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/mcDonald.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +116,7 @@
       <workItem from="1613503509686" duration="1778000" />
       <workItem from="1613563205341" duration="1408000" />
       <workItem from="1613917359311" duration="1781000" />
+      <workItem from="1613919167927" duration="367000" />
     </task>
     <servers />
   </component>
