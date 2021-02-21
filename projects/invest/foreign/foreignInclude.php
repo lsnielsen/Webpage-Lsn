@@ -26,10 +26,10 @@
     {
         getDisneyData();
         getVisaData();
+        getColaData();
         getDonaldData();
         getGmData();
         getFordData();
-        getColaData();
     }
 </script>
 

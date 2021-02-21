@@ -5,8 +5,8 @@
     const colaDate = "12/2 - 2021";
     const colaPrice = 1780.40;
     const colaName = "Coca Cola";
-    const colaStocks = 4;
-    const pricePerStockCola = (colaPrice / colaName).toFixed(2);
+    const colaStocks = 6;
+    const pricePerStockCola = (colaPrice / colaStocks).toFixed(2);
 
     function getColaData()
     {
@@ -47,22 +47,22 @@
         }
     }
 
-    function setFordData(marketValue)
+    function setColaData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
-        $("#fordVal").text(marketValue);
+        $("#colaVal").text(marketValue);
 
-        let stockValue = (marketValue - pricePerStockFord).toFixed(2);
-        textColor(stockValue, "#fordStockResult");
-        $("#fordStockResult").text(stockValue);
+        let stockValue = (marketValue - pricePerStockCola).toFixed(2);
+        textColor(stockValue, "#colaStockResult");
+        $("#colaStockResult").text(stockValue);
 
-        let percentageValue = (((marketValue / pricePerStockFord) * 100) - 100).toFixed(2);
-        $("#fordPercentage").text(percentageValue + " %");
-        textColor(percentageValue, "#fordPercentage");
+        let percentageValue = (((marketValue / pricePerStockCola) * 100) - 100).toFixed(2);
+        $("#colaPercentage").text(percentageValue + " %");
+        textColor(percentageValue, "#colaPercentage");
 
-        let totalValue = ((marketValue * fordStocks) - fordPrice).toFixed(2);
-        $("#fordResult").text(totalValue);
-        textColor(totalValue, "#fordResult");
+        let totalValue = ((marketValue * colaStocks) - colaPrice).toFixed(2);
+        $("#colaResult").text(totalValue);
+        textColor(totalValue, "#colaResult");
     }
 
     function textColor(value, field)

@@ -37,6 +37,17 @@
                 <td id="visaResult"></td>
             </tr>
             <tr>
+                <td id="colaDate"></td>
+                <td id="colaPrice"></td>
+                <td id="colaName"></td>
+                <td id="colaStocks"></td>
+                <td id="colaStockPrice"></td>
+                <td id="colaVal"></td>
+                <td id="colaStockResult"></td>
+                <td id="colaPercentage"></td>
+                <td id="colaResult"></td>
+            </tr>
+            <tr>
                 <td id="donaldDate"></td>
                 <td id="donaldPrice"></td>
                 <td id="donaldName"></td>
@@ -68,17 +79,6 @@
                 <td id="fordStockResult"></td>
                 <td id="fordPercentage"></td>
                 <td id="fordResult"></td>
-            </tr>
-            <tr>
-                <td id="colaDate"></td>
-                <td id="colaPrice"></td>
-                <td id="colaName"></td>
-                <td id="colaStocks"></td>
-                <td id="colaStockPrice"></td>
-                <td id="colaVal"></td>
-                <td id="colaStockResult"></td>
-                <td id="colaPercentage"></td>
-                <td id="colaResult"></td>
             </tr>
         </tbody>
     </table>
