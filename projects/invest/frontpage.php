@@ -38,6 +38,7 @@
     {
         getDanishData();
         getForeignData();
+        getFundsData();
         setTotalResultValues();
     }
 </script>

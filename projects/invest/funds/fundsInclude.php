@@ -17,7 +17,7 @@
 
 <script>
 
-    function getForeignData()
+    function getFundsData()
     {
         getNordeaData();
     }
