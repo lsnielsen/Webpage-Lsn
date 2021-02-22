@@ -57,6 +57,16 @@
         $("#totalDanishBuyValue").text(totalDanishBuyValue);
         $("#currentTotalDanishValue").text(currentTotaldanishValue);
         $("#totalDanishWinLoss").text(totalDanishWinLoss);
+        textColor(totalDanishWinLoss, "#totalDanishWinLoss");
+    }
+
+    function textColor(value, field)
+    {
+        if (value < 0) {
+            $(field).css("color", "red");
+        } else {
+            $(field).css("color", "green");
+        }
     }
 
     function getAstralisResultValue(data)

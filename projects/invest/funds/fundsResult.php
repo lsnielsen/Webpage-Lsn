@@ -36,6 +36,16 @@
         $("#totalFundsBuyValue").text(totalFundsBuyValue);
         $("#currentTotalFundsValue").text(currentTotalFundsValue);
         $("#totalFundsWinLoss").text(totalFundsWinLoss);
+        textColor(totalFundsWinLoss, "#totalFundsWinLoss");
+    }
+
+    function textColor(value, field)
+    {
+        if (value < 0) {
+            $(field).css("color", "red");
+        } else {
+            $(field).css("color", "green");
+        }
     }
 
     $( document ).ready(function() {
