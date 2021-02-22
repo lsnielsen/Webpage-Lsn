@@ -20,6 +20,7 @@
         <?php
             include "danish/danishInclude.php";
             include "foreign/foreignInclude.php";
+            include "funds/fundsInclude.php";
             include "totalResult.php";
         ?>
 
