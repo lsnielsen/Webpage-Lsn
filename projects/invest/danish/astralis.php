@@ -16,17 +16,17 @@
             $.get( url,
                 function( data ) {
                     getAstralisValue(data);
-                    setStandardData();
+                    setAstralisStandardData();
                 },
                 'html'
             );
             setTimeout(function () {
                 callUrl();
-            }, 2000);
+            }, 5000);
         }
     }
 
-    function setStandardData()
+    function setAstralisStandardData()
     {
         $("#astralisDate").text(astralisDate);
         $("#astralisPrice").text(astralisPrice);

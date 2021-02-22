@@ -19,6 +19,9 @@
 
         <?php
             include "danish/danishInclude.php";
+            include "foreign/foreignInclude.php";
+            include "funds/fundsInclude.php";
+            include "totalResult.php";
         ?>
 
         <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
@@ -34,5 +37,8 @@
     function getData()
     {
         getDanishData();
+        getForeignData();
+        getFundsData();
+        setTotalResultValues();
     }
 </script>

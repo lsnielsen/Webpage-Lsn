@@ -26,6 +26,9 @@
     let currentAstralisValue;
     let currentNovoValue;
     let usdDkkCurrency;
+    let totalDanishBuyValue;
+    let currentTotaldanishValue;
+    let totalDanishWinLoss
 
     $( document ).ready(function() {
         callTotalDanishUrl();
@@ -48,12 +51,22 @@
 
     function setDanishResultValues()
     {
-        let totalBuyValue = astralisPrice + novoPrice;
-        let currentTotalValue = ((currentAstralisValue * astralisStocks) + (currentNovoValue * novoStocks)).toFixed(2);
-        let totalWinLoss = (currentTotalValue - totalBuyValue).toFixed(2);
-        $("#totalDanishBuyValue").text(totalBuyValue);
-        $("#currentTotalDanishValue").text(currentTotalValue);
-        $("#totalDanishWinLoss").text(totalWinLoss);
+        totalDanishBuyValue = (astralisPrice + novoPrice).toFixed(2);
+        currentTotaldanishValue = ((currentAstralisValue * astralisStocks) + (currentNovoValue * novoStocks)).toFixed(2);
+        totalDanishWinLoss = (currentTotaldanishValue - totalDanishBuyValue).toFixed(2);
+        $("#totalDanishBuyValue").text(totalDanishBuyValue);
+        $("#currentTotalDanishValue").text(currentTotaldanishValue);
+        $("#totalDanishWinLoss").text(totalDanishWinLoss);
+        textColor(totalDanishWinLoss, "#totalDanishWinLoss");
+    }
+
+    function textColor(value, field)
+    {
+        if (value < 0) {
+            $(field).css("color", "red");
+        } else {
+            $(field).css("color", "green");
+        }
     }
 
     function getAstralisResultValue(data)

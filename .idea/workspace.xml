@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/projects/invest/danish/danishResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/danish/danishResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/foreignInclude.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/foreignInclude.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/funds/fundsInclude.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/funds/fundsInclude.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +117,12 @@
       <workItem from="1610809250462" duration="11313000" />
       <workItem from="1613503509686" duration="1778000" />
       <workItem from="1613563205341" duration="1408000" />
+      <workItem from="1613917359311" duration="1781000" />
+      <workItem from="1613919167927" duration="2166000" />
+      <workItem from="1613921426931" duration="1145000" />
+      <workItem from="1613923234380" duration="1442000" />
+      <workItem from="1613983859066" duration="1819000" />
+      <workItem from="1613985724797" duration="662000" />
     </task>
     <servers />
   </component>
