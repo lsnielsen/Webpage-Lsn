@@ -1,6 +1,13 @@
 
 
 
+<div class="container-sm">
+    <div class="page-header text-center" style="color: #ff884d;">
+        <h2>
+            Samlet resultat:
+        </h2>
+    </div>
+</div>
 
 <div class="container-sm">
     <table class="table table-bordered align-middle table-primary">
