@@ -6,6 +6,9 @@
     include("gulOgGratis/starter.php");
     include("gulOgGratis/getCarFunctions.php");
 
+    include("bilTorvet/starter.php");
+    include("bilTorvet/getCarFunctions.php");
+
     include("table/dataArray.php");
     include("table/dataArrayGog.php");
 
@@ -18,14 +21,19 @@
 
     const secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
+    const thirdBasicUrl = "https://www.biltorvet.dk/bil/";
+
     const firstUrlArr = new Array();
     const secondUrlArr = new Array();
+    const thirdUrlArr = new Array();
     const dataArray = new Array();
     let modelArray = new Array();
 	let loopI = 1;
 	let loopJ = 1;
+	let loopQ = 1;
 	let firstBool = false;
 	let secondBool = false;
+	let thirdBool = false;
 	let lastBool = false;
 	
         
@@ -35,9 +43,11 @@
 		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
+		bilTorvetUrl = thirdBasicUrl + "/" + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 
 		bilbasenLoop();
 		gulOgGratisLoop();
+		bilTorvetLoop();
 		firstPauseLoop();
 	});
 	
@@ -57,28 +67,40 @@
 				}
 				secondPauseLoop();
 			}
-							
 		}, 2000)	
 	}
 	
 	function secondPauseLoop()
 	{
-        setTimeout(
-            function()
-            {
-                if(lastBool == false) {
-                    secondPauseLoop();
-                } else {
-                    setTimeout(
-                        function()
-                        {
-                            makeArrayToPhp();
-                        }, 200
-                    );
-                }
-            }, 5000
-        );
+        setTimeout(function() {
+            if(lastBool == false) {
+                secondPauseLoop();
+            } else {
+                setTimeout(function() {
+                    makeArrayToPhp();
+                }, 200);
+            }
+        }, 5000 );
 	}
+
+	function bilTorvetLoop()
+    {
+        setTimeout(function() {
+            if (loopQ >= 2) {
+                callingThirdUrl(bilTorvetUrl);
+            } else {
+                callingThirdUrl(bilTorvetUrl);
+            }
+            loopQ++;
+            if (loopQ < 25) {
+                bilTorvetLoop();
+            } else if (loopQ == 25) {
+                setTimeout(function() {
+                    thirdBool = true;
+                }, 250)
+            }
+        }, 250)
+    }
 		
 	function bilbasenLoop() {       
 		setTimeout(function() {
