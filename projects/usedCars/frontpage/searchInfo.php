@@ -28,13 +28,13 @@
 <div class="container searchInfo">
     <div class="row startSearch">
         <div class="col-">
-            Du er nu gået igang med at søge efter biler på bilbasen og guloggratis, som har modellen
+            Du er nu gået igang med at søge efter biler på bilbasen, guloggratis og biltorvet, som har modellen
         </div>
         <div class="col- theChoosenModel">  </div>
     </div>
     <div class="row startSearch" style="margin-top: -10px;">
         <div class="col-md-">
-            Du skal væbne dig med lidt tålmodighed, da det tager lidt tid. Mellem 1 og 2 minutter, alt afhængig af antallet af biler.
+            Du skal væbne dig med lidt tålmodighed, da det tager lidt tid. Mellem 2 og 3 minutter, alt afhængig af antallet af biler.
         </div>
     </div>
     <div class="row middleSearch">
@@ -43,11 +43,15 @@
         </div>
         <div class="col-" id="bilbasenurls">  </div>
         <div class="col-">
-            links hos bilbasen og
+            links hos bilbasen,
         </div>
         <div class="col-" id="guloggratisurls">  </div>
         <div class="col-">
-            links ved guloggratis.
+            links ved guloggratis, og
+        </div>
+        <div class="col-" id="biltorveturls">  </div>
+        <div class="col-">
+            links fra biltorvet.
         </div>
     </div>
     <div class="row endSearch">
@@ -66,7 +70,7 @@
         margin-left: 5px;
         font-weight: bold;
     }
-    #bilbasenurls, #guloggratisurls {
+    #bilbasenurls, #guloggratisurls, #biltorveturls {
         padding: 0px 5px 0px 5px;
     }
 </style>
