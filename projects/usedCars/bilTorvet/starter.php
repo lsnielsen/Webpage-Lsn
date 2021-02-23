@@ -5,7 +5,6 @@
 	{
         $.get(urlOne,
             function( data ) {
-                console.log({data});
                 let linkRegex = data.match(/[&a-z;:]*\/bil\/[a-z0-9]+\/[a-z0-9-]*\/[a-z0-9-]*\/[0-9]*/g);
                 for (let i = 0; i < linkRegex.length; i++) {
                     let temp = linkRegex[i].match(/(\/bil\/[a-z0-9]+\/[a-z0-9-]*\/[a-z0-9-]*\/[0-9]*)/);
