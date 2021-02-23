@@ -55,12 +55,14 @@
 	function firstPauseLoop()
 	{
 		setTimeout(function() {   
-			if (firstBool == false || secondBool == false) {         
+			if (firstBool == false || secondBool == false || thirdBool == false) {
 				firstPauseLoop();             
 			} else {
-				gulOgGratisCars = secondUrlArr.length;
+				let gulOgGratisCars = secondUrlArr.length;
+				let bilTorvetCars = thirdUrlArr.length;
 				$("#bilbasenurls").text(firstUrlArr.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
+				$("#biltorveturls").text(bilTorvetCars);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
 				if (gulOgGratisCars != 0) {
