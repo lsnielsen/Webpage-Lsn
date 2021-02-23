@@ -5,10 +5,11 @@
 	{
         $.get(urlOne,
             function( data ) {
-                let linkRegex = data.match(/(https:\/\/www.biltorvet.dk\/bil\/[a-z]+\/[a-z0-9-\/]+)["\/> ]*/g);
+                console.log({data});
+                let linkRegex = data.match(/[&a-z;:]*\/bil\/[a-z0-9]+\/[a-z0-9-]*\/[a-z0-9-]*\/[0-9]*/g);
                 for (let i = 0; i < linkRegex.length; i++) {
-                    let temp = linkRegex[i].match(/\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+/);
-                    let theFirstString = "https://www.bilbasen.dk" + temp;
+                    let temp = linkRegex[i].match(/(\/bil\/[a-z0-9]+\/[a-z0-9-]*\/[a-z0-9-]*\/[0-9]*)/);
+                    let theFirstString = "https://www.biltorvet.dk" + temp;
                     if (!firstUrlArr.includes(theFirstString)) {
                         firstUrlArr.push(theFirstString);
                     }
@@ -44,7 +45,7 @@
         $.get(url,
             function( data ) {
                 let singleCarArray = new Array();
-                setTheFirstArray(singleCarArray, data, url);
+                setTheFirstArrayBT(singleCarArray, data, url);
             },
             'html'
         );

@@ -11,6 +11,7 @@
 
     include("table/dataArray.php");
     include("table/dataArrayGog.php");
+    include("table/dataArrayBT.php");
 
 ?>
 
@@ -43,7 +44,7 @@
 		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
 		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
 		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
-		bilTorvetUrl = thirdBasicUrl + "/" + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
+		bilTorvetUrl = thirdBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
 
 		bilbasenLoop();
 		gulOgGratisLoop();
