@@ -38,11 +38,13 @@
 
     function setForeignResultValues()
     {
-        totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + gmPrice + mcDonaldPrice + bitcoinGroupPrice).toFixed(2);
+        totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + 
+									gmPrice + mcDonaldPrice + bitcoinGroupPrice).toFixed(2);
         currentTotalForeignValue = ((currentColaValue * colaStocks) +
             (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
             (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
-            (currentMcDonaldValue * mcDonaldStocks)).toFixed(2);
+            (currentMcDonaldValue * mcDonaldStocks) + 
+			(currentBitcoinGroupValue * bitcoinGroupStocks)).toFixed(2);
         totalForeignWinLoss = (currentTotalForeignValue - totalForeignBuyValue).toFixed(2);
         $("#totalForeignBuyValue").text(totalForeignBuyValue);
         $("#currentTotalForeignValue").text(currentTotalForeignValue);
@@ -91,6 +93,7 @@
                 getBitcoinResultValue(btData);
             }, 'html');
             getForeignUsdDkkCurrency();
+			getForeignEuroDkkCurrency();
             setForeignResultValues();
             setTimeout(function () {
                 callTotalForeignUrl();
