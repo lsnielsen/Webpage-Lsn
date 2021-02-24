@@ -29,14 +29,16 @@
     let currentMcDonaldValue;
     let currentGmValue;
     let currentFordValue;
+    let currentBitcoinGroupValue;
     let foreignUsdDkkCurrency;
+    let foreignEuroDkkCurrency;
     let totalForeignBuyValue;
     let currentTotalForeignValue;
     let totalForeignWinLoss;
 
     function setForeignResultValues()
     {
-        totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + gmPrice + mcDonaldPrice).toFixed(2);
+        totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + gmPrice + mcDonaldPrice + bitcoinGroupPrice).toFixed(2);
         currentTotalForeignValue = ((currentColaValue * colaStocks) +
             (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
             (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
@@ -66,6 +68,7 @@
             const visaUrl = "https://www.marketwatch.com/investing/stock/v";
             const fordUrl = "https://www.marketwatch.com/investing/stock/f";
             const gmUrl = "https://www.marketwatch.com/investing/stock/gm";
+            const btUrl = "https://www.marketwatch.com/investing/stock/ade?countrycode=xe";
             $.get( gmUrl, function( gmData ) {
                 getGmResultValue(gmData);
             }, 'html');
@@ -84,6 +87,9 @@
             $.get(visaUrl, function (visaData) {
                 getVisaResultValue(visaData);
             }, 'html');
+            $.get(btUrl, function (btData) {
+                getBitcoinResultValue(btData);
+            }, 'html');
             getForeignUsdDkkCurrency();
             setForeignResultValues();
             setTimeout(function () {
@@ -91,6 +97,18 @@
             }, 2000);
         }
     });
+
+    function getBitcoinResultValue(data)
+    {
+        let bitcoinGroupRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let bitcoinGroupMatch = bitcoinGroupRegex.exec(data);
+        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
+        if (bitcoinGroupMatch !== null) {
+            currentBitcoinGroupValue = bitcoinGroupMatch[1] * foreignEuroDkkCurrency;
+        } else if (closeMatch !== null) {
+            currentBitcoinGroupValue = closeMatch[1] * foreignEuroDkkCurrency;
+        }
+    }
 
     function getMcDonaldResultValue(data)
     {
@@ -174,6 +192,20 @@
                 foreignUsdDkkCurrency = currencyMatch[1];
             } else {
                 foreignUsdDkkCurrency = 1;
+            }
+        }, 'html' );
+    }
+
+    function getForeignEuroDkkCurrency()
+    {
+        let url = "https://themoneyconverter.com/EUR/DKK";
+        $.get(url ,function( data ) {
+            let currencyRegex = /1 eur = ([0-9]{1,2}\.[0-9]{4}) dkk/i;
+            let currencyMatch = currencyRegex.exec(data);
+            if (currencyMatch !== null) {
+                foreignEuroDkkCurrency = currencyMatch[1];
+            } else {
+                foreignEuroDkkCurrency = 1;
             }
         }, 'html' );
     }

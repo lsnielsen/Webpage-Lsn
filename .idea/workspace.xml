@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3485f6e-4aba-4c14-948f-d37fae704145" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/frontpage/frontpage/script.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/invest/foreign/bitcoinGroup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/frontpage/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/frontpage/frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/foreignInclude.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/foreignInclude.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/foreignResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/foreignResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/invest/foreign/foreignStockTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/invest/foreign/foreignStockTable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +125,7 @@
       <workItem from="1613923234380" duration="1442000" />
       <workItem from="1613983859066" duration="1819000" />
       <workItem from="1613985724797" duration="662000" />
+      <workItem from="1614149644136" duration="1348000" />
     </task>
     <servers />
   </component>
