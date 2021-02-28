@@ -7,8 +7,10 @@
             function( data ) {
                 let linkRegex = data.match(/[&a-z;:]*\/bil\/[a-z0-9]+\/[a-z0-9-]*\/[a-z0-9-]*\/[0-9]*/g);
                 for (let i = 0; i < linkRegex.length; i++) {
+					console.log(linkRegex[i]);
                     let temp = linkRegex[i].match(/(\/bil\/[a-z0-9]+\/[a-z0-9-]*\/[a-z0-9-]*\/[0-9]*)/);
-                    let theFirstString = "https://www.biltorvet.dk" + temp;
+					console.log({temp});
+                    let theFirstString = "https://www.biltorvet.dk" + temp[0];
                     if (!firstUrlArr.includes(theFirstString)) {
                         firstUrlArr.push(theFirstString);
                     }
