@@ -29,48 +29,70 @@
         }
     }
 
+    function getCarAttr(data)
+    {
+        let carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9-]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
+        let match = carRegexp.exec(data);
+        if (match !==  null) {
+            return [match[1], match[2].replace(",", ".")];
+        } else {
+            return ["-", "-"];
+        }
+    }
+    
+    function getContactInfo(data)
+    {
+        let contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
+        const match = contactRegexp.exec(data);
+        if (match !==  null) {
+            return match[1] + " " + match[2];
+        } else {
+            return "-";
+        }
+    }
+
     function setTheFirstArray(singleCarArray, data, url)
     {
         singleCarArray.push(url);
         singleCarArray.push(getContactInfo(data));
         singleCarArray.push(getCarAttr(data)[0]);
         singleCarArray.push(getCarAttr(data)[1]);
-        singleCarArray.push(getPrice(data));
+        singleCarArray.push(getMainEquip(data, /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/));
         singleCarArray.push(getMainEquip(data, /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/));
         singleCarArray.push(getDiffPrice(data));
         singleCarArray.push(getMainEquip(data, /<section id="bbVipMileage" class="section">[\w\W]*?>Km<[\w\W]*?([0-9.]+)/));
-        singleCarArray.push(getHorsePower(data));
-        singleCarArray.push(getRegDate(data));
-        singleCarArray.push(getGeartype(data));
-        singleCarArray.push(getZeroToHundred(data));
-        singleCarArray.push(getTopSpeed(data));
-        singleCarArray.push(getPropellant(data));
-        singleCarArray.push(getUsage(data));
-        singleCarArray.push(getLoad(data));
-        singleCarArray.push(getTraction(data));
-        singleCarArray.push(getCylinders(data));
-        singleCarArray.push(getAbs(data));
-        singleCarArray.push(getMaxPayload(data));
-        singleCarArray.push(getAirbags(data));
-        singleCarArray.push(getEsp(data));
-        singleCarArray.push(getGears(data));
-        singleCarArray.push(getGasTank(data));
-        singleCarArray.push(getWeight(data));
-        singleCarArray.push(getProdDate(data));
-        singleCarArray.push(getDoors(data));
-        singleCarArray.push(getModelDate(data));
-        singleCarArray.push(getSightDate(data));
-        singleCarArray.push(getColor(data));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">HK\/Nm<\/td>[\w\W]+">([0-9]+ hk \/ [0-9]{2,3} Nm)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<div class="car-first-registration-date">[\w\W]+">([0-9]{1,2}\/[0-9]{4})<\/span>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Geartype<\/td>[\w\W]+\">(Manuel|Automatisk|Auto)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">0 - 100 km\/t<\/td>[\w\W]+?([0-9,]+ sek)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Tophastighed<\/td>[\w\W]+([0-9]{3} km\/t)<\/td>/));
+        singleCarArray.push(getMainEquip(data,  /<td class="selectedcar">(Diesel|Benzin)<\/td>/));
+        singleCarArray.push(getMainEquip(data,  /<td style="color: #888;">[a-zA-Z() ]*<\/td>[\w\W]+?([0-9,]+ km\/l)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Lasteevne<\/td>[\w\W]+?([0-9]{3} kg)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Trækhjul<\/td>[\w\W]*?">([a-zA-Z]+)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Cylindre<\/td>[\w\W]*?">([0-9])<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">ABS-bremser<\/td>[\w\W]*?">(Ja)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Max. påhæng<\/td>[\w\W]*?">([0-9.]+ kg)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style=\"color: #888;">Airbags<\/td>[\w\W]*?">([0-9]{1,2})<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style=\"color: #888;">ESP<\/td>[\W\w]+selectedcar">([a-zA-Z]{2,3})<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Gear<\/td>[\w\W]+([0-9] gear)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Tank<\/td>[\w\W]+([0-9]{2} l)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">.{4}<\/td>[\w\W]+\">([0-9]{3,4} kg)<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<div class="car-production-date">[\w\W]+?([0-9- \/]{3,})<\/span>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">.{4}<\/td>[\w\W]+class=\"selectedcar\">([0-9]{0,2})<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<div class="car-model-year">[\w\W]+?([0-9]{4})<\/span>/));
+        singleCarArray.push(getMainEquip(data, /<li title="Dato for sidste syn"><span>Synet:<\/span>([0-9\/]+)<\/li>/));
+        singleCarArray.push(getMainEquip(data, /<li title="Farve"><span>Farve:<\/span>([a-zA-Zøåæ ]+)<\/li>/));
         singleCarArray.push(setExtraDefaultEquip(data, "Aluf&#230;lge"));
         singleCarArray.push(setExtraDefaultEquip(data, "Anh&#230;ngertr&#230;k"));
         singleCarArray.push(setExtraDefaultEquip(data, "Anh&#230;ngertr&#230;k, aftagl."));
         singleCarArray.push(setExtraDefaultEquip(data, "Android auto"));
         singleCarArray.push(setExtraDefaultEquip(data, "Antispin"));
         singleCarArray.push(setExtraDefaultEquip(data, "Apple carplay"));
-        singleCarArray.push(getEuronorm(data));
-        singleCarArray.push(getWidth(data));
-        singleCarArray.push(getLength(data));
-        singleCarArray.push(getHeight(data));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Euronorm<\/td>[\w\W]+?([0-9])<\/td>/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">Bredde<\/td>[\w\W]+?([0-9]{3} cm)/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">L.ngde<\/td>[\w\W]+?([0-9]{3} cm)/));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;">H.jde<\/td>[\w\W]+([0-9]{3} cm)<\/td>/));
         singleCarArray.push(setExtraDefaultEquip(data, /Arml&#230;n/));
         singleCarArray.push(setExtraDefaultEquip(data, /Auto. n&#248;dbremse/));
         singleCarArray.push(setExtraDefaultEquip(data, /Auto. parkering/));
