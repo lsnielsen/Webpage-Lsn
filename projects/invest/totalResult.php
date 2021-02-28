@@ -37,9 +37,15 @@
         loopFunction();
         function loopFunction() {
 
-            let theTotalResultBuyValue = (Number(totalDanishBuyValue) + Number(totalForeignBuyValue)).toFixed(2);
-            let theCurrentTotalResultValue = (Number(currentTotaldanishValue) + Number(currentTotalForeignValue)).toFixed(2);
-            let theTotalResultWinLoss = (Number(totalDanishWinLoss) + Number(totalForeignWinLoss)).toFixed(2);
+            let theTotalResultBuyValue = (Number(totalDanishBuyValue) + 
+											Number(totalForeignBuyValue) + 
+											Number(totalFundsBuyValue)).toFixed(2);
+            let theCurrentTotalResultValue = (Number(currentTotaldanishValue) + 
+												Number(currentTotalForeignValue) + 
+												Number(currentTotalFundsValue)).toFixed(2);
+            let theTotalResultWinLoss = (Number(totalDanishWinLoss) + 
+											Number(totalForeignWinLoss) + 
+											Number(totalFundsWinLoss)).toFixed(2);
 
             $("#totalResultBuyValue").text(theTotalResultBuyValue);
             $("#currentTotalResultValue").text(theCurrentTotalResultValue);
