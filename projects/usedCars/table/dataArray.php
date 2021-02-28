@@ -10,7 +10,7 @@
     {
         const match = regex.exec(data);
         if (match !==  null) {
-            return match[1];
+            return match[1].replace(",", ".");
         } else {
             return "-";
         }
@@ -39,7 +39,7 @@
             return ["-", "-"];
         }
     }
-    
+
     function getContactInfo(data)
     {
         let contactRegexp = /(?<=<div>)(\d{4}) (( |.)+)<\/div>/;
