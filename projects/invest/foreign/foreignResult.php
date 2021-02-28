@@ -100,6 +100,18 @@
             }, 2000);
         }
     });
+	
+    function getBitcoinResultValue(data)
+    {
+        let bitcoinGroupRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let bitcoinGroupMatch = bitcoinGroupRegex.exec(data);
+        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
+        if (bitcoinGroupMatch !== null) {
+            currentBitcoinGroupValue = bitcoinGroupMatch[1] * foreignEuroDkkCurrency;
+        } else if (closeMatch !== null) {
+            currentBitcoinGroupValue = closeMatch[1] * foreignEuroDkkCurrency;
+        }
+    }
 
     function getBitcoinResultValue(data)
     {
@@ -195,6 +207,20 @@
                 foreignUsdDkkCurrency = currencyMatch[1];
             } else {
                 foreignUsdDkkCurrency = 1;
+            }
+        }, 'html' );
+    }
+	
+    function getForeignEuroDkkCurrency()
+    {
+        let url = "https://themoneyconverter.com/EUR/DKK";
+        $.get(url ,function( data ) {
+            let currencyRegex = /1 eur = ([0-9]{1,2}\.[0-9]{4}) dkk/i;
+            let currencyMatch = currencyRegex.exec(data);
+            if (currencyMatch !== null) {
+                foreignEuroDkkCurrency = currencyMatch[1];
+            } else {
+                foreignEuroDkkCurrency = 1;
             }
         }, 'html' );
     }
