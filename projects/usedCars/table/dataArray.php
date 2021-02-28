@@ -6,6 +6,29 @@
         if(extraEquip != -1) { return "Ja"; } else { return "-"; }
     }
 
+    function getMainEquip(data, regex)
+    {
+        const match = regex.exec(data);
+        if (match !==  null) {
+            return match[1];
+        } else {
+            return "-";
+        }
+    }
+
+    function getDiffPrice(data)
+    {
+        let price = getMainEquip(data, /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/);
+        let newPrice = getMainEquip(data, /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/);
+        let emptyCheck = (price !== "-") && (newPrice !== "-");
+        let sizeCheck = (parseFloat(newPrice) > parseFloat(price)) && (parseFloat(price) >= 10.000);
+        if (emptyCheck && sizeCheck) {
+            return (newPrice - price).toFixed(3);
+        } else {
+            return "-";
+        }
+    }
+
     function setTheFirstArray(singleCarArray, data, url)
     {
         singleCarArray.push(url);
@@ -13,9 +36,9 @@
         singleCarArray.push(getCarAttr(data)[0]);
         singleCarArray.push(getCarAttr(data)[1]);
         singleCarArray.push(getPrice(data));
-        singleCarArray.push(getNewPrice(data));
+        singleCarArray.push(getMainEquip(data, /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/));
         singleCarArray.push(getDiffPrice(data));
-        singleCarArray.push(getKm(data));
+        singleCarArray.push(getMainEquip(data, /<section id="bbVipMileage" class="section">[\w\W]*?>Km<[\w\W]*?([0-9.]+)/));
         singleCarArray.push(getHorsePower(data));
         singleCarArray.push(getRegDate(data));
         singleCarArray.push(getGeartype(data));

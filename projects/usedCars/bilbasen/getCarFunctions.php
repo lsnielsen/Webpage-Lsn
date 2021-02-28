@@ -2,30 +2,6 @@
 
 <script>
 
-    function getDiffPrice(data)
-    {
-        let price = getPrice(data);
-        let newPrice = getNewPrice(data);
-        let emptyCheck = (price !== "-") && (newPrice !== "-");
-        let sizeCheck = (parseFloat(newPrice) > parseFloat(price)) && (parseFloat(price) >= 10.000);
-        if (emptyCheck && sizeCheck) {
-            return (newPrice - price).toFixed(3);
-        } else {
-            return "-";
-        }
-    }
-
-	function getKm(data)
-	{
-        let kmRegexp = /<section id="bbVipMileage" class="section">[\w\W]*?>Km<[\w\W]*?([0-9.]+)/;
-        let match = kmRegexp.exec(data);
-        if (match !==  null) {
-            return match[1];
-        } else {
-            return "-";
-        }
-	}
-
 	function getCarAttr(data)
     {
         let carRegexp = /(?<=<h1 id=\"bbVipTitle\" title=\")([a-zA-Z]+ [a-zA-Z0-9-]+[ CC]*) ([a-zA-Z0-9,]+ [a-zA-Z0-9,]+)/;
@@ -34,28 +10,6 @@
             return [match[1], match[2].replace(",", ".")];
         } else {
             return ["-", "-"];
-        }
-    }
-
-	function getNewPrice(data)
-    {
-        let starterPriceRegexp = /<td style="color: #888;width:150px;">Nypris<\/td>[\n \W\w]+class="selectedcar">([0-9\.]+) kr/;
-        let match = starterPriceRegexp.exec(data);
-        if (match !==  null) {
-            return match[1];
-        } else {
-            return "-";
-        }
-    }
-
-	function getPrice(data)
-    {
-        let priceRegex = /<p id="bbVipPricePrice">\D+([0-9.]+)[a-z\/\. ]*<\/span>/;
-        let match = priceRegex.exec(data);
-        if (match !==  null) {
-            return match[1];
-        } else {
-            return "-";
         }
     }
 
