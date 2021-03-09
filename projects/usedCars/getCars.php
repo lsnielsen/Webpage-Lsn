@@ -10,28 +10,28 @@
 
 <script>
 
-    const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
-    const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
+    const bilbasenStartUrl = "https://www.bilbasen.dk/brugt/bil/";
+    const bilbasenEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
 
-    const secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
+    let gulOgGratisUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
-    const firstUrlArr = new Array();
-    const secondUrlArr = new Array();
+    const bilbasenArray = new Array();
+    const gulOgGratisArray = new Array();
     const dataArray = new Array();
-    let modelArray = new Array();
-	let loopI = 1;
-	let loopJ = 1;
-	let firstBool = false;
-	let secondBool = false;
+    let choosenModelArray = new Array();
+	let bilbasenCounter = 1;
+	let gulOgGratisCounter = 1;
+	let gulOgGratisBool = false;
+	let bilbasenBool = false;
 	let lastBool = false;
 	
         
 	$("select.carModel").change(function(){
 		setFrontpage();		
-		modelArray = choosenModel.split(" ");
-		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
-		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
-		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
+		choosenModelArray = choosenModel.split(" ");
+		document.cookie = "theChoosenCarModel=" + choosenModelArray[0] + " " + choosenModelArray[choosenModelArray.length-1];
+		bilbasenUrl = bilbasenStartUrl + choosenModelArray[0] + "/" + choosenModelArray[1] + bilbasenEndUrl;
+		gulOgGratisUrl = gulOgGratisUrl + choosenModelArray[0].toLowerCase() + "/" + choosenModelArray[1].toLowerCase();
 
 		bilbasenLoop();
 		gulOgGratisLoop();
@@ -41,11 +41,11 @@
 	function getLinksPause()
 	{
 		setTimeout(function() {   
-			if (firstBool == false || secondBool == false) {         
+			if (gulOgGratisBool == false || bilbasenBool == false) {         
 				getLinksPause();             
 			} else {
-				gulOgGratisCars = secondUrlArr.length;
-				$("#bilbasenurls").text(firstUrlArr.length);
+				gulOgGratisCars = gulOgGratisArray.length;
+				$("#bilbasenurls").text(bilbasenArray.length);
 				$("#guloggratisurls").text(gulOgGratisCars);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
@@ -79,18 +79,18 @@
 		
 	function bilbasenLoop() {       
 		setTimeout(function() {
-			if (loopI >= 2) {
-				pageUrl = bilbasenUrl + "&page=" + loopI;
+			if (bilbasenCounter >= 2) {
+				pageUrl = bilbasenUrl + "&page=" + bilbasenCounter;
 				callingFirstUrl(pageUrl);
 			} else {
 				callingFirstUrl(bilbasenUrl);
 			}
-			loopI++;                  
-			if (loopI < 25) {         
+			bilbasenCounter++;                  
+			if (bilbasenCounter < 25) {         
 				bilbasenLoop();             
-			} else if (loopI == 25) {
+			} else if (bilbasenCounter == 25) {
 				setTimeout(function() {
-					secondBool = true;
+					bilbasenBool = true;
 				}, 250)
 			}             
 		}, 250)
@@ -98,18 +98,18 @@
 
 	function gulOgGratisLoop() {       
 		setTimeout(function() {   
-			if (loopJ >= 2) {
-				theUrl = gulOgGratisUrl + "/?n=" + loopJ*60;
+			if (gulOgGratisCounter >= 2) {
+				theUrl = gulOgGratisUrl + "/?n=" + gulOgGratisCounter*60;
 				callingSecondUrl(theUrl);
 			} else {
 				callingSecondUrl(gulOgGratisUrl);
 			}
-			loopJ++;                  
-			if (loopJ < 20) {         
+			gulOgGratisCounter++;                  
+			if (gulOgGratisCounter < 20) {         
 				gulOgGratisLoop();             
-			} else if (loopJ == 20) {
+			} else if (gulOgGratisCounter == 20) {
 				setTimeout(function() {
-					firstBool = true;
+					gulOgGratisBool = true;
 				}, 500)
 			}				
 		}, 200)

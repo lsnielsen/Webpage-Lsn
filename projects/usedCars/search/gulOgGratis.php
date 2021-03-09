@@ -9,8 +9,8 @@
                 for (let i = 0; i < theGoglinkRegex.length; i++) {
                     let theGogTemp = theGoglinkRegex[i].match(/\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+/);
                     let theGogFirstString = "https://www.guloggratis.dk" + theGogTemp;
-                    if (!secondUrlArr.includes(theGogFirstString)) {
-                        secondUrlArr.push(theGogFirstString);
+                    if (!gulOgGratisArray.includes(theGogFirstString)) {
+                        gulOgGratisArray.push(theGogFirstString);
                     }
                 }
 			}, 
@@ -26,9 +26,9 @@
 		mySecondLoop();
 		function mySecondLoop() {       
 			setTimeout(function() {   
-				getTheCarGulOgGratis(secondUrlArr[loopJJ]);
+				getTheCarGulOgGratis(gulOgGratisArray[loopJJ]);
 				loopJJ++;                  
-				if (loopJJ < secondUrlArr.length) {         
+				if (loopJJ < gulOgGratisArray.length) {         
 					mySecondLoop();             
 				}                       
 			}, 1000)

@@ -9,8 +9,8 @@
                 for (let i = 0; i < linkRegex.length; i++) {
                     let temp = linkRegex[i].match(/\/brugt\/bil\/[a-z]+\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/[0-9]+/);
                     let theFirstString = "https://www.bilbasen.dk" + temp;
-                    if (!firstUrlArr.includes(theFirstString)) {
-                        firstUrlArr.push(theFirstString);
+                    if (!bilbasenArray.includes(theFirstString)) {
+                        bilbasenArray.push(theFirstString);
                     }
                 }
             },
@@ -25,9 +25,9 @@
         mySecondLoop();
         function mySecondLoop() {
             setTimeout(function() {
-                getTheCarFromBilbasen(firstUrlArr[loopII]);
+                getTheCarFromBilbasen(bilbasenArray[loopII]);
                 loopII++;
-                if (loopII < firstUrlArr.length) {
+                if (loopII < bilbasenArray.length) {
                     mySecondLoop();
                 } else {
                     setTimeout(function() {
