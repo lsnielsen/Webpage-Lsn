@@ -35,14 +35,14 @@
 
 		bilbasenLoop();
 		gulOgGratisLoop();
-		firstPauseLoop();
+		getLinksPause();
 	});
 	
-	function firstPauseLoop()
+	function getLinksPause()
 	{
 		setTimeout(function() {   
 			if (firstBool == false || secondBool == false) {         
-				firstPauseLoop();             
+				getLinksPause();             
 			} else {
 				gulOgGratisCars = secondUrlArr.length;
 				$("#bilbasenurls").text(firstUrlArr.length);
@@ -52,19 +52,19 @@
 				if (gulOgGratisCars != 0) {
                     getTheUsedCarGulOgGratis();
 				}
-				secondPauseLoop();
+				getTheCarsPause();
 			}
 							
 		}, 2000)	
 	}
 	
-	function secondPauseLoop()
+	function getTheCarsPause()
 	{
         setTimeout(
             function()
             {
                 if(lastBool == false) {
-                    secondPauseLoop();
+                    getTheCarsPause();
                 } else {
                     setTimeout(
                         function()
