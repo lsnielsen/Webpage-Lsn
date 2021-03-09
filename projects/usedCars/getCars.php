@@ -1,8 +1,7 @@
 
 <?php
-    include("bilbasen/starter.php");
-
-    include("gulOgGratis/starter.php");
+    include("search/bilbasen.php");
+    include("search/gulOgGratis.php");
 
     include("table/dataArray.php");
     include("table/dataArrayGog.php");
