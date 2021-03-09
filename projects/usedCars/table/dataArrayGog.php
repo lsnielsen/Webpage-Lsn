@@ -25,7 +25,7 @@
         singleCarArray.push(getMainEquip(data, /<div class=[\w\W]+">([0-9]{4} [a-zA-Z]*)<\/span><\/div>/));
         singleCarArray.push(getMainEquip(data, /<dl class="_35sVIAXVbKbano4g_1_PYh"><dt[\w\W]*">Motorstørrelse[\w\W]*?">([a-z0-9, A-Z]+)<\/dd><\/dl>/));
         singleCarArray.push(getMainEquip(data, /<dl class="_35sVIAXVbKbano4g_1_PYh"><dt[\w\W]*">Motorstørrelse[\w\W]*?">([a-z0-9, A-Z]+)<\/dd><\/dl>/));
-        singleCarArray.push(getMainEquip(data, /<div class="[\w\W]+price">[\w\W]+?">([0-9. a-z]+)<\/div><\/div><\/div>/));
+        singleCarArray.push(getMainEquip(data, /<div class="[\w\W]+price">[\w\W]+?">([0-9.]+) kr\.<\/div><\/div><\/div>/));
         singleCarArray.push(getMainEquip(data, /<dt class="CJwC7ukoOZNDCw3qM5xNY">Nypris[\w\W]+?">([0-9.]*)<\/dd><\/dl><\/div>/));
         singleCarArray.push(getDiffPriceGog(data));
         singleCarArray.push(getMainEquip(data, /<dt class="[\w\W]*Kilometer<\/dt>[\w\W]*?">([0-9]*)<\/dd><\/dl><\/div>/));
