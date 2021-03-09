@@ -20,8 +20,8 @@
 
 
 		
-	function getTheUsedCarGulOgGratis() {
-		
+	function getTheUsedCarGulOgGratis() 
+	{	
 		var loopJJ = 0;
 		gulOgGratisLinkLoop();
 		function gulOgGratisLinkLoop() {       
@@ -40,7 +40,7 @@
 		$.get(url, 
 			function( data ) {
                 const gogCarArray = new Array();
-                setTheFirstArrayGog(gogCarArray, data, url);
+                setGulOgGratisSingleCarData(gogCarArray, data, url);
 			},
 			'html'
 		);

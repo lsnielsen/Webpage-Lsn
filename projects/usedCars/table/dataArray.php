@@ -51,7 +51,7 @@
         }
     }
 
-    function setTheFirstArray(singleCarArray, data, url)
+    function setBilbasenSingleCarData(singleCarArray, data, url)
     {
         singleCarArray.push(url);
         singleCarArray.push(getContactInfo(data));

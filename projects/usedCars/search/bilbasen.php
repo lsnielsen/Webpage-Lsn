@@ -44,7 +44,7 @@
         $.get(url,
             function( data ) {
                 let singleCarArray = new Array();
-                setTheFirstArray(singleCarArray, data, url);
+                setBilbasenSingleCarData(singleCarArray, data, url);
             },
             'html'
         );

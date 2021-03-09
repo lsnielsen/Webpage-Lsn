@@ -19,7 +19,7 @@
         }
     }
 
-    function setTheFirstArrayGog(singleCarArray, data, url)
+    function setGulOgGratisSingleCarData(singleCarArray, data, url)
     {
         singleCarArray.push(url);
         singleCarArray.push(getMainEquip(data, /<div class=[\w\W]+">([0-9]{4} [a-zA-Z]*)<\/span><\/div>/));
