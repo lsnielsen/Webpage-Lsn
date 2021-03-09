@@ -1,16 +1,16 @@
 
 <script>
 
-	function callingSecondUrl(url)
+	function fetchGulOgGratisLink(url)
 	{
 		$.get(url, 
 			function( data ) {
                 let theGoglinkRegex = data.match(/\"\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+\"/g);
                 for (let i = 0; i < theGoglinkRegex.length; i++) {
-                    let theGogTemp = theGoglinkRegex[i].match(/\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+/);
-                    let theGogFirstString = "https://www.guloggratis.dk" + theGogTemp;
-                    if (!gulOgGratisArray.includes(theGogFirstString)) {
-                        gulOgGratisArray.push(theGogFirstString);
+                    let gogTemp = theGoglinkRegex[i].match(/\/biler\/personbiler\/[a-z]+\/[a-zA-Z0-9-,.\/]+\/annonce\/[0-9a-zA-Z-]+/);
+                    let gulOgGratisLink = "https://www.guloggratis.dk" + gogTemp;
+                    if (!gulOgGratisArray.includes(gulOgGratisLink)) {
+                        gulOgGratisArray.push(gulOgGratisLink);
                     }
                 }
 			}, 
@@ -23,19 +23,17 @@
 	function getTheUsedCarGulOgGratis() {
 		
 		var loopJJ = 0;
-		mySecondLoop();
-		function mySecondLoop() {       
+		gulOgGratisLinkLoop();
+		function gulOgGratisLinkLoop() {       
 			setTimeout(function() {   
 				getTheCarGulOgGratis(gulOgGratisArray[loopJJ]);
 				loopJJ++;                  
 				if (loopJJ < gulOgGratisArray.length) {         
-					mySecondLoop();             
+					gulOgGratisLinkLoop();             
 				}                       
 			}, 1000)
 		}
 	}
-
-
 	
 	function getTheCarGulOgGratis(url)
 	{

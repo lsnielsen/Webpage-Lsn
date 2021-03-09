@@ -33,8 +33,8 @@
 		bilbasenUrl = bilbasenStartUrl + choosenModelArray[0] + "/" + choosenModelArray[1] + bilbasenEndUrl;
 		gulOgGratisUrl = gulOgGratisUrl + choosenModelArray[0].toLowerCase() + "/" + choosenModelArray[1].toLowerCase();
 
-		bilbasenLoop();
-		gulOgGratisLoop();
+		getBilbasenLinks();
+		getGulOgGratisLinks();
 		getLinksPause();
 	});
 	
@@ -44,17 +44,15 @@
 			if (gulOgGratisBool == false || bilbasenBool == false) {         
 				getLinksPause();             
 			} else {
-				gulOgGratisCars = gulOgGratisArray.length;
 				$("#bilbasenurls").text(bilbasenArray.length);
-				$("#guloggratisurls").text(gulOgGratisCars);
+				$("#guloggratisurls").text(gulOgGratisArray.length);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
-				if (gulOgGratisCars != 0) {
+				if (gulOgGratisArray.length !== 0) {
                     getTheUsedCarGulOgGratis();
 				}
 				getTheCarsPause();
-			}
-							
+			}		
 		}, 2000)	
 	}
 	
@@ -77,17 +75,17 @@
         );
 	}
 		
-	function bilbasenLoop() {       
+	function getBilbasenLinks() {       
 		setTimeout(function() {
 			if (bilbasenCounter >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + bilbasenCounter;
-				callingFirstUrl(pageUrl);
+				fetchBilbasenLink(pageUrl);
 			} else {
-				callingFirstUrl(bilbasenUrl);
+				fetchBilbasenLink(bilbasenUrl);
 			}
 			bilbasenCounter++;                  
 			if (bilbasenCounter < 25) {         
-				bilbasenLoop();             
+				getBilbasenLinks();             
 			} else if (bilbasenCounter == 25) {
 				setTimeout(function() {
 					bilbasenBool = true;
@@ -96,17 +94,17 @@
 		}, 250)
 	}
 
-	function gulOgGratisLoop() {       
+	function getGulOgGratisLinks() {       
 		setTimeout(function() {   
 			if (gulOgGratisCounter >= 2) {
 				theUrl = gulOgGratisUrl + "/?n=" + gulOgGratisCounter*60;
-				callingSecondUrl(theUrl);
+				fetchGulOgGratisLink(theUrl);
 			} else {
-				callingSecondUrl(gulOgGratisUrl);
+				fetchGulOgGratisLink(gulOgGratisUrl);
 			}
 			gulOgGratisCounter++;                  
 			if (gulOgGratisCounter < 20) {         
-				gulOgGratisLoop();             
+				getGulOgGratisLinks();             
 			} else if (gulOgGratisCounter == 20) {
 				setTimeout(function() {
 					gulOgGratisBool = true;
