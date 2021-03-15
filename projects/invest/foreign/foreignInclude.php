@@ -17,6 +17,7 @@
 	include "mcDonald.php";
 	include "generalMotors.php";
 	include "bitcoinGroup.php";
+	include "lockheedMartin.php";
     include "foreignStockTable.php";
     include "foreignResult.php";
 ?>
@@ -32,6 +33,7 @@
         getGmData();
         getFordData();
 		getBitcoinGroupData();
+		getLockheedMartinData();
     }
 </script>
 

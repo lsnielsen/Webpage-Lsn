@@ -91,6 +91,17 @@
                 <td id="bitcoinGroupPercentage"></td>
                 <td id="bitcoinGroupResult"></td>
             </tr>
+            <tr>
+                <td id="lockheedMartinDate"></td>
+                <td id="lockheedMartinPrice"></td>
+                <td id="lockheedMartinName"></td>
+                <td id="lockheedMartinStocks"></td>
+                <td id="lockheedMartinStockPrice"></td>
+                <td id="lockheedMartinVal"></td>
+                <td id="lockheedMartinStockResult"></td>
+                <td id="lockheedMartinPercentage"></td>
+                <td id="lockheedMartinResult"></td>
+            </tr>
         </tbody>
     </table>
 

@@ -30,6 +30,7 @@
     let currentGmValue;
     let currentFordValue;
     let currentBitcoinGroupValue;
+    let currentLockheedMartinValue;
     let foreignUsdDkkCurrency;
     let foreignEuroDkkCurrency;
     let totalForeignBuyValue;
@@ -44,7 +45,8 @@
             (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
             (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
             (currentMcDonaldValue * mcDonaldStocks) + 
-			(currentBitcoinGroupValue * bitcoinGroupStocks)).toFixed(2);
+			(currentBitcoinGroupValue * bitcoinGroupStocks) +
+			(currentLockheedMartinValue * lockheedMartinStocks)).toFixed(2);
         totalForeignWinLoss = (currentTotalForeignValue - totalForeignBuyValue).toFixed(2);
         $("#totalForeignBuyValue").text(totalForeignBuyValue);
         $("#currentTotalForeignValue").text(currentTotalForeignValue);
@@ -71,6 +73,7 @@
             const fordUrl = "https://www.marketwatch.com/investing/stock/f";
             const gmUrl = "https://www.marketwatch.com/investing/stock/gm";
             const btUrl = "https://www.marketwatch.com/investing/stock/ade?countrycode=xe";
+            const lmUrl = "https://www.marketwatch.com/investing/stock/lmt";
             $.get( gmUrl, function( gmData ) {
                 getGmResultValue(gmData);
             }, 'html');
@@ -92,6 +95,9 @@
             $.get(btUrl, function (btData) {
                 getBitcoinResultValue(btData);
             }, 'html');
+            $.get(lmUrl, function (lmData) {
+                getLockheedMartinDataResultValue(lmData);
+            }, 'html');
             getForeignUsdDkkCurrency();
 			getForeignEuroDkkCurrency();
             setForeignResultValues();
@@ -100,6 +106,18 @@
             }, 2000);
         }
     });
+	
+    function getLockheedMartinDataResultValue(data)
+    {
+        let lockheedMartinRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let lockheedMartinMatch = lockheedMartinRegex.exec(data);
+        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
+        if (lockheedMartinMatch !== null) {
+            currentLockheedMartinValue = lockheedMartinMatch[1] * foreignEuroDkkCurrency;
+        } else if (closeMatch !== null) {
+            currentLockheedMartinValue = closeMatch[1] * foreignEuroDkkCurrency;
+        }
+    }
 	
     function getBitcoinResultValue(data)
     {
