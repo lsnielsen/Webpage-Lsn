@@ -2,9 +2,11 @@
 <?php
     include("search/bilbasen.php");
     include("search/gulOgGratis.php");
+    include("search/biltorvet.php");
 
     include("table/dataArray.php");
     include("table/dataArrayGog.php");
+    include("table/dataArrayBiltorvet.php");
 
 ?>
 
@@ -15,14 +17,19 @@
 
     let gulOgGratisUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
+    const biltorvetUrl = "https://www.biltorvet.dk/soeg/18909339";
+
     const bilbasenArray = new Array();
     const gulOgGratisArray = new Array();
+    const biltorvetArray = new Array();
     const dataArray = new Array();
     let choosenModelArray = new Array();
 	let bilbasenCounter = 1;
 	let gulOgGratisCounter = 1;
+	let biltorvetCounter = 1;
 	let gulOgGratisBool = false;
 	let bilbasenBool = false;
+	let biltorvetBool = false;
 	let lastBool = false;
 	
         
@@ -35,6 +42,7 @@
 
 		getBilbasenLinks();
 		getGulOgGratisLinks();
+		getBiltorvetLinks();
 		getLinksPause();
 	});
 	
@@ -75,7 +83,26 @@
         );
 	}
 		
-	function getBilbasenLinks() {       
+	function getBiltorvetLinks() {
+		setTimeout(function() {
+			if (biltorvetCounter >= 2) {
+				pageUrl = biltorvetUrl;
+				fetchBiltorvetLink(pageUrl);
+			} else {
+				fetchBiltorvetLink(biltorvetUrl);
+			}
+            biltorvetCounter++;
+			if (biltorvetCounter < 25) {
+                getBiltorvetLinks();
+			} else if (biltorvetCounter == 25) {
+				setTimeout(function() {
+					biltorvetBool = true;
+				}, 250)
+			}             
+		}, 250)
+	}
+
+	function getBilbasenLinks() {
 		setTimeout(function() {
 			if (bilbasenCounter >= 2) {
 				pageUrl = bilbasenUrl + "&page=" + bilbasenCounter;
@@ -83,14 +110,14 @@
 			} else {
 				fetchBilbasenLink(bilbasenUrl);
 			}
-			bilbasenCounter++;                  
-			if (bilbasenCounter < 25) {         
-				getBilbasenLinks();             
+			bilbasenCounter++;
+			if (bilbasenCounter < 25) {
+				getBilbasenLinks();
 			} else if (bilbasenCounter == 25) {
 				setTimeout(function() {
 					bilbasenBool = true;
 				}, 250)
-			}             
+			}
 		}, 250)
 	}
 
