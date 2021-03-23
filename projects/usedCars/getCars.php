@@ -57,6 +57,7 @@
 				$("#biltorveturls").text(biltorvetArray.length);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
+				getTheUsedCarBiltorvet();
 				if (gulOgGratisArray.length !== 0) {
                     getTheUsedCarGulOgGratis();
 				}

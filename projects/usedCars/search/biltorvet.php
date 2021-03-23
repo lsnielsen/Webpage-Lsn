@@ -10,7 +10,6 @@
                     let temp = linkRegex[i].match(/\/bil\/[a-z0-9 -]+\/[0-9a-z]+\/[a-z0-9-\/]+/);
                     let biltorvetLink = "https://www.biltorvet.dk" + temp;
                     if (!biltorvetArray.includes(biltorvetLink)) {
-                        console.log({biltorvetLink});
                         biltorvetArray.push(biltorvetLink);
                     }
                 }

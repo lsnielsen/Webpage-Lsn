@@ -99,9 +99,8 @@ function prepareArray($input)
         if (isset($input[$i+1])) {
             $bilbasenUrl = preg_match("/https:\/\/www.bilbasen.dk\/brugt\//", $input[$i+1]);
             $gogUrl = preg_match("/https:\/\/www.guloggratis.dk\/biler\/personbiler\//", $input[$i+1]);
-            if ($bilbasenUrl) {
-                $counter++;
-            } elseif ($gogUrl) {
+            $biltorvetUrl = preg_match("/https:\/\/www.biltorvet.dk\/bil\//", $input[$i+1]);
+            if ($bilbasenUrl || $gogUrl || $biltorvetUrl) {
                 $counter++;
             }
         }
