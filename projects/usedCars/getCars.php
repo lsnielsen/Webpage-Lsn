@@ -61,26 +61,20 @@
 				}
 				getTheCarsPause();
 			}		
-		}, 2000)	
+		}, 2000);
 	}
 	
 	function getTheCarsPause()
 	{
-        setTimeout(
-            function()
-            {
-                if(lastBool == false) {
-                    getTheCarsPause();
-                } else {
-                    setTimeout(
-                        function()
-                        {
-                            makeArrayToPhp();
-                        }, 200
-                    );
-                }
-            }, 5000
-        );
+        setTimeout(function() {
+            if(lastBool == false) {
+                getTheCarsPause();
+            } else {
+                setTimeout(function() {
+                    makeArrayToPhp();
+                }, 200);
+            }
+        }, 5000);
 	}
 		
 	function getBiltorvetLinks() {
