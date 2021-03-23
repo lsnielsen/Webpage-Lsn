@@ -49,11 +49,12 @@
 	function getLinksPause()
 	{
 		setTimeout(function() {   
-			if (gulOgGratisBool == false || bilbasenBool == false) {         
+			if (gulOgGratisBool == false || bilbasenBool == false || biltorvetBool == false) {
 				getLinksPause();             
 			} else {
 				$("#bilbasenurls").text(bilbasenArray.length);
 				$("#guloggratisurls").text(gulOgGratisArray.length);
+				$("#biltorveturls").text(biltorvetArray.length);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
 				if (gulOgGratisArray.length !== 0) {
@@ -156,9 +157,9 @@
 	function makeArrayToPhp()
 	{
 		$(".endSearch").show();
-		for(let i=0; i<dataArray.length; i++) {
+		for(let i=0; i < dataArray.length; i++) {
 			let arrayValue = dataArray[i];
-			for(j=0; j<arrayValue.length; j++) {
+			for(let j=0; j < arrayValue.length; j++) {
 				if (arrayValue[j] == ",") {
 					arrayValue[j] = ".";
 				}
