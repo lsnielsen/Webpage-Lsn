@@ -40,7 +40,7 @@
     function setForeignResultValues()
     {
         totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + 
-									gmPrice + mcDonaldPrice + bitcoinGroupPrice).toFixed(2);
+									gmPrice + mcDonaldPrice + bitcoinGroupPrice + lockheedMartinPrice).toFixed(2);
         currentTotalForeignValue = ((currentColaValue * colaStocks) +
             (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
             (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
