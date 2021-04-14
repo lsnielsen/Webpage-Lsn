@@ -11,6 +11,8 @@
 
 <?php
     include "astralis.php";
+    include "afkastPlus.php";
+    include "nordeaKlimaMiljo.php";
     include "novo.php";
     include "danishStockTable.php";
     include "danishResult.php";
@@ -22,6 +24,8 @@
     {
         getAstralisData();
         getNovoData();
+		getAfkastPlusData();
+		getNordeaKlimaMiljoData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");
