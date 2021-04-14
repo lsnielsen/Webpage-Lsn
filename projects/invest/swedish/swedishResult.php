@@ -14,50 +14,45 @@
         <tbody>
             <tr>
                 <th scope="row">Samlet</th>
-                <td id="totalDanishBuyValue"></td>
-                <td id="currentTotalDanishValue"></td>
-                <td id="totalDanishWinLoss"></td>
+                <td id="totalSwedishBuyValue"></td>
+                <td id="currentTotalSwedishValue"></td>
+                <td id="totalSwedishWinLoss"></td>
             </tr>
         </tbody>
     </table>
 </div>
 
 <script>
-    let currentAstralisValue;
-    let currentNovoValue;
+    let currentKahootValue;
     let usdDkkCurrency;
-    let totalDanishBuyValue;
-    let currentTotaldanishValue;
-    let totalDanishWinLoss
+    let totalSwedishBuyValue;
+    let currentTotalswedishValue;
+    let totalSwedishWinLoss
 
     $( document ).ready(function() {
-        callTotalDanishUrl();
-        function callTotalDanishUrl() {
-            const astralisUrl = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
-            const novoUrl = "https://www.marketwatch.com/investing/stock/nvo";
-            $.get( astralisUrl, function( astralisData ) {
-                getAstralisResultValue(astralisData);
-            }, 'html');
-            $.get(novoUrl, function (novoData) {
-                getNovoResultValue(novoData);
+        callTotalSwedishUrl();
+        function callTotalSwedishUrl() {
+            const kahootUrl = "https://www.marketwatch.com/investing/stock/kahot?countrycode=no";
+            $.get( kahootUrl, function( kahootData ) {
+                getKahootResultValue(kahootData);
             }, 'html');
             getUsdDkkCurrency();
-            setDanishResultValues();
+            setSwedishResultValues();
             setTimeout(function () {
-                callTotalDanishUrl();
+                callTotalSwedishUrl();
             }, 2000);
         }
     });
 
-    function setDanishResultValues()
+    function setSwedishResultValues()
     {
-        totalDanishBuyValue = (astralisPrice + novoPrice).toFixed(2);
-        currentTotaldanishValue = ((currentAstralisValue * astralisStocks) + (currentNovoValue * novoStocks)).toFixed(2);
-        totalDanishWinLoss = (currentTotaldanishValue - totalDanishBuyValue).toFixed(2);
-        $("#totalDanishBuyValue").text(totalDanishBuyValue);
-        $("#currentTotalDanishValue").text(currentTotaldanishValue);
-        $("#totalDanishWinLoss").text(totalDanishWinLoss);
-        textColor(totalDanishWinLoss, "#totalDanishWinLoss");
+        totalSwedishBuyValue = (kahootPrice).toFixed(2);
+        currentTotalswedishValue = ((currentKahootValue * kahootStocks)).toFixed(2);
+        totalSwedishWinLoss = (currentTotalswedishValue - totalSwedishBuyValue).toFixed(2);
+        $("#totalSwedishBuyValue").text(totalSwedishBuyValue);
+        $("#currentTotalSwedishValue").text(currentTotalswedishValue);
+        $("#totalSwedishWinLoss").text(totalSwedishWinLoss);
+        textColor(totalSwedishWinLoss, "#totalSwedishWinLoss");
     }
 
     function textColor(value, field)
@@ -69,27 +64,15 @@
         }
     }
 
-    function getAstralisResultValue(data)
+    function getKahootResultValue(data)
     {
-        let astralisRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
-        let astralisMatch = astralisRegex.exec(data);
+        let kahootRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let kahootMatch = kahootRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (astralisMatch !== null) {
-            currentAstralisValue = astralisMatch[1];
+        if (kahootMatch !== null) {
+            currentKahootValue = kahootMatch[1];
         } else if (closeMatch !== null) {
-            currentAstralisValue = closeMatch[1];
-        }
-    }
-
-    function getNovoResultValue(data)
-    {
-        let novoRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
-        let novoMatch = novoRegex.exec(data);
-        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (novoMatch !== null) {
-            currentNovoValue = novoMatch[1] * usdDkkCurrency;
-        } else if (closeMatch !== null) {
-            currentNovoValue = closeMatch[1] * usdDkkCurrency;
+            currentKahootValue = closeMatch[1];
         }
     }
 

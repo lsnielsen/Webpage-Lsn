@@ -4,24 +4,22 @@
 <div class="container-sm">
     <div class="page-header text-center" style="color: #ff884d;">
         <h2>
-            Danske aktier:
+            Svenske aktier:
         </h2>
     </div>
 </div>
 
 <?php
-    include "astralis.php";
-    include "novo.php";
-    include "danishStockTable.php";
-    include "danishResult.php";
+    include "kahoot.php";
+    include "swedishStockTable.php";
+    include "swedishResult.php";
 ?>
 
 <script>
 
-    function getDanishData()
+    function getSwedishData()
     {
-        getAstralisData();
-        getNovoData();
+        getKahootData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

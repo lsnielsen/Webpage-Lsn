@@ -15,26 +15,15 @@
         </thead>
         <tbody>
             <tr>
-                <td id="astralisDate"> </td>
-                <td id="astralisPrice">  </td>
-                <td id="astralisName" scope="row" class="theAsset" onclick="assetsPage('astralis')"></td>
-                <td id="astralisStocks"></td>
-                <td id="astralisStockPrice"></td>
-                <td id="astralisVal"></td>
-                <td id="astralisStockResult"></td>
-                <td id="astralisPercentage"></td>
-                <td id="astralisResult"></td>
-            </tr>
-            <tr>
-                <td id="novoDate"></td>
-                <td id="novoPrice"></td>
-                <td id="novoName" scope="row" class="theAsset" onclick="assetsPage('novo')"></td>
-                <td id="novoStocks"></td>
-                <td id="novoStockPrice"></td>
-                <td id="novoVal"></td>
-                <td id="novoStockResult"></td>
-                <td id="novoPercentage"></td>
-                <td id="novoResult"></td>
+                <td id="kahootDate"> </td>
+                <td id="kahootPrice">  </td>
+                <td id="kahootName" scope="row" class="theAsset" onclick="assetsPage('kahoot')"></td>
+                <td id="kahootStocks"></td>
+                <td id="kahootStockPrice"></td>
+                <td id="kahootVal"></td>
+                <td id="kahootStockResult"></td>
+                <td id="kahootPercentage"></td>
+                <td id="kahootResult"></td>
             </tr>
         </tbody>
     </table>
