@@ -11,6 +11,7 @@
 
 <?php
     include "kahoot.php";
+    include "bitcoinGroup.php";
     include "swedishStockTable.php";
     include "swedishResult.php";
 ?>

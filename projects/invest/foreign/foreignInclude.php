@@ -16,10 +16,11 @@
 	include "visa.php";
 	include "mcDonald.php";
 	include "generalMotors.php";
-	include "bitcoinGroup.php";
+	//include "bitcoinGroup.php";
 	include "lockheedMartin.php";
     include "foreignStockTable.php";
     include "foreignResult.php";
+    include "equitransMidstream.php";
 ?>
 
 <script>
@@ -32,8 +33,9 @@
         getMcDonaldData();
         getGmData();
         getFordData();
-		getBitcoinGroupData();
+		//getBitcoinGroupData();
 		getLockheedMartinData();
+		getEMSteamData();
     }
 </script>
 

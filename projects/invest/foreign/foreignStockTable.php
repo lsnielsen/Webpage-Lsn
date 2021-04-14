@@ -81,15 +81,15 @@
                 <td id="fordResult"></td>
             </tr>
             <tr>
-                <td id="bitcoinGroupDate"></td>
-                <td id="bitcoinGroupPrice"></td>
-                <td id="bitcoinGroupName"></td>
-                <td id="bitcoinGroupStocks"></td>
-                <td id="bitcoinGroupStockPrice"></td>
-                <td id="bitcoinGroupVal"></td>
-                <td id="bitcoinGroupStockResult"></td>
-                <td id="bitcoinGroupPercentage"></td>
-                <td id="bitcoinGroupResult"></td>
+                <td id="equitransMidstreamDate"></td>
+                <td id="equitransMidstreamPrice"></td>
+                <td id="equitransMidstreamName"></td>
+                <td id="equitransMidstreamStocks"></td>
+                <td id="equitransMidstreamStockPrice"></td>
+                <td id="equitransMidstreamVal"></td>
+                <td id="equitransMidstreamStockResult"></td>
+                <td id="equitransMidstreamPercentage"></td>
+                <td id="equitransMidstreamResult"></td>
             </tr>
             <tr>
                 <td id="lockheedMartinDate"></td>
