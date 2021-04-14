@@ -16,6 +16,7 @@
                 <th scope="col"></th>
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
+                <th scope="col">% - vis gevinst \ tab</th>
                 <th scope="col">Gevinst \ tab</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <th scope="row">Samlet</th>
                 <td id="totalResultBuyValue"></td>
                 <td id="currentTotalResultValue"></td>
+                <td id="currentPercentValue"></td>
                 <td id="totalResultWinLoss"></td>
             </tr>
         </tbody>
@@ -46,12 +48,15 @@
             let theTotalResultWinLoss = (Number(totalDanishWinLoss) + 
 											Number(totalForeignWinLoss) + 
 											Number(totalFundsWinLoss)).toFixed(2);
+			let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
 
             $("#totalResultBuyValue").text(theTotalResultBuyValue);
             $("#currentTotalResultValue").text(theCurrentTotalResultValue);
+            $("#currentPercentValue").text(percentageWinLoss);
             $("#totalResultWinLoss").text(theTotalResultWinLoss);
 
             textColor(theTotalResultWinLoss, "#totalResultWinLoss");
+            textColor(percentageWinLoss, "#currentPercentValue");
 
             setTimeout(function () {
                 loopFunction();
