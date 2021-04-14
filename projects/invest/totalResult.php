@@ -55,7 +55,7 @@
 
             setTimeout(function () {
                 loopFunction();
-            }, 2000);
+            }, 5000);
         }
     }
 
