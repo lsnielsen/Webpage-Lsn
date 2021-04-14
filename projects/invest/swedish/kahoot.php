@@ -49,8 +49,7 @@
 
     function setKahootData(marketValue)
     {
-		console.log("lskdfjdsfkl");
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+        marketValue = marketValue;
         $("#kahootVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockKahoot).toFixed(2);
