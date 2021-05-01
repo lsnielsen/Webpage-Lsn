@@ -6,7 +6,7 @@
     let afkastPlusPrice = 8000.00;
     let afkastPlusName = "AfkastPlus Group";
     let afkastPlusStocks = 1210;
-    let pricePerStock = (afkastPlusPrice / afkastPlusStocks).toFixed(2);
+    let pricePerStockAP = (afkastPlusPrice / afkastPlusStocks).toFixed(2);
 
     function getAfkastPlusData()
     {
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000));
         }
     }
 
@@ -32,7 +32,7 @@
         $("#afkastPlusPrice").text(afkastPlusPrice);
         $("#afkastPlusName").text(afkastPlusName);
         $("#afkastPlusStocks").text(afkastPlusStocks);
-        $("#afkastPlusStockPrice").text(pricePerStock);
+        $("#afkastPlusStockPrice").text(pricePerStockAP);
     }
 
     function getAfkastPlusValue(data)
@@ -51,8 +51,8 @@
     {
         $("#afkastPlusVal").text(startValue);
         let totalValue = ((startValue * afkastPlusStocks) - afkastPlusPrice).toFixed(2);
-        let stockValue = (startValue - pricePerStock).toFixed(2);
-        let percentageValue = (((startValue / pricePerStock) * 100) - 100).toFixed(2);
+        let stockValue = (startValue - pricePerStockAP).toFixed(2);
+        let percentageValue = (((startValue / pricePerStockAP) * 100) - 100).toFixed(2);
         $("#afkastPlusPercentage").text(percentageValue + " %");
         $("#afkastPlusResult").text(totalValue);
         $("#afkastPlusStockResult").text(stockValue);

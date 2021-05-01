@@ -6,7 +6,7 @@
     let astralisPrice = 8000.00;
     let astralisName = "Astralis Group";
     let astralisStocks = 1210;
-    let pricePerStock = (astralisPrice / astralisStocks).toFixed(2);
+    let pricePerStockAstralis = (astralisPrice / astralisStocks).toFixed(2);
 
     function getAstralisData()
     {
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000));
         }
     }
 
@@ -32,7 +32,7 @@
         $("#astralisPrice").text(astralisPrice);
         $("#astralisName").text(astralisName);
         $("#astralisStocks").text(astralisStocks);
-        $("#astralisStockPrice").text(pricePerStock);
+        $("#astralisStockPrice").text(pricePerStockAstralis);
     }
 
     function getAstralisValue(data)
@@ -51,8 +51,8 @@
     {
         $("#astralisVal").text(startValue);
         let totalValue = ((startValue * astralisStocks) - astralisPrice).toFixed(2);
-        let stockValue = (startValue - pricePerStock).toFixed(2);
-        let percentageValue = (((startValue / pricePerStock) * 100) - 100).toFixed(2);
+        let stockValue = (startValue - pricePerStockAstralis).toFixed(2);
+        let percentageValue = (((startValue / pricePerStockAstralis) * 100) - 100).toFixed(2);
         $("#astralisPercentage").text(percentageValue + " %");
         $("#astralisResult").text(totalValue);
         $("#astralisStockResult").text(stockValue);

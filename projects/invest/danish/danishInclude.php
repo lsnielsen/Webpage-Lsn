@@ -24,8 +24,8 @@
     {
         getAstralisData();
         getNovoData();
-		//getAfkastPlusData();
-		//getNordeaKlimaMiljoData();
+		getAfkastPlusData();
+		getNordeaKlimaMiljoData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

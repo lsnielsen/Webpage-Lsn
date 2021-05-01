@@ -45,7 +45,7 @@
             setDanishResultValues();
             setTimeout(function () {
                 callTotalDanishUrl();
-            }, 3580);
+            }, Math.floor(Math.random() * 40000) + 2000));
         }
     });
 

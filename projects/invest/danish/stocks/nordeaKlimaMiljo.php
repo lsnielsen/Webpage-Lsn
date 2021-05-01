@@ -6,7 +6,7 @@
     let nordeaKlimaMiljoPrice = 8000.00;
     let nordeaKlimaMiljoName = "NordeaKlimaMiljo Group";
     let nordeaKlimaMiljoStocks = 1210;
-    let pricePerStock = (nordeaKlimaMiljoPrice / nordeaKlimaMiljoStocks).toFixed(2);
+    let pricePerStockNKM = (nordeaKlimaMiljoPrice / nordeaKlimaMiljoStocks).toFixed(2);
 
     function getNordeaKlimaMiljoData()
     {
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -32,7 +32,7 @@
         $("#nordeaKlimaMiljoPrice").text(nordeaKlimaMiljoPrice);
         $("#nordeaKlimaMiljoName").text(nordeaKlimaMiljoName);
         $("#nordeaKlimaMiljoStocks").text(nordeaKlimaMiljoStocks);
-        $("#nordeaKlimaMiljoStockPrice").text(pricePerStock);
+        $("#nordeaKlimaMiljoStockPrice").text(pricePerStockNKM);
     }
 
     function getNordeaKlimaMiljoValue(data)
@@ -51,8 +51,8 @@
     {
         $("#nordeaKlimaMiljoVal").text(startValue);
         let totalValue = ((startValue * nordeaKlimaMiljoStocks) - nordeaKlimaMiljoPrice).toFixed(2);
-        let stockValue = (startValue - pricePerStock).toFixed(2);
-        let percentageValue = (((startValue / pricePerStock) * 100) - 100).toFixed(2);
+        let stockValue = (startValue - pricePerStockNKM).toFixed(2);
+        let percentageValue = (((startValue / pricePerStockNKM) * 100) - 100).toFixed(2);
         $("#nordeaKlimaMiljoPercentage").text(percentageValue + " %");
         $("#nordeaKlimaMiljoResult").text(totalValue);
         $("#nordeaKlimaMiljoStockResult").text(stockValue);
