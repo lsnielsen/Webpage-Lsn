@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
+            const url = "https://www.marketwatch.com/investing/stock/asgrf";
             $.get( url,
                 function( data ) {
                     getAstralisValue(data);
@@ -41,13 +41,13 @@
         let astralisMatch = astralisRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (astralisMatch !== null) {
-            setData(astralisMatch[1]);
+            setAstralisData(astralisMatch[1]);
         } else if (closeMatch !== null) {
-            setData(closeMatch[1]);
+            setAstralisData(closeMatch[1]);
         }
     }
 
-    function setData(startValue)
+    function setAstralisData(startValue)
     {
         $("#astralisVal").text(startValue);
         let totalValue = ((startValue * astralisStocks) - astralisPrice).toFixed(2);
