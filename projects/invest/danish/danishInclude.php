@@ -10,10 +10,10 @@
 </div>
 
 <?php
-    include "astralis.php";
-    include "afkastPlus.php";
-    include "nordeaKlimaMiljo.php";
-    include "novo.php";
+    include "stocks/astralis.php";
+    include "stocks/afkastPlus.php";
+    include "stocks/nordeaKlimaMiljo.php";
+    include "stocks/novo.php";
     include "danishStockTable.php";
     include "danishResult.php";
 ?>
@@ -24,8 +24,8 @@
     {
         getAstralisData();
         getNovoData();
-		getAfkastPlusData();
-		getNordeaKlimaMiljoData();
+		//getAfkastPlusData();
+		//getNordeaKlimaMiljoData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");

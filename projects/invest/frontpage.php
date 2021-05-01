@@ -39,7 +39,7 @@
     {
         getDanishData();
         getForeignData();
-		getSwedishData();
+		getNorwegianData();
         getFundsData();
         setTotalResultValues();
     }

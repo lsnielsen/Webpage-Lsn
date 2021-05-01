@@ -39,13 +39,13 @@
         loopFunction();
         function loopFunction() {
 
-            let theTotalResultBuyValue = (Number(totalSwedishBuyValue) + 
+            let theTotalResultBuyValue = (Number(totalNorwegianBuyValue) + 
 											Number(totalForeignBuyValue) + 
 											Number(totalFundsBuyValue)).toFixed(2);
-            let theCurrentTotalResultValue = (Number(currentTotalswedishValue) + 
+            let theCurrentTotalResultValue = (Number(currentTotalnorwegianValue) + 
 												Number(currentTotalForeignValue) + 
 												Number(currentTotalFundsValue)).toFixed(2);
-            let theTotalResultWinLoss = (Number(totalSwedishWinLoss) + 
+            let theTotalResultWinLoss = (Number(totalNorwegianWinLoss) + 
 											Number(totalForeignWinLoss) + 
 											Number(totalFundsWinLoss)).toFixed(2);
 			let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
