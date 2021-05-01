@@ -103,7 +103,7 @@
             setForeignResultValues();
             setTimeout(function () {
                 callTotalForeignUrl();
-            }, 4210);
+            }, Math.floor(Math.random() * 40000) + 2000));
         }
     });
 	
