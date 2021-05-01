@@ -19,7 +19,7 @@
 
         <?php
             include "danish/danishInclude.php";
-            include "swedish/swedishInclude.php";
+            include "norwegian/norwegianInclude.php";
             include "foreign/foreignInclude.php";
             include "funds/fundsInclude.php";
             include "totalResult.php";

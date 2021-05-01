@@ -4,21 +4,20 @@
 <div class="container-sm">
     <div class="page-header text-center" style="color: #ff884d;">
         <h2>
-            Svenske aktier:
+            Norske aktier:
         </h2>
     </div>
 </div>
 
 <?php
-    include "kahoot.php";
     include "bitcoinGroup.php";
-    include "swedishStockTable.php";
-    include "swedishResult.php";
+    include "norwegianStockTable.php";
+    include "norwegianResult.php";
 ?>
 
 <script>
 
-    function getSwedishData()
+    function getNorwegianData()
     {
         getKahootData();
     }

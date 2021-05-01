@@ -25,17 +25,6 @@
                 <td id="kahootPercentage"></td>
                 <td id="kahootResult"></td>
             </tr>
-            <tr>
-                <td id="bitcoinGroupDate"> </td>
-                <td id="bitcoinGroupPrice">  </td>
-                <td id="bitcoinGroupName" scope="row" class="theAsset" onclick="assetsPage('kahoot')"></td>
-                <td id="bitcoinGroupStocks"></td>
-                <td id="bitcoinGroupStockPrice"></td>
-                <td id="bitcoinGroupVal"></td>
-                <td id="bitcoinGroupStockResult"></td>
-                <td id="bitcoinGroupPercentage"></td>
-                <td id="bitcoinGroupResult"></td>
-            </tr>
         </tbody>
     </table>
 

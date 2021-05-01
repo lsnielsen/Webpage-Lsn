@@ -14,9 +14,9 @@
         <tbody>
             <tr>
                 <th scope="row">Samlet</th>
-                <td id="totalSwedishBuyValue"></td>
-                <td id="currentTotalSwedishValue"></td>
-                <td id="totalSwedishWinLoss"></td>
+                <td id="totalNorwegianBuyValue"></td>
+                <td id="currentTotalNorwegianValue"></td>
+                <td id="totalNorwegianWinLoss"></td>
             </tr>
         </tbody>
     </table>
@@ -24,34 +24,34 @@
 
 <script>
     let currentKahootValue;
-    let totalSwedishBuyValue;
-    let currentTotalswedishValue;
-    let totalSwedishWinLoss
+    let totalNorwegianBuyValue;
+    let currentTotalnorwegianValue;
+    let totalNorwegianWinLoss
 
     $( document ).ready(function() {
-        callTotalSwedishUrl();
-        function callTotalSwedishUrl() {
+        callTotalNorwegianUrl();
+        function callTotalNorwegianUrl() {
             const kahootUrl = "https://www.marketwatch.com/investing/stock/kahot?countrycode=no";
             $.get( kahootUrl, function( kahootData ) {
                 getKahootResultValue(kahootData);
             }, 'html');
             getUsdDkkCurrency();
-            setSwedishResultValues();
+            setNorwegianResultValues();
             setTimeout(function () {
-                callTotalSwedishUrl();
-            }, 2000);
+                callTotalNorwegianUrl();
+            }, 3250);
         }
     });
 
-    function setSwedishResultValues()
+    function setNorwegianResultValues()
     {
-        totalSwedishBuyValue = (kahootPrice).toFixed(2);
-        currentTotalswedishValue = ((currentKahootValue * kahootStocks)).toFixed(2);
-        totalSwedishWinLoss = (currentTotalswedishValue - totalSwedishBuyValue).toFixed(2);
-        $("#totalSwedishBuyValue").text(totalSwedishBuyValue);
-        $("#currentTotalSwedishValue").text(currentTotalswedishValue);
-        $("#totalSwedishWinLoss").text(totalSwedishWinLoss);
-        textColor(totalSwedishWinLoss, "#totalSwedishWinLoss");
+        totalNorwegianBuyValue = (kahootPrice).toFixed(2);
+        currentTotalnorwegianValue = ((currentKahootValue * kahootStocks)).toFixed(2);
+        totalNorwegianWinLoss = (currentTotalnorwegianValue - totalNorwegianBuyValue).toFixed(2);
+        $("#totalNorwegianBuyValue").text(totalNorwegianBuyValue);
+        $("#currentTotalNorwegianValue").text(currentTotalnorwegianValue);
+        $("#totalNorwegianWinLoss").text(totalNorwegianWinLoss);
+        textColor(totalNorwegianWinLoss, "#totalNorwegianWinLoss");
     }
 
     function textColor(value, field)
