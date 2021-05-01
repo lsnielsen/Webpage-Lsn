@@ -10,17 +10,17 @@
 </div>
 
 <?php
-    include "ford.php";
-    include "cocaCola.php";
-	include "waltDisney.php";
-	include "visa.php";
-	include "mcDonald.php";
-	include "generalMotors.php";
+    include "stocks/ford.php";
+    include "stocks/cocaCola.php";
+	include "stocks/waltDisney.php";
+	include "stocks/visa.php";
+	include "stocks/mcDonald.php";
+	include "stocks/generalMotors.php";
 	//include "bitcoinGroup.php";
-	include "lockheedMartin.php";
+	include "stocks/lockheedMartin.php";
+    include "stocks/equitransMidstream.php";
     include "foreignStockTable.php";
     include "foreignResult.php";
-    include "equitransMidstream.php";
 ?>
 
 <script>
