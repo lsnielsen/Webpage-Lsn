@@ -1,3 +1,4 @@
+
 <div class="row projectTxt" style="top: 45%;">
     <div class="col-sm-3">
         <form action="/Webpage-Lsn/controller/diesel.php" method="post">
@@ -34,7 +35,8 @@
         </form>
     </div>
     <div class="col-sm-3">
-        <form action="/Webpage-Lsn/controller/priceCalculator.php" method="post">
+
+    	 <form action="/Webpage-Lsn/controller/priceCalculator.php" method="post">
             <button class="frontpageButton" id="priceButton" type="submit" name="priceCalculator" value="priceCalculatorPage">
                 <?php echo $txtFile['priceCalc']; ?>
             </button>
@@ -70,4 +72,13 @@
             </center>
         </form>
     </div>
+    <div class="col-sm-3">
+    	<form action="/Webpage-Lsn/controller/react.php" method="post">
+	      <button class="frontpageButton" id="reactButton" type="submit" name="react" value="react">
+	      	      React project
+	      </button>
+	</form>
+    </div>
 </div>
+
+
