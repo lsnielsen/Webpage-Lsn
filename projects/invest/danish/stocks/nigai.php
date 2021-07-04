@@ -57,6 +57,7 @@
         $("#nigaiPercentage").text(percentageValue + " %");
         $("#nigaiResult").text(totalValue);
         $("#nigaiStockResult").text(stockValue);
+        danishTextColor(startValue-pricePerStockNigai, "#nigaiVal");
         danishTextColor(percentageValue, "#nigaiPercentage");
         danishTextColor(totalValue, "#nigaiResult");
         danishTextColor(stockValue, "#nigaiStockResult");

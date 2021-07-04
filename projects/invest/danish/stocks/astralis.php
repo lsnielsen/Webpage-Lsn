@@ -56,6 +56,7 @@
         $("#astralisPercentage").text(percentageValue + " %");
         $("#astralisResult").text(totalValue);
         $("#astralisStockResult").text(stockValue);
+        danishTextColor(startValue-pricePerStockAstralis, "#astralisVal");
         danishTextColor(percentageValue, "#astralisPercentage");
         danishTextColor(totalValue, "#astralisResult");
         danishTextColor(stockValue, "#astralisStockResult");

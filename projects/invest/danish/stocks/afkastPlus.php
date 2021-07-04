@@ -57,6 +57,7 @@
         $("#afkastPlusPercentage").text(percentageValue + " %");
         $("#afkastPlusResult").text(totalValue);
         $("#afkastPlusStockResult").text(stockValue);
+        danishTextColor(startValue-pricePerStockAP, "#afkastPlusVal");
         danishTextColor(percentageValue, "#afkastPlusPercentage");
         danishTextColor(totalValue, "#afkastPlusResult");
         danishTextColor(stockValue, "#afkastPlusStockResult");

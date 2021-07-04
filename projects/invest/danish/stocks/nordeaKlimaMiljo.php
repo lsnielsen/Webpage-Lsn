@@ -57,6 +57,7 @@
         $("#nordeaKlimaMiljoPercentage").text(percentageValue + " %");
         $("#nordeaKlimaMiljoResult").text(totalValue);
         $("#nordeaKlimaMiljoStockResult").text(stockValue);
+        danishTextColor(startValue-pricePerStockNKM, "#nordeaKlimaMiljoVal");
         danishTextColor(percentageValue, "#nordeaKlimaMiljoPercentage");
         danishTextColor(totalValue, "#nordeaKlimaMiljoResult");
         danishTextColor(stockValue, "#nordeaKlimaMiljoStockResult");

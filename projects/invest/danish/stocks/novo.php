@@ -63,6 +63,8 @@
         let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
         $("#novoResult").text(totalValue);
         danishTextColor(totalValue, "#novoResult");
+		
+        danishTextColor(marketValue-pricePerStockNovo, "#novoVal");
     }
 
 

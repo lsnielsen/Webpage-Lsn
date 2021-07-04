@@ -57,6 +57,7 @@
         $("#skagenPercentage").text(percentageValue + " %");
         $("#skagenResult").text(totalValue);
         $("#skagenStockResult").text(stockValue);
+        danishTextColor(startValue-pricePerStockSkagen, "#skagenVal");
         danishTextColor(percentageValue, "#skagenPercentage");
         danishTextColor(totalValue, "#skagenResult");
         danishTextColor(stockValue, "#skagenStockResult");

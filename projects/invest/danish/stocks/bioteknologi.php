@@ -57,6 +57,7 @@
         $("#bioteknologiPercentage").text(percentageValue + " %");
         $("#bioteknologiResult").text(totalValue);
         $("#bioteknologiStockResult").text(stockValue);
+        danishTextColor(startValue-pricePerStockBioteknologi, "#bioteknologiVal");
         danishTextColor(percentageValue, "#bioteknologiPercentage");
         danishTextColor(totalValue, "#bioteknologiResult");
         danishTextColor(stockValue, "#bioteknologiStockResult");
