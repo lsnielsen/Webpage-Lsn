@@ -57,19 +57,11 @@
         $("#bioteknologiPercentage").text(percentageValue + " %");
         $("#bioteknologiResult").text(totalValue);
         $("#bioteknologiStockResult").text(stockValue);
-        textColor(percentageValue, "#bioteknologiPercentage");
-        textColor(totalValue, "#bioteknologiResult");
-        textColor(stockValue, "#bioteknologiStockResult");
+        danishTextColor(percentageValue, "#bioteknologiPercentage");
+        danishTextColor(totalValue, "#bioteknologiResult");
+        danishTextColor(stockValue, "#bioteknologiStockResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
 
 
 </script>

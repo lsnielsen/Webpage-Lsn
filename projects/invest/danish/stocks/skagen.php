@@ -57,18 +57,9 @@
         $("#skagenPercentage").text(percentageValue + " %");
         $("#skagenResult").text(totalValue);
         $("#skagenStockResult").text(stockValue);
-        textColor(percentageValue, "#skagenPercentage");
-        textColor(totalValue, "#skagenResult");
-        textColor(stockValue, "#skagenStockResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
+        danishTextColor(percentageValue, "#skagenPercentage");
+        danishTextColor(totalValue, "#skagenResult");
+        danishTextColor(stockValue, "#skagenStockResult");
     }
 
 

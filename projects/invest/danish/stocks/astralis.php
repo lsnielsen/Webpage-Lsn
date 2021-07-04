@@ -56,18 +56,9 @@
         $("#astralisPercentage").text(percentageValue + " %");
         $("#astralisResult").text(totalValue);
         $("#astralisStockResult").text(stockValue);
-        textColor(percentageValue, "#astralisPercentage");
-        textColor(totalValue, "#astralisResult");
-        textColor(stockValue, "#astralisStockResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
+        danishTextColor(percentageValue, "#astralisPercentage");
+        danishTextColor(totalValue, "#astralisResult");
+        danishTextColor(stockValue, "#astralisStockResult");
     }
 
 

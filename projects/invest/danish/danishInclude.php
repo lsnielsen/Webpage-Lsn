@@ -18,6 +18,8 @@
     include "stocks/nigai.php";
     include "stocks/novo.php";
     include "stocks/skagen.php";
+    include "stocks/afkastPlus.php";
+    include "stocks/nina.php";
     include "stocks/bioteknologi.php";
     include "danishStockTable.php";
     include "danishResult.php";
@@ -27,6 +29,8 @@
 
     function getDanishData()
     {
+        getNinaData();
+	getAfkastPlusData();
         getAstralisData();
         getNovoData();
 	getAfkastPlusData();
@@ -42,6 +46,15 @@
         $(document.body).append(form);
         form.submit();
     }
+    function danishTextColor(value, field)
+    {
+        if (value < 0) {
+            $(field).css("color", "red");
+        } else {
+            $(field).css("color", "green");
+        }
+    }
+
 </script>
 
 

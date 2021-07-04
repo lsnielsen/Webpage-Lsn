@@ -80,6 +80,26 @@
                 <td id="bioteknologiPercentage"></td>
                 <td id="bioteknologiResult"></td>	      
 	    </tr>
+	    <tr>
+	        <td id="ninaDate"></td>
+                <td id="ninaPrice"></td>
+                <td id="ninaName" scope="row" class="theAsset" onclick="assetsPage('nina')"></td>
+                <td id="ninaStocks"></td>
+                <td id="ninaStockPrice"></td>
+                <td id="ninaVal"></td>
+                <td id="ninaStockResult"></td>
+                <td id="ninaPercentage"></td>
+                <td id="ninaResult"></td>	      
+	    </tr>
+	        <td id="afkastPlusDate"></td>
+                <td id="afkastPlusPrice"></td>
+                <td id="afkastPlusName" scope="row" class="theAsset" onclick="assetsPage('afkastPlus')"></td>
+                <td id="afkastPlusStocks"></td>
+                <td id="afkastPlusStockPrice"></td>
+                <td id="afkastPlusVal"></td>
+                <td id="afkastPlusStockResult"></td>
+                <td id="afkastPlusPercentage"></td>
+                <td id="afkastPlusResult"></td>	      
         </tbody>
     </table>
 

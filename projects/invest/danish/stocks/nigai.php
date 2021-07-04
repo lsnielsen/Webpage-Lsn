@@ -57,18 +57,9 @@
         $("#nigaiPercentage").text(percentageValue + " %");
         $("#nigaiResult").text(totalValue);
         $("#nigaiStockResult").text(stockValue);
-        textColor(percentageValue, "#nigaiPercentage");
-        textColor(totalValue, "#nigaiResult");
-        textColor(stockValue, "#nigaiStockResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
+        danishTextColor(percentageValue, "#nigaiPercentage");
+        danishTextColor(totalValue, "#nigaiResult");
+        danishTextColor(stockValue, "#nigaiStockResult");
     }
 
 

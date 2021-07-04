@@ -53,26 +53,18 @@
         $("#novoVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNovo).toFixed(2);
-        textColor(stockValue, "#novoStockResult");
+        danishTextColor(stockValue, "#novoStockResult");
         $("#novoStockResult").text(stockValue);
 
         let percentageValue = (((marketValue / pricePerStockNovo) * 100) - 100).toFixed(2);
         $("#novoPercentage").text(percentageValue + " %");
-        textColor(percentageValue, "#novoPercentage");
+        danishTextColor(percentageValue, "#novoPercentage");
 
         let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
         $("#novoResult").text(totalValue);
-        textColor(totalValue, "#novoResult");
+        danishTextColor(totalValue, "#novoResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
 
 
 </script>
