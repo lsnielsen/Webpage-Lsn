@@ -1,11 +1,11 @@
-
+<html>
 
 <script>
 
-    let nordeaKlimaMiljoDate = "9/1 - 2021";
-    let nordeaKlimaMiljoPrice = 8000.00;
+    let nordeaKlimaMiljoDate = "14/4 - 2021";
+    let nordeaKlimaMiljoPrice = 1770.27;
     let nordeaKlimaMiljoName = "NordeaKlimaMiljo Group";
-    let nordeaKlimaMiljoStocks = 1210;
+    let nordeaKlimaMiljoStocks = 10;
     let pricePerStockNKM = (nordeaKlimaMiljoPrice / nordeaKlimaMiljoStocks).toFixed(2);
 
     function getNordeaKlimaMiljoData()
@@ -37,7 +37,7 @@
 
     function getNordeaKlimaMiljoValue(data)
     {
-        let nordeaKlimaMiljoRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let nordeaKlimaMiljoRegex = /<div.+StyledPriceText[-a-z0-9 ]*">([0-9]{2,5},[0-9]*)<\/span><\/div><\/div>/;
         let nordeaKlimaMiljoMatch = nordeaKlimaMiljoRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (nordeaKlimaMiljoMatch !== null) {
@@ -49,6 +49,7 @@
 
     function setData(startValue)
     {
+        startValue = parseFloat(startValue);
         $("#nordeaKlimaMiljoVal").text(startValue);
         let totalValue = ((startValue * nordeaKlimaMiljoStocks) - nordeaKlimaMiljoPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockNKM).toFixed(2);
@@ -72,3 +73,5 @@
 
 
 </script>
+
+</html>

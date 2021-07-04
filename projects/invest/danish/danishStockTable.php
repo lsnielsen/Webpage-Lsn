@@ -1,4 +1,4 @@
-
+<html>
     <table class="table table-hover table-dark table-bordered">
         <thead>
             <tr>
@@ -36,6 +36,18 @@
                 <td id="novoPercentage"></td>
                 <td id="novoResult"></td>
             </tr>
+	    <tr>
+                <td id="nordeaKlimaMiljoDate"></td>
+                <td id="nordeaKlimaMiljoPrice"></td>
+                <td id="nordeaKlimaMiljoName" scope="row" class="theAsset" onclick="assetsPage('novo')"></td>
+                <td id="nordeaKlimaMiljoStocks"></td>
+                <td id="nordeaKlimaMiljoStockPrice"></td>
+                <td id="nordeaKlimaMiljoVal"></td>
+                <td id="nordeaKlimaMiljoStockResult"></td>
+                <td id="nordeaKlimaMiljoPercentage"></td>
+                <td id="nordeaKlimaMiljoResult"></td>	      
+	    </tr>
         </tbody>
     </table>
 
+</html>

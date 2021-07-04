@@ -1,5 +1,5 @@
 
-
+<html>
 
 <div class="container-sm">
     <div class="page-header text-center" style="color: #ff884d;">
@@ -8,6 +8,8 @@
         </h2>
     </div>
 </div>
+
+</html>
 
 <?php
     include "stocks/astralis.php";
@@ -35,6 +37,5 @@
         form.submit();
     }
 </script>
-
 
 
