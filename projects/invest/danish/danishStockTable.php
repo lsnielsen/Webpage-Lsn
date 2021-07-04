@@ -58,6 +58,17 @@
                 <td id="nigaiPercentage"></td>
                 <td id="nigaiResult"></td>	      
 	    </tr>
+	    <tr>
+	        <td id="skagenDate"></td>
+                <td id="skagenPrice"></td>
+                <td id="skagenName" scope="row" class="theAsset" onclick="assetsPage('skagen')"></td>
+                <td id="skagenStocks"></td>
+                <td id="skagenStockPrice"></td>
+                <td id="skagenVal"></td>
+                <td id="skagenStockResult"></td>
+                <td id="skagenPercentage"></td>
+                <td id="skagenResult"></td>	      
+	    </tr>
         </tbody>
     </table>
 

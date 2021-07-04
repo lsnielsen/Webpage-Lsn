@@ -17,6 +17,7 @@
     include "stocks/nordeaKlimaMiljo.php";
     include "stocks/nigai.php";
     include "stocks/novo.php";
+    include "stocks/skagen.php";
     include "danishStockTable.php";
     include "danishResult.php";
 ?>
@@ -30,6 +31,7 @@
 		getAfkastPlusData();
 	getNordeaKlimaMiljoData();
 	getNigaiData();
+	getSkagenData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");
