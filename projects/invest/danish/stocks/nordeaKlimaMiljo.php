@@ -41,13 +41,13 @@
         let nordeaKlimaMiljoMatch = nordeaKlimaMiljoRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (nordeaKlimaMiljoMatch !== null) {
-            setData(nordeaKlimaMiljoMatch[1]);
+            setNKMData(nordeaKlimaMiljoMatch[1]);
         } else if (closeMatch !== null) {
             setData(closeMatch[1]);
         }
     }
 
-    function setData(startValue)
+    function setNKMData(startValue)
     {
         startValue = parseFloat(startValue);
         $("#nordeaKlimaMiljoVal").text(startValue);
