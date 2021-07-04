@@ -28,7 +28,7 @@
     {
         getAstralisData();
         getNovoData();
-		getAfkastPlusData();
+	getAfkastPlusData();
 	getNordeaKlimaMiljoData();
 	getNigaiData();
 	getSkagenData();
