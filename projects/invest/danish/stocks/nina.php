@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.nordnet.dk/markedet/investeringsforeninger-liste/16100141-nordea-invest-north";
+            const url = "https://www.nordnet.dk/markedet/investeringsforeninger-liste/16756243-nordea-invest-north";
             $.get( url,
                 function( data ) {
                     getNinaValue(data);
