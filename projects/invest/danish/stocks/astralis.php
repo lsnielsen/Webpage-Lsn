@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/asgrf";
+            const url = "https://www.nordnet.dk/markedet/aktiekurser/17150971-astralis";
             $.get( url,
                 function( data ) {
                     getAstralisValue(data);
@@ -37,7 +37,7 @@
 
     function getAstralisValue(data)
     {
-        let astralisRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let astralisRegex = /StyledPriceText[-a-z0-9 ]*">([0-9]{1,5},[0-9]*)<\/span><\/div><\/div>/;
         let astralisMatch = astralisRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (astralisMatch !== null) {
@@ -49,6 +49,7 @@
 
     function setAstralisData(startValue)
     {
+		startValue = startValue.replace(/,/,".");
         $("#astralisVal").text(startValue);
         let totalValue = ((startValue * astralisStocks) - astralisPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockAstralis).toFixed(2);
