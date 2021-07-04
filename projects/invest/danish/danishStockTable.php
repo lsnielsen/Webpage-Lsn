@@ -39,13 +39,24 @@
 	    <tr>
                 <td id="nordeaKlimaMiljoDate"></td>
                 <td id="nordeaKlimaMiljoPrice"></td>
-                <td id="nordeaKlimaMiljoName" scope="row" class="theAsset" onclick="assetsPage('novo')"></td>
+                <td id="nordeaKlimaMiljoName" scope="row" class="theAsset" onclick="assetsPage('nordeaKlimaMiljo')"></td>
                 <td id="nordeaKlimaMiljoStocks"></td>
                 <td id="nordeaKlimaMiljoStockPrice"></td>
                 <td id="nordeaKlimaMiljoVal"></td>
                 <td id="nordeaKlimaMiljoStockResult"></td>
                 <td id="nordeaKlimaMiljoPercentage"></td>
                 <td id="nordeaKlimaMiljoResult"></td>	      
+	    </tr>
+	    <tr>
+	        <td id="nigaiDate"></td>
+                <td id="nigaiPrice"></td>
+                <td id="nigaiName" scope="row" class="theAsset" onclick="assetsPage('nigai')"></td>
+                <td id="nigaiStocks"></td>
+                <td id="nigaiStockPrice"></td>
+                <td id="nigaiVal"></td>
+                <td id="nigaiStockResult"></td>
+                <td id="nigaiPercentage"></td>
+                <td id="nigaiResult"></td>	      
 	    </tr>
         </tbody>
     </table>
