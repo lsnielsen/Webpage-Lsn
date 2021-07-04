@@ -69,6 +69,17 @@
                 <td id="skagenPercentage"></td>
                 <td id="skagenResult"></td>	      
 	    </tr>
+	    <tr>
+	        <td id="bioteknologiDate"></td>
+                <td id="bioteknologiPrice"></td>
+                <td id="bioteknologiName" scope="row" class="theAsset" onclick="assetsPage('bioteknologi')"></td>
+                <td id="bioteknologiStocks"></td>
+                <td id="bioteknologiStockPrice"></td>
+                <td id="bioteknologiVal"></td>
+                <td id="bioteknologiStockResult"></td>
+                <td id="bioteknologiPercentage"></td>
+                <td id="bioteknologiResult"></td>	      
+	    </tr>
         </tbody>
     </table>
 

@@ -18,6 +18,7 @@
     include "stocks/nigai.php";
     include "stocks/novo.php";
     include "stocks/skagen.php";
+    include "stocks/bioteknologi.php";
     include "danishStockTable.php";
     include "danishResult.php";
 ?>
@@ -32,6 +33,7 @@
 	getNordeaKlimaMiljoData();
 	getNigaiData();
 	getSkagenData();
+	getBioteknologiData();
     }
     function assetsPage(page) {
         const form = document.createElement("form");
