@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.nordnet.dk/markedet/fondslister/16808106-skagen-m-2-a";
+	    const url = "https://www.nordnet.dk/markedet/fondslister/16808106-skagen-m-2-a";
             $.get( url,
                 function( data ) {
                     getSkagenValue(data);
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, Math.floor(Math.random() * 40000) + 2000);
+            }, danishUpdateInterval());
         }
     }
 

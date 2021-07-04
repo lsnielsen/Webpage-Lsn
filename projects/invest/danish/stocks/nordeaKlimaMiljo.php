@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, Math.floor(Math.random() * 40000) + 2000);
+            }, danishUpdateInterval());
         }
     }
 
