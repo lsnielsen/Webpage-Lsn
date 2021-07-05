@@ -52,6 +52,7 @@
     	marketValue = marketValue.replace(/,/,".");
 	marketValue = parseFloat(marketValue);
         marketValue = marketValue.toFixed(2);
+	currentNovoValue = marketValue;
         $("#novoVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNovo).toFixed(2);

@@ -50,7 +50,8 @@
     function setBioteknologiData(startValue)
     {
         startValue = parseFloat(startValue);
-        $("#bioteknologiVal").text(startValue);
+	currentBioteknologiValue = startValue;
+	$("#bioteknologiVal").text(startValue);
         let totalValue = ((startValue * bioteknologiStocks) - bioteknologiPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockBioteknologi).toFixed(2);
         let percentageValue = (((startValue / pricePerStockBioteknologi) * 100) - 100).toFixed(2);

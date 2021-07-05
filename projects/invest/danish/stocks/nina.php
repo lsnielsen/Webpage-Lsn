@@ -50,6 +50,7 @@
     function setNinaData(startValue)
     {
         startValue = parseFloat(startValue);
+	currentNinaValue = startValue;
         $("#ninaVal").text(startValue);
         let totalValue = ((startValue * ninaStocks) - ninaPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockNina).toFixed(2);

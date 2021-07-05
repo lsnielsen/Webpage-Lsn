@@ -50,6 +50,7 @@
     function setNigaiData(startValue)
     {
         startValue = parseFloat(startValue);
+	currentNordeaIGAIValue = startValue;
         $("#nigaiVal").text(startValue);
         let totalValue = ((startValue * nigaiStocks) - nigaiPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockNigai).toFixed(2);

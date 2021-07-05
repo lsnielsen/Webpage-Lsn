@@ -24,8 +24,13 @@
 
 <script>
     let currentAstralisValue;
-    let currentNovoValue;
-    let usdDkkCurrency;
+  let currentNovoValue;
+  let currentAfkastPlusValue;
+  let currentNordeaKMGValue;
+  let currentNordeaIGAIValue;
+  let currentBioteknologiValue;
+  let currentNinaValue;
+  let currentSkagenValue;
     let totalDanishBuyValue;
     let currentTotaldanishValue;
     let totalDanishWinLoss
@@ -33,25 +38,24 @@
     $( document ).ready(function() {
         callTotalDanishUrl();
         function callTotalDanishUrl() {
-            const astralisUrl = "https://www.marketwatch.com/investing/stock/astgrp?countrycode=dk";
-            const novoUrl = "https://www.marketwatch.com/investing/stock/nvo";
-            $.get( astralisUrl, function( astralisData ) {
-                getAstralisResultValue(astralisData);
-            }, 'html');
-            $.get(novoUrl, function (novoData) {
-                getNovoResultValue(novoData);
-            }, 'html');
             setDanishResultValues();
             setTimeout(function () {
                 callTotalDanishUrl();
-            }, Math.floor(Math.random() * 40000) + 2000);
+            }, danishUpdateInterval());
         }
     });
 
     function setDanishResultValues()
     {
-        totalDanishBuyValue = (astralisPrice + novoPrice).toFixed(2);
-        currentTotaldanishValue = ((currentAstralisValue * astralisStocks) + (currentNovoValue * novoStocks)).toFixed(2);
+        totalDanishBuyValue = (astralisPrice + novoPrice + skagenPrice + bioteknologiPrice + ninaPrice + afkastPlusPrice + nordeaKlimaMiljoPrice + nigaiPrice).toFixed(2);
+        currentTotaldanishValue = ((currentAstralisValue * astralisStocks) +
+				   (currentNovoValue * novoStocks) +
+				   (currentNordeaKMGValue * nordeaKlimaMiljoStocks) +
+				   (currentNordeaIGAIValue * nigaiStocks) +
+				   (currentBioteknologiValue * bioteknologiStocks) +
+				   (currentNinaValue * ninaStocks) +
+				   (currentSkagenValue * skagenStocks) +
+				   (currentAfkastPlusValue * afkastPlusStocks)).toFixed(2);
         totalDanishWinLoss = (currentTotaldanishValue - totalDanishBuyValue).toFixed(2);
         $("#totalDanishBuyValue").text(totalDanishBuyValue);
         $("#currentTotalDanishValue").text(currentTotaldanishValue);
@@ -65,30 +69,6 @@
             $(field).css("color", "red");
         } else {
             $(field).css("color", "green");
-        }
-    }
-
-    function getAstralisResultValue(data)
-    {
-        let astralisRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
-        let astralisMatch = astralisRegex.exec(data);
-        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (astralisMatch !== null) {
-            currentAstralisValue = astralisMatch[1];
-        } else if (closeMatch !== null) {
-            currentAstralisValue = closeMatch[1];
-        }
-    }
-
-    function getNovoResultValue(data)
-    {
-        let novoRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
-        let novoMatch = novoRegex.exec(data);
-        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (novoMatch !== null) {
-            currentNovoValue = novoMatch[1] * usdDkkCurrency;
-        } else if (closeMatch !== null) {
-            currentNovoValue = closeMatch[1] * usdDkkCurrency;
         }
     }
 

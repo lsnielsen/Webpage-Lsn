@@ -50,6 +50,7 @@
     function setSkagenData(startValue)
     {
         startValue = parseFloat(startValue);
+	currentSkagenValue = startValue;
         $("#skagenVal").text(startValue);
         let totalValue = ((startValue * skagenStocks) - skagenPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockSkagen).toFixed(2);

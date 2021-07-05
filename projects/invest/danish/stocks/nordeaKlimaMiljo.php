@@ -4,7 +4,7 @@
 
     let nordeaKlimaMiljoDate = "14/4 - 2021";
     let nordeaKlimaMiljoPrice = 1770.27;
-    let nordeaKlimaMiljoName = "NordeaKlimaMiljo Group";
+    let nordeaKlimaMiljoName = "Nordea Klima Miljo Group";
     let nordeaKlimaMiljoStocks = 10;
     let pricePerStockNKM = (nordeaKlimaMiljoPrice / nordeaKlimaMiljoStocks).toFixed(2);
 
@@ -50,6 +50,7 @@
     function setNKMData(startValue)
     {
         startValue = parseFloat(startValue);
+	currentNordeaKMGValue = startValue;
         $("#nordeaKlimaMiljoVal").text(startValue);
         let totalValue = ((startValue * nordeaKlimaMiljoStocks) - nordeaKlimaMiljoPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockNKM).toFixed(2);

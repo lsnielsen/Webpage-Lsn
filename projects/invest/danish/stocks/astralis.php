@@ -1,4 +1,4 @@
-
+<html>
 
 <script>
 
@@ -49,7 +49,8 @@
 
     function setAstralisData(startValue)
     {
-		startValue = startValue.replace(/,/,".");
+	startValue = startValue.replace(/,/,".");
+	currentAstralisValue = startValue;
         $("#astralisVal").text(startValue);
         let totalValue = ((startValue * astralisStocks) - astralisPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockAstralis).toFixed(2);
@@ -65,3 +66,4 @@
 
 
 </script>
+</html>

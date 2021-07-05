@@ -49,7 +49,8 @@
 
     function setAfkastPlusData(startValue)
     {
-		startValue = parseFloat(startValue);
+	startValue = parseFloat(startValue);
+	currentAfkastPlusValue = startValue;
      	$("#afkastPlusVal").text(startValue);
         let totalValue = ((startValue * afkastPlusStocks) - afkastPlusPrice).toFixed(2);
         let stockValue = (startValue - pricePerStockAP).toFixed(2);
