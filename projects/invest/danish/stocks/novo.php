@@ -1,4 +1,4 @@
-
+<html>
 
 <script>
 
@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/nvo";
+            const url = "https://www.nordnet.dk/markedet/aktiekurser/16256554-novo-nordisk-b";
             $.get( url,
                 function( data ) {
                     getNovoValue(data);
@@ -37,7 +37,7 @@
 
     function getNovoValue(data)
     {
-        let novoRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let novoRegex = /StyledPriceText-sc-4o8a3-2 jokmrl">([0-9]{3,4},[0-9]{2})<\/span><\/div><\/div>/;
         let novoMatch = novoRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (novoMatch !== null) {
@@ -49,7 +49,9 @@
 
     function setNovoData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+    	marketValue = marketValue.replace(/,/,".");
+	marketValue = parseFloat(marketValue);
+        marketValue = marketValue.toFixed(2);
         $("#novoVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNovo).toFixed(2);
@@ -70,3 +72,5 @@
 
 
 </script>
+
+</html>

@@ -1,5 +1,5 @@
 
-
+<html>
 
 <div class="container-sm">
     <table class="table table-bordered align-middle table-primary">
@@ -41,7 +41,6 @@
             $.get(novoUrl, function (novoData) {
                 getNovoResultValue(novoData);
             }, 'html');
-            getUsdDkkCurrency();
             setDanishResultValues();
             setTimeout(function () {
                 callTotalDanishUrl();
@@ -93,18 +92,6 @@
         }
     }
 
-    function getUsdDkkCurrency()
-    {
-        let url = "https://themoneyconverter.com/USD/DKK";
-        $.get(url ,function( data ) {
-            let currencyRegex = /1 usd = ([0-9]{1,2}\.[0-9]{4}) dkk/i;
-            let currencyMatch = currencyRegex.exec(data);
-            if (currencyMatch !== null) {
-                usdDkkCurrency = currencyMatch[1];
-            } else {
-                usdDkkCurrency = 1;
-            }
-        }, 'html' );
-    }
-
 </script>
+
+</html>

@@ -91,6 +91,7 @@
                 <td id="ninaPercentage"></td>
                 <td id="ninaResult"></td>	      
 	    </tr>
+	    <tr>
 	        <td id="afkastPlusDate"></td>
                 <td id="afkastPlusPrice"></td>
                 <td id="afkastPlusName" scope="row" class="theAsset" onclick="assetsPage('afkastPlus')"></td>
@@ -99,7 +100,8 @@
                 <td id="afkastPlusVal"></td>
                 <td id="afkastPlusStockResult"></td>
                 <td id="afkastPlusPercentage"></td>
-                <td id="afkastPlusResult"></td>	      
+                <td id="afkastPlusResult"></td>
+	    </tr>
         </tbody>
     </table>
 
