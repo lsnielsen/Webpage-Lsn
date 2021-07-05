@@ -25,6 +25,17 @@
                 <td id="astralisPercentage"></td>
                 <td id="astralisResult"></td>
             </tr>
+	    <tr>
+	        <td id="afkastPlusDate"></td>
+                <td id="afkastPlusPrice"></td>
+                <td id="afkastPlusName" scope="row" class="theAsset" onclick="assetsPage('afkastPlus')"></td>
+                <td id="afkastPlusStocks"></td>
+                <td id="afkastPlusStockPrice"></td>
+                <td id="afkastPlusVal"></td>
+                <td id="afkastPlusStockResult"></td>
+                <td id="afkastPlusPercentage"></td>
+                <td id="afkastPlusResult"></td>
+	    </tr>
             <tr>
                 <td id="novoDate"></td>
                 <td id="novoPrice"></td>
@@ -59,17 +70,6 @@
                 <td id="nigaiResult"></td>	      
 	    </tr>
 	    <tr>
-	        <td id="skagenDate"></td>
-                <td id="skagenPrice"></td>
-                <td id="skagenName" scope="row" class="theAsset" onclick="assetsPage('skagen')"></td>
-                <td id="skagenStocks"></td>
-                <td id="skagenStockPrice"></td>
-                <td id="skagenVal"></td>
-                <td id="skagenStockResult"></td>
-                <td id="skagenPercentage"></td>
-                <td id="skagenResult"></td>	      
-	    </tr>
-	    <tr>
 	        <td id="bioteknologiDate"></td>
                 <td id="bioteknologiPrice"></td>
                 <td id="bioteknologiName" scope="row" class="theAsset" onclick="assetsPage('bioteknologi')"></td>
@@ -92,15 +92,15 @@
                 <td id="ninaResult"></td>	      
 	    </tr>
 	    <tr>
-	        <td id="afkastPlusDate"></td>
-                <td id="afkastPlusPrice"></td>
-                <td id="afkastPlusName" scope="row" class="theAsset" onclick="assetsPage('afkastPlus')"></td>
-                <td id="afkastPlusStocks"></td>
-                <td id="afkastPlusStockPrice"></td>
-                <td id="afkastPlusVal"></td>
-                <td id="afkastPlusStockResult"></td>
-                <td id="afkastPlusPercentage"></td>
-                <td id="afkastPlusResult"></td>
+	        <td id="skagenDate"></td>
+                <td id="skagenPrice"></td>
+                <td id="skagenName" scope="row" class="theAsset" onclick="assetsPage('skagen')"></td>
+                <td id="skagenStocks"></td>
+                <td id="skagenStockPrice"></td>
+                <td id="skagenVal"></td>
+                <td id="skagenStockResult"></td>
+                <td id="skagenPercentage"></td>
+                <td id="skagenResult"></td>	      
 	    </tr>
         </tbody>
     </table>
