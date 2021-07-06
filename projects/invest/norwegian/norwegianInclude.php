@@ -22,7 +22,7 @@
     {
         getKahootData();
     }
-    function assetsPage(page) {
+    function assetsPageNorwegian(page) {
         const form = document.createElement("form");
         form.action = "/Webpage-Lsn/controller/stock.php";
         document.cookie = "stockButton=" + page;

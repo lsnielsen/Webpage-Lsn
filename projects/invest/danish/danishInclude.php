@@ -51,12 +51,8 @@
 	getSkagenData();
 	getBioteknologiData();
     }
-    function assetsPage(page) {
-        const form = document.createElement("form");
-        form.action = "/Webpage-Lsn/controller/stock.php";
-        document.cookie = "stockButton=" + page;
-        $(document.body).append(form);
-        form.submit();
+  function assetsPage(url) {
+      window.open(url, '_blank').focus();
     }
 
 
