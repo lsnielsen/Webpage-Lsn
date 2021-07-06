@@ -106,3 +106,12 @@
     </table>
 
 </html>
+
+<style>
+  .theAsset {
+      font-style: italic;
+  }
+
+</style>
+
+
