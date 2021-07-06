@@ -51,9 +51,6 @@
 	getSkagenData();
 	getBioteknologiData();
     }
-  function assetsPage(url) {
-      window.open(url, '_blank').focus();
-    }
 
 
 </script>
