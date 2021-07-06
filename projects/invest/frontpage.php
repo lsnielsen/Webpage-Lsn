@@ -19,8 +19,7 @@
 
         <?php
             include "danish/danishInclude.php";
-            include "norwegian/norwegianInclude.php";
-            include "usa/foreignInclude.php";
+            include "foreign/foreignInclude.php";
             include "funds/fundsInclude.php";
             include "totalResult.php";
         ?>
@@ -39,7 +38,6 @@
     {
         getDanishData();
         getForeignData();
-		getNorwegianData();
         getFundsData();
         setTotalResultValues();
     }
