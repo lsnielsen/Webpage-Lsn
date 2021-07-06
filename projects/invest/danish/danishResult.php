@@ -9,6 +9,7 @@
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
                 <th scope="col">Gevinst \ tab</th>
+                <th scope="col">Procentvis ændring</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                 <td id="totalDanishBuyValue"></td>
                 <td id="currentTotalDanishValue"></td>
                 <td id="totalDanishWinLoss"></td>
+                <td id="totalDanishPercentage"></td>
             </tr>
         </tbody>
     </table>
@@ -33,7 +35,8 @@
   let currentSkagenValue;
     let totalDanishBuyValue;
     let currentTotaldanishValue;
-    let totalDanishWinLoss
+  let totalDanishWinLoss
+  let totalDanishPercentage;
 
     $( document ).ready(function() {
         callTotalDanishUrl();
@@ -57,10 +60,13 @@
 				   (currentSkagenValue * skagenStocks) +
 				   (currentAfkastPlusValue * afkastPlusStocks)).toFixed(2);
         totalDanishWinLoss = (currentTotaldanishValue - totalDanishBuyValue).toFixed(2);
+	totalDanishPercentage = (((currentTotaldanishValue / totalDanishBuyValue) * 100) - 100).toFixed(2);
+	$("#totalDanishPercentage").text(totalDanishPercentage + " %");
         $("#totalDanishBuyValue").text(totalDanishBuyValue);
         $("#currentTotalDanishValue").text(currentTotaldanishValue);
         $("#totalDanishWinLoss").text(totalDanishWinLoss);
         textColor(totalDanishWinLoss, "#totalDanishWinLoss");
+	textColor(totalDanishPercentage, "#totalDanishPercentage");
     }
 
     function textColor(value, field)
