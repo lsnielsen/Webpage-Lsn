@@ -51,7 +51,7 @@
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#equitransMidstreamVal").text(marketValue);
-	textColor(marketValue, "#equitransMidstreamVal");
+	textColor(marketValue - pricePerStockEquitransMidstream, "#equitransMidstreamVal");
 
         let stockValue = (marketValue - pricePerStockEquitransMidstream).toFixed(2);
         textColor(stockValue, "#equitransMidstreamStockResult");
@@ -64,15 +64,6 @@
         let totalValue = ((marketValue * equitransMidstreamStocks) - equitransMidstreamPrice).toFixed(2);
         $("#equitransMidstreamResult").text(totalValue);
         textColor(totalValue, "#equitransMidstreamResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 

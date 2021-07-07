@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/dis";
+            const url = "https://www.marketwatch.com/investing/fund/icln?mod=over_search";
             $.get( url,
                 function( data ) {
                     getSgceValue(data);
@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentSgceValue = marketValue;
         $("#sgceVal").text(marketValue);
-	textColor(marketValue, "#sgceVal");
+	textColor(marketValue - pricePerStockSgce, "#sgceVal");
 
         let stockValue = (marketValue - pricePerStockSgce).toFixed(2);
         textColor(stockValue, "#sgceStockResult");

@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentLockheedMartinValue = marketValue;
         $("#lockheedMartinVal").text(marketValue);
-	textColor(marketValue, "#lockheedMartinVal");
+	textColor(marketValue - pricePerStockLockheedMartin, "#lockheedMartinVal");
 
         let stockValue = (marketValue - pricePerStockLockheedMartin).toFixed(2);
         textColor(stockValue, "#lockheedMartinStockResult");

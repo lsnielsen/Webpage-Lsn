@@ -33,6 +33,7 @@
     let currentLockheedMartinValue;
     let foreignUsdDkkCurrency;
     let foreignEuroDkkCurrency;
+    let foreignNokDkkCurrency;
     let totalForeignBuyValue;
     let currentTotalForeignValue;
     let totalForeignWinLoss;
@@ -68,6 +69,7 @@
         function callTotalForeignUrl() {
             getForeignUsdDkkCurrency();
 	    getForeignEuroDkkCurrency();
+	    getForeignNokDkkCurrency();
             setForeignResultValues();
             setTimeout(function () {
                 callTotalForeignUrl();
@@ -99,6 +101,19 @@
                 foreignEuroDkkCurrency = currencyMatch[1];
             } else {
                 foreignEuroDkkCurrency = 1;
+            }
+        }, 'html' );
+    }
+    function getForeignNokDkkCurrency()
+    {
+        let url = "https://themoneyconverter.com/NOK/DKK";
+        $.get(url ,function( data ) {
+            let currencyRegex = /1 nok = ([0-9]{1,2}\.[0-9]{3,7}) dkk/i;
+            let currencyMatch = currencyRegex.exec(data);
+            if (currencyMatch !== null) {
+                foreignNokDkkCurrency = currencyMatch[1];
+            } else {
+                foreignNokDkkCurrency = 1;
             }
         }, 'html' );
     }

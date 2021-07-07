@@ -49,10 +49,10 @@
 
     function setBitcoinGroupData(marketValue)
     {
-        marketValue = marketValue;
+	marketValue = (marketValue * foreignEuroDkkCurrency).toFixed(2);
 	currentBitcoinGroupValue = marketValue;
         $("#bitcoinGroupVal").text(marketValue);
-	textColor(marketValue, "#bitcoinGroupVal");
+	textColor(marketValue - pricePerStockBitcoinGroup, "#bitcoinGroupVal");
 
         let stockValue = (marketValue - pricePerStockBitcoinGroup).toFixed(2);
         textColor(stockValue, "#bitcoinGroupStockResult");

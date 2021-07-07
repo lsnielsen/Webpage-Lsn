@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentVisaValue = marketValue;
         $("#visaVal").text(marketValue);
-	textColor(marketValue, "#visaVal");
+	textColor(marketValue - pricePerStockVisa, "#visaVal");
 
         let stockValue = (marketValue - pricePerStockVisa).toFixed(2);
         textColor(stockValue, "#visaStockResult");

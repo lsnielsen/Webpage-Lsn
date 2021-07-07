@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentMcDonaldValue = marketValue;
         $("#mcDonaldVal").text(marketValue);
-	textColor(marketValue, "#mcDonaldVal");
+	textColor(marketValue - pricePerStockMcDonald, "#mcDonaldVal");
 
         let stockValue = (marketValue - pricePerStockMcDonald).toFixed(2);
         textColor(stockValue, "#mcDonaldStockResult");

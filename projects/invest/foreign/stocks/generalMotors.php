@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentGmValue = marketValue;
         $("#gmVal").text(marketValue);
-	textColor(marketValue, "#gmVal");
+	textColor(marketValue - pricePerStockGm, "#gmVal");
 
         let stockValue = (marketValue - pricePerStockGm).toFixed(2);
         textColor(stockValue, "#gmStockResult");

@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentColaValue = marketValue;
         $("#colaVal").text(marketValue);
-	textColor(marketValue, "#colaVal");
+	textColor(marketValue - pricePerStockCola, "#colaVal");
 
         let stockValue = (marketValue - pricePerStockCola).toFixed(2);
         textColor(stockValue, "#colaStockResult");

@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/dis";
+            const url = "https://www.marketwatch.com/investing/fund/slanx?mod=over_search";
             $.get( url,
                 function( data ) {
                     getLaefValue(data);
@@ -52,7 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentLaefValue = marketValue;
         $("#laefVal").text(marketValue);
-	textColor(marketValue, "#laefVal");
+	textColor(marketValue - pricePerStockLaef, "#laefVal");
 
         let stockValue = (marketValue - pricePerStockLaef).toFixed(2);
         textColor(stockValue, "#laefStockResult");

@@ -50,9 +50,9 @@
     function setDisneyData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
-	currentDisneyValue = marketValue;
+		currentDisneyValue = marketValue;
         $("#disneyVal").text(marketValue);
-        textColor(marketValue, "#disneyVal");
+        textColor(marketValue - pricePerStockDisney, "#disneyVal");
 
         let stockValue = (marketValue - pricePerStockDisney).toFixed(2);
         textColor(stockValue, "#disneyStockResult");
