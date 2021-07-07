@@ -69,15 +69,6 @@
 	textColor(totalDanishPercentage, "#totalDanishPercentage");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 </script>
 
 </html>
