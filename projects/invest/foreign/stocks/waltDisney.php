@@ -50,6 +50,7 @@
     function setDisneyData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentDisneyValue = marketValue;
         $("#disneyVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockDisney).toFixed(2);
@@ -63,15 +64,6 @@
         let totalValue = ((marketValue * disneyStocks) - disneyPrice).toFixed(2);
         $("#disneyResult").text(totalValue);
         textColor(totalValue, "#disneyResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 

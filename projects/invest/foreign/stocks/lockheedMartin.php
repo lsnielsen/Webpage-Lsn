@@ -50,6 +50,7 @@
     function setLockheedMartinData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentLockheedMartinValue = marketValue;
         $("#lockheedMartinVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockLockheedMartin).toFixed(2);
@@ -63,15 +64,6 @@
         let totalValue = ((marketValue * lockheedMartinStocks) - lockheedMartinPrice).toFixed(2);
         $("#lockheedMartinResult").text(totalValue);
         textColor(totalValue, "#lockheedMartinResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 

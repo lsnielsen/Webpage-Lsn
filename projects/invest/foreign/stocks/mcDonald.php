@@ -50,6 +50,7 @@
     function setMcDonaldData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentMcDonaldValue = marketValue;
         $("#mcDonaldVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockMcDonald).toFixed(2);
@@ -63,15 +64,6 @@
         let totalValue = ((marketValue * mcDonaldStocks) - mcDonaldPrice).toFixed(2);
         $("#mcDonaldResult").text(totalValue);
         textColor(totalValue, "#mcDonaldResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 

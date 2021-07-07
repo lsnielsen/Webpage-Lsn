@@ -50,6 +50,7 @@
     function setBitcoinGroupData(marketValue)
     {
         marketValue = marketValue;
+	currentBitcoinGroupValue = marketValue;
         $("#bitcoinGroupVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockBitcoinGroup).toFixed(2);
@@ -63,15 +64,6 @@
         let totalValue = ((marketValue * bitcoinGroupStocks) - bitcoinGroupPrice).toFixed(2);
         $("#bitcoinGroupResult").text(totalValue);
         textColor(totalValue, "#bitcoinGroupResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 

@@ -50,6 +50,7 @@
     function setFordData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentFordValue = marketValue;
         $("#fordVal").text(marketValue);
         let totalValue = ((marketValue * fordStocks) - fordPrice).toFixed(2);
         let stockValue = (marketValue - pricePerStockFord).toFixed(2);
@@ -60,15 +61,6 @@
         textColor(percentageValue, "#fordPercentage");
         textColor(totalValue, "#fordResult");
         textColor(stockValue, "#fordStockResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 

@@ -50,6 +50,7 @@
     function setColaData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentColaValue = marketValue;
         $("#colaVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockCola).toFixed(2);
@@ -65,14 +66,6 @@
         textColor(totalValue, "#colaResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
 
 
 </script>

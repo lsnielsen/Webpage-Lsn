@@ -50,6 +50,7 @@
     function setGmData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentGmValue = marketValue;
         $("#gmVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockGm).toFixed(2);
@@ -63,15 +64,6 @@
         let totalValue = ((marketValue * gmStocks) - gmPrice).toFixed(2);
         $("#gmResult").text(totalValue);
         textColor(totalValue, "#gmResult");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
     }
 
 
