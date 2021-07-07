@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     let fordDate = "12/2 - 2021";
@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentFordValue = marketValue;
         $("#fordVal").text(marketValue);
+	textColor(marketValue, "#fordVal");
         let totalValue = ((marketValue * fordStocks) - fordPrice).toFixed(2);
         let stockValue = (marketValue - pricePerStockFord).toFixed(2);
         let percentageValue = (((marketValue / pricePerStockFord) * 100) - 100).toFixed(2);
@@ -65,3 +66,4 @@
 
 
 </script>
+</html>

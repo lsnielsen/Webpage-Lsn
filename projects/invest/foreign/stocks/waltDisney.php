@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentDisneyValue = marketValue;
         $("#disneyVal").text(marketValue);
+        textColor(marketValue, "#disneyVal");
 
         let stockValue = (marketValue - pricePerStockDisney).toFixed(2);
         textColor(stockValue, "#disneyStockResult");

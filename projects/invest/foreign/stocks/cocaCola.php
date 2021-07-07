@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const colaDate = "12/2 - 2021";
@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentColaValue = marketValue;
         $("#colaVal").text(marketValue);
+	textColor(marketValue, "#colaVal");
 
         let stockValue = (marketValue - pricePerStockCola).toFixed(2);
         textColor(stockValue, "#colaStockResult");
@@ -69,3 +70,4 @@
 
 
 </script>
+</html>

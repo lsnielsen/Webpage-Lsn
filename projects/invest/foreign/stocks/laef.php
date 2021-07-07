@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentLaefValue = marketValue;
         $("#laefVal").text(marketValue);
+	textColor(marketValue, "#laefVal");
 
         let stockValue = (marketValue - pricePerStockLaef).toFixed(2);
         textColor(stockValue, "#laefStockResult");

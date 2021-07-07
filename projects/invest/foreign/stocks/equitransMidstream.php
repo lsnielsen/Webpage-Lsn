@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const equitransMidstreamDate = "8/4 - 2021";
@@ -51,6 +51,7 @@
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
         $("#equitransMidstreamVal").text(marketValue);
+	textColor(marketValue, "#equitransMidstreamVal");
 
         let stockValue = (marketValue - pricePerStockEquitransMidstream).toFixed(2);
         textColor(stockValue, "#equitransMidstreamStockResult");
@@ -76,3 +77,4 @@
 
 
 </script>
+</html>

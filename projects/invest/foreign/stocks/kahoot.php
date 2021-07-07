@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const kahootDate = "7/4 - 2021";
@@ -51,6 +51,7 @@
     {
         marketValue = marketValue;
         $("#kahootVal").text(marketValue);
+	textColor(marketValue, "#kahootVal");
 
         let stockValue = (marketValue - pricePerStockKahoot).toFixed(2);
         textColor(stockValue, "#kahootStockResult");
@@ -65,14 +66,6 @@
         textColor(totalValue, "#kahootResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 
 </script>
+</html>

@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const visaDate = "28/1 - 2021";
@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentVisaValue = marketValue;
         $("#visaVal").text(marketValue);
+	textColor(marketValue, "#visaVal");
 
         let stockValue = (marketValue - pricePerStockVisa).toFixed(2);
         textColor(stockValue, "#visaStockResult");
@@ -68,3 +69,4 @@
 
 
 </script>
+</html>

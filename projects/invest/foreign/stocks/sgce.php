@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentSgceValue = marketValue;
         $("#sgceVal").text(marketValue);
+	textColor(marketValue, "#sgceVal");
 
         let stockValue = (marketValue - pricePerStockSgce).toFixed(2);
         textColor(stockValue, "#sgceStockResult");

@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const gmDate = "28/1 - 2021";
@@ -52,6 +52,7 @@
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentGmValue = marketValue;
         $("#gmVal").text(marketValue);
+	textColor(marketValue, "#gmVal");
 
         let stockValue = (marketValue - pricePerStockGm).toFixed(2);
         textColor(stockValue, "#gmStockResult");
@@ -68,3 +69,4 @@
 
 
 </script>
+</html>
