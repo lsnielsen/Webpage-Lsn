@@ -19,6 +19,8 @@
 	include "stocks/bitcoinGroup.php";
 	include "stocks/lockheedMartin.php";
 	include "stocks/kahoot.php";
+	include "stocks/laef.php";
+	include "stocks/sgce.php";
     include "stocks/equitransMidstream.php";
     include "foreignStockTable.php";
     include "foreignResult.php";
@@ -38,6 +40,8 @@
 	getLockheedMartinData();
 	getEMSteamData();
 	getKahootData();
+	getSgceData();
+	getLaefData();
     }
       function foreignTextColor(value, field)
     {

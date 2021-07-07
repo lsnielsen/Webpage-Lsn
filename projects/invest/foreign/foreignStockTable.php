@@ -124,7 +124,28 @@
                 <td id="kahootPercentage"></td>
                 <td id="kahootResult"></td>
             </tr>
-       
+            <tr>
+                <td id="laefDate"></td>
+                <td id="laefPrice"></td>
+                <td id="laefName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/stock/kahot?countrycode=no')"></td>
+                <td id="laefStocks"></td>
+                <td id="laefStockPrice"></td>
+                <td id="laefVal"></td>
+                <td id="laefStockResult"></td>
+                <td id="laefPercentage"></td>
+                <td id="laefResult"></td>
+            </tr>
+            <tr>
+                <td id="sgceDate"></td>
+                <td id="sgcePrice"></td>
+                <td id="sgceName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/stock/kahot?countrycode=no')"></td>
+                <td id="sgceStocks"></td>
+                <td id="sgceStockPrice"></td>
+                <td id="sgceVal"></td>
+                <td id="sgceStockResult"></td>
+                <td id="sgcePercentage"></td>
+                <td id="sgceResult"></td>
+            </tr>       
         </tbody>
     </table>
 
