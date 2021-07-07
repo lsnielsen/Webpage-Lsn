@@ -40,21 +40,17 @@
         function loopFunction() {
 
             let theTotalResultBuyValue = (Number(totalForeignBuyValue) + Number(totalFundsBuyValue)).toFixed(2);
-            let theCurrentTotalResultValue = ( 
-												Number(currentTotalForeignValue) + 
-												Number(currentTotalFundsValue)).toFixed(2);
-            let theTotalResultWinLoss = ( 
-											Number(totalForeignWinLoss) + 
-											Number(totalFundsWinLoss)).toFixed(2);
-			let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
+            let theCurrentTotalResultValue = (Number(currentTotalForeignValue) + Number(currentTotalFundsValue)).toFixed(2);
+            let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss)).toFixed(2);
+	    let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
 
             $("#totalResultBuyValue").text(theTotalResultBuyValue);
             $("#currentTotalResultValue").text(theCurrentTotalResultValue);
             $("#currentPercentValue").text(percentageWinLoss);
             $("#totalResultWinLoss").text(theTotalResultWinLoss);
 
-            textColor(theTotalResultWinLoss, "#totalResultWinLoss");
-            textColor(percentageWinLoss, "#currentPercentValue");
+            totalTextColor(theTotalResultWinLoss, "#totalResultWinLoss");
+            totalTextColor(percentageWinLoss, "#currentPercentValue");
 
             setTimeout(function () {
                 loopFunction();
@@ -62,7 +58,7 @@
         }
     }
 
-    function textColor(value, field)
+    function totalTextColor(value, field)
     {
         if (value < 0) {
             $(field).css("color", "red");
