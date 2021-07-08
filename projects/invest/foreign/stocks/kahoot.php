@@ -50,6 +50,7 @@
     function setKahootData(marketValue)
     {
         marketValue = (marketValue * foreignNokDkkCurrency).toFixed(2);
+		currentKahootValue = marketValue;
         $("#kahootVal").text(marketValue);
 	textColor(marketValue - pricePerStockKahoot, "#kahootVal");
 
