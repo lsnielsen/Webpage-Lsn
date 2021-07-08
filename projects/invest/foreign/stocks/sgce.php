@@ -49,7 +49,7 @@
 
     function setSgceData(marketValue)
     {
-        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+        marketValue = (12 * foreignUsdDkkCurrency).toFixed(2);
 	currentSgceValue = marketValue;
         $("#sgceVal").text(marketValue);
 	textColor(marketValue - pricePerStockSgce, "#sgceVal");

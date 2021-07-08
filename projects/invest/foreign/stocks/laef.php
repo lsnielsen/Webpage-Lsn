@@ -49,7 +49,7 @@
 
     function setLaefData(marketValue)
     {
-        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+        marketValue = (12 * foreignEuroDkkCurrency).toFixed(2);
 	currentLaefValue = marketValue;
         $("#laefVal").text(marketValue);
 	textColor(marketValue - pricePerStockLaef, "#laefVal");
