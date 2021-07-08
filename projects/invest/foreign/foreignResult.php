@@ -30,7 +30,13 @@
     let currentGmValue;
     let currentFordValue;
     let currentBitcoinGroupValue;
-    let currentLockheedMartinValue;
+  let currentLockheedMartinValue;
+
+  let currentSgceValue;
+  let currentLaefValue;
+  let currentKahootValue;
+  let currentEqmValue;
+  
     let foreignUsdDkkCurrency;
     let foreignEuroDkkCurrency;
     let foreignNokDkkCurrency;
@@ -41,13 +47,17 @@
     function setForeignResultValues()
     {
         totalForeignBuyValue = (colaPrice + disneyPrice + fordPrice + visaPrice + 
-									gmPrice + mcDonaldPrice + bitcoinGroupPrice + lockheedMartinPrice).toFixed(2);
-        currentTotalForeignValue = ((currentColaValue * colaStocks) +
+				gmPrice + mcDonaldPrice + bitcoinGroupPrice + lockheedMartinPrice +
+			        sgcePrice + laefPrice + kahootPrice + equitransMidstreamPrice).toFixed(2);
+
+	currentTotalForeignValue = ((currentColaValue * colaStocks) +
             (currentDisneyValue * disneyStocks) + (currentFordValue * fordStocks) +
             (currentVisaValue * visaStocks) + (currentGmValue * gmStocks) +
             (currentMcDonaldValue * mcDonaldStocks) + 
 			(currentBitcoinGroupValue * bitcoinGroupStocks) +
-			(currentLockheedMartinValue * lockheedMartinStocks)).toFixed(2);
+				    (currentLockheedMartinValue * lockheedMartinStocks) +
+				    (currentSgceValue * sgceStocks)).toFixed(2);
+	
         totalForeignWinLoss = (currentTotalForeignValue - totalForeignBuyValue).toFixed(2);
         $("#totalForeignBuyValue").text(totalForeignBuyValue);
         $("#currentTotalForeignValue").text(currentTotalForeignValue);
