@@ -50,6 +50,7 @@
     function setEquitransMidstreamData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+		currentEqmValue = marketValue;
         $("#equitransMidstreamVal").text(marketValue);
 	textColor(marketValue - pricePerStockEquitransMidstream, "#equitransMidstreamVal");
 

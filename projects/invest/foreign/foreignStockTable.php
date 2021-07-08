@@ -50,7 +50,7 @@
             <tr>
                 <td id="mcDonaldDate"></td>
                 <td id="mcDonaldPrice"></td>
-                <td id="mcDonaldName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/stock/ko')"></td>
+                <td id="mcDonaldName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/stock/mcd')"></td>
                 <td id="mcDonaldStocks"></td>
                 <td id="mcDonaldStockPrice"></td>
                 <td id="mcDonaldVal"></td>
@@ -127,7 +127,7 @@
             <tr>
                 <td id="laefDate"></td>
                 <td id="laefPrice"></td>
-                <td id="laefName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/stock/kahot?countrycode=no')"></td>
+                <td id="laefName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/fund/slanx?mod=over_search')"></td>
                 <td id="laefStocks"></td>
                 <td id="laefStockPrice"></td>
                 <td id="laefVal"></td>
@@ -138,7 +138,7 @@
             <tr>
                 <td id="sgceDate"></td>
                 <td id="sgcePrice"></td>
-                <td id="sgceName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/stock/kahot?countrycode=no')"></td>
+                <td id="sgceName" scope="row" class="theAsset" onclick="assetsPage('https://www.marketwatch.com/investing/fund/icln?mod=over_search')"></td>
                 <td id="sgceStocks"></td>
                 <td id="sgceStockPrice"></td>
                 <td id="sgceVal"></td>

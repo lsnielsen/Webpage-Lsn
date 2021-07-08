@@ -56,7 +56,10 @@
             (currentMcDonaldValue * mcDonaldStocks) + 
 			(currentBitcoinGroupValue * bitcoinGroupStocks) +
 				    (currentLockheedMartinValue * lockheedMartinStocks) +
-				    (currentSgceValue * sgceStocks)).toFixed(2);
+				    (currentSgceValue * sgceStocks) +
+				    (currentLaefValue * laefStocks) +
+				    (currentKahootValue * kahootStocks) +
+				    (currentEqmValue * equitransMidstreamStocks)).toFixed(2);
 	
         totalForeignWinLoss = (currentTotalForeignValue - totalForeignBuyValue).toFixed(2);
         $("#totalForeignBuyValue").text(totalForeignBuyValue);
