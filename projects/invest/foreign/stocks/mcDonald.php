@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const mcDonaldDate = "12/2 - 2021";
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -50,7 +50,9 @@
     function setMcDonaldData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentMcDonaldValue = marketValue;
         $("#mcDonaldVal").text(marketValue);
+	textColor(marketValue - pricePerStockMcDonald, "#mcDonaldVal");
 
         let stockValue = (marketValue - pricePerStockMcDonald).toFixed(2);
         textColor(stockValue, "#mcDonaldStockResult");
@@ -65,14 +67,6 @@
         textColor(totalValue, "#mcDonaldResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 
 </script>
+</html>

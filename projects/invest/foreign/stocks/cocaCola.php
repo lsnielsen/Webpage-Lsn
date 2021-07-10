@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const colaDate = "12/2 - 2021";
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -50,7 +50,9 @@
     function setColaData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentColaValue = marketValue;
         $("#colaVal").text(marketValue);
+	textColor(marketValue - pricePerStockCola, "#colaVal");
 
         let stockValue = (marketValue - pricePerStockCola).toFixed(2);
         textColor(stockValue, "#colaStockResult");
@@ -65,14 +67,7 @@
         textColor(totalValue, "#colaResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
 
 
 </script>
+</html>

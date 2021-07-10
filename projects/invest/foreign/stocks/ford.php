@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     let fordDate = "12/2 - 2021";
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -50,7 +50,9 @@
     function setFordData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentFordValue = marketValue;
         $("#fordVal").text(marketValue);
+	textColor(marketValue - pricePerStockFord, "#fordVal");
         let totalValue = ((marketValue * fordStocks) - fordPrice).toFixed(2);
         let stockValue = (marketValue - pricePerStockFord).toFixed(2);
         let percentageValue = (((marketValue / pricePerStockFord) * 100) - 100).toFixed(2);
@@ -62,14 +64,6 @@
         textColor(stockValue, "#fordStockResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 
 </script>
+</html>

@@ -1,5 +1,5 @@
 
-<html>
+
 
 <div class="container-sm">
     <div class="page-header text-center" style="color: #ff884d;">
@@ -16,11 +16,8 @@
 	include "stocks/visa.php";
 	include "stocks/mcDonald.php";
 	include "stocks/generalMotors.php";
-	include "stocks/bitcoinGroup.php";
+	//include "bitcoinGroup.php";
 	include "stocks/lockheedMartin.php";
-	include "stocks/kahoot.php";
-	include "stocks/laef.php";
-	include "stocks/sgce.php";
     include "stocks/equitransMidstream.php";
     include "foreignStockTable.php";
     include "foreignResult.php";
@@ -36,29 +33,11 @@
         getMcDonaldData();
         getGmData();
         getFordData();
-	getBitcoinGroupData();
-	getLockheedMartinData();
-	getEMSteamData();
-	getKahootData();
-	getSgceData();
-	getLaefData();
+		//getBitcoinGroupData();
+		getLockheedMartinData();
+		getEMSteamData();
     }
-      function foreignTextColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-    function foreignUpdateInterval()
-    {
-        let time =  Math.random() * 40000 + 2000;
-	return time;
-    }
-
 </script>
 
 
 
-</html>

@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const visaDate = "28/1 - 2021";
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -50,7 +50,9 @@
     function setVisaData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentVisaValue = marketValue;
         $("#visaVal").text(marketValue);
+	textColor(marketValue - pricePerStockVisa, "#visaVal");
 
         let stockValue = (marketValue - pricePerStockVisa).toFixed(2);
         textColor(stockValue, "#visaStockResult");
@@ -65,14 +67,6 @@
         textColor(totalValue, "#visaResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 
 </script>
+</html>

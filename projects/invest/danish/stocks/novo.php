@@ -1,4 +1,4 @@
-
+<html>
 
 <script>
 
@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/stock/nvo";
+            const url = "https://www.nordnet.dk/markedet/aktiekurser/16256554-novo-nordisk-b";
             $.get( url,
                 function( data ) {
                     getNovoValue(data);
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, danishUpdateInterval());
         }
     }
 
@@ -37,7 +37,7 @@
 
     function getNovoValue(data)
     {
-        let novoRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let novoRegex = /StyledPriceText-sc-4o8a3-2 jokmrl">([0-9]{3,4},[0-9]{2})<\/span><\/div><\/div>/;
         let novoMatch = novoRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (novoMatch !== null) {
@@ -49,30 +49,29 @@
 
     function setNovoData(marketValue)
     {
-        marketValue = (marketValue * usdDkkCurrency).toFixed(2);
+    	marketValue = marketValue.replace(/,/,".");
+	marketValue = parseFloat(marketValue);
+        marketValue = marketValue.toFixed(2);
+	currentNovoValue = marketValue;
         $("#novoVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNovo).toFixed(2);
-        textColor(stockValue, "#novoStockResult");
+        danishTextColor(stockValue, "#novoStockResult");
         $("#novoStockResult").text(stockValue);
 
         let percentageValue = (((marketValue / pricePerStockNovo) * 100) - 100).toFixed(2);
         $("#novoPercentage").text(percentageValue + " %");
-        textColor(percentageValue, "#novoPercentage");
+        danishTextColor(percentageValue, "#novoPercentage");
 
         let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
         $("#novoResult").text(totalValue);
-        textColor(totalValue, "#novoResult");
+        danishTextColor(totalValue, "#novoResult");
+		
+        danishTextColor(marketValue-pricePerStockNovo, "#novoVal");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
 
 
 </script>
+
+</html>

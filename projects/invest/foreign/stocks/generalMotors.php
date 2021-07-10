@@ -1,5 +1,5 @@
 
-
+<html>
 <script>
 
     const gmDate = "28/1 - 2021";
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -50,7 +50,9 @@
     function setGmData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+	currentGmValue = marketValue;
         $("#gmVal").text(marketValue);
+	textColor(marketValue - pricePerStockGm, "#gmVal");
 
         let stockValue = (marketValue - pricePerStockGm).toFixed(2);
         textColor(stockValue, "#gmStockResult");
@@ -65,14 +67,6 @@
         textColor(totalValue, "#gmResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 
 </script>
+</html>

@@ -1,4 +1,4 @@
-
+<html>
 
 <script>
 
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5000);
+            }, Math.floor(Math.random() * 40000) + 2000);
         }
     }
 
@@ -50,7 +50,9 @@
     function setDisneyData(marketValue)
     {
         marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
+		currentDisneyValue = marketValue;
         $("#disneyVal").text(marketValue);
+        textColor(marketValue - pricePerStockDisney, "#disneyVal");
 
         let stockValue = (marketValue - pricePerStockDisney).toFixed(2);
         textColor(stockValue, "#disneyStockResult");
@@ -65,14 +67,6 @@
         textColor(totalValue, "#disneyResult");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
 
 </script>
+</html>
