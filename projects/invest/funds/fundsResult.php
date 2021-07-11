@@ -1,5 +1,5 @@
 
-
+<html>
 
 <div class="container-sm">
     <table class="table table-bordered align-middle table-primary">
@@ -24,6 +24,7 @@
 
 <script>
     let currentNordeaValue;
+    let currentNordeaFiveValue;
     let totalFundsBuyValue;
     let totalFundsWinLoss;
     let currentTotalFundsValue;
@@ -75,3 +76,4 @@
     }
 
 </script>
+</html>

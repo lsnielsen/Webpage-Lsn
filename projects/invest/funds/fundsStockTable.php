@@ -1,4 +1,4 @@
-
+<html>
     <table class="table table-hover table-dark table-bordered">
         <thead>
             <tr>
@@ -25,6 +25,17 @@
                 <td id="nordeaPercentage"></td>
                 <td id="nordeaResult"></td>
             </tr>
+	    <tr>
+                <td id="nordeaFiveDate"> </td>
+                <td id="nordeaFivePrice">  </td>
+                <td id="nordeaFiveName"></td>
+                <td id="nordeaFiveStocks"></td>
+                <td id="nordeaFiveStockPrice"></td>
+                <td id="nordeaFiveVal"></td>
+                <td id="nordeaFiveStockResult"></td>
+                <td id="nordeaFivePercentage"></td>
+                <td id="nordeaFiveResult"></td>
+            </tr>
         </tbody>
     </table>
-
+</html>
