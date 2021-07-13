@@ -4,7 +4,7 @@
 
     const nordeaDate = "16/12 - 2020";
     const nordeaPrice = 1000;
-    const nordeaName = "Nordea";
+    const nordeaName = "Nordea fund Four";
     const nordeaStocks = 848;
     const pricePerStockNordea = (nordeaPrice / nordeaStocks).toFixed(2);
 
