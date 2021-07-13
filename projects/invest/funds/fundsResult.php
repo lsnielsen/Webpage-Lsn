@@ -45,15 +45,6 @@
         textColor(totalFundsPercentage, "#totalFundsPercentage");
     }
 
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-
     $( document ).ready(function() {
         callTotalFundsUrl();
         function callTotalFundsUrl() {
