@@ -43,14 +43,7 @@
 	getSgceData();
 	getLaefData();
     }
-      function foreignTextColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
+	
     function foreignUpdateInterval()
     {
         let time =  Math.random() * 40000 + 2000;
