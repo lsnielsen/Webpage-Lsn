@@ -50,6 +50,7 @@
     function setNordeaFiveData(marketValue)
     {
         marketValue = Number(marketValue).toFixed(2);
+		currentNordeaFiveValue = marketValue;
         $("#nordeaFiveVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNordeaFive).toFixed(2);

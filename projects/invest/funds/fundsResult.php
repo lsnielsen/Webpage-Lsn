@@ -31,8 +31,8 @@
 
     function setFundsResultValues()
     {
-        totalFundsBuyValue = (nordeaPrice).toFixed(2);
-        currentTotalFundsValue = (currentNordeaValue * nordeaStocks).toFixed(2);
+        totalFundsBuyValue = (nordeaPrice + nordeaFivePrice).toFixed(2);
+        currentTotalFundsValue = ((currentNordeaValue * nordeaStocks) + (currentNordeaFiveValue * nordeaFiveStocks)).toFixed(2);
         totalFundsWinLoss = (currentTotalFundsValue - totalFundsBuyValue).toFixed(2);
         $("#totalFundsBuyValue").text(totalFundsBuyValue);
         $("#currentTotalFundsValue").text(currentTotalFundsValue);
@@ -52,28 +52,13 @@
     $( document ).ready(function() {
         callTotalFundsUrl();
         function callTotalFundsUrl() {
-            const nordeaUrl = "https://markets.ft.com/data/funds/tearsheet/summary?s=DK0060987709:DKK";
-            $.get( nordeaUrl, function( nordeaData ) {
-                getNordeaResultValue(nordeaData);
-            }, 'html');
-            setFundsResultValues();
+      	    setFundsResultValues();
             setTimeout(function () {
                 callTotalFundsUrl();
             }, 2000);
         }
     });
-
-    function getNordeaResultValue(data)
-    {
-        let nordeaRegex = /<li><span class="mod-ui-data-list__label">Price \(DKK\)<\/span><span class="mod-ui-data-list__value">([0-9.]+)<\/span><\/li>/;
-        let nordeaMatch = nordeaRegex.exec(data);
-        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (nordeaMatch !== null) {
-            currentNordeaValue = nordeaMatch[1];
-        } else if (closeMatch !== null) {
-            currentNordeaValue = closeMatch[1];
-        }
-    }
+	
 
 </script>
 </html>
