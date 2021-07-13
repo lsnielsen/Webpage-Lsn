@@ -34,6 +34,7 @@
 </html>
 
 <script>
+  let x = 0;
     function getData()
     {
         getDanishData();
@@ -45,8 +46,14 @@
       window.open(url, '_blank').focus();
     }
     function updateInterval()
-    {
-        let time =  Math.random() * 40000 + 2000;
+  {
+      let time;
+      if (x <= 30) {
+	  time = (Math.random() * 10000) + 100;
+	  x++;
+      } else {
+          time = (Math.random() * 120000) + 2000;
+      }
 	return time;
     }
 </script>
