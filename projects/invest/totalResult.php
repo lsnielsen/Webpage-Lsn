@@ -44,9 +44,9 @@
             let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss) + Number(totalDanishWinLoss)).toFixed(2);
 	    let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
 
-            $("#totalResultBuyValue").text(theTotalResultBuyValue + " %");
+            $("#totalResultBuyValue").text(theTotalResultBuyValue);
             $("#currentTotalResultValue").text(theCurrentTotalResultValue);
-            $("#currentPercentValue").text(percentageWinLoss);
+            $("#currentPercentValue").text(percentageWinLoss + " %");
             $("#totalResultWinLoss").text(theTotalResultWinLoss);
 
             totalTextColor(theTotalResultWinLoss, "#totalResultWinLoss");
