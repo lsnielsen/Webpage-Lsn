@@ -49,8 +49,8 @@
             $("#currentPercentValue").text(percentageWinLoss + " %");
             $("#totalResultWinLoss").text(theTotalResultWinLoss);
 
-            totalTextColor(theTotalResultWinLoss, "#totalResultWinLoss");
-            totalTextColor(percentageWinLoss, "#currentPercentValue");
+            textColor(theTotalResultWinLoss, "#totalResultWinLoss");
+            textColor(percentageWinLoss, "#currentPercentValue");
 
             setTimeout(function () {
                 loopFunction();
@@ -58,7 +58,7 @@
         }
     }
 
-    function totalTextColor(value, field)
+    function textColor(value, field)
     {
         if (value < 0) {
             $(field).css("color", "red");
