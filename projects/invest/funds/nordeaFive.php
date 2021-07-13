@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5870);
+            }, updateInterval());
         }
     }
 

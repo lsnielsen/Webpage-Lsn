@@ -51,7 +51,7 @@
       	    setFundsResultValues();
             setTimeout(function () {
                 callTotalFundsUrl();
-            }, 2000);
+            }, updateInterval());
         }
     });
 	
