@@ -1,6 +1,6 @@
 
 
-
+<html>
 <div class="container-sm">
     <div class="page-header text-center" style="color: #801d44;">
         <h1>
@@ -16,8 +16,8 @@
                 <th scope="col"></th>
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
-                <th scope="col">% - vis gevinst \ tab</th>
                 <th scope="col">Gevinst \ tab</th>
+                <th scope="col">% - vis gevinst \ tab</th>
             </tr>
         </thead>
         <tbody>
@@ -25,8 +25,8 @@
                 <th scope="row">Samlet</th>
                 <td id="totalResultBuyValue"></td>
                 <td id="currentTotalResultValue"></td>
-                <td id="currentPercentValue"></td>
                 <td id="totalResultWinLoss"></td>
+                <td id="currentPercentValue"></td>
             </tr>
         </tbody>
     </table>
@@ -39,18 +39,18 @@
         loopFunction();
         function loopFunction() {
 
-            let theTotalResultBuyValue = (Number(totalForeignBuyValue) + Number(totalFundsBuyValue)).toFixed(2);
-            let theCurrentTotalResultValue = (Number(currentTotalForeignValue) + Number(currentTotalFundsValue)).toFixed(2);
-            let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss)).toFixed(2);
+            let theTotalResultBuyValue = (Number(totalForeignBuyValue) + Number(totalFundsBuyValue) + Number(totalDanishBuyValue)).toFixed(2);
+            let theCurrentTotalResultValue = (Number(currentTotalForeignValue) + Number(currentTotalFundsValue) + Number(currentTotalDanishValue)).toFixed(2);
+            let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss) + Number(totalDanishWinLoss)).toFixed(2);
 	    let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
 
             $("#totalResultBuyValue").text(theTotalResultBuyValue);
             $("#currentTotalResultValue").text(theCurrentTotalResultValue);
-            $("#currentPercentValue").text(percentageWinLoss);
+            $("#currentPercentValue").text(percentageWinLoss + " %");
             $("#totalResultWinLoss").text(theTotalResultWinLoss);
 
-            totalTextColor(theTotalResultWinLoss, "#totalResultWinLoss");
-            totalTextColor(percentageWinLoss, "#currentPercentValue");
+            textColor(theTotalResultWinLoss, "#totalResultWinLoss");
+            textColor(percentageWinLoss, "#currentPercentValue");
 
             setTimeout(function () {
                 loopFunction();
@@ -58,7 +58,7 @@
         }
     }
 
-    function totalTextColor(value, field)
+    function textColor(value, field)
     {
         if (value < 0) {
             $(field).css("color", "red");
@@ -68,6 +68,4 @@
     }
 
 </script>
-
-
-
+</html>

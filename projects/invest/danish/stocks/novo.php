@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     }
 
@@ -56,18 +56,18 @@
         $("#novoVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNovo).toFixed(2);
-        danishTextColor(stockValue, "#novoStockResult");
+        textColor(stockValue, "#novoStockResult");
         $("#novoStockResult").text(stockValue);
 
         let percentageValue = (((marketValue / pricePerStockNovo) * 100) - 100).toFixed(2);
         $("#novoPercentage").text(percentageValue + " %");
-        danishTextColor(percentageValue, "#novoPercentage");
+        textColor(percentageValue, "#novoPercentage");
 
         let totalValue = ((marketValue * novoStocks) - novoPrice).toFixed(2);
         $("#novoResult").text(totalValue);
-        danishTextColor(totalValue, "#novoResult");
+        textColor(totalValue, "#novoResult");
 		
-        danishTextColor(marketValue-pricePerStockNovo, "#novoVal");
+        textColor(marketValue-pricePerStockNovo, "#novoVal");
     }
 
 

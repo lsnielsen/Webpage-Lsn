@@ -1,5 +1,5 @@
 
-
+<html>
 
 <div class="container-sm">
     <div class="page-header text-center" style="color: #ff884d;">
@@ -11,6 +11,7 @@
 
 <?php
     include "nordea.php";
+    include "nordeaFive.php";
     include "fundsStockTable.php";
     include "fundsResult.php";
 ?>
@@ -20,8 +21,8 @@
     function getFundsData()
     {
         getNordeaData();
+	getNordeaFiveData();
     }
 </script>
 
-
-
+</html>

@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     }
 
@@ -58,10 +58,10 @@
         $("#nordeaKlimaMiljoPercentage").text(percentageValue + " %");
         $("#nordeaKlimaMiljoResult").text(totalValue);
         $("#nordeaKlimaMiljoStockResult").text(stockValue);
-        danishTextColor(startValue-pricePerStockNKM, "#nordeaKlimaMiljoVal");
-        danishTextColor(percentageValue, "#nordeaKlimaMiljoPercentage");
-        danishTextColor(totalValue, "#nordeaKlimaMiljoResult");
-        danishTextColor(stockValue, "#nordeaKlimaMiljoStockResult");
+        textColor(startValue-pricePerStockNKM, "#nordeaKlimaMiljoVal");
+        textColor(percentageValue, "#nordeaKlimaMiljoPercentage");
+        textColor(totalValue, "#nordeaKlimaMiljoResult");
+        textColor(stockValue, "#nordeaKlimaMiljoStockResult");
     }
 
 

@@ -4,7 +4,7 @@
 
     const nordeaDate = "16/12 - 2020";
     const nordeaPrice = 1000;
-    const nordeaName = "Nordea";
+    const nordeaName = "Nordea fund Four";
     const nordeaStocks = 848;
     const pricePerStockNordea = (nordeaPrice / nordeaStocks).toFixed(2);
 
@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, 5870);
+            }, updateInterval());
         }
     }
 
@@ -50,6 +50,7 @@
     function setNordeaData(marketValue)
     {
         marketValue = Number(marketValue).toFixed(2);
+		currentNordeaValue = marketValue;
         $("#nordeaVal").text(marketValue);
 
         let stockValue = (marketValue - pricePerStockNordea).toFixed(2);
@@ -64,15 +65,7 @@
         $("#nordeaResult").text(totalValue);
         textColor(totalValue, "#nordeaResult");
     }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
+	
 
 
 </script>

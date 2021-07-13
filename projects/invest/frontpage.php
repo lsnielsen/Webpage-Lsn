@@ -44,4 +44,9 @@
     function assetsPage(url) {
       window.open(url, '_blank').focus();
     }
+    function updateInterval()
+  {
+	 let time = (Math.random() * 10000) + 100;
+	return time;
+    }
 </script>

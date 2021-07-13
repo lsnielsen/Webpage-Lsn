@@ -26,19 +26,6 @@
 ?>
 
 <script>
-    function danishTextColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
-    }
-    function danishUpdateInterval()
-    {
-        let time =  Math.random() * 40000 + 2000;
-	return time;
-    }
     function getDanishData()
     {
         getNinaData();

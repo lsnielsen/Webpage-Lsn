@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     }
 
@@ -58,10 +58,10 @@
         $("#astralisPercentage").text(percentageValue + " %");
         $("#astralisResult").text(totalValue);
         $("#astralisStockResult").text(stockValue);
-        danishTextColor(startValue-pricePerStockAstralis, "#astralisVal");
-        danishTextColor(percentageValue, "#astralisPercentage");
-        danishTextColor(totalValue, "#astralisResult");
-        danishTextColor(stockValue, "#astralisStockResult");
+        textColor(startValue-pricePerStockAstralis, "#astralisVal");
+        textColor(percentageValue, "#astralisPercentage");
+        textColor(totalValue, "#astralisResult");
+        textColor(stockValue, "#astralisStockResult");
     }
 
 

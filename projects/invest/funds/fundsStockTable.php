@@ -1,4 +1,4 @@
-
+<html>
     <table class="table table-hover table-dark table-bordered">
         <thead>
             <tr>
@@ -17,7 +17,7 @@
             <tr>
                 <td id="nordeaDate"> </td>
                 <td id="nordeaPrice">  </td>
-                <td id="nordeaName"></td>
+                <td id="nordeaName" scope="row" class="theAsset" onclick="assetsPage('https://markets.ft.com/data/funds/tearsheet/summary?s=DK0060987709:DKK')"></td>
                 <td id="nordeaStocks"></td>
                 <td id="nordeaStockPrice"></td>
                 <td id="nordeaVal"></td>
@@ -25,6 +25,17 @@
                 <td id="nordeaPercentage"></td>
                 <td id="nordeaResult"></td>
             </tr>
+	    <tr>
+                <td id="nordeaFiveDate"> </td>
+                <td id="nordeaFivePrice">  </td>
+                <td id="nordeaFiveName" scope="row" class="theAsset" onclick="assetsPage('https://markets.ft.com/data/funds/tearsheet/summary?s=DK0060987899:DKK')"></td>
+                <td id="nordeaFiveStocks"></td>
+                <td id="nordeaFiveStockPrice"></td>
+                <td id="nordeaFiveVal"></td>
+                <td id="nordeaFiveStockResult"></td>
+                <td id="nordeaFivePercentage"></td>
+                <td id="nordeaFiveResult"></td>
+            </tr>
         </tbody>
     </table>
-
+</html>

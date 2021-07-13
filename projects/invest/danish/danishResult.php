@@ -34,7 +34,7 @@
   let currentNinaValue;
   let currentSkagenValue;
     let totalDanishBuyValue;
-    let currentTotaldanishValue;
+    let currentTotalDanishValue;
   let totalDanishWinLoss
   let totalDanishPercentage;
 
@@ -44,14 +44,14 @@
             setDanishResultValues();
             setTimeout(function () {
                 callTotalDanishUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     });
 
     function setDanishResultValues()
     {
         totalDanishBuyValue = (astralisPrice + novoPrice + skagenPrice + bioteknologiPrice + ninaPrice + afkastPlusPrice + nordeaKlimaMiljoPrice + nigaiPrice).toFixed(2);
-        currentTotaldanishValue = ((currentAstralisValue * astralisStocks) +
+        currentTotalDanishValue = ((currentAstralisValue * astralisStocks) +
 				   (currentNovoValue * novoStocks) +
 				   (currentNordeaKMGValue * nordeaKlimaMiljoStocks) +
 				   (currentNordeaIGAIValue * nigaiStocks) +
@@ -59,11 +59,11 @@
 				   (currentNinaValue * ninaStocks) +
 				   (currentSkagenValue * skagenStocks) +
 				   (currentAfkastPlusValue * afkastPlusStocks)).toFixed(2);
-        totalDanishWinLoss = (currentTotaldanishValue - totalDanishBuyValue).toFixed(2);
-	totalDanishPercentage = (((currentTotaldanishValue / totalDanishBuyValue) * 100) - 100).toFixed(2);
+        totalDanishWinLoss = (currentTotalDanishValue - totalDanishBuyValue).toFixed(2);
+	totalDanishPercentage = (((currentTotalDanishValue / totalDanishBuyValue) * 100) - 100).toFixed(2);
 	$("#totalDanishPercentage").text(totalDanishPercentage + " %");
         $("#totalDanishBuyValue").text(totalDanishBuyValue);
-        $("#currentTotalDanishValue").text(currentTotaldanishValue);
+        $("#currentTotalDanishValue").text(currentTotalDanishValue);
         $("#totalDanishWinLoss").text(totalDanishWinLoss);
         textColor(totalDanishWinLoss, "#totalDanishWinLoss");
 	textColor(totalDanishPercentage, "#totalDanishPercentage");

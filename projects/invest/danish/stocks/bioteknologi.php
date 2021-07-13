@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     }
 
@@ -58,10 +58,10 @@
         $("#bioteknologiPercentage").text(percentageValue + " %");
         $("#bioteknologiResult").text(totalValue);
         $("#bioteknologiStockResult").text(stockValue);
-        danishTextColor(startValue-pricePerStockBioteknologi, "#bioteknologiVal");
-        danishTextColor(percentageValue, "#bioteknologiPercentage");
-        danishTextColor(totalValue, "#bioteknologiResult");
-        danishTextColor(stockValue, "#bioteknologiStockResult");
+        textColor(startValue-pricePerStockBioteknologi, "#bioteknologiVal");
+        textColor(percentageValue, "#bioteknologiPercentage");
+        textColor(totalValue, "#bioteknologiResult");
+        textColor(stockValue, "#bioteknologiStockResult");
     }
 
 

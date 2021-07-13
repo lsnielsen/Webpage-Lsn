@@ -9,6 +9,7 @@
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
                 <th scope="col">Gevinst \ tab</th>
+                <th scope="col">Procentvis ændring</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                 <td id="totalForeignBuyValue"></td>
                 <td id="currentTotalForeignValue"></td>
                 <td id="totalForeignWinLoss"></td>
+                <td id="totalForeignPercentage"></td>
             </tr>
         </tbody>
     </table>
@@ -62,19 +64,13 @@
 				    (currentEqmValue * equitransMidstreamStocks)).toFixed(2);
 	
         totalForeignWinLoss = (currentTotalForeignValue - totalForeignBuyValue).toFixed(2);
+	totalForeignPercentage = (((currentTotalForeignValue / totalForeignBuyValue) * 100) - 100).toFixed(2);
+        $("#totalForeignPercentage").text(totalForeignPercentage + " %");
         $("#totalForeignBuyValue").text(totalForeignBuyValue);
         $("#currentTotalForeignValue").text(currentTotalForeignValue);
         $("#totalForeignWinLoss").text(totalForeignWinLoss);
         textColor(totalForeignWinLoss, "#totalForeignWinLoss");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
+        textColor(totalForeignPercentage, "#totalForeignPercentage");
     }
 
     $( document ).ready(function() {
@@ -86,7 +82,7 @@
             setForeignResultValues();
             setTimeout(function () {
                 callTotalForeignUrl();
-            }, Math.floor(Math.random() * 40000) + 2000);
+            }, updateInterval());
         }
     });
 

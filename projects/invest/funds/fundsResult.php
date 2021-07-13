@@ -1,5 +1,5 @@
 
-
+<html>
 
 <div class="container-sm">
     <table class="table table-bordered align-middle table-primary">
@@ -9,6 +9,7 @@
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
                 <th scope="col">Gevinst \ tab</th>
+                <th scope="col">Procentvis ændring</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                 <td id="totalFundsBuyValue"></td>
                 <td id="currentTotalFundsValue"></td>
                 <td id="totalFundsWinLoss"></td>
+                <td id="totalFundsPercentage"></td>
             </tr>
         </tbody>
     </table>
@@ -24,54 +26,35 @@
 
 <script>
     let currentNordeaValue;
+    let currentNordeaFiveValue;
     let totalFundsBuyValue;
     let totalFundsWinLoss;
     let currentTotalFundsValue;
 
     function setFundsResultValues()
     {
-        totalFundsBuyValue = (nordeaPrice).toFixed(2);
-        currentTotalFundsValue = (currentNordeaValue * nordeaStocks).toFixed(2);
+        totalFundsBuyValue = (nordeaPrice + nordeaFivePrice).toFixed(2);
+        currentTotalFundsValue = ((currentNordeaValue * nordeaStocks) + (currentNordeaFiveValue * nordeaFiveStocks)).toFixed(2);
         totalFundsWinLoss = (currentTotalFundsValue - totalFundsBuyValue).toFixed(2);
+	totalFundsPercentage = (((currentTotalFundsValue / totalFundsBuyValue) * 100) - 100).toFixed(2);
+        $("#totalFundsPercentage").text(totalFundsPercentage + " %");
         $("#totalFundsBuyValue").text(totalFundsBuyValue);
         $("#currentTotalFundsValue").text(currentTotalFundsValue);
         $("#totalFundsWinLoss").text(totalFundsWinLoss);
         textColor(totalFundsWinLoss, "#totalFundsWinLoss");
-    }
-
-    function textColor(value, field)
-    {
-        if (value < 0) {
-            $(field).css("color", "red");
-        } else {
-            $(field).css("color", "green");
-        }
+        textColor(totalFundsPercentage, "#totalFundsPercentage");
     }
 
     $( document ).ready(function() {
         callTotalFundsUrl();
         function callTotalFundsUrl() {
-            const nordeaUrl = "https://markets.ft.com/data/funds/tearsheet/summary?s=DK0060987709:DKK";
-            $.get( nordeaUrl, function( nordeaData ) {
-                getNordeaResultValue(nordeaData);
-            }, 'html');
-            setFundsResultValues();
+      	    setFundsResultValues();
             setTimeout(function () {
                 callTotalFundsUrl();
-            }, 2000);
+            }, updateInterval());
         }
     });
-
-    function getNordeaResultValue(data)
-    {
-        let nordeaRegex = /<li><span class="mod-ui-data-list__label">Price \(DKK\)<\/span><span class="mod-ui-data-list__value">([0-9.]+)<\/span><\/li>/;
-        let nordeaMatch = nordeaRegex.exec(data);
-        let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
-        if (nordeaMatch !== null) {
-            currentNordeaValue = nordeaMatch[1];
-        } else if (closeMatch !== null) {
-            currentNordeaValue = closeMatch[1];
-        }
-    }
+	
 
 </script>
+</html>
