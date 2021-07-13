@@ -43,12 +43,6 @@
 	getSgceData();
 	getLaefData();
     }
-	
-    function foreignUpdateInterval()
-    {
-        let time =  Math.random() * 40000 + 2000;
-	return time;
-    }
 
 </script>
 
