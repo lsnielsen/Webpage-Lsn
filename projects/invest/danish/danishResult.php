@@ -44,7 +44,7 @@
             setDanishResultValues();
             setTimeout(function () {
                 callTotalDanishUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     });
 

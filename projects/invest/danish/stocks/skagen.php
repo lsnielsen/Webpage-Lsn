@@ -22,7 +22,7 @@
             );
             setTimeout(function () {
                 callUrl();
-            }, danishUpdateInterval());
+            }, updateInterval());
         }
     }
 

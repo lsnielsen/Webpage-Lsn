@@ -26,11 +26,6 @@
 ?>
 
 <script>
-    function danishUpdateInterval()
-    {
-        let time =  Math.random() * 40000 + 2000;
-	return time;
-    }
     function getDanishData()
     {
         getNinaData();
