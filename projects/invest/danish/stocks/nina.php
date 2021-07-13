@@ -58,10 +58,10 @@
         $("#ninaPercentage").text(percentageValue + " %");
         $("#ninaResult").text(totalValue);
         $("#ninaStockResult").text(stockValue);
-        danishTextColor(startValue-pricePerStockNina, "#ninaVal");
-        danishTextColor(percentageValue, "#ninaPercentage");
-        danishTextColor(totalValue, "#ninaResult");
-        danishTextColor(stockValue, "#ninaStockResult");
+        textColor(startValue-pricePerStockNina, "#ninaVal");
+        textColor(percentageValue, "#ninaPercentage");
+        textColor(totalValue, "#ninaResult");
+        textColor(stockValue, "#ninaStockResult");
     }
 
    
