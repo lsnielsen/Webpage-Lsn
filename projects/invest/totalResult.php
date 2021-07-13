@@ -1,6 +1,6 @@
 
 
-
+<html>
 <div class="container-sm">
     <div class="page-header text-center" style="color: #801d44;">
         <h1>
@@ -39,9 +39,9 @@
         loopFunction();
         function loopFunction() {
 
-            let theTotalResultBuyValue = (Number(totalForeignBuyValue) + Number(totalFundsBuyValue)).toFixed(2);
-            let theCurrentTotalResultValue = (Number(currentTotalForeignValue) + Number(currentTotalFundsValue)).toFixed(2);
-            let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss)).toFixed(2);
+            let theTotalResultBuyValue = (Number(totalForeignBuyValue) + Number(totalFundsBuyValue) + Number(totalDanishBuyValue)).toFixed(2);
+            let theCurrentTotalResultValue = (Number(currentTotalForeignValue) + Number(currentTotalFundsValue) + Number(currentTotalDanishValue)).toFixed(2);
+            let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss) + Number(totalDanishWinLoss)).toFixed(2);
 	    let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
 
             $("#totalResultBuyValue").text(theTotalResultBuyValue);
@@ -68,6 +68,4 @@
     }
 
 </script>
-
-
-
+</html>
