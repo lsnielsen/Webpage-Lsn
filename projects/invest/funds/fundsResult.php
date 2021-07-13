@@ -9,6 +9,7 @@
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
                 <th scope="col">Gevinst \ tab</th>
+                <th scope="col">Procentvis ændring</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                 <td id="totalFundsBuyValue"></td>
                 <td id="currentTotalFundsValue"></td>
                 <td id="totalFundsWinLoss"></td>
+                <td id="totalFundsPercentage"></td>
             </tr>
         </tbody>
     </table>
@@ -34,10 +36,13 @@
         totalFundsBuyValue = (nordeaPrice + nordeaFivePrice).toFixed(2);
         currentTotalFundsValue = ((currentNordeaValue * nordeaStocks) + (currentNordeaFiveValue * nordeaFiveStocks)).toFixed(2);
         totalFundsWinLoss = (currentTotalFundsValue - totalFundsBuyValue).toFixed(2);
+	totalFundsPercentage = (((currentTotalFundsValue / totalFundsBuyValue) * 100) - 100).toFixed(2);
+        $("#totalFundsPercentage").text(totalFundsPercentage + " %");
         $("#totalFundsBuyValue").text(totalFundsBuyValue);
         $("#currentTotalFundsValue").text(currentTotalFundsValue);
         $("#totalFundsWinLoss").text(totalFundsWinLoss);
         textColor(totalFundsWinLoss, "#totalFundsWinLoss");
+        textColor(totalFundsPercentage, "#totalFundsPercentage");
     }
 
     function textColor(value, field)
