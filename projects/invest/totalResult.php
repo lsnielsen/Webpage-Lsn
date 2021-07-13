@@ -16,8 +16,8 @@
                 <th scope="col"></th>
                 <th scope="col">Købspris</th>
                 <th scope="col">Nuværende pris</th>
-                <th scope="col">% - vis gevinst \ tab</th>
                 <th scope="col">Gevinst \ tab</th>
+                <th scope="col">% - vis gevinst \ tab</th>
             </tr>
         </thead>
         <tbody>
@@ -25,8 +25,8 @@
                 <th scope="row">Samlet</th>
                 <td id="totalResultBuyValue"></td>
                 <td id="currentTotalResultValue"></td>
-                <td id="currentPercentValue"></td>
                 <td id="totalResultWinLoss"></td>
+                <td id="currentPercentValue"></td>
             </tr>
         </tbody>
     </table>
@@ -44,7 +44,7 @@
             let theTotalResultWinLoss = (Number(totalForeignWinLoss) + 	Number(totalFundsWinLoss) + Number(totalDanishWinLoss)).toFixed(2);
 	    let percentageWinLoss = (((theCurrentTotalResultValue / theTotalResultBuyValue) * 100) - 100).toFixed(2);
 
-            $("#totalResultBuyValue").text(theTotalResultBuyValue);
+            $("#totalResultBuyValue").text(theTotalResultBuyValue + " %");
             $("#currentTotalResultValue").text(theCurrentTotalResultValue);
             $("#currentPercentValue").text(percentageWinLoss);
             $("#totalResultWinLoss").text(theTotalResultWinLoss);
