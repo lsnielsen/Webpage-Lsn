@@ -43,11 +43,15 @@
         </div>
         <div class="col-" id="bilbasenurls">  </div>
         <div class="col-">
-            links hos bilbasen og
+            links hos bilbasen,
         </div>
         <div class="col-" id="guloggratisurls">  </div>
         <div class="col-">
-            links ved guloggratis.
+            links ved guloggratis og
+        </div>
+        <div class="col-" id="biltorveturls">  </div>
+        <div class="col-">
+            links ved biltorvet.
         </div>
     </div>
     <div class="row endSearch">
@@ -66,7 +70,7 @@
         margin-left: 5px;
         font-weight: bold;
     }
-    #bilbasenurls, #guloggratisurls {
+    #bilbasenurls, #guloggratisurls, #biltorveturls {
         padding: 0px 5px 0px 5px;
     }
 </style>

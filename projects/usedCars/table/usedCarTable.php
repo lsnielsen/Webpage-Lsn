@@ -28,6 +28,10 @@
                                     echo "<td class=\"carCell\">";
                                     echo "<a href='".$autoArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
                                     echo "</td>";
+                                } elseif ($j == 0 && strpos($autoArr[$i][0], 'biltorvet') !== false) {
+                                    echo "<td class=\"carCell\">";
+                                    echo "<a href='".$autoArr[$i][$j]."' target=\"_blank\">Link til biltorvet</a>";
+                                    echo "</td>";
                                 } else {
                                     echo "<td class=\"carCell\">";
                                     echo $autoArr[$i][$j];
@@ -51,6 +55,10 @@
                                 } elseif ($j == 0 && strpos($manuelArr[$i][0], 'guloggratis') !== false) {
                                     echo "<td class=\"carCell\">";
                                     echo "<a href='".$manuelArr[$i][$j]."' target=\"_blank\">Link til guloggratis</a>";
+                                    echo "</td class=\"carCell\">";
+                                } elseif ($j == 0 && strpos($manuelArr[$i][0], 'biltorvet') !== false) {
+                                    echo "<td class=\"carCell\">";
+                                    echo "<a href='".$manuelArr[$i][$j]."' target=\"_blank\">Link til biltorvet</a>";
                                     echo "</td class=\"carCell\">";
                                 } else {
                                     echo "<td class=\"carCell\">";

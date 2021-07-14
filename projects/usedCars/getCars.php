@@ -1,118 +1,136 @@
 
 <?php
-    include("bilbasen/getCarFunctions.php");
-    include("bilbasen/starter.php");
-
-    include("gulOgGratis/starter.php");
-    include("gulOgGratis/getCarFunctions.php");
+    include("search/bilbasen.php");
+    include("search/gulOgGratis.php");
+    include("search/biltorvet.php");
 
     include("table/dataArray.php");
     include("table/dataArrayGog.php");
+    include("table/dataArrayBiltorvet.php");
 
 ?>
 
 <script>
 
-    const basicStartUrl = "https://www.bilbasen.dk/brugt/bil/";
-    const basicEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
+    const bilbasenStartUrl = "https://www.bilbasen.dk/brugt/bil/";
+    const bilbasenEndUrl = "?includeengroscvr=true&pricefrom=0&includeleasing=true";
 
-    const secondBasicUrl = "https://www.guloggratis.dk/biler/personbiler/";
+    let gulOgGratisUrl = "https://www.guloggratis.dk/biler/personbiler/";
 
-    const firstUrlArr = new Array();
-    const secondUrlArr = new Array();
+    const biltorvetUrl = "https://www.biltorvet.dk/soeg/18909339";
+
+    const bilbasenArray = new Array();
+    const gulOgGratisArray = new Array();
+    const biltorvetArray = new Array();
     const dataArray = new Array();
-    let modelArray = new Array();
-	let loopI = 1;
-	let loopJ = 1;
-	let firstBool = false;
-	let secondBool = false;
+    let choosenModelArray = new Array();
+	let bilbasenCounter = 1;
+	let gulOgGratisCounter = 1;
+	let biltorvetCounter = 1;
+	let gulOgGratisBool = false;
+	let bilbasenBool = false;
+	let biltorvetBool = false;
 	let lastBool = false;
 	
         
 	$("select.carModel").change(function(){
 		setFrontpage();		
-		modelArray = choosenModel.split(" ");
-		document.cookie = "theChoosenCarModel=" + modelArray[0] + " " + modelArray[modelArray.length-1];
-		bilbasenUrl = basicStartUrl + modelArray[0] + "/" + modelArray[1] + basicEndUrl;
-		gulOgGratisUrl = secondBasicUrl + modelArray[0].toLowerCase() + "/" + modelArray[1].toLowerCase();
+		choosenModelArray = choosenModel.split(" ");
+		document.cookie = "theChoosenCarModel=" + choosenModelArray[0] + " " + choosenModelArray[choosenModelArray.length-1];
+		bilbasenUrl = bilbasenStartUrl + choosenModelArray[0] + "/" + choosenModelArray[1] + bilbasenEndUrl;
+		gulOgGratisUrl = gulOgGratisUrl + choosenModelArray[0].toLowerCase() + "/" + choosenModelArray[1].toLowerCase();
 
-		bilbasenLoop();
-		gulOgGratisLoop();
-		firstPauseLoop();
+		getBilbasenLinks();
+		getGulOgGratisLinks();
+		getBiltorvetLinks();
+		getLinksPause();
 	});
 	
-	function firstPauseLoop()
+	function getLinksPause()
 	{
 		setTimeout(function() {   
-			if (firstBool == false || secondBool == false) {         
-				firstPauseLoop();             
+			if (gulOgGratisBool == false || bilbasenBool == false || biltorvetBool == false) {
+				getLinksPause();             
 			} else {
-				gulOgGratisCars = secondUrlArr.length;
-				$("#bilbasenurls").text(firstUrlArr.length);
-				$("#guloggratisurls").text(gulOgGratisCars);
+				$("#bilbasenurls").text(bilbasenArray.length);
+				$("#guloggratisurls").text(gulOgGratisArray.length);
+				$("#biltorveturls").text(biltorvetArray.length);
 				$(".middleSearch").show();
 				getTheUsedCarBilbasen();
-				if (gulOgGratisCars != 0) {
+				getTheUsedCarBiltorvet();
+				if (gulOgGratisArray.length !== 0) {
                     getTheUsedCarGulOgGratis();
 				}
-				secondPauseLoop();
-			}
-							
-		}, 2000)	
+				getTheCarsPause();
+			}		
+		}, 2000);
 	}
 	
-	function secondPauseLoop()
+	function getTheCarsPause()
 	{
-        setTimeout(
-            function()
-            {
-                if(lastBool == false) {
-                    secondPauseLoop();
-                } else {
-                    setTimeout(
-                        function()
-                        {
-                            makeArrayToPhp();
-                        }, 200
-                    );
-                }
-            }, 5000
-        );
+        setTimeout(function() {
+            if(lastBool == false) {
+                getTheCarsPause();
+            } else {
+                setTimeout(function() {
+                    makeArrayToPhp();
+                }, 200);
+            }
+        }, 5000);
 	}
 		
-	function bilbasenLoop() {       
+	function getBiltorvetLinks() {
 		setTimeout(function() {
-			if (loopI >= 2) {
-				pageUrl = bilbasenUrl + "&page=" + loopI;
-				callingFirstUrl(pageUrl);
+			if (biltorvetCounter >= 2) {
+				pageUrl = biltorvetUrl;
+				fetchBiltorvetLink(pageUrl);
 			} else {
-				callingFirstUrl(bilbasenUrl);
+				fetchBiltorvetLink(biltorvetUrl);
 			}
-			loopI++;                  
-			if (loopI < 25) {         
-				bilbasenLoop();             
-			} else if (loopI == 25) {
+            biltorvetCounter++;
+			if (biltorvetCounter < 25) {
+                getBiltorvetLinks();
+			} else if (biltorvetCounter == 25) {
 				setTimeout(function() {
-					secondBool = true;
+					biltorvetBool = true;
 				}, 250)
 			}             
 		}, 250)
 	}
 
-	function gulOgGratisLoop() {       
-		setTimeout(function() {   
-			if (loopJ >= 2) {
-				theUrl = gulOgGratisUrl + "/?n=" + loopJ*60;
-				callingSecondUrl(theUrl);
+	function getBilbasenLinks() {
+		setTimeout(function() {
+			if (bilbasenCounter >= 2) {
+				pageUrl = bilbasenUrl + "&page=" + bilbasenCounter;
+				fetchBilbasenLink(pageUrl);
 			} else {
-				callingSecondUrl(gulOgGratisUrl);
+				fetchBilbasenLink(bilbasenUrl);
 			}
-			loopJ++;                  
-			if (loopJ < 20) {         
-				gulOgGratisLoop();             
-			} else if (loopJ == 20) {
+			bilbasenCounter++;
+			if (bilbasenCounter < 25) {
+				getBilbasenLinks();
+			} else if (bilbasenCounter == 25) {
 				setTimeout(function() {
-					firstBool = true;
+					bilbasenBool = true;
+				}, 250)
+			}
+		}, 250)
+	}
+
+	function getGulOgGratisLinks() {       
+		setTimeout(function() {   
+			if (gulOgGratisCounter >= 2) {
+				theUrl = gulOgGratisUrl + "/?n=" + gulOgGratisCounter*60;
+				fetchGulOgGratisLink(theUrl);
+			} else {
+				fetchGulOgGratisLink(gulOgGratisUrl);
+			}
+			gulOgGratisCounter++;                  
+			if (gulOgGratisCounter < 20) {         
+				getGulOgGratisLinks();             
+			} else if (gulOgGratisCounter == 20) {
+				setTimeout(function() {
+					gulOgGratisBool = true;
 				}, 500)
 			}				
 		}, 200)
@@ -140,9 +158,9 @@
 	function makeArrayToPhp()
 	{
 		$(".endSearch").show();
-		for(let i=0; i<dataArray.length; i++) {
+		for(let i=0; i < dataArray.length; i++) {
 			let arrayValue = dataArray[i];
-			for(j=0; j<arrayValue.length; j++) {
+			for(let j=0; j < arrayValue.length; j++) {
 				if (arrayValue[j] == ",") {
 					arrayValue[j] = ".";
 				}
