@@ -55,28 +55,25 @@ function setFrontpageWithData($usedCarsArray)
 
 function downloadCSVFile()
 {
-   $fileName = getFileName();
-    $url = '../diverse/carFiles/Brugte biler - ' . $fileName . '.csv';
-    $file_name = basename($url);
-    $info = pathinfo($file_name);
-/* 
-    if ($info["extension"] == "csv" && isset($_POST['usedCarsArray'])) {
-        header("Content-Description: File Transfer");
-        header("Content-Type: application/octet-stream");
-        header("Content-Disposition: attachment; filename=\"" . $file_name . "\"");
-    } */
+	$fileName = getFileName();
+   // $url = '../diverse/carFiles/Brugte biler - ' . $fileName . '.csv';
+    //$file_name = basename($url);
+    //$info = pathinfo($file_name);
 	
-	$books = [
-    ['ISBN', 'title', 'author', 'publisher', 'ctry' ],
-    [618260307, 'The Hobbit', 'J. R. R. Tolkien', 'Houghton Mifflin', 'USA'],
-    [908606664, 'Slinky Malinki', 'Lynley Dodd', 'Mallinson Rendel', 'NZ']
-];
-$xlsx = SimpleXLSXGen::fromArray( $books );
-$xlsx->saveAs('books.xlsx');
-  $xlsx->downloadAs('books.xlsx');
-	
-	
-	
+
+	$csv = array();
+	$lines = file('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv', FILE_IGNORE_NEW_LINES);
+
+	foreach ($lines as $key => $value) {
+		$csv[$key] = str_getcsv($value);
+	}
+
+	echo '<pre>';
+	print_r($csv);
+	echo '</pre>';
+	$xlsx = SimpleXLSXGen::fromArray($csv);
+	$xlsx->saveAs('../diverse/carFiles/Brugte biler - ' . $fileName . '.xlsx');
+	$xlsx->downloadAs($fileName . '.xlsx');
 }
 
 function spliceArray($array)
