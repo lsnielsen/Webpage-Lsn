@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/fund/slanx?mod=over_search";
+            const url = "https://markets.ft.com/data/funds/tearsheet/summary?s=lu0309468808:eur";
             $.get( url,
                 function( data ) {
                     getLaefValue(data);
@@ -37,7 +37,7 @@
 
     function getLaefValue(data)
     {
-        let laefRegex = /<bg-quote class="value[" ]+[negative" ]* field="Last" format="0,0.00[0\[\]]*" channel="\/zigman2\/quotes\/[0-9]{9}\/[a-z\/0-9A-Z-\"=, ]+">([0-9\.,]+)<\/bg-quote>/;
+        let laefRegex = /list__value">([0-9]+\.[0-9]{2})<\/span>/;
         let laefMatch = laefRegex.exec(data);
         let closeMatch = /<span class="value">([0-9\.-]+)<\/span>/.exec(data);
         if (laefMatch !== null) {
@@ -49,7 +49,7 @@
 
     function setLaefData(marketValue)
     {
-        marketValue = (12 * foreignEuroDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignEuroDkkCurrency).toFixed(2);
 	currentLaefValue = marketValue;
         $("#laefVal").text(marketValue);
 	textColor(marketValue - pricePerStockLaef, "#laefVal");
