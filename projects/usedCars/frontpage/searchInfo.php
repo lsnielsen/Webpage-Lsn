@@ -9,18 +9,18 @@
         </div>
         <?php include "dropdown.php"; ?>
     </div>
+	<div class="row">
     <div class="col-sm-2 pt-3" id="backButton">
-        <h3>
-            <form action="/Webpage-Lsn/controller/frontpage.php" method="post">
-                <button class="btn btn-info btn-lg active" type="submit">
-                    Tilbage til forsiden
-                </button>
-            </form>
-        </h3>
+		<form action="/Webpage-Lsn/controller/frontpage.php" method="post">
+			<button class="btn btn-info btn-lg active" type="submit">
+				Tilbage til forsiden
+			</button>
+		</form>
     </div>
-    <?php if (isset($downloadButton) && $downloadButton == "isset") {
-        include "downloadButton.php";
-    } ?>
+		<?php if (isset($downloadButton) && $downloadButton == "isset") {
+			include "downloadButton.php";
+		} ?>
+	</div>
 </div>
 
 
