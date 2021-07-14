@@ -141,6 +141,7 @@
 	{
         $("#backButton").hide();
         $("#headerInfo").hide();
+        $("#downloadButton").hide();
         $(".modelDropdown").hide();
         $(".tableContainer").hide();
         $(".nrOfCarsDiv").hide();

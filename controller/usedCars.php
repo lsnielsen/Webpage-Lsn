@@ -1,6 +1,7 @@
 
 <?php
 
+		include ("../projects/usedCars/SimpleXLSXGen.php"); 
         include("../projects/usedCars/helper.php");
         $usedCarsArray = isset($_POST['usedCarsArray']) ? $_POST['usedCarsArray'] : "";
 
