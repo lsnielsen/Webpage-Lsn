@@ -12,7 +12,7 @@
     {
         callUrl();
         function callUrl() {
-            const url = "https://www.marketwatch.com/investing/fund/icln?mod=over_search";
+            const url = "https://www.marketwatch.com/investing/fund/inrg?countrycode=it&mod=over_search";
             $.get( url,
                 function( data ) {
                     getSgceValue(data);
@@ -49,7 +49,7 @@
 
     function setSgceData(marketValue)
     {
-        marketValue = (12 * foreignUsdDkkCurrency).toFixed(2);
+        marketValue = (marketValue * foreignUsdDkkCurrency).toFixed(2);
 	currentSgceValue = marketValue;
         $("#sgceVal").text(marketValue);
 	textColor(marketValue - pricePerStockSgce, "#sgceVal");
