@@ -55,16 +55,28 @@ function setFrontpageWithData($usedCarsArray)
 
 function downloadCSVFile()
 {
-    $fileName = getFileName();
+   $fileName = getFileName();
     $url = '../diverse/carFiles/Brugte biler - ' . $fileName . '.csv';
     $file_name = basename($url);
     $info = pathinfo($file_name);
-
+/* 
     if ($info["extension"] == "csv" && isset($_POST['usedCarsArray'])) {
         header("Content-Description: File Transfer");
         header("Content-Type: application/octet-stream");
         header("Content-Disposition: attachment; filename=\"" . $file_name . "\"");
-    }
+    } */
+	
+	$books = [
+    ['ISBN', 'title', 'author', 'publisher', 'ctry' ],
+    [618260307, 'The Hobbit', 'J. R. R. Tolkien', 'Houghton Mifflin', 'USA'],
+    [908606664, 'Slinky Malinki', 'Lynley Dodd', 'Mallinson Rendel', 'NZ']
+];
+$xlsx = SimpleXLSXGen::fromArray( $books );
+$xlsx->saveAs('books.xlsx');
+  $xlsx->downloadAs('books.xlsx');
+	
+	
+	
 }
 
 function spliceArray($array)
