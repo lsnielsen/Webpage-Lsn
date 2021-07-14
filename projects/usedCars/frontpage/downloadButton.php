@@ -15,3 +15,9 @@
     </h3>
 </div>
 </html>
+
+<style>
+	#downloadButton {
+		margin-left: -150px;
+	}
+</style>
