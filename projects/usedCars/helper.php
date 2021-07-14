@@ -56,11 +56,6 @@ function setFrontpageWithData($usedCarsArray)
 function downloadCSVFile()
 {
 	$fileName = getFileName();
-   // $url = '../diverse/carFiles/Brugte biler - ' . $fileName . '.csv';
-    //$file_name = basename($url);
-    //$info = pathinfo($file_name);
-	
-
 	$csv = array();
 	$lines = file('../diverse/carFiles/Brugte biler - ' . $fileName . '.csv', FILE_IGNORE_NEW_LINES);
 
@@ -68,9 +63,7 @@ function downloadCSVFile()
 		$csv[$key] = str_getcsv($value);
 	}
 
-	echo '<pre>';
-	print_r($csv);
-	echo '</pre>';
+	//echo '<pre>'; print_r($csv); echo '</pre>';
 	$xlsx = SimpleXLSXGen::fromArray($csv);
 	$xlsx->saveAs('../diverse/carFiles/Brugte biler - ' . $fileName . '.xlsx');
 	$xlsx->downloadAs($fileName . '.xlsx');
